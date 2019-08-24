@@ -9,7 +9,7 @@ author: 'Aman Mittal'
 banner:
 ---
 
-![Cover Image Credits to Unsplash and Tom Pumford](https://unsplash.com/photos/v8ppsvUTwGE)
+![Cover Image Credits to Unsplash and Tom Pumford](https://thepracticaldev.s3.amazonaws.com/i/kotjuaqy9356q06ndqfc.jpg)
 
 `AsyncStorage` is a simple, asynchronous key-value pair used in React Native applications. It’s used for a variety of scenarios but mainly to store data when your app is not using any cloud services, or when you want to implement features in your app that require data storage.
 
