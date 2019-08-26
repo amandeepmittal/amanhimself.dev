@@ -2,7 +2,7 @@
 slug: getting-started-with-firestore-and-react-native
 date: 2019-06-11
 title: 'Getting Started with Firestore and React Native'
-categories: ['nodejs, graphql']
+categories: ['react native']
 description:  '---'
 published: true
 author: 'Aman Mittal'
