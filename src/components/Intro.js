@@ -28,6 +28,90 @@ import { Link } from 'gatsby'
 //   </div>
 // )
 
+const CurrentlyUsing = () => (
+  <div>
+    <h2>
+      {' '}
+      <span role="img" aria-label="toolbox">
+        🧰{' '}
+      </span>
+      Currently Using
+    </h2>
+    <ul>
+      <li>
+        <span
+          css={css`
+            font-weight: bold;
+          `}
+        >
+          Computer:
+        </span>{' '}
+        MacBook Air 2017
+      </li>
+      <li>
+        <span
+          css={css`
+            font-weight: bold;
+          `}
+        >
+          Editor:
+        </span>{' '}
+        Visual Studio Code
+      </li>
+      <li>
+        <span
+          css={css`
+            font-weight: bold;
+          `}
+        >
+          Static Site Generator:
+        </span>{' '}
+        Gatsby
+      </li>
+      <li>
+        <span
+          css={css`
+            font-weight: bold;
+          `}
+        >
+          Hosting:
+        </span>{' '}
+        Netlify (blog)
+      </li>
+      <li>
+        <span
+          css={css`
+            font-weight: bold;
+          `}
+        >
+          Syntax Highlighting:
+        </span>{' '}
+        PrismJS
+      </li>
+      <li>
+        <span
+          css={css`
+            font-weight: bold;
+          `}
+        >
+          Code Syntax Theme:
+        </span>{' '}
+        Dracula
+      </li>
+      <li>
+        <span
+          css={css`
+            font-weight: bold;
+          `}
+        >
+          Newsletter:
+        </span>{' '}
+        Tinyletter
+      </li>
+    </ul>
+  </div>
+)
+
 const HireMe = () => (
   <div>
     <h2>
@@ -41,6 +125,9 @@ const HireMe = () => (
       Would you like to collaborate on a project, app or work together in
       creating new course material for JavaScript ecosystem?
     </p>
+    <span role="img" aria-label="email">
+      📧
+    </span>
     <a
       href="mailto:amanmittal.work@gmail.com"
       target="_blank"
@@ -51,7 +138,7 @@ const HireMe = () => (
         }
       `}
     >
-      Please drop me an email here.
+      Please drop me an email here.{' '}
     </a>
   </div>
 )
@@ -400,6 +487,12 @@ const Intro = () => (
         margin: 10px;
       `}
     />
+    <Newsletter />
+    <hr
+      css={css`
+        margin: 10px;
+      `}
+    />
     <WorkHistory />
     <hr
       css={css`
@@ -424,13 +517,19 @@ const Intro = () => (
         margin: 10px;
       `}
     />
+    <CurrentlyUsing />
+
+    <hr
+      css={css`
+        margin: 10px;
+      `}
+    />
     <HireMe />
     <hr
       css={css`
         margin: 10px;
       `}
     />
-    <Newsletter />
   </div>
 )
 
