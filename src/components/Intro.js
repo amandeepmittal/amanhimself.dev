@@ -308,7 +308,7 @@ const Newsletter = () => (
       (Exposition), Heartbeat (Fritz.ai), Pusher, LevelUp Gitconnected, Better
       Programming, JSCrambler & React Native Training.
     </p>
-    <h4
+    {/* <h4
       css={css`
         margin: 0px;
         background-color: #f3993e;
@@ -336,7 +336,7 @@ const Newsletter = () => (
       >
         All Blog Posts{' '}
       </Link>
-    </h4>
+    </h4> */}
   </div>
 )
 
