@@ -306,7 +306,7 @@ const Newsletter = () => (
       ZeoLearn.com, Art + Marketing, 42hire.com, ITNext, Eduonix, The Startup,
       JavaBeginnersTutorial.com, Crowdbotics, Alligator.io, Expo.io
       (Exposition), Heartbeat (Fritz.ai), Pusher, LevelUp Gitconnected, Better
-      Programming, JSCrambler & React Native Training.
+      Programming, JSCrambler, React Native Training & Sitepoint.
     </p>
     {/* <h4
       css={css`
