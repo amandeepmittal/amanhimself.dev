@@ -57,7 +57,7 @@ To follow this tutorial, please make sure you following installed on your local 
 
 > If you already know how to obtain Firebase API and storage keys, you can skip this section. Otherwise, you can follow along.
 
-Create a new Firebase project from Firebase Console](https://console.firebase.google.com).
+Create a new [Firebase project from Firebase Console](https://console.firebase.google.com).
 
 ![1](https://miro.medium.com/max/387/1*8ljVirzyESb2-YlcXTs91w.png)
 
