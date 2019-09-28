@@ -18,7 +18,7 @@ In this tutorial, I am going to show you how to setup Firebase email authenticat
 - [login and signup screen setup with formik and yup](https://amanhimself.dev/build-validate-forms-with-react-native-formik-yup)
 - [handle different field types in React Native forms with formik and yup](https://amanhimself.dev/handle-different-field-types-in-react-native-forms)
 
-If you are not then you can download the **source code** in its current state from [**this Github repo**](https://github.com/amandeepmittal/expo-firebase/releases/tag/0.5.0) before you begin.
+You can download the **source code** in its current state from [**this Github repo**](https://github.com/amandeepmittal/expo-firebase/releases/tag/0.5.0) before you begin.
 
 After installing the source code, please navigate inside the project directory and install dependencies by running the following command:
 
