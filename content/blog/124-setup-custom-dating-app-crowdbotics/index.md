@@ -9,8 +9,6 @@ author: 'Aman Mittal'
 banner: './banner.jpg'
 ---
 
-> Note: Before proceeding, this article contains promotional content.
-
 The [Crowdbotics Dating App Blueprint](https://marketplace.crowdbotics.com/product/dating-app) is a match-making app built in the style of Tinder or Bumble. Users can create profiles, find matches, communicate in real-time, and more.
 
 [Crowdbotics Blueprints](https://marketplace.crowdbotics.com/product/dating-app) are 'batteries-included' application builds: UI/UX, hosting, security, updates, expert developer support – everything you need to launch and grow your application from the ground up. Crowdbotics blueprints each contain a fixed set of 'minimum viable' features that can be used as a springboard for further development. Blueprints are available for purchase in combination with a Crowdbotics subscription.
