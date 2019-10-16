@@ -1,6 +1,6 @@
 ---
 slug: twitter-clone-apollo-react
-date: 2019-15-10
+date: 2019-10-15
 title: 'Create an Open Source Twitter Clone with Apollo, React and Crowdbotics'
 categories: ['reactjs, graphql']
 description: ---
