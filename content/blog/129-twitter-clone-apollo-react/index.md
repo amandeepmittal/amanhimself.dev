@@ -2,7 +2,7 @@
 slug: twitter-clone-apollo-react
 date: 2019-15-10
 title: 'Create an Open Source Twitter Clone with Apollo, React and Crowdbotics'
-categories: ['reactjs']
+categories: ['reactjs, graphql']
 description: ---
 published: true
 author: 'Aman Mittal'
@@ -59,7 +59,7 @@ This will open a new browser window at the URL `http://localhost:3000` with the 
 
 ## Integrate Apollo Client
 
-Apollo is a team that builds and maintain a toolchain of GraphQL tools for various use cases like frontend (client), server and engine. There different ways to use or integrate Apollo in your app. In the Twitter Clone Server tutorial, we learned that you can use Apollo on a server-side application to query data and create a GraphQL API.
+Apollo is a team that builds and maintain a toolchain of GraphQL tools for various use cases like frontend (client), server and engine. There different ways to use or integrate Apollo in your app. In the **[Twitter Clone Server tutorial](https://amanhimself.dev/build-a-twitter-clone-server-with-apollo-graphql-nodejs)**, we learned that you can use Apollo on a server-side application to query data and create a GraphQL API.
 
 The Apollo Client helps you use a GraphQL API on the frontend side of an application. Using Apollo Client you can query the API in two ways, whether you have your own server or a third party GraphQL API. It integrates very well with popular frontend frameworks like React, Angular, Vue and so on.
 
