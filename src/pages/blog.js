@@ -75,7 +75,7 @@ const Hero = () => {
               }
             `}
           >
-            Join 750+ devs for a weekly newsletter
+            Join 800+ devs for a weekly newsletter
           </a>
         </h3>
         {/* <p

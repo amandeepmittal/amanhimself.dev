@@ -263,7 +263,7 @@ const Newsletter = () => (
           font-weight: bold;
         `}
       >
-        750+ developers.
+        800+ developers.
       </span>
     </p>
     <h3
