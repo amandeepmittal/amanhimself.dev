@@ -349,8 +349,8 @@ const WorkHistory = () => (
       Work History
     </h2>
     <p>
-      Currently, I am working as freelance/contract developer for 2 years on web
-      applications.
+      Currently, I am working as freelance/contract developer on web
+      applications and as a Technical Writer.
     </p>
     <ul>
       Freelance/Contract (2017- present)
