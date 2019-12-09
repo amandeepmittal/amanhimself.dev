@@ -96,7 +96,7 @@ const CurrentlyUsing = () => (
         >
           Code Syntax Theme:
         </span>{' '}
-        Dracula
+        FairyFloss, Dracula
       </li>
       <li>
         <span
