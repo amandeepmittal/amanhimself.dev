@@ -282,7 +282,7 @@ Click on the link and it will redirect you to a webpage like below.
 
 Upon successful password change, it will prompt with the following message to the user.
 
-![ss7]https://miro.medium.com/max/1201/1*M9duWHCvOLPfOsevaF1hpw.png
+![ss7](https://miro.medium.com/max/1201/1*M9duWHCvOLPfOsevaF1hpw.png)
 
 ## Conclusion
 
