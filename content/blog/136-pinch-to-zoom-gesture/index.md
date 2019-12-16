@@ -122,7 +122,7 @@ It uses the `width` of the device's screen to calculate the width of the image u
 
 Here is the output when the app runs for the first time.
 
-[hb1]
+![hb1](https://miro.medium.com/max/509/1*hsKP461mx3NDf28ZeJZH6w.png)
 
 ## Using dynamic Image component with Animated API
 
@@ -220,7 +220,7 @@ onZoomStateChange = event => {
 
 This completes all the configuration and handler required. Look at the demo below to see it in action.
 
-[hb2]
+![hb2](https://miro.medium.com/max/380/1*AgRorpXREtq4fwyF9qMpJw.gif)
 
 ## Conclusion
 
