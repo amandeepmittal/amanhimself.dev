@@ -233,7 +233,7 @@ export default function Index({ data: { site, allMdx } }) {
           </span>
           <Link
             to="/blog"
-            aria-label="go to all blog posts"
+            aria-label="go to all posts"
             css={css`
               color: white;
               &:hover {

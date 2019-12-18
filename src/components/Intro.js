@@ -173,7 +173,7 @@ const OpenSourceContributions = () => (
             font-weight: bold;
           `}
         >
-          50k+ developers.
+          57k+ developers.
         </span>
       </li>
       GatsbyJS
