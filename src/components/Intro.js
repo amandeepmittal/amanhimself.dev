@@ -190,7 +190,7 @@ const Appearances = () => (
       <span role="img" aria-label="newsletter">
         🎧{' '}
       </span>
-      Podcast Appearance
+      Guest Podcast Appearance
     </h2>
     <p>
       {' '}
