@@ -480,7 +480,7 @@ const Intro = () => (
       >
         read books,{' '}
       </a>{' '}
-      or travel to places I've never been.
+      and travel to places I've never been.
     </p>
     <hr
       css={css`
