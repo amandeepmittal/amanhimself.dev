@@ -30,10 +30,6 @@ const BlogPostFooter = () => (
            a Computer Science engineer working as an independent fullstack developer. I specialize in web & mobile platforms working with technologies such as Node.js, ReactJS, and React Native.
            I write tutorials for JavaScript Web and Mobile developers.
         `}
-      <strong>
-        You can subscribe my weekly newsletter{' '}
-        <a href="https://tinyletter.com/amanhimself">here</a>
-      </strong>
       .
     </p>
   </div>

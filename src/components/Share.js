@@ -54,6 +54,34 @@ const Share = ({ url, title, twitterHandle }) => {
       >
         Facebook
       </FacebookShareButton> */}
+      <div>
+        <h3
+          css={css`
+            margin: 0px;
+            /* background-color: #52b351; */
+            border: 0px;
+            padding: 10px;
+            text-align: center;
+            display: inline-block;
+            font-size: 18px;
+            border-radius: 8px;
+          `}
+        >
+          <a
+            href="https://tinyletter.com/amanhimself"
+            target="_blank"
+            rel="noopener noreferrer"
+            css={css`
+              &:hover {
+                text-decoration: none;
+                color: #503d81;
+              }
+            `}
+          >
+            Join 850+ devs for a weekly newsletter
+          </a>
+        </h3>
+      </div>
     </div>
   )
 }
