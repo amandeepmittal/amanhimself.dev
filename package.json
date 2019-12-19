@@ -1,7 +1,7 @@
 {
   "name": "amanhimself.dev",
   "description": "Personal website running on Gatsby, React, and Node.js.",
-  "version": "4.3.0",
+  "version": "4.3.1",
   "author": "Aman Mittal <amandeepmittal@live.com>",
   "repository": {
     "type": "git",
