@@ -519,7 +519,7 @@ const Intro = () => (
           font-weight: bold;
         `}
       >
-        more than 20 developer publications and organizational blogs
+        22 developer publications and organizational blogs
       </span>
       . I have also been responsible to create a curriculum for an online
       educative learning platform known as Zeolearn on Nodejs.
