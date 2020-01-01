@@ -217,6 +217,16 @@ const OpenSource = () => (
         </a>{' '}
         a quick Way to bootstrap your next Gatsby + Bulma site.
       </li>
+      <li>
+        <a
+          href="https://github.com/freeCodeCamp/100DaysOfCode-twitter-bot"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          100DaysOfCode:
+        </a>{' '}
+        Twitter bot for #100DaysOfCode.
+      </li>
     </ul>
     <h4>Contributions</h4>
     <ul>
