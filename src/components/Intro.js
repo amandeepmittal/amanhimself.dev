@@ -225,7 +225,51 @@ const OpenSource = () => (
         >
           100DaysOfCode:
         </a>{' '}
-        Twitter bot for #100DaysOfCode.
+        Twitter bot for{' '}
+        <a
+          href="https://twitter.com/_100DaysOfCode"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          #100DaysOfCode community
+        </a>{' '}
+        hosted by freeCodeCamp.
+      </li>
+      <li>
+        <a
+          href="https://github.com/amandeepmittal/projectEuler100-twitter-bot"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          ProjectEuler100:
+        </a>{' '}
+        Twitter bot for{' '}
+        <a
+          href="https://twitter.com/ProjectEuler100"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          #ProjectEuler100 community
+        </a>{' '}
+        hosted by freeCodeCamp.
+      </li>
+      <li>
+        <a
+          href="https://github.com/amandeepmittal/awscertified-twitter-bot"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          AWSCertifiedBot:
+        </a>{' '}
+        Twitter bot for{' '}
+        <a
+          href="https://twitter.com/AWSCertifiedBot"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          #AWSCertified community
+        </a>{' '}
+        hosted by freeCodeCamp.
       </li>
     </ul>
     <h4>Contributions</h4>
@@ -251,7 +295,7 @@ const OpenSource = () => (
             font-weight: bold;
           `}
         >
-          57k+ developers.
+          59k+ developers.
         </span>
       </li>
       GatsbyJS
