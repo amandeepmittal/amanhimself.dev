@@ -68,7 +68,7 @@ react-native run-android
 
 The following screen will welcome you:
 
-[Welcome Screen](https://i.imgur.com/EUnGmba.png)
+![Welcome Screen](https://i.imgur.com/EUnGmba.png)
 
 ## A Simple WebView
 
