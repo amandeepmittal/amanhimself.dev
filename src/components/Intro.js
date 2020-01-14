@@ -428,7 +428,8 @@ const Newsletter = () => (
       ZeoLearn.com, Art + Marketing, 42hire.com, ITNext, Eduonix, The Startup,
       JavaBeginnersTutorial.com, Crowdbotics, Alligator.io, Expo.io
       (Exposition), Heartbeat (Fritz.ai), Pusher, LevelUp Gitconnected, Better
-      Programming, JSCrambler, React Native Training, Instamobile & Sitepoint.
+      Programming, JScrambler, React Native Training, Instamobile, Sitepoint &
+      Newline.co (by Fullstack.io).
     </p>
     {/* <h4
       css={css`
@@ -573,7 +574,7 @@ const Intro = () => (
           font-weight: bold;
         `}
       >
-        22 developer publications and organizational blogs
+        24 developer publications and organizational blogs
       </span>
       . I have also been responsible to create a curriculum for an online
       educative learning platform known as Zeolearn on Nodejs.
