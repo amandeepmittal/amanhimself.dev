@@ -1,7 +1,7 @@
 ---
 slug: getting-started-with-react-native-expo-hooks-2020
 date: 2020-01-17
-title: 'Getting Started with React Native and Expo using Hooks'
+title: 'Getting Started with React Native and Expo using Hooks in 2020'
 categories: ['react-native']
 description: '---'
 published: true
