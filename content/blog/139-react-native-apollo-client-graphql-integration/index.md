@@ -2,7 +2,7 @@
 slug: integrate-react-native-graphql-apollo-client
 date: 2020-01-09
 title: 'How to build React Native apps with GraphQL and Apollo'
-categories: ['react native', 'graphql']
+categories: ['react native, graphql']
 description: ---
 published: true
 author: 'Aman Mittal'

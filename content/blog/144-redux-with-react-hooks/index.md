@@ -2,7 +2,7 @@
 slug: redux-with-react-native-hooks
 date: 2020-01-27
 title: 'Using Redux with React Hooks in a React Native app'
-categories: ['react-native', 'redux', 'hooks']
+categories: ['react-native, redux, hooks']
 description: '---'
 published: true
 author: 'Aman Mittal'
