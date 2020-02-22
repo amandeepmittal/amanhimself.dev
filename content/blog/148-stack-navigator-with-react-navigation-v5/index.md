@@ -159,7 +159,7 @@ export default function App() {
 
 Execute the command `expo start` and make sure the Expo client is running either in a simulator device or a real device. You are going to get the HomeScreen as the following result.
 
-[ss1]
+![ss1](https://miro.medium.com/max/350/1*xO2cNaDxKiisiipKN6YhdA.png)
 
 ## Specifying options for each screen in Stack Navigator
 
@@ -173,7 +173,7 @@ This is done by specifying the options on each screen as shown below. Open `Main
 
 The changes are instantly reflected in the Expo client.
 
-[ss2]
+![ss2](https://miro.medium.com/max/350/1*YV2HwIMzcnU1-GbSaEAkAg.png)
 
 ## Navigating between two screens
 
@@ -211,7 +211,7 @@ To see that `Detail` screen is currently in our stack, try adding the prop `init
 
 Here is the output:
 
-[ss3]
+![ss3](https://miro.medium.com/max/350/1*2FuxHYiJZtynAxlu7XoSog.png)
 
 But we need a way to navigate from the Home screen to the Detail screen not just display the later screen as the initial route. Change the value of `initialRouteName` to `Home`.
 
@@ -271,21 +271,21 @@ export default Home
 
 Here is the changed Home screen:
 
-[ss4]
+![ss4](https://miro.medium.com/max/350/1*7Ap75E1ik7p3HCUYyDT2jA.png)
 
 ## Enabling gestures in react-navigation
 
 If you press the button, you are going to notice that it navigates you to the Detail screen. On the Detail screen, do note that the back button with the name of the previous screen is shown in the header.
 
-[ss5]
+![ss5](https://miro.medium.com/max/374/1*c70jHetvl1YYf4dJu3u5Lw.gif)
 
 The above demo is how the navigation between two-screen works on an iOS device. The default native transition on iOS when using stack navigation is that the screen is pushed or pulled from the right side. On Android, as you will notice below, the behavior is different. The new screen is pushed from the bottom.
 
-[ss6]
+![ss6](https://miro.medium.com/max/327/1*D8q7w0OjqFJQVUtQZw6U0g.gif)
 
 Also, in the below demo notice that on iOS swipe gesture works when going back from Detail to Home screen. On Android, it doesn't.
 
-[ss7]
+![ss7](https://miro.medium.com/max/825/1*1w3g_Wymp31A4siy7PcSNw.gif)
 
 To enable gestures on Android as well, in `Stack.Navigator` you have to add a prop called `screenOptions`. This prop is used when you want to pass some value to all the children's routes of a stack navigator.
 
@@ -299,7 +299,7 @@ To enable gestures on Android as well, in `Stack.Navigator` you have to add a pr
 
 This is going to enable the gestures on Android as well.
 
-[ss8]
+![ss8](https://miro.medium.com/max/825/1*0Z0iyNBAjToSldPXaChgHQ.gif)
 
 ## Passing data between routes
 
@@ -328,7 +328,7 @@ Then, in the same screen component file, modify the `TouchableOpacity` and pass 
 
 Here is the output:
 
-[ss9]
+![ss9](https://miro.medium.com/max/350/1*cGivoNSclkmj6yUVdYQVnw.png)
 
 Open `Detail.js` and add the following code snippet. Using `route.params` this screen component can read the parameters passed from the Home screen. Inside the `Detail` component, let us destructure the `route.params` and then display those values.
 
@@ -385,7 +385,7 @@ export default Detail
 
 Here is the output showing above works:
 
-[ss10]
+![ss10](https://miro.medium.com/max/825/1*dq6r8ObVqOAjyVwg8dFj3A.gif)
 
 ## How to use params in the screen's title
 
@@ -405,7 +405,7 @@ This can be done by passing `route` as an object in options for Detail screen in
 
 Here is the output:
 
-[ss11]
+![ss11](https://miro.medium.com/max/825/1*Pu2ML5XbSihSxOqLloTfGg.gif)
 
 ## Using common screenOptions to modify header styles
 
@@ -437,7 +437,7 @@ The `headerTintColor` is the color property for both the back button and the tit
 
 Here is the output in action after the above changes:
 
-[ss12]
+![ss12](https://miro.medium.com/max/825/1*Xyt-C0u-SN151ybZTiD6Bw.gif)
 
 ## Making the back button title invisible on iOS
 
@@ -466,7 +466,7 @@ To make an iOS app just to show the back button icon instead of the name of the 
 
 Here is the output:
 
-[ss13]
+![ss13](https://miro.medium.com/max/825/1*2v_4y5qgHX89sDGEyr326A.gif)
 
 ## Understanding header modes and changing it in the Android app
 
@@ -476,7 +476,7 @@ On Android, the value `screen` is commonly used. These are the native patterns o
 
 Take a look at the below demo of how it differs on both platforms.
 
-[ss14]
+![ss14](https://miro.medium.com/max/825/1*4VtcuE-YrenIvI8NcaLQ6w.gif)
 
 In the section, let us make the header mode of the Android app behave in the same way as the iOS app. Just add the property `headerMode` with the value of `float` in `Stack.Navigator`.
 
@@ -502,7 +502,7 @@ In the section, let us make the header mode of the Android app behave in the sam
 
 The header in the Android app, when navigating from one screen to another, is going to stay fixed, just link in the iOS app.
 
-[ss15]
+![ss15](https://miro.medium.com/max/825/1*oKb19-8G5_fBf-SGz6_dGw.gif)
 
 ## Directly navigating from the third screen to the top of the stack screen navigator
 
@@ -626,7 +626,7 @@ export default Detail
 
 In the following demo, you are going to notice that to move back from Settings screen to Home screen, you have to pass through the Detail screen.
 
-[ss16]
+![ss16](https://miro.medium.com/max/825/1*hNtPWfht4_b3uer51fGrTA.gif)
 
 However, using the helper method `navigation.popToTop()` without any arguments, you can navigate from Settings screen to the Home screen directly.
 
@@ -680,7 +680,7 @@ export default Settings
 
 Here is the demo:
 
-[ss17]
+![ss17](https://miro.medium.com/max/825/1*IUWdHNEwH4bLtRzBwQ8yng.gif)
 
 ## Conclusion
 
