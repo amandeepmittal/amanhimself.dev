@@ -1,7 +1,7 @@
 ---
 slug: how-to-use-react-native-camera
 date: 2020-02-07
-title: 'How to use React Native Camera'
+title: 'How to use React Native Camera to read QR codes'
 categories: ['react-native']
 description: '---'
 published: true
