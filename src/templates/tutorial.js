@@ -9,7 +9,7 @@ import Hero from '../components/hero'
 import Content from '../components/content'
 import Code from '../components/code'
 // import SEO from '../components/seo'
-import BlogPostFooter from '../components/blogPostFooter'
+import BlogPostFooter from '../components/BlogPostFooter'
 
 const Icon = styled.div`
   width: 60px;

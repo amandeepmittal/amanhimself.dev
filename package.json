@@ -1,7 +1,7 @@
 {
   "name": "amanhimself.dev",
   "description": "Personal website running on Gatsby, React, and Node.js.",
-  "version": "4.5.20",
+  "version": "4.5.22",
   "author": "Aman Mittal <amandeepmittal@live.com>",
   "repository": {
     "type": "git",
@@ -52,8 +52,7 @@
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "clean": "gatsby clean"
   },
   "bugs": {
     "url": "https://github.com/amandeepmittal/amanhimself.dev/issues"
