@@ -1,305 +1,203 @@
 import React from 'react'
-import { graphql } from 'gatsby'
-import { css } from '@emotion/core'
-import styled from '@emotion/styled'
-import {
-  FaGithub,
-  FaTwitter,
-  FaMedium,
-  FaEnvelope,
-  FaDev,
-  FaPatreon
-} from 'react-icons/fa'
-import Layout from 'components/Layout'
-import Link from 'components/Link'
-import { useTheme } from 'components/Theming'
-import Container from 'components/Container'
-import { rhythm } from '../lib/typography'
-import Avatar from '../../assets/avatar.jpg'
-import SocialIcon from 'components/SocialIcon'
-import Intro from 'components/Intro'
+import { Link, graphql } from 'gatsby'
+import styled from 'styled-components'
+import Layout from '../components/layout'
+import SEO from '../components/seo'
+import Card from '../components/card'
+import Grid from '../components/grid'
+import HeaderIntro from '../components/headerIntro'
+import { HeaderWrapper, HeaderGroup } from '../components/header'
+import AboutMe from '../components/aboutMe'
+import WorkHistory from '../components/workHistory'
+import Newsletter from '../components/newsletter'
+import TechSkills from '../components/skills'
+import OpenSource from '../components/openSource'
+import Toolset from '../components/toolset'
+import Collaboration from '../components/collaboration'
+import Travel from '../components/travel'
+import Interviews from '../components/interviews'
 
-const Hero = () => {
-  const theme = useTheme()
+const Icon = styled.div`
+  width: 60px;
+  margin: auto;
+  margin-bottom: 25px;
+  animation: HeroAnimation 3s 0.8s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+  opacity: 0;
+  :hover {
+    filter: brightness(1.1) saturate(110%);
+  }
+`
+
+const TitlePadding = styled.div`
+  padding: 5px;
+`
+const TitleWrapper = styled.div`
+  max-width: ${props => props.theme.screen.sm};
+  margin: auto;
+  h3 {
+    display: flex;
+    align-items: center;
+    border-bottom: 0;
+    padding-bottom: 0;
+    line-height: 0;
+  }
+  a {
+    margin: 0 10px;
+  }
+  button {
+    background: ${props => props.theme.color.primary.purple};
+    display: inline-block;
+    padding: 6px 20px;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1;
+    color: white;
+    opacity: 0.9;
+    .dark & {
+      background: ${props => props.theme.color.primary.purple};
+      color: ${props => props.theme.color.dark.accent100};
+    }
+  }
+  button:hover {
+    transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+    opacity: 1;
+  }
+  @media (max-width: 680px) {
+    h2 {
+      font-size: 1.3rem;
+    }
+  }
+`
+
+const IntroHeader = () => (
+  <HeaderWrapper>
+    <HeaderGroup>
+      <HeaderIntro />
+    </HeaderGroup>
+  </HeaderWrapper>
+)
+
+const IndexPage = ({ data }) => {
+  const { edges: tutorials } = data.allMdx
   return (
-    <section
-      css={css`
-        color: ${theme.colors.white};
-        width: 100%;
-        background: ${theme.colors.primary};
-        padding: 5px 0 0 0;
-        display: flex;
-      `}
-    >
-      <Container
-        css={css`
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-        `}
-      >
-        <h1
-          css={css`
-            color: ${theme.colors.white};
-            position: relative;
-            z-index: 5;
-            line-height: 1.5;
-            margin: 0;
-            max-width: ${rhythm(15)};
-          `}
-        >
-          <p>
-            <span role="img" aria-label="wave">
-              👋
-            </span>{' '}
-            Hi, I'm Aman Mittal
-          </p>
-        </h1>
-        <img
-          src={Avatar}
-          css={css`
-            width: 150px;
-            height: 150px;
-            border-radius: 75px;
-            box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1);
-            color: ${theme.colors.white};
-          `}
-          alt="amanhimself"
-        />
-        <div>
-          <SocialIcon href="https://twitter.com/amanhimself">
-            <FaTwitter
-              css={css`
-                color: ${theme.colors.white};
-                width: 30px;
-                height: 30px;
-                &:hover {
-                  color: green;
-                }
-              `}
-            />
-          </SocialIcon>
-          &ensp;
-          <SocialIcon href="mailto:amanmittal.work@gmail.com">
-            <FaEnvelope
-              css={css`
-                color: ${theme.colors.white};
-                width: 30px;
-                height: 30px;
-                &:hover {
-                  color: green;
-                }
-              `}
-            />
-          </SocialIcon>
-          &ensp;
-          <SocialIcon href="https://medium.com/@amanhimself">
-            <FaMedium
-              css={css`
-                color: ${theme.colors.white};
-                width: 30px;
-                height: 30px;
-                &:hover {
-                  color: green;
-                }
-              `}
-            />
-          </SocialIcon>
-          &ensp;
-          <SocialIcon href="https://github.com/amandeepmittal">
-            <FaGithub
-              css={css`
-                color: ${theme.colors.white};
-                width: 30px;
-                height: 30px;
-                &:hover {
-                  color: green;
-                }
-              `}
-            />
-          </SocialIcon>
-          &ensp;
-          <SocialIcon href="https://dev.to/amanhimself">
-            <FaDev
-              css={css`
-                color: ${theme.colors.white};
-                width: 30px;
-                height: 30px;
-                &:hover {
-                  color: green;
-                }
-              `}
-            />
-          </SocialIcon>
-          &ensp;
-          <SocialIcon href="https://patreon.com/amanhimself">
-            <FaPatreon
-              css={css`
-                color: ${theme.colors.white};
-                width: 30px;
-                height: 30px;
-                &:hover {
-                  color: green;
-                }
-              `}
-            />
-          </SocialIcon>
-        </div>
-      </Container>
-      {/* <div
-        css={css`
-          height: 150px;
-          overflow: hidden;
-        `}
-      /> */}
-    </section>
-  )
-}
-
-// const Description = styled.p`
-//   margin-bottom: 10px;
-//   display: inline-block;
-// `
-
-export default function Index({ data: { site, allMdx } }) {
-  const theme = useTheme()
-  return (
-    <Layout site={site}>
-      <Hero />
-      <Container
-        css={css`
-          padding-bottom: 0;
-        `}
-      >
-        <h2
-          css={css`
-            color: #503d81;
-          `}
-        >
-          <span role="img" aria-label="work">
-            📝{' '}
-          </span>
-          Latest Posts
-        </h2>
-        {allMdx.edges.map(({ node: post }) => (
-          <div
-            key={post.id}
-            css={css`
-              margin-bottom: 40px;
-            `}
-          >
-            <p
-              css={css({
-                marginBottom: rhythm(0.3),
-                transition: 'all 150ms ease',
-                ':hover': {
-                  color: theme.colors.primary
-                }
-              })}
-            >
-              <Link
-                to={post.frontmatter.slug}
-                aria-label={`View ${post.frontmatter.title}`}
-              >
-                {post.frontmatter.title}
-              </Link>
-            </p>
-            {/* <Description>
-              {post.excerpt}{' '}
-              <Link
-                to={post.frontmatter.slug}
-                aria-label={`View ${post.frontmatter.title}`}
-              >
-                Read Article →
-              </Link>
-            </Description> */}
-          </div>
-        ))}
-        <h4
-          css={css`
-            margin: 0px;
-            background-color: #f3993e;
-            border: 0px;
-            padding: 10px;
-            text-align: center;
-            display: inline-block;
-            font-size: 18px;
-            border-radius: 8px;
-          `}
-        >
-          <span role="img" aria-label="right">
-            👉{' '}
-          </span>
+    <Layout>
+      {/* <SEO title="Home" /> */}
+      <IntroHeader />
+      <TitlePadding>
+        <TitleWrapper>
+          <h3>
+            Latest Tutorials{' '}
+            <Link to="/tutorials">
+              <button>View All</button>
+            </Link>
+          </h3>
+        </TitleWrapper>
+      </TitlePadding>
+      <Grid>
+        {tutorials.map(({ node: tutorial }) => (
           <Link
-            to="/blog"
-            aria-label="go to all posts"
-            css={css`
-              color: white;
-              &:hover {
-                text-decoration: none;
-                color: #503d81;
-              }
-            `}
+            key={tutorial.id}
+            to={`/tutorials/${tutorial.frontmatter.slug}`}
           >
-            All Blog Posts{' '}
+            <Card
+              tutorialIcon={tutorial.frontmatter.icon.sharp.fluid}
+              tutorialTags={tutorial.frontmatter.tags}
+              tutorialTitle={tutorial.frontmatter.title}
+            />
           </Link>
-        </h4>
-        <hr
-          css={css({
-            borderTop: '1px dotted #000'
-          })}
-        />
-        <Intro />
-      </Container>
+        ))}
+      </Grid>
+      <AboutMe />
+      <Newsletter />
+      <TechSkills />
+      <WorkHistory />
+      <OpenSource />
+      <Toolset />
+      <Interviews />
+      <Travel />
+      <Collaboration />
     </Layout>
   )
 }
 
 export const pageQuery = graphql`
-  query {
-    site {
-      ...site
-      siteMetadata {
-        title
-      }
-    }
+  query IndexPage {
     allMdx(
-      limit: 10
-      sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { published: { ne: false } } }
+      sort: { fields: frontmatter___tutorialID, order: DESC }
+      filter: { fileAbsolutePath: { regex: "//tutorials//" } }
+      limit: 5
     ) {
       edges {
         node {
-          excerpt(pruneLength: 190)
           id
-          fields {
-            title
-            slug
-            date
-            categories
-          }
-          parent {
-            ... on File {
-              sourceInstanceName
-            }
-          }
+          excerpt
           frontmatter {
             title
-            date(formatString: "MMMM DD, YYYY")
-            description
-            banner {
-              childImageSharp {
-                sizes(maxWidth: 720) {
-                  ...GatsbyImageSharpSizes
+            slug
+            tags
+            tutorialID
+            lead
+            image {
+              sharp: childImageSharp {
+                fluid {
+                  ...GatsbyImageSharpFluid_withWebp
                 }
               }
             }
-            slug
-            keywords
+            icon {
+              sharp: childImageSharp {
+                fluid {
+                  ...GatsbyImageSharpFluid_withWebp
+                }
+              }
+            }
           }
+        }
+      }
+    }
+    featuredPost: allMdx(
+      sort: { fields: frontmatter___tutorialID, order: DESC }
+      filter: { fileAbsolutePath: { regex: "//tutorials//" } }
+      limit: 1
+    ) {
+      edges {
+        node {
+          id
+          excerpt
+          frontmatter {
+            title
+            slug
+            tags
+            tutorialID
+            lead
+
+            image {
+              sharp: childImageSharp {
+                fluid {
+                  ...GatsbyImageSharpFluid_withWebp
+                }
+              }
+            }
+            icon {
+              sharp: childImageSharp {
+                fluid {
+                  ...GatsbyImageSharpFluid_withWebp
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    placeholderImage2: file(relativePath: { eq: "lauro.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1200) {
+          ...GatsbyImageSharpFluid
         }
       }
     }
   }
 `
+
+export default IndexPage
