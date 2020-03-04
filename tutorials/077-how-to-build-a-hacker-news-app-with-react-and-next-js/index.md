@@ -1,6 +1,6 @@
 ---
 title: How To Build a Hacker News App with React and Next.js
-slug: how-to-build-a-hacker-news-app-with-react-and-next-js
+slug: how-to-build-a-hacker-news-app
 image: ./images/banner.png
 icon: ./images/icon.png
 tags: ['Reactjs']
@@ -29,9 +29,7 @@ In this tutorial, we’ll cover:
 - Learn how to use `styled-jsx` to style Next applications
 - Implement Pagination using a third party API and `query` parameters
 
-> [**Try out the Crowdbotics App Builder to instantly scaffold and deploy a React app.**](https://app.crowdbotics.com/dashboard/?utm_campaign=cb-medium&utm_source=blog-post&utm_medium=Medium&utm_content=react-native)
-
-### ⚙️ Pre-requisites
+### Pre-requisites
 
 To continue with this tutorial, you will need the following:
 
@@ -80,13 +78,13 @@ The file-system of your project is the main API that Next uses to serve on the c
 
 Now run the `npm run dev` command from your terminal and go to URL `http://localhost:3000/` to see the following result.
 
-![](https://cdn-images-1.medium.com/max/800/1*eAllT222QETZdlyL_aKuSw.png)
+![1](https://cdn-images-1.medium.com/max/800/1*eAllT222QETZdlyL_aKuSw.png)
 
 > **Note** that you can define your own port as a command line option when running the `dev` script. `npm run dev -- -p <your port here>`. `3000` is the default port used by Next when there is no custom port number defined.
 
 Now, in a typical React project, you might have webpack to bundle your component files, or in our case `pages/index.js` and use Babel to transpile the JavaScript/JSX code inside it. Next does this automatically for you. Another important aspect to notice here is that Next uses _Hot Code Reloading_ when in development mode. Any changes you make inside `index.js` file are going to be automatically reflected in the browser window.
 
-![](https://cdn-images-1.medium.com/max/800/1*H58dRvq4D-XyLJcb4o_a2w.png)
+![12](https://cdn-images-1.medium.com/max/800/1*H58dRvq4D-XyLJcb4o_a2w.png)
 
 ### Creating Pages
 
@@ -114,7 +112,7 @@ export default () => (
 
 To see this in action, visit the URL `http://localhost:3000/crypto` and see the following message in the browser window.
 
-![](https://cdn-images-1.medium.com/max/800/1*Zq4_NmQeU-JfawGanTr-Jg.png)
+![3](https://cdn-images-1.medium.com/max/800/1*Zq4_NmQeU-JfawGanTr-Jg.png)
 
 Another thing to notice here is that we are not using the `import React...` statement in `crypto/index.js` file. You can use anything from React in Next without having to import it. Next has its own presets when compiling the code and adds that for you. If you want to see how it does that, you will notice that in your project there is a hidden directory called `.next`. Visit this path: `.next/static/development/pages/crypto` to view how Next is rendering our routes behind the scene. You will also notice it uses Webpack.
 
@@ -158,7 +156,7 @@ export default () => (
 
 You can verify the results below.
 
-![](https://cdn-images-1.medium.com/max/800/1*Awn_COfQc2YLBjFezGlHjQ.gif)
+![44](https://cdn-images-1.medium.com/max/800/1*Awn_COfQc2YLBjFezGlHjQ.gif)
 
 ### 🚀 Building a Real Time App
 
@@ -240,7 +238,7 @@ Using `try/catch` block, we are fetching `stories` from the API URL `https://nod
 
 Lastly, the `render` function gets `stories` from `this.props` and using JavaScript's `map` we can query on the array which currently holds the data to display it on the screen. Try running the `npm run dev` command and see the following result like below.
 
-![](https://cdn-images-1.medium.com/max/800/1*1X1MKyxp4KeNeA-nYzsQHA.png)
+![44](https://cdn-images-1.medium.com/max/800/1*1X1MKyxp4KeNeA-nYzsQHA.png)
 
 ### Using built-in Error Page
 
@@ -298,7 +296,7 @@ In the above snippet, the API link is not correct. It will not fetch the data an
 
 Do take a note that, we are passing an empty array to stories in the `catch` block to check if the stories are unavailable due to some reason, we can display the following to the end user.
 
-![](https://cdn-images-1.medium.com/max/800/1*zEfD8R1kBovzaAzqcHleYA.png)
+![5](https://cdn-images-1.medium.com/max/800/1*zEfD8R1kBovzaAzqcHleYA.png)
 
 After this step, leave out the built-in error part but change the API URL back to `https://node-hnapi.herokuapp.com/news?page=1` and things will start working again.
 
@@ -337,7 +335,7 @@ return (
 
 We’ll now continue to build the component in order to display other details we are getting them from the API. If you visit the API URL `https://node-hnapi.herokuapp.com/news?page=1` you will notice that each story is an object that contains different information including `points`, comment counts and the link to the individual story to its original URL. We start by importing the `Link` from `next/link`.
 
-![](https://cdn-images-1.medium.com/max/1200/1*CyzMmWVIg0fhSDa5RooZbQ.png)
+![6](https://cdn-images-1.medium.com/max/1200/1*CyzMmWVIg0fhSDa5RooZbQ.png)
 
 We are going to leverage that object. Modify `StoryList` component like below.
 
@@ -367,7 +365,7 @@ export default StoryList
 
 The title is another link that will re-direct you to the link of the original post but does not use Next’s `Link` component.
 
-![](https://cdn-images-1.medium.com/max/800/1*tr0UiaZVkvpZeEMSth7TSA.png)
+![7](https://cdn-images-1.medium.com/max/800/1*tr0UiaZVkvpZeEMSth7TSA.png)
 
 ### Styling Components in Next.js
 
@@ -441,7 +439,7 @@ export default StoryList
 
 Visiting the home page URL in the browser window, you will get a similar look.
 
-![](https://cdn-images-1.medium.com/max/800/1*31X7TJLSebgu4I7ayL60xg.png)
+![121](https://cdn-images-1.medium.com/max/800/1*31X7TJLSebgu4I7ayL60xg.png)
 
 This looks okay but if we are making a simple clone, putting a bit more effort can result in similar results. Create a new component called `Layout.js` inside `components/`. This will be like the navigation menu bar on the original Hacker News site.
 
@@ -509,13 +507,13 @@ return (
 )
 ```
 
-![](https://cdn-images-1.medium.com/max/800/1*eV8Y1Xjk9uWvnOnJslIxeA.png)
+![1111](https://cdn-images-1.medium.com/max/800/1*eV8Y1Xjk9uWvnOnJslIxeA.png)
 
 ### Head Component In Next.js
 
 Right now, if you take a look at the browser window, in the title section of the tab, you won’t see anything other than `localhost...`.
 
-![](https://cdn-images-1.medium.com/max/800/1*wyPiVTGjy17mgJ7NUcE6pA.png)
+![23](https://cdn-images-1.medium.com/max/800/1*wyPiVTGjy17mgJ7NUcE6pA.png)
 
 This notifies us that we are missing a `head` element which is used to set the title of any page on any website or application dynamically. Next has a custom `Head` component that can be imported from `next/head`. From our `index.js` we are going to send the title of the app as props.
 
@@ -639,7 +637,7 @@ export default Index
 
 By using `Link` component, we are defining a button that uses a dynamic approach to trigger and loads the next page from the API. Take a look at the `` href={`/?page=\${page + 1}`} ``. You will now find a **Load More** button which triggers this behavior into the action.
 
-![](https://cdn-images-1.medium.com/max/800/1*8GcgcoQuGmwvehDTHnVV4Q.png)
+![33](https://cdn-images-1.medium.com/max/800/1*8GcgcoQuGmwvehDTHnVV4Q.png)
 
 Similarly, just by adding another button you can decrement the number of pages to visit the previous page.
 
@@ -657,7 +655,7 @@ Similarly, just by adding another button you can decrement the number of pages t
 </button>
 ```
 
-![](https://cdn-images-1.medium.com/max/800/1*ao7Ki5F1rYgV0RK9Uod6ug.png)
+![1](https://cdn-images-1.medium.com/max/800/1*ao7Ki5F1rYgV0RK9Uod6ug.png)
 
 ### Conclusion
 
@@ -671,6 +669,6 @@ The sole purpose of this tutorial was to give you quick start with NextJS, as le
 
 **_The complete code of this tutorial can be found in the Github repository below. 👇_**
 
-[**amandeepmittal/react-nextjs-demo**](https://github.com/amandeepmittal/react-nextjs-demo)
+[amandeepmittal/react-nextjs-demo](https://github.com/amandeepmittal/react-nextjs-demo)
 
 > [Originally published at Crowdbotics](https://medium.com/crowdbotics/how-to-build-a-hacker-news-app-with-react-and-next-js-5fe0c5a64c12)

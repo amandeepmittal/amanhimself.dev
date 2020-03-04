@@ -8,10 +8,14 @@ This website is built using [Gatsby.js](https://www.gatsbyjs.org/) with [MDX](ht
 
 ## Features
 
-- MDX: JavaScript/React in Markdown
-- Prism.js: Syntax Highlighting
-- Pagination
-- styled-components`
+- [MDX: JavaScript/React in Markdown](https://www.gatsbyjs.org/docs/mdx/)
+- [Prism.js: Syntax Highlighting](https://prismjs.com/)
+- [styled-components](https://www.styled-components.com/)
+- [react-icons](https://react-icons.netlify.com/)
+
+## Special Thanks
+
+Special thanks to Lauro Silva's [tweet](https://twitter.com/laurosilvacom/status/1234354925305352193) and Monica.dev's [blog post](https://t.co/kYSj9cbjAS?amp=1) this website has search functionality.
 
 ## License
 
