@@ -1,9 +1,9 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
 import styled from 'styled-components'
-import Layout from '../components/layout'
-import Card from '../components/card'
-import Grid from '../components/grid'
+import Layout from '../components/Layout'
+import Card from '../components/Card'
+import Grid from '../components/Grid'
 // import SEO from '../components/seo'
 
 const TutorialsPage = ({ data }) => {

@@ -1,9 +1,9 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
-import Layout from '../components/layout'
+import Layout from '../components/Layout'
 // import Secondary from '../components/secondary'
-import Content from '../components/content'
+import Content from '../components/Content'
 // import SEO from '../components/seo'
 
 const PagesTemplate = ({ data: { mdx: page } }) => (

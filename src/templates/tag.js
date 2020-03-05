@@ -1,8 +1,8 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
-import Layout from '../components/layout'
-import Grid from '../components/grid'
-import Card from '../components/card'
+import Layout from '../components/Layout'
+import Grid from '../components/Grid'
+import Card from '../components/Card'
 // import Secondary from '../components/secondary'
 // import SEO from '../components/seo'
 
