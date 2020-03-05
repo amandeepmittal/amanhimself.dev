@@ -3,9 +3,9 @@ import React from 'react'
 import { ThemeProvider } from 'styled-components'
 import Global from '../styles/global'
 import theme from '../styles/theme'
-import Wrapper from './wrapper'
-import Header from './header'
-import Footer from './footer'
+import Wrapper from './Wrapper'
+import Header from './Header'
+import Footer from './Footer'
 
 const Layout = ({ children }) => {
   // const data = useStaticQuery(graphql`
