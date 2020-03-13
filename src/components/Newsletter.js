@@ -65,7 +65,7 @@ const Newsletter = () => (
       JavaBeginnersTutorial.com, Crowdbotics, Alligator.io, Expo.io
       (Exposition), Heartbeat (Fritz.ai), Pusher, LevelUp Gitconnected, Better
       Programming, JScrambler, React Native Training, Instamobile, Sitepoint,
-      Newline.co (by Fullstack.io), & LogRocket.
+      Newline.co (by Fullstack.io), Soshace & LogRocket.
     </p>
     {/* <h4
       css={css`
