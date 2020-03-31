@@ -124,7 +124,7 @@ const OpenSource = () => (
             #100DaysOfCode
           </a>{' '}
           Twitter bot followed by more than{' '}
-          <span style={{ fontWeight: 'bold' }}>65k+ developers.</span>
+          <span style={{ fontWeight: 'bold' }}>70k+ developers.</span>
         </p>
       </li>
       <p style={{ fontWeight: '600' }}>GatsbyJS</p>

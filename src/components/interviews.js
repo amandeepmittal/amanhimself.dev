@@ -27,7 +27,7 @@ const Interviews = () => (
       <span role="img" aria-label="newsletter">
         🎧{' '}
       </span>
-      Guest Podcast Appearance
+      Guest Podcast Appearance & Interviews
     </h3>
     <p>
       {' '}
@@ -43,6 +43,19 @@ const Interviews = () => (
       </a>
       Setting Up and Getting Used to Gatsby with Charles Max Wood, Cory House,
       Tara Manicsic and Kent C Dodds
+    </p>
+    <p>
+      {' '}
+      <span role="img" aria-label="right">
+        👉{' '}
+      </span>
+      <a
+        href="https://dev.to/catalinmpit/my-patchy-journey-to-software-development-with-aman-mittal-1l1f"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        My Patchy Journey To Software Development with Catalin Pit{' '}
+      </a>
     </p>
   </Wrapper>
 )
