@@ -27,7 +27,7 @@ const OpenSource = () => (
       <li>
         <p>
           <a
-            href="https://github.com/amandeepmittal/expo-firebase"
+            href="https://github.com/expo-community/expo-firebase-starter"
             target="_blank"
             rel="noopener noreferrer"
           >
