@@ -1,6 +1,4 @@
 import React from 'react'
-import { Link, graphql } from 'gatsby'
-import styled from 'styled-components'
 import Layout from '../components/Layout'
 import Appreciation from '../components/Appreciation'
 
