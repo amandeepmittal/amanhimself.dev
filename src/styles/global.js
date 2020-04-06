@@ -149,7 +149,7 @@ const GlobalStyles = createGlobalStyle`
   }
   li {
     ${props => props.theme.font_size.small};
-    line-height: 1em;
+    line-height: 2em;
   }
   .dark {
     background: #1d1e4a;
