@@ -87,7 +87,7 @@ const IndexPage = ({ data }) => {
       <TitlePadding>
         <TitleWrapper>
           <h3>
-            Latest Tutorials{' '}
+            Latest{' '}
             <Link to="/tutorials">
               <button>View All</button>
             </Link>
