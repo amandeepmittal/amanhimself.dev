@@ -25,7 +25,7 @@ const Wrapper = styled.div`
   text-align: center;
 `
 
-const Anchor = styled.div`
+const Anchor = styled.a`
   padding-top: 5px;
   padding-bottom: 10px;
 `
