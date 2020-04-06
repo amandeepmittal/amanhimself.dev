@@ -91,6 +91,9 @@ const IndexPage = ({ data }) => {
             <Link to="/tutorials">
               <button>View All</button>
             </Link>
+            <Link to="/testimonials">
+              <button>Testimonials</button>
+            </Link>
           </h3>
         </TitleWrapper>
       </TitlePadding>
