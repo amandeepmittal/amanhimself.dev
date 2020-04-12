@@ -84,7 +84,7 @@ const BlogPostFooter = () => (
           <span role="img" aria-label="letter">
             💌{' '}
           </span>
-          Subscribe & join 950+ devs
+          Subscribe & join 1000+ devs
         </ButtonText>
       </ButtonContainer>
       <CoffeeButtonContainer>

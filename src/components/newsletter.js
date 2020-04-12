@@ -42,7 +42,7 @@ const Newsletter = () => (
     </p>
     <p>
       I publish new articles every week and and you can stay up to date by
-      joining <span style={{ fontWeight: ' bold' }}>950+ developers.</span>
+      joining <span style={{ fontWeight: ' bold' }}>1000+ developers.</span>
     </p>
     <Button>
       <h3>
