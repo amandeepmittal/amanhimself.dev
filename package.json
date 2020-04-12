@@ -1,7 +1,7 @@
 {
   "name": "amanhimself.dev",
   "description": "Personal website running on Gatsby, React, and Node.js.",
-  "version": "5.1.7",
+  "version": "5.1.8",
   "author": "Aman Mittal <amandeepmittal@live.com>",
   "repository": {
     "type": "git",
@@ -12,17 +12,17 @@
     "@mdx-js/react": "1.5.8",
     "babel-plugin-styled-components": "1.10.7",
     "gatsby": "^2.20.18",
-    "gatsby-image": "^2.2.43",
-    "gatsby-plugin-google-analytics": "2.1.37",
-    "gatsby-plugin-manifest": "^2.2.47",
-    "gatsby-plugin-mdx": "1.0.82",
-    "gatsby-plugin-offline": "^3.0.40",
-    "gatsby-plugin-react-helmet": "^3.1.23",
-    "gatsby-plugin-sharp": "^2.4.12",
-    "gatsby-plugin-styled-components": "3.1.20",
-    "gatsby-remark-images": "3.1.49",
-    "gatsby-source-filesystem": "^2.1.54",
-    "gatsby-transformer-sharp": "^2.3.18",
+    "gatsby-image": "^2.3.2",
+    "gatsby-plugin-google-analytics": "2.2.2",
+    "gatsby-plugin-manifest": "^2.3.3",
+    "gatsby-plugin-mdx": "1.1.7",
+    "gatsby-plugin-offline": "^3.1.2",
+    "gatsby-plugin-react-helmet": "^3.2.2",
+    "gatsby-plugin-sharp": "^2.5.4",
+    "gatsby-plugin-styled-components": "3.2.1",
+    "gatsby-remark-images": "3.2.2",
+    "gatsby-source-filesystem": "^2.2.2",
+    "gatsby-transformer-sharp": "^2.4.4",
     "lodash": "4.17.15",
     "prism-react-renderer": "1.0.2",
     "prop-types": "^15.7.2",
@@ -30,7 +30,7 @@
     "react-dom": "^16.13.0",
     "react-helmet": "^5.2.1",
     "react-icons": "3.9.0",
-    "styled-components": "5.0.1"
+    "styled-components": "5.1.0"
   },
   "devDependencies": {
     "prettier": "^1.19.1"
