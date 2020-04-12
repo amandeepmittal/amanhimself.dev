@@ -1,13 +1,14 @@
 {
   "name": "amanhimself.dev",
   "description": "Personal website running on Gatsby, React, and Node.js.",
-  "version": "5.1.9",
+  "version": "5.1.10",
   "author": "Aman Mittal <amandeepmittal@live.com>",
   "repository": {
     "type": "git",
     "url": "https://github.com/amandeepmittal/amanhimself.dev"
   },
   "dependencies": {
+    "@babel/helper-call-delegate": "7.8.7",
     "@mdx-js/mdx": "1.5.8",
     "@mdx-js/react": "1.5.8",
     "babel-plugin-styled-components": "1.10.7",
