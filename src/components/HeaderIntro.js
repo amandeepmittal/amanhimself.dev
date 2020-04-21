@@ -1,109 +1,88 @@
-import React from 'react'
-import styled from 'styled-components'
-import Avatar from '../images/logo.jpg'
-import NewsletterButton from './NewsletterButton'
-import SocialIcon from './SocialIcon'
+import React from 'react';
+import { Link } from 'gatsby';
 import {
   FaGithub,
   FaTwitter,
   FaMedium,
   FaDev,
   FaPatreon,
-  FaPaypal,
   FaMugHot
-} from 'react-icons/fa'
+} from 'react-icons/fa';
+import SocialIcon from './SocialIcon';
+import avatar from '../images/avatar.jpg';
 
-const LeadContainer = styled.div`
-  display: flex;
-  align-items: center;
-  color: ${props => props.theme.color.light.accent100};
-  margin-top: 20px;
-  margin-left: 20px;
-`
-
-const InfoContainer = styled.div`
-  flex: 2;
-  p {
-    color: ${props => props.theme.color.light.accent100};
-    max-width: 450px;
-    font-size: 18px;
-    font-weight: 300;
-  }
-`
-
-const Img = styled.img`
-  width: 100px;
-  height: 100px;
-  border-radius: 50px;
-`
-
-const NewsletterContainer = styled.div`
-  flex: 2;
-  p {
-    color: ${props => props.theme.color.light.accent100};
-    max-width: 450px;
-    font-size: 18px;
-    font-weight: 300;
-  }
-  @media (max-width: ${props => props.theme.screen.sm}) {
-    display: none;
-  }
-`
-
-const CenterDiv = styled.div`
-  text-align: center;
-`
-
-const HeaderIntro = () => (
-  <LeadContainer>
-    <InfoContainer>
-      <h3>
-        <span role="img" aria-label="wave">
-          👋{' '}
-        </span>
-        Hi, I'm Aman Mittal
-      </h3>
-      <p>
-        I am a software developer working as a contract developer and writing
-        about Node.js, Reactjs and React Native development.
-      </p>
-      <div>
-        <SocialIcon href="https://twitter.com/amanhimself">
-          <FaTwitter style={{ width: '20px', height: '20px' }} />
-        </SocialIcon>
-        &ensp;
-        <SocialIcon href="https://medium.com/@amanhimself">
-          <FaMedium style={{ width: '20px', height: '20px' }} />
-        </SocialIcon>
-        &ensp;
-        <SocialIcon href="https://github.com/amandeepmittal">
-          <FaGithub style={{ width: '20px', height: '20px' }} />
-        </SocialIcon>
-        &ensp;
-        <SocialIcon href="https://dev.to/amanhimself">
-          <FaDev style={{ width: '20px', height: '20px' }} />
-        </SocialIcon>
-        &ensp;
-        <SocialIcon href="https://patreon.com/amanhimself">
-          <FaPatreon style={{ width: '20px', height: '20px' }} />
-        </SocialIcon>
-        &ensp;
-        <SocialIcon href="https://paypal.me/amanhimself">
-          <FaPaypal style={{ width: '20px', height: '20px' }} />
-        </SocialIcon>
-        &ensp;
-        <SocialIcon href="https://ko-fi.com/amanhimself">
-          <FaMugHot style={{ width: '20px', height: '20px' }} />
-        </SocialIcon>
+export default function HeaderIntro() {
+  return (
+    <div className='lead'>
+      <div className='elevator'>
+        <h1 style={{ fontSize: 32 }}>{`👋 Hi, I'm Aman Mittal`}</h1>
+        <p>
+          {`I am a software developer working as a contract developer and `}
+          <Link to='/tutorials' style={{ color: '#7f78d2' }}>
+            writing
+          </Link>
+          {` about Node.js, Reactjs and React Native development.`}
+        </p>
+        <div>
+          <SocialIcon href='https://twitter.com/amanhimself'>
+            <FaTwitter
+              style={{ width: '30px', height: '30px', color: '#fff' }}
+            />
+          </SocialIcon>
+          &ensp;
+          <SocialIcon href='https://github.com/amandeepmittal'>
+            <FaGithub
+              style={{ width: '30px', height: '30px', color: '#fff' }}
+            />
+          </SocialIcon>
+          &ensp;
+          <SocialIcon href='https://medium.com/@amanhimself'>
+            <FaMedium
+              style={{ width: '30px', height: '30px', color: '#fff' }}
+            />
+          </SocialIcon>
+          &ensp;
+          <SocialIcon href='https://dev.to/amanhimself'>
+            <FaDev style={{ width: '30px', height: '30px', color: '#fff' }} />
+          </SocialIcon>
+          &ensp;
+          <SocialIcon href='https://patreon.com/amanhimself'>
+            <FaPatreon
+              style={{ width: '30px', height: '30px', color: '#fff' }}
+            />
+          </SocialIcon>
+          {/* &ensp;
+          <SocialIcon href='https://paypal.me/amanhimself'>
+            <FaPaypal
+              style={{ width: '30px', height: '30px', color: '#fff' }}
+            />
+          </SocialIcon> */}
+          &ensp;
+          <SocialIcon href='https://ko-fi.com/amanhimself'>
+            <FaMugHot
+              style={{ width: '30px', height: '30px', color: '#fff' }}
+            />
+          </SocialIcon>
+        </div>
       </div>
-    </InfoContainer>
-    <NewsletterContainer>
-      <CenterDiv>
-        <Img src={Avatar} alt="profile image" />
-        <NewsletterButton />
-      </CenterDiv>
-    </NewsletterContainer>
-  </LeadContainer>
-)
-
-export default HeaderIntro
+      <div className='newsletter-section'>
+        <img
+          src={avatar}
+          className='newsletter-avatar'
+          alt='Aman'
+          style={{ width: 150, height: 150 }}
+        />
+        <div>
+          <h3>Email Newsletter</h3>
+          <p>
+            Get an update when my new tutorials are out by signing up the
+            newsletter below and join 1k+ developers.
+          </p>
+          <a className='button' href='https://tinyletter.com/amanhimself'>
+            {`💌 Subscribe`}
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+}

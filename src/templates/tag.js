@@ -1,76 +1,62 @@
-import React from 'react'
-import { Link, graphql } from 'gatsby'
-import Layout from '../components/Layout'
-import Grid from '../components/Grid'
-import Card from '../components/Card'
-// import Secondary from '../components/secondary'
-// import SEO from '../components/seo'
+import React from 'react';
+import Helmet from 'react-helmet';
+import { graphql } from 'gatsby';
+import Layout from '../components/Layout';
+import PostListing from '../components/PostListing';
+import config from '../data/site-config';
 
-const Tags = ({ pageContext, data }) => {
-  const { tag } = pageContext
-  const { edges: tutorials } = data.allMdx
+export default function TagTemplate(props) {
+  const { tag } = props.pageContext;
+  const postEdges = props.data.allMarkdownRemark.edges;
 
   return (
     <Layout>
-      {/* <SEO title={`Tutorials tagged as ${tag}`} />
-      <Secondary>
-        <h1>{`${tag}`}</h1>
-        <p>Tutorials tagged as {`${tag}`}</p>
-      </Secondary> */}
-
-      <Grid>
-        {tutorials.map(({ node: tutorial }) => (
-          <Link
-            key={tutorial.id}
-            to={`/tutorials/${tutorial.frontmatter.slug}`}
-          >
-            <Card
-              tutorialIcon={tutorial.frontmatter.icon.sharp.fluid}
-              tutorialTags={tutorial.frontmatter.tags}
-              tutorialTitle={tutorial.frontmatter.title}
-            />
-          </Link>
-        ))}
-      </Grid>
+      <Helmet title={`Posts tagged as "${tag}" – ${config.siteTitle}`} />
+      <div className='container'>
+        <h1>
+          Posts tagged as{' '}
+          <u>
+            <strong>{tag}</strong>
+          </u>
+        </h1>
+        <PostListing postEdges={postEdges} />
+      </div>
     </Layout>
-  )
+  );
 }
 
-export default Tags
-
 export const pageQuery = graphql`
-  query($tag: String) {
-    allMdx(
-      limit: 2000
-      sort: { fields: frontmatter___tutorialID, order: DESC }
+  query TagPage($tag: String) {
+    allMarkdownRemark(
+      limit: 1000
+      sort: { fields: [fields___date], order: DESC }
       filter: { frontmatter: { tags: { in: [$tag] } } }
     ) {
       totalCount
       edges {
         node {
-          id
+          fields {
+            slug
+            date
+          }
+          excerpt
+          timeToRead
           frontmatter {
             title
-            slug
             tags
-            tutorialID
-            image {
-              sharp: childImageSharp {
-                fluid {
-                  ...GatsbyImageSharpFluid_withWebp
+            categories
+            thumbnail {
+              childImageSharp {
+                fixed(width: 150, height: 150) {
+                  ...GatsbyImageSharpFixed
                 }
               }
             }
-            icon {
-              sharp: childImageSharp {
-                fluid(maxWidth: 100) {
-                  ...GatsbyImageSharpFluid_withWebp
-                }
-              }
-            }
+            date
+            template
           }
         }
       }
     }
   }
-`
+`;
