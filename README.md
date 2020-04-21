@@ -14,7 +14,7 @@ This website is built using Gatsbyjs.
 - [react-icons](https://react-icons.netlify.com/)
 - Code theme from Dracula
 
-## Blog elements inspirsed from
+## Blog elements inspired from
 
 - [Tania Rascia](https://github.com/taniarascia/taniarascia.com)
 - [Gatsby Advanced starter](https://github.com/vagr9k/gatsby-advanced-starter/)
