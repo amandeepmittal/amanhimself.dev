@@ -1,31 +1,22 @@
-import React from 'react'
-// import { useStaticQuery, graphql } from 'gatsby'
-import { ThemeProvider } from 'styled-components'
-import Global from '../styles/global'
-import theme from '../styles/theme'
-import Wrapper from './Wrapper'
-import Header from './Header'
-import Footer from './Footer'
+import React from 'react';
+import Helmet from 'react-helmet';
+import Navigation from './Navigation';
+import Footer from './Footer';
+import config from '../data/site-config';
+import favicon from '../images/favicons/favicon.ico';
+import '../styles/main.scss';
 
-const Layout = ({ children }) => {
-  // const data = useStaticQuery(graphql`
-  //   query SiteTitleQuery {
-  //     site {
-  //       siteMetadata {
-  //         title
-  //       }
-  //     }
-  //   }
-  // `)
-
+export default function Layout({ children }) {
   return (
-    <ThemeProvider theme={theme}>
-      <Global />
-      <Header />
-      <Wrapper>{children}</Wrapper>
+    <>
+      <Helmet>
+        <meta name='description' content={config.siteDescription} />
+        <link rel='shortcut icon' type='image/png' href={favicon} />
+      </Helmet>
+      <Navigation menuLinks={config.menuLinks} />
+      <main id='main-content'>{children}</main>
+      {/* TODO: Add footer here */}
       <Footer />
-    </ThemeProvider>
-  )
+    </>
+  );
 }
-
-export default Layout

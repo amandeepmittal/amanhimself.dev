@@ -1,48 +1,54 @@
-import React from 'react'
-import { graphql } from 'gatsby'
-import { MDXRenderer } from 'gatsby-plugin-mdx'
-import Layout from '../components/Layout'
-// import Secondary from '../components/secondary'
-import Content from '../components/Content'
-// import SEO from '../components/seo'
+import React from 'react';
+import Helmet from 'react-helmet';
+import { graphql } from 'gatsby';
+import Layout from '../components/Layout';
+import config from '../data/site-config';
+import SEO from '../components/SEO';
 
-const PagesTemplate = ({ data: { mdx: page } }) => (
-  <Layout>
-    {/* <SEO
-      title={page.frontmatter.title}
-      description={page.excerpt}
-      image={page.frontmatter.image.sharp.fluid}
-    />
-    <Secondary>
-      <h1>{page.frontmatter.title}</h1>
-      <p>{page.frontmatter.lead}</p>
-    </Secondary> */}
+export default function PageTemplate(props) {
+  const { slug } = props.pageContext;
+  const postNode = props.data.markdownRemark;
+  const page = postNode.frontmatter;
 
-    <Content>
-      <MDXRenderer>{page.body}</MDXRenderer>
-    </Content>
-  </Layout>
-)
+  if (!page.id) {
+    page.id = slug;
+  }
 
-export default PagesTemplate
+  return (
+    <Layout>
+      <Helmet>
+        <title>{`${page.title} – ${config.siteTitle}`}</title>
+      </Helmet>
+      <SEO />
+      <div className='container'>
+        <article>
+          <header className='page-header'>
+            <h1>{page.title}</h1>
+          </header>
+          <div
+            className='page'
+            dangerouslySetInnerHTML={{ __html: postNode.html }}
+          />
+        </article>
+      </div>
+    </Layout>
+  );
+}
 
-export const query = graphql`
-  query($slug: String!) {
-    mdx(frontmatter: { slug: { eq: $slug } }) {
-      excerpt(pruneLength: 160)
+export const pageQuery = graphql`
+  query PageBySlug($slug: String!) {
+    markdownRemark(fields: { slug: { eq: $slug } }) {
+      html
+      timeToRead
+      excerpt
       frontmatter {
         title
-        slug
-        lead
-        image {
-          sharp: childImageSharp {
-            fluid(maxWidth: 1200) {
-              ...GatsbyImageSharpFluid_withWebp
-            }
-          }
-        }
+        template
       }
-      body
+      fields {
+        slug
+        date
+      }
     }
   }
-`
+`;

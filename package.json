@@ -1,40 +1,42 @@
 {
   "name": "amanhimself.dev",
+  "private": true,
   "description": "Personal website running on Gatsby, React, and Node.js.",
-  "version": "5.1.12",
+  "version": "5.1.3",
   "author": "Aman Mittal <amandeepmittal@live.com>",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/amandeepmittal/amanhimself.dev"
-  },
   "dependencies": {
-    "@babel/helper-call-delegate": "7.8.7",
-    "@mdx-js/mdx": "1.5.8",
-    "@mdx-js/react": "1.5.8",
-    "babel-plugin-styled-components": "1.10.7",
-    "gatsby": "^2.20.18",
-    "gatsby-image": "^2.3.2",
+    "gatsby": "^2.20.12",
+    "gatsby-image": "^2.3.1",
+    "gatsby-plugin-catch-links": "2.2.1",
+    "gatsby-plugin-feed": "2.4.3",
     "gatsby-plugin-google-analytics": "2.2.2",
-    "gatsby-plugin-manifest": "^2.3.3",
-    "gatsby-plugin-mdx": "1.1.7",
+    "gatsby-plugin-manifest": "2.3.3",
+    "gatsby-plugin-nprogress": "2.2.1",
     "gatsby-plugin-offline": "^3.1.2",
-    "gatsby-plugin-react-helmet": "^3.2.2",
-    "gatsby-plugin-sharp": "^2.5.4",
-    "gatsby-plugin-styled-components": "3.2.1",
+    "gatsby-plugin-react-helmet": "3.2.2",
+    "gatsby-plugin-sass": "2.2.1",
+    "gatsby-plugin-sharp": "2.5.4",
+    "gatsby-plugin-sitemap": "2.3.5",
+    "gatsby-remark-autolink-headers": "2.2.1",
+    "gatsby-remark-copy-linked-files": "2.2.1",
     "gatsby-remark-images": "3.2.2",
-    "gatsby-source-filesystem": "^2.2.2",
-    "gatsby-transformer-sharp": "^2.4.4",
-    "lodash": "4.17.15",
-    "prism-react-renderer": "1.0.2",
+    "gatsby-remark-prismjs": "3.4.1",
+    "gatsby-source-filesystem": "2.2.2",
+    "gatsby-transformer-remark": "2.7.1",
+    "gatsby-transformer-sharp": "2.4.4",
+    "lodash.kebabcase": "4.1.1",
+    "moment": "2.24.0",
+    "node-sass": "4.13.1",
+    "prismjs": "1.20.0",
     "prop-types": "^15.7.2",
-    "react": "^16.13.0",
-    "react-dom": "^16.13.0",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
     "react-helmet": "^5.2.1",
     "react-icons": "3.9.0",
-    "styled-components": "5.1.0"
+    "url-join": "4.0.1"
   },
   "devDependencies": {
-    "prettier": "^1.19.1"
+    "prettier": "2.0.4"
   },
   "keywords": [
     "aman mittal",
@@ -47,16 +49,21 @@
     "articles",
     "development"
   ],
+  "license": "CC-BY-NC-4.0",
   "scripts": {
+    "dev": "gatsby develop",
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "clean": "rm -rf public && rm -rf .cache"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/amandeepmittal/amanhimself.dev"
   },
   "bugs": {
     "url": "https://github.com/amandeepmittal/amanhimself.dev/issues"
-  },
-  "license": "CC-BY-NC-4.0"
+  }
 }

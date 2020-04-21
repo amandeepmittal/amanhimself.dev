@@ -8,14 +8,17 @@ This website is built using [Gatsby.js](https://www.gatsbyjs.org/) with [MDX](ht
 
 ## Features
 
-- [MDX: JavaScript/React in Markdown](https://www.gatsbyjs.org/docs/mdx/)
+- Posts and pages in Markdown
+- SASS
 - [Prism.js: Syntax Highlighting](https://prismjs.com/)
-- [styled-components](https://www.styled-components.com/)
 - [react-icons](https://react-icons.netlify.com/)
+- Code theme from Dracula
 
-## Special Thanks
+## Blog elements inspirsed from
 
-Special thanks to Lauro Silva's [tweet](https://twitter.com/laurosilvacom/status/1234354925305352193) and Monica.dev's [blog post](https://t.co/kYSj9cbjAS?amp=1) this website has search functionality.
+- [Tania Rascia](https://github.com/taniarascia/taniarascia.com)
+- [Gatsby Advanced starter](https://github.com/vagr9k/gatsby-advanced-starter/)
+- [Egghead Gatsby Starter](https://github.com/eggheadio/gatsby-starter-egghead-blog)
 
 ## License
 
