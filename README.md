@@ -4,7 +4,7 @@
 
 A personal website where I keep information about myself and all of my blog posts. I have written for over 25+ tech publications and over 150+ posts. This website is an alternate platform to the collection.
 
-This website is built using [Gatsby.js].
+This website is built using Gatsbyjs.
 
 ## Features
 
