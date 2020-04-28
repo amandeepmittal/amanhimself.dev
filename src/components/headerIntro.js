@@ -17,9 +17,9 @@ export default function HeaderIntro() {
       <div className='elevator'>
         <h1 style={{ fontSize: 32 }}>{`👋 Hi, I'm Aman Mittal`}</h1>
         <p>
-          {`I am a software developer working as a contract developer and `}
+          {`I am an independent contract developer who loves to `}
           <Link to='/tutorials' style={{ color: '#7f78d2' }}>
-            writing
+            write
           </Link>
           {` about Node.js, Reactjs and React Native development.`}
         </p>
