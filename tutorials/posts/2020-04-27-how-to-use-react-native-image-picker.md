@@ -562,3 +562,5 @@ In this post, you have learned how to configure and implement `react-native-imag
 Here is the link to the complete [API](https://github.com/react-native-community/react-native-image-picker/blob/master/docs/Reference.md#the-response-object) for `react-native-image-picker` library.
 
 The complete code for this tutorial is available at this GitHub repo [here](https://github.com/amandeepmittal/react-native-examples/tree/master/rnImagePickerExample).
+
+[Originally Published at Crowdbotics](https://blog.crowdbotics.com/how-to-use-react-native-image-picker/)
