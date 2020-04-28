@@ -706,14 +706,24 @@ h2.publication-company {
     color: $light-font-color;
 
     &.comment-link,
-    &.twitter-link,
     &.github-link {
       margin: 0 0.5rem;
     }
 
     &:hover {
-      color: $primary-color;
+      color: $code-color;
     }
+  }
+}
+
+#twitter-share {
+  a {
+    color: $code-comment;
+    font-weight: 600;
+  }
+
+  &:hover {
+    color: '#39A2F3';
   }
 }
 

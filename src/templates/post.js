@@ -8,6 +8,7 @@ import PostTags from '../components/PostTags';
 import SEO from '../components/SEO';
 import config from '../data/site-config';
 import { formatDate } from '../utils';
+import TwitterLogo from '../images/twitter-logo.png';
 
 export default function PostTemplate(props) {
   const { slug } = props.pageContext;
@@ -49,15 +50,7 @@ export default function PostTemplate(props) {
               {/* <Link to='/me'>
                 <img src={avatar} className='avatar-small' alt='Aman' />
               </Link> */}
-              <time className='date'>Published on {date}</time> -
-              <a
-                className='twitter-link'
-                href={twitterShare}
-                target='_blank'
-                rel='noopener noreferrer'
-              >
-                Share on Twitter
-              </a>
+              <time className='date'>Published on {date}</time>
               {/* <a
                 className='github-link'
                 href={githubLink}
@@ -76,6 +69,27 @@ export default function PostTemplate(props) {
           dangerouslySetInnerHTML={{ __html: postNode.html }}
         />
       </article>
+      <div className='single container'>
+        <hr />
+        <div style={{ textAlign: 'center' }}>
+          <img
+            src={TwitterLogo}
+            alt='twitter-logo'
+            style={{ width: 75, height: 75, marginBottom: -40 }}
+          />
+          <h3>
+            <a
+              id='twitter-share'
+              href={twitterShare}
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              Click here to share this article with your friends on Twitter.
+            </a>
+          </h3>
+          <small>Share if it was useful. It's a big help to me🙏</small>
+        </div>
+      </div>
       <BlogPostFooter />
     </Layout>
   );
