@@ -378,6 +378,7 @@ export default function About() {
           </li>
         </ul>
         <h2>{`✈ Countries I've visited (8)`}</h2>
+        <p>I love to travel.</p>
         <p style={{ fontSize: 24 }}>{`🇦🇪🇵🇱🇨🇿🇦🇹🇸🇰🇩🇪🇧🇪🇳🇱`}</p>
         <h2>{`🤝 Want to collaborate?`}</h2>
         <p>
