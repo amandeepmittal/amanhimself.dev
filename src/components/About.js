@@ -376,6 +376,15 @@ export default function About() {
               {`My Patchy Journey To Software Development with Catalin Pit`}
             </a>
           </li>
+          <li>
+            <a
+              href='https://suprstory.com/how-passion-to-write-combined-with-love-for-technology-lead-this-dev-to-gain-mastery-at-tech-blogging/'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              {`How passion to write combined with love for technology lead this dev to gain mastery at tech blogging.`}
+            </a>
+          </li>
         </ul>
         <h2>{`✈ Countries I've visited (8)`}</h2>
         <p>I love to travel.</p>
