@@ -40,7 +40,7 @@ export default function About() {
         <p>
           I've written over
           <strong>
-            {` 150+ articles and tutorials for 25 developer publications and
+            {` 150+ blog posts and tutorials for 25 developer publications and
             organizational blogs`}
           </strong>
           . I have also been responsible to create a curriculum for an online
@@ -95,7 +95,7 @@ export default function About() {
         <p>
           At least once a week, I roll out a newsletter for fellow developers to
           enhance their skills in Nodejs, Reactjs, React Native, Firebase, and
-          GraphQL. I publish new articles every week and and you can stay up to
+          GraphQL. I publish new posts every week and and you can stay up to
           date by joining <strong>1000+ developers</strong>.
         </p>
         <a className='button' href='https://tinyletter.com/amanhimself'>

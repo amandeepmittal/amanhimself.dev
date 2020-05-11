@@ -52,8 +52,7 @@ module.exports = {
               maintainCase: false,
               removeAccents: true
             }
-          },
-          `gatsby-remark-reading-time`
+          }
         ]
       }
     },
