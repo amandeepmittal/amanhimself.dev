@@ -262,7 +262,7 @@ export default function About() {
             >
               {` #100DaysOfCode `}
             </a>
-            Twitter bot followed by more than <strong>75k+ developers</strong>.
+            Twitter bot followed by more than <strong>80k+ developers</strong>.
           </li>
           <li>
             <strong>Gatsbyjs:</strong> Creator of 4 starter/theme kits.
