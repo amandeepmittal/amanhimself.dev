@@ -8,6 +8,7 @@ import {
   FaPatreon,
   FaMugHot
 } from 'react-icons/fa';
+import { MdEmail } from 'react-icons/md';
 import SocialIcon from './SocialIcon';
 import avatar from '../images/avatar.jpg';
 
@@ -24,6 +25,9 @@ export default function HeaderIntro() {
           {` about Node.js, Reactjs and React Native development.`}
         </p>
         <div>
+          <SocialIcon href='mailto:amanmittal.work@gmail.com'>
+            <MdEmail style={{ width: '30px', height: '30px', color: '#fff' }} />
+          </SocialIcon>
           <SocialIcon href='https://twitter.com/amanhimself'>
             <FaTwitter
               style={{ width: '30px', height: '30px', color: '#fff' }}
