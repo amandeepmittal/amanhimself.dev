@@ -76,7 +76,20 @@ export default function BlogPostFooter() {
         >
           Subscribe the newsletter.{' '}
         </a>
+        <br />
         Over 1000 people enjoy getting, probably you will too.
+      </div>
+      <div style={{ textAlign: 'center', marginTop: 10 }}>
+        ☕ You can support this blog and allow me to continue to write posts
+        <br />
+        <a
+          href='https://ko-fi.com/amanhimself'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
+          by Buying me a coffee here.{' '}
+        </a>
+        <br />
       </div>
     </div>
   );
