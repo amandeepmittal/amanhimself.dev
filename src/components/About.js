@@ -35,7 +35,7 @@ export default function About() {
           </a>
           . I love writing about code and share what I learn. I specifically
           write on modern JavaScript frameworks including Node.js, React, React
-          Native and GraphQL.
+          Native and Firebase.
         </p>
         <p>
           I've written over
@@ -94,9 +94,9 @@ export default function About() {
         <h2>{`📨 My Weekly Newsletter`}</h2>
         <p>
           At least once a week, I roll out a newsletter for fellow developers to
-          enhance their skills in Nodejs, Reactjs, React Native, Firebase, and
-          GraphQL. I publish new posts every week and and you can stay up to
-          date by joining <strong>1000+ developers</strong>.
+          enhance their skills in Nodejs, Reactjs, React Native, and Firebase. I
+          publish new posts every week and and you can stay up to date by
+          joining <strong>1000+ developers</strong>.
         </p>
         <a className='button' href='https://tinyletter.com/amanhimself'>
           {`💌 Subscribe here`}
