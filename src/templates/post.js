@@ -71,6 +71,27 @@ export default function PostTemplate(props) {
       </article>
       <div className='single container'>
         <hr />
+        <div>
+          <img
+            src='https://i.imgur.com/r2C4QXc.jpg'
+            alt='banner'
+            style={{ width: 600, height: 300 }}
+          />
+          <br />
+          Manning publications are offering a 40% off on their JavaScript and
+          GraphQL collection of ebooks, and video courses exclusively for the
+          readers of this blog{' '}
+          <a
+            href='http://mng.bz/lGzy'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            <strong>here</strong>
+          </a>
+          .
+        </div>
+
+        <hr />
         <div style={{ textAlign: 'center' }}>
           <img
             src={TwitterLogo}
