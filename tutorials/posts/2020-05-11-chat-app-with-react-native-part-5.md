@@ -338,7 +338,7 @@ And here is the system message displayed in the new chat room.
 
 Right now the system message generated is not as appealing and conveying inside a chat room. In this short section, let us learn how to customize that in `react-native-gifted-chat`.
 
-Start by importing `SystemMessage` component from `react-native-gifted-chat` inside `RoomScreen.js` file`.
+Start by importing `SystemMessage` component from `react-native-gifted-chat` inside `RoomScreen.js` file.
 
 ```js
 import {
