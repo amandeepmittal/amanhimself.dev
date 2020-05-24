@@ -41,7 +41,7 @@ npx create-react-app reactmaterial
 
 By using the `npx` command (a part of the Node Package Manager (npm)) you execute `create-react-app` without the need to download and install the package globally.
 
-When the new project is done scaffolding with the default dependencies such as React library and React dom library installed.
+When the new project is done scaffolding with the default dependencies such as React library and React DOM library installed.
 
 Change in the new directory and you are going to be welcomed by the following structure of files and folders.
 
