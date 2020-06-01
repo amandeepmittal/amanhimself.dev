@@ -24,7 +24,7 @@ export default function Appreciation() {
   return (
     <div className='container'>
       <div className='page'>
-        <h2>Heart what people say about me and my work 💙💙💙</h2>
+        <h2>Heart what other developers say about this blog 💜</h2>
         <a
           href='https://twitter.com/Baconbrix/status/1206662673502478336?ref_src=twsrc%5Etfw'
           target='_blank'

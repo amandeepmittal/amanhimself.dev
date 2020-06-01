@@ -15,7 +15,7 @@ export default function BlogPostFooter() {
             <h3>👋</h3>
             <p>
               I'm <strong style={{ color: 'white' }}>Aman</strong>
-              {` working as an independent fullstack developer with technologies such as Node.js, Reactjs, and React Native. I try to document and write tutorials to help JavaScript Web and Mobile developers.
+              {` who works as an independent fullstack developer with technologies such as Node.js, Reactjs, and React Native. I try to document and write tutorials to help JavaScript Web and Mobile developers.
         `}
             </p>
             <div className='flex'>
