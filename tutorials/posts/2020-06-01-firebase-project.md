@@ -61,3 +61,9 @@ That's it to create a new Firebase project from its console.
 - [Firebase console to create a new project](https://console.firebase.google.com/)
 
 - [Information about Firebase plans](https://firebase.google.com/pricing)
+
+- [Learn how to implement Firebase Email Authentication with react-native-firebase](https://amanhimself.dev/chat-app-with-react-native-part-2-email-authentication/)
+
+- [Use React Context API to build React Native, Expo and Firebase apps](https://amanhimself.dev/context-api-react-native-firebase/)
+
+- [How to implement Forgot Password feature in React Native with Firebase app](https://amanhimself.dev/implement-forgot-password-firebase-react-native/)

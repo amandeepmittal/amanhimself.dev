@@ -14,8 +14,6 @@ tags:
   - firebase
 ---
 
-![cover_image](https://amanhimself.dev/static/155e65647431a361016a5a52246f3eae/99238/banner.webp)
-
 In some of the previous posts, you built a React Native app using Firebase as the backend service provider for Email authentication and storing user's data upon successful signup.
 
 Let's add another common yet useful and necessary feature in the current app structure: **Forgot Password**. This feature will require another screen in the current React Native app. To follow this tutorial, you can either go through the previous posts if you are a beginner to React Native world:
