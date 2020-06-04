@@ -18,7 +18,7 @@ If you are a solo developer trying to build out an MVP (minimum viable product) 
 
 - authorization
 
-- authentication (with common social method providers)
+- authentication (with common social method providers such as Google, Facebook, Twitter, Apple Sign-in)
 
 - database
 
