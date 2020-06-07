@@ -2,9 +2,10 @@
 date: 2019-07-10
 title: 'Introduction to Apollo Client with GraphQL and React'
 template: post
-thumbnail: '../thumbnails/react.png'
+thumbnail: '../thumbnails/graphql.png'
 slug: introduction-to-apollo-client-with-graphql-react
 categories:
+  - GraphQL
   - Reactjs
 tags:
   - reactjs
