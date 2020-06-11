@@ -397,12 +397,14 @@ export default function About() {
           ecosystem?
         </p>
         <p>
+          {`📧 `} {`Please drop me an email at `}
           <a
-            href='https://dev.to/catalinmpit/my-patchy-journey-to-software-development-with-aman-mittal-1l1f'
+            href='mailto:amanmittal.work@gmail.com'
             target='_blank'
             rel='noopener noreferrer'
           >
-            {`📧Please drop me an email here.`}
+            {' '}
+            amanmittal.work@gmail.com
           </a>
         </p>
       </div>
