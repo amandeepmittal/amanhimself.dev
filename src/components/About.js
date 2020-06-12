@@ -386,6 +386,15 @@ export default function About() {
               {`How passion to write combined with love for technology lead this dev to gain mastery at tech blogging.`}
             </a>
           </li>
+          <li>
+            <a
+              href='https://www.hoss.com/blog/dev-bites-development-trends-on-the-horizon-aman-mittal/'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              {`Dev Bites: Development Trends on the Horizon with Hoss`}
+            </a>
+          </li>
         </ul>
         <h2>{`✈ Countries I've visited (8)`}</h2>
         <p>I love to travel.</p>
