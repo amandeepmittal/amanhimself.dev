@@ -6,6 +6,7 @@ thumbnail: '../thumbnails/node.png'
 slug: converting-a-buffer-to-json-and-utf8-strings-in-nodejs
 categories:
   - Nodejs
+  - Popular
 tags:
   - nodejs
 ---

@@ -464,8 +464,8 @@ h2.publication-company {
   .popular {
     display: inline-block;
     font-size: 0.8rem;
-    background: lighten($green, 50%);
-    color: $green;
+    background: lighten($yellow, 18%);
+    color: darken($yellow, 18%);
     border-radius: $border-radius;
     padding: 0.5rem 0.75rem;
     text-align: center;

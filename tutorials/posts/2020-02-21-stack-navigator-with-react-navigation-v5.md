@@ -7,6 +7,7 @@ slug: stack-navigator-with-react-navigation-v5
 categories:
   - React Native
   - Expo
+  - Popular
 tags:
   - react-native
   - react-navigation

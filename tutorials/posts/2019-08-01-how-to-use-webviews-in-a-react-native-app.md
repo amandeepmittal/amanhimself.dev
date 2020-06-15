@@ -6,6 +6,7 @@ thumbnail: '../thumbnails/react.png'
 slug: how-to-use-webviews-in-a-react-native-app
 categories:
   - React Native
+  - Popular
 tags:
   - react-native
 ---
