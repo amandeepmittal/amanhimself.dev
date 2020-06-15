@@ -2,10 +2,11 @@
 date: 2019-04-22
 title: 'How I Configure VS Code for Everything'
 template: post
-thumbnail: '../thumbnails/react.png'
+thumbnail: '../thumbnails/vscode.png'
 slug: how-i-configure-vscode-for-everything
 categories:
   - Tools
+  - Popular
 tags:
   - tools
   - vscode
@@ -52,7 +53,7 @@ Next, I changed a few things that I remembered from my previous settings.
 
 Next step for me is to make this editor work like a charm with the help of some well maintained and free extensions.
 
-- :[emojisense](https://marketplace.visualstudio.com/items?itemName=bierner.emojisense):
+- [emojisense](https://marketplace.visualstudio.com/items?itemName=bierner.emojisense):
 - [Bracket Pair Colorizer](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer)
 - [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker) (I write a lot of blog posts in VS Code.)
 - [Code::Stats](https://codestats.net/) (a small stats tool, for fun.)
@@ -76,8 +77,14 @@ Next step for me is to make this editor work like a charm with the help of some 
 
 With Prettier, I like to use my own set of configurations, as described below.
 
-```
-"prettier.jsxSingleQuote": true,"prettier.printWidth": 100,"prettier.semi": false,"prettier.useTabs": true,"prettier.tabWidth": 2,
+```json
+{
+  "prettier.jsxSingleQuote": true,
+  "prettier.printWidth": 100,
+  "prettier.semi": false,
+  "prettier.useTabs": true,
+  "prettier.tabWidth": 2
+}
 ```
 
 ### Conclusion

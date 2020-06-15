@@ -31,19 +31,19 @@ const IndexPage = props => {
               </Link>
             </h2>
             <PostListing simple postEdges={latestPostEdges} />
+            {/* <PostListing simple postEdges={popularPostEdges} /> */}
+            <section className='section'>
+              <h2>
+                Most Read
+                <Link to='/categories/popular' className='view-all'>
+                  View all
+                </Link>
+              </h2>
+              <PostListing simple postEdges={popularPostEdges} />
+            </section>
           </section>
           <About />
         </div>
-
-        {/* <section className='section'>
-          <h2>
-            Most Popular
-            <Link to='/categories/popular' className='view-all'>
-              View all
-            </Link>
-          </h2>
-          <PostListing simple postEdges={popularPostEdges} />
-        </section> */}
       </div>
     </Layout>
   );
