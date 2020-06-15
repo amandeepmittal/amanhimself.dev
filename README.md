@@ -7,7 +7,7 @@ A personal website where I keep:
 - information about myself
 - blog posts
 
-I have written for over 25+ tech publications and over 150+ posts. This website is an alternate platform to the collection.
+I have written for over 25+ tech publications and over 150+ posts. This website is an alternate platform to the collection of the blog posts and tutorials I have written so far and some exclusive content available on the blog itself.
 
 This website is built using Gatsbyjs.
 
@@ -26,4 +26,4 @@ This website is built using Gatsbyjs.
 
 ## License
 
-Copyright (c) 2019 Aman Mittal
+Copyright (c) 2019 - Present Aman Mittal
