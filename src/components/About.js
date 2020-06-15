@@ -399,11 +399,11 @@ export default function About() {
         <h2>{`✈ Countries I've visited (8)`}</h2>
         <p>I love to travel.</p>
         <p style={{ fontSize: 24 }}>{`🇦🇪🇵🇱🇨🇿🇦🇹🇸🇰🇩🇪🇧🇪🇳🇱`}</p>
-        <h2>{`🤝 Want to collaborate?`}</h2>
+        <h2>{`🤝 Let's connect?`}</h2>
         <p>
-          Would you like to collaborate on a project, app, hire me as a
-          technical writer or create new course material for JavaScript
-          ecosystem?
+          If you would you like to know more my availability for a project, app,
+          hire me as a technical writer or create new course material for
+          JavaScript ecosystem?
         </p>
         <p>
           {`📧 `} {`Please drop me an email at `}
