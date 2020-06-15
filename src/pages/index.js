@@ -22,7 +22,7 @@ const IndexPage = props => {
         <div className='container front-page'>
           <section className='section'>
             <h2>
-              Latest Articles
+              Latest Posts
               <Link to='/tutorials' className='view-all'>
                 View all
               </Link>
