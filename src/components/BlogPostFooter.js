@@ -2,14 +2,7 @@ import React from 'react';
 import avatar from '../images/avatar.jpg';
 // import patreon from '../../content/thumbnails/patreon.png';
 // import kofi from '../../content/thumbnails/kofi.png';
-import {
-  FaGithub,
-  FaTwitter,
-  FaMedium,
-  FaDev,
-  FaPatreon,
-  FaMugHot
-} from 'react-icons/fa';
+import { FaGithub, FaTwitter, FaMedium, FaDev } from 'react-icons/fa';
 import SocialIcon from './SocialIcon';
 
 export default function BlogPostFooter() {
