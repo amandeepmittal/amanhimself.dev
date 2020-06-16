@@ -14,7 +14,7 @@ const IndexPage = props => {
   const popularPostEdges = data.popular.edges;
   return (
     <Layout>
-      <Helmet title={`${config.siteTitle} - Full stack software developer`} />
+      <Helmet title={`${config.siteTitle} - Fullstack software developer`} />
       <SEO />
       <div className='container'>
         {/* All Home Page components go here 👇 */}

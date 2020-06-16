@@ -2,6 +2,7 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import config from '../data/site-config';
 import avatar from '../images/avatar.jpg';
+import blogCover from '../images/blogcover.png';
 
 export default function SEO() {
   return (
@@ -18,7 +19,7 @@ export default function SEO() {
       <meta name='twitter:creator' content={config.userTwitter} />
       <meta name='twitter:title' content={config.username} />
       <meta name='twitter:description' content={config.siteDescription} />
-      <meta name='twitter:image' content={avatar} />
+      <meta name='twitter:image' content={blogCover} />
     </Helmet>
   );
 }
