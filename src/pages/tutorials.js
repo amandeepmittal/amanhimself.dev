@@ -4,6 +4,7 @@ import { graphql, Link } from 'gatsby';
 import Layout from '../components/Layout';
 import PostListing from '../components/PostListing';
 import config from '../data/site-config';
+import SEO from '../components/SEO';
 
 export default class BlogPage extends React.Component {
   state = {
@@ -38,6 +39,7 @@ export default class BlogPage extends React.Component {
     return (
       <Layout>
         <Helmet title={`Articles – ${config.siteTitle}`} />
+        <SEO />
         <div className='container'>
           <h1 className='articles-title'>Articles</h1>
           <div className='category-container'>
