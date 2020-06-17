@@ -252,7 +252,7 @@ To see the output of the console statement from the above code snippet, open Dev
 
 The object returned from Firebase clearly states that there are no errors with the current Firebase config in a React app.
 
-It is important to notice that Firebase should only be initialized once in the React app. This pattern is called [singleton](https://en.wikipedia.org/wiki/Singleton_pattern). The initialization should be the top level component in the React components tree.
+It is important to notice that Firebase should only be initialized once in the React app. This pattern is called [singleton](https://en.wikipedia.org/wiki/Singleton_pattern). This initialization should be the top level component in the React components tree.
 
 ## Conclusion
 
@@ -260,17 +260,19 @@ Here is a summary of what has been done in this tutorial so far.
 
 - Create a React app using `create-react-app`
 
-- Created an opinionated directory structure inside React app to manage different components
+- Create an opinionated directory structure inside React app to manage different components
 
-- Generated Firebase API keys for configuration
+- Generate Firebase API keys for configuration
 
 - Used environment variables inside a React app to manage keys
 
-- install `firebase` SDK npm package
+- Install `firebase` SDK npm package
 
-- connected Firebase SDK to React app
+- Connect Firebase SDK to React app
 
-- Initialized the Firebase SDK and verified it
+- Initialize the Firebase SDK
+
+- Why initialize a Firebase instance only once per React app?
 
 👉 **Resources**
 
