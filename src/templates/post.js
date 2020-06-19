@@ -70,8 +70,8 @@ export default function PostTemplate(props) {
         />
       </article>
       <div className='single container'>
-        <hr />
-        <div>
+        {/* <hr /> */}
+        {/*   <div>
           <img
             src='https://i.imgur.com/r2C4QXc.jpg'
             alt='banner'
@@ -89,7 +89,7 @@ export default function PostTemplate(props) {
             <strong>here</strong>
           </a>
           .
-        </div>
+        </div> */}
 
         <hr />
         <div style={{ textAlign: 'center' }}>
@@ -111,8 +111,8 @@ export default function PostTemplate(props) {
             Share if you think it was useful. It'll a big help to me🙏
           </small>
         </div>
+        <BlogPostFooter />
       </div>
-      <BlogPostFooter />
     </Layout>
   );
 }
