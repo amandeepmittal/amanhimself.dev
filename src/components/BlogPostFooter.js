@@ -1,7 +1,5 @@
 import React from 'react';
 import avatar from '../images/avatar.jpg';
-// import patreon from '../../content/thumbnails/patreon.png';
-// import kofi from '../../content/thumbnails/kofi.png';
 import { FaGithub, FaTwitter, FaMedium, FaDev } from 'react-icons/fa';
 import SocialIcon from './SocialIcon';
 
@@ -71,55 +69,3 @@ export default function BlogPostFooter() {
     </aside>
   );
 }
-
-// export default function BlogPostFooter() {
-//   return (
-//     <div className='single container'>
-//       <hr />
-//       <div style={{ textAlign: 'center', marginTop: 10 }}>
-//         🐦{' '}
-//         <a
-//           href='https://twitter.com/amanhimself'
-//           target='_blank'
-//           rel='noopener noreferrer'
-//         >
-//           Follow me on Twitter!
-//         </a>
-//       </div>
-//       <div style={{ textAlign: 'center', marginTop: 10 }}>
-//         📧 Questions?{' '}
-//         <a
-//           href='mailto:amanmittal.work@gmail.com'
-//           target='_blank'
-//           rel='noopener noreferrer'
-//         >
-//           Email me
-//         </a>
-//       </div>
-//       <div style={{ textAlign: 'center', marginTop: 10 }}>
-//         💌 Get updates on new posts via email?{' '}
-//         <a
-//           href='https://tinyletter.com/amanhimself'
-//           target='_blank'
-//           rel='noopener noreferrer'
-//         >
-//           Subscribe the newsletter.{' '}
-//         </a>
-//         <br />
-//         Over 1000 people enjoy getting, probably you will too.
-//       </div>
-//       <div style={{ textAlign: 'center', marginTop: 10 }}>
-//         ☕ You can support this blog and allow me to continue to write posts
-//         <br />
-//         <a
-//           href='https://ko-fi.com/amanhimself'
-//           target='_blank'
-//           rel='noopener noreferrer'
-//         >
-//           by Buying me a coffee here.{' '}
-//         </a>
-//         <br />
-//       </div>
-//     </div>
-//   );
-// }
