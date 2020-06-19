@@ -8,7 +8,6 @@ categories:
   - Ionic
 tags:
   - ionic
-  - angular
   - mobile
 ---
 

@@ -5,9 +5,9 @@ template: post
 thumbnail: '../thumbnails/angular.png'
 slug: smart-tables-with-angular
 categories:
-  - Angular
+  - JavaScript
 tags:
-  - angular
+  - javascript
 ---
 
 ![cover_image](https://d6vdma9166ldh.cloudfront.net/media/images/1132a646-97f5-4235-954c-c2b7e2282cd7.png)

@@ -5,9 +5,8 @@ template: post
 thumbnail: '../thumbnails/angular.png'
 slug: learn-to-build-a-simple-progressive-web-app-pwa-with-angular
 categories:
-  - Angular
+  - JavaScript
 tags:
-  - Angular
   - pwa
 ---
 
