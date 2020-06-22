@@ -8,6 +8,7 @@ categories:
   - Reactjs
 tags:
   - reactjs
+  - react-router
 ---
 
 ![cover_image](https://blog.crowdbotics.com/content/images/2019/07/react-router.jpg)
@@ -15,8 +16,6 @@ tags:
 React is often used for building single page applications (SPAs). SPAs tend to have multiple page views. When navigating from one-page view to another, reloading the entire page view is a tedious and not so efficient task. In fact, it diminishes the benefits of a SPA. To work as it should, a SPA must render parts of views when required instead of reloading the entire page.
 
 Routing comes into the picture when navigating from one page to another in a SPA app. Routing can be categorized in two ways. Static and dynamic. SPAs follow a dynamic approach. In this tutorial, we will discuss a popular routing library used with React applications known as [React Router](https://reacttraining.com/react-router/web/guides/quick-start).
-
-[**This post was originally published here**](https://blog.crowdbotics.com/introduction-to-react-router-v4-with-reactjs/).
 
 **Table of Contents**
 
