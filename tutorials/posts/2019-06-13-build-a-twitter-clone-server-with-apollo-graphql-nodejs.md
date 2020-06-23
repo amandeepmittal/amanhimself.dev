@@ -2,9 +2,10 @@
 date: 2019-06-13
 title: 'Build a Twitter Clone Server with Apollo, GraphQL, Nodejs, and Crowdbotics'
 template: post
-thumbnail: '../thumbnails/node.png'
+thumbnail: '../thumbnails/graphql.png'
 slug: build-a-twitter-clone-server-with-apollo-graphql-nodejs
 categories:
+  - GraphQL
   - Nodejs
 tags:
   - nodejs

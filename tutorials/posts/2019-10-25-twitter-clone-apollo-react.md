@@ -2,9 +2,10 @@
 date: 2019-10-25
 title: 'Create an Open Source Twitter Clone with Apollo, React and Crowdbotics'
 template: post
-thumbnail: '../thumbnails/react.png'
+thumbnail: '../thumbnails/graphql.png'
 slug: twitter-clone-apollo-react
 categories:
+  - GraphQL
   - Reactjs
 tags:
   - graphql

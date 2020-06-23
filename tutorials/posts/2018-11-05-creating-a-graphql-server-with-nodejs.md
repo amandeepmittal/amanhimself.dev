@@ -2,7 +2,7 @@
 date: 2018-11-05
 title: 'Creating a GraphQL server with Nodejs'
 template: post
-thumbnail: '../thumbnails/node.png'
+thumbnail: '../thumbnails/graphql.png'
 slug: creating-a-graphql-server-with-nodejs
 categories:
   - Nodejs
