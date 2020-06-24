@@ -38,10 +38,10 @@ export default class BlogPage extends React.Component {
 
     return (
       <Layout>
-        <Helmet title={`Articles – ${config.siteTitle}`} />
+        <Helmet title={`Blog – ${config.siteTitle}`} />
         <SEO />
         <div className='container'>
-          <h1 className='articles-title'>Articles</h1>
+          <h1 className='articles-title'>Blog Posts</h1>
           <div className='category-container'>
             {categories.map(category => {
               return (
