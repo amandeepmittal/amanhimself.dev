@@ -15,7 +15,7 @@ tags:
 ![cover_image](https://i.imgur.com/Ut2rtdF.jpg)
 
 <small>
-This post was first published in January 1, 2019.
+This post was first published in January 14, 2019.
 </small>
 <hr/>
 
@@ -101,7 +101,7 @@ Another difference comes with **inline** styling is that an inline style propert
 
 However there is a valid style property check when styles are defined using `StyleSheet.create()`.
 
-![ss3](https://i.imgur.com/r6ihQAn.png)
+![ss3](https://i.imgur.com/pM0LktI.png)
 
 ![ss4](https://i.imgur.com/0iAFAvZ.png)
 
@@ -284,4 +284,5 @@ You can see this in action below.
 ---
 
 - You can find the complete code for the example at [this Expo Snack](https://snack.expo.io/@amanhimself/38e20d).
-- [Originally published at Level up coding on January 1, 2014.](https://levelup.gitconnected.com/styling-the-react-native-way-3cc6d3ef52d0)
+- [Originally published at Level up coding on January 14, 2019.](https://levelup.gitconnected.com/styling-the-react-native-way-3cc6d3ef52d0)
+- A big thank you to [Catalin Miron](https://twitter.com/mironcatalin) for proof reading it 🤗
