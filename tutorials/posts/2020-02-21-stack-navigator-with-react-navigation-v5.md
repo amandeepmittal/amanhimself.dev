@@ -137,7 +137,7 @@ const styles = StyleSheet.create({
 export default Details;
 ```
 
-These screen components are for demonstration purposes. You have to feed to routes to the navigator to work with, these screen components are going to the routes.
+These screen components are for demonstration purposes. You have to feed the routes to the navigator to work with, these screen components are going to the routes.
 
 ## Create a basic stack navigator
 
