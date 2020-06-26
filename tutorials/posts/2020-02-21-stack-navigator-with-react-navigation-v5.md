@@ -108,6 +108,33 @@ const styles = StyleSheet.create({
 export default Home;
 
 // src/screens/Detail.js
+
+import React from 'react';
+import { StyleSheet, View, Text } from 'react-native';
+
+function Details() {
+  return (
+    <View style={styles.container}>
+      <Text style={styles.text}>Details Screen</Text>
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#ebebeb'
+  },
+  text: {
+    color: '#101010',
+    fontSize: 24,
+    fontWeight: 'bold'
+  }
+});
+
+export default Details;
 ```
 
 These screen components are for demonstration purposes. You have to feed to routes to the navigator to work with, these screen components are going to the routes.
