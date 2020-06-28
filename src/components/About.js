@@ -403,7 +403,7 @@ export default function About() {
         <p>
           If you would you like to know more my availability for a project, app,
           hire me as a technical writer or create new course material for
-          JavaScript ecosystem?
+          JavaScript ecosystem, please contact me on my email.
         </p>
         <p>
           {`📧 `} {`Please drop me an email at `}
