@@ -33,18 +33,18 @@ export default function BlogPostFooter() {
             </SocialIcon>
             <p>
               I'm <strong style={{ color: 'white' }}>Aman</strong>
-              {` who works as an independent fullstack developer with technologies such as Node.js, Reactjs, and React Native. I try to document and write tutorials to help JavaScript Web and Mobile developers.
+              {` who works as an independent developer with technologies such as Node.js, Reactjs, and React Native. I try to document and write tutorials to help JavaScript Web and Mobile developers.
         `}
             </p>
             <div className='flex'>
-              <a
+              {/* <a
                 href='https://tinyletter.com/amanhimself'
                 className='newsletter-button'
                 target='_blank'
                 rel='noopener noreferrer'
               >
                 💌 Subscribe to newsletter
-              </a>
+              </a> */}
               <a
                 className='kofi-button'
                 href='https://ko-fi.com/amanhimself'
@@ -54,8 +54,7 @@ export default function BlogPostFooter() {
                 ☕ Buy me a coffee
               </a>
               <a
-                className='kofi-button'
-                style={{ marginLeft: '10px', backgroundColor: '#EF6753' }}
+                className='patreon-button'
                 href='https://www.patreon.com/amanhimself'
                 target='_blank'
                 rel='noopener noreferrer'

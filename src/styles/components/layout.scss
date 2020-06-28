@@ -902,6 +902,16 @@ blockquote {
         color: #ffffff;
       }
     }
+
+    a.patreon-button {
+      padding: 10px;
+      background: #ef6753;
+      border-radius: 5px;
+      &:hover {
+        background: darken($secondary-color, 30%);
+        color: #ffffff;
+      }
+    }
   }
 
   h3 {
