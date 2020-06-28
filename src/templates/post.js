@@ -93,23 +93,17 @@ export default function PostTemplate(props) {
 
         <hr />
         <div style={{ textAlign: 'center' }}>
-          <h3>
-            <a
-              id='twitter-share'
-              href={twitterShare}
-              target='_blank'
-              rel='noopener noreferrer'
-            >
-              <img
-                src={TwitterLogo}
-                alt='twitter-logo'
-                style={{ width: 75, height: 75, marginBottom: -40 }}
-              />{' '}
-            </a>
-          </h3>
-          <small>
-            Share if you think it was useful. It'll a big help to me🙏
-          </small>
+          If you think this post was helpful to you, please consider sharing it
+          on{' '}
+          <a
+            id='twitter-share'
+            href={twitterShare}
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            {` Twitter `}
+          </a>
+          <span role='image'>{`🙏 `}</span>
         </div>
         <BlogPostFooter />
       </div>

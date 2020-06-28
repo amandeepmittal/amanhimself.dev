@@ -18,11 +18,7 @@ export default function HeaderIntro() {
       <div className='elevator'>
         <h1 style={{ fontSize: 32 }}>{`👋 Hi, I'm Aman Mittal`}</h1>
         <p>
-          {`I am an independent contract developer who loves to work with and  `}
-          <Link to='/tutorials' style={{ color: '#7f78d2' }}>
-            write
-          </Link>
-          {` about Node.js, Reactjs and React Native development.`}
+          {`I am a software developer and a technical writer who writes on Node.js, Reactjs and React Native. This blog is a collection of documents  I've learn over the years.`}
         </p>
         <div>
           <SocialIcon href='mailto:amanmittal.work@gmail.com'>
@@ -50,11 +46,11 @@ export default function HeaderIntro() {
             <FaDev style={{ width: '30px', height: '30px', color: '#fff' }} />
           </SocialIcon>
           &ensp;
-          <SocialIcon href='https://patreon.com/amanhimself'>
+          {/* <SocialIcon href='https://patreon.com/amanhimself'>
             <FaPatreon
               style={{ width: '30px', height: '30px', color: '#fff' }}
             />
-          </SocialIcon>
+          </SocialIcon> */}
           {/* &ensp;
           <SocialIcon href='https://paypal.me/amanhimself'>
             <FaPaypal

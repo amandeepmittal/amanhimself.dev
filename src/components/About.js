@@ -10,8 +10,8 @@ export default function About() {
         <p>
           I am a software developer with a background in Computer Science and
           specializing in web and mobile technologies using the JavaScript
-          ecosystem for past three years and currently working as a contract
-          developer.
+          ecosystem for past three years and currently working as an independent
+          contract developer.
         </p>
         <p>
           These days I am enthusiastic about the world around React Native and
@@ -19,7 +19,7 @@ export default function About() {
         </p>
         <h4>{`Me & Technical writing`}</h4>
         <p>
-          I started my blogging journey as tech writer at
+          I started my blogging journey as a tech writer at
           <a
             href='https://medium.com/@amanhimself'
             target='_blank'
@@ -33,7 +33,7 @@ export default function About() {
           >
             {` 1 Million views 🎉`}
           </a>
-          . I love writing about code and share what I learn. I specifically
+          . I love writing about code and document what I learn. I specifically
           write on modern JavaScript frameworks including Node.js, React, React
           Native and Firebase.
         </p>
@@ -75,31 +75,21 @@ export default function About() {
           ) , travel to places I've never been, meet new people and talk nerdy
           🤓.
         </p>
+
+        <h2>{`📨 My Newsletter`}</h2>
         <p>
-          I am travelling since 2019, majorly to satisfy my wander lust and to
-          attend tech conferences on
-          <a
-            href='https://twitter.com/amanhimself/status/1113687949860675584/photo/1'
-            target='_blank'
-            rel='noopener noreferrer'
-          >{` React Native `}</a>
-          &{' '}
-          <a
-            href='https://twitter.com/amanhimself/status/1203078103788068864/photo/2'
-            target='_blank'
-            rel='noopener noreferrer'
-          >{` Reactjs `}</a>{' '}
-          and it seems like I've got the travel bug 🐛.
+          At least twice a month, I roll out a newsletter for fellow developers
+          to enhance their skills on Nodejs, Reactjs, React Native, and
+          Firebase. I publish new posts every week and and you can stay up to
+          date by joining <strong>1000+ developers</strong>.
         </p>
-        <h2>{`📨 My Weekly Newsletter`}</h2>
-        <p>
-          At least once a week, I roll out a newsletter for fellow developers to
-          enhance their skills in Nodejs, Reactjs, React Native, and Firebase. I
-          publish new posts every week and and you can stay up to date by
-          joining <strong>1000+ developers</strong>.
-        </p>
-        <a className='button' href='https://tinyletter.com/amanhimself'>
-          {`💌 Subscribe here`}
+        <a
+          className='button'
+          href='https://tinyletter.com/amanhimself'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
+          {`Subscribe here`}
         </a>
         <h2>{`✍️ Publications I've written for`}</h2>
         <p>Some of the notable developer publications I've worked with:</p>
@@ -178,7 +168,7 @@ export default function About() {
         <h2>{`👨‍💻 Work History`}</h2>
         <p>
           Currently, I am working as independent contract developer on web
-          applications and as at technical Writer.
+          applications and as a technical Writer.
         </p>
         <strong>Independent Contract (2017- present)</strong>
         <ul>
@@ -186,7 +176,7 @@ export default function About() {
             Crowdbotics (Full-Stack role, Technical Writer, 2018 - Present)
           </li>
           <li>Hearbeat (Technical Writer, 2019 - Present)</li>
-          <li>JSCrambler (Technical Writer, 2018 - Present)</li>
+          <li>JScrambler (Technical Writer, 2018 - Present)</li>
           <li>Danco Solutions (Full-Stack role)</li>
           <li>Zeolearn (Node.js Course Curriculum Creator)</li>
           <li>Huksa Private Networks (Node.js dev role)</li>
@@ -263,7 +253,7 @@ export default function About() {
               {` #100DaysOfCode `}
             </a>
             Twitter bot written in JavaScript, followed by more than{' '}
-            <strong>85k+ developers</strong>.
+            <strong>90k+ developers</strong>.
           </li>
           <li>
             <strong>Gatsbyjs:</strong> Creator of 4 starter/theme kits.
@@ -403,10 +393,7 @@ export default function About() {
         <p>
           If you would you like to know more my availability for a project, app,
           hire me as a technical writer or create new course material for
-          JavaScript ecosystem, please contact me on my email.
-        </p>
-        <p>
-          {`📧 `} {`Please drop me an email at `}
+          JavaScript ecosystem,{` please drop me an email at `}
           <a
             href='mailto:amanmittal.work@gmail.com'
             target='_blank'

@@ -24,7 +24,7 @@ const config = {
     },
     {
       name: 'Blog',
-      link: '/tutorials'
+      link: '/blog'
     },
     {
       name: 'Testimonials',
