@@ -12,8 +12,6 @@ tags:
   - react-native
 ---
 
-![cover_image](https://amanhimself.dev/static/8367d395e9cd985d09b51b7620fff312/99238/banner.webp)
-
 Mobile apps are made of screens that in number can vary depending on the app you are developing. Handling user navigation can be tricky to learn and do in mobile apps, but with dedicated open-source libraries like [`react-navigation`](https://reactnavigation.org) do make the process a lot easier.
 
 React Navigation library is common among React Native developers. It is built with JavaScript, and you can create React components and apply any navigation pattern. On the device, it will give the natural look and feel.
