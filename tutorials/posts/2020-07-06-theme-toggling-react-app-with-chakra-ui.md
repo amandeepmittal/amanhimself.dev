@@ -10,6 +10,8 @@ tags:
   - reactjs
 ---
 
+![cover_image](https://i.imgur.com/UOcZFrw.png)
+
 [Chakra UI](https://chakra-ui.com/) is a modular component library for React apps that uses Emotion and Styled System. While building a React app it is beneficial to take advantage of isolated UI components to speed up the building process.
 
 The library provides a convenient way of styling components using utility props for styling. For example, a button component can be written as:
