@@ -33,9 +33,9 @@ export default function About() {
           >
             {` 1 Million views 🎉`}
           </a>
-          . I love writing about code and document what I learn. I specifically
-          write on modern JavaScript frameworks including Node.js, React, React
-          Native and Firebase.
+          . I love writing about code and documenting what I learn. I
+          specifically write on modern JavaScript frameworks including Node.js,
+          React, React Native and Firebase.
         </p>
         <p>
           I've written over
