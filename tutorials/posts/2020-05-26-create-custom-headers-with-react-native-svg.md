@@ -5,10 +5,10 @@ template: post
 thumbnail: '../thumbnails/expo.png'
 slug: create-custom-headers-with-react-native-svg
 categories:
-  - Reactjs
+  - React Native
   - Expo
 tags:
-  - reactjs
+  - react-native
   - Expo
   - react-native-svg
 ---
