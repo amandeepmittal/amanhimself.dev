@@ -1,8 +1,8 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import { graphql, Link } from 'gatsby';
-import Layout from '../components/Layout';
 
+import Layout from '../components/Layout';
 import PostListing from '../components/PostListing';
 import config from '../data/site-config';
 import HeaderIntro from '../components/HeaderIntro';
