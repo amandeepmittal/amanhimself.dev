@@ -7,7 +7,7 @@ import PostListing from '../components/PostListing';
 import config from '../data/site-config';
 import HeaderIntro from '../components/HeaderIntro';
 import About from '../components/About';
-import SEO from '../components/SeoComponent';
+import SEO from '../components/seo';
 
 const IndexPage = props => {
   const { data } = props;
