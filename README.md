@@ -16,13 +16,12 @@ This website is built using Gatsbyjs.
 - Posts and pages in Markdown
 - SASS
 - [react-icons](https://react-icons.netlify.com/)
+- `styled-components`& `styled-components-breakpoint` for custom components
 - Code theme from Dracula
 
-## Blog elements inspired from
+### Blog elements inspired from
 
-- [Tania Rascia](https://github.com/taniarascia/taniarascia.com)
 - [Gatsby Advanced starter](https://github.com/vagr9k/gatsby-advanced-starter/)
-- [Egghead Gatsby Starter](https://github.com/eggheadio/gatsby-starter-egghead-blog)
 
 ## License
 

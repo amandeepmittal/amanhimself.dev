@@ -4,7 +4,7 @@ import { graphql, Link } from 'gatsby';
 import Layout from '../components/Layout';
 import PostListing from '../components/PostListing';
 import config from '../data/site-config';
-import SEO from '../components/SEO';
+import SEO from '../components/seo';
 
 export default class BlogPage extends React.Component {
   state = {

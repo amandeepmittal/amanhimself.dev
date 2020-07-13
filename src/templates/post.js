@@ -5,7 +5,7 @@ import Img from 'gatsby-image';
 import Layout from '../components/Layout';
 import BlogPostFooter from '../components/BlogPostFooter.js';
 import PostTags from '../components/PostTags';
-import SEO from '../components/SEO';
+import SEO from '../components/seo';
 import config from '../data/site-config';
 import { formatDate } from '../utils';
 import TwitterLogo from '../images/twitter-logo.png';

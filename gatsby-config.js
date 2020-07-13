@@ -62,6 +62,7 @@ module.exports = {
         trackingId: config.googleAnalyticsID
       }
     },
+    `gatsby-plugin-styled-components`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-catch-links`,

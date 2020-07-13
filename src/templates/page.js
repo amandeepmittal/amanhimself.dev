@@ -3,7 +3,7 @@ import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
 import Layout from '../components/Layout';
 import config from '../data/site-config';
-import SEO from '../components/SEO';
+import SEO from '../components/seo';
 
 export default function PageTemplate(props) {
   const { slug } = props.pageContext;

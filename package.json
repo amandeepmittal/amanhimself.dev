@@ -5,6 +5,7 @@
   "version": "6.3.2",
   "author": "Aman Mittal <amandeepmittal@live.com>",
   "dependencies": {
+    "babel-plugin-styled-components": "1.10.7",
     "gatsby": "^2.20.12",
     "gatsby-image": "^2.3.1",
     "gatsby-plugin-catch-links": "2.2.1",
@@ -16,6 +17,7 @@
     "gatsby-plugin-sass": "2.2.1",
     "gatsby-plugin-sharp": "2.5.4",
     "gatsby-plugin-sitemap": "2.3.5",
+    "gatsby-plugin-styled-components": "3.3.10",
     "gatsby-remark-autolink-headers": "2.2.1",
     "gatsby-remark-copy-linked-files": "2.2.1",
     "gatsby-remark-images": "3.2.2",
@@ -32,6 +34,8 @@
     "react-dom": "^16.12.0",
     "react-helmet": "^5.2.1",
     "react-icons": "3.9.0",
+    "styled-components": "5.1.1",
+    "styled-components-breakpoint": "3.0.0-preview.20",
     "url-join": "4.0.1"
   },
   "devDependencies": {
