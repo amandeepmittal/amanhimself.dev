@@ -1,14 +1,14 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import { graphql, Link } from 'gatsby';
-import Img from 'gatsby-image';
+
 import Layout from '../components/Layout';
 import BlogPostFooter from '../components/BlogPostFooter.js';
 import PostTags from '../components/PostTags';
 import SEO from '../components/seo';
 import config from '../data/site-config';
 import { formatDate } from '../utils';
-import TwitterLogo from '../images/twitter-logo.png';
+import { Text } from '../styles/GlobalStyles';
 
 export default function PostTemplate(props) {
   const { slug } = props.pageContext;
@@ -42,25 +42,12 @@ export default function PostTemplate(props) {
       <SEO />
       <article className='single container'>
         <header className={`single-header ${!thumbnail ? 'no-thumbnail' : ''}`}>
-          {/* TODO: REMOVE thumbnail from blog post */}
-          {/* {thumbnail && <Img fixed={post.thumbnail.childImageSharp.fixed} />} */}
           <div className='flex'>
-            <h1>{post.title}</h1>
-            <div className='post-meta'>
-              {/* <Link to='/me'>
-                <img src={avatar} className='avatar-small' alt='Aman' />
-              </Link> */}
+            <h1 style={{ marginTop: 20 }}>{post.title}</h1>
+            <div className='post-meta' style={{ marginTop: 10 }}>
               <time className='date'>Published on {date}</time>
-              {/* <a
-                className='github-link'
-                href={githubLink}
-                target='_blank'
-                rel='noopener noreferrer'
-              >
-                Edit ✏️
-              </a> */}
             </div>
-            <PostTags tags={post.tags} />
+            {/* <PostTags tags={post.tags} /> */}
           </div>
         </header>
 
@@ -93,17 +80,31 @@ export default function PostTemplate(props) {
 
         <hr />
         <div style={{ textAlign: 'center' }}>
-          If you think this post was helpful to you, please consider sharing it
-          on{' '}
-          <a
-            id='twitter-share'
-            href={twitterShare}
-            target='_blank'
-            rel='noopener noreferrer'
+          <Text>
+            <span role='image'>🙏</span>&nbsp; Care to share on{' '}
+            <a
+              id='twitter-share'
+              href={twitterShare}
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              Twitter
+            </a>{' '}
+          </Text>
+        </div>
+        <div>
+          <div
+            style={{
+              marginRight: 5,
+              textAlign: 'center'
+            }}
           >
-            {` Twitter `}
-          </a>
-          <span role='image'>{`🙏 `}</span>
+            <p style={{ fontSize: 16, color: '#718096', textAlign: 'center' }}>
+              <span role='right-down'>👇</span>&nbsp; Find more posts on the
+              following topics
+            </p>
+            <PostTags tags={post.tags} />
+          </div>
         </div>
         <BlogPostFooter />
       </div>

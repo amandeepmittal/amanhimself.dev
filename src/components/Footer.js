@@ -39,14 +39,14 @@ export default function Footer() {
           target='_blank'
           rel='noopener noreferrer'
         >
-          Ko-Fi
+          Buy me a Coffee
         </a>
         <a
           href='https://patreon.com/amanhimself'
           target='_blank'
           rel='noopener noreferrer'
         >
-          Patreon
+          Become a Patreon
         </a>
         <a
           href='https://amanhimself.dev/rss.xml'

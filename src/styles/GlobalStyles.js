@@ -90,3 +90,17 @@ export const ListLink = styled.a`
     text-decoration-color: #718096;
   }
 `;
+
+export const BlogPostFooterLink = styled.a`
+  text-decoration: underline;
+  text-decoration-color: #503d81;
+  color: #503d81;
+  font-weight: 700;
+  font-size: 1rem;
+  &:hover {
+    font-weight: 700;
+    text-decoration: underline;
+    color: #718096;
+    text-decoration-color: #718096;
+  }
+`;

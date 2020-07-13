@@ -25,41 +25,52 @@ export default function BlogPostFooter() {
                 style={{ width: '20px', height: '20px', color: '#fff' }}
               />
             </SocialIcon>
-            &ensp;
             <SocialIcon href='https://medium.com/@amanhimself'>
               <FaMedium
                 style={{ width: '20px', height: '20px', color: '#fff' }}
               />
             </SocialIcon>
+            <div style={{ marginTop: 10, marginBottom: 10 }}>
+              Get to know when I publish something new{' '}
+              <a
+                className='newsletter-button'
+                href='https://tinyletter.com/amanhimself'
+                target='_blank'
+                rel='noopener noreferrer'
+                style={{ color: '#fff', alignItems: 'center' }}
+              >
+                Subscribe to newsletter
+              </a>
+            </div>
             <p>
               I'm <strong style={{ color: 'white' }}>Aman</strong>
               {` who works as an independent developer with technologies such as Node.js, Reactjs, and React Native. I try to document and write tutorials to help JavaScript Web and Mobile developers.`}
             </p>
-            <div className='flex'>
-              <a
-                href='https://tinyletter.com/amanhimself'
-                className='newsletter-button'
-                target='_blank'
-                rel='noopener noreferrer'
-              >
-                💌 Subscribe to newsletter
-              </a>
+            <p>
+              Support: If you like what I write about and want to support me in
+              writing more
+            </p>
+            <div className='flex' style={{ marginTop: 20 }}>
               <a
                 className='kofi-button'
                 href='https://ko-fi.com/amanhimself'
                 target='_blank'
                 rel='noopener noreferrer'
               >
-                ☕ Buy me a coffee
+                Buy me a coffee
               </a>
-              {/* <a
-                className='patreon-button'
+              <a
+                style={{
+                  marginLeft: 15,
+                  backgroundColor: 'tomato'
+                }}
+                className='kofi-button'
                 href='https://www.patreon.com/amanhimself'
                 target='_blank'
                 rel='noopener noreferrer'
               >
-                Support on Patreon
-              </a> */}
+                Become a Patreon
+              </a>
             </div>
           </div>
         </div>

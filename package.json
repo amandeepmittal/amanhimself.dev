@@ -2,7 +2,7 @@
   "name": "amanhimself.dev",
   "private": true,
   "description": "Personal website running on Gatsby, React, and Node.js.",
-  "version": "6.4.0",
+  "version": "6.5.0",
   "author": "Aman Mittal <amandeepmittal@live.com>",
   "dependencies": {
     "babel-plugin-styled-components": "1.10.7",

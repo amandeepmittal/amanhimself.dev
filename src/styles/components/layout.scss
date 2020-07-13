@@ -262,7 +262,7 @@
 
       .date {
         margin: 0;
-        font-size: 0.9rem;
+        font-size: 2rem;
         color: rgba(0, 0, 0, 0.4);
         font-weight: 400;
       }
@@ -638,10 +638,11 @@ h2.publication-company {
   span {
     display: inline-block;
     padding: 0.3rem 0.5rem;
-    background: $light;
+    background: #fff;
     border-radius: $border-radius;
+    border-color: $primary-color;
     color: lighten($primary-color, 10%);
-    font-size: 0.8rem;
+    font-size: 1.2rem;
     font-weight: 400;
     margin: 0 0.5rem 0.5rem 0;
 
@@ -693,13 +694,14 @@ h2.publication-company {
 }
 
 .post-meta {
-  font-size: 0.8rem;
+  font-size: 1rem;
   color: $light-font-color;
   display: inline-flex;
   align-items: center;
 
   .date {
-    margin-right: 0.5rem;
+    margin-right: 1rem;
+    font-size: 1.2rem;
   }
 
   a {
@@ -883,10 +885,10 @@ blockquote {
     justify-content: space-between;
 
     a.newsletter-button {
-      padding: 10px;
+      padding: 5px;
       margin-right: 10px;
-      background: $green;
-      border-radius: 5px;
+      background: #7f78d2;
+      border-radius: 4px;
       &:hover {
         background: darken($secondary-color, 30%);
         color: #ffffff;
