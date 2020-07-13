@@ -5,7 +5,7 @@ import { FaGithub, FaTwitter, FaMedium, FaDev } from 'react-icons/fa';
 
 import avatar from '../images/avatar.jpg';
 import { Box, Heading, SubTitle, Text } from '../styles/GlobalStyles';
-import SocialIcon from './socialIcon';
+import SocialIcon from './SocialIcon';
 
 const Row = styled.div`
   display: flex;
