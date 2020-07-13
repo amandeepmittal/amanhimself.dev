@@ -8,7 +8,7 @@ categories:
   - Nodejs
   - GraphQL
 tags:
-  - nodejs
+  - node
   - graphql
 ---
 

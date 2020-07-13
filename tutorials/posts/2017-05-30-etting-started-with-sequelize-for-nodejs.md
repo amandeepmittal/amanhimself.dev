@@ -7,7 +7,7 @@ slug: getting-started-with-sequelize-for-nodejs
 categories:
   - Nodejs
 tags:
-  - nodejs
+  - node
 ---
 
 ![cover_image](https://miro.medium.com/max/1400/0*ShbzlvZjT-VI72oW.png)

@@ -9,7 +9,7 @@ categories:
   - Reactjs
 tags:
   - graphql
-  - reactjs
+  - react
   - apollo
 ---
 

@@ -7,7 +7,7 @@ slug: top-nodejs-libraries-and-tools-for-machine-learning
 categories:
   - Nodejs
 tags:
-  - nodejs
+  - node
   - machine-learning
 ---
 

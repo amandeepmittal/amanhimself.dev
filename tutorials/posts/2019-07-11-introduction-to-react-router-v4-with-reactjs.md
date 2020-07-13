@@ -7,7 +7,7 @@ slug: introduction-to-react-router-v4-with-reactjs
 categories:
   - Reactjs
 tags:
-  - reactjs
+  - react
   - react-router
 ---
 

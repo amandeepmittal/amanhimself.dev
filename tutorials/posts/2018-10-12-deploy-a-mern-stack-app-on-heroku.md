@@ -10,8 +10,8 @@ categories:
   - Reactjs
   - Popular
 tags:
-  - nodejs
-  - reactjs
+  - node
+  - react
   - heroku
   - mern-stack
   - mongodb

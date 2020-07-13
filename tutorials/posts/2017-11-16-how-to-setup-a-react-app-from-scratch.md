@@ -7,7 +7,7 @@ slug: how-to-setup-a-react-app-from-scratch
 categories:
   - Reactjs
 tags:
-  - reactjs
+  - react
 ---
 
 ![cover_image](https://miro.medium.com/max/2000/0*5Zkna8WY5wdsKKsR.png)

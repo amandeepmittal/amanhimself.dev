@@ -7,7 +7,7 @@ slug: migrating-from-expressjs-4-to-5
 categories:
   - Nodejs
 tags:
-  - nodejs
+  - node
   - expressjs
 ---
 

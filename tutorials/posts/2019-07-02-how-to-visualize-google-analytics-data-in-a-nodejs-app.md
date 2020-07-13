@@ -7,7 +7,7 @@ slug: how-to-visualize-google-analytics-data-in-a-nodejs-app
 categories:
   - Nodejs
 tags:
-  - nodejs
+  - node
 ---
 
 ![cover_image](https://blog.crowdbotics.com/content/images/2019/07/crowdbotics-google-analytics.jpg)

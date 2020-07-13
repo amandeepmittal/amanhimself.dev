@@ -7,7 +7,7 @@ slug: google-sheets-nodejs
 categories:
   - Nodejs
 tags:
-  - nodejs
+  - node
 ---
 
 ![cover_image](https://blog.crowdbotics.com/content/images/2019/07/google-sheets-crowdbotics.jpg)

@@ -7,7 +7,7 @@ slug: dark-mode-with-react-hooks
 categories:
   - Reactjs
 tags:
-  - reactjs
+  - react
 ---
 
 ![cover_image](https://blog.crowdbotics.com/content/images/2020/01/dark-mode-react-hooks.jpg)

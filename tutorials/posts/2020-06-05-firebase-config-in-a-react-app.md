@@ -9,7 +9,7 @@ categories:
   - Reactjs
 tags:
   - firebase
-  - reactjs
+  - react
 ---
 
 To create or setup a new React app, I try to use `npx` from a terminal window. By executing the following command, it generates a new React app using the `create-react-app` utility.

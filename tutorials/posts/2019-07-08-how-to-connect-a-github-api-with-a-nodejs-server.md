@@ -7,7 +7,7 @@ slug: how-to-connect-a-github-api-with-a-nodejs-server
 categories:
   - Nodejs
 tags:
-  - nodejs
+  - node
 ---
 
 ![cover_image](https://blog.crowdbotics.com/content/images/2019/07/github.jpg)

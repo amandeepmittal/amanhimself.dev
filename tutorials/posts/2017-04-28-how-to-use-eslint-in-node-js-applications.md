@@ -7,7 +7,7 @@ slug: how-to-use-eslint-in-node-js-applications
 categories:
   - Nodejs
 tags:
-  - nodejs
+  - node
   - eslint
   - tools
 ---

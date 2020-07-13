@@ -7,7 +7,7 @@ slug: node-js-twitter-bot-tutorial
 categories:
   - Nodejs
 tags:
-  - nodejs
+  - node
   - bots
 ---
 

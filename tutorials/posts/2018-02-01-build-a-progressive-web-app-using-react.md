@@ -7,7 +7,7 @@ slug: build-a-progressive-web-app-using-react
 categories:
   - Reactjs
 tags:
-  - reactjs
+  - react
   - pwa
 ---
 

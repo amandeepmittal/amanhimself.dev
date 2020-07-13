@@ -8,8 +8,8 @@ categories:
   - Reactjs
   - Nodejs
 tags:
-  - nodejs
-  - reactjs
+  - node
+  - react
   - mern-stack
 ---
 

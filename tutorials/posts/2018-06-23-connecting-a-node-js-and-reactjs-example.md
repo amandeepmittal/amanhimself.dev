@@ -8,9 +8,9 @@ categories:
   - Reactjs
   - Nodejs
 tags:
-  - reactjs
+  - react
   - expressjs
-  - nodejs
+  - node
 ---
 
 ![cover_image](https://d6vdma9166ldh.cloudfront.net/media/images/1455b5c8-4887-43a8-8214-de77543414c9.jpg)

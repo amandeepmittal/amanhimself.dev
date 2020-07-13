@@ -7,7 +7,7 @@ slug: tips-for-creating-node-js-rest-apis
 categories:
   - Nodejs
 tags:
-  - nodejs
+  - node
   - rest
   - api
 ---

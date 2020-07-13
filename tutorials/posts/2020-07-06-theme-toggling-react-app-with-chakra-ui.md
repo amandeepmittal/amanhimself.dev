@@ -7,7 +7,7 @@ slug: theme-toggling-react-app-with-chakra-ui
 categories:
   - Reactjs
 tags:
-  - reactjs
+  - react
 ---
 
 ![cover_image](https://i.imgur.com/UOcZFrw.png)

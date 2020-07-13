@@ -7,7 +7,7 @@ slug: react-app-with-localstorage-api-and-hooks
 categories:
   - Reactjs
 tags:
-  - reactjs
+  - react
   - localstorage
 ---
 

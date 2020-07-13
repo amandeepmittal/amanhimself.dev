@@ -7,7 +7,7 @@ slug: how-to-mock-data-for-nodejs-applications-using-fakerjs
 categories:
   - Nodejs
 tags:
-  - nodejs
+  - node
 ---
 
 ![cover_image](https://hackernoon.com/hn-images/1*ENk6O_-iQYdMlnrM4w82kw.jpeg)

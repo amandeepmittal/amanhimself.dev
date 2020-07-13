@@ -7,7 +7,7 @@ slug: how-to-build-a-serverless-backend-with-aws-lambda-and-nodejs
 categories:
   - Nodejs
 tags:
-  - nodejs
+  - node
   - aws
   - lambda
 ---

@@ -7,7 +7,7 @@ slug: how-to-use-import-statements-in-nodejs
 categories:
   - Nodejs
 tags:
-  - nodejs
+  - node
 ---
 
 ![cover_image](https://miro.medium.com/max/2000/0*zd7GbV_is43HsOpU)

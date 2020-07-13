@@ -7,7 +7,7 @@ slug: building-a-rest-api-with-koajs
 categories:
   - Nodejs
 tags:
-  - nodejs
+  - node
   - koajs
   - rest
   - api

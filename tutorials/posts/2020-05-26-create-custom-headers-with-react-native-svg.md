@@ -9,7 +9,7 @@ categories:
   - Expo
 tags:
   - react-native
-  - Expo
+  - expo
   - react-native-svg
 ---
 

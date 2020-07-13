@@ -7,7 +7,7 @@ slug: how-to-setup-a-stripe-checkout-page-in-a-crowdbotics-app
 categories:
   - Nodejs
 tags:
-  - nodejs
+  - node
 ---
 
 [Crowdbotics App Builder](http://app.crowdbotics.com/) platform has a lot to offer when it comes to building an application. It helps both developers and non-developers to build, deploy, and scale applications by providing maintainable templates to make either your web or mobile application. Current web technologies such as Django, Nodejs, React, as well as to build a mobile app, React Native, and Swift templates are all supported as templates.

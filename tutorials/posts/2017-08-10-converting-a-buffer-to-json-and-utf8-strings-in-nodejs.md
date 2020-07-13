@@ -8,7 +8,7 @@ categories:
   - Nodejs
   - Popular
 tags:
-  - nodejs
+  - node
 ---
 
 ![cover_image](https://miro.medium.com/max/4000/1*1878GmSC5EtcjSNHONPO3Q.jpeg)

@@ -7,7 +7,7 @@ slug: designing-a-rest-api-with-node-js-and-mongodb-atlas
 categories:
   - Nodejs
 tags:
-  - nodejs
+  - node
   - mongodb
   - rest
   - api

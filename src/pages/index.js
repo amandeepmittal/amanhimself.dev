@@ -5,8 +5,6 @@ import { graphql, Link } from 'gatsby';
 import Layout from '../components/Layout';
 import PostListing from '../components/PostListing';
 import config from '../data/site-config';
-import HeaderIntro from '../components/HeaderIntro';
-import About from '../components/About';
 import SEO from '../components/seo';
 import Intro from '../components/intro';
 import { ListLink, Text } from '../styles/GlobalStyles';
@@ -46,6 +44,20 @@ const IndexPage = props => {
             </section>
           </section>
         </div>
+        <h2 style={{ color: '#444' }}>My Newsletter</h2>
+        <Text>
+          At least twice a month, I roll out a newsletter for fellow developers
+          to enhance their skills on Nodejs, Reactjs, React Native, and
+          Firebase. I publish new posts every week and and you can stay up to
+          date by joining <strong>1000+ developers</strong>.{' '}
+          <ListLink
+            href='https://tinyletter.com/amanhimself'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            {`Join here`}
+          </ListLink>
+        </Text>
         <h2 style={{ color: '#444' }}>{`Currently Using`}</h2>
         <ul style={{ color: '#718096' }}>
           <li>Computer: MacBook Air 2017</li>

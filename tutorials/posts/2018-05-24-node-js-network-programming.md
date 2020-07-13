@@ -7,7 +7,7 @@ slug: node-js-network-programming
 categories:
   - Nodejs
 tags:
-  - nodejs
+  - node
 ---
 
 Web applications are often written in a server/client model where server is responsible to respond with resources for the client to handle. Node.js is an open source platform that allows you to build fast and scalable server applications using JavaScript. Node.js is a runtime that uses the same V8 Javascript engine you can find in the Google Chrome browser. In this article we will talk about Node js network programming, which utilises another library under the hood called libuv which is a multi-platform support library with a focus on asynchronous I/O.

@@ -8,10 +8,10 @@ categories:
   - Reactjs
   - Nodejs
 tags:
-  - nodejs
+  - node
   - expressjs
   - mongodb
-  - reactjs
+  - react
   - mern-stack
 ---
 

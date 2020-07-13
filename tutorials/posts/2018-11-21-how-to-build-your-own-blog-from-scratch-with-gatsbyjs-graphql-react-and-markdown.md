@@ -8,7 +8,7 @@ categories:
   - Gatsby
 tags:
   - gatsbyjs
-  - reactjs
+  - react
   - markdown
 ---
 

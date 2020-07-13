@@ -7,7 +7,7 @@ slug: how-to-make-a-twitter-bot-with-nodejs
 categories:
   - Nodejs
 tags:
-  - nodejs
+  - node
   - bots
 ---
 

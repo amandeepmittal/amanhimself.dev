@@ -7,7 +7,7 @@ slug: how-to-build-a-rest-api-with-nodejs-and-postgresql
 categories:
   - Nodejs
 tags:
-  - nodejs
+  - node
   - postgres
   - rest
   - api

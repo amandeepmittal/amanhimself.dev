@@ -7,7 +7,7 @@ slug: material-ui-integration-with-react
 categories:
   - Reactjs
 tags:
-  - reactjs
+  - react
 ---
 
 ![cover_image](https://i.imgur.com/BejpUuO.jpg)

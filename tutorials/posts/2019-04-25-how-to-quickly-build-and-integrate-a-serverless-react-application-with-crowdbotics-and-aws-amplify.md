@@ -8,7 +8,7 @@ categories:
   - Reactjs
   - Amplify
 tags:
-  - reactjs
+  - react
   - amplify
 ---
 

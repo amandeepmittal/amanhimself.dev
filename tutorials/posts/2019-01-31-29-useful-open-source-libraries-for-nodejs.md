@@ -7,7 +7,7 @@ slug: 29-useful-open-source-libraries-for-nodejs
 categories:
   - Nodejs
 tags:
-  - nodejs
+  - node
 ---
 
 ![cover_image](https://miro.medium.com/max/3000/1*VW3rSbLpGa9da1jfJkQgGQ.gif)
