@@ -2,7 +2,7 @@ const urljoin = require('url-join');
 const config = require('./src/data/site-config');
 
 module.exports = {
-  pathPrefix: config.pathPrefix === '/' ? '' : config.pathPrefix,
+  pathPrefix: config.pathPrefix === '' ? '/' : config.pathPrefix,
   siteMetadata: {
     siteUrl: urljoin(config.siteUrl, config.pathPrefix),
     rssMetadata: {
@@ -13,7 +13,7 @@ module.exports = {
       image_url: `${urljoin(
         config.siteUrl,
         config.pathPrefix
-      )}images/amanhimself-logo.png`
+      )}images/logos/logo.png`
     }
   },
   plugins: [
@@ -75,8 +75,8 @@ module.exports = {
         start_url: config.pathPrefix,
         background_color: config.backgroundColor,
         theme_color: config.themeColor,
-        display: 'minimal-ui',
-        icon: `src/images/amanhimself-logo.png` // This path is relative to the root of the site.
+        display: `minimal-ui`,
+        icon: `src/images/logos/logo.png` // This // This path is relative to the root of the site.
       }
     },
     {
@@ -149,7 +149,7 @@ module.exports = {
             }
           `,
             output: config.siteRss,
-            title: 'Aman Mittal - RSS Feed'
+            title: config.siteRssTitle
           }
         ]
       }

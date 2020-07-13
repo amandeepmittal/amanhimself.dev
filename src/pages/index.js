@@ -2,11 +2,12 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import { graphql, Link } from 'gatsby';
 import Layout from '../components/Layout';
+
 import PostListing from '../components/PostListing';
 import config from '../data/site-config';
 import HeaderIntro from '../components/HeaderIntro';
 import About from '../components/About';
-import SEO from '../components/SEO';
+import SEO from '../components/SeoComponent';
 
 const IndexPage = props => {
   const { data } = props;
@@ -14,7 +15,7 @@ const IndexPage = props => {
   const popularPostEdges = data.popular.edges;
   return (
     <Layout>
-      <Helmet title={`${config.siteTitle} - Fullstack software developer`} />
+      <Helmet title={`${config.siteTitle} - Developer`} />
       <SEO />
       <div className='container'>
         {/* All Home Page components go here 👇 */}

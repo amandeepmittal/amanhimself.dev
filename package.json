@@ -2,7 +2,7 @@
   "name": "amanhimself.dev",
   "private": true,
   "description": "Personal website running on Gatsby, React, and Node.js.",
-  "version": "6.3.1",
+  "version": "6.3.2",
   "author": "Aman Mittal <amandeepmittal@live.com>",
   "dependencies": {
     "gatsby": "^2.20.12",
@@ -50,12 +50,11 @@
   ],
   "license": "CC-BY-NC-4.0",
   "scripts": {
-    "dev": "gatsby develop",
+    "dev": "gatsby develop -p 5001",
     "build": "gatsby build",
-    "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "start": "npm run develop",
-    "serve": "gatsby serve",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "start": "npm run dev",
+    "serve": "gatsby serve -p 5002",
     "clean": "rm -rf public && rm -rf .cache"
   },
   "repository": {

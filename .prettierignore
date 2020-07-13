@@ -1,5 +1,5 @@
 .cache
 package-lock.json
-yarn.lock
 public
 node_modules
+yarn.lock
