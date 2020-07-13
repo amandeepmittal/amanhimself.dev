@@ -41,7 +41,9 @@ export default class BlogPage extends React.Component {
         <Helmet title={`Blog – ${config.siteTitle}`} />
         <SEO />
         <div className='container'>
-          <h1 className='articles-title'>Blog Posts</h1>
+          <h1 className='articles-title' style={{ marginTop: 20 }}>
+            Blog Posts
+          </h1>
           <div className='category-container'>
             {categories.map(category => {
               return (
