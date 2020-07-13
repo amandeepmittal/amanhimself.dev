@@ -571,7 +571,7 @@ To find out our MongoDB URL, we need to go back to the mongodb atlas, to out pre
 
 Copy the mongodb URL from above and paste it in the `variables.env` file.
 
-```env
+```
 DB=mongodb://<user>:<password>@cluster0-shard-00-00-e9ai4.mongodb.net:27017,cluster0-shard-00-01-e9ai4.mongodb.net:27017,cluster0-shard-00-02-e9ai4.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin
 ```
 

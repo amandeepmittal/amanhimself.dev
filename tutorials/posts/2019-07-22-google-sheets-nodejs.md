@@ -86,7 +86,7 @@ https://docs.google.com/spreadsheets/d/XXXX/edit?usp=sharing
 
 The real value in place of these Xs is going to be the spreadsheet key that is required to read the data. Paste this value in the `.env` file.
 
-```env
+```
 SPREADSHEET_KEY=XXXX
 ```
 

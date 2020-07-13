@@ -8,6 +8,8 @@ import config from '../data/site-config';
 import HeaderIntro from '../components/HeaderIntro';
 import About from '../components/About';
 import SEO from '../components/seo';
+import Intro from '../components/intro';
+import { ListLink, Text } from '../styles/GlobalStyles';
 
 const IndexPage = props => {
   const { data } = props;
@@ -19,10 +21,10 @@ const IndexPage = props => {
       <SEO />
       <div className='container'>
         {/* All Home Page components go here 👇 */}
-        <HeaderIntro />
+        <Intro />
         <div className='container front-page'>
           <section className='section'>
-            <h2>
+            <h2 style={{ color: '#444' }}>
               Latest Posts
               <Link to='/tutorials' className='view-all'>
                 View all
@@ -34,7 +36,7 @@ const IndexPage = props => {
             <PostListing simple postEdges={latestPostEdges} />
             {/* <PostListing simple postEdges={popularPostEdges} /> */}
             <section className='section'>
-              <h2>
+              <h2 style={{ color: '#444' }}>
                 Most Read
                 <Link to='/categories/popular' className='view-all'>
                   View all
@@ -43,8 +45,126 @@ const IndexPage = props => {
               <PostListing simple postEdges={popularPostEdges} />
             </section>
           </section>
-          <About />
         </div>
+        <h2 style={{ color: '#444' }}>{`Currently Using`}</h2>
+        <ul style={{ color: '#718096' }}>
+          <li>Computer: MacBook Air 2017</li>
+          <li>Editor: Visual Studio Code</li>
+          <li>
+            Static Site Generator:{' '}
+            <ListLink
+              href='http://gatsbyjs.org/'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              {`Gatsbyjs`}
+            </ListLink>
+          </li>
+          <li>
+            Hosting:{' '}
+            <ListLink
+              href='https://www.netlify.com/'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              {`Netlify`}
+            </ListLink>
+          </li>
+          <li>
+            Syntax Highlighting:{' '}
+            <ListLink
+              href='http://prismjs.com/'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              {`Prismjs`}
+            </ListLink>
+          </li>
+          <li>
+            Code Syntax Theme:{' '}
+            <ListLink
+              href='https://draculatheme.com/'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              {`Dracula Pro`}
+            </ListLink>
+          </li>
+          <li>
+            Terminal:{' '}
+            <ListLink
+              href='https://www.iterm2.com/'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              {`iTerm with ZSH shell`}
+            </ListLink>
+          </li>
+          <li>
+            Manage Blog posts pipeline:{' '}
+            <ListLink
+              href='https://www.notion.so/'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              {`Notion`}
+            </ListLink>
+          </li>
+          <li>
+            Newsletter:{' '}
+            <ListLink
+              href='https://tinyletter.com/amanhimself'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              {`Tinyletter`}
+            </ListLink>
+          </li>
+        </ul>
+        <h2
+          style={{ color: '#444' }}
+        >{`Guest Podcast Appearance & Interviews`}</h2>
+        <ul>
+          <li>
+            <ListLink
+              href='https://tinyletter.com/amanhimself'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              {`React Round Up 006: Setting Up and Getting Used to Gatsby with Charles Max Wood, Cory House, Tara Manicsic and Kent C Dodds`}
+            </ListLink>
+          </li>
+          <li>
+            <ListLink
+              href='https://dev.to/catalinmpit/my-patchy-journey-to-software-development-with-aman-mittal-1l1f'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              {`My Patchy Journey To Software Development with Catalin Pit`}
+            </ListLink>
+          </li>
+          <li>
+            <ListLink
+              href='https://suprstory.com/how-passion-to-write-combined-with-love-for-technology-lead-this-dev-to-gain-mastery-at-tech-blogging/'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              {`How passion to write combined with love for technology lead this dev to gain mastery at tech blogging.`}
+            </ListLink>
+          </li>
+          <li>
+            <ListLink
+              href='https://www.hoss.com/blog/dev-bites-development-trends-on-the-horizon-aman-mittal/'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              {`Dev Bites: Development Trends on the Horizon with Hoss`}
+            </ListLink>
+          </li>
+        </ul>
+        <h2 style={{ color: '#444' }}>{`Countries I've visited (8)`}</h2>
+        <Text>I love to travel.</Text>
+        <p style={{ fontSize: 24 }}>{`🇦🇪🇵🇱🇨🇿🇦🇹🇸🇰🇩🇪🇧🇪🇳🇱`}</p>
       </div>
     </Layout>
   );

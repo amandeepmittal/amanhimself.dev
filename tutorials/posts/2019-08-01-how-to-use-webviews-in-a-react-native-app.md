@@ -51,7 +51,7 @@ react-native link react-native-webview
 
 An iOS application does not require any further steps to make this work. For Android platforms version 6.x.x and above, you also have to open `android/gradle.properties` and add the following two lines.
 
-```gradle
+```
 android.useAndroidX=true
 android.enableJetifier=true
 ```

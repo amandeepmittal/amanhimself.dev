@@ -21,7 +21,7 @@ const config = {
   menuLinks: [
     {
       name: 'About me',
-      link: '/'
+      link: '/about'
     },
     {
       name: 'Blog',

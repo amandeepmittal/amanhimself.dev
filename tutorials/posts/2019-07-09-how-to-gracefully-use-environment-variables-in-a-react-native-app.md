@@ -40,7 +40,7 @@ Once the project directory is created, navigate to it. Create a new file calledÂ
 
 To get started, let us add a mock key called `SOME_KEY` to the fileÂ `.env`.
 
-```env
+```
 SOME_KEY=something
 ```
 

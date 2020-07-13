@@ -135,7 +135,7 @@ It will redirect you to the following screen. The process to get OAuth credentia
 
 After that, click the button **Create** and you will get a pop up giving the Client ID and Client Secret. To save them, create a new file at the root the Node project and name it `.env`. This file is going to keep this sensitive piece of information. I do suggest, do not commit this file if you are going to save this project on Github.
 
-```env
+```
 CLIENT_ID=XXXX
 CLIENT_SECRET=XXXX
 PORT=3000

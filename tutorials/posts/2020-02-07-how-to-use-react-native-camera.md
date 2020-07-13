@@ -60,7 +60,7 @@ For Android users, there is no extra installation requirement at this point.
 
 To access the device's hardware camera, a set of permissions have to be added. For iOS, please open the file `ios/qrCodeScannerApp/Info.plist` and add the following permissions:
 
-```plist
+```
 <!-- Required with iOS 10 and higher -->
 <key>NSCameraUsageDescription</key>
 <string>Your message to user when the camera is accessed for the first time</string>
