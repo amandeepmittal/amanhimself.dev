@@ -24,7 +24,9 @@ export default function Appreciation() {
   return (
     <div className='container'>
       <div className='page'>
-        <h2>What other developers say about this blog 💜</h2>
+        <h2 style={{ marginTop: 20 }}>
+          What other developers say about this blog 💜
+        </h2>
         <a
           href='https://twitter.com/Baconbrix/status/1206662673502478336?ref_src=twsrc%5Etfw'
           target='_blank'
