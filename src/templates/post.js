@@ -81,7 +81,7 @@ export default function PostTemplate(props) {
         <hr />
         <div style={{ textAlign: 'center' }}>
           <Text>
-            <span role='image'>🙏</span>&nbsp; Care to share on{' '}
+            <span role='image'>🙏</span>&nbsp; Share with your friends on{' '}
             <a
               id='twitter-share'
               href={twitterShare}
