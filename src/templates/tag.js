@@ -13,7 +13,7 @@ export default function TagTemplate(props) {
     <Layout>
       <Helmet title={`Posts tagged as "${tag}" – ${config.siteTitle}`} />
       <div className='container'>
-        <h1>
+        <h1 style={{ marginTop: 20 }}>
           Posts tagged as{' '}
           <u>
             <strong>{tag}</strong>

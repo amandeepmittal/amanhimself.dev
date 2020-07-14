@@ -13,7 +13,7 @@ export default function CategoryTemplate(props) {
     <Layout>
       <Helmet title={`Posts in category "${category}" – ${config.siteTitle}`} />
       <div className='container'>
-        <h1>{category}</h1>
+        <h1 style={{ marginTop: 20 }}>{category}</h1>
         <PostListing postEdges={postEdges} />
       </div>
     </Layout>
