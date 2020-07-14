@@ -159,6 +159,6 @@ When the theme mode toggles, the value in the `localStorage` changes as well.
 
 ## Conclusion
 
-Any component library has its advantage when it comes to focusing on the development of a React app by leveraging the in-built components. The advantage Chakra UI's `ThemeProvider` give is to manage storing the value of the current in `localStorage`.
+Any component library has its advantage when it comes to focusing on the development of a React app by leveraging the in-built components. The advantage Chakra UI's `ThemeProvider` give is to manage storing the value of the current mode in `localStorage`.
 
 Source code available at [GitHub](https://github.com/amandeepmittal/blog-examples/tree/master/react/themeswitcher-chakraui).
