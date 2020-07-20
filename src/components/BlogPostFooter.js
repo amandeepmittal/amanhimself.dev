@@ -31,7 +31,6 @@ export default function BlogPostFooter() {
               />
             </SocialIcon>
             <div style={{ marginTop: 10, marginBottom: 10 }}>
-              Get to know when I publish something new{' '}
               <a
                 className='newsletter-button'
                 href='https://tinyletter.com/amanhimself'
@@ -39,7 +38,7 @@ export default function BlogPostFooter() {
                 rel='noopener noreferrer'
                 style={{ color: '#fff', alignItems: 'center' }}
               >
-                Subscribe to newsletter
+                Get new posts send to your inbox
               </a>
             </div>
             <p>
