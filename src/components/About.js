@@ -27,11 +27,11 @@ export default function About() {
           >{` Medium `}</a>
           where I've got over
           <a
-            href='https://twitter.com/amanhimself/status/1142868697402318848'
+            href='https://twitter.com/amanhimself/status/1285554115464982528'
             target='_blank'
             rel='noopener noreferrer'
           >
-            {` 1 Million views 🎉`}
+            {` 2 Million views 🎉`}
           </a>
           . I love writing about code and documenting what I learn. I
           specifically write on modern JavaScript frameworks including Node.js,
