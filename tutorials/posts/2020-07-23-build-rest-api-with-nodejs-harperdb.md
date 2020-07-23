@@ -227,8 +227,6 @@ const db = require('../config/dbconfig');
 
 One of the main advantages of HarperDB is in querying the data from a database instance. It allows us to query the data either in the form of SQL queries or NoSQL queries. The advantage here is that the power of complex SQL queries can easily be used here to perform an operation. I am going to define all the queries in NoSQL form, however, do not forget to check official docs for more information on performing SQL queries [here](https://docs.harperdb.io/?version=latest#0b5f3698-60fc-4783-b736-b510d6063996).
 
-I am going to define all the queries in NoSQL form, however, do not forget to check official docs for more information on performing SQL queries [here](https://docs.harperdb.io/?version=latest#ac58bae0-f3dc-4b92-a324-83aa7bcecb6b).
-
 The first query is going to be called `addBook`. This query is going to insert the data incoming from an HTTP request.
 
 ```js
