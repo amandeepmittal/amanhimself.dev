@@ -187,7 +187,7 @@ const About = () => (
           ZeoLearn.com, Art + Marketing, 42hire.com, ITNext, Eduonix, The
           Startup, JavaBeginnersTutorial.com, Alligator.io, LevelUp
           Gitconnected, Better Programming, React Native Training, Pusher,
-          Instamobile, Newline.co (by Fullstack.io), & Soshace.
+          Instamobile, Newline.co (by Fullstack.io), Soshace & HarperDB.
         </Text>
 
         <Text>
