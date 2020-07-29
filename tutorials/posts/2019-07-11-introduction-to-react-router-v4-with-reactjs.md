@@ -67,7 +67,7 @@ To run the React app, go to the terminal window and execute the command npm star
 
 ## First Route with React Router
 
-To create the first route in the React app, let us import `BrowserRouter` from `react-router` library.
+To create the first route in the React app, let us import `BrowserRouter` from `react-router-dom` library.
 
 ```js
 import React from 'react';
