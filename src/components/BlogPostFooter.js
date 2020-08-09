@@ -45,10 +45,10 @@ export default function BlogPostFooter() {
               I'm <strong style={{ color: 'white' }}>Aman</strong>
               {` who works as an independent developer with technologies such as Node.js, Reactjs, and React Native. I try to document and write tutorials to help JavaScript Web and Mobile developers.`}
             </p>
-            <p>
+            {/* <p>
               Support: If you like what I write about and want to support me in
               writing more
-            </p>
+            </p> */}
             <div className='flex' style={{ marginTop: 20 }}>
               <a
                 className='kofi-button'
