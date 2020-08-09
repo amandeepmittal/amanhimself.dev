@@ -157,6 +157,15 @@ export default function About() {
               LogRocket
             </a>
           </li>
+          <li>
+            <a
+              href='https://community.draftbit.com/u/amanhimself/activity/topics'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              Draftbit
+            </a>
+          </li>
         </ul>
         <p>
           Other notable publications: Hackernoon, Rising Stack, Codeburst.io,

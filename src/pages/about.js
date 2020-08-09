@@ -180,6 +180,15 @@ const About = () => (
               Sitepoint
             </ListLink>
           </li>
+          <li>
+            <ListLink
+              href='https://community.draftbit.com/u/amanhimself/activity/topics'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              Draftbit
+            </ListLink>
+          </li>
         </ul>
 
         <Text>
