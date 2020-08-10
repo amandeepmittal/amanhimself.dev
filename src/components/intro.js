@@ -1,7 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 import breakpoint from 'styled-components-breakpoint';
-import { FaGithub, FaTwitter, FaMedium, FaDev } from 'react-icons/fa';
+import {
+  FaGithub,
+  FaTwitter,
+  FaMedium,
+  FaDev,
+  FaInstagram
+} from 'react-icons/fa';
 
 import avatar from '../images/avatar.jpg';
 import { Box, Heading, SubTitle, Text } from '../styles/GlobalStyles';
@@ -107,6 +113,26 @@ const DevIcon = styled(FaDev)`
   `}
 `;
 
+const InstagramIcon = styled(FaInstagram)`
+  ${breakpoint('mobile')`
+  width: 20px;
+  height: 20px; 
+  color: #fff;   
+  padding: 3px;
+  border-radius: 4px;
+  background-color: #444;
+  `}
+
+  ${breakpoint('desktop')`
+  width: 26px;
+  height: 26px; 
+  color: #fff;   
+  padding: 6px;
+  border-radius: 4px;
+  background-color: #444;
+  `}
+`;
+
 export default function Intro() {
   return (
     <Box>
@@ -117,6 +143,9 @@ export default function Intro() {
           <div style={{ marginLeft: '10px' }}>
             <SocialIcon href='https://twitter.com/amanhimself'>
               <TwitterIcon />
+            </SocialIcon>
+            <SocialIcon href='https://www.instagram.com/amanhimselfcodes/'>
+              <InstagramIcon />
             </SocialIcon>
             <SocialIcon href='https://github.com/amandeepmittal'>
               <GithubIcon />
