@@ -148,15 +148,6 @@ const IndexPage = props => {
           </li>
           <li>
             <ListLink
-              href='https://dev.to/catalinmpit/my-patchy-journey-to-software-development-with-aman-mittal-1l1f'
-              target='_blank'
-              rel='noopener noreferrer'
-            >
-              {`My Patchy Journey To Software Development with Catalin Pit`}
-            </ListLink>
-          </li>
-          <li>
-            <ListLink
               href='https://suprstory.com/how-passion-to-write-combined-with-love-for-technology-lead-this-dev-to-gain-mastery-at-tech-blogging/'
               target='_blank'
               rel='noopener noreferrer'
