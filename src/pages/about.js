@@ -23,11 +23,8 @@ const About = () => (
           independent contract developer. I've a background in Computer Science
           (Bachelor of Technology) and since mid 2016 I've been working as a
           professional with various web and mobile technologies using
-          JavaScript, specifically with Node.js, React and (not so long ago)
-          React Native.
-        </Text>
-        <Text>
-          I am enthusiastic about the world around React Native and Expo.
+          JavaScript, specifically with Node.js, React and React Native (💙
+          Expo).
         </Text>
         <Text>
           I am also keen about{' '}

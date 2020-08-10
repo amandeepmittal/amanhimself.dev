@@ -26,3 +26,5 @@ This website is built using Gatsbyjs.
 ## License
 
 Copyright (c) 2019 - Present Aman Mittal
+
+[![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/A611K61)

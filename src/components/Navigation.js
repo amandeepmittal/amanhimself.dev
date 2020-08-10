@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
+import kofiIcon from '../images/kofi.png';
 
 const NavBar = styled.nav`
   position: fixed;
@@ -81,6 +82,17 @@ export default function Navigation({ menuLinks }) {
               </StyledLink>
             ))}
           </Links>
+          <a href='https://ko-fi.com/amanhimself'>
+            <img
+              src={kofiIcon}
+              style={{
+                marginTop: '5px',
+                width: '50px',
+                height: '50px'
+              }}
+              target='_blank'
+            />
+          </a>
         </Brand>
       </NavContainer>
     </NavBar>

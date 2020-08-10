@@ -25,7 +25,7 @@ const config = {
     },
     {
       name: 'Blog',
-      link: '/tutorials'
+      link: '/blog'
     }
   ],
   themeColor: '#503D81', // Used for setting manifest and progress theme colors.
