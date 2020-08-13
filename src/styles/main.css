@@ -187,7 +187,6 @@ Navbar
   display: flex;
   align-items: center;
   background: var(--clr-primary-6);
-  /* transition: height 0.3s ease; */
 }
 .nav-center {
   width: 90vw;

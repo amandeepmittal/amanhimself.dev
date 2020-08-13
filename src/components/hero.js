@@ -60,9 +60,9 @@ const Hero = () => {
         <article className="hero-info">
           <h3>Hi! I'm Aman Mittal</h3>
           <div style={{ marginTop: '1rem' }}>
-            <h4>I'm a Software Developer & a Technical Writer.</h4>
+            <p>{`👨‍💻`} I'm a Software Developer & a Technical Writer.</p>
             <p>
-              I mostly write posts and tutorials on Node.js, Reactjs
+              {`📝`} I mostly write posts and tutorials on Node.js, Reactjs
               <br /> and React Native.
             </p>
           </div>

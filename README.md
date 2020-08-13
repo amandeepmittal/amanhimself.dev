@@ -19,10 +19,6 @@ This website is built using Gatsbyjs.
 - `styled-components` for custom components
 - Code theme from Dracula
 
-### Blog elements inspired from
-
-- [Gatsby Advanced starter](https://github.com/vagr9k/gatsby-advanced-starter/)
-
 ## License
 
 Copyright (c) 2019 - Present Aman Mittal

@@ -13,17 +13,15 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <SEO title="Home" />
-      <div className="page-center">
-        <Hero />
-        <Posts posts={posts} title="Latest Posts" />
-      </div>
+      <Hero />
+      <Posts posts={posts} title="Latest Posts" />
     </Layout>
   );
 };
 
 export const query = graphql`
   {
-    allMdx(sort: { fields: frontmatter___date, order: DESC }, limit: 10) {
+    allMdx(sort: { fields: frontmatter___date, order: DESC }, limit: 20) {
       nodes {
         excerpt
         id
