@@ -68,5 +68,4 @@ yarn-error.log
 # Yarn Integrity file
 .yarn-integrity
 
-# Misc
-TODO.md
+notes.md

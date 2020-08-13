@@ -1,47 +1,24 @@
-import React from 'react';
-import Helmet from 'react-helmet';
-import styled from 'styled-components';
-import breakpoint from 'styled-components-breakpoint';
+import React, { useState } from 'react';
 
-import Navigation from './Navigation';
-import Footer from './Footer';
-import config from '../data/site-config';
-import favicon from '../images/favicons/favicon.ico';
-import '../styles/main.scss';
-import { GlobalStylesWrapper } from '../styles/GlobalStyles';
-import SEO from './seo';
+import Navbar from './navbar';
+import Sidebar from './sidebar';
+import Footer from './footer';
 
-const ContentWrapper = styled.main`  
-  ${breakpoint('tablet')`
-      margin-top: 30px;
-      padding: 20px 0 0;
-    `}
+const Layout = ({ children }) => {
+  const [isOpen, setIsOpen] = useState(false);
 
-  ${breakpoint('mobile')`
-      margin-top: 20px;
-      padding: 10px 0 0;
-    `}
+  const toggle = () => {
+    setIsOpen(!isOpen);
+  };
 
-    ${breakpoint('desktop')`
-      margin-top: 60px;
-      padding: 10px 0 0;
-    `}
-
-  padding: 30px 0 0;
-`;
-
-export default function Layout({ children }) {
   return (
-    <React.Fragment>
-      <Helmet>
-        <meta name='description' content={config.siteDescription} />
-        <link rel='shortcut icon' type='image/png' href={favicon} />
-      </Helmet>
-      <GlobalStylesWrapper />
-      <SEO />
-      <Navigation menuLinks={config.menuLinks} />
-      <ContentWrapper>{children}</ContentWrapper>
+    <>
+      <Navbar toggle={toggle} />
+      <Sidebar isOpen={isOpen} toggle={toggle} />
+      {children}
       <Footer />
-    </React.Fragment>
+    </>
   );
-}
+};
+
+export default Layout;

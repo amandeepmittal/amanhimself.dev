@@ -1,159 +1,73 @@
-const urljoin = require('url-join');
-const config = require('./src/data/site-config');
-
 module.exports = {
-  pathPrefix: config.pathPrefix === '' ? '/' : config.pathPrefix,
   siteMetadata: {
-    siteUrl: urljoin(config.siteUrl, config.pathPrefix),
-    rssMetadata: {
-      site_url: urljoin(config.siteUrl, config.pathPrefix),
-      feed_url: urljoin(config.siteUrl, config.pathPrefix, config.siteRss),
-      title: config.siteTitle,
-      description: config.siteDescription,
-      image_url: `${urljoin(
-        config.siteUrl,
-        config.pathPrefix
-      )}images/logos/logo.png`
-    }
+    title: `Aman Mittal`,
+    description: `Aman Mittal - Developer, Technical Writer`,
+    titleTemplate: `%s | Aman Mittal`,
+    url: `https://amanhimself.dev`,
+    image: `cover-image.png`,
+    twitterUsername: `@amanhimself`
   },
   plugins: [
-    `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-styled-components`,
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: `gatsby-remark-images`,
       options: {
-        name: 'assets',
-        path: `${__dirname}/src/images/`
+        maxWidth: 400
       }
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: 'posts',
-        path: `${__dirname}/tutorials/`
+        name: `assets`,
+        path: `${__dirname}/src/assets`
       }
     },
     {
-      resolve: `gatsby-transformer-remark`,
+      resolve: `gatsby-source-filesystem`,
       options: {
-        plugins: [
+        name: `posts`,
+        path: `${__dirname}/src/posts`
+      }
+    },
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        extensions: ['.mdx', '.md'],
+        gatsbyRemarkPlugins: [
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 850
-            }
-          },
-          `gatsby-remark-copy-linked-files`,
-          `gatsby-remark-prismjs`,
-          {
-            resolve: `gatsby-remark-autolink-headers`,
-            options: {
-              offsetY: `100`,
-              maintainCase: false,
-              removeAccents: true
+              maxWidth: 500
             }
           }
-        ]
+        ],
+        plugins: [`gatsby-remark-images`]
       }
     },
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: config.googleAnalyticsID
+        trackingId: `UA-143759180-1`
       }
     },
-    `gatsby-plugin-styled-components`,
-    `gatsby-plugin-sharp`,
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-catch-links`,
-    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: config.siteTitle,
-        short_name: config.siteTitleShort,
-        description: config.siteDescription,
-        start_url: config.pathPrefix,
-        background_color: config.backgroundColor,
-        theme_color: config.themeColor,
+        name: `Aman Mittal - Developer, Technical Writer`,
+        short_name: `Aman Mittal`,
+        start_url: `/`,
+        background_color: `#5E3AC8`,
+        theme_color: `#5E3AC8`,
         display: `minimal-ui`,
-        icon: `src/images/logos/logo.png` // This // This path is relative to the root of the site.
-      }
-    },
-    {
-      resolve: `gatsby-plugin-feed`,
-      options: {
-        setup(ref) {
-          const ret = ref.query.site.siteMetadata.rssMetadata;
-          ret.allMarkdownRemark = ref.query.allMarkdownRemark;
-          ret.generator = 'Aman Mittal';
-          return ret;
-        },
-        query: `
-        {
-          site {
-            siteMetadata {
-              rssMetadata {
-                site_url
-                feed_url
-                title
-                description
-                image_url
-              }
-            }
-          }
-        }
-      `,
-        feeds: [
-          {
-            serialize(ctx) {
-              const { rssMetadata } = ctx.query.site.siteMetadata;
-              return ctx.query.allMarkdownRemark.edges.map(edge => ({
-                categories: edge.node.frontmatter.tags,
-                date: edge.node.fields.date,
-                title: edge.node.frontmatter.title,
-                description: edge.node.excerpt,
-                url: rssMetadata.site_url + edge.node.fields.slug,
-                guid: rssMetadata.site_url + edge.node.fields.slug,
-                custom_elements: [
-                  { 'content:encoded': edge.node.html },
-                  { author: config.userEmail }
-                ]
-              }));
-            },
-            query: `
-            {
-              allMarkdownRemark(
-                limit: 1000,
-                sort: { order: DESC, fields: [fields___date] },
-                filter: { frontmatter: { template: { eq: "post" } } }
-              ) {
-                edges {
-                  node {
-                    excerpt(pruneLength: 180)
-                    html
-                    timeToRead
-                    fields {
-                      slug
-                      date
-                    }
-                    frontmatter {
-                      title
-                      date
-                      categories
-                      tags
-                      template
-                    }
-                  }
-                }
-              }
-            }
-          `,
-            output: config.siteRss,
-            title: config.siteRssTitle
-          }
-        ]
+        icon: `static/cover-image.png` // This path is relative to the root of the site.
       }
     }
+    // this (optional) plugin enables Progressive Web App + Offline functionality
+    // To learn more, visit: https://gatsby.dev/offline
+    // `gatsby-plugin-offline`,
   ]
 };
