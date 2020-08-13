@@ -4,6 +4,7 @@ module.exports = {
     description: `Aman Mittal - Developer, Technical Writer`,
     titleTemplate: `%s | Aman Mittal`,
     url: `https://amanhimself.dev`,
+    siteUrl: `https://amanhimself.dev`,
     image: `cover-image.png`,
     twitterUsername: `@amanhimself`
   },
@@ -47,7 +48,6 @@ module.exports = {
         plugins: [`gatsby-remark-images`]
       }
     },
-    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
