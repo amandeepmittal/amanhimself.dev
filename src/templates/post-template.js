@@ -8,6 +8,7 @@ import { FaRegClock } from 'react-icons/fa';
 
 import Layout from '../components/layout';
 import Banner from '../components/banner';
+import SEO from '../components/seo';
 
 // ...GatsbyImageSharpFluid
 
@@ -94,6 +95,7 @@ const PostTemplate = ({ data }) => {
   } = data;
   return (
     <Layout>
+      <SEO title={title} />
       <Wrapper>
         {/* post column */}
         <article>
