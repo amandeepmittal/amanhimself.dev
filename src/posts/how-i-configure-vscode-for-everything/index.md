@@ -3,7 +3,7 @@ title: How I Configure VS Code for Everything
 slug: how-i-configure-vscode-for-everything
 image: ./images/cover.png
 date: 2019-04-22
-category: tools
+category: others
 ---
 
 Recently, I was at the Boryspil Airport in Ukraine, working on a blog article, when suddenly my VS Code stopped working. It actually crashed! Not once, but twice in less than 30 minutes. Some of the content was autosaved, but some of it was gone forever.
