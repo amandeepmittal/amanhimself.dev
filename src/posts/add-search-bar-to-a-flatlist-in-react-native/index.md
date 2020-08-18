@@ -40,7 +40,7 @@ yarn install @ui-kitten/components @eva-design/eva lodash.filter
 expo install react-native-svg
 ```
 
-_Note_: The dependency [`react-native-svg`] is required as a peer dependency for the UI kitten library.
+_Note_: The dependency `react-native-svg` is required as a peer dependency for the UI kitten library.
 
 UI Kitten is ready to use now. To check, everything has installed correctly, let us modify `App.js` file as the following snippet:
 
