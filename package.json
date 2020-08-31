@@ -6,6 +6,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "clean": "rm -rf .next && next dev",
     "build": "next build && next export",
     "start": "next start",
     "lint": "./node_modules/.bin/eslint --ext .js,.jsx",
