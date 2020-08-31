@@ -16,7 +16,7 @@ const AuthorCard = () => {
       >
         <img
           src="/static/avatar.jpg"
-          style={{ width: 130, height: 130, borderRadius: 65, marginRight: 10 }}
+          style={{ width: 110, height: 110, borderRadius: 55, marginRight: 10 }}
         />
         <Stack>
           <Heading
@@ -25,14 +25,15 @@ const AuthorCard = () => {
             fontWeight="600"
             mb={4}
             letterSpacing="tighter"
+            lineHeight="1.3"
           >
             About the author
           </Heading>
-          <Text lineHeight="1">
+          <Text lineHeight="1.5">
             👋 Hey! I’m Aman Mittal. I’m a software developer and a technical
             writer.
           </Text>
-          <Text lineHeight="1">
+          <Text lineHeight="1.5">
             This website is a collection of all posts I've written in my journey
             of learning web and mobile development.
           </Text>

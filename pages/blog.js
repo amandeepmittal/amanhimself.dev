@@ -60,10 +60,10 @@ const Blog = () => {
             maxWidth="700px"
           >
             <Heading letterSpacing="tight" mb={2} as="h1" size="2xl">
-              All Blog Posts - {blogPosts.length}
+              Blog Posts - {blogPosts.length}
             </Heading>
             <Text color="gray.500" fontSize="lg" mb={2}>
-              A collection of articles, tutorials, writings and more.
+              A collection of articles, tutorials, and writings.
             </Text>
             <InputGroup my={4} mr={4} w="100%">
               <Input
