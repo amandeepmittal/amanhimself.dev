@@ -25,7 +25,7 @@ const NavigationContainer = () => {
       maxWidth="900px"
       width="100%"
       as="nav"
-      px={2}
+      px={3}
       py={4}
       mt={[0, 6]}
       mb={8}
@@ -45,14 +45,28 @@ const NavigationContainer = () => {
           </NavLink>
         </NextLink>
       </Flex>
-      <Box alignItems="center" flexDirection="row" justifyContent="center">
+      <Box
+        alignItems="center"
+        flexDirection="row"
+        justifyContent="space-evenly"
+      >
         <NextLink href="/blog" passHref>
           <NavLink
             as="a"
             variant="ghost"
             _hover={{ bg: 'purple.400', color: 'white' }}
+            mr={4}
           >
             Blog
+          </NavLink>
+        </NextLink>
+        <NextLink href="https://ko-fi.com/amanhimself" passHref isExternal>
+          <NavLink
+            as="a"
+            variant="ghost"
+            _hover={{ bg: 'purple.400', color: 'white' }}
+          >
+            ☕
           </NavLink>
         </NextLink>
       </Box>
