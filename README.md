@@ -7,17 +7,16 @@ A personal website where I keep:
 - information about myself
 - blog posts
 
-I have written for over 25+ tech publications and over 150+ posts. This website is an alternate platform to the collection of the blog posts and tutorials I have written so far and some exclusive content available on the blog itself.
-
-This website is built using Gatsbyjs.
+I have written for over 25+ tech publications and over 150+ posts. This website is an alternate platform to the collection of the blog posts and tutorials I have written so far.
 
 ## Uses
 
-- Posts in Markdown and MDX
-- [react-icons](https://react-icons.github.io/react-icons/)
-- [Prism React Renderer](https://github.com/FormidableLabs/prism-react-renderer)
-- `styled-components` for custom components
-- Code theme from Dracula
+- This website is built using [Next.js](https://nextjs.org/)
+- Posts in [MDX](https://mdxjs.com/)
+- Icons from [react-icons](https://react-icons.github.io/react-icons/)
+- Code theme from Prismjs/Dracula
+- UI React based components from [Chakra UI](https://chakra-ui.com)
+- Progress bar from [scrollProgress](https://github.com/jeremenichelli/scrollProgress) light-weight library. Thanks to Jeremias Menichelli for making it open-source.
 
 ## License
 
