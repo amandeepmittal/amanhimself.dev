@@ -163,31 +163,24 @@ const Index = () => {
             Node.js, React, and React Native.
           </Text>
           <Text color={secondaryTextColor} mb={2} fontSize="md">
-            I love contributing in open-source as much as my knowledge allows me
-            to. Back in 2018 I made my first open-source contribution by writing
-            a Twitter Bot (the original one) in Node.js for{' '}
-            <CustomLink href="https://github.com/freeCodeCamp/100DaysOfCode-twitter-bot">
-              freeCodeCamp{' '}
-            </CustomLink>
-            and{' '}
-            <CustomLink href="https://twitter.com/_100Daysofcode">
-              #100DaysOfCode
-            </CustomLink>{' '}
-            campaign which in recent years has gained a lot of attention (100k+
-            followers) among people who are getting into web development.
-          </Text>
-          <Text color={secondaryTextColor} mb={2} fontSize="md">
-            Over the years I've made some contributions to some projects and
-            organizations such as Node.js, Gatsbyjs and freeCodeCamp both as a
-            contributor and maintainer. In past, I've been awarded among{' '}
-            <CustomLink href="https://www.freecodecamp.org/news/announcing-our-freecodecamp-2018-top-contributor-award-winners-861da08a77e1/">
-              Top 200 Open Source Contributors by freeCodeCamp.org in 2018
-            </CustomLink>
-            .
+            <List styleType="disc">
+              <ListItem>
+                Written over <strong style={{ color: '#333' }}>150+ </strong>
+                blog posts and complete tutorials.
+              </ListItem>
+              <ListItem>
+                Written for <strong style={{ color: '#333' }}>20+ </strong>{' '}
+                organizational blogs and tech publications.
+              </ListItem>
+              <ListItem>
+                Fulfilled the responsibility of creating a curriculum for an
+                online educative learning platform Zeolearn on Node.js.
+              </ListItem>
+            </List>
           </Text>
           <Text color={secondaryTextColor} mb={2} fontSize="md">
             Some of the notable publications I've written are:
-            <List spacing={2}>
+            <List spacing={2} mb={4}>
               <ListItem>
                 <ListIcon icon={TiPencil} color="gray.500" />
                 <CustomLink href="https://www.freecodecamp.org/news/author/amanhimself/">
