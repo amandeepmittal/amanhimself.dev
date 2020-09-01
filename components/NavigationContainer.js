@@ -60,7 +60,7 @@ const NavigationContainer = () => {
             Blog
           </NavLink>
         </NextLink>
-        <NextLink href="https://ko-fi.com/amanhimself" passHref isExternal>
+        <NextLink href="https://ko-fi.com/amanhimself" passHref>
           <NavLink
             as="a"
             variant="ghost"
