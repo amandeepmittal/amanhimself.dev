@@ -86,7 +86,7 @@ const Index = () => {
                 }}
               >
                 <Link
-                  href="https://tinyletter.com/"
+                  href="https://tinyletter.com/amanhimself/"
                   isExternal
                   _hover={{
                     textDecoration: 'none'
