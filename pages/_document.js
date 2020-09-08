@@ -11,6 +11,7 @@ class MyDocument extends Document {
           rel="stylesheet"
         />
         <Head>
+          <meta charset="utf-8" />
           <meta content="##9F7AEA" name="theme-color" />
           <meta content="##9F7AEA" name="msapplication-TileColor" />
           {/* TODO: Add Google Site Verification Later */}
@@ -19,6 +20,18 @@ class MyDocument extends Document {
             name="google-site-verification"
           /> */}
           <link href="/favicon.ico" rel="shortcut icon" />
+          <meta
+            name="robots"
+            content="index,follow,max-video-preview:-1,max-snippet:-1,max-image-preview:large, max-video-preview:-1, max-video-preview:-1"
+          />
+          <meta
+            name="googlebot"
+            content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+          />
+          <meta
+            name="bingbot"
+            content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+          />
           <script
             async
             src="https://www.googletagmanager.com/gtag/js?id=UA-143759180-1"
