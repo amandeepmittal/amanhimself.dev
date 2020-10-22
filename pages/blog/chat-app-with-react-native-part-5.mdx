@@ -5,7 +5,7 @@ image: '/static/images/chat-app-with-react-native-part-5/images/cover.png'
 thumbnail: '/static/thumbnails/expo.png'
 ---
 
-In [part 4](https://heartbeat.fritz.ai/chat-app-with-react-native-part-4-create-chat-ui-screens-with-react-native-gifted-chat-7ef428a60d30), we built the foundation of creating a chat app by adding UI screens that are focused on sending, receiving and displaying chat messages. We used `react-native-gifted-chat` an amazing open source library and dived deep to use its "out of the box" props to add features to the chat app.
+In [part 4](https://amanhimself.dev/blog/chat-app-with-react-native-part-4), we built the foundation of creating a chat app by adding UI screens that are focused on sending, receiving and displaying chat messages. We used `react-native-gifted-chat` an amazing open source library and dived deep to use its "out of the box" props to add features to the chat app.
 
 In part 5, we are going to connect every chat functionality that we built so far with a real-time database service from Firebase, called Firestore. You are going to learn
 
@@ -18,7 +18,7 @@ And few other things along the way. Let's get started.
 
 ## How to get current user information in the app?
 
-Remember, in [part 2](https://heartbeat.fritz.ai/chat-app-with-react-native-part-2-firebase-user-authentication-with-react-native-firebase-533352870497), when configuring Email authentication between the chat app and the Firebase service, you set the following `AuthProvider` that gives access to the current user as well other methods that are already being used in components `LoginScreen` and `SignupScreen`. Here is the ode for `src/navigation/AuthProvider.js` for your reference.
+Remember, in [part 2](https://amanhimself.dev/blog/chat-app-with-react-native-part-2), when configuring Email authentication between the chat app and the Firebase service, you set the following `AuthProvider` that gives access to the current user as well other methods that are already being used in components `LoginScreen` and `SignupScreen`. Here is the ode for `src/navigation/AuthProvider.js` for your reference.
 
 ```js
 import React, { createContext, useState } from 'react';
@@ -440,7 +440,7 @@ There is a benefit of ordering the chat rooms according to the latest message fo
 
 ## What's Next?
 
-In the next part of the series we are going to fix a small bug related to status bar styles for every screen component in the current app. This is going to be done by creating a custom hook and using `react-navigation`. Stay tuned.
+In the [next part](https://amanhimself.dev/blog/chat-app-with-react-native-part-6) of the series we are going to fix a small bug related of status bar styles for every screen component in the current app. This is going to be done by creating a custom hook and using `react-navigation`.
 
 😺 **You can find the complete code here at this [GitHub repo](https://github.com/amandeepmittal/react-native-examples/tree/master/ChatApp).**
 

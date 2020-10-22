@@ -5,7 +5,7 @@ image: '/static/images/chat-app-with-react-native-part-4/images/cover.png'
 thumbnail: '/static/thumbnails/expo.png'
 ---
 
-In [part 3](https://amanhimself.dev/chat-app-with-react-native-part-3-firestore-collection/), we completed the task of integrating the Firestore to the current React Native app. The database now stores a chat room name. A new chat room can be created using a modal stack, only if the user is authenticated.
+In [part 3](https://amanhimself.dev/blog/chat-app-with-react-native-part-3), we completed the task of integrating the Firestore to the current React Native app. The database now stores a chat room name. A new chat room can be created using a modal stack, only if the user is authenticated.
 
 In part 4, let us proceed with further and a new screen that allows the user to send and receive messages as well as display those messages inside a chat room.
 
@@ -26,6 +26,7 @@ Then, let us add a mock chat UI screen elements to this screen. This can be done
 - import `GiftedChat` from `react-native-gifted-chat`. This component is going to be essential in adding UI and chat functionalitie
 
   s
+
 - Create a functional component `RoomScreen`, inside it, define a state variable called `messages`. This variable is going to have an empty array as its default value.
 - Add some mock message data objects. Display two types of messages in each object. The first object is going to be a system message which showcases information like "The following chat room was created at X time...". The second object is going to hold a `text` message that is going to have a `user` object associated and contains user information, such as user name. Both of these messages are going to have a unique `_id`.
 - Create a helper method called `handleSend` that is going to be used when sending a message in a particular chat room.
@@ -569,7 +570,7 @@ On the current screen you might see a loading indicator when you refresh the app
 
 ## What's Next?
 
-In part 5 of this series, we are going to create messages in real-time using the Firestore database. We will be covering how using react-navigation you can get the current room's id. Then, use it with the current user from the `AuthContext` we created earlier, to add real-time message information such as a text field and a timestamp associated with it.
+In [part 5 of this series](https://amanhimself.dev/blog/chat-app-with-react-native-part-5), we are going to create messages in real-time using the Firestore database. We will be covering how using react-navigation you can get the current room's id. Then, use it with the current user from the `AuthContext` we created earlier, to add real-time message information such as a text field and a timestamp associated with it.
 
 We will then add another real-time feature to display the latest message on the home screen under each room name's description using Firestore queries.
 
