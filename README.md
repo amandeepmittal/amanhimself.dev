@@ -2,7 +2,7 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/7a54ca90-982e-49cd-a491-23d5893bdebd/deploy-status)](https://app.netlify.com/sites/clever-pare-cfc6e4/deploys)
 
-A personal website where I keep:
+A [personal website](https://amanhimself.dev/) where I keep:
 
 - information about myself
 - blog posts
