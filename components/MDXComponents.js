@@ -123,7 +123,7 @@ const MDXComponents = {
   th: THead,
   td: TData,
   a: CustomLink,
-  p: props => <Text as="p" mt={0.5} lineHeight="tall" {...props} />,
+  p: props => <Text as="p" mt={0.75} lineHeight="tall" {...props} />,
   ul: props => <Box as="ul" pt={1} pl={4} ml={2} {...props} />,
   ol: props => <Box as="ol" pt={1} pl={4} ml={2} {...props} />,
   li: props => <Box as="li" pb={1} {...props} />,
