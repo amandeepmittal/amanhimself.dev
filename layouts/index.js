@@ -15,7 +15,7 @@ import BlogSeo from '../components/BlogSeo';
 import ReadingProgress from '../components/ReadingProgress';
 import AuthorCard from '../components/AuthorCard';
 import CustomLink from '../components/CustomLink';
-import BlogNav from '../components/BlogNav';
+import FooterBanner from '../components/FooterBanner';
 
 const shareOnTwitter = (slug, frontMatter) =>
   `http://twitter.com/share?text=${encodeURIComponent(
@@ -120,8 +120,11 @@ const Layout = ({ frontMatter, children }) => {
             </CustomLink>
           </Box>
           <Box>
-            <AuthorCard />
+            <FooterBanner />
           </Box>
+          {/* <Box>
+            <AuthorCard />
+          </Box> */}
         </Stack>
       </Container>
     </>
