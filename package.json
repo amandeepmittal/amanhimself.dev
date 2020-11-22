@@ -1,16 +1,14 @@
 {
   "name": "amanhimself.dev",
   "description": "Personal website running on Gatsby, React, and Node.js.",
-  "version": "7.0.1",
+  "version": "7.0.2",
   "author": "Aman Mittal <amandeepmittal@live.com>",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "clean": "rm -rf .next && next dev",
     "build": "next build && next export",
-    "start": "next start",
-    "lint": "./node_modules/.bin/eslint --ext .js,.jsx",
-    "format": "prettier --config .prettierrc \"**/*.{html,js,json,md,mdx,yml}\" --write"
+    "start": "next start"
   },
   "dependencies": {
     "@chakra-ui/core": "0.8.0",
