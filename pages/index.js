@@ -334,6 +334,15 @@ const Index = () => {
             <ListItem>Newsletter: Tinyletter</ListItem>
           </List>
           <Heading letterSpacing="tight" mt={8} mb={2} as="h2" size="xl">
+            Speaking
+          </Heading>
+          <ProjectCard
+            title="How to write consistently?"
+            description="Talked at Hashnode's Technical Writing Bootcamp, a free virtual Bootcamp to help beginner technical writers to improve their writing skill."
+            href="https://hashnode.com/bootcamp/batch-2"
+            icon={SiHashnode}
+          />
+          <Heading letterSpacing="tight" mt={8} mb={2} as="h2" size="xl">
             Guest Podcast Appearance & Interviews
           </Heading>
           <ProjectCard
