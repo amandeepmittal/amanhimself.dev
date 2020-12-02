@@ -12,7 +12,7 @@ import {
   Link
 } from '@chakra-ui/core';
 import { TiPencil } from 'react-icons/ti';
-import { SiGithub, SiExpo, SiApplepodcasts } from 'react-icons/si';
+import { SiGithub, SiExpo, SiApplepodcasts, SiHashnode } from 'react-icons/si';
 import { NextSeo } from 'next-seo';
 
 import Container from '../components/Container';
@@ -328,7 +328,7 @@ const Index = () => {
             <ListItem>Editor: Visual Studio Code</ListItem>
             <ListItem>Static Site Generator: Next.js</ListItem>
             <ListItem>Syntax Highlighting: Prismjs</ListItem>
-            <ListItem>Code Syntax Theme: Dracula Pro, Quiet Light</ListItem>
+            <ListItem>Code Syntax Theme: fairyFloss, Morgan.codes</ListItem>
             <ListItem>Terminal: iTerm with ZSH shell</ListItem>
             <ListItem>Manage Blog posts pipeline: Notion</ListItem>
             <ListItem>Newsletter: Tinyletter</ListItem>
