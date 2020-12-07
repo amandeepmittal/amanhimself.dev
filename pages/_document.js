@@ -1,19 +1,19 @@
 import React from 'react';
-import Document, { Head, Main, NextScript } from 'next/document';
+import Document, { Html, Head, Main, NextScript } from 'next/document';
 import GoogleFonts from 'next-google-fonts';
 
 class MyDocument extends Document {
   render() {
     return (
-      <html lang="en">
+      <Html lang="en">
         <GoogleFonts
           href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
           rel="stylesheet"
         />
         <Head>
-          <meta charset="utf-8" />
-          <meta content="##9F7AEA" name="theme-color" />
-          <meta content="##9F7AEA" name="msapplication-TileColor" />
+          <meta charSet="utf-8" />
+          <meta content="#9F7AEA" name="theme-color" />
+          <meta content="#9F7AEA" name="msapplication-TileColor" />
           {/* TODO: Add Google Site Verification Later */}
           {/* <meta
             content="eZSdmzAXlLkKhNJzfgwDqWORghxnJ8qR9_CHdAh5-xw"
@@ -34,8 +34,7 @@ class MyDocument extends Document {
           />
           <script
             async
-            src="https://www.googletagmanager.com/gtag/js?id=UA-143759180-1"
-          ></script>
+            src="https://www.googletagmanager.com/gtag/js?id=UA-143759180-1"></script>
           <script
             dangerouslySetInnerHTML={{
               __html: `
@@ -51,7 +50,7 @@ class MyDocument extends Document {
           <Main />
           <NextScript />
         </body>
-      </html>
+      </Html>
     );
   }
 }

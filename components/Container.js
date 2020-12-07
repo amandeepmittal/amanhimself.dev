@@ -7,7 +7,7 @@ import Footer from './Footer';
 const Container = ({ children }) => {
   return (
     <>
-      <NavigationContainer />
+      {/* <NavigationContainer /> */}
       <Flex as="main" justifyContent="center" flexDirection="column" px={8}>
         {children}
         <Footer />

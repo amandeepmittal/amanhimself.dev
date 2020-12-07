@@ -8,6 +8,8 @@ import {
 import { DefaultSeo } from 'next-seo';
 import { MDXProvider } from '@mdx-js/react';
 import { Global, css } from '@emotion/core';
+import '../styles/index.css';
+import Layout from '../components/ui/Layout';
 
 import SEO from '../next-seo.config';
 import theme from '../shared/theme';
@@ -32,16 +34,18 @@ const GlobalStyle = ({ children }) => {
 
 const App = ({ Component, pageProps }) => {
   return (
-    <ThemeProvider theme={theme}>
-      <MDXProvider components={MDXComponents}>
-        <ColorModeProvider value="light">
-          <GlobalStyle>
-            <DefaultSeo {...SEO} />
-            <Component {...pageProps} />
-          </GlobalStyle>
-        </ColorModeProvider>
-      </MDXProvider>
-    </ThemeProvider>
+    <Layout>
+      <ThemeProvider theme={theme}>
+        <MDXProvider components={MDXComponents}>
+          <ColorModeProvider value="light">
+            <GlobalStyle>
+              <DefaultSeo {...SEO} />
+              <Component {...pageProps} />
+            </GlobalStyle>
+          </ColorModeProvider>
+        </MDXProvider>
+      </ThemeProvider>
+    </Layout>
   );
 };
 
