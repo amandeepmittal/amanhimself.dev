@@ -29,7 +29,7 @@ import BlogPost from '../components/BlogPost';
 import { frontMatter as blogPosts } from './blog/**/*.mdx';
 
 const url = 'https://amanhimself.dev/';
-const title = 'About – Aman Mittal';
+const title = 'Aman Mittal';
 
 const Index = () => {
   const secondaryTextColor = 'gray.800';
