@@ -10,7 +10,9 @@ export const BlogConfig = {
   instagram: 'https://www.goodreads.com/author/show/17657541.Aman_Mittal',
   hundredDaysOfCodeBot: 'https://twitter.com/_100Daysofcode',
   mailAddress: 'mailto:amanmittal.work@gmail.com',
-  kofi: 'https://ko-fi.com/amanhimself'
+  kofi: 'https://ko-fi.com/amanhimself',
+  twitterBotRepo: 'https://github.com/freeCodeCamp/100DaysOfCode-twitter-bot',
+  goodreads: 'https://www.goodreads.com/author/show/17657541.Aman_Mittal'
 };
 
 export const SavedTweets = {
