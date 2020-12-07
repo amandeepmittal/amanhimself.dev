@@ -5,7 +5,6 @@ import Heading from './Heading';
 import TWCustomLink from './TWCustomLink';
 import { BlogConfig } from '../../blog-config';
 import TWSocialLinks from './TWSocialLinks';
-import NewsletterButton from './NewsletterButton';
 
 const Hero = () => {
   return (
@@ -33,7 +32,7 @@ const Hero = () => {
             </TWCustomLink>
             .
           </Heading>
-          <small>I’m a software developer and a technical writer.</small>          
+          <small>I’m a software developer and a technical writer.</small>
           <p className="text-base">
             This website is a collection of all posts I&apos;ve written in my
             journey of learning web and mobile development. You can read the{' '}
@@ -48,17 +47,18 @@ const Hero = () => {
               className="underline text-purple-600 hover:no-underline">
               about me
             </TWCustomLink>
-            .            
-          </p>    
+            .
+          </p>
           <p className="text-base">
-            You can join 1000+ devs and subscribe to my  <TWCustomLink
+            You can join 1000+ devs and subscribe to my{' '}
+            <TWCustomLink
               to={BlogConfig.newsletter}
               className="underline text-purple-600 hover:no-underline">
               weekly newsletter!
-            </TWCustomLink>{' '} 
-          </p>  
+            </TWCustomLink>{' '}
+          </p>
         </div>
-      </div>      
+      </div>
     </div>
   );
 };
