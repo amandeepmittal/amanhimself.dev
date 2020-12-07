@@ -42,7 +42,14 @@ const Index = () => {
         <About />
         {/* Stack of Most Popular Blog posts/Latest Blog Posts will go here*/}
         <div className="flex flex-col max-w-screen-lg mx-8 items-center justify-center">
-          <TWHeading size="h3">Recently Published</TWHeading>
+          <div className="flex flex-row space-around">
+            <TWHeading size="h3" className="px-2">Recently Published</TWHeading>
+            <p className="text-base mt-14 mb-6 items-center justify-center px-2">
+               <TWCustomLink  className="text-gray-700 p-2 rounded-lg	bg-purple-200 hover:no-underline hover:text-purple-600" to='/blog'>
+                View All
+              </TWCustomLink>
+            </p>
+          </div>
           {filteredBlogPosts.map(frontMatter => (
             <TWBlogCard key={frontMatter.title} {...frontMatter} />
           ))}
