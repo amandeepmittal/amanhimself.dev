@@ -9,7 +9,8 @@ export const BlogConfig = {
   hashnode: 'https://hashnode.com/@amanhimself',
   instagram: 'https://www.goodreads.com/author/show/17657541.Aman_Mittal',
   hundredDaysOfCodeBot: 'https://twitter.com/_100Daysofcode',
-  mailAddress: 'mailto:amanmittal.work@gmail.com'
+  mailAddress: 'mailto:amanmittal.work@gmail.com',
+  kofi: 'https://ko-fi.com/amanhimself'
 };
 
 export const SavedTweets = {

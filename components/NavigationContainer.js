@@ -30,15 +30,13 @@ const NavigationContainer = () => {
       mt={[0, 6]}
       mb={8}
       mx="auto"
-      bg="white"
-    >
+      bg="white">
       <Flex align="center" mr={5}>
         <NextLink href="/" passHref>
           <NavLink
             as="a"
             variant="ghost"
-            _hover={{ bg: 'purple.400', color: 'white' }}
-          >
+            _hover={{ bg: 'purple.400', color: 'white' }}>
             <Heading as="h1" size="lg">
               Aman Mittal
             </Heading>
@@ -48,15 +46,13 @@ const NavigationContainer = () => {
       <Box
         alignItems="center"
         flexDirection="row"
-        justifyContent="space-evenly"
-      >
+        justifyContent="space-evenly">
         <NextLink href="/blog" passHref>
           <NavLink
             as="a"
             variant="ghost"
             _hover={{ bg: 'purple.400', color: 'white' }}
-            mr={4}
-          >
+            mr={4}>
             Blog
           </NavLink>
         </NextLink>
@@ -64,8 +60,7 @@ const NavigationContainer = () => {
           <NavLink
             as="a"
             variant="ghost"
-            _hover={{ bg: 'purple.400', color: 'white' }}
-          >
+            _hover={{ bg: 'purple.400', color: 'white' }}>
             ☕
           </NavLink>
         </NextLink>

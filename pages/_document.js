@@ -11,7 +11,7 @@ class MyDocument extends Document {
           rel="stylesheet"
         />
         <Head>
-          <meta charset="utf-8" />
+          <meta charSet="utf-8" />
           <meta content="#9F7AEA" name="theme-color" />
           <meta content="#9F7AEA" name="msapplication-TileColor" />
           {/* TODO: Add Google Site Verification Later */}
