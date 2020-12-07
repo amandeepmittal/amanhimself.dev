@@ -35,6 +35,11 @@ const Header = () => {
             Blog
           </NavLink>
           <NavLink
+            to="/about"
+            className="relative	hover:bg-purple-200 rounded-md p-2">
+            About
+          </NavLink>
+          <NavLink
             to={BlogConfig.newsletter}
             className="relative hover:bg-purple-200 rounded-md p-2">
             Newsletter
