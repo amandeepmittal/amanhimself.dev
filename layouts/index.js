@@ -110,7 +110,7 @@ const Layout = ({ frontMatter, children }) => {
             </CustomLink>
             {` • `}
             <CustomLink
-              href="https://tinyletter.com/amanhimself/"
+              href="https://amanhimself.substack.com/"
               isExternal
               color="gray.900"
               fontSize="xl"

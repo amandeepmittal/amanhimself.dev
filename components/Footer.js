@@ -22,7 +22,7 @@ const Footer = () => {
         {'Blog'}
       </CustomLink>
       <CustomLink
-        href="https://tinyletter.com/amanhimself/"
+        href="https://amanhimself.substack.com/"
         isExternal
         color="gray.600"
         style={{ borderBottom: 0 }}

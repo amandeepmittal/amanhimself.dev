@@ -86,7 +86,7 @@ const Index = () => {
                 }}
               >
                 <Link
-                  href="https://tinyletter.com/amanhimself/"
+                  href="https://amanhimself.substack.com/"
                   isExternal
                   _hover={{
                     textDecoration: 'none'
@@ -240,7 +240,7 @@ const Index = () => {
           </Text>
           <Text color={secondaryTextColor} mb={2} fontSize="md">
             Currently, I am also writing a{' '}
-            <CustomLink href="https://tinyletter.com/amanhimself">
+            <CustomLink href="https://amanhimself.substack.com/">
               bi-weekly newsletter
             </CustomLink>{' '}
             and sharing any new content I create on React Native, Expo, Reactjs
@@ -331,7 +331,7 @@ const Index = () => {
             <ListItem>Code Syntax Theme: fairyFloss, Morgan.codes</ListItem>
             <ListItem>Terminal: iTerm with ZSH shell</ListItem>
             <ListItem>Manage Blog posts pipeline: Notion</ListItem>
-            <ListItem>Newsletter: Tinyletter</ListItem>
+            <ListItem>Newsletter: Substack (free)</ListItem>
           </List>
           <Heading letterSpacing="tight" mt={8} mb={2} as="h2" size="xl">
             Speaking
