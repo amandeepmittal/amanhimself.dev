@@ -39,7 +39,7 @@ const Blog = () => {
         <div className="flex flex-col max-w-screen-lg mx-8 items-center justify-center">
           <TWHeading size="h1">Blog Posts - {blogPosts.length}</TWHeading>
           <p className="text-lg text-gray-500 my-4">A collection of articles, tutorials, and writings.</p>
-          <input class="bg-white rounded border-0 p-3 focus:outline-none focus:shadow-outline border border-purple-200 rounded-lg py-2 px-4 block w-3/4 appearance-none leading-normal" type="search" onChange={e => setSearchValue(e.target.value)}
+          <input className="bg-white rounded border-0 p-3 focus:outline-none focus:shadow-outline border border-purple-200 rounded-lg py-2 px-4 block w-3/4 appearance-none leading-normal" type="search" onChange={e => setSearchValue(e.target.value)}
           placeholder="Search a post here... " />
           
         {!filteredBlogPosts.length && 'No posts found.'}

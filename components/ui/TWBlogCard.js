@@ -4,9 +4,13 @@ import { format, parseISO } from 'date-fns';
 import Image from 'next/image';
 
 import Heading from './Heading';
+import Tags from './Tags';
+
+// const tags = 'react, reactnative, expo';
 
 const BlogCard = frontMatter => {
-  const { title, thumbnail } = frontMatter;
+  const { title, thumbnail, tags } = frontMatter;
+  
 
   const slug = frontMatter.__resourcePath
     .replace('blog/', '')
@@ -49,13 +53,13 @@ const BlogCard = frontMatter => {
           <div>
             <dl>
               <dt className="sr-only">Published on</dt>
-              <dd className="text-base font-medium leading-6 text-time font-source-sans-pro">
+              <dd className="text-sm font-medium leading-6 text-time font-source-sans-pro">
                 {format(parseISO(frontMatter.publishedAt), 'MMMM dd, yyyy')}
                 {` • `}
                 {frontMatter.readingTime.text}
               </dd>
             </dl>
-            {/* <Tags tags={tags}></Tags> */}
+            <Tags tags={tags}></Tags>            
           </div>
         </div>
       </div>
