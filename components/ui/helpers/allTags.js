@@ -19,6 +19,12 @@ const tags = [
     bgColor: "bg-yellow-400",
     fontColor: "text-gray-900",
   },
+  {
+    name: "amplify",
+    slug: slugify('amplify'),
+    bgColor: "bg-yellow-500",
+    fontColor: "text-gray-100",
+  },
   // {
   //   name: "next.js",
   //   slug: slugify('next.js'),
@@ -55,6 +61,30 @@ const tags = [
   //   bgColor: "bg-yellow-200",
   //   fontColor: "text-gray-700",
   // },  
+  {
+    name: "animation",
+    slug: slugify('animation'),
+    bgColor: "bg-indigo-500",
+    fontColor: "text-gray-100",
+  },
+  {
+    name: "navigation",
+    slug: slugify('navigation'),
+    bgColor: "bg-purple-300",
+    fontColor: "text-gray-100",
+  },
+  {
+    name: "redux",
+    slug: slugify('redux'),
+    bgColor: "bg-purple-400",
+    fontColor: "text-gray-200",
+  },
+  {
+    name: "harperdb",
+    slug: slugify('harperdb'),
+    bgColor: "bg-purple-600",
+    fontColor: "text-gray-100",
+  },
   {
     name: "tools",
     slug: slugify('tools'),
