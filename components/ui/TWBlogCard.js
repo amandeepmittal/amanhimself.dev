@@ -9,7 +9,7 @@ const BlogCard = frontMatter => {
   const { title, thumbnail } = frontMatter;
 
   const slug = frontMatter.__resourcePath
-    .replace('blog', '')
+    .replace('blog/', '')
     .replace('.mdx', '');
 
   return (
