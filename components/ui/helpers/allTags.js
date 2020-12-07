@@ -10,7 +10,7 @@ const tags = [
   {
     name: "node",
     slug: slugify('node'),
-    bgColor: "bg-green-400",
+    bgColor: "bg-green-600",
     fontColor: "text-gray-100",
   },
   {
@@ -21,9 +21,9 @@ const tags = [
   },
   {
     name: "firebase",
-    slug: slugify('fiebase'),
-    bgColor: "bg-gray-700",
-    fontColor: "text-gray-100",
+    slug: slugify('firebase'),
+    bgColor: "bg-yellow-400",
+    fontColor: "text-gray-900",
   },
   {
     name: "writing",
@@ -52,7 +52,7 @@ const tags = [
   {
     name: "gatsby",
     slug: slugify('gatsby'),
-    bgColor: "bg-purple-600",
+    bgColor: "bg-purple-700",
     fontColor: "text-gray-200",
   },
   {
