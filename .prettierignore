@@ -1,7 +1,9 @@
-node_modules/
-.vscode
 .next
-.mdx-data
-out.
-public.
-scripts/
+node_modules/
+dist
+package.json
+out/
+yarn.lock
+public/
+.vscode
+scrtips/
