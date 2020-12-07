@@ -17,6 +17,8 @@ import { NextSeo } from 'next-seo';
 
 import TWContainer from '../components/ui/TWContainer';
 import About from '../components/ui/About';
+import TWBlogCard from '../components/ui/TWBlogCard';
+import { TWHeading } from '../components/ui/Heading';
 
 import Container from '../components/Container';
 import CustomLink from '../components/CustomLink';
@@ -53,6 +55,13 @@ const Index = () => {
       {/* Main Container Starts Here */}
       <TWContainer as="main" noMargin className="md:px-4 space-y-14">
         <About />
+        {/* Stack of Most Popular Blog posts/Latest Blog Posts will go here*/}
+        <div className="flex flex-col max-w-screen-lg mx-8 items-start">
+          <TWHeading size="h3">Recently Published</TWHeading>
+          {filteredBlogPosts.map(frontMatter => (
+            <TWBlogCard key={frontMatter.title} {...frontMatter} />
+          ))}          
+        </div>        
         <Container>
           <Stack
             as="main"
@@ -60,14 +69,7 @@ const Index = () => {
             justifyContent="center"
             alignItems="flex-start"
             m="0 auto 4rem auto"
-            maxWidth="700px">            
-            {/* Stack of Most Popular Blog posts/Latest Blog Posts will go here*/}
-            <Heading letterSpacing="tight" mt={4} mb={2} as="h3" size="lg">
-              Latest Posts
-            </Heading>
-            {filteredBlogPosts.map(frontMatter => (
-              <BlogPost key={frontMatter.title} {...frontMatter} />
-            ))}
+            maxWidth="700px">
             <Heading letterSpacing="tight" mt={4} mb={2} as="h2" size="xl">
               About Me
             </Heading>
