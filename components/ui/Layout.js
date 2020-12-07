@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Header from './Header';
+import TWFooter from './TWFooter';
 
 const Layout = ({ children }) => {
   return (
@@ -9,6 +10,7 @@ const Layout = ({ children }) => {
       style={{ gridTemplateRows: 'auto 1fr auto' }}>
       <Header />
       {children}
+      <TWFooter />
     </div>
   );
 };
