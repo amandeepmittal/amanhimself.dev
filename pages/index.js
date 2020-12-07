@@ -56,7 +56,7 @@ const Index = () => {
       <TWContainer as="main" noMargin className="md:px-4 space-y-14">
         <About />
         {/* Stack of Most Popular Blog posts/Latest Blog Posts will go here*/}
-        <div className="flex flex-col max-w-screen-lg mx-8 items-start">
+        <div className="flex flex-col max-w-screen-lg mx-8 items-center justify-center">
           <TWHeading size="h3">Recently Published</TWHeading>
           {filteredBlogPosts.map(frontMatter => (
             <TWBlogCard key={frontMatter.title} {...frontMatter} />
