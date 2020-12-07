@@ -1,7 +1,6 @@
 import React from 'react';
 import NextLink from 'next/link';
 import { format, parseISO } from 'date-fns';
-import Image from 'next/image';
 
 import Heading from './Heading';
 import Tags from './Tags';
@@ -26,7 +25,7 @@ const BlogCard = frontMatter => {
       <div className="relative z-10 space-y-4 pointer-events-none xl:space-y-0 xl:grid xl:grid-cols-4 xl:col-gap-6">
         <div className="flex items-center pr-4 xl:space-x-6 xl:pb-0 xl:col-span-3">
           <div className="flex-shrink-0 hidden w-12 h-12 xl:inline-block">
-            <Image
+            <img
               src={thumbnail}
               height={48}
               width={48}
@@ -42,7 +41,7 @@ const BlogCard = frontMatter => {
         </div>
         <div className="flex items-center pt-4 space-x-6 border-t border-gray-200 xl:pl-4 xl:pt-0 xl:space-x-0 xl:border-l xl:border-t-0">
           <div className="inline-block w-12 h-12 xl:hidden">
-            <Image
+            <img
               src={thumbnail}
               height={48}
               width={48}

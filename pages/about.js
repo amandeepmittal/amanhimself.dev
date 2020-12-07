@@ -1,6 +1,5 @@
 import React from 'react'
 import {NextSeo} from 'next-seo';
-import Image from 'next/image';
 
 import {TWHeading} from '../components/ui/Heading';
 import TWBlogCard from '../components/ui/TWBlogCard';
@@ -29,7 +28,7 @@ const AboutPage = () => {
       <div className="flex flex-col max-w-screen-lg mx-8 items-center justify-center">
         <TWHeading size="h1">About Me</TWHeading>
         <picture className="relative flex-none w-40 h-40 rounded-full shadow-xl md:h-44 md:w-44 mb-2">
-        <Image
+        <img
           className="absolute flex-none object-cover w-40 h-40 rounded-full md:h-44 md:w-44"
           src="/static/avatar.jpg"
           alt="Me"

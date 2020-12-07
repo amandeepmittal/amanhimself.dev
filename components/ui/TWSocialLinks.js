@@ -19,7 +19,7 @@ const IconButton = ({ iconName, iconLink }) => {
 
 const TWSocialLinks = () => {
   return (
-    <div className="flex justify-around items-center md:pb-8 md:pt-4 md:mb-4">
+    <div className="flex px-2 items-center">
       <IconButton iconName={<FaTwitter />} iconLink={BlogConfig.twitter} />
       <IconButton iconName={<SiGithub />} iconLink={BlogConfig.github} />
       <IconButton iconName={<SiMedium />} iconLink={BlogConfig.medium} />

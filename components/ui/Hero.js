@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from 'next/image';
 
 import Heading from './Heading';
 import TWCustomLink from './TWCustomLink';
@@ -10,14 +9,13 @@ const Hero = () => {
   return (
     <div className="flex flex-col items-center justify-center p-6 mx-6 space-y-4 bg-purple-100 rounded-lg shadow-md md:mx-0 md:space-x-8 xl:p-12 md:space-y-0 md:flex-row">
       <picture className="relative flex-none w-40 h-40 rounded-full shadow-xl md:h-44 md:w-44 mb-2">
-        <Image
-          className="absolute flex-none object-cover w-40 h-40 rounded-full md:h-44 md:w-44"
+        <img
+          className="absolute flex-none object-cover w-40 h-40 rounded-full md:h-44 md:w-44 mb-2"
           src="/static/avatar.jpg"
           alt="Me"
           width={176}
           height={176}
-        />
-        <TWSocialLinks />
+        />        
       </picture>
       <div className="space-y-2 p-2">
         <div className="space-y-1 space-y-2 text-xl leading-7 md:text-2xl md:leading-8 lg:text-3xl lg:leading-10">
@@ -57,6 +55,7 @@ const Hero = () => {
               weekly newsletter!
             </TWCustomLink>{' '}
           </p>
+          <TWSocialLinks />
         </div>
       </div>
     </div>
