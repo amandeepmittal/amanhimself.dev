@@ -45,7 +45,7 @@ const Blog = () => {
             A collection of articles, tutorials, and writings.
           </p>
           <input
-            className="bg-white border-0 p-3 focus:outline-none focus:shadow-outline border border-purple-200 rounded-lg py-2 px-4 block w-3/4 appearance-none leading-normal"
+            className="bg-white border p-3 focus:outline-none focus:shadow-outline border-purple-200 rounded-lg py-2 px-4 block w-3/4 appearance-none leading-normal"
             type="search"
             onChange={e => setSearchValue(e.target.value)}
             placeholder="Search a post here... "
