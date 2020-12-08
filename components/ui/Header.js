@@ -44,11 +44,11 @@ const Header = () => {
             className="relative hover:bg-purple-200 rounded-md p-2">
             Newsletter
           </NavLink>
-          <NavLink
+          {/* <NavLink
             to={BlogConfig.kofi}
             className="relative hover:bg-purple-200 rounded-md p-2">
             Buy Me Coffee
-          </NavLink>
+          </NavLink> */}
         </ul>
       </nav>
     </TWContainer>

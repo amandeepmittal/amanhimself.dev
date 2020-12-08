@@ -10,6 +10,8 @@ import {
 } from '@chakra-ui/core';
 
 import CustomLink from './CustomLink';
+import TWCustomLink from './ui/TWCustomLink';
+import { TWHeading } from './ui/Heading';
 
 const Table = props => (
   <Box overflowX="scroll" w="full">
@@ -77,8 +79,7 @@ const DocsHeading = props => (
     }}
     {...props}
     mb="1em"
-    mt="1em"
-  >
+    mt="1em">
     <Box pointerEvents="auto">
       {props.children}
       {props.id && (
@@ -94,8 +95,7 @@ const DocsHeading = props => (
           }}
           opacity="0"
           ml="0.375rem"
-          href={`#${props.id}`}
-        >
+          href={`#${props.id}`}>
           #
         </PseudoBox>
       )}
@@ -110,9 +110,9 @@ const Hr = () => {
 };
 
 const MDXComponents = {
-  h1: props => <Heading as="h1" size="xl" my={2} {...props} />,
-  h2: props => <DocsHeading as="h2" fontWeight="bold" size="lg" {...props} />,
-  h3: props => <DocsHeading as="h3" size="md" fontWeight="bold" {...props} />,
+  h1: props => <TWHeading size="h1" className="my-2" {...props} />,
+  h2: props => <TWHeading size="h2" className="my-2" {...props} />,
+  h3: props => <TWHeading size="h3" className="my-2" {...props} />,
   inlineCode: props => (
     <Code variantColor="purple" fontSize="0.84em" {...props} my={0.5} />
   ),
@@ -123,10 +123,10 @@ const MDXComponents = {
   th: THead,
   td: TData,
   a: CustomLink,
-  p: props => <Text as="p" mt={0.75} lineHeight="tall" {...props} />,
-  ul: props => <Box as="ul" pt={1} pl={4} ml={2} {...props} />,
-  ol: props => <Box as="ol" pt={1} pl={4} ml={2} {...props} />,
-  li: props => <Box as="li" pb={1} {...props} />,
+  p: props => <p className="text-base mt-3" {...props} />,
+  ul: props => <ul class="list-inside list-disc" {...props} />,
+  ol: props => <ol className="text-gray-600 my-2" {...props} />,
+  li: props => <li className="text-gray-600 my-2" {...props} />,
   blockquote: Quote
 };
 
