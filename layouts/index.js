@@ -54,7 +54,7 @@ const Layout = ({ frontMatter, children }) => {
           <div className="flex flex-wrap order-1 space-y-8 md:mr-8 xl:order-none xl:col-span-3">
             <img src={frontMatter.image} />
             <div className="flex flex-col">
-                <Box>{children}</Box>              
+                {children}
             </div>
             <TWBlogFooterBanner />
           </div>
