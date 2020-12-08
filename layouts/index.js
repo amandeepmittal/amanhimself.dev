@@ -14,7 +14,6 @@ import Container from '../components/Container';
 import BlogSeo from '../components/BlogSeo';
 import ReadingProgress from '../components/ReadingProgress';
 import CustomLink from '../components/CustomLink';
-import FooterBanner from '../components/FooterBanner';
 
 import TWContainer from '../components/ui/TWContainer';
 import { TWHeading } from '../components/ui/Heading';
@@ -48,16 +47,14 @@ const Layout = ({ frontMatter, children }) => {
           {...frontMatter}
         />
         <ReadingProgress />
-        <article className="relative flex flex-col md:px-4 xl:grid xl:grid-cols-3 xl:col-gap-6">
+        <article className="relative flex flex-col md:px-4 xl:grid xl:grid-cols-4 xl:col-gap-6">
           <div className="pb-4 md:mr-8 xl:pb-0 xl:mb-8 xl:col-span-4">
             <TWHeading noMargin>{frontMatter.title}</TWHeading>
           </div>
           <div className="flex flex-wrap order-1 space-y-8 md:mr-8 xl:order-none xl:col-span-3">
             <img src={frontMatter.image} />
             <div className="flex flex-col">
-              <Container>
-                <Box>{children}</Box>
-              </Container>
+                <Box>{children}</Box>              
             </div>
             <TWBlogFooterBanner />
           </div>
