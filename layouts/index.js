@@ -54,9 +54,12 @@ const Layout = ({ frontMatter, children }) => {
           </div>
           <div className="flex flex-wrap order-1 space-y-8 md:mr-8 xl:order-none xl:col-span-3">
             <img src={frontMatter.image} />
-            <div className="flex flex-col">{children}</div>            
-              <TWBlogFooterBanner />
-            
+            <div className="flex flex-col">
+              <Container>
+                <Box>{children}</Box>
+              </Container>
+            </div>
+            <TWBlogFooterBanner />
           </div>
           <aside className="pb-10">
             <div className="sticky top-0 flex flex-col items-start pt-4 border-t border-gray-200 xl:pl-4 sm:flex-row xl:border-l xl:border-t-0 xl:space-y-8 xl:block">
@@ -68,7 +71,7 @@ const Layout = ({ frontMatter, children }) => {
                 alt={frontMatter.title}
               />
               <div className="flex flex-wrap xl:block xl:space-y-8">
-                <dl className="mt-4 mr-8 xl:mt-0 xl:mr-0">
+                <dl className="p-2 mt-4 mr-8 xl:mt-0 xl:mr-0">
                   <dt className="font-semibold font-source-sans-pro">
                     Published on
                   </dt>
@@ -76,7 +79,7 @@ const Layout = ({ frontMatter, children }) => {
                     {format(parseISO(frontMatter.publishedAt), 'MMMM dd, yyyy')}
                   </dd>
                 </dl>
-                <dl className="mt-4 md:mr-8 xl:mt-0 xl:mr-0">
+                <dl className="p-2 mt-4 md:mr-8 xl:mt-0 xl:mr-0">
                   <dt className="font-semibold font-source-sans-pro">
                     Reading time
                   </dt>
@@ -92,7 +95,7 @@ const Layout = ({ frontMatter, children }) => {
                     {frontMatter.wordCount} words
                   </dd>
                 </dl> */}
-                <dl className="w-full mt-4 md:mr-8 md:w-auto xl:mt-0 xl:mr-0">
+                <dl className="p-2 w-full mt-4 md:mr-8 md:w-auto xl:mt-0 xl:mr-0">
                   <dt className="font-semibold font-source-sans-pro">Tags</dt>
                   <dd className="text-base font-medium leading-6 text-time">
                     <Tags tags={frontMatter.tags}></Tags>

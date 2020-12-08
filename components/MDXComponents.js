@@ -124,7 +124,7 @@ const MDXComponents = {
   td: TData,
   a: CustomLink,
   p: props => <p className="text-base mt-3" {...props} />,
-  ul: props => <ul class="list-inside list-disc" {...props} />,
+  ul: props => <ul className="list-inside list-disc" {...props} />,
   ol: props => <ol className="text-gray-600 my-2" {...props} />,
   li: props => <li className="text-gray-600 my-2" {...props} />,
   blockquote: Quote
