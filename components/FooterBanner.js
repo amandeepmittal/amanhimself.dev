@@ -11,8 +11,7 @@ const FooterBanner = () => {
           size="sm"
           fontWeight="600"
           letterSpacing="tighter"
-          lineHeight="1.3"
-        >
+          lineHeight="1.3">
           Want to help support this blog and learn some cool things about
           JavaScript at the same time?
         </Heading>
