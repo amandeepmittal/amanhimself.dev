@@ -48,13 +48,13 @@ const Layout = ({ frontMatter, children }) => {
         />
         <ReadingProgress />
         <article className="relative flex flex-col md:px-4 xl:grid xl:grid-cols-4 xl:col-gap-6">
-          <div className="pb-4 md:mr-8 xl:pb-0 xl:mb-8 xl:col-span-4">
+          <div className="pb-4 md:mr-8 xl:pb-0 xl:mb-8 xl:col-span-3">
             <TWHeading noMargin>{frontMatter.title}</TWHeading>
           </div>
-          <div className="flex flex-wrap order-1 space-y-8 md:mr-8 xl:order-none xl:col-span-3">
+          <div className="order-1 space-y-8 md:mr-8 xl:order-none xl:col-span-3">
             <img src={frontMatter.image} />
             <div className="flex flex-col">
-                <Box>{children}</Box>              
+                {children}
             </div>
             <TWBlogFooterBanner />
           </div>
