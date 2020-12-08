@@ -5,11 +5,8 @@ import { format, parseISO } from 'date-fns';
 import Heading from './Heading';
 import Tags from './Tags';
 
-// const tags = 'react, reactnative, expo';
-
 const BlogCard = frontMatter => {
   const { title, thumbnail, tags } = frontMatter;
-  
 
   const slug = frontMatter.__resourcePath
     .replace('blog/', '')
@@ -58,7 +55,7 @@ const BlogCard = frontMatter => {
                 {frontMatter.readingTime.text}
               </dd>
             </dl>
-            <Tags tags={tags}></Tags>            
+            <Tags tags={tags}></Tags>
           </div>
         </div>
       </div>
