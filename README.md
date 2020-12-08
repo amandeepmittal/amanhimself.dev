@@ -15,7 +15,7 @@ I have written for over 25+ tech publications and over 150+ posts. This website 
 - Posts in [MDX](https://mdxjs.com/)
 - Icons from [react-icons](https://react-icons.github.io/react-icons/)
 - Code theme from Prismjs/Dracula
-- UI React based components from [Chakra UI](https://chakra-ui.com)
+- UI React based components from [Chakra UI](https://chakra-ui.com) & [Tailwind CSS](https://tailwindcss.com/)
 - Progress bar from [scrollProgress](https://github.com/jeremenichelli/scrollProgress) light-weight library. Thanks to Jeremias Menichelli for making it open-source.
 
 ## License
