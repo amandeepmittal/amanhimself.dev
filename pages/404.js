@@ -13,16 +13,14 @@ const Error = () => {
         justifyContent="center"
         alignItems="flex-start"
         m="0 auto 4rem auto"
-        maxWidth="700px"
-      >
+        maxWidth="700px">
         <Flex
           flexDirection="column"
           justifyContent="flex-start"
           alignItems="flex-start"
-          maxWidth="700px"
-        >
+          maxWidth="700px">
           <Heading letterSpacing="tight" mb={2} as="h1" size="2xl">
-            😅 I've am yet to write the post you're looking for.
+            😅 I've yet to write the post you're looking for.
           </Heading>
           <Text color="gray.700" my={4}></Text>
           <NextLink href="/" passHref>
@@ -37,8 +35,7 @@ const Error = () => {
               mx="2rem"
               _hover={{
                 backgroundColor: 'purple.300'
-              }}
-            >
+              }}>
               May be you'd like to return home?
             </Button>
           </NextLink>
@@ -54,8 +51,7 @@ const Error = () => {
               mx="2rem"
               _hover={{
                 backgroundColor: 'purple.300'
-              }}
-            >
+              }}>
               Or would you like to read another blog post?
             </Button>
           </NextLink>

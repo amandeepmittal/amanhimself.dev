@@ -10,7 +10,8 @@ const BlogCard = frontMatter => {
 
   const slug = frontMatter.__resourcePath
     .replace('blog/', '')
-    .replace('.mdx', '');
+    .replace('.mdx', '')
+    .replace('tag/', '');
 
   return (
     <article className="relative w-3/4 my-4 inline-block p-4 text-gray-700 rounded-md outline-none post-item hover:bg-purple-100 hover:text-gray-700 focus:bg-gray-100 focus:shadow-sm focus:text-gray-700 transition duration-500 ease focus:outline-none focus:shadow-outline">
