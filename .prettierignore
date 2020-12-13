@@ -1,9 +1,5 @@
-.next
-node_modules/
-dist
+.cache
+node_modules
+public
 package.json
-out/
-yarn.lock
-public/
-.vscode
-scrtips/
+package-lock.json
