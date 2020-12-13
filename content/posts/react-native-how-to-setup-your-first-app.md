@@ -1,7 +1,7 @@
 ---
 title: 'React Native - How to Setup Your First App'
 date: 2018-07-13
-slug: '../react-native-how-to-setup-your-first-app'
+slug: 'blog/react-native-how-to-setup-your-first-app'
 thumbnail: '../thumbnails/react.png'
 template: post
 tags:

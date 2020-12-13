@@ -1,7 +1,7 @@
 ---
 title: 'Nesting Tab and Stack navigators in React Native and Expo apps'
 date: 2020-02-26
-slug: '../nested-navigators-in-react-native'
+slug: 'blog/nested-navigators-in-react-native'
 thumbnail: '../thumbnails/expo.png'
 template: post
 tags:

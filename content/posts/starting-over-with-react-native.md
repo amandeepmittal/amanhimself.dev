@@ -1,7 +1,7 @@
 ---
 title: 'Starting Over with React Native'
 date: 2018-07-07
-slug: 'blog/starting-over-with-react-native/images/cover.png'
+slug: 'blog/starting-over-with-react-native'
 thumbnail: '../thumbnails/expo.png'
 template: post
 tags:

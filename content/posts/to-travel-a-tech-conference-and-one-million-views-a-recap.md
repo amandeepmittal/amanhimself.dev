@@ -1,7 +1,7 @@
 ---
 title: 'To Travel, A Tech Conference and One Million views - a Recap'
 date: 2019-07-02
-slug: 'blog/to-travel-a-tech-conference-and-one-million-views-a-recap/images/cover.png'
+slug: 'blog/to-travel-a-tech-conference-and-one-million-views-a-recap'
 template: post
 thumbnail: '../thumbnails/writing.png'
 tags:
