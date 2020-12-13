@@ -33,7 +33,8 @@ For example, this how a `ScrollView` component is implemented in a React Native 
 Both of these scrollable components have at least one thing in common: a scroll bar indicator. By default, the scroll bar indicator is visible whether the content is displayed horizontally or vertically. To disable this vertical scroll bar indicator you would add the prop `showsVerticalScrollIndicator` with a boolean value of false:
 
 ```js
-<ScrollView style={{ backgroundColor: 'white', marginHorizontal: 20 }} showsVerticalScrollIndicator={false}>
+<ScrollView style={{ backgroundColor: 'white', marginHorizontal:
+20 }} showsVerticalScrollIndicator={false}>
 ```
 
 However, the implementation of this scroll bar indicator is not directly customizable on cross-platforms in React Native. If you are building an app whose screen design depends on displaying a customized scroll bar indicator, then let's build one in this tutorial. To implement this, we are going to use React Native [Animated](https://reactnative.dev/docs/animated.html) API.
@@ -121,7 +122,21 @@ Add the following code snippet to this file:
 export const booksData = {
   title: 'The Hunger Games',
   description:
-    'Winning will make you famous. Losing means certain death. The nation of Panem, formed from a post-apocalyptic North America, is a country that consists of a wealthy Capitol region surrounded by 12 poorer districts. Early in its history, a rebellion led by a 13th district against the Capitol resulted in its destruction and the creation of an annual televised event known as the Hunger Games. In punishment, and as a reminder of the power and grace of the Capitol, each district must yield one boy and one girl between the ages of 12 and 18 through a lottery system to participate in the games. The tributes are chosen during the annual Reaping and are forced to fight to the death, leaving only one survivor to claim victory. When 16-year-old Katniss young sister, Prim, is selected as District 12 female representative, Katniss volunteers to take her place.'
+    'Winning will make you famous. Losing means certain death.
+    The nation of Panem, formed from a post-apocalyptic North
+    America, is a country that consists of a wealthy Capitol
+    region surrounded by 12 poorer districts. Early in its
+    history, a rebellion led by a 13th district against the
+    Capitol resulted in its destruction and the creation of an
+    annual televised event known as the Hunger Games. In
+    punishment, and as a reminder of the power and grace of the
+    Capitol, each district must yield one boy and one girl
+    between the ages of 12 and 18 through a lottery system to
+    participate in the games. The tributes are chosen during the
+    annual Reaping and are forced to fight to the death, leaving
+    only one survivor to claim victory. When 16-year-old Katniss
+    young sister, Prim, is selected as District 12 female
+    representative, Katniss volunteers to take her place.'
 };
 ```
 
