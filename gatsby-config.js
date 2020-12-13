@@ -24,7 +24,13 @@ module.exports = {
         background_color: 'white',
         theme_color: '#8B5CF6',
         display: 'minimal-ui',
-        icon: `static/avatar.jpg`
+        icons: [
+          {
+            src: `/static/avatar-copy.png`,
+            sizes: `512x512`,
+            type: `image/png`
+          }
+        ]
       }
     },
     {
