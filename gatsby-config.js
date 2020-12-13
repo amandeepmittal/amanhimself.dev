@@ -24,7 +24,7 @@ module.exports = {
         background_color: 'white',
         theme_color: '#8B5CF6',
         display: 'minimal-ui',
-        icon: `content/assets/avatar.jpg`
+        icon: `static/avatar.jpg`
       }
     },
     {
