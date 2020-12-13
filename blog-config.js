@@ -1,4 +1,6 @@
 export const BlogConfig = {
+  siteUrl: 'https://amanhimself.dev',
+  description: 'Software engineer and technical writer.',
   username: 'Aman Mittal',
   shortname: '@amanhimself',
   newsletter: 'https://amanhimself.substack.com/',

@@ -1,5 +1,5 @@
 module.exports = {
-  purge: ['./pages/**/*.{js,jsx}', './components/**/*.{js,jsx}'],
+  purge: ['./src/**/*.js', './src/**/*.jsx', './src/**/*.ts', './src/**/*.tsx'],
   darkMode: false, // or 'media' or 'class'
   theme: {
     typography: theme => ({
@@ -57,6 +57,17 @@ module.exports = {
           700: '#75112C',
           800: '#580D21',
           900: '#3B0816'
+        },
+        github: {
+          100: '#E9EAEA',
+          200: '#C9CACB',
+          300: '#A8AAAB',
+          400: '#666A6D',
+          500: '#252A2E',
+          600: '#212629',
+          700: '#16191C',
+          800: '#111315',
+          900: '#0B0D0E'
         }
       }
     }

@@ -7,15 +7,14 @@ A [personal website](https://amanhimself.dev/) where I keep:
 - information about myself
 - blog posts
 
-I have written for over 25+ tech publications and over 150+ posts. This website is an alternate platform to the collection of the blog posts and tutorials I have written so far.
+I have written for over 20+ tech publications and over 150+ posts. This website is an alternate platform to the collection of the blog posts and tutorials I have written so far.
 
 ## Uses
 
-- This website is built using [Next.js](https://nextjs.org/)
-- Posts in [MDX](https://mdxjs.com/)
+- This website is built using [Gatsbyjs](https://www.gatsbyjs.com/)
+- Posts in Markdown.
 - Icons from [react-icons](https://react-icons.github.io/react-icons/)
-- Code theme from Prismjs/Dracula
-- UI React based components from [Chakra UI](https://chakra-ui.com) & [Tailwind CSS](https://tailwindcss.com/)
+- UI React based components using [Tailwind CSS](https://tailwindcss.com/)
 - Progress bar from [scrollProgress](https://github.com/jeremenichelli/scrollProgress) light-weight library. Thanks to Jeremias Menichelli for making it open-source.
 
 ## License
