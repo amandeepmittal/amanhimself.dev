@@ -398,9 +398,10 @@ _Congratulations!_ You have reached the end of the tutorial.
 
 I hope this post does convey you to try the capabilities of HarperDB. I personally like how it support both SQL and NoSQL queries as well as some advanced features like adding timestamps automatically and hashing unique ids in a consistent way across all data tables and schemas.
 
-**Resources:**
+**Resources & Further Reading:**
 
 - [Official API reference](https://docs.harperdb.io/?version=latest#adfe7be6-31b6-4f58-9155-e880d4114855)
 - [Are hash attributes case sensitive in HarperDB?](https://harperdbhelp.zendesk.com/hc/en-us/articles/115003081994-Are-Hash-Attributes-Case-Sensitive-)
 - [HarperDB SQL Guide](https://harperdbhelp.zendesk.com/hc/en-us/articles/115002146754-HarperDB-SQL-Guide)
 - [Harperive](https://github.com/chandan-24/Harperive)
+- If you are looking to learn more about creating REST APIs with Node.js and MySQL, checkout [Geshan Manandhar's post here](https://geshan.com.np/blog/2020/11/nodejs-mysql-tutorial/).
