@@ -404,4 +404,4 @@ I hope this post does convey you to try the capabilities of HarperDB. I personal
 - [Are hash attributes case sensitive in HarperDB?](https://harperdbhelp.zendesk.com/hc/en-us/articles/115003081994-Are-Hash-Attributes-Case-Sensitive-)
 - [HarperDB SQL Guide](https://harperdbhelp.zendesk.com/hc/en-us/articles/115002146754-HarperDB-SQL-Guide)
 - [Harperive](https://github.com/chandan-24/Harperive)
-- If you are looking to learn more about creating REST APIs with Node.js and MySQL, checkout [Geshan Manandhar's post here](https://geshan.com.np/blog/2020/11/nodejs-mysql-tutorial/).
+- If you are looking to learn more about creating [REST APIs with Node.js and MySQL, checkout post the here](https://geshan.com.np/blog/2020/11/nodejs-mysql-tutorial/).
