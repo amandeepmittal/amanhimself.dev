@@ -273,3 +273,7 @@ You can see this in action below.
 - You can find the complete code for the example at [this Expo Snack](https://snack.expo.io/@amanhimself/38e20d).
 - [Originally published at Level up coding on January 14, 2019.](https://levelup.gitconnected.com/styling-the-react-native-way-3cc6d3ef52d0)
 - A big thank you to [Catalin Miron](https://twitter.com/mironcatalin) for proof reading it 🤗
+
+**Resources & Further Reading:**
+
+- If you are looking for some insight on how to hire a React Native dev, Toptal.com has an [awesome guide here](https://www.toptal.com/react-native#hiring-guide).
