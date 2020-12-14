@@ -11,10 +11,10 @@ I have written for over 20+ tech publications and over 150+ posts. This website 
 
 ## Uses
 
-- This website is built using [Gatsbyjs](https://www.gatsbyjs.com/)
+- This website is built using [Gatsbyjs](https://www.gatsbyjs.com/).
 - Posts in Markdown.
-- Icons from [react-icons](https://react-icons.github.io/react-icons/)
-- UI React based components using [Tailwind CSS](https://tailwindcss.com/)
+- Icons from [react-icons](https://react-icons.github.io/react-icons/).
+- UI React based components using [Tailwind CSS](https://tailwindcss.com/).
 - Progress bar from [scrollProgress](https://github.com/jeremenichelli/scrollProgress) light-weight library. Thanks to Jeremias Menichelli for making it open-source.
 
 ## License
