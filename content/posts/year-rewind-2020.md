@@ -98,6 +98,12 @@ In 2019, I made 939 commits. What changed this year? I started using GitHub at m
 
 ![ss3](https://i.imgur.com/nGRynbX.png)
 
+### Highlights from my GitHub 🙀
+
+I have also started maintaining [one single GitHub repo](https://github.com/amandeepmittal/react-native-examples) for all the demos and examples I write using React Native and Expo blog posts.
+
+Continued to maintain the [expo-community project on integrating Firebase SDK in an Expo app](https://github.com/expo-community/expo-firebase-starter), thanks to my friend [Cedric](https://github.com/byCedric) and awesome people at Expo. I have seen it was helpful to some folks as they were getting started with Expo and Firebase. Will try continue maintaining it over the next and year include more Expo related stuff.
+
 ## Newsletter saga continues 💌
 
 I run [a weekly newsletter](https://amanhimself.substack.com/) that is of late, has become a bi-weekly newsletter due to my inconsistency of publishing blog posts. I don't send out newsletters when I don't have anything to share in terms of blog articles or tutorials. I don't like getting spam and I don't want to spam anyone. I started taking sending out newsletters seriously in 2019 and at the end of that year, I had [845 subscribers](https://twitter.com/amanhimself/status/1201933182070874112). This year, it did manage to grow to 1201 subscribers. I did not count how many newsletters in total I send out and now it's too late.
