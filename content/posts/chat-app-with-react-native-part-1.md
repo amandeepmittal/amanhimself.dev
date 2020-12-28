@@ -520,7 +520,7 @@ You can find the complete source code for this project at [this Github repo](htt
 💙 To learn more about React Native, check out these resources:
 
 - [Official documentation](http://reactnative.dev/)
-- [My personal newsletter](https://amanhimself.substack.com/)
+- [React - Separation of Concerns by Andrei Calazans](https://docs.google.com/document/d/1mD38sy0OKTkKsa4Nughxuzkb12i8BzUaaOiXCjDZfpg/edit)
 
 ---
 
