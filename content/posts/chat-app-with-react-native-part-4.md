@@ -573,8 +573,6 @@ On the current screen you might see a loading indicator when you refresh the app
 
 ![ss14](https://miro.medium.com/max/684/1*Ztwt_qL30dreUv_JMvhhwg.gif)
 
----
-
 ## What's Next?
 
 In [part 5 of this series](https://amanhimself.dev/blog/chat-app-with-react-native-part-5), we are going to create messages in real-time using the Firestore database. We will be covering how using react-navigation you can get the current room's id. Then, use it with the current user from the `AuthContext` we created earlier, to add real-time message information such as a text field and a timestamp associated with it.
@@ -589,5 +587,11 @@ You can find the complete source code for this project at [this Github repo](htt
 
 - [React Native Gifted Chat module](https://github.com/FaridSafi/react-native-gifted-chat)
 - [Props available for `react-native-gifted-chat`](https://github.com/FaridSafi/react-native-gifted-chat#props)
+
+## Further Reading
+
+- [React - Separation of Concerns by Andrei Calazans](https://docs.google.com/document/d/1mD38sy0OKTkKsa4Nughxuzkb12i8BzUaaOiXCjDZfpg/edit)
+
+---
 
 [Originally Published at Heartbeat.Fritz.ai](https://heartbeat.fritz.ai/chat-app-with-react-native-part-4-create-chat-ui-screens-with-react-native-gifted-chat-7ef428a60d30)
