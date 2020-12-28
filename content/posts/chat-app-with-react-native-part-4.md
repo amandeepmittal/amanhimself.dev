@@ -590,7 +590,7 @@ You can find the complete source code for this project at [this Github repo](htt
 
 ## Further Reading
 
-- [React - Separation of Concerns by Andrei Calazans](https://docs.google.com/document/d/1mD38sy0OKTkKsa4Nughxuzkb12i8BzUaaOiXCjDZfpg/edit)
+- [React - Separation of Concerns by Andrei Calazans](https://www.g2i.co/blog/react-separation-of-concerns)
 
 ---
 
