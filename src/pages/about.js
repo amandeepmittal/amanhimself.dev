@@ -37,7 +37,7 @@ const About = () => {
             </picture>
             <p className='text-lg text-gray-600 my-4'>
               Hi, I'm Aman. I currently live in New Delhi, India and I'm
-              currently working as an independent contract developer and a
+              currently working as an independent fullstack developer and a
               part-time technical writer. I've a background in Computer Science
               and since 2017 I've been working as a professional with various
               web and mobile technologies such as Node.js, React, React Native
