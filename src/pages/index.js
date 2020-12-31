@@ -80,7 +80,7 @@ const IndexPage = ({ data, ...props }) => {
             href='https://www.youtube.com/watch?v=YIRxTUCY0NQ'
             icon={<SiHashnode />}
           />
-          <Heading size='h3'>Guest Podcast Appearance & Interviews</Heading>
+          <Heading size='h3'>Guest Podcast Appearances & Interviews</Heading>
           <ProjectCard
             title='React Round Up 006'
             description='Setting Up and Getting Used to Gatsby with Charles Max Wood, Cory House, Tara Manicsic and Kent C Dodds'
@@ -97,8 +97,8 @@ const IndexPage = ({ data, ...props }) => {
           <ul className='text-lg text-gray-900 list-disc'>
             <li>Computer: MacBook Air 2017</li>
             <li>Editor: Visual Studio Code</li>
-            <li>Static Site Generator: Next.js</li>
-            <li>Syntax Highlighting: Prismjs</li>
+            <li>Static Site Generator: Gatsbyjs</li>
+            {/* <li>Syntax Highlighting: Prismjs</li> */}
             <li>Code Syntax Theme: fairyFloss, Morgan.codes</li>
             <li>Terminal: iTerm with ZSH shell</li>
             <li>Manage Blog posts pipeline: Notion</li>
