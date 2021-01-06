@@ -1,5 +1,5 @@
 ---
-title: 'How to add an app icon in a React native Android app'
+title: 'How to add an app icon in a React Native Android app'
 slug: 'blog/app-icon-react-native-android'
 date: 2021-01-06
 template: post
