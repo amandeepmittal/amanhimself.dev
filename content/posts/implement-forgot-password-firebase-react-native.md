@@ -293,3 +293,7 @@ I hope any of the codebase used in this tutorial helps you. To find the complete
 ---
 
 Originally published at [Heartbeat.Fritz.ai](https://heartbeat.fritz.ai/how-to-implement-forgot-password-feature-in-react-native-and-firebase-app-890b572d9759)
+
+## Further reading
+
+- [Hiring a React Native Developer: What Should You Look For? by Jess Marranco](https://www.g2i.co/blog/hiring-a-react-native-developer)
