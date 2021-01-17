@@ -95,7 +95,7 @@ const IndexPage = ({ data, ...props }) => {
           />
           <Heading size='h3'>Currently Using</Heading>
           <ul className='text-lg text-gray-900 list-disc'>
-            <li>Computer: MacBook Air 2017</li>
+            <li>Computer: MacBook Pro 2020</li>
             <li>Editor: Visual Studio Code</li>
             <li>Static Site Generator: Gatsbyjs</li>
             {/* <li>Syntax Highlighting: Prismjs</li> */}
