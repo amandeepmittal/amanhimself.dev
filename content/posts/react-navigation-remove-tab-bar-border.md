@@ -13,7 +13,7 @@ tags:
 
 Navigation plays an important role in mobile applications and the React Navigation library does an awesome job in providing a completely customizable interface for utilizing different navigation patterns to React Native apps.
 
-Having the liberty to customize tab bars with React Navigation, one of my favorite customizable options (depending on the UI design of an app) is to remove the border from the Tab bar.
+Having the liberty to customize tab bars with React Navigation, one customizable option available (depending on the UI design of an app) is to remove the border from the Tab bar.
 
 Here is an example of the border that is the default when the React Navigation Bottom Tabs library is utilized to create a tab bar.
 

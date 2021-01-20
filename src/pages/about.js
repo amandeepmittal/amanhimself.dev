@@ -90,7 +90,7 @@ const About = () => {
                 className='underline text-purple-600 hover:no-underline'
                 to={BlogConfig.instagram}
               >
-                taveling
+                traveling
               </Link>
               .
             </p>
