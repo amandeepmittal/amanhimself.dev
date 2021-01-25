@@ -10,6 +10,8 @@ tags:
 
 ![cover](https://i.imgur.com/hJ7W51N.jpg)
 
+[**I made updates to this post here**](https://amanhimself.dev/blog/setup-macbook-m1/) **with additions to setup a new Macbook Pro based on M1 chips!**
+
 Recently, I was at the Boryspil Airport in Ukraine, working on a blog article, when suddenly my VS Code stopped working. It actually crashed! Not once, but twice in less than 30 minutes. Some of the content was autosaved, but some of it was gone forever.
 
 I was frustrated at first as to why it had to crash at that moment. After re-opening the editor, I was angry with myself because I had to write some of the stuff that didn’t get saved again.
