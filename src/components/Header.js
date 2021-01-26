@@ -48,6 +48,12 @@ const Header = () => {
           >
             Newsletter
           </NavLink>
+          <NavLink
+            to='/sponsor'
+            className='relative hover:bg-purple-200 rounded-md p-2'
+          >
+            Sponsorship
+          </NavLink>
           {/* <NavLink
             to={BlogConfig.kofi}
             className="relative hover:bg-purple-200 rounded-md p-2">
