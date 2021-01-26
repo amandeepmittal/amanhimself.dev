@@ -364,8 +364,6 @@ If you have a side project that uses GatsbyJS, chances are you are going to face
 
 That’s the setup I now use for my JavaScript, Node.js, React and React Native. I think it's a good machine. Hopefully, M1 is just the beginning of a new era of powerful computers for daily use.
 
-🤔 The only thing left for me is to find a way to transfer all laptop swag/stickers from my Macbook Air to Pro. I miss having them on this one. For me they are memories, and experiences.
-
-🥲 If you know a way, please let me know!
+🤔 The only thing left for me is to find a way to transfer all laptop swag/stickers from my Macbook Air to Pro. I miss having them on this one.
 
 [**isapplesiliconready.com**](https://isapplesiliconready.com/for/developer) is another useful link I found sometime back to check what is compatible to work on Apple Silicon chips natively or using Rosetta or not optimized at all.
