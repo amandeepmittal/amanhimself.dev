@@ -118,8 +118,9 @@ const Sponsor = () => {
                   Your advertisement visible for one month (4 weeks)
                 </li>
                 <li className='text-gray-600 my-4'>
-                  An advertisement that appears on both in the newsletter and
-                  all 100+ blog posts for that week.
+                  An advertisement that appears on both in the newsletter (at
+                  least two newsletters are sent out every month) and all 100+
+                  blog posts for that month.
                 </li>
               </ul>
             </p>
