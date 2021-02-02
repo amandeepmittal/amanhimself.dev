@@ -132,7 +132,8 @@ const About = () => {
               </ul>
             </p>
             <p className='text-lg text-gray-600 my-4 w-full'>
-              Some of the notable publications I've written are:
+              Some of the notable publications and organizations I've worked
+              with are:
               <ul class='list-inside list-disc'>
                 <li>
                   <Link
@@ -188,6 +189,14 @@ const About = () => {
                     to='https://community.draftbit.com/u/amanhimself/activity/topics'
                   >
                     Draftbit
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className='underline text-purple-600 hover:no-underline'
+                    to='https://dzone.com/users/4503532/amanhimself.html'
+                  >
+                    Dzone
                   </Link>
                 </li>
               </ul>
