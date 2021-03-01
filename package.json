@@ -31,7 +31,7 @@
     "gatsby-transformer-sharp": "^2.8.0",
     "http-server": "^0.12.3",
     "postcss": "^8.2.1",
-    "prismjs": "^1.22.0",
+    "prismjs": "^1.23.0",
     "query-string": "^6.13.5",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
