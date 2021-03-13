@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
 
 import { Layout, SEO, PostInfo } from '../components';
-import { config } from '../helpers';
+import { config, slugify } from '../helpers';
 
 const Wrapper = styled.div`
   text-align: center;
@@ -32,9 +32,14 @@ const Wrapper = styled.div`
   }
 `;
 
+const AllTagsWrapper = styled.div`
+  margin-bottom: 2rem;
+`;
+
 const BlogPage = ({ data }) => {
   const allPosts = data.posts.nodes;
   const emptyQuery = '';
+  const allTags = data.posts.group;
 
   const [state, stateSet] = useState({
     filteredData: [],
@@ -80,6 +85,18 @@ const BlogPage = ({ data }) => {
           placeholder="Type to filter posts..."
           onChange={handleInputChange}
         />
+        <AllTagsWrapper>
+          {allTags.map(tag => {
+            return (
+              <Link
+                key={tag.fieldValue}
+                to={`/tags/${slugify(tag.fieldValue)}`}
+              >
+                #{tag.fieldValue} - {tag.totalCount} &nbsp;&nbsp;&nbsp;
+              </Link>
+            );
+          })}
+        </AllTagsWrapper>
         {posts.map(post => {
           return <PostInfo post={post} />;
         })}
@@ -110,6 +127,10 @@ export const blogPageQuery = graphql`
             }
           }
         }
+      }
+      group(field: frontmatter___tags) {
+        fieldValue
+        totalCount
       }
     }
   }
