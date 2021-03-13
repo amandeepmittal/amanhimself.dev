@@ -2,9 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import styled from 'styled-components';
+import { Helmet } from 'react-helmet';
 
 import { Layout, Now, SEO } from '../components';
 import { link } from '../styles/partials';
+import { config } from '../helpers';
 
 const ContactPageWrapper = styled.div`
   ${link}
@@ -25,6 +27,7 @@ const Contact = ({ data }) => {
 
   return (
     <Layout>
+      <Helmet title={`Contact | ${config.username}`} />
       <SEO />
       <ContactPageWrapper dangerouslySetInnerHTML={{ __html: html }} />
     </Layout>

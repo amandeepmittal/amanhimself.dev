@@ -1,8 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
+import { Helmet } from 'react-helmet';
 
 import { Layout, Now, SEO } from '../components';
+import { config } from '../helpers';
 
 const About = ({ data }) => {
   const { node } = data.nows.edges[0];
@@ -10,6 +12,7 @@ const About = ({ data }) => {
 
   return (
     <Layout>
+      <Helmet title={`About | ${config.username}`} />
       <SEO />
       <Now data={node} />
     </Layout>

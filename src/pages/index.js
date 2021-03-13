@@ -1,8 +1,10 @@
 import * as React from 'react';
 import { graphql } from 'gatsby';
 import styled from 'styled-components';
+import { Helmet } from 'react-helmet';
 
 import { Layout, Hero, SEO, PostInfo, InfoCard } from '../components';
+import { config } from '../helpers';
 
 const CenterEverything = styled.div`
   text-align: center;
@@ -12,6 +14,7 @@ const IndexPage = ({ data }) => {
   const posts = data.posts.nodes;
   return (
     <Layout>
+      <Helmet title={`Home | ${config.username}`} />
       <SEO />
       <Hero />
       <div>
