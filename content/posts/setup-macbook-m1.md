@@ -1,7 +1,7 @@
 ---
 title: 'Setup Macbook M1 for Web and React Native development'
 slug: 'blog/setup-macbook-m1'
-date: 2021-01-25
+date: 2021-03-14
 thumbnail: '../thumbnails/vscode.png'
 template: post
 tags:
@@ -211,7 +211,9 @@ After installing the syntax highlight plugin, it starts to recognize the command
 
 ## VSCode
 
-VSCode does not have native M1 support yet. However, VS Code Insiders edition does support ARM chips. Download the installer from [here](https://code.visualstudio.com/insiders/).
+~~VSCode does not have native M1 support yet.~~
+
+VSCode and VS Code Insiders edition both support ARM chips now (as of March, 13, 2021). Download the installer for Insiders edition from [here](https://code.visualstudio.com/insiders/) and for VSCode [here](https://code.visualstudio.com/download).
 
 ![ss5](https://i.imgur.com/Yd4wQ10.png)
 
