@@ -5,7 +5,7 @@ date: 2020-10-01
 template: post
 thumbnail: '../thumbnails/expo.png'
 tags:
-  - react-native
+  - expo
   - animation
 ---
 

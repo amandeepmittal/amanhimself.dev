@@ -9,14 +9,6 @@ A [personal website](https://amanhimself.dev/) where I keep:
 
 I have written for over 20+ tech publications and over 150+ posts. This website is an alternate platform to the collection of the blog posts and tutorials I have written so far.
 
-## Uses
-
-- This website is built using [Gatsbyjs](https://www.gatsbyjs.com/).
-- Posts in Markdown.
-- Icons from [react-icons](https://react-icons.github.io/react-icons/).
-- UI React based components using [Tailwind CSS](https://tailwindcss.com/).
-- Progress bar from [scrollProgress](https://github.com/jeremenichelli/scrollProgress) light-weight library. Thanks to Jeremias Menichelli for making it open-source.
-
 ## License
 
 Copyright (c) 2019 - Present Aman Mittal

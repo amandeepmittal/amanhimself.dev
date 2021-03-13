@@ -1,147 +1,155 @@
 import React from 'react';
-import { graphql } from 'gatsby';
-import Helmet from 'react-helmet';
-import Img from 'gatsby-image';
+import { Helmet } from 'react-helmet';
+import { graphql, Link } from 'gatsby';
+import styled from 'styled-components';
 
-import Layout from '../components/Layout';
-import Suggested from '../components/Suggested';
-import SEO from '../components/SEO';
-import config from '../utils/config';
-import Container from '../components/Container';
-import Heading from '../components/Heading';
-import TWBlogFooterBanner from '../components/TWBlogFooterBanner';
-import ReadingProgress from '../components/ReadingProgress';
-import TWButton from '../components/TWButton';
-import CustomTags from '../components/CustomTags';
+import { Layout, SEO, LinkButton } from '../components';
+import { config, slugify } from '../helpers';
+import { link } from '../styles/partials';
+import banner from '../images/dev-apis-banner.png';
 
-export default function PostTemplate({ data, pageContext }) {
+const PostWrapper = styled.article`
+  overflow: auto;
+`;
+
+const PostTitleWrapper = styled.div`
+  h1 {
+    margin: 0rem;
+    font-size: 2.5rem;
+    line-height: 1.1;
+    @media (max-width: 750px) {
+      font-size: 1.75rem;
+      line-height: 1.3;
+    }
+  }
+  a {
+    color: ${({ theme }) => theme.colors.black};
+    &:hover {
+      color: ${({ theme }) => theme.colors.primary};
+    }
+  }
+`;
+
+const PostMetaWrapper = styled.div`
+  margin-top: 0.5rem;
+  p {
+    margin: 0rem;
+    color: rgba(0, 0, 0, 0.8);
+  }
+`;
+
+const PostBodyWrapper = styled.section`
+  margin: 2.25rem 0rem;
+  ${link}
+  .twitter-tweet {
+    margin: 0 auto;
+  }
+`;
+
+const PostFooterWrapper = styled.section`
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-between;
+  margin-top: 0.75rem;
+`;
+
+const PostTemplate = ({ data, pageContext }) => {
   const post = data.markdownRemark;
   const { previous, next } = pageContext;
-  const { tags, thumbnail, slug, title, date } = post.frontmatter;
 
-  console.log({ slug });
+  const { slug, title, date, tags } = post.frontmatter;
 
-  const shareOnTwitter = (slug, title) =>
-    `http://twitter.com/share?text=${encodeURIComponent(
-      title
-    )}&url=https://amanhimself.dev/${slug}/&via=amanhimself`;
-
-  const handleSocialShare = React.useCallback(
-    (url, name, windowSize) => e => {
-      e.preventDefault();
-      window.open(url, name, windowSize);
-    },
-    []
-  );
+  const sponsoredLink = 'https://nocodeapi.com/devapis';
 
   return (
     <Layout>
       <Helmet title={`${post.frontmatter.title} by ${config.siteTitle}`} />
       <SEO postPath={`blog/${post.fields.slug}`} postNode={post} postSEO />
-      <ReadingProgress />
-      <Container as='main' className='md:px-4 space-y-14'>
-        <article className='relative flex flex-col md:px-4 xl:grid xl:grid-cols-4 xl:col-gap-6'>
-          <div className='pb-4 md:mr-8 xl:pb-0 xl:mb-8 xl:col-span-3'>
-            <Heading noMargin>{title}</Heading>
-          </div>
-          <div className='order-1 space-y-8 md:mr-8 xl:order-none xl:col-span-3'>
-            {/* <img src={frontMatter.image} /> */}
-            <div
-              className='flex flex-col markdown'
-              dangerouslySetInnerHTML={{ __html: post.html }}
-            />
-            <TWBlogFooterBanner />
-          </div>
-          <aside className='pb-10'>
-            <div className='sticky top-0 flex flex-col items-start pt-4 border-t border-gray-200 xl:pl-4 sm:flex-row xl:border-l xl:border-t-0 xl:space-y-8 xl:block'>
-              <Img fixed={thumbnail.childImageSharp.fixed} objectFit='cover' />
-              <div className='flex flex-wrap xl:block xl:space-y-8'>
-                <dl className='p-2 mt-4 mr-8 xl:mt-0 xl:mr-0'>
-                  <dt className='font-semibold font-source-sans-pro'>
-                    Published on
-                  </dt>
-                  <dd className='text-base font-medium leading-6 text-time'>
-                    {date}
-                  </dd>
-                </dl>
-                {/* <dl className="mt-4 md:mr-8 xl:mt-0 xl:mr-0">
-                  <dt className="font-semibold font-source-sans-pro">
-                    Word Count
-                  </dt>
-                  <dd className="text-base font-medium leading-6 text-time">
-                    {frontMatter.wordCount} words
-                  </dd>
-                </dl> */}
-                <dl className='p-2 w-full mt-4 md:mr-8 md:w-auto xl:mt-0 xl:mr-0'>
-                  <dt className='font-semibold font-source-sans-pro'>Tags</dt>
-                  <dd className='text-base font-medium leading-6 text-time'>
-                    <CustomTags tags={tags} />
-                    {/* {tags && (
-                      <div className='tags'>
-                        {tags.map(tag => (
-                          <Link
-                            key={tag}
-                            to={`/tags/${slugify(tag)}`}
-                            className={`tag-${tag}`}
-                          >
-                            {tag}
-                          </Link>
-                        ))}
-                      </div>
-                    )} */}
-                  </dd>
-                </dl>
-                <dl className='w-full mt-4 lg:mr-8 sm:mt-2 xl:space-y-2 xl:mt-0 xl:mr-0'>
-                  <dd className='mt-2 text-base font-medium leading-6 xl:mt-0 text-time'>
-                    <ul className='space-y-2 sm:items-start sm:space-x-2 sm:space-y-0 xl:space-y-2 sm:flex xl:space-x-0 xl:block'>
-                      <li className='w-full'>
-                        <TWButton
-                          onClick={handleSocialShare(
-                            shareOnTwitter(slug, title)
-                          )}
-                          variant='twitter'
-                        >
-                          Share on Twitter
-                        </TWButton>
-                      </li>
-                      <li className='w-full'>
-                        <TWButton
-                          onClick={handleSocialShare(
-                            `https://ko-fi.com/amanhimself`
-                          )}
-                          variant='coffee'
-                        >
-                          Buy me coffee
-                        </TWButton>
-                      </li>
-                      <li className='w-full'>
-                        <TWButton
-                          onClick={handleSocialShare(
-                            `https://amanhimself.substack.com/`
-                          )}
-                          variant='primary'
-                        >
-                          Join Newsletter
-                        </TWButton>
-                      </li>
-                      <li className='w-full'>
-                        <div>
-                          <Suggested previous={previous} next={next} />
-                        </div>
-                      </li>
-                    </ul>
-                  </dd>
-                </dl>
-              </div>
-            </div>
-          </aside>
-        </article>
-      </Container>
+      <PostWrapper>
+        {/* Post Header */}
+        <section>
+          {/* Post Title */}
+          <PostTitleWrapper>
+            <h1>{slug ? <Link to={`/blog/${slug}`}>{title}</Link> : title}</h1>
+          </PostTitleWrapper>
+          {/* Post Meta */}
+          <PostMetaWrapper>
+            <p>
+              Last published on {date} | Reading Time {post.timeToRead}mins
+            </p>
+            {tags.map(tag => (
+              <Link key={tag} to={`/tags/${slugify(tag)}`}>
+                #{tag}{' '}
+              </Link>
+            ))}
+          </PostMetaWrapper>
+        </section>
+        {/* Post Body */}
+        <PostBodyWrapper
+          dangerouslySetInnerHTML={{
+            __html: post.html
+          }}
+        />
+        {/* Post Footer */}
+        <PostFooterWrapper>
+          {previous && (
+            <LinkButton to={previous.fields.slug} rel="prev">
+              <span role="img" aria-label="left hand pointer emoji">
+                👈{' '}
+              </span>
+              Previous post
+            </LinkButton>
+          )}
+          <LinkButton to={config.kofi} rel="prev">
+            Buy me coffee{' '}
+            <span role="img" aria-label="coffee emoji">
+              ☕️{' '}
+            </span>
+          </LinkButton>
+          {next && (
+            <LinkButton to={next.fields.slug} rel="prev">
+              Next post{' '}
+              <span role="img" aria-label="right hand pointer emoji">
+                👉
+              </span>
+            </LinkButton>
+          )}
+        </PostFooterWrapper>
+        <PostFooterWrapper>
+          <LinkButton
+            to={`http://twitter.com/share?text=${encodeURIComponent(
+              title
+            )}&url=https://amanhimself.dev/${slug}/&via=amanhimself`}
+            rel="prev"
+          >
+            Share on Twitter{' '}
+            <span role="img" aria-label="bubble emoji">
+              💬{' '}
+            </span>
+          </LinkButton>
+          <LinkButton to={config.newsletter} rel="prev">
+            Join {config.subscribersCount} devs and receive free tutorials{' '}
+            <span role="img" aria-label="love letter emoji">
+              💌{' '}
+            </span>
+          </LinkButton>
+        </PostFooterWrapper>
+        <PostFooterWrapper>
+          <LinkButton to={sponsoredLink} rel="prev">
+            <strong>Sponsored Link:</strong> DEV APIs is a complete APIs suite
+            for your software development, and business to power-up. Click here{' '}
+            <span role="img" aria-label="down finger point emoji">
+              👇{' '}
+            </span>
+            <img src={banner} alt="sponsored link banner" />
+          </LinkButton>
+        </PostFooterWrapper>
+      </PostWrapper>
     </Layout>
   );
-}
+};
 
-export const pageQuery = graphql`
+export const postTemplateQuery = graphql`
   query BlogPostBySlug($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
@@ -149,19 +157,15 @@ export const pageQuery = graphql`
       fields {
         slug
       }
+      timeToRead
       frontmatter {
         title
         slug
         date(formatString: "MMMM DD, YYYY")
         tags
-        thumbnail {
-          childImageSharp {
-            fixed(width: 48, height: 48) {
-              ...GatsbyImageSharpFixed
-            }
-          }
-        }
       }
     }
   }
 `;
+
+export default PostTemplate;

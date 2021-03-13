@@ -1,30 +1,12 @@
-import React from 'react';
-import Helmet from 'react-helmet';
+import * as React from 'react';
 
-import Layout from '../components/Layout';
-import SEO from '../components/SEO';
-import { BlogConfig } from '../../blog-config';
-import Container from '../components/Container';
+import { Layout, SEO } from '../components';
 
 const NotFoundPage = () => (
   <Layout>
-    <Helmet
-      title='404: Not found'
-      links={[
-        {
-          rel: 'canonical',
-          href: BlogConfig.siteUrl
-        }
-      ]}
-    />
     <SEO />
-    <Container as='main' noMargin className='md:px-4 space-y-14'>
-      <div className='flex flex-col max-w-screen-lg mx-8 items-center justify-center'>
-        <p className='text-lg text-gray-600 my-4'>
-          &#128517; I've yet to write the post you're looking for.
-        </p>
-      </div>
-    </Container>
+    <h1>404: Not Found</h1>
+    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
   </Layout>
 );
 

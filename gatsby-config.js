@@ -1,37 +1,129 @@
 module.exports = {
   siteMetadata: {
     title: `Aman Mittal`,
-    author: {
-      name: 'Aman Mittal'
-    },
-    pathPrefix: '/',
-    siteUrl: 'https://amanhimself.dev',
-    description: 'Software engineer and technical writer.'
+    author: `Aman Mittal`,
+    description: `Software engineer and technical writer.`,
+    siteUrl: `https://amanhimself.dev`,
+    pathPrefix: `/`,
+    keywords: ['gatsby', 'react', 'scss', 'amanhimself', 'blog', 'portfolio'],
+    email: `amanmittal.work@gmail.com`,
+    twitter: `@amanhimself`,
+    siteLanguage: `en-GB`,
+    siteLocale: `en_gb`
   },
   plugins: [
-    // ===================================================================================
-    // Meta
-    // ===================================================================================
-    'gatsby-plugin-postcss',
-    'gatsby-plugin-react-helmet',
-    'gatsby-plugin-netlify',
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-image`,
+    `gatsby-plugin-styled-components`,
     {
-      resolve: 'gatsby-plugin-manifest',
+      resolve: `gatsby-plugin-web-font-loader`,
       options: {
-        name: 'Aman Mittal',
-        short_name: 'Aman Mittal',
-        description: 'Software engineer and technical writer.',
-        start_url: '/',
-        background_color: 'white',
-        theme_color: '#8B5CF6',
-        display: 'minimal-ui',
-        icons: [
+        google: {
+          families: [
+            `Righteous:400`,
+            `Montserrat:400,500,600,700,800,900`,
+            `Open Sans:400,500,600,700,800,900`
+          ]
+        }
+      }
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `posts`,
+        path: `${__dirname}/content/`
+      }
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images`
+      }
+    },
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    {
+      resolve: 'gatsby-transformer-remark',
+      options: {
+        plugins: [
           {
-            src: `/static/avatar-copy.png`,
-            sizes: `512x512`,
-            type: `image/png`
+            resolve: 'gatsby-remark-images',
+            options: {
+              maxWidth: 700
+            }
+          },
+          {
+            resolve: 'gatsby-remark-autolink-headers',
+            options: {
+              maintainCase: false,
+              removeAccents: true
+            }
+          },
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              classPrefix: 'language-',
+              inlineCodeMarker: null,
+              aliases: {},
+              showLineNumbers: false,
+              noInlineHighlight: false,
+              languageExtensions: [
+                {
+                  language: 'superscript',
+                  extend: 'javascript',
+                  definition: {
+                    superscript_types: /(SuperType)/
+                  },
+                  insertBefore: {
+                    function: {
+                      superscript_keywords: /(superif|superelse)/
+                    }
+                  }
+                }
+              ],
+              prompt: {
+                user: 'root',
+                host: 'localhost',
+                global: false
+              },
+              escapeEntities: {}
+            }
+          },
+          // {
+          //   resolve: 'gatsby-remark-embedder',
+          //   options: {
+          //     customTransformers: [twitch, youtube]
+          //   }
+          // },
+          {
+            resolve: 'gatsby-remark-external-links',
+            options: {
+              rel: 'noopener noreferrer'
+            }
           }
         ]
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-google-gtag',
+      options: {
+        trackingIds: [
+          'UA-143759180-1' // Google Analytics / GA
+        ]
+      }
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: 'Aman Mittal',
+        short_name: '@amanhimself',
+        description: 'Software engineer and technical writer.',
+        start_url: `/`,
+        background_color: `#ffffff`,
+        theme_color: `#c792ea`,
+        display: `minimal-ui`,
+        icon: `src/images/avatar.jpg` // This path is relative to the root of the site.
       }
     },
     {
@@ -93,109 +185,9 @@ module.exports = {
         ]
       }
     },
-
-    // ===================================================================================
-    // Images and static
-    // ===================================================================================
-
-    'gatsby-plugin-sharp',
-    'gatsby-transformer-sharp',
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'posts',
-        path: `${__dirname}/content/`
-      }
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'assets',
-        path: `${__dirname}/static/`
-      }
-    },
-
-    // ===================================================================================
-    // Markdown
-    // ===================================================================================
-
-    {
-      resolve: 'gatsby-transformer-remark',
-      options: {
-        plugins: [
-          'gatsby-remark-autolink-headers',
-          {
-            resolve: 'gatsby-remark-images',
-            options: {
-              maxWidth: 650
-            }
-          },
-          {
-            resolve: 'gatsby-remark-prismjs',
-            options: {
-              classPrefix: 'language-',
-              inlineCodeMarker: null,
-              aliases: {},
-              showLineNumbers: false,
-              noInlineHighlight: false,
-              prompt: {
-                user: 'root',
-                host: 'localhost',
-                global: true
-              }
-            }
-          }
-        ]
-      }
-    },
-
-    // ===================================================================================
-    // Search
-    // ===================================================================================
-
-    {
-      resolve: 'gatsby-plugin-local-search',
-      options: {
-        name: 'pages',
-        engine: 'flexsearch',
-        engineOptions: 'speed',
-        query: `
-          {
-            allMarkdownRemark(filter: { frontmatter: { template: { eq: "post" } } }) {
-              nodes {
-                id
-                frontmatter {
-                  title
-                  tags
-                  slug
-                  date(formatString: "MMMM DD, YYYY")                  
-                }
-                rawMarkdownBody
-              }
-            }
-          }
-        `,
-        ref: 'id',
-        index: ['title', 'tags'],
-        store: ['id', 'slug', 'title', 'tags', 'date'],
-        normalizer: ({ data }) =>
-          data.allMarkdownRemark.nodes.map(node => ({
-            id: node.id,
-            slug: `/${node.frontmatter.slug}`,
-            title: node.frontmatter.title,
-            body: node.rawMarkdownBody,
-            tags: node.frontmatter.tags,
-            date: node.frontmatter.date
-          }))
-      }
-    },
-    {
-      resolve: 'gatsby-plugin-google-gtag',
-      options: {
-        trackingIds: [
-          'UA-143759180-1' // Google Analytics / GA
-        ]
-      }
-    }
+    `gatsby-plugin-gatsby-cloud`
+    // this (optional) plugin enables Progressive Web App + Offline functionality
+    // To learn more, visit: https://gatsby.dev/offline
+    // `gatsby-plugin-offline`,
   ]
 };

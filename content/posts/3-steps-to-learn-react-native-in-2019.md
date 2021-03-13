@@ -3,9 +3,9 @@ title: '3 Steps to learn React Native in 2019'
 slug: 'blog/3-steps-to-learn-react-native-in-2019'
 date: 2019-01-04
 template: post
-thumbnail: '../thumbnails/react.png'
 tags:
   - react-native
+thumbnail: '../thumbnails/react.png'
 ---
 
 ![cover_image](https://i.imgur.com/LUgTT2v.jpg)
