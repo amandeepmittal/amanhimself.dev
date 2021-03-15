@@ -6,6 +6,7 @@ slug: 'blog/how-to-use-emotion-js-with-react-native'
 thumbnail: '../thumbnails/expo.png'
 tags:
   - expo
+  - react-native
 ---
 
 ![cover](https://i.imgur.com/XYwv5Yp.png)

@@ -7,6 +7,7 @@ thumbnail: '../thumbnails/expo.png'
 tags:
   - expo
   - animation
+  - react-native
 ---
 
 ![cover_image](https://i.imgur.com/qDKlX8L.jpg)

@@ -6,6 +6,7 @@ thumbnail: '../thumbnails/expo.png'
 template: post
 tags:
   - expo
+  - react-native
 ---
 
 React Native is a great framework to develop cross-platform mobile applications for the platforms iOS and Android. In this, I am going to take you through the process of building a “minimalist” weather application using React Native by fetching real-time data. If you have never worked with React Native, you can use this walkthrough as kickstart in your journey of becoming a mobile application developer and will be a cool project for your portfolio.
@@ -216,7 +217,7 @@ const Weather = () => {
   return (
     <View style={styles.weatherContainer}>
       <View style={styles.headerContainer}>
-        <MaterialCommunityIcons size={48} name='weather-sunny' color={'#fff'} />
+        <MaterialCommunityIcons size={48} name="weather-sunny" color={'#fff'} />
         <Text style={styles.tempText}>Temperature˚</Text>
       </View>
       <View style={styles.bodyContainer}>
@@ -363,7 +364,7 @@ const Weather = ({ weather, temperature }) => {
   return (
     <View style={styles.weatherContainer}>
       <View style={styles.headerContainer}>
-        <MaterialCommunityIcons size={48} name='weather-sunny' color={'#fff'} />
+        <MaterialCommunityIcons size={48} name="weather-sunny" color={'#fff'} />
         <Text style={styles.tempText}>{temperature}˚</Text>
       </View>
       <View style={styles.bodyContainer}>

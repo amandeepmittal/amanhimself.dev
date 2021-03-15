@@ -7,6 +7,7 @@ thumbnail: '../thumbnails/expo.png'
 tags:
   - expo
   - firebase
+  - react-native
 ---
 
 ![cover](https://i.imgur.com/tEzuwkP.png)
@@ -430,38 +431,38 @@ class Login extends Component {
           }) => (
             <Fragment>
               <FormInput
-                name='email'
+                name="email"
                 value={values.email}
                 onChangeText={handleChange('email')}
-                placeholder='Enter email'
-                autoCapitalize='none'
-                iconName='ios-mail'
-                iconColor='#2C384A'
+                placeholder="Enter email"
+                autoCapitalize="none"
+                iconName="ios-mail"
+                iconColor="#2C384A"
                 onBlur={handleBlur('email')}
               />
               <ErrorMessage errorValue={touched.email && errors.email} />
               <FormInput
-                name='password'
+                name="password"
                 value={values.password}
                 onChangeText={handleChange('password')}
-                placeholder='Enter password'
+                placeholder="Enter password"
                 secureTextEntry={passwordVisibility}
-                iconName='ios-lock'
-                iconColor='#2C384A'
+                iconName="ios-lock"
+                iconColor="#2C384A"
                 onBlur={handleBlur('password')}
                 rightIcon={
                   <TouchableOpacity onPress={this.handlePasswordVisibility}>
-                    <Ionicons name={rightIcon} size={28} color='grey' />
+                    <Ionicons name={rightIcon} size={28} color="grey" />
                   </TouchableOpacity>
                 }
               />
               <ErrorMessage errorValue={touched.password && errors.password} />
               <View style={styles.buttonContainer}>
                 <FormButton
-                  buttonType='outline'
+                  buttonType="outline"
                   onPress={handleSubmit}
-                  title='LOGIN'
-                  buttonColor='#039BE5'
+                  title="LOGIN"
+                  buttonColor="#039BE5"
                   disabled={!isValid || isSubmitting}
                   loading={isSubmitting}
                 />
@@ -476,7 +477,7 @@ class Login extends Component {
           titleStyle={{
             color: '#F57C00'
           }}
-          type='clear'
+          type="clear"
         />
       </SafeAreaView>
     );
@@ -523,12 +524,12 @@ class Home extends Component {
       <View style={styles.container}>
         <Text>Home</Text>
         <Button
-          title='Signout'
+          title="Signout"
           onPress={this.handleSignout}
           titleStyle={{
             color: '#F57C00'
           }}
-          type='clear'
+          type="clear"
         />
       </View>
     );

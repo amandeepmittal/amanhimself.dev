@@ -6,7 +6,8 @@ template: post
 thumbnail: '../thumbnails/expo.png'
 tags:
   - expo
-  - navigation
+  - react-navigation
+  - react-native
 ---
 
 React Native has a component called `StatusBar` that is used to control the app status bar. Using the `react-navigation` library you might have a scenario where you don't have a header bar and on different screens, you would like to ensure the color of the status bar is correctly rendered. Such as on the light background, a dark status bar is displayed and on a darker background of the screen, a light status bar is displayed.
@@ -118,8 +119,8 @@ export default function AppTabs() {
           inactiveTintColor: 'gray'
         }}
       >
-        <Tabs.Screen name='Home' component={HomeScreen} />
-        <Tabs.Screen name='Settings' component={SettingsScreen} />
+        <Tabs.Screen name="Home" component={HomeScreen} />
+        <Tabs.Screen name="Settings" component={SettingsScreen} />
       </Tabs.Navigator>
     </NavigationContainer>
   );

@@ -6,6 +6,7 @@ image: 'blog/getting-started-with-react-native-expo-hooks-2020'
 thumbnail: '../thumbnails/expo.png'
 tags:
   - expo
+  - react-native
 ---
 
 ![cover](https://i.imgur.com/TWlrrL2.png)
@@ -299,8 +300,8 @@ function ViewNotes({ navigation }) {
       <FAB
         style={styles.fab}
         small
-        icon='plus'
-        label='Add new note'
+        icon="plus"
+        label="Add new note"
         onPress={() => navigation.navigate('AddNotes')}
       />
     </View>
@@ -399,7 +400,7 @@ import Header from '../components/Header';
 function ViewNotes({ navigation }) {
   return (
     <>
-      <Header titleText='Simple Note Taker' />
+      <Header titleText="Simple Note Taker" />
       <View style={styles.container}>
         <View style={styles.titleContainer}>
           <Text style={styles.title}>You do not have any notes</Text>
@@ -407,8 +408,8 @@ function ViewNotes({ navigation }) {
         <FAB
           style={styles.fab}
           small
-          icon='plus'
-          label='Add new note'
+          icon="plus"
+          label="Add new note"
           onPress={() => navigation.navigate('AddNotes')}
         />
       </View>
@@ -431,7 +432,7 @@ import Header from '../components/Header';
 function AddNotes() {
   return (
     <>
-      <Header titleText='Add a new note' />
+      <Header titleText="Add a new note" />
       <View style={styles.container}>
         <View style={styles.titleContainer}>
           <Text style={styles.title}>Add Notes modal screen</Text>
@@ -493,7 +494,7 @@ Next, modify the JSX of the `ViewNotes` component. Do take note that when naviga
 ```js
 return (
   <>
-    <Header titleText='Simple Note Taker' />
+    <Header titleText="Simple Note Taker" />
     <View style={styles.container}>
       {notes.length === 0 ? (
         <View style={styles.titleContainer}>
@@ -516,8 +517,8 @@ return (
       <FAB
         style={styles.fab}
         small
-        icon='plus'
-        label='Add new note'
+        icon="plus"
+        label="Add new note"
         // add a second parameter object
         onPress={() =>
           navigation.navigate('AddNote', {
@@ -584,37 +585,37 @@ function AddNote({ navigation }) {
   }
   return (
     <>
-      <Header titleText='Add a new note' />
+      <Header titleText="Add a new note" />
       <IconButton
-        icon='close'
+        icon="close"
         size={25}
-        color='white'
+        color="white"
         onPress={() => navigation.goBack()}
         style={styles.iconButton}
       />
       <View style={styles.container}>
         <TextInput
-          label='Add Title Here'
+          label="Add Title Here"
           value={noteTitle}
-          mode='outlined'
+          mode="outlined"
           onChangeText={setNoteTitle}
           style={styles.title}
         />
         <TextInput
-          label='Add Note Here'
+          label="Add Note Here"
           value={noteValue}
           onChangeText={setNoteValue}
-          mode='flat'
+          mode="flat"
           multiline={true}
           style={styles.text}
           scrollEnabled={true}
-          returnKeyType='done'
+          returnKeyType="done"
           blurOnSubmit={true}
         />
         <FAB
           style={styles.fab}
           small
-          icon='check'
+          icon="check"
           disabled={noteTitle == '' ? true : false}
           onPress={() => onSaveNote()}
         />

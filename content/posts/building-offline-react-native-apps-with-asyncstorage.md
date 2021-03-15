@@ -6,6 +6,7 @@ slug: 'blog/building-offline-react-native-apps-with-asyncstorage'
 thumbnail: '../thumbnails/expo.png'
 tags:
   - expo
+  - react-native
 ---
 
 ![cover](https://i.imgur.com/5eoYxcI.png)
@@ -379,12 +380,12 @@ import { Icon, Fab } from 'native-base';
 
 const FloatingButton = ({ actionOnPress }) => (
   <Fab
-    direction='up'
+    direction="up"
     style={styles.button}
-    position='bottomRight'
+    position="bottomRight"
     onPress={actionOnPress}
   >
-    <Icon name='ios-add' />
+    <Icon name="ios-add" />
   </Fab>
 );
 
@@ -841,9 +842,9 @@ export class AddTaskScreen extends Component {
             <Item>
               <Input
                 value={this.state.task}
-                placeholder='Enter a new task...'
+                placeholder="Enter a new task..."
                 autoFocus
-                clearButtonMode='always'
+                clearButtonMode="always"
                 autoCorrect={false}
                 onChange={this.onChangeText}
                 onSubmitEditing={this.onAddTask}
@@ -962,7 +963,7 @@ const Item = ({
         </Text>
       </View>
       <TouchableOpacity onPressOut={() => deleteTodo(id)}>
-        <Icon name='md-trash' style={{ color: '#ABADF9', paddingRight: 10 }} />
+        <Icon name="md-trash" style={{ color: '#ABADF9', paddingRight: 10 }} />
       </TouchableOpacity>
     </View>
   );

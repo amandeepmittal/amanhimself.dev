@@ -6,6 +6,7 @@ slug: 'blog/build-an-audio-player-in-react-native'
 thumbnail: '../thumbnails/expo.png'
 tags:
   - expo
+  - react-native
 ---
 
 ![cover_image](https://i.imgur.com/XFvTGys.jpg)
@@ -203,17 +204,17 @@ The next step is to modify the render function inside `App.js`. Inside the conta
   />
   <View style={styles.controls}>
     <TouchableOpacity style={styles.control} onPress={() => alert('')}>
-      <Ionicons name='ios-skip-backward' size={48} color='#444' />
+      <Ionicons name="ios-skip-backward" size={48} color="#444" />
     </TouchableOpacity>
     <TouchableOpacity style={styles.control} onPress={() => alert('')}>
       {this.state.isPlaying ? (
-        <Ionicons name='ios-pause' size={48} color='#444' />
+        <Ionicons name="ios-pause" size={48} color="#444" />
       ) : (
-        <Ionicons name='ios-play-circle' size={48} color='#444' />
+        <Ionicons name="ios-play-circle" size={48} color="#444" />
       )}
     </TouchableOpacity>
     <TouchableOpacity style={styles.control} onPress={() => alert('')}>
-      <Ionicons name='ios-skip-forward' size={48} color='#444' />
+      <Ionicons name="ios-skip-forward" size={48} color="#444" />
     </TouchableOpacity>
   </View>
 </View>

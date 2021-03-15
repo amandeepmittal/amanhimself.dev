@@ -6,6 +6,7 @@ slug: 'blog/creating-and-validating-react-native-form-with-formik'
 thumbnail: '../thumbnails/expo.png'
 tags:
   - expo
+  - react-native
 ---
 
 ![cover](https://i.imgur.com/Qg4x9He.jpg)
@@ -115,8 +116,8 @@ export default function TextInput({ icon, ...otherProps }) {
       </View>
       <View style={{ flex: 1 }}>
         <RNTextInput
-          underlineColorAndroid='transparent'
-          placeholderTextColor='rgba(34, 62, 75, 0.7)'
+          underlineColorAndroid="transparent"
+          placeholderTextColor="rgba(34, 62, 75, 0.7)"
           {...otherProps}
         />
       </View>
@@ -164,29 +165,29 @@ export default function Login() {
       </Text>
       <View style={{ paddingHorizontal: 32, marginBottom: 16, width: '100%' }}>
         <TextInput
-          icon='mail'
-          placeholder='Enter your email'
-          autoCapitalize='none'
-          autoCompleteType='email'
-          keyboardType='email-address'
-          keyboardAppearance='dark'
-          returnKeyType='next'
-          returnKeyLabel='next'
+          icon="mail"
+          placeholder="Enter your email"
+          autoCapitalize="none"
+          autoCompleteType="email"
+          keyboardType="email-address"
+          keyboardAppearance="dark"
+          returnKeyType="next"
+          returnKeyLabel="next"
         />
       </View>
       <View style={{ paddingHorizontal: 32, marginBottom: 16, width: '100%' }}>
         <TextInput
-          icon='key'
-          placeholder='Enter your password'
+          icon="key"
+          placeholder="Enter your password"
           secureTextEntry
-          autoCompleteType='password'
-          autoCapitalize='none'
-          keyboardAppearance='dark'
-          returnKeyType='go'
-          returnKeyLabel='go'
+          autoCompleteType="password"
+          autoCapitalize="none"
+          keyboardAppearance="dark"
+          returnKeyType="go"
+          returnKeyLabel="go"
         />
       </View>
-      <Button label='Login' onPress={() => true} />
+      <Button label="Login" onPress={() => true} />
     </View>
   );
 }
@@ -418,8 +419,8 @@ const TextInput = forwardRef(({ icon, error, touched, ...otherProps }, ref) => {
       </View>
       <View style={{ flex: 1 }}>
         <RNTextInput
-          underlineColorAndroid='transparent'
-          placeholderTextColor='rgba(34, 62, 75, 0.7)'
+          underlineColorAndroid="transparent"
+          placeholderTextColor="rgba(34, 62, 75, 0.7)"
           ref={ref}
           {...otherProps}
         />

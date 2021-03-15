@@ -7,6 +7,7 @@ thumbnail: '../thumbnails/expo.png'
 tags:
   - expo
   - firebase
+  - react-native
 ---
 
 In some of the previous posts, you built a React Native app using Firebase as the backend service provider for Email authentication and storing user's data upon successful sign-up.
@@ -96,12 +97,12 @@ Next, add the a `Button` component after the `Signup` button. The value of the `
 
 ```js
 <Button
-  title='Forgot Password?'
+  title="Forgot Password?"
   onPress={this.goToForgotPassword}
   titleStyle={{
     color: '#039BE5'
   }}
-  type='clear'
+  type="clear"
 />
 ```
 

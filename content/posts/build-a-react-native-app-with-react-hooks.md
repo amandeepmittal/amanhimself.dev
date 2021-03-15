@@ -6,6 +6,7 @@ slug: 'blog/build-a-react-native-app-with-react-hooks'
 thumbnail: '../thumbnails/expo.png'
 tags:
   - expo
+  - react-native
 ---
 
 ![cover_image](https://i.imgur.com/5QMLIPd.png)
@@ -95,9 +96,9 @@ export default function App() {
       <Text>You clicked {count} times.</Text>
       <Button
         onPress={() => setCount(count + 1)}
-        title='Click me'
-        color='red'
-        accessibilityLabel='Click this button to increase count'
+        title="Click me"
+        color="red"
+        accessibilityLabel="Click this button to increase count"
       />
     </View>
   );
@@ -162,9 +163,9 @@ export default function App() {
       <Text>You clicked {count} times.</Text>
       <Button
         onPress={buttonClickHandler}
-        title='Click me'
-        color='red'
-        accessibilityLabel='Click this button to increase count'
+        title="Click me"
+        color="red"
+        accessibilityLabel="Click this button to increase count"
       />
     </View>
   );
@@ -195,8 +196,8 @@ export default function App() {
         <TextInput
           style={styles.textInput}
           multiline={true}
-          placeholder='What do you want to do today?'
-          placeholderTextColor='#abbabb'
+          placeholder="What do you want to do today?"
+          placeholderTextColor="#abbabb"
         />
       </View>
     </View>
@@ -286,11 +287,11 @@ Next step is to add the `Icon` element inside `TouchableOpacity` next to the `Te
   <TextInput
     style={styles.textInput}
     multiline={true}
-    placeholder='What do you want to do today?'
-    placeholderTextColor='#abbabb'
+    placeholder="What do you want to do today?"
+    placeholderTextColor="#abbabb"
   />
   <TouchableOpacity>
-    <Icon name='plus' size={30} color='blue' style={{ marginLeft: 15 }} />
+    <Icon name="plus" size={30} color="blue" style={{ marginLeft: 15 }} />
   </TouchableOpacity>
 </View>
 ```
@@ -358,14 +359,14 @@ export default function App() {
         <TextInput
           style={styles.textInput}
           multiline={true}
-          placeholder='What do you want to do today?'
-          placeholderTextColor='#abbabb'
+          placeholder="What do you want to do today?"
+          placeholderTextColor="#abbabb"
           value={value}
           onChangeText={value => setValue(value)}
         />
         <TouchableOpacity onPress={() => handleAddTodo()}>
           >
-          <Icon name='plus' size={30} color='blue' style={{ marginLeft: 15 }} />
+          <Icon name="plus" size={30} color="blue" style={{ marginLeft: 15 }} />
         </TouchableOpacity>
       </View>
     </View>
@@ -417,12 +418,12 @@ import Icon from 'react-native-vector-icons/Feather';
 export default function TodoList(props) {
   return (
     <View style={styles.listContainer}>
-      <Icon name='square' size={30} color='black' style={{ marginLeft: 15 }} />
+      <Icon name="square" size={30} color="black" style={{ marginLeft: 15 }} />
       <Text style={styles.listItem}>{props.text}</Text>
       <Icon
-        name='trash-2'
+        name="trash-2"
         size={30}
-        color='red'
+        color="red"
         style={{ marginLeft: 'auto' }}
         onPress={props.deleteTodo}
       />
@@ -543,7 +544,7 @@ export default function TodoList(props) {
       <Icon
         name={props.checked ? 'check' : 'square'}
         size={30}
-        color='black'
+        color="black"
         style={{ marginLeft: 15 }}
         onPress={props.setChecked}
       />
@@ -552,9 +553,9 @@ export default function TodoList(props) {
         <Text style={styles.listItem}>{props.text}</Text>
       </View>
       <Icon
-        name='trash-2'
+        name="trash-2"
         size={30}
-        color='red'
+        color="red"
         style={{ marginLeft: 'auto' }}
         onPress={props.deleteTodo}
       />

@@ -8,6 +8,7 @@ tags:
   - expo
   - animation
   - redux
+  - react-native
 ---
 
 ![cover_image](https://i.imgur.com/0bXMoSY.png)
@@ -398,7 +399,7 @@ class CustomModal extends React.Component {
           }}
         >
           <CloseView style={{ elevation: 10 }}>
-            <Icon.Ionicons name='ios-close' size={44} color='blue' />
+            <Icon.Ionicons name="ios-close" size={44} color="blue" />
           </CloseView>
         </TouchableOpacity>
         <Body />

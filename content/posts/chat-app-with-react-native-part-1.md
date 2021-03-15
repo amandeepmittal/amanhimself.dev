@@ -6,7 +6,7 @@ template: post
 thumbnail: '../thumbnails/react.png'
 tags:
   - react-native
-  - navigation
+  - react-navigation
   - firebase
 ---
 
@@ -202,25 +202,25 @@ export default function Login() {
     <View style={styles.container}>
       <Title style={styles.titleText}>Welcome to Chat app</Title>
       <FormInput
-        labelName='Email'
+        labelName="Email"
         value={email}
-        autoCapitalize='none'
+        autoCapitalize="none"
         onChangeText={userEmail => setEmail(userEmail)}
       />
       <FormInput
-        labelName='Password'
+        labelName="Password"
         value={password}
         secureTextEntry={true}
         onChangeText={userPassword => setPassword(userPassword)}
       />
       <FormButton
-        title='Login'
-        modeValue='contained'
+        title="Login"
+        modeValue="contained"
         labelStyle={styles.loginButtonLabel}
       />
       <FormButton
-        title='New user? Join here'
-        modeValue='text'
+        title="New user? Join here"
+        modeValue="text"
         uppercase={false}
         labelStyle={styles.navButtonText}
       />
@@ -283,27 +283,27 @@ export default function SignupScreen({ navigation }) {
     <View style={styles.container}>
       <Title style={styles.titleText}>Register to chat</Title>
       <FormInput
-        labelName='Email'
+        labelName="Email"
         value={email}
-        autoCapitalize='none'
+        autoCapitalize="none"
         onChangeText={userEmail => setEmail(userEmail)}
       />
       <FormInput
-        labelName='Password'
+        labelName="Password"
         value={password}
         secureTextEntry={true}
         onChangeText={userPassword => setPassword(userPassword)}
       />
       <FormButton
-        title='Signup'
-        modeValue='contained'
+        title="Signup"
+        modeValue="contained"
         labelStyle={styles.loginButtonLabel}
       />
       <IconButton
-        icon='keyboard-backspace'
+        icon="keyboard-backspace"
         size={30}
         style={styles.navButton}
-        color='#6646ee'
+        color="#6646ee"
         onPress={() => navigation.navigate('Login')}
       />
     </View>
@@ -369,9 +369,9 @@ The `createStackNavigator` is a function used to implement a stack navigation pa
 ```js
 export default function AuthStack() {
   return (
-    <Stack.Navigator initialRouteName='Login' headerMode='none'>
-      <Stack.Screen name='Login' component={LoginScreen} />
-      <Stack.Screen name='Signup' component={SignupScreen} />
+    <Stack.Navigator initialRouteName="Login" headerMode="none">
+      <Stack.Screen name="Login" component={LoginScreen} />
+      <Stack.Screen name="Signup" component={SignupScreen} />
     </Stack.Navigator>
   );
 }
@@ -399,8 +399,8 @@ For example, in the login screen component, to navigate to sign up screen, add t
 
 ```js
 <FormButton
-  title='New user? Join here'
-  modeValue='text'
+  title="New user? Join here"
+  modeValue="text"
   uppercase={false}
   labelStyle={styles.navButtonText}
   onPress={() => navigation.navigate('Signup')}
@@ -419,10 +419,10 @@ Next, add the `onPress` prop to the `IconButton`.
 
 ```js
 <IconButton
-  icon='keyboard-backspace'
+  icon="keyboard-backspace"
   size={30}
   style={styles.navButton}
-  color='#6646ee'
+  color="#6646ee"
   onPress={() => navigation.goBack()}
 />
 ```

@@ -7,6 +7,7 @@ thumbnail: '../thumbnails/expo.png'
 tags:
   - expo
   - firebase
+  - react-native
 ---
 
 If you're a fan of HBO's Silicon Valley, you'll remember when they launched a real AI-powered mobile app that classifies hotdogs from a given image (or not). Using Google's Vision API, let's try to recreate a working model of the application in React Native.
@@ -262,10 +263,10 @@ The UI library has a pre-defined component called `Header` that you can use righ
 <View style={styles.container}>
   <Header
     statusBarProps={{ barStyle: 'light-content' }}
-    backgroundColor='black'
+    backgroundColor="black"
     leftComponent={
       <TouchableOpacity onPress={() => alert('soon')}>
-        <Icon name='photo-album' color='#fff' />
+        <Icon name="photo-album" color="#fff" />
       </TouchableOpacity>
     }
     centerComponent={{
@@ -274,7 +275,7 @@ The UI library has a pre-defined component called `Header` that you can use righ
     }}
     rightComponent={
       <TouchableOpacity onPress={() => alert('soon')}>
-        <Icon name='camera-alt' color='#fff' />
+        <Icon name="camera-alt" color="#fff" />
       </TouchableOpacity>
     }
   />
@@ -317,7 +318,7 @@ import { ActivityIndicator, StyleSheet, View } from 'react-native';
 
 const UploadingOverlay = () => (
   <View style={[StyleSheet.absoluteFill, styles.overlay]}>
-    <ActivityIndicator color='#000' animating size='large' />
+    <ActivityIndicator color="#000" animating size="large" />
   </View>
 );
 
@@ -471,10 +472,10 @@ Now you can add both the functions, `pickImage` and `takePhoto` as the value of 
 ```js
 <Header
   statusBarProps={{ barStyle: 'light-content' }}
-  backgroundColor='#000'
+  backgroundColor="#000"
   leftComponent={
     <TouchableOpacity onPress={this.pickImage}>
-      <Icon name='photo-album' color='#fff' />
+      <Icon name="photo-album" color="#fff" />
     </TouchableOpacity>
   }
   centerComponent={{
@@ -483,7 +484,7 @@ Now you can add both the functions, `pickImage` and `takePhoto` as the value of 
   }}
   rightComponent={
     <TouchableOpacity onPress={this.takePhoto}>
-      <Icon name='camera-alt' color='#fff' />
+      <Icon name="camera-alt" color="#fff" />
     </TouchableOpacity>
   }
 />
@@ -584,7 +585,7 @@ renderImage = () => {
         <Button
           buttonStyle={styles.button}
           onPress={() => this.submitToGoogle()}
-          title='Check'
+          title="Check"
           titleStyle={styles.buttonTitle}
           disabled
         />
@@ -600,7 +601,7 @@ renderImage = () => {
       <Button
         buttonStyle={styles.button}
         onPress={() => this.submitToGoogle()}
-        title='Check'
+        title="Check"
         titleStyle={styles.buttonTitle}
       />
 

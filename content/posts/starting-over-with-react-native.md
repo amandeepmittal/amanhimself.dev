@@ -6,6 +6,7 @@ thumbnail: '../thumbnails/expo.png'
 template: post
 tags:
   - expo
+  - react-native
 ---
 
 ### Start of 2018 🚀

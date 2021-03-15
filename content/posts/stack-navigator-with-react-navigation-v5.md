@@ -6,7 +6,8 @@ thumbnail: '../thumbnails/expo.png'
 template: post
 tags:
   - expo
-  - navigation
+  - react-navigation
+  - react-native
 ---
 
 [React Navigation](https://reactnavigation.org/) as the library released its 5th stable version recently, just being two years old. Without a doubt, it is one of the most popular navigation solutions in React Native apps that also has support for the Expo.
@@ -163,7 +164,7 @@ function MainStackNavigator() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name='Home' component={Home} />
+        <Stack.Screen name="Home" component={Home} />
       </Stack.Navigator>
     </NavigationContainer>
   );
@@ -197,7 +198,7 @@ By default, it shows the title bar on the screen. However, you can set the title
 This is done by specifying the options on each screen as shown below. Open `MainStackNavigator.js` file and the prop `options` on `Stack.Screen` for `Home` component.
 
 ```js
-<Stack.Screen name='Home' component={Home} options={{ title: 'Home Screen' }} />
+<Stack.Screen name="Home" component={Home} options={{ title: 'Home Screen' }} />
 ```
 
 The changes are instantly reflected in the Expo client.
@@ -217,12 +218,12 @@ function MainStackNavigator() {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen
-          name='Home'
+          name="Home"
           component={Home}
           options={{ title: 'Home Screen' }}
         />
         <Stack.Screen
-          name='Detail'
+          name="Detail"
           component={Detail}
           options={{ title: 'Detail Screen' }}
         />
@@ -424,7 +425,7 @@ This can be done by passing `route` as an object in options for Detail screen in
 
 ```js
 <Stack.Screen
-  name='Detail'
+  name="Detail"
   component={Detail}
   options={({ route }) => ({
     title: route.params.item.name
@@ -442,7 +443,7 @@ You can use the prop `screenOptions` to apply common styles to the header across
 
 ```js
 <Stack.Navigator
-  initialRouteName='Home'
+  initialRouteName="Home"
   screenOptions={{
     gestureEnabled: true,
     headerStyle: {
@@ -476,7 +477,7 @@ To make an iOS app just to show the back button icon instead of the name of the 
 
 ```js
 <Stack.Navigator
-  initialRouteName='Home'
+  initialRouteName="Home"
   screenOptions={{
     gestureEnabled: true,
     headerStyle: {
@@ -511,7 +512,7 @@ In the section, let us make the header mode of the Android app behave in the sam
 
 ```js
 <Stack.Navigator
-  initialRouteName='Home'
+  initialRouteName="Home"
   screenOptions={{
     gestureEnabled: true,
     headerStyle: {
@@ -523,7 +524,7 @@ In the section, let us make the header mode of the Android app behave in the sam
     headerTintColor: '#ffd700',
     headerBackTitleVisible: false
   }}
-  headerMode='float'
+  headerMode="float"
 >
   {/* ... */}
 </Stack.Navigator>
@@ -578,7 +579,7 @@ Add this newly imported screen to the current `Stack.Navigator`.
 
 ```js
 <Stack.Screen
-  name='Settings'
+  name="Settings"
   component={Settings}
   options={{ title: 'Settings' }}
 />

@@ -7,6 +7,7 @@ template: post
 tags:
   - expo
   - graphql
+  - react-native
 ---
 
 Apollo has an entire ecosystem of tools to build GraphQL applications regardless of the frontend framework or library you intend to use. You can use it to develop client-side and server-side apps separately. Apollo has more features and support than its open-source competitors in GraphQL for JavaScript world.
@@ -354,7 +355,7 @@ Next, modify the return statements as follows.
 if (loading && !data) {
   return (
     <View style={styles.loadingIndicatorContainer}>
-      <ActivityIndicator size='large' color='#fff' />
+      <ActivityIndicator size="large" color="#fff" />
     </View>
   );
 }

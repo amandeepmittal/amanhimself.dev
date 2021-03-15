@@ -7,6 +7,7 @@ template: post
 tags:
   - expo
   - redux
+  - react-native
 ---
 
 With React Hooks growing usage, the ability to handle a component's state and side effects is now a common pattern in the functional component. React Redux offers a set of Hook APIs as an alternative to the omnipresent `connect()` High Order Component.
@@ -273,7 +274,7 @@ function ViewNotes({ navigation }) {
 
   return (
     <>
-      <Header titleText='Simple Note Taker' />
+      <Header titleText="Simple Note Taker" />
       <View style={styles.container}>
         {notes.length === 0 ? (
           <View style={styles.titleContainer}>
@@ -297,8 +298,8 @@ function ViewNotes({ navigation }) {
         <FAB
           style={styles.fab}
           small
-          icon='plus'
-          label='Add new note'
+          icon="plus"
+          label="Add new note"
           onPress={() =>
             navigation.navigate('AddNotes', {
               addNote

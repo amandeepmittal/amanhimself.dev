@@ -7,6 +7,7 @@ thumbnail: '../thumbnails/expo.png'
 tags:
   - expo
   - animation
+  - react-native
 ---
 
 ![cover](https://i.imgur.com/ateUlTf.png)
@@ -77,7 +78,7 @@ import { StatusBar } from 'expo-status-bar';
 export default function App() {
   return (
     <>
-      <StatusBar style='light' />
+      <StatusBar style="light" />
       <View style={{ flex: 1, backgroundColor: '#892cdc', paddingTop: 50 }}>
         <View style={{ alignItems: 'center' }}>
           <Text style={{ color: 'white', fontSize: 24, fontWeight: '700' }}>
@@ -161,7 +162,7 @@ Modify the `App.js` file and add the following JSX:
 export default function App() {
   return (
     <>
-      <StatusBar style='light' />
+      <StatusBar style="light" />
       <View style={{ flex: 1, backgroundColor: '#892cdc', paddingTop: 50 }}>
         <View style={{ alignItems: 'center' }}>
           <Text style={{ color: 'white', fontSize: 28, fontWeight: '700' }}>

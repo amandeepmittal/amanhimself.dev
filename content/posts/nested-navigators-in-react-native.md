@@ -6,7 +6,8 @@ thumbnail: '../thumbnails/expo.png'
 template: post
 tags:
   - expo
-  - navigation
+  - react-navigation
+  - react-native
 ---
 
 Using [`react-navigation`](https://reactnavigation.org/docs/en/getting-started.html) you can definitely nest different types of navigators. The term nesting navigators mean that rendering one navigator inside a screen of another navigator.
@@ -117,8 +118,8 @@ Let us define tab routes for now: `Home` and `Profile`.
 function MainTabNavigator() {
   return (
     <Tab.Navigator>
-      <Tab.Screen name='Home' component={Home} />
-      <Tab.Screen name='Profile' component={Profile} />
+      <Tab.Screen name="Home" component={Home} />
+      <Tab.Screen name="Profile" component={Profile} />
     </Tab.Navigator>
   );
 }
@@ -127,7 +128,7 @@ function MainTabNavigator() {
 Now, in the `MainStackNavigator()` instead of passing the `Home` screen, let us pass the `MainTabNavigator`.
 
 ```js
-<Stack.Screen name='Home' component={MainTabNavigator} />
+<Stack.Screen name="Home" component={MainTabNavigator} />
 ```
 
 Lastly, to make all of this work, open `App.js` file in the root of the project and modify the statement that imports the `MainStackNavigator` with the correct file name.
@@ -184,20 +185,20 @@ Then, in each `Tab.Screen`, add an options prop that is going to have a property
   }}
 >
   <Tab.Screen
-    name='Home'
+    name="Home"
     component={Home}
     options={{
       tabBarIcon: ({ color, size }) => (
-        <Ionicons name='ios-home' color={color} size={size} />
+        <Ionicons name="ios-home" color={color} size={size} />
       )
     }}
   />
   <Tab.Screen
-    name='Profile'
+    name="Profile"
     component={Profile}
     options={{
       tabBarIcon: ({ color, size }) => (
-        <Ionicons name='ios-person' size={size} color={color} />
+        <Ionicons name="ios-person" size={size} color={color} />
       )
     }}
   />
@@ -253,8 +254,8 @@ function MainTabNavigator() {
         }
       })}
     >
-      <Tab.Screen name='Home' component={Home} />
-      <Tab.Screen name='Profile' component={Profile} />
+      <Tab.Screen name="Home" component={Home} />
+      <Tab.Screen name="Profile" component={Profile} />
     </Tab.Navigator>
   );
 }
@@ -295,7 +296,7 @@ Then, [as per the recommended way](https://reactnavigation.org/docs/en/screen-op
 
 ```js
 <Stack.Screen
-  name='Home'
+  name="Home"
   component={MainTabNavigator}
   options={({ route }) => ({
     headerTitle: getHeaderTitle(route)

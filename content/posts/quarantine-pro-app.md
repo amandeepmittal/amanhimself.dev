@@ -6,6 +6,7 @@ template: post
 thumbnail: '../thumbnails/expo.png'
 tags:
   - expo
+  - react-native
 ---
 
 Covid-19 changed our way of life since the start of 2020 - a year some of us want to fast forward like a button on that TV remote. That said, self-isolating is the best thing you can do right now, and thus, isolating ourselves at Jscrambler, we came up with a fun, simple React Native app idea.
@@ -187,7 +188,7 @@ return (
     <Text style={styles.title}>{`Are You a Quarantine Pro?`}</Text>
     <TouchableWithoutFeedback>
       <View style={styles.pickerContainer}>
-        <Fontisto style={styles.icon} name='calendar' size={48} />
+        <Fontisto style={styles.icon} name="calendar" size={48} />
         <Text style={styles.pickerText}>{`Tap here to\nselect a date`}</Text>
       </View>
     </TouchableWithoutFeedback>

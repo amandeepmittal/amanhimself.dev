@@ -7,6 +7,7 @@ template: post
 tags:
   - expo
   - amplify
+  - react-native
 ---
 
 AWS Amplify is a fantastic framework that helps you develop your web or mobile applications quickly. Not only it enhances your current tech stack but actually has many features in-built that you don't have to worry about especially when your app is in the development process.

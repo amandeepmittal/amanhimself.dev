@@ -6,6 +6,7 @@ slug: 'blog/accessing-geo-location-and-app-permissions-in-react-native-and-expo'
 thumbnail: '../thumbnails/expo.png'
 tags:
   - expo
+  - react-native
 ---
 
 ![cover_image](https://i.imgur.com/jEjHKCI.jpg)

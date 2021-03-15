@@ -6,6 +6,7 @@ thumbnail: '../thumbnails/expo.png'
 template: post
 tags:
   - expo
+  - react-native
 ---
 
 This week has been a hectic one for me. Deadline coming closer, and too many tasks to complete. It has been a happening one also. I got the invite to join Gatsbyjs open source team, to help and maintain the on going projects. I love contributing to open source communities and projects.

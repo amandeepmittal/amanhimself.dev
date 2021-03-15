@@ -6,6 +6,7 @@ thumbnail: '../thumbnails/expo.png'
 template: post
 tags:
   - expo
+  - react-native
 ---
 
 Recently, the alpha version [Tensorflow.js](https://www.tensorflow.org/js/) for React Native and Expo applications was released. It currently provides the capabilities of loading pre-trained models and training. Here is the announcement tweet:

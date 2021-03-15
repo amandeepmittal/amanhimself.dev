@@ -6,6 +6,7 @@ thumbnail: '../thumbnails/expo.png'
 template: post
 tags:
   - expo
+  - react-native
 ---
 
 Styling is an important aspect of any mobile application. You cannot put enough emphasis on how important it is for a mobile app to have a pleasing design and good use of colors for the app users to use it in the long term.
@@ -173,9 +174,9 @@ export default class App extends React.Component {
       <Container>
         <Title>React Native with 👩‍🎤 Emotion</Title>
         <CustomButton
-          text='Click Me'
-          textColor='#01d1e5'
-          backgroundColor='lavenderblush'
+          text="Click Me"
+          textColor="#01d1e5"
+          backgroundColor="lavenderblush"
         />
       </Container>
     );

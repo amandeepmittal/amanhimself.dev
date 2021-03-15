@@ -6,7 +6,7 @@ slug: 'blog/chat-app-with-react-native-part-3'
 thumbnail: '../thumbnails/react.png'
 tags:
   - react-native
-  - navigation
+  - react-navigation
   - firebase
 ---
 
@@ -40,7 +40,7 @@ export default function HomeStack() {
         }
       }}
     >
-      <Stack.Screen name='Home' component={HomeScreen} />
+      <Stack.Screen name="Home" component={HomeScreen} />
     </Stack.Navigator>
   );
 }
@@ -72,8 +72,8 @@ export default function AddRoomScreen({ navigation }) {
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
       <Text>Create a new chat room</Text>
       <FormButton
-        mode='contained'
-        title='Close Modal'
+        mode="contained"
+        title="Close Modal"
         onPress={() => navigation.goBack()}
       />
     </View>
@@ -101,13 +101,13 @@ export default function HomeScreen({ navigation }) {
       <Title>All chat rooms will be listed here</Title>
       <Title>{user.uid}</Title>
       <FormButton
-        modeValue='contained'
-        title='Logout'
+        modeValue="contained"
+        title="Logout"
         onPress={() => logout()}
       />
       <FormButton
-        modeValue='contained'
-        title='Add Room'
+        modeValue="contained"
+        title="Add Room"
         onPress={() => navigation.navigate('AddRoom')}
       />
     </View>
@@ -144,7 +144,7 @@ function ChatApp() {
         }
       }}
     >
-      <ChatAppStack.Screen name='Home' component={HomeScreen} />
+      <ChatAppStack.Screen name="Home" component={HomeScreen} />
     </ChatAppStack.Navigator>
   );
 }
@@ -155,9 +155,9 @@ The Modal stack is going to wrap both the `ChatAppStack` and the modal screen as
 ```js
 export default function HomeStack() {
   return (
-    <ModalStack.Navigator mode='modal' headerMode='none'>
-      <ModalStack.Screen name='ChatApp' component={ChatApp} />
-      <ModalStack.Screen name='AddRoom' component={AddRoomScreen} />
+    <ModalStack.Navigator mode="modal" headerMode="none">
+      <ModalStack.Screen name="ChatApp" component={ChatApp} />
+      <ModalStack.Screen name="AddRoom" component={AddRoomScreen} />
     </ModalStack.Navigator>
   );
 }
@@ -188,14 +188,14 @@ Then add an `options` prop with a function such that you are able to pass `navig
 
 ```js
 <ChatAppStack.Screen
-  name='Home'
+  name="Home"
   component={HomeScreen}
   options={({ navigation }) => ({
     headerRight: () => (
       <IconButton
-        icon='message-plus'
+        icon="message-plus"
         size={28}
-        color='#ffffff'
+        color="#ffffff"
         onPress={() => navigation.navigate('AddRoom')}
       />
     )
@@ -236,23 +236,23 @@ export default function AddRoomScreen({ navigation }) {
     <View style={styles.rootContainer}>
       <View style={styles.closeButtonContainer}>
         <IconButton
-          icon='close-circle'
+          icon="close-circle"
           size={36}
-          color='#6646ee'
+          color="#6646ee"
           onPress={() => navigation.goBack()}
         />
       </View>
       <View style={styles.innerContainer}>
         <Title style={styles.title}>Create a new chat room</Title>
         <FormInput
-          labelName='Room Name'
+          labelName="Room Name"
           value={roomName}
           onChangeText={text => setRoomName(text)}
-          clearButtonMode='while-editing'
+          clearButtonMode="while-editing"
         />
         <FormButton
-          title='Create'
-          modeValue='contained'
+          title="Create"
+          modeValue="contained"
           labelStyle={styles.buttonLabel}
           onPress={() => handleButtonPress()}
           disabled={roomName.length === 0}
@@ -452,7 +452,7 @@ Here is the complete JSX rendered by this component.
     renderItem={({ item }) => (
       <List.Item
         title={item.name}
-        description='Item description'
+        description="Item description"
         titleNumberOfLines={1}
         titleStyle={styles.listTitle}
         descriptionStyle={styles.listDescription}

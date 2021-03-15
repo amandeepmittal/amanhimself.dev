@@ -6,6 +6,7 @@ slug: 'blog/add-search-bar-to-a-flatlist-in-react-native'
 thumbnail: '../thumbnails/expo.png'
 tags:
   - expo
+  - react-native
 ---
 
 ![cover_image](https://i.imgur.com/zeVnUHd.png)
@@ -55,7 +56,7 @@ import { mapping, light as lightTheme } from '@eva-design/eva';
 
 const HomeScreen = () => (
   <Layout style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-    <Text category='h1'>HOME</Text>
+    <Text category="h1">HOME</Text>
   </Layout>
 );
 
@@ -217,7 +218,7 @@ renderFooter = () => {
         borderColor: '#CED0CE'
       }}
     >
-      <ActivityIndicator animating size='large' />
+      <ActivityIndicator animating size="large" />
     </View>
   );
 };
@@ -268,11 +269,11 @@ The individual items in the list are going to be separated by the `renderSeparat
       >
         <Avatar
           source={{ uri: item.picture.thumbnail }}
-          size='giant'
+          size="giant"
           style={{ marginRight: 16 }}
         />
         <Text
-          category='s1'
+          category="s1"
           style={{
             color: '#000'
           }}
@@ -392,11 +393,11 @@ renderHeader = () => (
     }}
   >
     <Input
-      autoCapitalize='none'
+      autoCapitalize="none"
       autoCorrect={false}
       onChangeText={this.handleSearch}
-      status='info'
-      placeholder='Search'
+      status="info"
+      placeholder="Search"
       style={{
         borderRadius: 25,
         borderColor: '#333',
@@ -429,7 +430,7 @@ Let us add another prop called `clearButtonMode` that allows the input field to 
 ```js
 <Input
   // rest of the props remain same
-  clearButtonMode='always'
+  clearButtonMode="always"
 />
 ```
 

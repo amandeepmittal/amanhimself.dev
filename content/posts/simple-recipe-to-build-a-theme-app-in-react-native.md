@@ -6,6 +6,7 @@ thumbnail: '../thumbnails/expo.png'
 template: post
 tags:
   - expo
+  - react-native
 ---
 
 Recently, I have been working on a React Native application that demands a changeable theme based on the user selection. I wanted to do this in a simplest way possible. I have so far avoided any React Native UI toolkit such as NativeBase or React Native Elements. In the article below, I am going to share with you all about this simple recipe.

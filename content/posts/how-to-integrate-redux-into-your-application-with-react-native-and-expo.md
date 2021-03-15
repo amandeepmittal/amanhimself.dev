@@ -7,6 +7,7 @@ thumbnail: '../thumbnails/expo.png'
 tags:
   - expo
   - redux
+  - react-native
 ---
 
 ![cover](https://i.imgur.com/YqZC6zh.jpg)

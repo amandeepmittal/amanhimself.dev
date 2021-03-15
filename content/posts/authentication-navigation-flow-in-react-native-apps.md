@@ -6,7 +6,8 @@ slug: 'blog/authentication-navigation-flow-in-react-native-apps'
 thumbnail: '../thumbnails/react.png'
 tags:
   - expo
-  - navigation
+  - react-navigation
+  - react-native
 ---
 
 ![cover_image](https://i.imgur.com/0xwhr2a.png)
@@ -286,7 +287,7 @@ export default class Login extends React.Component {
       <View style={styles.container}>
         <Text>Login</Text>
         <Button
-          title='Go to Signup'
+          title="Go to Signup"
           onPress={() => this.props.navigation.navigate('Signup')}
         />
       </View>
@@ -310,7 +311,7 @@ export default class Signup extends React.Component {
     return (
       <View style={styles.container}>
         <Text>Signup</Text>
-        <Button title='Go to Login' onPress={this.goToLogin} />
+        <Button title="Go to Login" onPress={this.goToLogin} />
       </View>
     );
   }
@@ -390,24 +391,24 @@ export default class Login extends React.Component {
       <View style={styles.container}>
         <View style={{ margin: 10 }}>
           <TextInput
-            name='email'
+            name="email"
             value={email}
-            placeholder='Enter email'
-            autoCapitalize='none'
+            placeholder="Enter email"
+            autoCapitalize="none"
             onChangeText={this.handleEmailChange}
           />
         </View>
         <View style={{ margin: 10 }}>
           <TextInput
-            name='password'
+            name="password"
             value={password}
-            placeholder='Enter password'
+            placeholder="Enter password"
             secureTextEntry
             onChangeText={this.handlePasswordChange}
           />
         </View>
-        <Button title='Login' onPress={this.onLogin} />
-        <Button title='Go to Signup' onPress={this.goToSignup} />
+        <Button title="Login" onPress={this.onLogin} />
+        <Button title="Go to Signup" onPress={this.goToSignup} />
       </View>
     );
   }
@@ -426,7 +427,7 @@ const styles = StyleSheet.create({
 The `onLogin` handler function allows the user to navigate to the `Home` screen only if the email and the password fields are not empty. It is used on the `onPress` prop for the following button.
 
 ```js
-<Button title='Login' onPress={this.onLogin} />
+<Button title="Login" onPress={this.onLogin} />
 ```
 
 Look at the complete demo below.

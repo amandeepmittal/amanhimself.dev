@@ -6,7 +6,8 @@ image: 'blog/build-validate-forms-with-react-native-formik-yup'
 thumbnail: '../thumbnails/expo.png'
 tags:
   - expo
-  - navigation
+  - react-navigation
+  - react-native
 ---
 
 ![cover](https://i.imgur.com/JK4oQuJ.png)
@@ -126,7 +127,7 @@ const FormInput = ({
       {...rest}
       leftIcon={<Ionicons name={iconName} size={28} color={iconColor} />}
       leftIconContainerStyle={styles.iconStyle}
-      placeholderTextColor='grey'
+      placeholderTextColor="grey"
       name={name}
       value={value}
       placeholder={placeholder}
@@ -190,29 +191,29 @@ export default class Login extends React.Component {
     return (
       <SafeAreaView style={styles.container}>
         <FormInput
-          name='email'
+          name="email"
           value={email}
-          placeholder='Enter email'
-          autoCapitalize='none'
+          placeholder="Enter email"
+          autoCapitalize="none"
           onChangeText={this.handleEmailChange}
-          iconName='ios-mail'
-          iconColor='#2C384A'
+          iconName="ios-mail"
+          iconColor="#2C384A"
         />
         <FormInput
-          name='password'
+          name="password"
           value={password}
-          placeholder='Enter password'
+          placeholder="Enter password"
           secureTextEntry
           onChangeText={this.handlePasswordChange}
-          iconName='ios-lock'
-          iconColor='#2C384A'
+          iconName="ios-lock"
+          iconColor="#2C384A"
         />
         <View style={styles.buttonContainer}>
           <FormButton
-            buttonType='outline'
+            buttonType="outline"
             onPress={this.handleOnLogin}
-            title='LOGIN'
-            buttonColor='#039BE5'
+            title="LOGIN"
+            buttonColor="#039BE5"
           />
         </View>
         <Button
@@ -221,7 +222,7 @@ export default class Login extends React.Component {
           titleStyle={{
             color: '#F57C00'
           }}
-          type='clear'
+          type="clear"
         />
       </SafeAreaView>
     );
@@ -279,29 +280,29 @@ export default class Login extends React.Component {
           {formikProps => (
             <Fragment>
               <FormInput
-                name='email'
+                name="email"
                 value={values.email}
                 onChangeText={formikProps.handleChange('email')}
-                placeholder='Enter email'
-                autoCapitalize='none'
-                iconName='ios-mail'
-                iconColor='#2C384A'
+                placeholder="Enter email"
+                autoCapitalize="none"
+                iconName="ios-mail"
+                iconColor="#2C384A"
               />
               <FormInput
-                name='password'
+                name="password"
                 value={values.password}
                 onChangeText={formikProps.handleChange('password')}
-                placeholder='Enter password'
+                placeholder="Enter password"
                 secureTextEntry
-                iconName='ios-lock'
-                iconColor='#2C384A'
+                iconName="ios-lock"
+                iconColor="#2C384A"
               />
               <View style={styles.buttonContainer}>
                 <FormButton
-                  buttonType='outline'
+                  buttonType="outline"
                   onPress={formikProps.handleSubmit}
-                  title='LOGIN'
-                  buttonColor='#039BE5'
+                  title="LOGIN"
+                  buttonColor="#039BE5"
                 />
               </View>
             </Fragment>
@@ -313,7 +314,7 @@ export default class Login extends React.Component {
           titleStyle={{
             color: '#F57C00'
           }}
-          type='clear'
+          type="clear"
         />
       </SafeAreaView>
     );
@@ -330,29 +331,29 @@ You can refactor the current component into the following:
   ({ handleChange, values, handleSubmit }) => (
     <Fragment>
       <FormInput
-        name='email'
+        name="email"
         value={values.email}
         onChangeText={handleChange('email')}
-        placeholder='Enter email'
-        autoCapitalize='none'
-        iconName='ios-mail'
-        iconColor='#2C384A'
+        placeholder="Enter email"
+        autoCapitalize="none"
+        iconName="ios-mail"
+        iconColor="#2C384A"
       />
       <FormInput
-        name='password'
+        name="password"
         value={values.password}
         onChangeText={handleChange('password')}
-        placeholder='Enter password'
+        placeholder="Enter password"
         secureTextEntry
-        iconName='ios-lock'
-        iconColor='#2C384A'
+        iconName="ios-lock"
+        iconColor="#2C384A"
       />
       <View style={styles.buttonContainer}>
         <FormButton
-          buttonType='outline'
+          buttonType="outline"
           onPress={handleSubmit}
-          title='LOGIN'
-          buttonColor='#039BE5'
+          title="LOGIN"
+          buttonColor="#039BE5"
         />
       </View>
     </Fragment>
@@ -410,7 +411,7 @@ const FormInput = ({
       {...rest}
       leftIcon={<Ionicons name={iconName} size={28} color={iconColor} />}
       leftIconContainerStyle={styles.iconStyle}
-      placeholderTextColor='grey'
+      placeholderTextColor="grey"
       name={name}
       placeholder={placeholder}
       style={styles.input}

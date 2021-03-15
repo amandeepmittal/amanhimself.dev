@@ -6,7 +6,7 @@ thumbnail: '../thumbnails/react.png'
 template: post
 tags:
   - react-native
-  - navigation
+  - react-navigation
 ---
 
 Navigation plays an important role in mobile applications. Without navigation, there will be little use of an application. In this tutorial, we are going to learn how to implement Navigation in a React Native application from scratch. If you are familiar with web, or Reactjs as library, overall concept of navigation is same. It is used to navigate to different pages or screens (in our case). However, the implementation of a navigation library here is different from the web.

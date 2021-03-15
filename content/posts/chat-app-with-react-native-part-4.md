@@ -6,7 +6,7 @@ slug: 'blog/chat-app-with-react-native-part-4'
 thumbnail: '../thumbnails/react.png'
 tags:
   - react-native
-  - navigation
+  - react-navigation
   - firebase
 ---
 
@@ -113,21 +113,21 @@ function ChatApp() {
       }}
     >
       <ChatAppStack.Screen
-        name='Home'
+        name="Home"
         component={HomeScreen}
         options={({ navigation }) => ({
           headerRight: () => (
             <IconButton
-              icon='message-plus'
+              icon="message-plus"
               size={28}
-              color='#ffffff'
+              color="#ffffff"
               onPress={() => navigation.navigate('AddRoom')}
             />
           )
         })}
       />
       {/* Add this */}
-      <ChatAppStack.Screen name='Room' component={RoomScreen} />
+      <ChatAppStack.Screen name="Room" component={RoomScreen} />
     </ChatAppStack.Navigator>
   );
 }
@@ -200,7 +200,7 @@ export default function HomeScreen({ navigation }) {
           >
             <List.Item
               title={item.name}
-              description='Item description'
+              description="Item description"
               titleNumberOfLines={1}
               titleStyle={styles.listTitle}
               descriptionStyle={styles.listDescription}
@@ -247,7 +247,7 @@ This can be obtained using `route` props as shown below.
 
 ```js
 <ChatAppStack.Screen
-  name='Room'
+  name="Room"
   component={RoomScreen}
   options={({ route }) => ({
     title: route.params.thread.name
@@ -336,7 +336,7 @@ You can modify the placeholder text using the prop `placeholder` as shown below.
   onSend={newMessage => handleSend(newMessage)}
   user={{ _id: 1, name: 'User Test' }}
   renderBubble={renderBubble}
-  placeholder='Type your message here...'
+  placeholder="Type your message here..."
 />
 ```
 
@@ -356,7 +356,7 @@ You can add the prop `showUserAvatar` to always display the user avatar of the c
   onSend={newMessage => handleSend(newMessage)}
   user={{ _id: 1, name: 'User Test' }}
   renderBubble={renderBubble}
-  placeholder='Type your message here...'
+  placeholder="Type your message here..."
   showUserAvatar
 />
 ```
@@ -371,7 +371,7 @@ Right now, the send button only appears when the user is typing a message. Add t
   onSend={newMessage => handleSend(newMessage)}
   user={{ _id: 1, name: 'User Test' }}
   renderBubble={renderBubble}
-  placeholder='Type your message here...'
+  placeholder="Type your message here..."
   showUserAvatar
   alwaysShowSend
 />
@@ -405,7 +405,7 @@ export default function RoomScreen() {
     return (
       <Send {...props}>
         <View style={styles.sendingContainer}>
-          <IconButton icon='send-circle' size={32} color='#6646ee' />
+          <IconButton icon="send-circle" size={32} color="#6646ee" />
         </View>
       </Send>
     );
@@ -417,7 +417,7 @@ export default function RoomScreen() {
       onSend={newMessage => handleSend(newMessage)}
       user={{ _id: 1, name: 'User Test' }}
       renderBubble={renderBubble}
-      placeholder='Type your message here...'
+      placeholder="Type your message here..."
       showUserAvatar
       alwaysShowSend
       // Step 4: add the prop
@@ -453,7 +453,7 @@ This can be solved by adding prop `scrollToBottom`.
   onSend={newMessage => handleSend(newMessage)}
   user={{ _id: 1, name: 'User Test' }}
   renderBubble={renderBubble}
-  placeholder='Type your message here...'
+  placeholder="Type your message here..."
   showUserAvatar
   alwaysShowSend
   renderSend={renderSend}
@@ -480,7 +480,7 @@ export default function RoomScreen() {
   function scrollToBottomComponent() {
     return (
       <View style={styles.bottomComponentContainer}>
-        <IconButton icon='chevron-double-down' size={36} color='#6646ee' />
+        <IconButton icon="chevron-double-down" size={36} color="#6646ee" />
       </View>
     );
   }
@@ -491,7 +491,7 @@ export default function RoomScreen() {
       onSend={newMessage => handleSend(newMessage)}
       user={{ _id: 1, name: 'User Test' }}
       renderBubble={renderBubble}
-      placeholder='Type your message here...'
+      placeholder="Type your message here..."
       showUserAvatar
       alwaysShowSend
       renderSend={renderSend}
@@ -536,7 +536,7 @@ export default function RoomScreen() {
   function renderLoading() {
     return (
       <View style={styles.loadingContainer}>
-        <ActivityIndicator size='large' color='#6646ee' />
+        <ActivityIndicator size="large" color="#6646ee" />
       </View>
     );
   }
@@ -547,7 +547,7 @@ export default function RoomScreen() {
       onSend={newMessage => handleSend(newMessage)}
       user={{ _id: 1, name: 'User Test' }}
       renderBubble={renderBubble}
-      placeholder='Type your message here...'
+      placeholder="Type your message here..."
       showUserAvatar
       alwaysShowSend
       renderSend={renderSend}

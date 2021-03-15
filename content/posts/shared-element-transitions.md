@@ -6,6 +6,7 @@ template: post
 thumbnail: '../thumbnails/expo.png'
 tags:
   - expo
+  - react-native
 ---
 
 ![cover_image](https://blog.logrocket.com/wp-content/uploads/2021/01/reactnavigationv5.png)

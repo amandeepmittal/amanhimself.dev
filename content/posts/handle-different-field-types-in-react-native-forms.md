@@ -6,6 +6,7 @@ slug: 'blog/handle-different-field-types-in-react-native-forms'
 thumbnail: '../thumbnails/expo.png'
 tags:
   - expo
+  - react-native
 ---
 
 ![cover](https://i.imgur.com/CqvpN8D.png)
@@ -74,13 +75,13 @@ In the [**last post**](LINK HERE), I left you with a challenge to figure out how
     <Fragment>
       {/* Rest of the code remains same */}
       <FormInput
-        name='password'
+        name="password"
         value={values.confirmPassword}
         onChangeText={handleChange('confirmPassword')}
-        placeholder='Confirm password'
+        placeholder="Confirm password"
         secureTextEntry
-        iconName='ios-lock'
-        iconColor='#2C384A'
+        iconName="ios-lock"
+        iconColor="#2C384A"
         onBlur={handleBlur('confirmPassword')}
       />
       <ErrorMessage
@@ -88,10 +89,10 @@ In the [**last post**](LINK HERE), I left you with a challenge to figure out how
       />
       <View style={styles.buttonContainer}>
         <FormButton
-          buttonType='outline'
+          buttonType="outline"
           onPress={handleSubmit}
-          title='SIGNUP'
-          buttonColor='#F57C00'
+          title="SIGNUP"
+          buttonColor="#F57C00"
           disabled={!isValid || isSubmitting}
           loading={isSubmitting}
         />
@@ -158,11 +159,11 @@ At the checkbox, there is a prop called `checked` that is required. It holds the
 ```js
 <CheckBox
   containerStyle={styles.checkBoxContainer}
-  checkedIcon='check-box'
-  iconType='material'
-  uncheckedIcon='check-box-outline-blank'
-  title='Agree to terms and conditions'
-  checkedTitle='You agreed to our terms and conditions'
+  checkedIcon="check-box"
+  iconType="material"
+  uncheckedIcon="check-box-outline-blank"
+  title="Agree to terms and conditions"
+  checkedTitle="You agreed to our terms and conditions"
   checked={values.check}
   onPress={() => setFieldValue('check', !values.check)}
 />

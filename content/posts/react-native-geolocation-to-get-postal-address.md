@@ -6,6 +6,7 @@ thumbnail: '../thumbnails/expo.png'
 template: post
 tags:
   - expo
+  - react-native
 ---
 
 ![cover_image](https://blog.jscrambler.com/content/images/2021/02/jscrambler-blog-how-to-create-a-react-native-geolocation-app.jpg)
@@ -143,9 +144,9 @@ const Stack = createStackNavigator();
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName='Welcome' headerMode='none'>
-        <Stack.Screen name='Welcome' component={Welcome} />
-        <Stack.Screen name='Home' component={Home} />
+      <Stack.Navigator initialRouteName="Welcome" headerMode="none">
+        <Stack.Screen name="Welcome" component={Welcome} />
+        <Stack.Screen name="Home" component={Home} />
       </Stack.Navigator>
     </NavigationContainer>
   );

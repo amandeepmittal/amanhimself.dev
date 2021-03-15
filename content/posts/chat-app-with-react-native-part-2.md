@@ -6,7 +6,7 @@ slug: 'blog/chat-app-with-react-native-part-2'
 thumbnail: '../thumbnails/react.png'
 tags:
   - react-native
-  - navigation
+  - react-navigation
   - firebase
 ---
 
@@ -123,7 +123,7 @@ export default function HomeScreen() {
     <View style={styles.container}>
       <Title>Home Screen</Title>
       <Title>All chat rooms will be listed here</Title>
-      <FormButton modeValue='contained' title='Logout' />
+      <FormButton modeValue="contained" title="Logout" />
     </View>
   );
 }
@@ -154,7 +154,7 @@ const Stack = createStackNavigator();
 export default function HomeStack() {
   return (
     <Stack.Navigator>
-      <Stack.Screen name='Home' component={HomeScreen} />
+      <Stack.Screen name="Home" component={HomeScreen} />
     </Stack.Navigator>
   );
 }
@@ -311,7 +311,7 @@ import { View, ActivityIndicator, StyleSheet } from 'react-native';
 export default function Loading() {
   return (
     <View style={styles.loadingContainer}>
-      <ActivityIndicator size='large' color='#6646ee' />
+      <ActivityIndicator size="large" color="#6646ee" />
     </View>
   );
 }
@@ -347,8 +347,8 @@ Inside the `LoginScreen` function, make sure to add an `onPress` prop as shown b
 
 ```js
 <FormButton
-  title='Login'
-  modeValue='contained'
+  title="Login"
+  modeValue="contained"
   labelStyle={styles.loginButtonLabel}
   onPress={() => login(email, password)}
 />
@@ -369,8 +369,8 @@ export default function SignupScreen({ navigation }) {
 // Add the onPress prop to <FormButton />
 
 <FormButton
-  title='Signup'
-  modeValue='contained'
+  title="Signup"
+  modeValue="contained"
   labelStyle={styles.loginButtonLabel}
   onPress={() => register(email, password)}
 />;
@@ -394,8 +394,8 @@ export default function HomeScreen() {
       <Title>All chat rooms will be listed here</Title>
       <Title>{user.uid}</Title>
       <FormButton
-        modeValue='contained'
-        title='Logout'
+        modeValue="contained"
+        title="Logout"
         onPress={() => logout()}
       />
     </View>

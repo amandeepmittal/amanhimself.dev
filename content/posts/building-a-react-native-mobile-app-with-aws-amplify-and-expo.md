@@ -7,6 +7,7 @@ thumbnail: '../thumbnails/expo.png'
 tags:
   - expo
   - amplify
+  - react-native
 ---
 
 ![cover](https://i.imgur.com/G1PqZSM.png)
@@ -299,7 +300,7 @@ export default class App extends React.Component {
           style={styles.input}
           value={this.state.name}
           onChangeText={val => this.onChangeText('name', val)}
-          placeholder='Add a Todo'
+          placeholder="Add a Todo"
         />
         <TouchableOpacity onPress={this.addTodo} style={styles.buttonContainer}>
           <Text style={styles.buttonText}>Add +</Text>

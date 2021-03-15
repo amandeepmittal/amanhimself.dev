@@ -6,7 +6,8 @@ template: post
 thumbnail: '../thumbnails/expo.png'
 tags:
   - expo
-  - navigation
+  - react-navigation
+  - react-native
 ---
 
 ![cover_image](https://i.imgur.com/Tu5dv1l.png)
