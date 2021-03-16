@@ -812,4 +812,10 @@ Make sure to close the Expo client and then start it to see if the state from th
 
 And that's it! I hope you have found this tutorial helpful.
 
+## Further Reading
+
+- [Deep Dive Into React - Separation of Concerns by Andrei Calazans](https://www.g2i.co/blog/react-separation-of-concerns)
+
+---
+
 > Originally published at [Jscrambler.com](https://blog.jscrambler.com/how-to-use-redux-persist-in-react-native-with-asyncstorage/)

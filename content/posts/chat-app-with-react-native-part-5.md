@@ -451,11 +451,12 @@ In the [next part](https://amanhimself.dev/blog/chat-app-with-react-native-part-
 
 😺 **You can find the complete code here at this [GitHub repo](https://github.com/amandeepmittal/react-native-examples/tree/master/ChatApp).**
 
----
+## Further Reading
 
-👉 Here is a list of resources used in this tutorial:
-
+- [React Native’s New Architecture — Glossary of terms by Gabe Greenberg](https://www.g2i.co/blog/react-natives-new-architecture-glossary-of-terms)
 - [The Effect hook in React](https://reactjs.org/docs/hooks-effect.html)
 - [Debugging React Native apps](https://reactnative.dev/docs/debugging)
+
+---
 
 [Originally Published at Heartbeat.Fritz.ai](https://heartbeat.fritz.ai/chat-app-with-react-native-part-5-create-and-fetch-real-time-messages-with-firestore-86fb012edaf5)

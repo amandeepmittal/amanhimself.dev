@@ -369,13 +369,16 @@ Here is the final output:
 
 <img src="https://i.imgur.com/48csotO.gif" width="250" />
 
-## Conclusion
+## Further Reading
 
-That's it! We hope you have found this tutorial helpful. We are adding some references for you to learn more about using Location API in Expo and React Native apps, plus which different packages can be used for your particular use case:
+That's it! We hope you have found this tutorial helpful. We are adding some references for you to learn more about using Location API in Expo and React Native apps, plus which different packages can be used for your particular use case.
 
 - [Reverse Geocode from expo-location](https://docs.expo.io/versions/latest/sdk/location/#locationreversegeocodeasynclocation)
 - [@react-native-community/geolocation](https://github.com/react-native-geolocation/react-native-geolocation#README.md)
 - [react-native-geolocation-service](https://github.com/Agontuk/react-native-geolocation-service)
-- The source code is available at this [GitHub repo](https://github.com/amandeepmittal/react-native-examples/tree/master/expo-geolocation-example).
+- [Hiring a React Native Developer: What Should You Look For? by Jess Marranco](https://www.g2i.co/blog/hiring-a-react-native-developer)
+
+
+**The source code is available at this [GitHub repo](https://github.com/amandeepmittal/react-native-examples/tree/master/expo-geolocation-example).**
 
 > Originally Published at [Jscrambler's Blog](https://blog.jscrambler.com/how-to-use-react-native-geolocation-to-get-postal-address/)
