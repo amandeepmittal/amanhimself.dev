@@ -70,13 +70,16 @@ const PostTemplate = ({ data, pageContext }) => {
         <section>
           {/* Post Title */}
           <PostTitleWrapper>
-            <h1>{slug ? <Link to={`/blog/${slug}`}>{title}</Link> : title}</h1>
+            <h1>{title}</h1>
           </PostTitleWrapper>
           {/* Post Meta */}
           <PostMetaWrapper>
-            <p>
-              Last published on {date} | Reading Time {post.timeToRead}mins
-            </p>
+            <blockquote style={{ marginTop: '15px' }}>
+              Published on {date} | Reading Time {post.timeToRead} mins
+            </blockquote>
+            <span role="img" aria-label="tag emoji">
+              🔖:{' '}
+            </span>
             {tags.map(tag => (
               <Link key={tag} to={`/tags/${slugify(tag)}`}>
                 #{tag}{' '}
@@ -90,6 +93,14 @@ const PostTemplate = ({ data, pageContext }) => {
             __html: post.html
           }}
         />
+        <div
+          style={{
+            marginTop: 28,
+            marginBottom: 28
+          }}
+        >
+          <hr />
+        </div>
         {/* Post Footer */}
         <PostFooterWrapper>
           {previous && (
@@ -128,12 +139,20 @@ const PostTemplate = ({ data, pageContext }) => {
             </span>
           </LinkButton>
           <LinkButton to={config.newsletter} rel="prev">
-            Join {config.subscribersCount} devs and receive free tutorials{' '}
+            Join {config.subscribersCount} developers getting updates{' '}
             <span role="img" aria-label="love letter emoji">
               💌{' '}
             </span>
           </LinkButton>
         </PostFooterWrapper>
+        <div
+          style={{
+            marginTop: 28,
+            marginBottom: 28
+          }}
+        >
+          <hr />
+        </div>
         <PostFooterWrapper>
           <LinkButton to={sponsoredLink} rel="prev">
             <strong>Sponsored Link:</strong> DEV APIs is a complete APIs suite
