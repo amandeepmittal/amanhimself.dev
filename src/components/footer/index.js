@@ -79,7 +79,8 @@ const Footer = () => {
         <Instagram />
       </a>
       <p className="footer-content">
-        &copy;{`${new Date().getFullYear()} Aman Mittal · All Rights Reserved`}
+        &copy;&nbsp; 2019-
+        {`${new Date().getFullYear()} Aman Mittal · All Rights Reserved`}
       </p>
     </FooterWrapper>
   );
