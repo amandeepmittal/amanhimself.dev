@@ -3,7 +3,14 @@ import styled from 'styled-components';
 import { down } from 'styled-breakpoints';
 
 import { config } from '../../helpers';
-import { Twitter, GitHub, Devto, Medium, Instagram } from '../social-icons';
+import {
+  Twitter,
+  GitHub,
+  Devto,
+  Medium,
+  Instagram,
+  RSSIcon
+} from '../social-icons';
 
 const FooterWrapper = styled.footer`
   text-align: center;
@@ -77,6 +84,14 @@ const Footer = () => {
         aria-label="Instagram Account"
       >
         <Instagram />
+      </a>
+      <a
+        href="https://amanhimself.dev/rss.xml"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="RSS feed"
+      >
+        <RSSIcon />
       </a>
       <p className="footer-content">
         &copy;&nbsp; 2019-
