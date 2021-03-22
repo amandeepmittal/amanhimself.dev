@@ -140,7 +140,8 @@ const Hero = () => {
             <span role="img" aria-label="laptop emoji">
               💻{' '}
             </span>
-            software developer & technical writer
+            software developer, developer advocate{' '}
+            <a href="http://draftbit.com/">@draftbit</a> & tech writer
           </p>
         </HeroText>
       </HeroWrapper>
