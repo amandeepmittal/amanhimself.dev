@@ -70,6 +70,12 @@ const IndexPage = ({ data }) => {
             href="https://www.youtube.com/watch?v=YIRxTUCY0NQ"
             youtubeIcon
           />
+          <InfoCard
+            title="React Native Panel"
+            description="React Native Panel Discussion member at React Day Bangalore 2021 with Evan Bacon, Satyajit Sahoo & Sanket Sahu."
+            href="https://www.youtube.com/watch?v=HWx6nkLE5Po&t=14390s"
+            youtubeIcon
+          />
         </CenterEverything>
         <h2>
           <span role="img" aria-label="headphone emoji">
