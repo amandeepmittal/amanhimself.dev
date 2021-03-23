@@ -76,6 +76,11 @@ const IndexPage = ({ data }) => {
             href="https://www.youtube.com/watch?v=HWx6nkLE5Po&t=14390s"
             youtubeIcon
           />
+          <InfoCard
+            title="The Rise of No-Code and a Guide to Using Draftbit"
+            href="https://www.youtube.com/watch?v=sSbAuEcjjJA"
+            youtubeIcon
+          />
         </CenterEverything>
         <h2>
           <span role="img" aria-label="headphone emoji">

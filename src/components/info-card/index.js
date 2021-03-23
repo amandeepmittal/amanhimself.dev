@@ -65,7 +65,7 @@ const PostMetaWrapper = styled.div`
 const InfoCard = ({
   title,
   href,
-  description,
+  description = false,
   reactIcon = false,
   expoIcon = false,
   firebaseIcon = false,
