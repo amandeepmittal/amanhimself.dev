@@ -82,7 +82,7 @@ const BlogPage = ({ data }) => {
         <input
           type="text"
           aria-label="Search"
-          placeholder="Type to filter posts..."
+          placeholder="Search a post..."
           onChange={handleInputChange}
         />
         <AllTagsWrapper>
@@ -91,6 +91,7 @@ const BlogPage = ({ data }) => {
               <Link
                 key={tag.fieldValue}
                 to={`/tags/${slugify(tag.fieldValue)}`}
+                style={{ fontSize: '18px' }}
               >
                 #{tag.fieldValue} - {tag.totalCount} &nbsp;&nbsp;&nbsp;
               </Link>

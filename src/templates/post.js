@@ -75,10 +75,17 @@ const PostTemplate = ({ data, pageContext }) => {
           {/* Post Meta */}
           <PostMetaWrapper>
             <blockquote style={{ marginTop: '15px' }}>
-              Published on {date} | Reading Time {post.timeToRead} mins
+              <span role="img" aria-label="left hand pointer emoji">
+                🕒
+              </span>{' '}
+              Published on {date}{' '}
+              <span role="img" aria-label="left hand pointer emoji">
+                ⚡️
+              </span>{' '}
+              A {post.timeToRead} minutes read
             </blockquote>
             <span role="img" aria-label="tag emoji">
-              🔖:{' '}
+              🔖{' '}
             </span>
             {tags.map(tag => (
               <Link key={tag} to={`/tags/${slugify(tag)}`}>

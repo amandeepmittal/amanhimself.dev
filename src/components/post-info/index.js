@@ -80,9 +80,18 @@ const PostInfo = ({
 
         <PostMetaWrapper>
           <p>
-            Last published on {date} | Reading Time {timeToRead}
-            mins
+            <span role="img" aria-label="left hand pointer emoji">
+              🕒
+            </span>{' '}
+            Published on {date}{' '}
+            <span role="img" aria-label="left hand pointer emoji">
+              ⚡️
+            </span>{' '}
+            A {timeToRead} minutes read
           </p>
+          <span role="img" aria-label="tag emoji">
+            🔖{' '}
+          </span>
           {tags.map(tag => (
             <Link key={tag} to={`/tags/${slugify(tag)}`}>
               #{tag}{' '}

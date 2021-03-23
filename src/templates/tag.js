@@ -25,7 +25,7 @@ const TagTemplate = ({ data, pageContext }) => {
       <Helmet title={`Posts tagged: ${tag} | ${config.siteTitle}`} />
       <SEO />
       <TagMetaWrapper>
-        <h1>Posts tagged: {tag}</h1>
+        <h1>Posts tagged under: "{tag}"</h1>
         <h3>
           {totalCount} - {message}
         </h3>
