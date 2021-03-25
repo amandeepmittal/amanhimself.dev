@@ -115,7 +115,7 @@ const ITEM_WIDTH = width * 0.9;
 const ITEM_HEIGHT = ITEM_WIDTH * 0.9;
 ```
 
-The `HomeScreen` component is going to be a functional React component that accepts one prop called `navigation`. The `navigation prop will allow the navigation from the Home screen to the `DetailScreen`. In any React Native app, the React Navigation library provides a context that further gives access to the `navigation` object as a prop automatically. The prop contains various functions that dispatch navigation actions.
+The `HomeScreen` component is going to be a functional React component that accepts one prop called `navigation`. It will allow the navigation from the Home screen to the `DetailScreen`. In any React Native app, the React Navigation library provides a context that further gives access to the `navigation` object as a prop automatically. The prop contains various functions that dispatch navigation actions.
 
 ```js
 export default function HomeScreen({ navigation }) {
