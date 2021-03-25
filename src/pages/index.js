@@ -22,7 +22,8 @@ const IndexPage = ({ data }) => {
           <span role="img" aria-label="sparkle emoji">
             ✨{' '}
           </span>
-          If you only read one post, you should read one of the following:
+          If you want to read latest posts, you should read one of the
+          following:
         </h2>
         <CenterEverything>
           {posts.map(post => {

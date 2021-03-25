@@ -87,7 +87,7 @@ const PostInfo = ({
             <span role="img" aria-label="left hand pointer emoji">
               ⚡️
             </span>{' '}
-            A {timeToRead} minutes read
+            {timeToRead} minutes read
           </p>
           <span role="img" aria-label="tag emoji">
             🔖{' '}
