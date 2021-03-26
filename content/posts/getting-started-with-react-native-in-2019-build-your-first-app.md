@@ -5,7 +5,7 @@ slug: 'blog/getting-started-with-react-native-in-2019-build-your-first-app'
 date: 2019-01-04
 thumbnail: '../thumbnails/react.png'
 tags:
-  - react
+  - react-native
 ---
 
 ![cover](https://i.imgur.com/p0FiCt8.jpg)
