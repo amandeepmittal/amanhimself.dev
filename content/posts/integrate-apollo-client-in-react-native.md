@@ -255,7 +255,7 @@ import gql from 'graphql-tag';
 
 Export `FETCH_COIN_LIST` using a template from the `gql` tag. Add a query that is going to fetch the top cryptocurrency list from the API endpoint. Using the `@rest` directive Apollo manages how to parse this query.
 
-```js
+```graphql
 export const FETCH_COIN_LIST = gql`
   query FetchCoinsList {
     coinsList
