@@ -12,7 +12,7 @@ tags:
 
 With React Hooks growing usage, the ability to handle a component's state and side effects is now a common pattern in the functional component. React Redux offers a set of Hook APIs as an alternative to the omnipresent `connect()` High Order Component.
 
-In this tutorial, let us continue to build a simple React Native app where a user can save their notes and let use Redux Hooks API to manage state. This post is in continuation of the below previous post [here](https://heartbeat.fritz.ai/getting-started-with-react-native-and-expo-using-hooks-in-2020-fb466c25b04c).
+In this tutorial, let us continue to build a simple React Native app where a user can save their notes and let use Redux Hooks API to manage state. This post is in continuation of the previous post [here](https://heartbeat.fritz.ai/getting-started-with-react-native-and-expo-using-hooks-in-2020-fb466c25b04c).
 
 If you are familiar with the basics of React Hooks and how to implement them with a basic navigation setup, you can skip the previous post and can continue from this one.
 
