@@ -74,7 +74,7 @@ const IndexPage = ({ data }) => {
           <InfoCard
             title="React Native Panel"
             description="React Native Panel Discussion member at React Day Bangalore 2021 with Evan Bacon, Satyajit Sahoo & Sanket Sahu."
-            href="https://www.youtube.com/watch?v=HWx6nkLE5Po&t=14390s"
+            href="https://www.youtube.com/watch?v=_HKzhe8f47Y"
             youtubeIcon
           />
           <InfoCard
