@@ -8,6 +8,8 @@ tags:
   - node
 ---
 
+> **UPDATE:** Up to date version of this post is at [How to use ES6 import syntax in Node.js](https://amanhimself.dev/blog/how-to-use-es6-import-syntax-in-node/).
+
 I don’t always like to try different versions of setting up a Nodejs application. Don’t get me wrong — I believe in experimenting with one’s set up, which can lead to learning new things. But there is a limit. Recently, I find myself more often going to set up a Nodejs server to develop a RESTful API. Furthermore, the server has to work with the client in a way that the client can consume the API easily. For the client-side development, I am using ReactJS.
 
 With the context switching between the client and the server I often find myself making errors during the process. One of the most common is using `import` statements in Nodejs files. This leads to a syntax error called `Unexpected identifier`. Even after switching to Nodejs `v10` LTS on my local machine, I find the lack of using ES6 modules rather disappointing.
