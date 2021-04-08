@@ -8,9 +8,11 @@ tags:
   - node
 ---
 
-![cover_image](https://i.imgur.com/vUgSi7X.png)
+![cover_image](https://i.imgur.com/mztPVQI.png)
 
-A module is a JavaScript file that exports one or more values. The exportable value can be a variable, an object, or a function.
+> Cover image by [Jake Weirick](https://unsplash.com/photos/Q_RBVFFXR_g)
+
+A module is a JavaScript file that exports one or more values. The exported value can be a variable, an object, or a function.
 
 An ES6 import syntax allows importing modules exported from a different JavaScript file. It is a common pattern to use modules across React and React Native applications. The syntax is composed of the following ES module standard:
 
