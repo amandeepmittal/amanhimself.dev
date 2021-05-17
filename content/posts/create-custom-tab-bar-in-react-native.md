@@ -570,4 +570,4 @@ We have discussed only one scenario of customizing the bottom tab bar. The main 
 
 ---
 
-#### Originally Published at **[Crowfbotics's Blog](https://blog.crowdbotics.com/how-to-create-a-custom-tab-bar-in-react-native/)**.
+#### Originally Published at **[Crowdbotics's Blog](https://blog.crowdbotics.com/how-to-create-a-custom-tab-bar-in-react-native/)**.
