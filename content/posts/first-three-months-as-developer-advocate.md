@@ -56,7 +56,7 @@ One challenge that I constantly face is explaining the semantics of the product 
 
 Draftbit is a visual tool to build a mobile app. It is based on React Native and Expo's ecosystem, but the end-user does have to know about that and there is no requirement for them to know React Native framework.
 
-I've spent a lot of time in the first three months on a feature called [Custom Code](https://docs.draftbit.com/docs/custom-code). It is an advanced feature where an individual can utilize open-source libraries available with Expo and React Native to achieve custom features like integrating a Camera within their app or utilize Firebase Authentication.
+I've spent a lot of time in the first three months on a feature called [Custom Code](https://docs.draftbit.com/docs/custom-code). It is an advanced feature where an individual can utilize open-source libraries available with Expo and React Native to achieve custom functionalities like integrating a Camera within their app or utilize Firebase Authentication.
 
 This requires me to create demos and write guides in a way that an individual from non-technical background or non React Native experience can understand with little effort. One way I am trying to tackle is to explain concepts without including too much technical jargon.
 
