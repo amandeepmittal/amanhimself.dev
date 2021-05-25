@@ -78,4 +78,4 @@ If you want to work with me, check out [draftbit.com/jobs](https://draftbit.com/
 
 If you want to talk about Draftbit, have questions, or React Native, or DevRel, please DM me on [Twitter](https://twitter.com/amanhimself).
 
-To get notified about my future articles, make sure you subscribe my [personal newsletter here](https://amanhimself.substack.com/).
+💌 To get notified about my future articles, subscribe my [personal newsletter here](https://amanhimself.substack.com/).
