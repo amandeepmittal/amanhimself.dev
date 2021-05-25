@@ -10,7 +10,11 @@ tags:
 
 ![cover_image](https://i.imgur.com/mztPVQI.png)
 
-> Cover image by [Jake Weirick](https://unsplash.com/photos/Q_RBVFFXR_g)
+<blockquote>
+Photo by <a href="https://unsplash.com/@weirick?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Jake Weirick</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+</blockquote>
+
+<br />
 
 A module is a JavaScript file that exports one or more values. The exported value can be a variable, an object, or a function.
 
