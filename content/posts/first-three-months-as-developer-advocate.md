@@ -54,11 +54,11 @@ Overall, the experience has been delightful. I have huge gratitude to express fo
 
 One challenge that I constantly face is explaining the semantics of the product from a non-engineering point of view, in words.
 
-Draftbit is a visual tool to build a mobile app. It is based on React Native and Expo's ecosystem, but the end-user does have to know about that and there is no requirement for them to know React Native framework.
+Draftbit is a visual tool to build a mobile app. It is uses React Native and Expo's ecosystem under the hood. The end-user does have to know about that and there is no requirement for them to know React Native framework.
 
 I've spent a lot of time in the first three months on a feature called [Custom Code](https://docs.draftbit.com/docs/custom-code). It is an advanced feature where an individual can utilize open-source libraries available with Expo and React Native to achieve custom functionalities like integrating a Camera within their app or utilize Firebase Authentication.
 
-This requires me to create demos and write guides in a way that an individual from non-technical background or non React Native experience can understand with little effort. One way I am trying to tackle is to explain concepts without including too much technical jargon.
+This requires me to create demos and write guides in a way that an individual from non-technical background or having no React Native experience can understand with little effort. One way I am trying to tackle is to explain concepts without including too much technical jargon.
 
 If I cannot avoid mentioning something that I think is too technical, I try to provide references or links to documentation wherever necessary to provide a better context (or try improve the internal documentation). Including GIFs of the flow of work or documenting steps to achieve the desired result is another thing that has become a part of my flow.
 
