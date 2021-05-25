@@ -46,7 +46,7 @@ Since joining, a common question I get asked is how my day as a Developer Advoca
 
 It depends on some factors as to the kind of thing I am working on, in the following week. Usually, I spend a huge amount of time creating guides and tutorials for various use cases or features that get released. At times, I am trying to help community members to resolve their issues.
 
-Being an individual from a different time zone is one of the reasons that I had missed out on some of the exciting opportunities. But here, it is a welcoming aspect. I think it is essential to have open mind about since a lot of companies are being remote friendly these days.
+Being an person from a different/Eastern time zone is one of the reasons that I had missed out on some of the exciting opportunities in past. But here, it is a welcoming aspect. I think it is essential to have open mind about since a lot of companies are being remote friendly these days.
 
 Overall, the experience has been delightful. I have huge gratitude to express for the entire team at Draftbit. They are friendly, have tons of experience, are willing to offer feedback and helpful suggestions, and allow me to express my own ideas (which I think is vital to be a part of something and be excited about it at the same time).
 
