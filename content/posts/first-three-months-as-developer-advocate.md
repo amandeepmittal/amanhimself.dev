@@ -24,7 +24,7 @@ The reason I say this is because my background is not in Developer Advocacy or R
 
 But for the past few years, I have been writing blog posts and tutorials. Trying to document what I am learning in a way I could go back and read the stuff myself or refer to someone else when required. I do not have an extraordinary memory and like to take notes when I am learning. I also enjoy the process to post blog posts. It doesn't feel like work.
 
-## What is a Developer Advocate
+## What is a Developer Advocate?
 
 In 2019, when I first got to know about Draftbit at [App.js](https://appjs.co/) conf, I was excited to learn that there's a world beyond building mobile apps inside VSCode (insert your preferred editor here). At that time though I did not know what exactly a Dev Advocate is.
 
@@ -75,3 +75,7 @@ Here is me talking about Custom Code during Draftbit office hours:
 Providing a value is vital and it is with this mindset I try to approach things. Working as a Developer Advocate, I get to do it more often and it is fun!
 
 If you want to work with me, check out [draftbit.com/jobs](https://draftbit.com/jobs#openings) to see if there's a role that is exciting to you.
+
+If you want to talk about Draftbit, have questions, or React Native, or DevRel, please DM me on [Twitter](https://twitter.com/amanhimself).
+
+To get notified about my future articles, make sure you subscribe my [personal newsletter here](https://amanhimself.substack.com/).
