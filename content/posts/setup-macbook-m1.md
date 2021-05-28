@@ -349,7 +349,7 @@ I use VSCode editor for both writing code and writing blog posts. Thus, the list
 
 ## For React Native Development
 
-- install [Watchman] to watch changes in the filesystem using the command: `brew install watchman`.
+- install [Watchman](https://facebook.github.io/watchman/) to watch changes in the filesystem using the command: `brew install watchman`.
 - install Java Development Kit using the command: `brew install --cask adoptopenjdk/openjdk/adoptopenjdk8`.
 - install [Android Studio](https://developer.android.com/studio?gclid=CjwKCAiA9bmABhBbEiwASb35V7JvsI6uP_3wVfdVLmGE5ysvvzOKqy9EB0x1hs8-itZwlP66bOKpxxoCHqAQAvD_BwE&gclsrc=aw.ds)
   - Then install Android SDK v29.
