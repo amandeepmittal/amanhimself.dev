@@ -11,7 +11,7 @@ tags:
 
 ![cover](https://i.imgur.com/jN0o3ij.png)
 
-[HarperDB Cloud](https://harperdb.io/harperdb-cloud-get-started-today/) is a database service that supports both SQL and NoSQL queries for CRUD operations. It needs minimal configuration to get started and its realm is not only limited to build REST APIs with a server-side technology such as Node.js.
+[HarperDB Cloud](https://harperdb.io/developers/get-started/?utm_source=amanmittal) is a database service that supports both SQL and NoSQL queries for CRUD operations. It needs minimal configuration to get started and its realm is not only limited to build REST APIs with a server-side technology such as Node.js.
 
 HarperDB offers a way to access the database cloud instance directly in your client-side application. It has a built-in HTTP API that allows us to query data directly.
 
@@ -133,8 +133,8 @@ import { useHarperDB } from 'use-harperdb';
 
 function App() {
   return (
-    <div className='App'>
-      <header className='App-header'>
+    <div className="App">
+      <header className="App-header">
         <h2>Starbucks Outlets</h2>
         <table>
           <thead style={{ marginBottom: '20px' }}>
@@ -195,8 +195,8 @@ function App() {
   }
 
   return (
-    <div className='App'>
-      <header className='App-header'>
+    <div className="App">
+      <header className="App-header">
         <h2>Starbucks Outlets</h2>
         <table>
           <thead style={{ marginBottom: '20px' }}>
@@ -268,3 +268,8 @@ Here is the output after this step:
 ## Conclusion
 
 Hooks are a great addition in the React world and they certainly help us write less code. The objective of this post was to introduce you to the `useHarperDB` hook and how to integrate it into a React app to fetch the data from a database hosted in the cloud.
+
+**Resources & Further Reading:**
+
+- [HarperDB documentation](https://harperdb.io/developers/documentation/overview/?utm_source=amanmittal)
+- [HarperDB Developer examples](https://harperdb.io/developers/developer-examples/?utm_source=amanmittal) includes tutorials on React, Websocket, Python, etc.

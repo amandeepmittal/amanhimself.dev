@@ -13,7 +13,7 @@ tags:
 
 If you are building an application using Node.js, it can get a little overwhelming since there are a variety of databases to choose from and different ways to build APIs. One way to reduce development time and focus on the problem you are trying to solve is to use Database as a service to store the data. The advantage of this approach is to use a cloud database system without purchasing hardware which can be cost and time effective.
 
-One such database service is [HarperDB Cloud](https://harperdb.io/harperdb-cloud-get-started-today/). To build REST APIs rapidly this service allows us to perform all database operations using a single endpoint. It supports a variety of programming languages such as JavaScript, Java, Python, and so on. Some of the features of HarperDB are the following:
+One such database service is [HarperDB Cloud](https://harperdb.io/developers/get-started/?utm_source=amanmittal). To build REST APIs rapidly this service allows us to perform all database operations using a single endpoint. It supports a variety of programming languages such as JavaScript, Java, Python, and so on. Some of the features of HarperDB are the following:
 
 - single endpoint API
 - allow JSON, CSVs file insertions
@@ -31,7 +31,7 @@ Before you begin this tutorial, you’re going to need the following:
 - Access to a package manager such as npm or yarn
 - Basic JavaScript and ES6 knowledge
 - Access to a REST API client such as [Postman](https://www.postman.com/) or [Insomnia](https://insomnia.rest/)
-- Access to a [HarperDB Cloud](https://harperdb.io/harperdb-cloud-get-started-today/) instance (_free tier_)
+- Access to a [HarperDB Cloud](https://harperdb.io/developers/get-started/?utm_source=amanmittal) instance (_free tier_)
 
 To continue with the rest of the tutorial, please make sure you have an account with HarperDB Cloud and are logged in.
 
@@ -400,8 +400,9 @@ I hope this post does convey you to try the capabilities of HarperDB. I personal
 
 **Resources & Further Reading:**
 
-- [Official API reference](https://docs.harperdb.io/?version=latest#adfe7be6-31b6-4f58-9155-e880d4114855)
 - [Are hash attributes case sensitive in HarperDB?](https://harperdbhelp.zendesk.com/hc/en-us/articles/115003081994-Are-Hash-Attributes-Case-Sensitive-)
 - [HarperDB SQL Guide](https://harperdbhelp.zendesk.com/hc/en-us/articles/115002146754-HarperDB-SQL-Guide)
 - [Harperive](https://github.com/chandan-24/Harperive)
 - If you are looking to learn more about creating [REST APIs with Node.js and MySQL, checkout post the here](https://geshan.com.np/blog/2020/11/nodejs-mysql-tutorial/).
+- [HarperDB documentation](https://harperdb.io/developers/documentation/overview/?utm_source=amanmittal)
+- [HarperDB Developer examples](https://harperdb.io/developers/developer-examples/?utm_source=amanmittal) includes tutorials on React, Websocket, Python, etc.
