@@ -224,7 +224,7 @@ I am still using the same VSCode configuration from my previous setup:
   "editor.tabSize": 2,
   "editor.fontSize": 13,
   "editor.fontFamily": "Jetbrains Mono, 'Courier New', monospace",
-  "workbench.colorTheme": "morgan.codes",
+  "workbench.colorTheme": "fairyfloss",
   "workbench.iconTheme": "material-icon-theme",
   "editor.minimap.enabled": false,
   "editor.cursorBlinking": "expand",
@@ -256,7 +256,15 @@ I am still using the same VSCode configuration from my previous setup:
   "explorer.openEditors.visible": 0,
 
   // Integrated Terminal
-  "terminal.integrated.shell.osx": "zsh",
+   "terminal.integrated.profiles.osx": {
+    "bash": {
+      "path": "bash",
+      "icon": "terminal-bash"
+    },
+    "zsh": {
+      "path": "zsh"
+    }
+  },
   "terminal.external.osxExec": "iTerm.app",
   "terminal.integrated.fontSize": 12,
 
@@ -272,7 +280,6 @@ I am still using the same VSCode configuration from my previous setup:
     }
   },
   "npm-intellisense.importES6": true,
-  "typescript.suggest.paths": false,
   // Prettier
   "prettier.singleQuote": true,
   "prettier.jsxSingleQuote": true,
@@ -296,6 +303,20 @@ I am still using the same VSCode configuration from my previous setup:
   "[markdown]": {
     "editor.quickSuggestions": true
   },
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  // for fairyFloss theme only
+  "editor.tokenColorCustomizations": {
+    "[fairyfloss]": {
+      "comments": {
+        "foreground": "#8d99ae"
+      }
+    }
+  }
 ```
 
 ### Themes
@@ -304,7 +325,7 @@ I am still using the same VSCode configuration from my previous setup:
 
 I usually like to switch between a dark and a light theme.
 
-- For the dark theme where I spent most of my time, I am currently using [morgan.codes-theme](https://marketplace.visualstudio.com/items?itemName=morgan-codes.morgan-codes-vscode-theme).
+- For the dark theme where I spent most of my time, I am was previously using [morgan.codes-theme](https://marketplace.visualstudio.com/items?itemName=morgan-codes.morgan-codes-vscode-theme) but now I am using [fairyFloss](https://marketplace.visualstudio.com/items?itemName=nopjmp.fairyfloss).
 - For the light version, I am using the theme called Quiet Light which comes pre-installed with a new VSCode installation.
 - For file icons, I love [Material-Icon-Theme](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme).
 - For terminal prompt, I use [Spaceship ZSH](https://github.com/denysdovhan/spaceship-prompt).
