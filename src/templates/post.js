@@ -160,7 +160,8 @@ const PostTemplate = ({ data, pageContext }) => {
         >
           <hr />
         </div>
-        <PostFooterWrapper>
+        {/* Use below PostFooterWrapper + LinkButton to display Sponsored Links */}
+        {/* <PostFooterWrapper>
           <LinkButton to={sponsoredLink} rel="prev">
             <strong>Sponsored Link:</strong> DEV APIs is a complete APIs suite
             for your software development, and business to power-up. Click here{' '}
@@ -169,7 +170,7 @@ const PostTemplate = ({ data, pageContext }) => {
             </span>
             <img src={banner} alt="sponsored link banner" />
           </LinkButton>
-        </PostFooterWrapper>
+        </PostFooterWrapper> */}
       </PostWrapper>
     </Layout>
   );
