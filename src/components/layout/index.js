@@ -8,7 +8,7 @@ import Footer from '../footer';
 
 const Container = styled.div`
   min-height: 100vh;
-  max-width: 640px;
+  /* max-width: 640px; */
   margin: auto;
   display: grid;
   grid-template-rows: auto 1fr auto;
@@ -19,7 +19,7 @@ const Content = styled.main`
   box-sizing: border-box;
   width: 100%;
   display: grid;
-  max-width: 640px;
+  max-width: 800px;
   justify-self: center;
   padding: 0rem 1.25rem;
 `;

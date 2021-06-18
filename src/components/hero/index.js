@@ -5,13 +5,15 @@ import { StaticImage } from 'gatsby-plugin-image';
 
 import { config } from '../../helpers';
 import { Twitter, GitHub, Devto, Medium, Instagram } from '../social-icons';
+import Divider from '../divider';
 
 const HeroWrapper = styled.div`
-  align-self: center;
-  justify-self: center;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, auto);
   align-items: center;
+  border-radius: 4px;
+  border: 2px solid palevioletred;
+  padding: 10px;
   ${down('sm')} {
     grid-template-columns: 1fr;
     text-align: center;
@@ -32,8 +34,8 @@ const HeroText = styled.div`
     color: ${({ theme }) => theme.colors.primary};
   }
   p {
-    font-size: 1.5rem;
-    margin-top: 0.25rem;
+    font-size: 1.2rem;
+    margin-top: 0.15rem;
   }
 `;
 
@@ -84,7 +86,7 @@ const Hero = () => {
             <span role="img" aria-label="wave emoji">
               👋{' '}
             </span>
-            Hey, I'm Aman <span>also know as </span>
+            Hey, I'm Aman <span>a.k.a. </span>
             <a
               href={config.twitter}
               target="_blank"
@@ -94,6 +96,17 @@ const Hero = () => {
               @amanhimself
             </a>
           </h2>
+          <p>
+            <span role="img" aria-label="laptop emoji">
+              💻{' '}
+            </span>
+            software developer,{' '}
+            <span role="img" aria-label="avocado emoji">
+              🥑{' '}
+            </span>
+            developer advocate <a href="http://draftbit.com/">@draftbit</a> &
+            tech writer
+          </p>
           <SocialIconsWrapper>
             <a
               href={config.twitter}
@@ -136,26 +149,24 @@ const Hero = () => {
               <Instagram />
             </a>
           </SocialIconsWrapper>
-          <p>
-            <span role="img" aria-label="laptop emoji">
-              💻{' '}
-            </span>
-            software developer, developer advocate{' '}
-            <a href="http://draftbit.com/">@draftbit</a> & tech writer
-          </p>
         </HeroText>
       </HeroWrapper>
       <ContentWrapper>
-        <p>Thanks for dropping by!</p>
         <p>
-          This website is a collection of all posts I've written in my journey
-          of learning web and mobile development. You can read the{' '}
+          <span role="img" aria-label="seeding emoji">
+            🌱{' '}
+          </span>
+          This is a personal blog where I write about things like JavaScript,
+          Node, React, React Native and Expo, Developer Advocacy and Tech
+          writing.{' '}
+        </p>
+        <p>
           <a
             href="https://amanhimself.dev/blog"
             rel="noopener noreferrer"
             aria-label="Blog Link"
           >
-            blog here
+            Read the blog here
           </a>{' '}
           or learn more{' '}
           <a
@@ -168,6 +179,9 @@ const Hero = () => {
           .
         </p>
         <p>
+          <span role="img" aria-label="love letter emoji">
+            💌{' '}
+          </span>
           I send out an email when I create something new. For more info check
           out the{' '}
           <a

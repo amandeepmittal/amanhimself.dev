@@ -55,6 +55,7 @@ const PostCard = styled.div`
 `;
 
 const PostMetaWrapper = styled.div`
+  font-size: 1.25rem;
   margin-top: 0.5rem;
   p {
     margin: 0rem;

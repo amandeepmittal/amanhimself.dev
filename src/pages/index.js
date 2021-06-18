@@ -18,35 +18,35 @@ const IndexPage = ({ data }) => {
       <SEO />
       <Hero />
       <div>
-        <h2>
-          <span role="img" aria-label="sparkle emoji">
-            ✨{' '}
-          </span>
-          If you want to read latest posts, you should read one of the
-          following:
-        </h2>
         <CenterEverything>
+          <h2>
+            <span role="img" aria-label="sparkle emoji">
+              ✨{' '}
+            </span>
+            If you want to read latest posts, you should read one of the
+            following:
+          </h2>
           {posts.map(post => {
             return <PostInfo post={post} />;
           })}
         </CenterEverything>
-        <h2>
-          <span role="img" aria-label="compass emoji">
-            🧭{' '}
-          </span>
-          Some of the open source projects I've worked on:
-        </h2>
         <CenterEverything>
+          <h2>
+            <span role="img" aria-label="compass emoji">
+              🧭{' '}
+            </span>
+            Some of the open source projects I've worked on:
+          </h2>
           <InfoCard
             title="Quarantine Pro app"
-            description="Built using React Native and Expo, about how long you have been quarantining. As a user, you input the date when you started isolating and the app is going to display a fun message to tell you how far you have come in the quarantine 'game'."
+            description="Built using React Native and Expo, it's a small game that displays a func message on how long you have been quarantining."
             href="https://expo.io/@amanhimself/quarantinepro"
             expoIcon
             reactIcon
           />
           <InfoCard
             title="Expo Firebase Starter"
-            description="Currently building and maintaining a quicker way to start with Expo + Firebase projects. Based on latest Expo SDK, provides. Part of expo-community."
+            description="A quicker way to start with Expo + Firebase JS projects. Based on latest Expo SDK, provides. Part of expo-community."
             href="https://github.com/expo-community/expo-firebase-starter"
             expoIcon
             firebaseIcon
@@ -58,13 +58,13 @@ const IndexPage = ({ data }) => {
             githubIcon
           />
         </CenterEverything>
-        <h2>
-          <span role="img" aria-label="speech bubble emoji">
-            💬{' '}
-          </span>
-          Speaking:
-        </h2>
         <CenterEverything>
+          <h2>
+            <span role="img" aria-label="speech bubble emoji">
+              💬{' '}
+            </span>
+            Speaking:
+          </h2>
           <InfoCard
             title="How to write consistently?"
             description="At Hashnode's Technical Writing Bootcamp, a free virtual Bootcamp to help beginner technical writers to improve their writing skill."
@@ -83,13 +83,13 @@ const IndexPage = ({ data }) => {
             youtubeIcon
           />
         </CenterEverything>
-        <h2>
-          <span role="img" aria-label="headphone emoji">
-            🎧{' '}
-          </span>
-          Guest Podcast Appearances & Interviews:
-        </h2>
         <CenterEverything>
+          <h2>
+            <span role="img" aria-label="headphone emoji">
+              🎧{' '}
+            </span>
+            Guest Podcast Appearances & Interviews:
+          </h2>
           <InfoCard
             title="React Round Up 006"
             description="Setting Up and Getting Used to Gatsby with Charles Max Wood, Cory House, Tara Manicsic and Kent C Dodds."
@@ -102,15 +102,15 @@ const IndexPage = ({ data }) => {
             href="https://www.hoss.com/blog/dev-bites-development-trends-on-the-horizon-aman-mittal"
           />
         </CenterEverything>
-        <h2>
-          <span role="img" aria-label="laptop emoji">
-            💻{' '}
-          </span>
-          Uses:
-        </h2>
         <CenterEverything>
+          <h2>
+            <span role="img" aria-label="laptop emoji">
+              💻{' '}
+            </span>
+            Uses:
+          </h2>
           <div>
-            <ul style={{ listStyleType: 'none' }}>
+            <ul style={{ listStyleType: 'none', fontSize: '1.2rem' }}>
               <li>Computer: MacBook Pro 2020</li>
               <li>Editor: Visual Studio Code</li>
               <li>Static Site Generator: Gatsbyjs</li>
@@ -122,14 +122,19 @@ const IndexPage = ({ data }) => {
             </ul>
           </div>
         </CenterEverything>
-        <h2>
-          <span role="img" aria-label="aeroplane emoji">
-            ✈️{' '}
-          </span>
-          Countries I've Visited (8):
-        </h2>
+
         <CenterEverything>
-          <span role="img" aria-label="flag emojis">
+          <h2>
+            <span role="img" aria-label="aeroplane emoji">
+              ✈️{' '}
+            </span>
+            Countries I've Visited (8):
+          </h2>
+          <span
+            role="img"
+            aria-label="flag emojis"
+            style={{ fontSize: '1.2rem' }}
+          >
             I love to travel: 🇦🇪 🇵🇱 🇨🇿 🇦🇹 🇸🇰 🇩🇪 🇧🇪 🇳🇱
           </span>
         </CenterEverything>
