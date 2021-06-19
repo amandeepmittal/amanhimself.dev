@@ -15,7 +15,7 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <Helmet title={`Home | ${config.username}`} />
-      <SEO />
+      <SEO customDescription="Aman Mittal" />
       <Hero />
       <div>
         <CenterEverything>

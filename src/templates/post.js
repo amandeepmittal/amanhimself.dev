@@ -6,7 +6,7 @@ import styled from 'styled-components';
 import { Layout, SEO, LinkButton } from '../components';
 import { config, slugify } from '../helpers';
 import { link } from '../styles/partials';
-import banner from '../images/dev-apis-banner.png';
+// import banner from '../images/dev-apis-banner.png';
 
 const PostWrapper = styled.article`
   overflow: auto;
@@ -60,7 +60,7 @@ const PostTemplate = ({ data, pageContext }) => {
 
   const { slug, title, date, tags } = post.frontmatter;
 
-  const sponsoredLink = 'https://nocodeapi.com/devapis';
+  // const sponsoredLink = 'https://nocodeapi.com/devapis';
 
   return (
     <Layout>
