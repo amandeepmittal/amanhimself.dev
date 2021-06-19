@@ -40,6 +40,7 @@ const PostMetaWrapper = styled.div`
 
 const PostBodyWrapper = styled.section`
   margin: 2.25rem 0rem;
+  font-size: 1.15rem;
   ${link}
   .twitter-tweet {
     margin: 0 auto;
