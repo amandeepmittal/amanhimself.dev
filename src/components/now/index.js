@@ -6,6 +6,7 @@ import { link } from '../../styles/partials';
 
 const ContentWrapper = styled.div`
   ${link}
+  font-size: 1.15rem;
 `;
 
 const Now = ({ data }) => {
