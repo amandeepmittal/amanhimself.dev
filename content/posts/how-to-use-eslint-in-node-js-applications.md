@@ -6,7 +6,6 @@ thumbnail: '../thumbnails/node.png'
 slug: 'blog/how-to-use-eslint-in-node-js-applications'
 tags:
   - node
-  - eslint
   - tools
 ---
 
