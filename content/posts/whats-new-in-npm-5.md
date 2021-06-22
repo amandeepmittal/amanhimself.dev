@@ -5,7 +5,6 @@ template: post
 thumbnail: '../thumbnails/node.png'
 slug: 'blog/whats-new-in-npm-5'
 tags:
-  - npm
   - tools
 ---
 

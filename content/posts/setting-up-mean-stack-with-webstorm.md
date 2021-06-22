@@ -5,7 +5,6 @@ template: post
 thumbnail: '../thumbnails/node.png'
 slug: 'blog/setting-up-mean-stack-with-webstorm'
 tags:
-  - nodejs
   - tools
 ---
 

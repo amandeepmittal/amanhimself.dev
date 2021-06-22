@@ -6,7 +6,6 @@ thumbnail: '../thumbnails/node.png'
 slug: 'blog/migrating-from-expressjs-4-to-5'
 tags:
   - node
-  - expressjs
 ---
 
 ExpressJS 5.0 is in alpha release stage but I believe we’ll be adding it as a dependency in our `package.json` files in matter of no time. This article gives some tips regarding the way we are writing code using this framework and how we should adapt the new changes even if we are using ExpressJS _version 4.0_.

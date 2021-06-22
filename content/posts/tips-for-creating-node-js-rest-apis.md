@@ -6,7 +6,6 @@ thumbnail: '../thumbnails/node.png'
 slug: 'blog/tips-for-creating-node-js-rest-apis'
 tags:
   - node
-  - rest-api
 ---
 
 ![cover_image](https://miro.medium.com/max/4000/1*aeWo6e6FC8InJwBl3TmpDw.jpeg)
