@@ -34,6 +34,7 @@ const Wrapper = styled.div`
 
 const AllTagsWrapper = styled.div`
   margin-bottom: 2rem;
+  line-height: 2rem;
 `;
 
 const BlogPage = ({ data }) => {
@@ -78,7 +79,7 @@ const BlogPage = ({ data }) => {
           Blog - Posts count:{' '}
           <span className="posts-number">{Object.keys(posts).length}</span>
         </h1>
-        <p>A collection of articles, tutorials, and writings.</p>
+        <p>A collection of articles, how-to guides, tutorials, and writings.</p>
         <input
           type="text"
           aria-label="Search"
