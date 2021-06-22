@@ -92,7 +92,9 @@ const BlogPage = ({ data }) => {
               <Link
                 key={tag.fieldValue}
                 to={`/tags/${slugify(tag.fieldValue)}`}
-                style={{ fontSize: '18px' }}
+                style={{
+                  fontSize: '18px'
+                }}
               >
                 #{tag.fieldValue} - {tag.totalCount} &nbsp;&nbsp;&nbsp;
               </Link>
