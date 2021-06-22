@@ -5,7 +5,6 @@ template: post
 thumbnail: '../thumbnails/atom.png'
 slug: 'blog/atom-an-editor-of-21st-century'
 tags:
-  - atom
   - tools
 ---
 
