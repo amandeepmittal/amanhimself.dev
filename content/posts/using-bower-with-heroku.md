@@ -5,7 +5,6 @@ template: post
 thumbnail: '../thumbnails/heroku.png'
 slug: 'blog/using-bower-with-herokus'
 tags:
-  - heroku
   - tools
 ---
 
