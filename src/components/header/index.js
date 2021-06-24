@@ -10,7 +10,7 @@ const StyledNav = styled.nav`
   display: grid;
   grid-auto-flow: column;
   align-items: center;
-  column-gap: 1.25rem;
+  column-gap: 0.75rem;
   margin-top: 1rem;
   ${down('sm')} {
     font-size: 14px;
