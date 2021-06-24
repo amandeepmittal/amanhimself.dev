@@ -76,10 +76,21 @@ const BlogPage = ({ data }) => {
           <span role="img" aria-label="plant emoji">
             🌱{' '}
           </span>
-          Blog - Posts count:{' '}
-          <span className="posts-number">{Object.keys(posts).length}</span>
+          Blog
         </h1>
-        <p>A collection of articles, how-to guides, tutorials, and writings.</p>
+        <p>
+          I've been writing online since 2017, mostly on web and mobile
+          development. In total, I've written{' '}
+          <span
+            className="posts-number"
+            style={{ fontWeight: 'bold', fontSize: '1.25rem' }}
+          >
+            {Object.keys(posts).length}
+          </span>{' '}
+          articles on internet. This site is a collection of articles I've
+          published here or elsewhere.
+        </p>
+        <p>Use the search below to filter by title.</p>
         <input
           type="text"
           aria-label="Search"
