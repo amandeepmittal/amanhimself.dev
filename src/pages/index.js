@@ -148,7 +148,7 @@ export const blogPageQuery = graphql`
     posts: allMarkdownRemark(
       filter: { fileAbsolutePath: { regex: "/content/posts/" } }
       sort: { fields: frontmatter___date, order: DESC }
-      limit: 3
+      limit: 10
     ) {
       nodes {
         id
