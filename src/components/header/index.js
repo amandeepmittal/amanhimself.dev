@@ -53,11 +53,11 @@ const Header = () => {
         <span>|</span>
         <NavLink to="/speaking">Speaking</NavLink>
         <span>|</span>
+        <NavLink to="/uses">Uses</NavLink>
+        <span>|</span>
         <NavLink to={config.newsletter}>Newsletter</NavLink>
         <span>|</span>
         <NavLink to="/contact">Contact</NavLink>
-        <span>|</span>
-        <NavLink to="/uses">Uses</NavLink>
         <span>|</span>
         <NavLink to={config.kofi}>
           Buy me coffee{' '}
