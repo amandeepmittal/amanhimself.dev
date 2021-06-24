@@ -119,12 +119,12 @@ const PostTemplate = ({ data, pageContext }) => {
               Previous post
             </LinkButton>
           )}
-          <LinkButton to={config.kofi} rel="prev">
+          {/* <LinkButton to={config.kofi} rel="prev">
             Buy me coffee{' '}
             <span role="img" aria-label="coffee emoji">
               ☕️{' '}
             </span>
-          </LinkButton>
+          </LinkButton> */}
           {next && (
             <LinkButton to={next.fields.slug} rel="prev">
               Next post{' '}
