@@ -161,6 +161,19 @@ const Hero = () => {
           writing.{' '}
         </p>
         <p>
+          I've been writing online since 2017, mostly on web and mobile
+          development. In total, I've written over{' '}
+          <span
+            className="posts-number"
+            style={{ fontWeight: 'bold', fontSize: '1.25rem' }}
+          >
+            150
+          </span>{' '}
+          articles for more than 20+ publications and organizations across the
+          internet. This site is a collection of articles I've published here or
+          elsewhere.
+        </p>
+        <p>
           <a
             href="https://amanhimself.dev/blog"
             rel="noopener noreferrer"
