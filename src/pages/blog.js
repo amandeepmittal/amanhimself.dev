@@ -90,7 +90,7 @@ const BlogPage = ({ data }) => {
           articles on internet. This site is a collection of articles I've
           published here or elsewhere.
         </p>
-        <p>Use the search below to filter by title.</p>
+        <p>Use the search below to filter by title, topic or tag.</p>
         <input
           type="text"
           aria-label="Search"
