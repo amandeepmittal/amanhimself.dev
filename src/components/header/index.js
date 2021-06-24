@@ -51,6 +51,8 @@ const Header = () => {
         <span>|</span>
         <NavLink to="/about">About</NavLink>
         <span>|</span>
+        <NavLink to="/speaking">Speaking</NavLink>
+        <span>|</span>
         <NavLink to={config.newsletter}>Newsletter</NavLink>
         <span>|</span>
         <NavLink to="/contact">Contact</NavLink>

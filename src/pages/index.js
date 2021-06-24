@@ -58,7 +58,7 @@ const IndexPage = ({ data }) => {
             githubIcon
           />
         </CenterEverything>
-        <CenterEverything>
+        {/* <CenterEverything>
           <h2>
             <span role="img" aria-label="speech bubble emoji">
               💬{' '}
@@ -82,8 +82,8 @@ const IndexPage = ({ data }) => {
             href="https://www.youtube.com/watch?v=sSbAuEcjjJA"
             youtubeIcon
           />
-        </CenterEverything>
-        <CenterEverything>
+        </CenterEverything> */}
+        {/* <CenterEverything>
           <h2>
             <span role="img" aria-label="headphone emoji">
               🎧{' '}
@@ -101,7 +101,7 @@ const IndexPage = ({ data }) => {
             description=" Development Trends on the Horizon with Hoss on remote work and serverless - hosted by Hoss.com"
             href="https://www.hoss.com/blog/dev-bites-development-trends-on-the-horizon-aman-mittal"
           />
-        </CenterEverything>
+        </CenterEverything> */}
         <CenterEverything>
           <h2>
             <span role="img" aria-label="laptop emoji">
