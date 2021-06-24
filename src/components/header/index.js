@@ -55,14 +55,14 @@ const Header = () => {
         <span>|</span>
         <NavLink to="/contact">Contact</NavLink>
         <span>|</span>
+        <NavLink to="/uses">Uses</NavLink>
+        <span>|</span>
         <NavLink to={config.kofi}>
           Buy me coffee{' '}
           <span role="img" aria-label="coffee emoji">
             ☕️
           </span>
         </NavLink>
-        <span>|</span>
-        <NavLink to="/contact">Uses</NavLink>
       </StyledNav>
     </HeaderWrapper>
   );
