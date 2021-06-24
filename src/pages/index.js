@@ -101,7 +101,7 @@ const IndexPage = ({ data }) => {
             description=" Development Trends on the Horizon with Hoss on remote work and serverless - hosted by Hoss.com"
             href="https://www.hoss.com/blog/dev-bites-development-trends-on-the-horizon-aman-mittal"
           />
-        </CenterEverything> */}
+        </CenterEverything>
         <CenterEverything>
           <h2>
             <span role="img" aria-label="laptop emoji">
@@ -114,7 +114,7 @@ const IndexPage = ({ data }) => {
               <li>Computer: MacBook Pro 2020</li>
               <li>Editor: Visual Studio Code</li>
               <li>Static Site Generator: Gatsbyjs</li>
-              {/* <li>Syntax Highlighting: Prismjs</li> */}
+              <li>Syntax Highlighting: Prismjs</li>
               <li>Code Syntax Theme: fairyFloss, Morgan.codes</li>
               <li>Terminal: iTerm with ZSH shell</li>
               <li>Manage Blog posts pipeline: Notion</li>
@@ -122,7 +122,7 @@ const IndexPage = ({ data }) => {
             </ul>
           </div>
         </CenterEverything>
-
+        */}
         <CenterEverything>
           <h2>
             <span role="img" aria-label="aeroplane emoji">
