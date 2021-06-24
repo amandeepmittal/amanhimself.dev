@@ -12,7 +12,7 @@ I almost never get asked about what's my setup is or what I use. Nonetheless, he
 
 [fairlyFloss](https://marketplace.visualstudio.com/items?itemName=nopjmp.fairyfloss) - As much as I love to try new themes in VSCode, I always come back to fairyFloss.
 
-[iterm2](https://iterm2.com/) - My terminal of choice.
+[iterm2](https://iterm2.com/) - My terminal of choice, with ZSH shell.
 
 [Homebrew](https://cheatsheets.xyz/homebrew/) - For installing other libs and softwares.
 
