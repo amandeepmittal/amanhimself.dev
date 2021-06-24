@@ -12,6 +12,13 @@ const StyledNav = styled.nav`
   align-items: center;
   column-gap: 1.25rem;
   margin-top: 1rem;
+  ${down('sm')} {
+    font-size: 14px;
+    display: flex;
+    flex-wrap: wrap;
+    line-height: 1.5rem;
+    column-gap: 1rem;
+  }
 `;
 
 const NavLink = styled(Link)`
@@ -29,7 +36,7 @@ const HeaderWrapper = styled.header`
   align-items: center;
   flex-direction: column;
   margin-top: 1rem;
-  padding: 1.25rem;
+  padding: 1rem;
   a {
     display: inline-block;
   }
@@ -54,6 +61,8 @@ const Header = () => {
             ☕️
           </span>
         </NavLink>
+        <span>|</span>
+        <NavLink to="/contact">Uses</NavLink>
       </StyledNav>
     </HeaderWrapper>
   );
