@@ -116,6 +116,7 @@ export const GlobalCSS = css`
     pre[class~='language-graphql']:before {
       content: 'GraphQL';
       background: #e10098;
+      color: white;
     }
     pre[class~='language-css']:before {
       content: 'css';
