@@ -1,6 +1,6 @@
 ---
 title: 'How To Integrate Firebase Authentication With an Expo App'
-date: 2021-07-03
+date: 2021-07-04
 slug: 'blog/firebase-authentication-with-expo'
 template: post
 thumbnail: '../thumbnails/expo.png'
