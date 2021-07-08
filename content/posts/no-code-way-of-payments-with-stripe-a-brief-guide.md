@@ -48,5 +48,5 @@ While adding a new product, Stripe allows customizing product details by adding 
 
 ## Conclusion
 
-You can now use it inside low and no-code tools like [Webflow](https://webflow.com/) or mobile apps created using [Draftbit](https://draftbit.com/).
+You can now use it inside low and no-code tools like [Webflow](https://webflow.com/) or mobile apps created using [Draftbit](https://draftbit.com/?ref=hackernoon.com).
 
