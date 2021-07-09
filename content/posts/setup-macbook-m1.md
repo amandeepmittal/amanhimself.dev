@@ -8,6 +8,8 @@ tags:
   - tools
 ---
 
+> Updated on: 9 July, 2021
+
 ![cover_image](https://i.imgur.com/tAJjTOU.png)
 
 I recently upgraded from [Macbook Air 2017](https://www.instagram.com/p/B6lInd3AhsN/) to Macbook Pro with an M1 chip. My four year old Macbook Air was giving up. The performance to run heavy tasks like using the iOS simulator when developing and working on React Native apps was declining. I had long given up using the Android emulator and have been using a real Android device for testing. December 2020 was the time I decided its time to upgrade.
@@ -29,14 +31,51 @@ My local environment currently includes:
 - VSCode Insiders Edition
 - Testing GatsbyJS builds
 
-**Other apps**:
+**OS apps**:
 
 - Google Chrome
+  - set to default
+    - First things to do:
+      - **Log in to:**  Gmail, Twitter, GitHub, Outlook
+      - **Developer mode on**
+    - Extensions:      
+      - [Detailed SEO extension](https://chrome.google.com/webstore/detail/detailed-seo-extension/pfjdepjjfjjahkjfpkcgfmfhmnakjfba?hl=en)
+      - [Code Copy](https://chrome.google.com/webstore/detail/codecopy/fkbfebkcoelajmhanocgppanfoojcdmg)
+      - [Redefined GitHub](https://chrome.google.com/webstore/detail/refined-github/hlepfoohegkhhmjieoechaddaejaokhf)
+      - [Octolinker](https://chrome.google.com/webstore/detail/octolinker/jlmafbaeoofdegohdhinkhilhclaklkp/related?hl=en)
+      - [Twemex: Sidebar for Twitter](https://chrome.google.com/webstore/detail/twemex-sidebar-for-twitte/amoldiondpmjdnllknhklocndiibkcoe?hl=en)
+      - [Minimal Twitter](https://chrome.google.com/webstore/detail/minimal-twitter/pobhoodpcipjmedfenaigbeloiidbflp?hl=en)
+      - [Medium Enhanced Stats](https://chrome.google.com/webstore/detail/medium-enhanced-stats/jnomnfoenpdinfkpaaigokicgcfkomjo?hl=en)
+      - [JSON Viewer](https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh)
+      - Grammarly
+      - [Bypass paywalls](https://github.com/nonnimartin/bypassWall)
 - Brave
 - Firefox Developer Edition
 - Android Studio
 - [Insomnia](https://insomnia.rest/) as REST API client
-- And other desktop applications like Slack, Discord, Todoist, GitHub Desktop, and so on.
+- Xcode
+- Android Studio
+- Slack or Discord
+- There (for team mates timezone)
+- LICEcap (for gifs)
+- Zoom
+- [Cleanshot](https://cleanshot.com/) (for screenshots)
+
+**System Settings**:
+- Disable Ask Siri
+- Disable Spotlight search except Applications, Calculator, Definition, and System Preferences.
+- Trackpad:
+  - Fix direction: Trackpad > Scroll & Zoom - Natural off
+  - Disable dictionary lookup: Trackpad > Point & Click > Look up & data detectors off
+  - More gestures > Swipe between pages off & App Exposé off    
+- Finder settings:
+  - Preferences > Advanced > Show filename extensions
+  - Enable show path bar: View > Show Path Bar
+- Dock:
+  -  Turn auto hiding on
+
+> Copy [dotfiles](https://github.com/amandeepmittal/dotfiles)
+
 
 ## Rosetta 2
 
@@ -95,6 +134,13 @@ Using the terminal, you can install the Homebrew by executing the default comman
 
 Recently I found that it can be installed natively on a Macbook. You can run the above command in a native terminal environment as well without using the Rosetta terminal environment.
 
+**Other brew installs**:
+- libev
+- libuv
+- yarn
+- scrcpy
+- node/npm
+
 ## Git
 
 I did install Git using brew command: `brew install git`.
@@ -108,39 +154,6 @@ After installing Git, for me, the next step is to install [Xcode app](https://ap
 After installing it, make sure to open it for the first time, from the menu bar, open **Xcode > Preferences > Locations** and make sure that **Command Line Tools** point towards the current Xcode app.
 
 ![ss3](https://i.imgur.com/ZXS88QM.png)
-
-## Node.js
-
-On Apple's silicon-based laptops, [Node.js](https://nodejs.org/en/) versions starting from 14 and below are not supported. You will have to install version `15.x.x.` or greater (_depending on when you are reading this post_).
-
-At first, I installed Node.js using nvm without using Homebrew. Execute the below `curl` command to install nvm first:
-
-```shell
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
-```
-
-After installing it, add the following to the `.zshrc` file and make sure to put them after sourcing Oh My Zsh:
-
-```shell
-# after sourcing Oh My Zsh
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
-```
-
-To verify that `nvm` is installed, restart the console or the zsh session (execute: `source .zshrc`) and execute the following command to check out its current version:
-
-```shell
-nvm --version
-
-# output
-0.37.2
-```
-
-Then run the command `nvm install node`.
-
-**Alternatively**, you can also install the Node.js using the [official installer](https://nodejs.org/en/) for the current version which I later moved on to.
 
 ## ZSH and Oh My Zsh
 
@@ -222,18 +235,19 @@ I am still using the same VSCode configuration from my previous setup:
 ```json
 {
   "editor.tabSize": 2,
-  "editor.fontSize": 13,
+  "editor.fontSize": 14,
   "editor.fontFamily": "Jetbrains Mono, 'Courier New', monospace",
-  "workbench.colorTheme": "fairyfloss",
+  "workbench.colorTheme": "Cyberpunk",
   "workbench.iconTheme": "material-icon-theme",
   "editor.minimap.enabled": false,
   "editor.cursorBlinking": "expand",
   "editor.fontLigatures": false,
   "editor.wordWrap": "on",
   "editor.cursorSmoothCaretAnimation": true,
-  "editor.tabCompletion": "on",
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
+  "editor.suggestFontSize": 12,
+  "editor.suggestLineHeight": 12,
   "workbench.editor.enablePreview": false,
   "window.restoreFullscreen": true,
   "window.title": "${activeEditorShort}${separator}${rootName}",
@@ -249,14 +263,13 @@ I am still using the same VSCode configuration from my previous setup:
     ".expo": true,
     ".vscode": true
   },
-  "window.zoomLevel": 0.3,
   "explorer.confirmDelete": false,
   "workbench.editor.tabSizing": "shrink",
   "breadcrumbs.enabled": true,
   "explorer.openEditors.visible": 0,
 
   // Integrated Terminal
-   "terminal.integrated.profiles.osx": {
+  "terminal.integrated.profiles.osx": {
     "bash": {
       "path": "bash",
       "icon": "terminal-bash"
@@ -270,6 +283,18 @@ I am still using the same VSCode configuration from my previous setup:
 
   // Extensions
   "extensions.autoUpdate": false,
+  "json.schemas": [
+    {
+      "name": "vscode-expo-manifest",
+      "url": "file:///Users/amanhimself/Library/Application%20Support/Code/User/globalStorage/bycedric.vscode-expo/manifest-42.0.0.json",
+      "fileMatch": [
+        "app.json",
+        "app.config.json"
+      ]
+    }
+  ],
+  "codestats.apikey": "<api-key>",
+  "readTime.enabled": true,
   "bracket-pair-colorizer-2.colors": ["#F72585", "#94b4a4", "#a3d8f4"],
   "highlight-matching-tag.styles": {
     "opening": {
@@ -279,7 +304,8 @@ I am still using the same VSCode configuration from my previous setup:
       }
     }
   },
-  "npm-intellisense.importES6": true,
+  "npm-intellisense.importES6": true,  
+
   // Prettier
   "prettier.singleQuote": true,
   "prettier.jsxSingleQuote": true,
@@ -301,14 +327,68 @@ I am still using the same VSCode configuration from my previous setup:
 
   // Markdown
   "[markdown]": {
-    "editor.quickSuggestions": true
+    "editor.quickSuggestions": true,
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
   },
+
+  // JSON
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  // JavaScript
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  // JavaScript + React
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  // TypeScript
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  // TypeScript + React
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "cSpell.userWords": [
+    "Draftbit",
+    "Draftbit's",
+    "Favouriting",
+    "Ionicons",
+    "Macbook",
+    "Postgres",
+    "Pressable",
+    "SIGNUP",
+    "Supabase",
+    "Twilio",
+    "destructured",
+    "favourite",
+    "favourites",
+    "firestore",
+    "rerender",
+    "unfollow",
+    "unsubscriber"
+  ],
   "eslint.validate": [
     "javascript",
     "javascriptreact",
     "typescript",
     "typescriptreact"
   ],
+  "explorer.confirmDragAndDrop": false,
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.startupEditor": "welcomePage",
+
   // for fairyFloss theme only
   "editor.tokenColorCustomizations": {
     "[fairyfloss]": {
@@ -316,7 +396,38 @@ I am still using the same VSCode configuration from my previous setup:
         "foreground": "#8d99ae"
       }
     }
-  }
+  },
+  // Error Lens
+  "errorLens.fontSize": "11",
+  "errorLens.onSave": true,
+  "errorLens.enabledDiagnosticLevels": ["error", "warning", "hint"],
+  "workbench.colorCustomizations": {
+    "errorLens.hintForeground": "#ffc600A1",
+    "errorLens.hintBackground": "#ff00dd2f",
+    "errorLens.errorBackground": "#ff000005",
+    "editor.selectionBackground": "#ff1493",
+    "editor.selectionHighlightBackground": "#ff1493",
+    "editor.findMatchBackground": "#ff1493",
+    "editor.findMatchHighlightBackground": "#3cb371"
+  },
+  "errorLens.exclude": ["never (read|used)"],
+  "javascript.updateImportsOnFileMove.enabled": "always",
+
+  // GitHub Copilot
+  "editor.inlineSuggest.enabled": true,
+  "github.copilot.inlineSuggest.enable": true,
+  "github.copilot.enable": {
+    "*": true,
+    "yaml": false,
+    "plaintext": false,
+    "javascript": true,
+    "markdown": true,
+    "javascriptreact": true,
+    "typescript": true,
+    "typescriptreact": true
+  },
+  "emmet.triggerExpansionOnTab": false
+}
 ```
 
 ### Themes
@@ -326,6 +437,9 @@ I am still using the same VSCode configuration from my previous setup:
 I usually like to switch between a dark and a light theme.
 
 - For the dark theme where I spent most of my time, I am was previously using [morgan.codes-theme](https://marketplace.visualstudio.com/items?itemName=morgan-codes.morgan-codes-vscode-theme) but now I am using [fairyFloss](https://marketplace.visualstudio.com/items?itemName=nopjmp.fairyfloss).
+  - Other themes I switch between: 
+    - [Apollo Midnight Color theme](https://marketplace.visualstudio.com/items?itemName=jglovier.apollo-midnight-color-theme)
+    - [Cyberpunk](https://marketplace.visualstudio.com/items?itemName=max-SS.cyberpunk)
 - For the light version, I am using the theme called Quiet Light which comes pre-installed with a new VSCode installation.
 - For file icons, I love [Material-Icon-Theme](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme).
 - For terminal prompt, I use [Spaceship ZSH](https://github.com/denysdovhan/spaceship-prompt).
@@ -361,6 +475,7 @@ I use VSCode editor for both writing code and writing blog posts. Thus, the list
 - [TODO Highlight](https://marketplace.visualstudio.com/items?itemName=wayou.vscode-todo-highlight)
 - [vscode-styled-components](https://marketplace.visualstudio.com/items?itemName=jpoissonnier.vscode-styled-components)
 - [Word Count](https://marketplace.visualstudio.com/items?itemName=ms-vscode.wordcount)
+- [GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot)
 
 ## Global NPM Packages I use
 
@@ -373,13 +488,13 @@ I use VSCode editor for both writing code and writing blog posts. Thus, the list
 - install [Watchman](https://facebook.github.io/watchman/) to watch changes in the filesystem using the command: `brew install watchman`.
 - install Java Development Kit using the command: `brew install --cask adoptopenjdk/openjdk/adoptopenjdk8`.
 - install [Android Studio](https://developer.android.com/studio?gclid=CjwKCAiA9bmABhBbEiwASb35V7JvsI6uP_3wVfdVLmGE5ysvvzOKqy9EB0x1hs8-itZwlP66bOKpxxoCHqAQAvD_BwE&gclsrc=aw.ds)
-  - Then install Android SDK v29.
+  - Then install Android SDK.
 
 For more instructions on how to setup development environment for React Native, please follow the [official documentation here](https://reactnative.dev/docs/environment-setup).
 
 ## For Gatsby Sites
 
-If you have a side project that uses GatsbyJS, chances are you are going to face the issue [https://github.com/lovell/sharp/issues/2460](https://github.com/lovell/sharp/issues/2460). Gatsby uses a C based library called Sharp that needs to be compiled under the ARM architecture. It did not work for me and the only way I could solve was to install `vips` formulae from Homebrew as mentioned in the GitHub issue itself.
+~~If you have a project that uses GatsbyJS, chances are you are going to face the issue [https://github.com/lovell/sharp/issues/2460](https://github.com/lovell/sharp/issues/2460).~~ Gatsby uses a C based library called Sharp that needs to be compiled under the ARM architecture. It did not work for me and the only way I could solve was to install `vips` formulae from Homebrew as mentioned in the GitHub issue itself.
 
 ![ss10](https://i.imgur.com/bbp3mWy.png)
 
