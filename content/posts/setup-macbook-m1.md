@@ -8,7 +8,7 @@ tags:
   - tools
 ---
 
-> Updated on: 9 July, 2021
+> Updated on: July 9, 2021
 
 ![cover_image](https://i.imgur.com/tAJjTOU.png)
 
