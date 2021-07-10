@@ -45,7 +45,9 @@ const HeaderWrapper = styled.header`
 const Header = () => {
   return (
     <HeaderWrapper>
-      <LinkButton to="/">Aman Mittal</LinkButton>
+      <LinkButton to="/" gatsby>
+        Aman Mittal
+      </LinkButton>
       <StyledNav>
         <NavLink to="/blog">Blog</NavLink>
         <span>|</span>
