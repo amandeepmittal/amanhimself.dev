@@ -6,6 +6,7 @@ slug: 'blog/upload-image-to-cloudinary-using-expo-camera'
 thumbnail: '../thumbnails/expo.png'
 tags:
   - expo
+  - react-native
 ---
 
 ![cover_image](https://blog.jscrambler.com/content/images/2021/03/jscrambler-blog-how-to-upload-an-image-using-expo-camera-to-cloudinary.jpg)
