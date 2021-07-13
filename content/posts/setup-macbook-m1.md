@@ -47,8 +47,7 @@ My local environment currently includes:
       - [Minimal Twitter](https://chrome.google.com/webstore/detail/minimal-twitter/pobhoodpcipjmedfenaigbeloiidbflp?hl=en)
       - [Medium Enhanced Stats](https://chrome.google.com/webstore/detail/medium-enhanced-stats/jnomnfoenpdinfkpaaigokicgcfkomjo?hl=en)
       - [JSON Viewer](https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh)
-      - Grammarly
-      - [Bypass paywalls](https://github.com/nonnimartin/bypassWall)
+      - Grammarly      
 - Brave
 - Firefox Developer Edition
 - Android Studio
