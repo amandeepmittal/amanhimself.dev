@@ -95,7 +95,7 @@ In this section, you are going to learn how to use `useState` hook to define an 
 import React, { useState } from 'react';
 ```
 
-The `useState` hook returns two values in an array. The first value is the current value of the state object and the second value in the array the function to update the state value of the first. This why the second value starts with a conventional prefix of `set`. Although you can make it anything but following conventions that are commonly used in the React world is a good practice to follow.
+The `useState` hook returns two values in an array. The first value is the current value of the state object and the second value in the array is a function to update the state value of the first. This why the second value starts with a conventional prefix of `set`. Although you can make it anything but following conventions that are commonly used in the React world is a good practice to follow.
 
 Hooks are always called at the top level of function. Meaning when defining a state, they must be the first thing in the function, especially before returning a JSX. Let us implement a classic example of incrementing and decrementing an initial value of `0`. Inside the `App` function, define the following.
 
