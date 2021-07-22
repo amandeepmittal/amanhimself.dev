@@ -35,7 +35,7 @@ To get started, let's create a new React Native project using `expo-cli`. From a
 
 To install the React Navigation library, please take a look at the [following instructions](https://reactnavigation.org/docs/getting-started) from the official documentation. These dependencies change with time.
 
-```sh
+```shell
 npx expo init shared-element-transitions
 
 cd shared-element-transitions

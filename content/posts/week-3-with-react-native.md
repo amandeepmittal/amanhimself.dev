@@ -28,13 +28,13 @@ Expo is popular because it handles a lot of headache tasks itself and provide sm
 
 Currently, Expo’s SDK handles camera, maps, location tracking, analytics, push notifications and much more. Distributing it an Expo app is easy to. You can complete the process just by running the following command. It has dedicated [store](https://expo.io/) where you can publish apps for others to use. Quite helpful in prototyping.
 
-```sh
+```shell
 exp publish
 ```
 
 For standalone applications there are command available from the Expo CLI tool that you can use. A standalone app does not need the Expo client to run the application. You can generate IPA or apk files by running:
 
-```sh
+```shell
 exp build:ios
 
 # OR
