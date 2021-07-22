@@ -41,7 +41,7 @@ Yes, this guide is using Firebase JS SDK and [Expo managed workflow](https://doc
 
 Open your favorite terminal window, and execute the following command (where `firebase-auth` is an example name of the project directory)
 
-```sh
+```shell
 expo init firebase-auth
 
 # navigate inside the directory
@@ -51,7 +51,7 @@ cd firebase-auth
 
 Then, install the following libraries:
 
-```sh
+```shell
 npm install @react-navigation/native @react-navigation/stack
 
 # OR is using yarn
@@ -109,7 +109,7 @@ To add environment variables to an Expo app, the initial step is to install the 
 
 Create a `.env` file at the root of your project and add the following:
 
-```sh
+```shell
 API_KEY=XXXX
 AUTH_DOMAIN=XXXX
 PROJECT_ID=XXXX
