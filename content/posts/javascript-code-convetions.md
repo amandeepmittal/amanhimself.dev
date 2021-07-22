@@ -1,3 +1,13 @@
+---
+date: 2016-01-08
+title: 'JavaScript Code Conventions'
+template: post
+thumbnail: '../thumbnails/js.png'
+slug: 'blog/javascript-code-conventions'
+tags:
+  - javascript
+---
+
 This article is about coding conventions. Everywhere I read articles about complex things in programming, links to other good/better/awesome articles, but nobody seems to talk about the basic things in programming.
 
 Like the coding conventions used by programmers in their work, I am a JavaScript enthusiast, and never once did I came across a good article on basic conventions and guidelines to write code that is helpful for me and others to read my code.
