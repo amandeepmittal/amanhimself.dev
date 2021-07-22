@@ -48,6 +48,7 @@ My local environment currently includes:
       - [Medium Enhanced Stats](https://chrome.google.com/webstore/detail/medium-enhanced-stats/jnomnfoenpdinfkpaaigokicgcfkomjo?hl=en)
       - [JSON Viewer](https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh)
       - Grammarly      
+      - [Toby](https://www.gettoby.com/) to organize tabs
 - Brave
 - Firefox Developer Edition
 - Android Studio
