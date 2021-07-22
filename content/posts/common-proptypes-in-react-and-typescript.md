@@ -11,7 +11,7 @@ tags:
 
 All **primitives in JS** are available in TS.
 
-```tsx
+```ts
 type Props = {
   size: number;
   name: string;
@@ -23,7 +23,7 @@ An **object** **type** is simply an empty object or an object with keys. An empt
 
 If the object is defined explicitly with keys, it will only accept those values. The shape of the object will remain certain.
 
-```tsx
+```ts
 type Props = {
   emptyObject: {};
   product: {
@@ -35,7 +35,7 @@ type Props = {
 
 Using square brackets `[]`, an **array type** is defined:
 
-```tsx
+```ts
 type ListProps = {
   items: string[];
 }
@@ -43,7 +43,7 @@ type ListProps = {
 
 The prop `items` here only expects values in the array of `string` type. To define an array of objects of a certain shape:
 
-```tsx
+```ts
 type ListProps = {
   items: {
     id: string;
@@ -55,7 +55,7 @@ type ListProps = {
 
 TypeScript does not asks you to define the shape of each object. Although, refactoring `ListProps` as below is valid:
 
-```tsx
+```ts
 type Item = {
   id: string;
   name: string;
@@ -70,7 +70,7 @@ type ListProps = {
 
 Using **[union type](https://react-typescript-cheatsheet.netlify.app/docs/basic/troubleshooting/types/#union-types-and-type-guarding)**, certain values for a prop can be described as:
 
-```tsx
+```ts
 type Button = {
   variant: 'primary' | 'danger' | 'info';
   value: string | number;
@@ -79,7 +79,7 @@ type Button = {
 
 TypeScript cares when it comes to passing arguments on a function.
 
-```tsx
+```ts
 type Props = {
   onEventListener: () => void; // some times event listeners do not have return type
   onChangeText: (title: string) => void;
@@ -88,7 +88,7 @@ type Props = {
 
 On a function, it is possible to define return type as inline type declaration:
 
-```tsx
+```ts
 function add(x: number, y: number): number {
   return a + b;
 }
