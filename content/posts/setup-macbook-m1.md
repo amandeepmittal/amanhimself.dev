@@ -14,7 +14,9 @@ tags:
 
 I recently upgraded from [Macbook Air 2017](https://www.instagram.com/p/B6lInd3AhsN/) to Macbook Pro with an M1 chip. My four year old Macbook Air was giving up. The performance to run heavy tasks like using the iOS simulator when developing and working on React Native apps was declining. I had long given up using the Android emulator and have been using a real Android device for testing. December 2020 was the time I decided its time to upgrade.
 
-I had a long internal discussion with myself for almost a month that whether should I upgrade to M1 or stick with Intel-based chips and spend them bucks. Don't get me wrong here, M1 is not cheap either as I did go for a RAM upgrade to max limits which is currently 16GB in the base model. The kind of performance I was expecting after going through some online reviews and research, has been worth it so far (it is fast, no doubt). I received it two weeks back at the time of writing this post and since then I have installed all the necessary tools and utilities that help me work on Web development and React Native apps.
+I had a long internal discussion with myself for almost a month that whether should I upgrade to M1 or stick with Intel-based chips and spend them bucks. Don't get me wrong here, M1 is not cheap either as I did go for a RAM upgrade to max limits which is currently 16GB in the base model. 
+
+The kind of performance I was expecting after going through some online reviews and research, has been worth it so far (it is fast, no doubt). I received it two weeks back at the time of writing this post and since then I have installed all the necessary tools and utilities that help me work on Web development and React Native apps.
 
 My local environment currently includes:
 
@@ -482,6 +484,7 @@ I use VSCode editor for both writing code and writing blog posts. Thus, the list
 - [gatsby-cli](https://www.npmjs.com/package/gatsby-cli) To build and test out [my personal blog built with Gatsby](https://amanhimself.dev/).
 - [expo-cli](https://docs.expo.io/workflow/expo-cli/)
 - [npm-check](https://www.npmjs.com/package/npm-check) to check for outdated, incorrect, and unused dependencies.
+- [git-watch-log](https://github.com/sukima/git-watch-log) to watch a git repo and recent changes.
 
 ## For React Native Development
 
