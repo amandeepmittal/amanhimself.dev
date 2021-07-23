@@ -52,4 +52,4 @@ You can now use it inside low and no-code tools like [Webflow](https://webflow.c
 
 I also wrote a post on how to use Stripe Payment Links when creating a mobile app using Draftbit as a "pro code" tool to build the mobile app. **[Learn more ↗️](https://community.draftbit.com/c/code-snippets/send-payments-with-stripe-in-draftbit)**
 
-![demo-draftbit](https://i.imgur.com/ChpAs6d.gif)
+![demo-draftbit](https://i.imgur.com/VgrEdI5.gif)
