@@ -5,7 +5,6 @@ slug: 'blog/prop-types-in-react-and-typescript'
 template: post
 thumbnail: '../thumbnails/typescript.png'
 tags:
-  - typescript
   - react  
 ---
 

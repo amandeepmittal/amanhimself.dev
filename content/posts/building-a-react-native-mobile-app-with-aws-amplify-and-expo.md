@@ -6,7 +6,6 @@ image: 'blog/building-a-react-native-mobile-app-with-aws-amplify-and-expo'
 thumbnail: '../thumbnails/expo.png'
 tags:
   - expo
-  - amplify
   - react-native
 ---
 

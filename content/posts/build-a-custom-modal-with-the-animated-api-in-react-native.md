@@ -6,7 +6,6 @@ slug: 'blog/build-a-custom-modal-with-the-animated-api-in-react-native'
 thumbnail: '../thumbnails/expo.png'
 tags:
   - expo
-  - animation
   - redux
   - react-native
 ---

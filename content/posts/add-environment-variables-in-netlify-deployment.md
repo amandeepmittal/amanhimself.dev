@@ -5,7 +5,6 @@ template: post
 slug: 'blog/add-environment-variables-in-netlify-deployment'
 thumbnail: '../thumbnails/netlify.png'
 tags:
-  - netlify
   - node
 ---
 

@@ -6,7 +6,6 @@ slug: 'blog/authentication-navigation-flow-in-react-native-apps'
 thumbnail: '../thumbnails/react.png'
 tags:
   - expo
-  - react-navigation
   - react-native
 ---
 

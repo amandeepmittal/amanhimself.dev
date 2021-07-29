@@ -6,7 +6,6 @@ template: post
 thumbnail: '../thumbnails/expo.png'
 tags:
   - expo
-  - animation
   - react-native
 ---
 

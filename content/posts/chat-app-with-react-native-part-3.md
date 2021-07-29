@@ -6,7 +6,6 @@ slug: 'blog/chat-app-with-react-native-part-3'
 thumbnail: '../thumbnails/react.png'
 tags:
   - react-native
-  - react-navigation
   - firebase
 ---
 

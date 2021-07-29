@@ -6,7 +6,6 @@ template: post
 thumbnail: '../thumbnails/react.png'
 tags:
   - react-native
-  - react-navigation
   - firebase
 ---
 

@@ -6,7 +6,6 @@ slug: 'blog/custom-scroll-bar-indicator-with-react-native-animated-api'
 thumbnail: '../thumbnails/expo.png'
 tags:
   - expo
-  - animation
   - react-native
 ---
 

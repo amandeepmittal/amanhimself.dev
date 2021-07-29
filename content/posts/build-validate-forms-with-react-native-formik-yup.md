@@ -6,7 +6,6 @@ image: 'blog/build-validate-forms-with-react-native-formik-yup'
 thumbnail: '../thumbnails/expo.png'
 tags:
   - expo
-  - react-navigation
   - react-native
 ---
 
