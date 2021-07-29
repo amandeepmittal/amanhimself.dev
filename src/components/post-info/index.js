@@ -14,6 +14,9 @@ const GridDiv = styled.div`
     /* display: inline; */
     margin-left: 20px;
   }
+  h3 {
+    margin: 0rem;
+  }
 `;
 
 const card = css`
@@ -75,7 +78,7 @@ const PostInfo = ({
             alt="thumbnail"
             style={{ display: 'inline-block' }}
           />
-          <h2>{title}</h2>
+          <h3 style={{ fontSize: '20px' }}>{title}</h3>
         </GridDiv>
 
         <PostMetaWrapper>
