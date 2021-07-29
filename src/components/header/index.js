@@ -60,13 +60,13 @@ const Header = () => {
         <NavLink to={config.newsletter}>Newsletter</NavLink>
         <span>|</span>
         <NavLink to="/contact">Contact</NavLink>
-        <span>|</span>
+        {/* <span>|</span>
         <NavLink to={config.kofi}>
           Buy me coffee{' '}
           <span role="img" aria-label="coffee emoji">
             ☕️
           </span>
-        </NavLink>
+        </NavLink> */}
       </StyledNav>
     </HeaderWrapper>
   );
