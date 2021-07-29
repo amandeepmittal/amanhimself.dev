@@ -83,20 +83,20 @@ const PostInfo = ({
             <span role="img" aria-label="left hand pointer emoji">
               🕒
             </span>{' '}
-            Published on {date}{' '}
+            {date}{' '}
             <span role="img" aria-label="left hand pointer emoji">
               ⚡️
             </span>{' '}
-            {timeToRead} minutes read
+            {timeToRead} minutes read{' '}
+            <span role="img" aria-label="tag emoji">
+              🔖{' '}
+            </span>
+            {tags.map(tag => (
+              <Link key={tag} to={`/tags/${slugify(tag)}`}>
+                #{tag}{' '}
+              </Link>
+            ))}
           </p>
-          <span role="img" aria-label="tag emoji">
-            🔖{' '}
-          </span>
-          {tags.map(tag => (
-            <Link key={tag} to={`/tags/${slugify(tag)}`}>
-              #{tag}{' '}
-            </Link>
-          ))}
         </PostMetaWrapper>
       </a>
     </PostCard>
