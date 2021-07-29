@@ -1,6 +1,6 @@
 ## Speaking
 
-I have done a few of talks and podcast appearances. 
+I have done a few of talks, workshops and podcast appearances. 
 
 ## 2021
 
