@@ -147,7 +147,8 @@ const PostTemplate = ({ data, pageContext }) => {
             </span>
           </LinkButton>
           <LinkButton to={config.newsletter} rel="prev">
-            Join {config.subscribersCount} developers getting updates{' '}
+            {/* Join {config.subscribersCount} developers getting updates{' '} */}
+            Get the newsletter{' '}
             <span role="img" aria-label="love letter emoji">
               💌{' '}
             </span>
