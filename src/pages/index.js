@@ -23,8 +23,7 @@ const IndexPage = ({ data }) => {
             <span role="img" aria-label="sparkle emoji">
               ✨{' '}
             </span>
-            If you want to read latest posts, you should read one of the
-            following:
+            Latest Posts
           </h2>
           {posts.map(post => {
             return <PostInfo post={post} />;
