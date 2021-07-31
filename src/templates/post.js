@@ -116,7 +116,7 @@ const PostTemplate = ({ data, pageContext }) => {
               <span role="img" aria-label="left hand pointer emoji">
                 👈{' '}
               </span>
-              Previous post
+              Previous post - {previous.frontmatter.title}
             </LinkButton>
           )}
           {/* <LinkButton to={config.kofi} rel="prev">
@@ -125,9 +125,11 @@ const PostTemplate = ({ data, pageContext }) => {
               ☕️{' '}
             </span>
           </LinkButton> */}
+          <div style={{ padding: 20 }} />
+
           {next && (
-            <LinkButton to={next.fields.slug} rel="prev">
-              Next post{' '}
+            <LinkButton to={next.fields.slug} rel="next">
+              Next post - {next.frontmatter.title}{' '}
               <span role="img" aria-label="right hand pointer emoji">
                 👉
               </span>
@@ -139,7 +141,7 @@ const PostTemplate = ({ data, pageContext }) => {
             to={`http://twitter.com/share?text=${encodeURIComponent(
               title
             )}&url=https://amanhimself.dev/${slug}/&via=amanhimself`}
-            rel="prev"
+            rel="twitter"
           >
             Share on Twitter{' '}
             <span role="img" aria-label="bubble emoji">
