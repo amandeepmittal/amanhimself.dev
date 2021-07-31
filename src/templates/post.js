@@ -126,7 +126,6 @@ const PostTemplate = ({ data, pageContext }) => {
             </span>
           </LinkButton> */}
           <div style={{ padding: 20 }} />
-
           {next && (
             <LinkButton to={next.fields.slug} rel="next">
               Next post - {next.frontmatter.title}{' '}
