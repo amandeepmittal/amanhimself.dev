@@ -156,9 +156,9 @@ const Hero = () => {
           <span role="img" aria-label="seeding emoji">
             🌱{' '}
           </span>
-          This is a personal blog where I write about things like JavaScript,
-          Node, React, React Native and Expo, Developer Advocacy and Tech
-          writing.{' '}
+          This is a personal blog where I write about Node.js, Reactjs, React
+          Native and Expo, Developer Advocacy, Tech writing and sometimes just
+          share my thoughts.{' '}
         </p>
         <p>
           I've been writing online since 2017, mostly on web and mobile
@@ -174,22 +174,25 @@ const Hero = () => {
           elsewhere.
         </p>
         <p>
-          <a
-            href="https://amanhimself.dev/blog"
-            rel="noopener noreferrer"
-            aria-label="Blog Link"
-          >
-            Read the blog here
-          </a>{' '}
-          or learn more{' '}
+          Read the{' '}
+          <strong>
+            <a
+              href="https://amanhimself.dev/blog"
+              rel="noopener noreferrer"
+              aria-label="Blog Link"
+            >
+              blog
+            </a>
+          </strong>{' '}
+          here or read more{' '}
           <a
             href="https://amanhimself.dev/about"
             rel="noopener noreferrer"
             aria-label="About me page"
           >
-            about me
+            <strong>about</strong>{' '}
           </a>
-          .
+          me.
         </p>
         <p>
           <span role="img" aria-label="love letter emoji">
@@ -202,7 +205,7 @@ const Hero = () => {
             rel="noopener noreferrer"
             aria-label="About me page"
           >
-            newsletter here
+            <strong>newsletter</strong>
           </a>
           .
         </p>
