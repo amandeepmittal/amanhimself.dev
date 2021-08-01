@@ -75,7 +75,7 @@ const PostTemplate = ({ data, pageContext }) => {
           </PostTitleWrapper>
           {/* Post Meta */}
           <PostMetaWrapper>
-            <blockquote style={{ marginTop: '15px' }}>
+            {/* <blockquote style={{ marginTop: '15px' }}>
               <span role="img" aria-label="left hand pointer emoji">
                 🕒
               </span>{' '}
@@ -84,15 +84,25 @@ const PostTemplate = ({ data, pageContext }) => {
                 ⚡️
               </span>{' '}
               {post.timeToRead} minutes read
-            </blockquote>
-            <span role="img" aria-label="tag emoji">
-              🔖{' '}
-            </span>
-            {tags.map(tag => (
-              <Link key={tag} to={`/tags/${slugify(tag)}`}>
-                #{tag}{' '}
-              </Link>
-            ))}
+            </blockquote> */}
+            <small>
+              {/* <span role="img" aria-label="left hand pointer emoji">
+                🕒
+              </span>{' '} */}
+              {date}{' '}
+              <span role="img" aria-label="left hand pointer emoji">
+                ☕️
+              </span>{' '}
+              {post.timeToRead} minutes read{' '}
+              <span role="img" aria-label="tag emoji">
+                🔖{' '}
+              </span>
+              {tags.map(tag => (
+                <Link key={tag} to={`/tags/${slugify(tag)}`}>
+                  #{tag}{' '}
+                </Link>
+              ))}
+            </small>
           </PostMetaWrapper>
         </section>
         {/* Post Body */}
