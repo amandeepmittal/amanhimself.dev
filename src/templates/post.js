@@ -92,8 +92,8 @@ const PostTemplate = ({ data, pageContext }) => {
               {date}{' '}
               <span role="img" aria-label="left hand pointer emoji">
                 ☕️
-              </span>{' '}
-              {post.timeToRead} minutes read{' '}
+              </span>
+              {post.timeToRead} min read{' '}
               <span role="img" aria-label="tag emoji">
                 🔖{' '}
               </span>

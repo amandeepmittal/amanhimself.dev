@@ -59,6 +59,11 @@ const PostMetaWrapper = styled.div`
     margin: 0rem;
     color: rgba(0, 0, 0, 0.8);
   }
+
+  small {
+    margin: 0rem;
+    color: rgba(0, 0, 0, 0.8);
+  }
 `;
 
 const PostInfo = ({
@@ -82,15 +87,15 @@ const PostInfo = ({
         </GridDiv>
 
         <PostMetaWrapper>
-          <p>
-            <span role="img" aria-label="left hand pointer emoji">
+          <small>
+            {/* <span role="img" aria-label="left hand pointer emoji">
               🕒
-            </span>{' '}
+            </span>{' '} */}
             {date}{' '}
             <span role="img" aria-label="left hand pointer emoji">
-              ⚡️
-            </span>{' '}
-            {timeToRead} minutes read{' '}
+              ☕️
+            </span>
+            {timeToRead} min read{' '}
             <span role="img" aria-label="tag emoji">
               🔖{' '}
             </span>
@@ -99,7 +104,7 @@ const PostInfo = ({
                 #{tag}{' '}
               </Link>
             ))}
-          </p>
+          </small>
         </PostMetaWrapper>
       </a>
     </PostCard>
