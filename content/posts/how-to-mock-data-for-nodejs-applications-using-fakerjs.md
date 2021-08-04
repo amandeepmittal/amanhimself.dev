@@ -10,15 +10,17 @@ tags:
 
 ![cover_image](https://hackernoon.com/hn-images/1*ENk6O_-iQYdMlnrM4w82kw.jpeg)
 
-When we start to build an application, we generally do not want to worry much about data. To create a database and fill it with sample data seems much of a hassle to me personally. I rather focus more on creating RESTful API and front end of the application when I prototyping.
+When we start to build an application, we generally do not want to worry much about data. To create a database and fill it with sample data seems much of a hassle to me personally. I instead focus more on creating RESTful API and the front end of the application when I am prototyping.
 
-However, this doesn’t mean I don’t pay attention to data organization in database. It’s important to have schemas of collections and documents or in any other way you want to organize your data. With this aspect complete, it brings clarity to _what_ and _how_ questions when creating APIs. In a recent scenario, building a prototype of an E-Commerce web application for a client, I found myself in a similar situation. I had a deadline to deliver the prototype with maximum number of functionalities checked required by the client. After settling on how to architecture database’s schemas, I went on searching​ and finding a gem to solve this issue: **faker.js.**
+However, this doesn’t mean I don’t pay attention to data organization in the database. It’s important to have schemas of collections and documents or any other way you want to organize your data. With this aspect complete, it clarifies _what_ and _how_ questions when creating APIs.
+
+In a recent scenario, building a prototype of an E-Commerce web application for a client, I found myself in a similar situation. I had a deadline to deliver the prototype with a maximum number of functionalities checked required by the client. After settling on how to architecture database’s schemas, I went on searching​ and finding a gem to solve this issue: **faker.js.**
 
 ### Enter faker.js
 
-It’s a wonderful node module to create fake/mock data when you are facing a similar situation as me. fakerjs has its own API, and it’s huge. All credit goes to [**Marak**](https://twitter.com/marak) who built it. It has a vast API for almost every use case with an excellent [_documentation_ that can help you get familiar in minutes on Github.](https://github.com/marak/Faker.js/)
+It’s a wonderful node module to create fake/mock data when you face a similar situation. fakerjs has its own API, and it’s huge. All credit goes to [**Marak**](https://twitter.com/marak), who built it. It has a vast API for almost every use case with an excellent [_documentation_ that can help you get familiar in minutes on Github.](https://github.com/marak/Faker.js/)
 
-Let’s consider a test case where I want some _a user_ to have following amount of fields:
+Let’s consider a test case where I want some _a user_ to have the following amount of fields:
 
 - name
 - email
@@ -72,9 +74,9 @@ List of data that can generate faker.js:
 - random
 - system
 
-Each element has a lot of sub-items that you can check [_here_](https://github.com/Marak/faker.js) in the documentation.
+Each element has many sub-items that you can check [here](https://github.com/Marak/faker.js) in the documentation.
 
-Another good thing about Faker I like is that it’s not only restricted to server side JavaScript only. You can mock data for browser JavaScript too. A little snippet from the documentation shows how to do this:
+Another good thing about Faker I like is that it’s not only restricted to server-side JavaScript only. You can mock data for browser JavaScript too. A little snippet from the documentation shows how to do this:
 
 ```html
 <script src="faker.js" type="text/javascript"></script>
