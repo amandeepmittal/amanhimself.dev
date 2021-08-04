@@ -5,7 +5,7 @@ template: post
 thumbnail: '../thumbnails/node.png'
 slug: 'blog/paginate-records-in-mysql-using-sequelize-and-nodejs'
 tags:
-  - node
+  - nodejs
 ---
 
 ![cover_image](https://miro.medium.com/max/1400/0*ShbzlvZjT-VI72oW.png)

@@ -5,7 +5,7 @@ template: post
 slug: 'blog/creating-a-graphql-server-with-nodejs-in-2018'
 thumbnail: '../thumbnails/graphql.png'
 tags:
-  - node
+  - nodejs
   - graphql
 ---
 

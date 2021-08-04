@@ -5,7 +5,7 @@ template: post
 slug: 'blog/how-to-use-import-statements-in-nodejs'
 thumbnail: '../thumbnails/node.png'
 tags:
-  - node
+  - nodejs
 ---
 
 > **UPDATE:** Up to date version of this post is at [How to use ES6 import syntax in Node.js](https://amanhimself.dev/blog/how-to-use-es6-import-syntax-in-node/).

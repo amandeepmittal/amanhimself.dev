@@ -5,7 +5,7 @@ date: 2019-07-19
 slug: 'blog/build-chatbot-dialogflow-nodejs-webhooks'
 thumbnail: '../thumbnails/node.png'
 tags:
-  - node
+  - nodejs
 ---
 
 ![cover_image](https://i.imgur.com/cOAePoA.jpg)

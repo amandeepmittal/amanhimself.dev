@@ -5,7 +5,7 @@ template: post
 slug: 'blog/designing-a-rest-api-with-node-js-and-mongodb-atlas'
 thumbnail: '../thumbnails/node.png'
 tags:
-  - node
+  - nodejs
 ---
 
 ![cover](https://i.imgur.com/5rvcM6q.png)

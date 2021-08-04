@@ -5,7 +5,7 @@ template: post
 thumbnail: '../thumbnails/node.png'
 slug: 'blog/how-to-use-es6-import-syntax-in-node'
 tags:
-  - node
+  - nodejs
 ---
 
 ![cover_image](https://i.imgur.com/mztPVQI.png)

@@ -5,7 +5,7 @@ date: 2019-01-31
 template: post
 thumbnail: '../thumbnails/node.png'
 tags:
-  - node
+  - nodejs
 ---
 
 ![cover_image](https://i.imgur.com/Yv3yfrm.png)

@@ -5,7 +5,7 @@ template: post
 thumbnail: '../thumbnails/node.png'
 slug: 'blog/remove-node-modules-recursively'
 tags:
-  - node
+  - nodejs
 ---
 
 `node_modules` tend to take a lot of space in your local system especially if you work with Node.js or related frameworks (such as client side frameworks: React or Angular). They are the part and parcel of modern day JavaScript applications and workflow.

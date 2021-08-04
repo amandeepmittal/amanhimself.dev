@@ -5,7 +5,7 @@ template: post
 slug: 'blog/building-a-mern-stack-app-with-material-ui'
 thumbnail: '../thumbnails/react.png'
 tags:
-  - node
+  - nodejs
   - react
 ---
 
@@ -560,16 +560,16 @@ class Home extends Component {
     return (
       <div>
         <Card className={classes.card}>
-          <Typography type='headline' component='h2' className={classes.title}>
+          <Typography type="headline" component="h2" className={classes.title}>
             Welcome to the MERN APP
           </Typography>
           <CardMedia
             className={classes.media}
             image={logo}
-            title='Auth with MERN'
+            title="Auth with MERN"
           />
           <CardContent>
-            <Typography type='body1' component='p'>
+            <Typography type="body1" component="p">
               This is a demo application that uses a Node + MongoDB API for user
               authentication. Built With React + Material UI.
             </Typography>
@@ -655,7 +655,7 @@ class Routes extends Component {
   render() {
     return (
       <Switch>
-        <Route exact path='/' component={Home} />
+        <Route exact path="/" component={Home} />
       </Switch>
     );
   }
@@ -956,32 +956,32 @@ class Signin extends Component {
     return (
       <Card className={classes.card}>
         <CardContent>
-          <Typography type='headline' component='h2' className={classes.title}>
+          <Typography type="headline" component="h2" className={classes.title}>
             Sign In
           </Typography>
           <TextField
-            id='email'
-            type='email'
-            label='Email'
+            id="email"
+            type="email"
+            label="Email"
             className={classes.textField}
             value={this.state.email}
             onChange={this.handleChange('email')}
-            margin='normal'
+            margin="normal"
           />
           <br />
           <TextField
-            id='password'
-            type='password'
-            label='Password'
+            id="password"
+            type="password"
+            label="Password"
             className={classes.textField}
             value={this.state.password}
             onChange={this.handleChange('password')}
-            margin='normal'
+            margin="normal"
           />
           <br />{' '}
           {this.state.error && (
-            <Typography component='p' color='error'>
-              <Icon color='error' className={classes.error}>
+            <Typography component="p" color="error">
+              <Icon color="error" className={classes.error}>
                 error
               </Icon>
               {this.state.error}
@@ -990,8 +990,8 @@ class Signin extends Component {
         </CardContent>
         <CardActions>
           <Button
-            color='primary'
-            variant='raised'
+            color="primary"
+            variant="raised"
             onClick={this.clickSubmit}
             className={classes.submit}
           >
@@ -1092,44 +1092,44 @@ class Signup extends Component {
         <Card className={classes.card}>
           <CardContent>
             <Typography
-              type='headline'
-              component='h2'
+              type="headline"
+              component="h2"
               className={classes.title}
             >
               Sign Up
             </Typography>
             <TextField
-              id='name'
-              label='Name'
+              id="name"
+              label="Name"
               className={classes.textField}
               value={this.state.name}
               onChange={this.handleChange('name')}
-              margin='normal'
+              margin="normal"
             />
             <br />
             <TextField
-              id='email'
-              type='email'
-              label='Email'
+              id="email"
+              type="email"
+              label="Email"
               className={classes.textField}
               value={this.state.email}
               onChange={this.handleChange('email')}
-              margin='normal'
+              margin="normal"
             />
             <br />
             <TextField
-              id='password'
-              type='password'
-              label='Password'
+              id="password"
+              type="password"
+              label="Password"
               className={classes.textField}
               value={this.state.password}
               onChange={this.handleChange('password')}
-              margin='normal'
+              margin="normal"
             />
             <br />{' '}
             {this.state.error && (
-              <Typography component='p' color='error'>
-                <Icon color='error' className={classes.error}>
+              <Typography component="p" color="error">
+                <Icon color="error" className={classes.error}>
                   error
                 </Icon>
                 {this.state.error}
@@ -1138,8 +1138,8 @@ class Signup extends Component {
           </CardContent>
           <CardActions>
             <Button
-              color='primary'
-              variant='raised'
+              color="primary"
+              variant="raised"
               onClick={this.clickSubmit}
               className={classes.submit}
             >
@@ -1155,8 +1155,8 @@ class Signup extends Component {
             </DialogContentText>
           </DialogContent>
           <DialogActions>
-            <Link to='/signin'>
-              <Button color='primary' autoFocus='autoFocus' variant='raised'>
+            <Link to="/signin">
+              <Button color="primary" autoFocus="autoFocus" variant="raised">
                 Sign In
               </Button>
             </Link>
@@ -1243,11 +1243,11 @@ class Profile extends Component {
     const { classes } = this.props;
     const redirectToSignin = this.state.redirectToSignin;
     if (redirectToSignin) {
-      return <Redirect to='/signin' />;
+      return <Redirect to="/signin" />;
     }
     return (
       <Paper className={classes.root} elevation={4}>
-        <Typography type='title' className={classes.title}>
+        <Typography type="title" className={classes.title}>
           Profile
         </Typography>
         <List dense>
@@ -1325,14 +1325,14 @@ class DeleteUser extends Component {
   render() {
     const redirect = this.state.redirect;
     if (redirect) {
-      return <Redirect to='/' />;
+      return <Redirect to="/" />;
     }
     return (
       <span>
         <IconButton
-          aria-label='Delete'
+          aria-label="Delete"
           onClick={this.clickButton}
-          color='secondary'
+          color="secondary"
         >
           <Delete />
         </IconButton>
@@ -1345,13 +1345,13 @@ class DeleteUser extends Component {
             </DialogContentText>
           </DialogContent>
           <DialogActions>
-            <Button onClick={this.handleRequestClose} color='primary'>
+            <Button onClick={this.handleRequestClose} color="primary">
               Cancel
             </Button>
             <Button
               onClick={this.deleteAccount}
-              color='secondary'
-              autoFocus='autoFocus'
+              color="secondary"
+              autoFocus="autoFocus"
             >
               Confirm
             </Button>
@@ -1387,22 +1387,22 @@ const isActive = (history, path) => {
   else return { color: '#ffffff' };
 };
 const Menu = withRouter(({ history }) => (
-  <AppBar position='static'>
+  <AppBar position="static">
     <Toolbar>
-      <Typography type='title' color='inherit'>
+      <Typography type="title" color="inherit">
         MERN App
       </Typography>
-      <Link to='/'>
-        <IconButton aria-label='Home' style={isActive(history, '/')}>
+      <Link to="/">
+        <IconButton aria-label="Home" style={isActive(history, '/')}>
           <Home />
         </IconButton>
       </Link>
       {!auth.isAuthenticated() && (
         <span>
-          <Link to='/signup'>
+          <Link to="/signup">
             <Button style={isActive(history, '/signup')}>Sign up</Button>
           </Link>
-          <Link to='/signin'>
+          <Link to="/signin">
             <Button style={isActive(history, '/signin')}>Sign In</Button>
           </Link>
         </span>
@@ -1420,7 +1420,7 @@ const Menu = withRouter(({ history }) => (
             </Button>
           </Link>
           <Button
-            color='inherit'
+            color="inherit"
             onClick={() => {
               auth.signout(() => history.push('/'));
             }}
@@ -1463,11 +1463,11 @@ class Routes extends Component {
       <div>
         <Navbar />
         <Switch>
-          <Route exact path='/' component={Home} />
-          <PrivateRoutes path='/user/edit/:userId' />
-          <Route path='/user/:userId' component={Profile} />
-          <Route path='/signup' component={Signup} />
-          <Route path='/signin' component={Signin} />
+          <Route exact path="/" component={Home} />
+          <PrivateRoutes path="/user/edit/:userId" />
+          <Route path="/user/:userId" component={Profile} />
+          <Route path="/signup" component={Signup} />
+          <Route path="/signin" component={Signin} />
         </Switch>
       </div>
     );

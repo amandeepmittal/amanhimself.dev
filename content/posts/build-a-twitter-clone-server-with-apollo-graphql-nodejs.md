@@ -5,7 +5,7 @@ template: post
 slug: 'blog/build-a-twitter-clone-server-with-apollo-graphql-nodejs'
 thumbnail: '../thumbnails/node.png'
 tags:
-  - node
+  - nodejs
   - graphql
 ---
 

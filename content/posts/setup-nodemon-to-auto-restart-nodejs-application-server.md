@@ -5,7 +5,7 @@ template: post
 thumbnail: '../thumbnails/node.png'
 slug: 'blog/setup-nodemon-to-auto-restart-nodejs-application-server'
 tags:
-  - node
+  - nodejs
 ---
 
 Manually restarting Node.js application is a tiring and tedious job. [Nodemon](https://www.npmjs.com/package/nodemon) is the best solution available to autorestart a nodejs app server in development mode.

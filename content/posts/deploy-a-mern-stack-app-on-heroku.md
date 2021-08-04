@@ -5,7 +5,7 @@ template: post
 slug: 'blog/deploy-a-mern-stack-app-on-heroku'
 thumbnail: '../thumbnails/heroku.png'
 tags:
-  - node
+  - nodejs
   - react
 ---
 
@@ -319,9 +319,9 @@ const App = () => (
     <div>
       <Nav />
       <Switch>
-        <Route exact path='/' component={Books} />
-        <Route exact path='/books' component={Books} />
-        <Route exact path='/books/:id' component={Detail} />
+        <Route exact path="/" component={Books} />
+        <Route exact path="/books" component={Books} />
+        <Route exact path="/books/:id" component={Detail} />
         <Route component={NoMatch} />
       </Switch>
     </div>
@@ -418,7 +418,7 @@ class Books extends Component {
     return (
       <Container fluid>
         <Row>
-          <Col size='md-6'>
+          <Col size="md-6">
             <Jumbotron>
               <h1>What Books Should I Read?</h1>
             </Jumbotron>
@@ -426,14 +426,14 @@ class Books extends Component {
               <Input
                 value={this.state.title}
                 onChange={this.handleInputChange}
-                name='title'
-                placeholder='Title (required)'
+                name="title"
+                placeholder="Title (required)"
               />
               <Input
                 value={this.state.author}
                 onChange={this.handleInputChange}
-                name='author'
-                placeholder='Author (required)'
+                name="author"
+                placeholder="Author (required)"
               />
 
               <FormBtn
@@ -444,7 +444,7 @@ class Books extends Component {
               </FormBtn>
             </form>
           </Col>
-          <Col size='md-6 sm-12'>
+          <Col size="md-6 sm-12">
             <Jumbotron>
               <h1>Books On My List</h1>
             </Jumbotron>
@@ -499,7 +499,7 @@ class Detail extends Component {
     return (
       <Container fluid>
         <Row>
-          <Col size='md-12'>
+          <Col size="md-12">
             <Jumbotron>
               <h1>
                 {this.state.book.title} by {this.state.book.author}
@@ -509,8 +509,8 @@ class Detail extends Component {
         </Row>
 
         <Row>
-          <Col size='md-2'>
-            <Link to='/'>← Back to Authors</Link>
+          <Col size="md-2">
+            <Link to="/">← Back to Authors</Link>
           </Col>
         </Row>
       </Container>

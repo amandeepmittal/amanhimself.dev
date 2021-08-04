@@ -5,7 +5,7 @@ date: 2018-06-23
 template: post
 thumbnail: '../thumbnails/node.png'
 tags:
-  - node
+  - nodejs
   - react
 ---
 
@@ -201,7 +201,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className='App'>
+      <div className="App">
         <h1>FileUpload</h1>
         <form onSubmit={this.handleUploadImage}>
           <div>
@@ -209,7 +209,7 @@ class App extends Component {
               ref={ref => {
                 this.uploadInput = ref;
               }}
-              type='file'
+              type="file"
             />
           </div>
           <br />
@@ -218,8 +218,8 @@ class App extends Component {
               ref={ref => {
                 this.fileName = ref;
               }}
-              type='text'
-              placeholder='Enter the desired name of file'
+              type="text"
+              placeholder="Enter the desired name of file"
             />
           </div>
           <br />
@@ -228,7 +228,7 @@ class App extends Component {
           </div>
           <hr />
           <p>Uploaded Image:</p>
-          <img src={this.state.imageURL} alt='img' />
+          <img src={this.state.imageURL} alt="img" />
         </form>
       </div>
     );

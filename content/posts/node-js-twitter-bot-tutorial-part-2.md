@@ -5,7 +5,7 @@ template: post
 thumbnail: '../thumbnails/node.png'
 slug: 'blog/node-js-twitter-bot-tutorial-part-2'
 tags:
-  - node
+  - nodejs
   - twitter-bots
 ---
 

@@ -5,7 +5,7 @@ template: post
 slug: 'blog/building-a-rest-api-with-koajs/images/cover.png'
 thumbnail: '../thumbnails/node.png'
 tags:
-  - node
+  - nodejs
 ---
 
 ![cover](https://i.imgur.com/ohg3d3s.png)

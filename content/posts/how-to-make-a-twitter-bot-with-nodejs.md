@@ -5,7 +5,7 @@ template: post
 thumbnail: '../thumbnails/node.png'
 slug: 'blog/how-to-make-a-twitter-bot-with-nodejs'
 tags:
-  - node
+  - nodejs
   - twitter-bots
 ---
 

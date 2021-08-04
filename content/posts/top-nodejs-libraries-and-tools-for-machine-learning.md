@@ -5,7 +5,7 @@ date: 2018-12-19
 thumbnail: '../thumbnails/node.png'
 template: post
 tags:
-  - node
+  - nodejs
 ---
 
 Javascript is often thought of a web programming language but Javascript, and javascript frameworks such as NodeJS, have many applications apart from just web apps including desktop applications, mobile applications, embedded systems, and back-end development.

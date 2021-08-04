@@ -5,7 +5,7 @@ slug: 'blog/setting-up-nodejs-backend-for-a-react-app'
 thumbnail: '../thumbnails/node.png'
 template: post
 tags:
-  - node
+  - nodejs
   - react
 ---
 
@@ -187,9 +187,9 @@ class App extends Component {
 
   render() {
     return (
-      <div className='App'>
-        <header className='App-header'>
-          <img src={logo} className='App-logo' alt='logo' />
+      <div className="App">
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
           <h1>Data from the Backend</h1>
           {this.state.data.map(person => (
             <p key={person.id}>

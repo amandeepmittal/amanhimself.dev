@@ -5,7 +5,7 @@ template: post
 slug: 'blog/how-to-build-a-rest-api-with-nodejs-and-postgresql'
 thumbnail: '../thumbnails/node.png'
 tags:
-  - node
+  - nodejs
 ---
 
 ![cover](https://i.imgur.com/0ARGlWV.png)

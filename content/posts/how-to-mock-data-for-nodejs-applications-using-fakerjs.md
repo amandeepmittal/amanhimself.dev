@@ -5,7 +5,7 @@ template: post
 thumbnail: '../thumbnails/node.png'
 slug: 'blog/how-to-mock-data-for-nodejs-applications-using-fakerjs'
 tags:
-  - node
+  - nodejs
 ---
 
 ![cover_image](https://hackernoon.com/hn-images/1*ENk6O_-iQYdMlnrM4w82kw.jpeg)

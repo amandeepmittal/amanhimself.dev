@@ -5,7 +5,7 @@ template: post
 thumbnail: '../thumbnails/node.png'
 slug: 'blog/nodejs-system'
 tags:
-  - node
+  - nodejs
 ---
 
 When I started learning Node.js, I always wondered, how does it work? How is it inside Node.js? Event loop and Event Queue jargons are digested. But what exactly is going on? Where do those jargons Event Loop and Event Queue come from.To satisfy my curiosity as well to know the answer to my previous question, I went in depth as much as I can and came across some things which I’d like to share with you. In brief, this article is about **Node.js System** — a glimpse of internal workings of Node.
