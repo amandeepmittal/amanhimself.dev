@@ -384,3 +384,7 @@ Here is the output after this step on an Android device:
 ## Conclusion
 
 I hope you had fun reading this tutorial. If you are trying the Animated library from React Native for the first time, wrapping your head around it might take a bit of time and practice and that's part of the process.
+
+**Further Reading on React Native Animated**
+
+- [Learn how to Animate a Header View on Scroll With React Native Animated](https://amanhimself.dev/blog/animate-header-view-on-scroll-with-react-native-animated-api/)
