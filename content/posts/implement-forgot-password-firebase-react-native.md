@@ -35,8 +35,8 @@ After downloading the source code, please navigate inside the project directory 
 
 To follow this tutorial, please make sure you the following libraries are installed on your local development environment and access to the services mentioned below.
 
-- Nodejs (`>= 10.x.x`) with npm/yarn installed
-- expo-cli (`>= 3.x.x`) (previously known as create-react-native-app)
+- Nodejs (`>= 12.x.x`) with npm/yarn installed
+- Expo SDK (`>= 40.x.x`)
 - Firebase account, free tier will do
 
 ## Add Forgot Password Screen
@@ -293,7 +293,7 @@ I hope any of the codebase used in this tutorial helps you. To find the complete
 
 ---
 
-Originally published at [Heartbeat.Fritz.ai](https://heartbeat.fritz.ai/how-to-implement-forgot-password-feature-in-react-native-and-firebase-app-890b572d9759)
+> Originally published at [Heartbeat.Fritz.ai](https://heartbeat.fritz.ai/how-to-implement-forgot-password-feature-in-react-native-and-firebase-app-890b572d9759)
 
 ## Further reading
 

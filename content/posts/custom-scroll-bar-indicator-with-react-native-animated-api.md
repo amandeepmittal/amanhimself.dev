@@ -9,6 +9,8 @@ tags:
   - react-native
 ---
 
+> Updated on: August 4, 2021
+
 ![cover](https://i.imgur.com/ateUlTf.png)
 
 A `ScrollView` is a component that enables to view the content on a device's screen that is not able to be displayed in one screen. Using a scroll view component, the content can either be scrolled vertically or horizontally. This depends a lot on the design of the mobile application.
@@ -50,9 +52,7 @@ To follow this tutorial, please make sure you are familiarized with JavaScript/E
 - Have a basic understanding of Redux store, actions, and reducers.
 - [expo-cli](https://github.com/expo/expo-cli) installed, or use npx.
 
-The example in the following tutorial is based on Expo SDK `39`.
-
-Do note that all the code mentioned in this tutorial works with the vanilla React Native project as well.
+Note: All of the code mentioned in this tutorial works with the React Native CLI project as well.
 
 ## Create a new React Native project with `expo-cli`
 
@@ -259,24 +259,26 @@ const scrollIndicatorSize =
 
 Next, create the scroll bar indicator inside the scroll bar. The indicator is going to have its height equivalent to the `scrollIndicatorSize`.
 
-```jsx
-// ScrollView component here
-<View
-  style={{
-    height: '100%',
-    width: 6,
-    backgroundColor: '#52057b',
-    borderRadius: 8
-  }}
->
+```js
+<View style={{ flex: 1, flexDirection: 'row', paddingHorizontal: 20 }}>
+  {/* ScrollView component here */}
   <View
     style={{
+      height: '100%',
       width: 6,
-      borderRadius: 8,
-      backgroundColor: '#bc6ff1',
-      height: scrollIndicatorSize
+      backgroundColor: '#52057b',
+      borderRadius: 8
     }}
-  />
+  >
+    <View
+      style={{
+        width: 6,
+        borderRadius: 8,
+        backgroundColor: '#bc6ff1',
+        height: scrollIndicatorSize
+      }}
+    />
+  </View>
 </View>
 ```
 
