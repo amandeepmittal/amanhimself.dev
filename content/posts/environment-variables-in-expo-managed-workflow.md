@@ -1,6 +1,6 @@
 ---
 title: 'Environment Variables in Expo and TypeScript'
-slug: 'blog/environment-variables-in-expo-managed-workflow.md'
+slug: 'blog/environment-variables-in-expo-managed-workflow'
 date: 2021-08-04
 template: post
 thumbnail: '../thumbnails/expo.png'
