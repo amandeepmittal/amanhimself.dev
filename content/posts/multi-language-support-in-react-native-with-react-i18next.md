@@ -526,10 +526,9 @@ This completes our tutorial on how to add multi-language support in a React Nati
 
 Please don't mind my translation for French text corresponding to English text. I am not good at it at all. 😅
 
-[**You can find the complete source code at GitHub**](https://github.com/amandeepmittal/react-native-examples/tree/master/rnMultiLanguageExample)
-
 **Useful Links**
 
 - [useTranslation Hook](https://react.i18next.com/latest/usetranslation-hook)
+- [**You can find the complete source code at GitHub**](https://github.com/amandeepmittal/react-native-examples/tree/master/rnMultiLanguageExample)
 
 > [Originally Published at Crowdbotics.com](https://blog.crowdbotics.com/how-to-offer-multi-language-support-in-a-react-native-app/)
