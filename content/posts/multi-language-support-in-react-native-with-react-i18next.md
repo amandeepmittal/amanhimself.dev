@@ -24,7 +24,7 @@ To follow this tutorial, please make sure you are familiarized with JavaScript/E
 - Have access to one package manager such as npm or yarn or npx.
 - [react-native-cli](https://www.npmjs.com/package/react-native-cli) installed, or use npx.
 
-Depending on your skill level and experience, it may be beneficial to brush up on **[how to scaffold a new custom mobile app with Crowdbotics](https://blog.crowdbotics.com/how-to-create-a-custom-mobile-react-native-app-with-crowdbotics/)** prior to jumping into this tutorial.
+<!-- Depending on your skill level and experience, it may be beneficial to brush up on **[how to scaffold a new custom mobile app with Crowdbotics](https://blog.crowdbotics.com/how-to-create-a-custom-mobile-react-native-app-with-crowdbotics/)** prior to jumping into this tutorial. -->
 
 ## Setting up a React Native app
 
