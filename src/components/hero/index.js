@@ -86,15 +86,7 @@ const Hero = () => {
             <span role="img" aria-label="wave emoji">
               👋{' '}
             </span>
-            Hey, I'm Aman <span>a.k.a. </span>
-            <a
-              href={config.twitter}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Twitter Account"
-            >
-              @amanhimself
-            </a>
+            Hey, I'm Aman
           </h2>
           <p>
             <span role="img" aria-label="laptop emoji">
