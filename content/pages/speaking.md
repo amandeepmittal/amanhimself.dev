@@ -1,9 +1,10 @@
 ## Speaking
 
-I have done a few of talks, workshops and podcast appearances. 
+I have done a few of talks, workshops, guest appearances on live streams and podcast.
 
 ## 2021
 
+- [Build Low-Code Apps using Hasura & Draftbit](https://www.youtube.com/watch?v=WrhQKt5-QY8)
 - [Building Attractive UIs with Draftbit at Explore Hacks](https://www.youtube.com/watch?v=h9kWdOyQrSw)
 - [Getting Started with Drafitbit- Aman Mittal at Hack The Mountains 2.O](https://www.youtube.com/watch?v=bIXQYrBd1DE)
 - [The Rise of No-Code and a Guide to Using Draftbit](https://www.youtube.com/watch?v=sSbAuEcjjJA)
@@ -16,8 +17,3 @@ I have done a few of talks, workshops and podcast appearances.
 ## 2018
 
 - [Setting Up and Getting Used to Gatsby with Charles Max Wood, Cory House, Tara Manicsic and Kent C Dodds](https://dev.to/reactroundup/rru-006-setting-up-and-getting-used-to-gatsby-with-aman-mittal)
-
-
-
-
-
