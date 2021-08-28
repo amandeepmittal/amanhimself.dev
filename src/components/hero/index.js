@@ -96,7 +96,7 @@ const Hero = () => {
             <span role="img" aria-label="avocado emoji">
               🥑{' '}
             </span>
-            developer advocate <a href="http://draftbit.com/">@draftbit</a> &
+            developer advocate <a href="http://draftbit.com/">@Draftbit</a> &
             tech writer
           </p>
           <SocialIconsWrapper>
