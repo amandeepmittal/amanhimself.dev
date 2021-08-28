@@ -9,6 +9,7 @@ const SEO = ({ postNode, postPath, postSEO, customDescription }) => {
   let description;
   let image = siteOG;
   let postURL;
+  let canonicalURL;
 
   if (postSEO) {
     const postMeta = postNode.frontmatter;
@@ -18,11 +19,12 @@ const SEO = ({ postNode, postPath, postSEO, customDescription }) => {
     if (postMeta.thumbnail) {
       image = postMeta.thumbnail.childImageSharp.fixed.src;
     }
-
     postURL = `${config.siteUrl}${postPath}`;
+    canonicalURL = `${config.siteUrl}${postPath}`;
   } else {
     title = config.siteTitle;
     description = customDescription || config.description;
+    canonicalURL = `https://amanhimself.dev/`;
   }
 
   image = `${config.siteUrl}${image}`;
@@ -74,7 +76,7 @@ const SEO = ({ postNode, postPath, postSEO, customDescription }) => {
     <Helmet>
       <meta name="description" content={description} />
       <meta name="image" content={image} />
-      <link rel="canonical" href={postURL} />
+      <link rel="canonical" href={canonicalURL} />
 
       <meta content="#c792ea" name="theme-color" />
       <meta content="#c792ea" name="msapplication-TileColor" />
