@@ -65,7 +65,7 @@ const PostTemplate = ({ data, pageContext }) => {
   return (
     <Layout>
       <Helmet title={`${post.frontmatter.title} by ${config.siteTitle}`} />
-      <SEO postPath={`blog/${post.fields.slug}`} postNode={post} postSEO />
+      <SEO postPath={`${post.fields.slug}`} postNode={post} postSEO />
       <PostWrapper>
         {/* Post Header */}
         <section>
