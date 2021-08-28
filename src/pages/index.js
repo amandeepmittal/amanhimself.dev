@@ -91,7 +91,7 @@ const IndexPage = ({ data }) => {
           </h2>
           <InfoCard
             title="React Round Up 006"
-            description="Setting Up and Getting Used to Gatsby with Charles Max Wood, Cory House, Tara Manicsic and Kent C Dodds."
+            description="Setting Up and Getting Used to Gatsby with Charles Max Wood, Cory House, Tara Manicsic and Kent C. Dodds."
             href="https://dev.to/reactroundup/rru-006-setting-up-and-getting-used-to-gatsby-with-aman-mittal"
             podcastIcon
           />
