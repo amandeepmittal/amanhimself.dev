@@ -23,7 +23,7 @@ const IndexPage = ({ data }) => {
             <span role="img" aria-label="sparkle emoji">
               ✨{' '}
             </span>
-            Latest Posts
+            Latest Articles
           </h2>
           {posts.map(post => {
             return <PostInfo post={post} />;
