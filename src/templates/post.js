@@ -121,12 +121,32 @@ const PostTemplate = ({ data, pageContext }) => {
         </div>
         {/* Post Footer */}
         <PostFooterWrapper>
+          <LinkButton to={config.newsletter} rel="newsletter">
+            Join {config.subscribersCount} developers getting updates{' '}
+            {/* Get the newsletter{' '} */}
+            <span role="img" aria-label="love letter emoji">
+              💌{' '}
+            </span>
+          </LinkButton>
+          <LinkButton
+            to={`http://twitter.com/share?text=${encodeURIComponent(
+              title
+            )}&url=https://amanhimself.dev/${slug}/&via=amanhimself`}
+            rel="twitter"
+          >
+            Share on Twitter{' '}
+            <span role="img" aria-label="bubble emoji">
+              🐦{' '}
+            </span>
+          </LinkButton>
+        </PostFooterWrapper>
+        <PostFooterWrapper>
           {previous && (
             <LinkButton to={previous.fields.slug} rel="prev">
               <span role="img" aria-label="left hand pointer emoji">
                 👈{' '}
               </span>
-              Previous post - {previous.frontmatter.title}
+              Previous - {previous.frontmatter.title}
             </LinkButton>
           )}
           {/* <LinkButton to={config.kofi} rel="prev">
@@ -138,32 +158,12 @@ const PostTemplate = ({ data, pageContext }) => {
           <div style={{ padding: 20 }} />
           {next && (
             <LinkButton to={next.fields.slug} rel="next">
-              Next post - {next.frontmatter.title}{' '}
+              Next - {next.frontmatter.title}{' '}
               <span role="img" aria-label="right hand pointer emoji">
                 👉
               </span>
             </LinkButton>
           )}
-        </PostFooterWrapper>
-        <PostFooterWrapper>
-          <LinkButton
-            to={`http://twitter.com/share?text=${encodeURIComponent(
-              title
-            )}&url=https://amanhimself.dev/${slug}/&via=amanhimself`}
-            rel="twitter"
-          >
-            Share on Twitter{' '}
-            <span role="img" aria-label="bubble emoji">
-              💬{' '}
-            </span>
-          </LinkButton>
-          <LinkButton to={config.newsletter} rel="prev">
-            {/* Join {config.subscribersCount} developers getting updates{' '} */}
-            Get the newsletter{' '}
-            <span role="img" aria-label="love letter emoji">
-              💌{' '}
-            </span>
-          </LinkButton>
         </PostFooterWrapper>
         {/* <div
           style={{
