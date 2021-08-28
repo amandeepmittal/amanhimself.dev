@@ -15,6 +15,7 @@
     "gatsby-plugin-react-helmet": "4.10.0",
     "gatsby-plugin-sharp": "3.10.2",
     "gatsby-plugin-styled-components": "4.10.0",
+    "gatsby-plugin-twitter": "^3.12.0",
     "gatsby-plugin-web-font-loader": "1.0.4",
     "gatsby-remark-autolink-headers": "4.7.0",
     "gatsby-remark-external-links": "0.0.4",
