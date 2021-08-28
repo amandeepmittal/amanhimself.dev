@@ -21,8 +21,6 @@ It took time to get it repaired. That forced me to buy another laptop. While set
 
 <br />
 
-_Sorry for the whining above. When did buying a new laptop or having to use only months became mentally exhausting 😬_
-
 I recently upgraded from [Macbook Air 2017](https://www.instagram.com/p/B6lInd3AhsN/) to Macbook Pro with an M1 chip. My four-year-old Macbook Air was giving up. The performance to run heavy tasks like using the iOS simulator when developing and working on React Native apps was declining. I had long given up using the Android emulator and used an actual Android device for testing. December 2020 was the time I decided its time to upgrade.
 
 I had a long internal discussion with myself for almost a month about whether I should upgrade to M1 or stick with Intel-based chips and spend them bucks. Don't get me wrong here, M1 is not cheap either as I did go for a RAM upgrade to max limits, which is currently 16GB in the base model.
