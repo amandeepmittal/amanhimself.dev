@@ -165,14 +165,14 @@ const PostTemplate = ({ data, pageContext }) => {
             </span>
           </LinkButton>
         </PostFooterWrapper>
-        <div
+        {/* <div
           style={{
             marginTop: 28,
             marginBottom: 28
           }}
         >
           <hr />
-        </div>
+        </div> */}
         {/* Use below PostFooterWrapper + LinkButton to display Sponsored Links */}
         {/* <PostFooterWrapper>
           <LinkButton to={sponsoredLink} rel="prev">
