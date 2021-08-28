@@ -74,6 +74,7 @@ const SEO = ({ postNode, postPath, postSEO, customDescription }) => {
     <Helmet>
       <meta name="description" content={description} />
       <meta name="image" content={image} />
+      <link rel="canonical" href={postURL} />
 
       <meta content="#c792ea" name="theme-color" />
       <meta content="#c792ea" name="msapplication-TileColor" />
