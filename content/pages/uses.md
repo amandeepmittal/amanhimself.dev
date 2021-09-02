@@ -16,8 +16,7 @@ I almost never get asked about what's my setup is or what I use. Nonetheless, he
 
 [Homebrew](https://cheatsheets.xyz/homebrew/) - For installing other libs and softwares.
 
-[LICEcap](https://www.cockos.com/licecap/) - For gif capture.
-
+[LICEcap](https://www.cockos.com/licecap/) - For creating GIFs.
 
 _Find out more about what VSCode extensions I regularly use [here](https://amanhimself.dev/blog/setup-macbook-m1/)._
 
@@ -26,4 +25,3 @@ _Find out more about what VSCode extensions I regularly use [here](https://amanh
 [Macbook Pro 13"](https://www.apple.com/in/shop/buy-mac/macbook-pro) - Apple M1 chip.
 
 [Desk & Chair]() - Pretty much, any flat surface.
-
