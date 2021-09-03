@@ -5,7 +5,6 @@ import { StaticImage } from 'gatsby-plugin-image';
 
 import { config } from '../../helpers';
 import { Twitter, GitHub, Devto, Medium, Instagram } from '../social-icons';
-import Divider from '../divider';
 
 const HeroWrapper = styled.div`
   display: grid;
