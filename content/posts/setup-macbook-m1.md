@@ -8,11 +8,11 @@ tags:
   - tools
 ---
 
-> Updated on: August 28, 2021
+> Updated on: September 4, 2021
 
 ![cover_image](https://i.imgur.com/tAJjTOU.png)
 
-_Note:_ This article was updated in August 2021. The Macbook Pro M1 I was using crashed and stopped working without any reason on August 25, 2021. In just seven months of use.
+_Note:_ Most of this article was updated in August 2021. The Macbook Pro M1 I was using crashed and stopped working without any reason on August 25, 2021. In just seven months of use.
 
 It took time to get it repaired. That forced me to buy another laptop. While setting up the new laptop, I thought it is an excellent time to update this post.
 
@@ -122,6 +122,20 @@ Make sure to have the following setting configured from
 
 For terminal prompt, I use [Spaceship ZSH](https://github.com/denysdovhan/spaceship-prompt).
 
+## Xcode
+
+After installing Git, for me, the next step is to install [Xcode app](https://apps.apple.com/us/app/xcode/id497799835?mt=12) from Apple's App Store.
+
+Then, install "command line tools". It is required by many of the formulae in Homebrew.
+
+```shell
+xcode-select --install
+```
+
+After installing it, make sure to open it for the first time, from the menu bar, open **Xcode > Preferences > Locations** and make sure that **Command Line Tools** point towards the current Xcode app.
+
+![ss3](https://i.imgur.com/ZXS88QM.png)
+
 ## Homebrew
 
 On December 1, 2020, the Homebrew team announced on their [website](https://brew.sh/2020/12/01/homebrew-2.6.0/) about the version release `2.6.0`. The most significant changes among others they listed were the support for macOS Big Sur, using `brew` commands instead of `brew cask` and beginning to support macOS M1 and Apple Silicon or ARM-based chips.
@@ -168,19 +182,11 @@ brew install git
 
 To authenticate GitHub to be used from the terminal environment, I'd recommend you to check out the [official document](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token) on creating and accessing personal tokens.
 
-## Xcode
-
-After installing Git, for me, the next step is to install [Xcode app](https://apps.apple.com/us/app/xcode/id497799835?mt=12) from Apple's App Store.
-
-Then, install "command line tools". It is required by many of the formulae in Homebrew.
+_🔥 Tip:_ As of Git version `2.28` there is a new config option to set the default branch to `main`. Set it globally and forget about it.
 
 ```shell
-xcode-select --install
+git config --global init.defaultBranch main
 ```
-
-After installing it, make sure to open it for the first time, from the menu bar, open **Xcode > Preferences > Locations** and make sure that **Command Line Tools** point towards the current Xcode app.
-
-![ss3](https://i.imgur.com/ZXS88QM.png)
 
 ## ZSH and Oh My Zsh
 
