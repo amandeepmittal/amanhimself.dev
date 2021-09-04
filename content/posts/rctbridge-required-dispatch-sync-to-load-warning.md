@@ -12,7 +12,7 @@ The _RCTBridge required dispatch_sync to load RCTDevLoadingView_ has become a co
 
 ![ss1](https://i.imgur.com/IqzhnvQ.png)
 
-I cam across this warning when installing packages like:
+I came across this warning when installing packages like:
 
 - react-native-bootsplash
 - react-navigation v6
