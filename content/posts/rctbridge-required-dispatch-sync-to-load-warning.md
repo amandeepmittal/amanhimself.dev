@@ -19,7 +19,7 @@ I came across this warning when installing packages like:
 
 Recently, I came across an open issue on [github.com/facebook/react-native](https://github.com/facebook/react-native/issues/16376) that contains the following resolution for this.
 
-Open the file `./ios/AppName/AppDelegate.m`. First, add the following just after the import statement `#import "AppDelegate.h`:
+Open the file `./ios/AppName/AppDelegate.m`. First, add the following just after the import statement `#import "AppDelegate.h"`:
 
 ```c
 #import "AppDelegate.h"
