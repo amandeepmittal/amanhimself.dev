@@ -160,6 +160,11 @@ export const GlobalCSS = css`
       content: 'diff';
       background: #e6ffed;
     }
+    pre[class~='language-c']:before {
+      content: 'c';
+      background: #408ef5;
+      color: black;
+    }
   }
   .line-number-style {
     display: inline-block;
