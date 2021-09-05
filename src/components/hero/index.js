@@ -154,15 +154,20 @@ const Hero = () => {
         <p>
           I've been writing online since 2017, mostly on web and mobile
           development. In total, I've written over{' '}
-          <span
-            className="posts-number"
-            style={{ fontWeight: 'bold', fontSize: '1.25rem' }}
+          <a
+            href="https://amanhimself.dev/about#technical-writing"
+            rel="noopener noreferrer"
+            aria-label="About me page"
           >
-            150
-          </span>{' '}
-          articles for more than 20+ publications and organizations across the
-          internet. This site is a collection of articles I've published here or
-          elsewhere.
+            <span
+              className="posts-number"
+              style={{ fontWeight: 'bold', fontSize: '1.25rem' }}
+            >
+              150 articles for more than 20+ publications
+            </span>
+          </a>{' '}
+          and organizations across the internet. This site is a collection of
+          articles I've published here or elsewhere on the internet.
         </p>
         <p>
           Read the{' '}
@@ -175,13 +180,13 @@ const Hero = () => {
               blog
             </a>
           </strong>{' '}
-          here or read more{' '}
+          here or learn more{' '}
           <a
             href="https://amanhimself.dev/about"
             rel="noopener noreferrer"
             aria-label="About me page"
           >
-            <strong>about</strong>{' '}
+            <strong>about </strong>{' '}
           </a>
           me.
         </p>
