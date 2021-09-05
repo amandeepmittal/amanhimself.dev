@@ -163,7 +163,7 @@ const Hero = () => {
               className="posts-number"
               style={{ fontWeight: 'bold', fontSize: '1.25rem' }}
             >
-              150 articles for more than 20+ publications
+              150 articles for more than 20 publications
             </span>
           </a>{' '}
           and organizations across the internet. This site is a collection of
