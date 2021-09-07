@@ -1,9 +1,9 @@
 ---
 date: 2021-08-11
-title: 'GET Request with Axios'
+title: 'GET Request params with Axios'
 template: post
 thumbnail: '../thumbnails/js.png'
-slug: 'blog/get-request-with-axios'
+slug: 'blog/get-request-params-with-axios'
 tags:
   - javascript
 ---
