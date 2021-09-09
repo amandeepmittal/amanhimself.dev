@@ -1,22 +1,22 @@
 import { createGlobalStyle, css } from 'styled-components';
 
 // https://css-tricks.com/the-current-state-of-styling-scrollbars/
-export const CustomScroll = css`
-  scrollbar-width: thin;
-  scrollbar-color: ${({ theme }) => theme.colors.lightPurple},
-    ${({ theme }) => theme.colors.primary};
-  &::-webkit-scrollbar {
-    width: 15px;
-  }
-  &::-webkit-scrollbar-track {
-    background: ${({ theme }) => theme.colors.primary};
-  }
-  &::-webkit-scrollbar-thumb {
-    background-color: ${({ theme }) => theme.colors.lightPurple};
-    border-radius: 14px;
-    border: ${({ theme }) => theme.colors.primary};
-  }
-`;
+// export const CustomScroll = css`
+//   scrollbar-width: thin;
+//   scrollbar-color: ${({ theme }) => theme.colors.lightPurple},
+//     ${({ theme }) => theme.colors.primary};
+//   &::-webkit-scrollbar {
+//     width: 15px;
+//   }
+//   &::-webkit-scrollbar-track {
+//     background: ${({ theme }) => theme.colors.primary};
+//   }
+//   &::-webkit-scrollbar-thumb {
+//     background-color: ${({ theme }) => theme.colors.lightPurple};
+//     border-radius: 14px;
+//     border: ${({ theme }) => theme.colors.primary};
+//   }
+// `;
 
 export const GlobalCSS = css`
   .prism-code {
@@ -44,24 +44,31 @@ export const GlobalCSS = css`
     padding: 2px 1px;
     border-radius: 2px;
   }
-  .gatsby-highlight {
+  ${
+    '' /* .gatsby-highlight {
     position: relative;
 
     margin-top: ${({ theme }) => theme.spacing[6]};
     -webkit-overflow-scrolling: touch;
-    /* background: rgb(1, 22, 39); */
+    /* background: rgb(1, 22, 39); 
     overflow: auto;
     border-radius: 2px;
     .token-line {
       margin: 0 -1.3rem;
-    }
-    pre.language- {
+      */
+  } */}
+    ${
+      '' /* pre.language- {
       margin-top: 0;
+    } */
     }
-    pre.language-noLineNumbers {
+    ${
+      '' /* pre.language-noLineNumbers {
       margin-top: 0;
+    } */
     }
-    pre[class*='language-']:before {
+    ${
+      '' /* pre[class*='language-']:before {
       background: white;
       border-radius: 0.25rem 0 0 0.25rem;
       color: black;
@@ -76,8 +83,10 @@ export const GlobalCSS = css`
       text-transform: uppercase;
       bottom: 1rem;
       right: 0;
+    } */
     }
-    pre[class~='language-javascript']:before,
+    ${
+      '' /* pre[class~='language-javascript']:before,
     pre[class~='language-js']:before {
       content: 'js';
       background: #f7df1e;
@@ -164,6 +173,7 @@ export const GlobalCSS = css`
       content: 'c';
       background: #408ef5;
       color: black;
+    } */
     }
   }
   .line-number-style {
@@ -198,45 +208,56 @@ export const GlobalCSS = css`
   }
 `;
 
-const GlobalStyles = createGlobalStyle`    
-    ${CustomScroll}
+const GlobalStyles = createGlobalStyle`
+    ${'' /* ${CustomScroll} */}
     ${GlobalCSS}
 
-    html {
+    ${
+      '' /* html {
         margin: 0rem;
         padding: 0rem;
+    } */
     }
-    body {
+    ${
+      '' /* body {
         font-family: "Open Sans", sans-serif;
         font-weight: 400;
         font-size: 16px;
         overflow-y: scroll;
         margin: 0rem;
         padding: 0rem;
+    } */
     }
-    h1, h2, h3, h4, h5, h6 {
+    ${
+      '' /* h1, h2, h3, h4, h5, h6 {
         font-family: "Montserrat", sans-serif;
         font-weight: 600;
         color: ${({ theme }) => theme.colors.black};
         margin-top: 1.75rem;
         margin-bottom: 1.rem;
         line-height: 1.5;
+    } */
     }
-    p {        
+    ${
+      '' /* p {
         color: rgba(0, 0, 0, 0.8);
         line-height: 1.75;
         margin-top: 0.75rem;
         margin-bottom: 0.75rem;
+    } */
     }
-    a {
+    ${
+      '' /* a {
         color: ${({ theme }) => theme.colors.primary};
         text-decoration: none;
         transition: all 300ms;
         &:hover {
             color: rgba(0, 0, 0, 0.8);
         }
+    } */
     }
-    img {
+    ${
+      '' /* img {
         display: block;
         max-width: 100%;
         margin: 0rem auto;
@@ -261,10 +282,13 @@ const GlobalStyles = createGlobalStyle`
     th:last-child,
     td:last-child {
         padding-right: 0;
+    } */
     }
-    ::selection {
+    
+    /*  ::selection {
         background-color: ${({ theme }) => theme.colors.primary};
-    }
+    } */
+    
     /* responsive iframes */
     /* TODO: remove this */
     .twitch,

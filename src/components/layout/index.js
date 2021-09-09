@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { ThemeProvider } from 'styled-components';
 
+import '../../styles/global.scss';
 import { GlobalStyles, theme } from '../../styles';
 import Header from '../header';
 import Footer from '../footer';

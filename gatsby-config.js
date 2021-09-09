@@ -12,6 +12,7 @@ module.exports = {
     siteLocale: `en_gb`
   },
   plugins: [
+    `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     `gatsby-plugin-styled-components`,
