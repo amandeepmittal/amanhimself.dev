@@ -58,10 +58,19 @@ const Hero = () => {
               Newsletter
             </a>
             <a
+              href="mailto:amanmittal.work@gmail.com"
+              className={styles.button}
+              rel="noopener noreferrer"
+              aria-label="Email Address"
+            >
+              Email
+            </a>
+            <a
               href="https://twitter.com/amanhimself?ref_src=twsrc%5Etfw"
               rel="noopener noreferrer"
               aria-label="Twitter profile"
               className="twitter-follow-button"
+              data-size="large"
             >
               Twitter
             </a>
