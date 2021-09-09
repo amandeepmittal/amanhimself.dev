@@ -1,0 +1,81 @@
+/* Hero */
+
+.hero header {
+  padding: 2rem 0 0;
+  text-align: left;
+}
+
+.hero h1 {
+  color: var(--text);
+  font-size: 3.2rem;
+  margin-bottom: 1rem;
+}
+
+.hero p.subtitle {
+  font-size: 1.4rem;
+  color: var(--text);
+}
+
+.hero .heroButtons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Article */
+
+article {
+  margin-bottom: 3rem;
+}
+
+article header {
+  text-align: center;
+}
+
+article h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: var(--text);
+}
+
+article h2,
+article h3,
+article h4,
+article h5 {
+  margin: 0 0 0.75rem 0;
+}
+
+article .description {
+  font-size: 1.4rem;
+  margin-bottom: 0;
+  color: #999;
+}
+
+article a {
+  font-weight: 600;
+  color: var(--brandActive);
+  border-top: 2px solid transparent;
+  border-bottom: 2px solid var(--brandTintedActive);
+}
+
+article a:hover {
+  font-weight: 600;
+  background: var(--brand);
+  color: var(--bg);
+  border-top: 2px solid var(--brand);
+  border-bottom: 2px solid var(--brand);
+}
+
+a.button {
+  display: block;
+  border: 1px solid var(--brand) !important;
+  background: var(--brand);
+  color: var(--bg);
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
+}
+
+a.button:hover {
+  filter: brightness(1.1);
+}

@@ -19,7 +19,7 @@ const Header = () => {
     <>
       <header className={styles.header}>
         <div className={styles.container}>
-          <Link href="/">
+          <Link to="/">
             <a className={styles.logo}>
               <img
                 src={AvatarImg}
@@ -33,9 +33,7 @@ const Header = () => {
             <ol className={styles.links}>
               {links.map(({ name, path }) => (
                 <li key={path} className={styles.link}>
-                  <Link to={path}>
-                    <a>{name}</a>
-                  </Link>
+                  <Link to={path}>{name}</Link>
                 </li>
               ))}
             </ol>

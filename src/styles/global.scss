@@ -26,7 +26,7 @@
   --bg: #fff;
   --text: #000;
   --textTinted: rgba(0, 0, 0, 0.5);
-  --brand: ##6a5acd;
+  --brand: #6a5acd;
   --brandActive: rgb(106, 90, 205, 0.9);
   --brandTinted: rgb(106, 90, 205, 0.7);
   --brandTintedActive: rgb(106, 90, 205, 0.65);
@@ -184,7 +184,7 @@ pre[class*='language-'] {
   line-height: 1.375;
   direction: ltr;
   text-align: left;
-  tab-size: 4;
+  tab-size: 2;
   -webkit-hyphens: none;
   -moz-hyphens: none;
   -ms-hyphens: none;
@@ -203,7 +203,7 @@ pre > code[class*='language-'] {
 /* Code blocks */
 pre[class*='language-'] {
   margin: 0.5em 0;
-  padding: 1em;
+  padding: 0.5em;
   overflow: auto;
 }
 

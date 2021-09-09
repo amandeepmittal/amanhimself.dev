@@ -54,7 +54,7 @@
   display: flex;
   align-items: center;
 
-  @media (min-width: 480px) {
+  @media (max-width: 480px) {
     top: 0;
   }
 }
