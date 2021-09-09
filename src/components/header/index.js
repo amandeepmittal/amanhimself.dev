@@ -1,74 +1,50 @@
 import React from 'react';
-import styled from 'styled-components';
 import { Link } from 'gatsby';
-import { down } from 'styled-breakpoints';
 
-import { config } from '../../helpers';
-import LinkButton from '../link-button';
+import * as styles from './header.module.scss';
+import AvatarImg from '../../images/avatar.jpg';
 
-const StyledNav = styled.nav`
-  display: grid;
-  grid-auto-flow: column;
-  align-items: center;
-  column-gap: 0.75rem;
-  margin-top: 1rem;
-  ${down('sm')} {
-    font-size: 14px;
-    display: flex;
-    flex-wrap: wrap;
-    line-height: 1.5rem;
-    column-gap: 1rem;
-  }
-`;
-
-const NavLink = styled(Link)`
-  color: ${({ theme }) => theme.colors.black};
-  &:hover {
-    color: ${({ theme }) => theme.colors.primary};
-  }
-  ${down('sm')} {
-    font-size: 14px;
-  }
-`;
-
-const HeaderWrapper = styled.header`
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  margin-top: 1rem;
-  padding: 1rem;
-  a {
-    display: inline-block;
-  }
-`;
+const links = [
+  { name: 'Home', path: '/' },
+  { name: 'Blog', path: '/blog' },
+  { name: 'About', path: '/about' },
+  { name: 'Speaking', path: '/speaking' },
+  { name: 'Newsletter', path: 'https://amanhimself.substack.com/' }
+  // TODO: Remove Contact page from the navbar and add it to homepage
+  // { name: 'Contact', path: '/contact' }
+];
 
 const Header = () => {
   return (
-    <HeaderWrapper>
-      <LinkButton to="/" gatsby>
-        Aman Mittal
-      </LinkButton>
-      <StyledNav>
-        <NavLink to="/blog">Blog</NavLink>
-        <span>|</span>
-        <NavLink to="/about">About</NavLink>
-        <span>|</span>
-        <NavLink to="/speaking">Speaking</NavLink>
-        <span>|</span>
-        <NavLink to="/uses">Uses</NavLink>
-        <span>|</span>
-        <NavLink to={config.newsletter}>Newsletter</NavLink>
-        <span>|</span>
-        <NavLink to="/contact">Contact</NavLink>
-        {/* <span>|</span>
-        <NavLink to={config.kofi}>
-          Buy me coffee{' '}
-          <span role="img" aria-label="coffee emoji">
-            ☕️
-          </span>
-        </NavLink> */}
-      </StyledNav>
-    </HeaderWrapper>
+    <>
+      <header className={styles.header}>
+        <div className={styles.container}>
+          <Link href="/">
+            <a className={styles.logo}>
+              <img
+                src={AvatarImg}
+                width="45"
+                height="45"
+                alt="Aman Mittal logo"
+              />
+            </a>
+          </Link>
+          <nav className={styles.nav}>
+            <ol className={styles.links}>
+              {links.map(({ name, path }) => (
+                <li key={path} className={styles.link}>
+                  <Link to={path}>
+                    <a>{name}</a>
+                  </Link>
+                </li>
+              ))}
+            </ol>
+          </nav>
+          {/* IF ever add theme, theme changer component will go here */}
+        </div>
+      </header>
+      {/* To add more spacing below header, add the empty component here */}
+    </>
   );
 };
 
