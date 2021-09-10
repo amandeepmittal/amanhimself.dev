@@ -79,8 +79,8 @@ const PostTemplate = ({ data, pageContext }) => {
             <p>
               A newsletter in the realm between web & mobile development.{' '}
               <span style={{ fontWeight: '700' }}>Join 1200+ devs </span>and get
-              updates when I've something new to share. No spam, unsubcribe at
-              any time!
+              updates when I share something new. No spam, unsubcribe at any
+              time! And, it's free.
             </p>
             <p className="heroButtons">
               <a

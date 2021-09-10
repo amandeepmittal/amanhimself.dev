@@ -328,8 +328,10 @@ pre[class*='language-c']:before {
 
 /* Inline code */
 :not(pre) > code[class*='language-'] {
-  padding: 0.1em;
+  padding: 0.2em;
   border-radius: 0.3em;
+  background: #d7d7d7;
+  color: var(--text);
 }
 
 .token.comment,

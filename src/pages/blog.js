@@ -40,10 +40,9 @@ const BlogPage = ({ data }) => {
       <SEO customDescription="A collection of articles, tutorials, and writings." />
 
       <div className="blogContainer">
-        <h1>Blog</h1>
-        <p style={{ fontSize: '1.2rem' }}>
-          I've been writing online since 2017, mostly on web and mobile
-          development. In total, I've written{' '}
+        <h1>Recent Web development and React Native Blog posts</h1>
+        <p style={{ fontSize: '1.4rem' }}>
+          In total, I've written{' '}
           <span
             style={{
               fontWeight: 'bold',
@@ -53,8 +52,8 @@ const BlogPage = ({ data }) => {
           >
             {Object.keys(posts).length}
           </span>{' '}
-          articles on internet. This site is a collection of articles I've
-          published here or elsewhere.
+          articles on internet. This site is a collection of most of the
+          articles I've published here or elsewhere.
         </p>
         <input
           className="input"
