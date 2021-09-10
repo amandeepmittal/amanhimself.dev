@@ -1,45 +1,23 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import styled, { ThemeProvider } from 'styled-components';
+import { ThemeProvider } from 'styled-components';
 
 import '../../styles/global.scss';
 import { GlobalStyles, theme } from '../../styles';
+import * as styles from './layout.module.scss';
 import Header from '../header';
 import Footer from '../footer';
-
-const Container = styled.div`
-  min-height: 100vh;
-  /* max-width: 640px; */
-  margin: auto;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  row-gap: 2.5rem;
-`;
-
-const Content = styled.main`
-  box-sizing: border-box;
-  width: 100%;
-  display: grid;
-  max-width: 800px;
-  justify-self: center;
-  padding: 0rem 1.25rem;
-`;
 
 const Layout = ({ children }) => {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
-      <Container>
+      <div className={styles.layoutContainer}>
         <Header />
-        <Content>{children}</Content>
+        <main className={styles.layoutContent}>{children}</main>
         <Footer />
-      </Container>
+      </div>
     </ThemeProvider>
   );
-};
-
-Layout.propTypes = {
-  children: PropTypes.node
 };
 
 export default Layout;
