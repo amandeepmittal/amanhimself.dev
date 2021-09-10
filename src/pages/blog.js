@@ -69,21 +69,35 @@ const BlogPage = ({ data }) => {
           placeholder="Search a post by title, topic or tag..."
           onChange={handleInputChange}
         />
-        <AllTagsWrapper>
+
+        <div
+          style={{
+            marginTop: '20px',
+            marginBottom: '20px'
+          }}
+        >
+          <span
+            style={{
+              fontSize: '18px'
+            }}
+          >
+            Tags:{' '}
+          </span>
+
           {allTags.map(tag => {
             return (
               <Link
                 key={tag.fieldValue}
                 to={`/tags/${slugify(tag.fieldValue)}`}
-                style={{
-                  fontSize: '18px'
-                }}
+                className="tagButton"
               >
-                #{tag.fieldValue} - {tag.totalCount} &nbsp;&nbsp;&nbsp;
+                {' '}
+                {tag.fieldValue} - {tag.totalCount} &nbsp;&nbsp;&nbsp;
               </Link>
             );
           })}
-        </AllTagsWrapper>
+        </div>
+
         {posts.map(post => {
           return <PostCard post={post} />;
         })}

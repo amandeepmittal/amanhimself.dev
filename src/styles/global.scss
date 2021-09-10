@@ -512,6 +512,23 @@ article .remark-code-title + pre {
   }
 }
 
+.tagButton {
+  font-weight: 600;
+  font-size: 18px;
+  color: var(--brandActive);
+  padding: 2px;
+  // border-top: 2px solid transparent;
+  // border-bottom: 2px solid var(--brandTintedActive);
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+    font-weight: 600;
+    background: var(--brand);
+    color: var(--bg);
+  }
+}
+
 .blogContainer {
   // max-width: var(--siteWidth);
   // margin: 0 auto;
