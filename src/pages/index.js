@@ -48,12 +48,14 @@ const IndexPage = ({ data }) => {
           return <PostCard post={post} />;
         })}
 
-        <div>
-          <h2>
+        <div style={{ marginTop: '3rem' }}>
+          <h2
+            style={{ fontSize: '28px', color: '#6a5acd', paddingRight: '20px' }}
+          >
             <span role="img" aria-label="compass emoji">
               🧭{' '}
             </span>
-            Some of the open source projects I've worked on:
+            Open source projects I've worked
           </h2>
           <InfoCard
             title="Quarantine Pro app"
@@ -142,21 +144,20 @@ const IndexPage = ({ data }) => {
           </div>
         </CenterEverything>
         */}
-        <CenterEverything>
-          <h2>
+
+        <div style={{ marginTop: '3rem' }}>
+          <h2
+            style={{ fontSize: '28px', color: '#6a5acd', paddingRight: '20px' }}
+          >
             <span role="img" aria-label="aeroplane emoji">
               ✈️{' '}
             </span>
             Countries I've Visited (8):
           </h2>
-          <span
-            role="img"
-            aria-label="flag emojis"
-            style={{ fontSize: '1.2rem' }}
-          >
+          <p role="img" aria-label="flag emojis" style={{ fontSize: '1.5rem' }}>
             I love to travel: 🇦🇪 🇵🇱 🇨🇿 🇦🇹 🇸🇰 🇩🇪 🇧🇪 🇳🇱
-          </span>
-        </CenterEverything>
+          </p>
+        </div>
       </div>
     </Layout>
   );
