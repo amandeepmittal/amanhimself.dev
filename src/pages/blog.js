@@ -73,7 +73,7 @@ const BlogPage = ({ data }) => {
         <div
           style={{
             marginTop: '20px',
-            marginBottom: '20px'
+            marginBottom: '40px'
           }}
         >
           <span
