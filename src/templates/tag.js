@@ -1,18 +1,9 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { graphql } from 'gatsby';
-import styled from 'styled-components';
 
-import { Layout, SEO, PostInfo } from '../components';
+import { Layout, SEO, PostCard } from '../components';
 import { config } from '../helpers';
-
-const TagMetaWrapper = styled.div`
-  margin: 0rem 0rem 3.75rem 0rem;
-  text-align: center;
-  h1 {
-    margin: 0rem;
-  }
-`;
 
 const TagTemplate = ({ data, pageContext }) => {
   const { tag } = pageContext;
@@ -24,15 +15,16 @@ const TagTemplate = ({ data, pageContext }) => {
     <Layout>
       <Helmet title={`Posts tagged: ${tag} | ${config.siteTitle}`} />
       <SEO />
-      <TagMetaWrapper>
+
+      <div className="blogContainer">
         <h1>Posts tagged under: "{tag}"</h1>
-        <h3>
+        <h3 style={{ color: '#6a5acd' }}>
           {totalCount} - {message}
         </h3>
         {posts.map(post => {
-          return <PostInfo post={post} />;
+          return <PostCard post={post} />;
         })}
-      </TagMetaWrapper>
+      </div>
     </Layout>
   );
 };

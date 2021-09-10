@@ -1,15 +1,9 @@
 import React, { useState } from 'react';
 import { graphql, Link } from 'gatsby';
 import { Helmet } from 'react-helmet';
-import styled from 'styled-components';
 
 import { Layout, SEO, PostCard } from '../components';
 import { config, slugify } from '../helpers';
-
-const AllTagsWrapper = styled.div`
-  margin-bottom: 2rem;
-  line-height: 2rem;
-`;
 
 const BlogPage = ({ data }) => {
   const allPosts = data.posts.nodes;
@@ -78,7 +72,8 @@ const BlogPage = ({ data }) => {
         >
           <span
             style={{
-              fontSize: '18px'
+              fontSize: '18px',
+              fontWeight: '700'
             }}
           >
             Tags:{' '}
