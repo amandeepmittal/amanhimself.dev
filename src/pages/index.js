@@ -35,7 +35,7 @@ const IndexPage = ({ data }) => {
             href="/blog"
             style={{
               fontSize: '14px',
-              color: '#6a5acd95',
+              color: '#6a5acd',
               border: '1px solid #6a5acd',
               padding: '6px',
               borderRadius: '0.3rem'
@@ -52,10 +52,7 @@ const IndexPage = ({ data }) => {
           <h2
             style={{ fontSize: '28px', color: '#6a5acd', paddingRight: '20px' }}
           >
-            <span role="img" aria-label="compass emoji">
-              🧭{' '}
-            </span>
-            Open source projects I've worked
+            Open-source projects I've worked
           </h2>
           <InfoCard
             title="Quarantine Pro app"
