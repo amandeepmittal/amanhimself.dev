@@ -11,6 +11,8 @@ const PostTemplate = ({ data, pageContext }) => {
 
   const { slug, title, date, tags } = post.frontmatter;
 
+  console.log(post);
+
   return (
     <Layout>
       <Helmet title={`${post.frontmatter.title} by ${config.siteTitle}`} />
@@ -122,6 +124,7 @@ export const postTemplateQuery = graphql`
         slug
         date(formatString: "MMMM DD, YYYY")
         tags
+        canonicalUrl
       }
     }
   }

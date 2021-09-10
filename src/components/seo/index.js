@@ -15,16 +15,15 @@ const SEO = ({ postNode, postPath, postSEO, customDescription }) => {
     const postMeta = postNode.frontmatter;
     title = postMeta.title;
     description = postNode.excerpt;
+    canonicalURL = postNode.frontmatter.canonicalUrl;
 
     if (postMeta.thumbnail) {
       image = postMeta.thumbnail.childImageSharp.fixed.src;
     }
     postURL = `${config.siteUrl}${postPath}`;
-    canonicalURL = `${config.siteUrl}${postPath}`;
   } else {
     title = config.siteTitle;
     description = customDescription || config.description;
-    canonicalURL = `https://amanhimself.dev/`;
   }
 
   image = `${config.siteUrl}${image}`;
