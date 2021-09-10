@@ -1,25 +1,14 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import styled from 'styled-components';
 
-import { link } from '../../styles/partials';
-
-const ContentWrapper = styled.div`
-  ${link}
-  font-size: 1.15rem;
-`;
+import * as styles from './now.module.scss';
 
 const Now = ({ data }) => {
   const { html } = data;
   return (
-    <ContentWrapper>
+    <div className={styles.wrapper}>
       <div dangerouslySetInnerHTML={{ __html: html }} />
-    </ContentWrapper>
+    </div>
   );
-};
-
-Now.propTypes = {
-  data: PropTypes.object.isRequired
 };
 
 export default Now;
