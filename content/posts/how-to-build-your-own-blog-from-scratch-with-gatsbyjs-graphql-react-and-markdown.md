@@ -5,7 +5,7 @@ date: 2018-11-21
 thumbnail: '../thumbnails/gatsby.png'
 template: post
 tags:
-  -
+  - gatsby
 canonicalUrl: 'https://medium.com/crowdbotics/how-to-build-your-own-blog-from-scratch-with-gatsbyjs-graphql-react-and-markdown-78352c367bd1'
 ---
 
