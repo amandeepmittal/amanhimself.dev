@@ -8,13 +8,15 @@ import { config } from '../helpers';
 
 const About = ({ data }) => {
   const { node } = data.nows.edges[0];
-  console.log({ node });
+  const { html } = node;
 
   return (
     <Layout>
       <Helmet title={`About | ${config.username}`} />
       <SEO />
-      <Now data={node} />
+      <div className="infoContainer">
+        <div dangerouslySetInnerHTML={{ __html: html }} />
+      </div>
     </Layout>
   );
 };

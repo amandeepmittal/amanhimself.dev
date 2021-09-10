@@ -473,3 +473,35 @@ article .remark-code-title + pre {
   height: 1px;
   overflow: hidden;
 }
+
+.infoContainer {
+  font-size: 1.15rem;
+
+  a {
+    font-weight: 600;
+    color: var(--brandActive);
+    border-top: 2px solid transparent;
+    border-bottom: 2px solid var(--brandTintedActive);
+  }
+
+  a:hover {
+    font-weight: 600;
+    background: var(--brand);
+    color: var(--bg);
+    border-top: 2px solid var(--brand);
+    border-bottom: 2px solid var(--brand);
+  }
+
+  a.button {
+    display: block;
+    border: 1px solid var(--brand) !important;
+    background: var(--brand);
+    color: var(--bg);
+    padding: 0.5rem 1rem;
+    border-radius: 0.3rem;
+  }
+
+  a.button:hover {
+    filter: brightness(1.1);
+  }
+}
