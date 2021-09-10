@@ -511,3 +511,26 @@ article .remark-code-title + pre {
     filter: brightness(1.1);
   }
 }
+
+.blogContainer {
+  // max-width: var(--siteWidth);
+  // margin: 0 auto;
+
+  @media (min-width: 480px) {
+    padding: 0 30px;
+  }
+
+  .input {
+    width: 100%;
+    padding: 8px 12px;
+    color: var(--text);
+    font-size: 17px;
+    font-family: var(--fontFamily);
+    background-color: var(--bg);
+    background-color: var(--inputBg);
+    border: 1px solid var(--brand);
+    border-radius: 6px;
+    -webkit-appearance: none;
+    margin-bottom: 18px;
+  }
+}

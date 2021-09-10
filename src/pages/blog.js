@@ -3,34 +3,8 @@ import { graphql, Link } from 'gatsby';
 import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
 
-import { Layout, SEO, PostInfo, PostCard } from '../components';
+import { Layout, SEO, PostCard } from '../components';
 import { config, slugify } from '../helpers';
-
-const Wrapper = styled.div`
-  /* text-align: center; */
-  input {
-    width: 75%;
-    margin-block-end: 2.25rem;
-    padding: 1rem 2rem;
-    font-size: 1rem;
-    font-family: 'Open Sans', sans-serif;
-    border: 3px solid ${({ theme }) => theme.colors.black};
-    border-radius: 0.3rem;
-    box-shadow: 3px 3px 0 ${({ theme }) => theme.colors.black};
-    color: ${({ theme }) => theme.colors.black};
-    transition: all 300ms;
-    ::placeholder {
-      color: ${({ theme }) => theme.colors.darkGrey};
-    }
-    :focus {
-      outline: none;
-      border-color: ${({ theme }) => theme.colors.primary};
-    }
-  }
-  .posts-number {
-    color: ${({ theme }) => theme.colors.primary};
-  }
-`;
 
 const AllTagsWrapper = styled.div`
   margin-bottom: 2rem;
@@ -70,28 +44,26 @@ const BlogPage = ({ data }) => {
     <Layout>
       <Helmet title={`Blog | ${config.username}`} />
       <SEO customDescription="A collection of articles, tutorials, and writings." />
-      <Wrapper>
-        <h1>
-          {' '}
-          <span role="img" aria-label="plant emoji">
-            🌱{' '}
-          </span>
-          Blog
-        </h1>
-        <p style={{ fontSize: '18px' }}>
+
+      <div className="blogContainer">
+        <h1>Blog</h1>
+        <p style={{ fontSize: '1.2rem' }}>
           I've been writing online since 2017, mostly on web and mobile
           development. In total, I've written{' '}
           <span
-            className="posts-number"
-            style={{ fontWeight: 'bold', fontSize: '1.25rem' }}
+            style={{
+              fontWeight: 'bold',
+              fontSize: '1.25rem',
+              color: '#6a5acd'
+            }}
           >
             {Object.keys(posts).length}
           </span>{' '}
           articles on internet. This site is a collection of articles I've
           published here or elsewhere.
         </p>
-        {/* <p>Use the search below to filter by title, topic or tag.</p> */}
         <input
+          className="input"
           type="text"
           aria-label="Search"
           placeholder="Search a post by title, topic or tag..."
@@ -115,7 +87,7 @@ const BlogPage = ({ data }) => {
         {posts.map(post => {
           return <PostCard post={post} />;
         })}
-      </Wrapper>
+      </div>
     </Layout>
   );
 };
