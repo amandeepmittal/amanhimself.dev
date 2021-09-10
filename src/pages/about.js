@@ -1,9 +1,8 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import { Helmet } from 'react-helmet';
 
-import { Layout, Now, SEO } from '../components';
+import { Layout, SEO } from '../components';
 import { config } from '../helpers';
 
 const About = ({ data }) => {
@@ -39,9 +38,5 @@ export const query = graphql`
     }
   }
 `;
-
-Now.propTypes = {
-  data: PropTypes.object.isRequired
-};
 
 export default About;
