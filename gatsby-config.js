@@ -8,8 +8,8 @@ module.exports = {
     keywords: ['gatsby', 'react', 'scss', 'amanhimself', 'blog', 'portfolio'],
     email: `amanmittal.work@gmail.com`,
     twitter: `@amanhimself`,
-    siteLanguage: `en-GB`,
-    siteLocale: `en_gb`
+    siteLanguage: `en-US`,
+    siteLocale: `en_us`
   },
   plugins: [
     `gatsby-plugin-sass`,
@@ -118,7 +118,7 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#c792ea`,
         display: `minimal-ui`,
-        icon: `src/images/reactfavi.png` // This path is relative to the root of the site.
+        icon: `src/images/avatar.jpg` // This path is relative to the root of the site.
       }
     },
     {
