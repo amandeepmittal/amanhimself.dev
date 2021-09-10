@@ -48,14 +48,14 @@ const Footer = () => {
       >
         <SiMedium size={28} color="##14171A" />
       </a>
-      <a
+      {/* <a
         href="https://amanhimself.hashnode.dev/"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Instagram Account"
       >
         <SiHashnode size={28} color="#405DE6" />
-      </a>
+      </a> */}
       <a
         href={config.instagram}
         target="_blank"
