@@ -1,0 +1,29 @@
+footer {
+  text-align: center;
+  margin: 20px;
+  hr {
+    margin: 30px;
+    opacity: 0.5;
+    color: var(--brandTinted);
+  }
+
+  svg {
+    margin: 0 20px;
+    height: 26px;
+
+    &:hover {
+      transform: translateY(-2px);
+      transition: transform 0.35s;
+    }
+  }
+
+  a {
+    display: inline-block;
+  }
+
+  .footerContent {
+    color: var(--textTinted);
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+}

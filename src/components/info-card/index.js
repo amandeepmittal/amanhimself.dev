@@ -10,38 +10,6 @@ import {
   PodcastIcon
 } from '../social-icons';
 
-// const InfoCard = ({
-//   title,
-//   href,
-//   description = false,
-//   reactIcon = false,
-//   expoIcon = false,
-//   firebaseIcon = false,
-//   githubIcon = false,
-//   youtubeIcon = false,
-//   podcastIcon = false
-// }) => {
-//   return (
-//     <PostCard>
-//       <a href={`${href}`}>
-//         <GridDiv>
-//           {expoIcon && <ExpoIcon />}
-//           {reactIcon && <ReactIcon />}
-//           {firebaseIcon && <FirebaseIcon />}
-//           {githubIcon && <GitHub />}
-//           {youtubeIcon && <YoutubeIcon />}
-//           {podcastIcon && <PodcastIcon />}
-//           <h2>{title}</h2>
-//         </GridDiv>
-
-//         <PostMetaWrapper>
-//           <p>{description}</p>
-//         </PostMetaWrapper>
-//       </a>
-//     </PostCard>
-//   );
-// };
-
 const InfoCard = ({
   title,
   href,

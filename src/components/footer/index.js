@@ -1,57 +1,28 @@
 import React from 'react';
-import styled from 'styled-components';
-import { down } from 'styled-breakpoints';
 
-import { config } from '../../helpers';
 import {
-  Twitter,
-  GitHub,
-  Devto,
-  Medium,
-  Instagram,
-  RSSIcon
-} from '../social-icons';
+  SiMedium,
+  SiTwitter,
+  SiGithub,
+  SiInstagram,
+  SiHashnode,
+  SiRss
+} from 'react-icons/si';
+import { FaDev } from 'react-icons/fa';
 
-const FooterWrapper = styled.footer`
-  text-align: center;
-  margin: ${({ theme }) => theme.spacing[8]} 0;
-  hr {
-    margin: ${({ theme }) => theme.spacing[16]} 0;
-    opacity: 0.5;
-    color: var(--colour-secondary, ${({ theme }) => theme.colors.gray});
-  }
-  svg {
-    margin: 0 ${({ theme }) => theme.spacing[2]};
-    height: ${({ theme }) => theme.spacing[6]};
-    &:hover {
-      transform: translateY(-2px);
-      transition: transform 0.35s;
-    }
-  }
-  a {
-    display: inline-block;
-  }
-  .footer-content {
-    color: var(--colour-secondary, ${({ theme }) => theme.colors.darkGray});
-    margin-top: ${({ theme }) => theme.spacing[6]};
-    margin-bottom: ${({ theme }) => theme.spacing[0]};
-    ${down('sm')} {
-      margin-bottom: ${({ theme }) => theme.spacing[1]};
-      font-size: 12px;
-    }
-  }
-`;
+import * as styles from './footer.module.scss';
+import { config } from '../../helpers';
 
 const Footer = () => {
   return (
-    <FooterWrapper>
+    <footer className={styles.footer}>
       <a
         href={config.twitter}
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Twitter Account"
       >
-        <Twitter />
+        <SiTwitter size={28} color="#1DA1F2" />
       </a>
       <a
         href={config.github}
@@ -59,7 +30,7 @@ const Footer = () => {
         rel="noopener noreferrer"
         aria-label="GitHub Account"
       >
-        <GitHub />
+        <SiGithub size={28} color="##14171A" />
       </a>
       <a
         href={config.devto}
@@ -67,7 +38,7 @@ const Footer = () => {
         rel="noopener noreferrer"
         aria-label="Dev.to Account"
       >
-        <Devto />
+        <FaDev size={30} color="##14171A" />
       </a>
       <a
         href={config.medium}
@@ -75,7 +46,15 @@ const Footer = () => {
         rel="noopener noreferrer"
         aria-label="Medium Account"
       >
-        <Medium />
+        <SiMedium size={28} color="##14171A" />
+      </a>
+      <a
+        href="https://amanhimself.hashnode.dev/"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Instagram Account"
+      >
+        <SiHashnode size={28} color="#405DE6" />
       </a>
       <a
         href={config.instagram}
@@ -83,7 +62,7 @@ const Footer = () => {
         rel="noopener noreferrer"
         aria-label="Instagram Account"
       >
-        <Instagram />
+        <SiInstagram size={28} color="#E1306C" />
       </a>
       <a
         href="https://amanhimself.dev/rss.xml"
@@ -91,13 +70,13 @@ const Footer = () => {
         rel="noopener noreferrer"
         aria-label="RSS feed"
       >
-        <RSSIcon />
+        <SiRss size={28} color="#F77737" />
       </a>
-      <p className="footer-content">
+      <p className={styles.footerContent}>
         &copy;&nbsp; 2019-
         {`${new Date().getFullYear()} Aman Mittal · All Rights Reserved`}
       </p>
-    </FooterWrapper>
+    </footer>
   );
 };
 
