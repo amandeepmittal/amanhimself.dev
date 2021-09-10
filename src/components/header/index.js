@@ -8,10 +8,9 @@ const links = [
   { name: 'Home', path: '/' },
   { name: 'Blog', path: '/blog' },
   { name: 'About', path: '/about' },
-  { name: 'Speaking', path: '/speaking' },
-  { name: 'Newsletter', path: 'https://amanhimself.substack.com/' }
-  // TODO: Remove Contact page from the navbar and add it to homepage
-  // { name: 'Contact', path: '/contact' }
+  { name: 'Speaking', path: '/speaking' }
+  // TODO: Remove Newsletter from navbar
+  // { name: 'Newsletter', path: 'https://amanhimself.substack.com/' }
 ];
 
 const Header = () => {
