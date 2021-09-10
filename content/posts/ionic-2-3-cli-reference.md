@@ -6,6 +6,7 @@ thumbnail: '../thumbnails/ionic.png'
 slug: 'blog/ionic-2-3-cli-reference'
 tags:
   - ionic
+canonicalUrl: 'https://medium.com/hackernoon/ionic-2-3-cli-reference-13f9fae3f964'
 ---
 
 ![cover_image](https://miro.medium.com/max/2560/0*bpOjlkmo8k7rocHb.jpg)
@@ -205,7 +206,5 @@ $ git log --oneline --graph --decorate --color
 # Output
 * 029f86e (HEAD -> master) Initial commit
 ```
-
----
 
 [Originally Published at Hackernoon.com](https://medium.com/hackernoon/ionic-2-3-cli-reference-13f9fae3f964)

@@ -18,7 +18,11 @@ const PostTemplate = ({ data, pageContext }) => {
       <div className="postLayout">
         <h1>{title}</h1>
         <div className="postMetaWrapper">
-          <small>
+          <small
+            style={{
+              fontSize: '16px'
+            }}
+          >
             {date}{' '}
             <span role="img" aria-label="left hand pointer emoji">
               ☕️
@@ -28,7 +32,18 @@ const PostTemplate = ({ data, pageContext }) => {
               🔖{' '}
             </span>
             {tags.map(tag => (
-              <Link key={tag} to={`/tags/${slugify(tag)}`}>
+              <Link
+                key={tag}
+                to={`/tags/${slugify(tag)}`}
+                style={{
+                  background: '#6a5acd',
+                  color: '#fff',
+                  marginRight: '10px',
+                  paddingLeft: '5px',
+                  paddingRight: '5px',
+                  borderRadius: '0.3rem'
+                }}
+              >
                 #{tag}{' '}
               </Link>
             ))}{' '}

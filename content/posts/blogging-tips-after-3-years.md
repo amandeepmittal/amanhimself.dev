@@ -6,6 +6,7 @@ date: 2020-04-13
 thumbnail: '../thumbnails/writing.png'
 tags:
   - writing
+canonicalUrl: 'https://amanhimself.dev/blog/blogging-tips-after-3-years/'
 ---
 
 ![cover_image](https://i.imgur.com/XHghbGg.jpg)

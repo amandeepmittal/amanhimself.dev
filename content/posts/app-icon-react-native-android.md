@@ -6,6 +6,7 @@ template: post
 thumbnail: '../thumbnails/react.png'
 tags:
   - react-native
+canonicalUrl: 'https://amanhimself.dev/blog/app-icon-react-native-android'
 ---
 
 ![cover_image](https://i.imgur.com/tZtGF2K.png)

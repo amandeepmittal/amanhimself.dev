@@ -6,6 +6,7 @@ thumbnail: '../thumbnails/node.png'
 slug: 'blog/tips-for-creating-node-js-rest-apis'
 tags:
   - nodejs
+canonicalUrl: 'https://codeburst.io/tips-for-creating-node-js-rest-apis-dfa0b2adb39c'
 ---
 
 ![cover_image](https://miro.medium.com/max/4000/1*aeWo6e6FC8InJwBl3TmpDw.jpeg)
@@ -64,7 +65,5 @@ Working as a team or even if individual and having a documented API, in the end 
 There are quite a number of frameworks that you can choose from to build your next RESTful API with Nodejs.
 
 Express, Koa, Hapi all can be used for creating browser based applications but Restify allows you to focus on building a RESTful service.
-
----
 
 [Originally Published at Codeburst.io](https://codeburst.io/tips-for-creating-node-js-rest-apis-dfa0b2adb39c)

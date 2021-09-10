@@ -7,6 +7,7 @@ thumbnail: '../thumbnails/react.png'
 tags:
   - react-native
   - firebase
+canonicalUrl: 'https://heartbeat.fritz.ai/chat-app-with-react-native-part-3-add-firestore-to-create-and-store-chat-rooms-94f0c7e09e9d'
 ---
 
 ![cover](https://i.imgur.com/ROYjoYo.jpg)
@@ -493,19 +494,8 @@ In the [next part](https://amanhimself.dev/blog/chat-app-with-react-native-part-
 
 You can find the complete source code for this project at [this Github repo](https://github.com/amandeepmittal/react-native-examples/tree/master/ChatApp).
 
----
-
 👉 Here is a list of resources used in this tutorial:
 
 - Reactjs [Context API](https://reactjs.org/docs/context.html#reactcreatecontext)
 - [Firebase Authentication reference](https://invertase.io/oss/react-native-firebase/v6/auth/quick-start) from `react-native-firebase`
 - Getting started with stack navigator using `react-navigation` v5 [here](https://heartbeat.fritz.ai/getting-started-with-stack-navigator-using-react-navigation-5-in-react-native-and-expo-apps-4c516becaee1)
-
----
-
-💙 To learn more about React Native, check out these resources:
-
-- [Official documentation](http://reactnative.dev/)
-- [Heartbeat's blog](http://heartbeat.fritz.ai/)
-- [My blog](https://amanhimself.dev)
-- [My personal newsletter](https://amanhimself.substack.com/)

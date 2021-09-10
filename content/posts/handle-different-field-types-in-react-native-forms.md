@@ -7,6 +7,7 @@ thumbnail: '../thumbnails/expo.png'
 tags:
   - expo
   - react-native
+canonicalUrl: 'https://heartbeat.fritz.ai/handling-different-field-types-in-react-native-forms-with-formik-and-yup-fa9ea89d867e'
 ---
 
 ![cover](https://i.imgur.com/CqvpN8D.png)
@@ -238,7 +239,5 @@ This is the output you are going to get.
 That's it. This post and the [previous one](https://amanhimself.dev/build-validate-forms-with-react-native-formik-yup) covers enough to get you started and create forms in advance forms in React Native apps using formik and yup.
 
 You can go ahead and add the toggle password visibility to the `Signup` form screen as well. You will find the source code from [**this Github repo**](https://github.com/amandeepmittal/expo-firebase/releases/tag/0.5.0) release.
-
----
 
 [Originally published at Heartbeat](https://heartbeat.fritz.ai/handling-different-field-types-in-react-native-forms-with-formik-and-yup-fa9ea89d867e)

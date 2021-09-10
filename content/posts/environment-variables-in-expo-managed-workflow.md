@@ -6,6 +6,7 @@ template: post
 thumbnail: '../thumbnails/expo.png'
 tags:
   - expo
+canonicalUrl: 'https://amanhimself.dev/blog/environment-variables-in-expo-managed-workflow/'
 ---
 
 Managing different keys for different environments, such as development or production, is common among JavaScript developers. Therefore, variables defined in this file may change during development and production, but the code remains unchanged. Hence, the mechanism of the `.env` file exists.

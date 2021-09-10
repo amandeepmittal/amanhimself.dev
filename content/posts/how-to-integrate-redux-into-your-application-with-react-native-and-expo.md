@@ -8,6 +8,7 @@ tags:
   - expo
   - redux
   - react-native
+canonicalUrl: 'https://medium.com/free-code-camp/how-to-integrate-redux-into-your-application-with-react-native-and-expo-ec37c9ca6033'
 ---
 
 ![cover](https://i.imgur.com/YqZC6zh.jpg)
@@ -186,7 +187,5 @@ We have reached the end of the article. Hopefully, you have had as much fun read
 _Do you remember me telling you about a particular file structure I followed in implementing Redux architecture? Well it is called_ **_re-ducks_** _pattern and you can find more details in this informative article by_ [_Alex Moldovan_](https://medium.com/u/93d08ec35da2)_:_
 
 [**Scaling your Redux App with ducks**](https://medium.freecodecamp.org/scaling-your-redux-app-with-ducks-6115955638be)
-
----
 
 [Originally published at freeCodeCamp.org](https://medium.com/free-code-camp/how-to-integrate-redux-into-your-application-with-react-native-and-expo-ec37c9ca6033)

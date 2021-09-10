@@ -6,6 +6,7 @@ slug: 'blog/dark-mode-with-react-hooks'
 thumbnail: '../thumbnails/react.png'
 tags:
   - react
+canonicalUrl: 'https://blog.crowdbotics.com/how-to-add-dark-mode-functionality-with-react-hooks/'
 ---
 
 ![cover](https://i.imgur.com/WDIlL4i.png)
@@ -83,9 +84,9 @@ import './App.css';
 
 function App() {
   return (
-    <div className='light-theme'>
+    <div className="light-theme">
       <nav>Toggle button will go here</nav>
-      <div className='content'>
+      <div className="content">
         <h1>Light Mode</h1>
       </div>
     </div>
@@ -121,9 +122,9 @@ Notice that using CSS selector property, you are changing the background color o
 ```js
 function App() {
   return (
-    <div className='dark-theme'>
+    <div className="dark-theme">
       <nav>Toggle button will go here</nav>
-      <div className='content'>
+      <div className="content">
         <h1>Dark Mode</h1>
         <p>
           Do take a note of the <code>color</code> property in the nav bar.
@@ -163,13 +164,13 @@ return (
   (
     <div className={darkTheme ? 'dark-theme' : 'light-theme'}>
       <nav>
-        <div className='button-container'>
+        <div className="button-container">
           <button onClick={() => setDarkTheme(prevTheme => !prevTheme)}>
             Toggle Theme
           </button>
         </div>
       </nav>
-      <div className='content'>
+      <div className="content">
         <h1>{darkTheme ? 'Dark Mode' : 'Light Mode'}</h1>
         <p>
           Do take a note of the <code>color</code> property in the nav bar.
@@ -268,7 +269,5 @@ _Congratulations!_ You have made to the end. I hope you learned something useful
 
 - [Hooks official docs](https://reactjs.org/docs/hooks-intro.html)
 - [Using Hooks in a React Native app](https://blog.crowdbotics.com/react-hooks-basics-building-a-react-native-app-with-react-hooks/)
-
----
 
 Originally published at [Crowdbotics.com](https://blog.crowdbotics.com/how-to-add-dark-mode-functionality-with-react-hooks/)

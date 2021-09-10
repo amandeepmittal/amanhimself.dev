@@ -6,6 +6,7 @@ thumbnail: '../thumbnails/graphql.png'
 tags:
   - react
   - graphql
+canonicalUrl: 'https://blog.crowdbotics.com/introduction-to-apollo-client-with-graphql-react-and-crowdbotics/'
 ---
 
 In the last few years, GraphQL has gone popular choice to build an API. It also serves a great equivalent and alternative to REST approach. GraphQL is an open source query language to develop an API. In contrast to REST, which is an architecture or _'a way of doing things'_, graphQL was developed with a concept in mind that a client requests only the desired set of items from the server in a single request.
@@ -243,7 +244,7 @@ import List from './components/List';
 
 function App() {
   return (
-    <div className='App'>
+    <div className="App">
       <List />
     </div>
   );
@@ -271,7 +272,5 @@ _Hint:_ You will need to use the local component state in order to display the c
 The answer to this challenge and the complete tutorial is available at this [Github Repository](https://github.com/amandeepmittal/apollo-client-react-demo).
 
 For more **resources** please check the Apollo Client's official documentation [here](https://www.apollographql.com/docs/react/).
-
----
 
 [Originally published at Crowdbotics](https://blog.crowdbotics.com/introduction-to-apollo-client-with-graphql-react-and-crowdbotics/)

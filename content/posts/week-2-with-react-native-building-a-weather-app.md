@@ -7,6 +7,7 @@ template: post
 tags:
   - expo
   - react-native
+canonicalUrl: 'https://medium.com/hackernoon/week-2-with-react-native-building-a-weather-app-ca50fcfcb1e1'
 ---
 
 This post was supposed to come out last weekend. I had a busy weekend could not find the time to write it nor had the energy to pull off it. Last week, I announced publicly, [in the first post](https://medium.com/@amanhimself/starting-over-with-react-native-aff0dbdf5909), that I have re-started learning and getting hands on experience using React Native. This post is a continuation to that one.

@@ -6,6 +6,7 @@ slug: 'blog/how-to-use-react-native-localize'
 thumbnail: '../thumbnails/react.png'
 tags:
   - react-native
+canonicalUrl: 'https://heartbeat.fritz.ai/how-to-use-react-native-localize-in-react-native-apps-3bb3d510f801'
 ---
 
 Not every app require global customers but if you have plans to have, you would need internationalization in your React Native app. Using [`react-native-localize`](https://github.com/react-native-community/react-native-localize) your app can detect the operating system or the device language and support the multi-languages.
@@ -212,8 +213,6 @@ On changing the locale, the correct result is reflected in the app.
 This completes the tutorial on how to use `react-native-localize` to add and use language translations in a React Native app.
 
 Here is the complete code for this demo in a **[Github repo](https://github.com/amandeepmittal/rni18nDemo)**.
-
----
 
 Checkout [Jonathan Palma's](https://twitter.com/jonathanpalma__) who wrote [a small i18n library](https://github.com/jonathanpalma/react-native-simple-i18n#readme) after being inspired from this post. Check the library here on [GitHub](https://github.com/jonathanpalma/react-native-simple-i18n#readme).
 

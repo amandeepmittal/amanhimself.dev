@@ -7,6 +7,7 @@ slug: 'blog/how-to-make-a-twitter-bot-with-nodejs'
 tags:
   - nodejs
   - twitter-bots
+canonicalUrl: 'https://chatbotslife.com/how-to-make-a-twitter-bot-with-nodejs-d5cb04fdbf97'
 ---
 
 Earlier this week, [**Rising Stack Community**](https://community.risingstack.com/) published the second of tutorial on Building a Twitter Bot with NodeJS. Some of you may have read the first part here [on Medium **(_published by Hackernoon_**](https://hackernoon.com/create-a-simple-twitter-bot-with-node-js-5b14eb006c08#.43u5qmvts)**_)_** while others might have gone through the first part of the guide on [RisingStack Community.](https://community.risingstack.com/node-js-twitter-bot-tutorial/)
@@ -31,7 +32,5 @@ The second part of the guide extends the usability of the Twitter bot by making 
 I received positive feedback by the people who followed the [first part of the guide](https://hackernoon.com/create-a-simple-twitter-bot-with-node-js-5b14eb006c08#.5qwkbly78) and that encouraged me to write a [second part](https://community.risingstack.com/how-to-make-a-twitter-bot-with-node-js/). I hope you’ll have fun with it, since programming in NodeJS as a platform is really fun from a developer’s point of view, and a very pragmatic approach, I would say.
 
 _I am looking forward to grab a glimpse of YOUR Twitter Bot. If you are working on it or have already published it on Twitter, don’t forget to send me a link with Twitter handler of your bot in the comments below or you can add your Twitter Bot to this_ **_Nodejs Twitter Bot resource Github repo_** [here](https://github.com/amandeepmittal/awesome-twitter-bots).
-
----
 
 [Originally Published at Chatbotslife.com](https://chatbotslife.com/how-to-make-a-twitter-bot-with-nodejs-d5cb04fdbf97)

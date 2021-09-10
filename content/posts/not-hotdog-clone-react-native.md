@@ -8,6 +8,7 @@ tags:
   - expo
   - firebase
   - react-native
+canonicalUrl: 'https://heartbeat.fritz.ai/build-a-not-hotdog-clone-with-react-native-8f9b9eb75bd2'
 ---
 
 If you're a fan of HBO's Silicon Valley, you'll remember when they launched a real AI-powered mobile app that classifies hotdogs from a given image (or not). Using Google's Vision API, let's try to recreate a working model of the application in React Native.
@@ -694,7 +695,5 @@ By integrating Firebase storage and using Google's Vision API with React Native,
 - [react-native-elements](https://react-native-training.github.io/) UI component library
 - [expo-image-picker](https://docs.expo.io/versions/v34.0.0/sdk/imagepicker/#returns)
 - [firebase-storage-upload-example with expo](https://github.com/expo/firebase-storage-upload-example)
-
----
 
 [Originally published at Heartbeat](https://heartbeat.fritz.ai/build-a-not-hotdog-clone-with-react-native-8f9b9eb75bd2)

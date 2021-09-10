@@ -7,6 +7,7 @@ template: post
 tags:
   - expo
   - react-native
+canonicalUrl: 'https://heartbeat.fritz.ai/getting-started-with-stack-navigator-using-react-navigation-5-in-react-native-and-expo-apps-4c516becaee1'
 ---
 
 [React Navigation](https://reactnavigation.org/) as the library released its 5th stable version recently, just being two years old. Without a doubt, it is one of the most popular navigation solutions in React Native apps that also has support for the Expo.
@@ -720,7 +721,5 @@ In this tutorial, we have discussed many strategies and properties that you can 
 Here is the link to the complete Stack Navigator API [here](https://reactnavigation.org/docs/en/stack-navigator.html) I'd recommend you to check.
 
 [Source code](https://github.com/amandeepmittal/react-native-examples/tree/master/reactnav5-stack-navigator)
-
----
 
 Originally published at [Heartbeat.fritz.ai](https://heartbeat.fritz.ai/getting-started-with-stack-navigator-using-react-navigation-5-in-react-native-and-expo-apps-4c516becaee1)

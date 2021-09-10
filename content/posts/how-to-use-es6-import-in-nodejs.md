@@ -6,6 +6,7 @@ thumbnail: '../thumbnails/node.png'
 slug: 'blog/how-to-use-es6-import-syntax-in-node'
 tags:
   - nodejs
+canonicalUrl: 'https://amanhimself.dev/blog/how-to-use-es6-import-syntax-in-node/'
 ---
 
 ![cover_image](https://i.imgur.com/mztPVQI.png)

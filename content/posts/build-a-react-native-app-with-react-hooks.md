@@ -7,6 +7,7 @@ thumbnail: '../thumbnails/expo.png'
 tags:
   - expo
   - react-native
+canonicalUrl: 'https://medium.com/crowdbotics/build-a-react-native-app-with-react-hooks-5498e1d5fdf6'
 ---
 
 ![cover_image](https://i.imgur.com/5QMLIPd.png)
@@ -610,7 +611,5 @@ _To read more about React Hooks check out the_ [**_official Overview page here_*
 _The complete code for this tutorial is available in the Github repository below._
 
 [**amandeepmittal/RNHooksTODOAPP**](https://github.com/amandeepmittal/RNHooksTODOAPP)
-
----
 
 [Originally published at Crowdbotics](https://medium.com/crowdbotics/build-a-react-native-app-with-react-hooks-5498e1d5fdf6)

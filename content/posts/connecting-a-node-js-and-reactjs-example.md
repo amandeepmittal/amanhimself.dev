@@ -7,6 +7,7 @@ thumbnail: '../thumbnails/node.png'
 tags:
   - nodejs
   - react
+canonicalUrl: 'https://www.zeolearn.com/magazine/connecting-reactjs-frontend-with-nodejs-backend'
 ---
 
 ![cover](https://i.imgur.com/X7ju8yL.jpg)
@@ -313,7 +314,5 @@ At the same time, the client is requesting to view the file on the front-end wit
 ![](https://cdn-images-1.medium.com/max/800/0*cWOzuejEhEOtSQV8.png)
 
 You can find the complete code for this example at [**FileUpload-Example**](https://github.com/amandeepmittal/fileupload-example) Github Repository.
-
----
 
 [Originally this article was published on Zeolearn.com](https://www.zeolearn.com/magazine/connecting-reactjs-frontend-with-nodejs-backend)

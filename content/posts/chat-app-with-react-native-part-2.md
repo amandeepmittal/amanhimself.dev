@@ -7,6 +7,7 @@ thumbnail: '../thumbnails/react.png'
 tags:
   - react-native
   - firebase
+canonicalUrl: 'https://heartbeat.fritz.ai/chat-app-with-react-native-part-2-firebase-user-authentication-with-react-native-firebase-533352870497'
 ---
 
 ![cover](https://i.imgur.com/ROYjoYo.jpg)
@@ -447,7 +448,5 @@ You can find the complete source code for this project at [this Github repo](htt
 
 - [Official documentation](http://reactnative.dev/)
 - [My personal newsletter](https://amanhimself.substack.com/)
-
----
 
 Originally published at [Heartbeat.Fritz.Ai](https://heartbeat.fritz.ai/chat-app-with-react-native-part-2-firebase-user-authentication-with-react-native-firebase-533352870497).

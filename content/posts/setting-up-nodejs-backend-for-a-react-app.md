@@ -7,6 +7,7 @@ template: post
 tags:
   - nodejs
   - react
+canonicalUrl: 'https://medium.com/crowdbotics/setting-up-nodejs-backend-for-a-react-app-fe2219f26ea4'
 ---
 
 In this article, I am going to walk you through setting up your own [Node.js](http://crowdbotics.com/build/node-js) backend server for a [React application](https://crowdbotics.com/build/react). Both frameworks are often used together to build real time, fullstack web applications. A database, such as MySQL, Postgresql, or a NoSQL database such as MongoDB, is used to store information. For brevity’s sake, I will not use a database in this walkthrough.
@@ -213,6 +214,4 @@ Finally, we are able to see the data as below.
 
 _You can find the complete source code for the above article at_ [**_Github Repo_**](https://github.com/amandeepmittal/hapi-react-example)
 
----
-
-[Originally published at Crowdbotics](https://medium.com/crowdbotics/setting-up-nodejs-backend-for-a-react-app-fe2219f26ea4)
+_[Originally published at Crowdbotics](https://medium.com/crowdbotics/setting-up-nodejs-backend-for-a-react-app-fe2219f26ea4)_

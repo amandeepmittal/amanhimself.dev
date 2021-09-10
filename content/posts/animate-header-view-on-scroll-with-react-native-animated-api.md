@@ -7,6 +7,7 @@ thumbnail: '../thumbnails/expo.png'
 tags:
   - expo
   - react-native
+canonicalUrl: 'https://blog.jscrambler.com/how-to-animate-a-header-view-on-scroll-with-react-native-animated/'
 ---
 
 ![cover_image](https://i.imgur.com/qDKlX8L.jpg)
@@ -375,4 +376,4 @@ Some of the important topics covered in this post are listed as links for furthe
 - [Interpolation](https://reactnative.dev/docs/animations#interpolation)
 - [Tracking gestures with Animated.Event](https://reactnative.dev/docs/animations#tracking-gestures)
 
-> Originally published at [Jscrambler](https://blog.jscrambler.com/how-to-animate-a-header-view-on-scroll-with-react-native-animated/).
+Originally published at [Jscrambler](https://blog.jscrambler.com/how-to-animate-a-header-view-on-scroll-with-react-native-animated/).

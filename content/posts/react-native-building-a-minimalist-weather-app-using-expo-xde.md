@@ -7,6 +7,7 @@ template: post
 tags:
   - expo
   - react-native
+canonicalUrl: 'https://blog.expo.io/building-a-minimalist-weather-app-with-react-native-and-expo-fe7066e02c09'
 ---
 
 React Native is a great framework to develop cross-platform mobile applications for the platforms iOS and Android. In this, I am going to take you through the process of building a “minimalist” weather application using React Native by fetching real-time data. If you have never worked with React Native, you can use this walkthrough as kickstart in your journey of becoming a mobile application developer and will be a cool project for your portfolio.
@@ -519,7 +520,5 @@ Most of the source code is same. We are now just making some additions by using 
 **Note:** Before running the application on your actual device make sure you have internet access and location “on” the device for this app to work. We haven’t talked about App Permissions in this article and it is a bit out of the scope too.
 
 The whole code for this application is available at this [Github Repo](https://github.com/amandeepmittal/rn-minimalist-weather-app). I have also published the application on [Expo Store here](https://expo.io/@amanhimself/rn-minimalist-weather-app) for you to test out. Just scan the QR code and run the application to see what you will be working in this tutorial.
-
----
 
 [Originally this article was published on Blog.expo.io](https://blog.expo.io/building-a-minimalist-weather-app-with-react-native-and-expo-fe7066e02c09)

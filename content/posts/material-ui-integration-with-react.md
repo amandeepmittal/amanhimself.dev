@@ -6,6 +6,7 @@ template: post
 thumbnail: '../thumbnails/react.png'
 tags:
   - react
+canonicalUrl: 'https://amanhimself.dev/blog/material-ui-integration-with-react/'
 ---
 
 Material design was introduced by Google around 2014 as a design language and it still shares some popularity among web and mobile applications. One of the common ways to integrate and use this design system in React apps is through [MaterialUI](https://material-ui.com/getting-started/installation/) library.
@@ -88,7 +89,7 @@ export default function Navbar() {
   return (
     <AppBar>
       <Toolbar>
-        <Typography variant='h6'>React and Material-UI App</Typography>
+        <Typography variant="h6">React and Material-UI App</Typography>
       </Toolbar>
     </AppBar>
   );
@@ -159,7 +160,7 @@ export default function List() {
   return (
     <Grid container spacing={2}>
       <Grid item className={classes.root} xs={12}>
-        <Grid container justify='center' spacing={2}>
+        <Grid container justify="center" spacing={2}>
           <Grid key={1} item>
             <Paper className={classes.paper} elevation={2} />
           </Grid>

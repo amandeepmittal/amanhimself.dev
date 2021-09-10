@@ -6,6 +6,7 @@ template: post
 thumbnail: '../thumbnails/react.png'
 tags:
   - react-native
+canonicalUrl: 'https://medium.com/crowdbotics/react-native-performance-do-and-dont-88424e873bbd'
 ---
 
 ![cover_image](https://miro.medium.com/max/700/1*l1LA9yCAkMQiHZYNpcHIZQ.png)
@@ -162,4 +163,4 @@ For example:
 
 React Native is an open-source framework used to create cross-platform mobile applications. It uses JavaScript at its core and has a primitive API of components to build mobile interfaces and functionalities. It’s a high-performance framework as long as you build with performance in mind from the start.
 
-> [Originally Published at Crowdbotics](https://medium.com/crowdbotics/react-native-performance-do-and-dont-88424e873bbd)
+_[Originally Published at Crowdbotics](https://medium.com/crowdbotics/react-native-performance-do-and-dont-88424e873bbd)_

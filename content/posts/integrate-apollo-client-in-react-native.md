@@ -8,6 +8,7 @@ tags:
   - expo
   - graphql
   - react-native
+canonicalUrl: 'https://blog.crowdbotics.com/integrate-graphql-and-apollo-client-in-react-native-app/'
 ---
 
 Apollo has an entire ecosystem of tools to build GraphQL applications regardless of the frontend framework or library you intend to use. You can use it to develop client-side and server-side apps separately. Apollo has more features and support than its open-source competitors in GraphQL for JavaScript world.

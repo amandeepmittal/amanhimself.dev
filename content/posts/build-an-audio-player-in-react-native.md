@@ -7,6 +7,7 @@ thumbnail: '../thumbnails/expo.png'
 tags:
   - expo
   - react-native
+canonicalUrl: 'https://blog.jscrambler.com/how-to-build-an-audio-player-in-react-native/'
 ---
 
 ![cover_image](https://i.imgur.com/XFvTGys.jpg)
@@ -485,7 +486,5 @@ The resources used in order to create this tutorial can be found below:
 - [Expo Audio API](https://docs.expo.io/versions/latest/sdk/audio/) documentation
 - [expo-av](https://docs.expo.io/versions/latest/sdk/av/) documentation
 - [Librivox audio files in public domain](https://librivox.org/hamlet-by-william-shakespeare/), a big thank you!
-
----
 
 [Originally published at Jscrambler](https://blog.jscrambler.com/how-to-build-an-audio-player-in-react-native/)

@@ -6,6 +6,7 @@ thumbnail: '../thumbnails/node.png'
 slug: 'blog/how-to-mock-data-for-nodejs-applications-using-fakerjs'
 tags:
   - nodejs
+canonicalUrl: 'https://hackernoon.com/how-to-mock-data-for-node-js-applications-using-faker-js-b1f4c0e78102'
 ---
 
 ![cover_image](https://hackernoon.com/hn-images/1*ENk6O_-iQYdMlnrM4w82kw.jpeg)
@@ -88,8 +89,6 @@ Another good thing about Faker I like is that it’s not only restricted to serv
 ```
 
 This API will help you to prototype your JavaScript/Node.js applications at a faster rate. Not only that, you can easily mock your TDD/BDD tests when creating a RESTful API utilizing this library.
-
----
 
 For full source code at [this Github Repository](https://github.com/amandeepmittal/fakerjs)
 

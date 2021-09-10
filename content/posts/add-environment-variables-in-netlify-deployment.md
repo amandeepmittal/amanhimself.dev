@@ -6,6 +6,7 @@ slug: 'blog/add-environment-variables-in-netlify-deployment'
 thumbnail: '../thumbnails/netlify.png'
 tags:
   - nodejs
+canonicalUrl: 'https://amanhimsefl.dev/blog/add-environment-variables-in-netlify-deployment'
 ---
 
 ![cover_image](https://i.imgur.com/SX2uERE.png)

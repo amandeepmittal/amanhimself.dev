@@ -6,6 +6,7 @@ thumbnail: '../thumbnails/react.png'
 template: post
 tags:
   - react
+canonicalUrl: 'https://amanhimself.dev/blog/blog/react-router-real-time-user-monitoring-react-apps/'
 ---
 
 React is often used for building single-page applications (SPAs). SPAs tend to have multiple page views so when navigating from one-page view to another, reloading the entire page view is tedious and inefficient. To work as it should, a SPA must render different parts of a view when required instead of reloading the entire page.
@@ -77,7 +78,7 @@ A `Route` is required to create an actual route. It is where the logic of routin
 function App() {
   return (
     <Router>
-      <Route path='/' component={Home} />
+      <Route path="/" component={Home} />
     </Router>
   );
 }
@@ -135,8 +136,8 @@ import About from './components/About';
 function App() {
   return (
     <Router history={history}>
-      <Route path='/' component={Home} />
-      <Route path='/about' component={About} />
+      <Route path="/" component={Home} />
+      <Route path="/about" component={About} />
     </Router>
   );
 }
@@ -149,7 +150,7 @@ Visit the URL `http://localhost:3000/about`. You will notice that both the compo
 The reason for this is that the regular expression engine that React Router uses internally considers both the routes that are being started with a forward slash `/` equal. To solve this issue, we can use another essential prop on the Home route called `exact`.
 
 ```js
-<Route path='/' exact component={Home} />
+<Route path="/" exact component={Home} />
 ```
 
 This `exact` prop is also known as a qualifier which states that the path must match exactly the `/` and nothing after it, such as `/about`. Now, if you visit the browser window at the URL `http://localhost:3000/about` you will notice that only the about component is getting rendered this time.
@@ -169,8 +170,8 @@ function App() {
   return (
     <Router history={history}>
       <Switch>
-        <Route path='/' exact component={Home} />
-        <Route path='/about' component={About} />
+        <Route path="/" exact component={Home} />
+        <Route path="/about" component={About} />
       </Switch>
     </Router>
   );
@@ -190,16 +191,16 @@ function App() {
   return (
     <Router history={history}>
       <nav style={{ margin: 10 }}>
-        <NavLink exact to='/' style={{ padding: 10 }}>
+        <NavLink exact to="/" style={{ padding: 10 }}>
           Home
         </NavLink>
-        <NavLink to='/about' style={{ padding: 10 }}>
+        <NavLink to="/about" style={{ padding: 10 }}>
           About
         </NavLink>
       </nav>
       <Switch>
-        <Route path='/' exact component={Home} />
-        <Route path='/about' component={About} />
+        <Route path="/" exact component={Home} />
+        <Route path="/about" component={About} />
       </Switch>
     </Router>
   );
@@ -263,7 +264,7 @@ export default function Posts() {
   const [posts, setPosts] = useState(POSTS);
 
   return (
-    <div className='posts'>
+    <div className="posts">
       <h1>Posts List</h1>
       <ul>
         {posts.map(post => (
@@ -272,7 +273,7 @@ export default function Posts() {
           </li>
         ))}
       </ul>
-      <Route path='/posts/:id' component={Child} />
+      <Route path="/posts/:id" component={Child} />
     </div>
   );
 }
@@ -287,20 +288,20 @@ function App() {
   return (
     <Router history={history}>
       <nav style={{ margin: 10 }}>
-        <NavLink exact to='/' style={{ padding: 10 }}>
+        <NavLink exact to="/" style={{ padding: 10 }}>
           Home
         </NavLink>
-        <NavLink to='/about' style={{ padding: 10 }}>
+        <NavLink to="/about" style={{ padding: 10 }}>
           About
         </NavLink>
-        <NavLink to='/posts' style={{ padding: 10 }}>
+        <NavLink to="/posts" style={{ padding: 10 }}>
           Posts
         </NavLink>
       </nav>
       <Switch>
-        <Route path='/' exact component={Home} />
-        <Route path='/about' component={About} />
-        <Route path='/posts' component={Posts} />
+        <Route path="/" exact component={Home} />
+        <Route path="/about" component={About} />
+        <Route path="/posts" component={Posts} />
       </Switch>
     </Router>
   );

@@ -6,6 +6,7 @@ thumbnail: '../thumbnails/react.png'
 template: post
 tags:
   - react
+canonicalUrl: 'https://blog.crowdbotics.com/setup-a-react-app-with-typescript-storybook-and-crowdbotics/'
 ---
 
 If you are building web applications with ReactJS, you might have heard or used TypeScript. They say TypeScript is the missing part from JavaScript's ecosystem. I must say, I did not enjoy writing React apps in TypeScript at first. But over time, I have learned this valuable lesson that if you want to continue a project that has a focused development process, TypeScript should be the way to go. Including types and structures like interfaces as an extension of JavaScript help to make the development process more predictable and safer. TypeScript offers other benefits in the form of code suggestions in a workspace and highlights errors as early as possible too.
@@ -197,7 +198,7 @@ const styles = {
 };
 
 const Button: React.SFC<IButtonProps> = props => (
-  <button onClick={props.onClick} style={styles} type='button'>
+  <button onClick={props.onClick} style={styles} type="button">
     {props.children}
   </button>
 );
@@ -230,7 +231,5 @@ Go to the terminal window and run the script `yarn run storybook`. This will ope
 ## Conclusion
 
 Kudos to you if have reached so far. You have configured Storybook work with TypeScript and wrote a story for a custom `Button` component using the TypeScript. This tutorial was just an introduction. To dive deep inside the world of storybooks, I would recommend you to go through their official docs [here](https://storybook.js.org/docs/guides/guide-react/).
-
----
 
 [Originally published at Crowdbotics](https://blog.crowdbotics.com/setup-a-react-app-with-typescript-storybook-and-crowdbotics/)

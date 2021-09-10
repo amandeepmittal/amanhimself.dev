@@ -6,6 +6,7 @@ date: 2019-01-04
 thumbnail: '../thumbnails/react.png'
 tags:
   - react-native
+canonicalUrl: 'https://levelup.gitconnected.com/getting-started-with-react-native-in-2019-build-your-first-app-a41ebc0617e2'
 ---
 
 ![cover](https://i.imgur.com/p0FiCt8.jpg)

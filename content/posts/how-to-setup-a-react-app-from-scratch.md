@@ -6,6 +6,7 @@ thumbnail: '../thumbnails/react.png'
 slug: 'blog/how-to-setup-a-react-app-from-scratch'
 tags:
   - react
+canonicalUrl: 'https://codeburst.io/how-to-setup-a-react-app-from-scratch-860bad109837'
 ---
 
 ![cover_image](https://miro.medium.com/max/2000/0*5Zkna8WY5wdsKKsR.png)
@@ -385,7 +386,5 @@ Some React Starter Kits worth looking at:
 Different kits cover different scope for applications. If you want to share any React resource that you think will be useful for someone like me who is getting started in the React Development Ecosystem, please mention it in the comment below.
 
 _You can find all of the above over_ [**_this Github_**](https://github.com/amandeepmittal/react-app-bootsrapping) _repo._
-
----
 
 [Originally Published at codeburst.io](https://codeburst.io/how-to-setup-a-react-app-from-scratch-860bad109837)

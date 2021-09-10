@@ -6,6 +6,7 @@ thumbnail: '../thumbnails/node.png'
 slug: 'blog/paginate-records-in-mysql-using-sequelize-and-nodejs'
 tags:
   - nodejs
+canonicalUrl: 'https://medium.com/hackernoon/how-to-paginate-records-in-mysql-using-sequelize-and-nodejs-a3465d12aad5'
 ---
 
 ![cover_image](https://miro.medium.com/max/1400/0*ShbzlvZjT-VI72oW.png)
@@ -81,7 +82,5 @@ router.get('/:page', (req, res) => {
 ```
 
 `findAndCountAll` is the model for searching multiple records in the database and it returns both the data required and the count of elements in that table. The above query will get 50 user records at once until the next page is called to fetch the next 50 records. `limit` and `offset` are required in queries related to pagination in which `limit` fetches the number of rows based on the query whereas `offset` is used to skip the number of rows in the database table.
-
----
 
 [Originally Published at Hackernoon.com](https://medium.com/hackernoon/how-to-paginate-records-in-mysql-using-sequelize-and-nodejs-a3465d12aad5)

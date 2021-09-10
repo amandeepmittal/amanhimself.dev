@@ -6,6 +6,7 @@ thumbnail: '../thumbnails/js.png'
 slug: 'blog/javascript-code-conventions'
 tags:
   - javascript
+canonicalUrl: 'https://amanhimself.dev/blog/javascript-code-conventions/'
 ---
 
 This article is about coding conventions. Everywhere I read articles about complex things in programming, links to other good/better/awesome articles, but nobody seems to talk about the basic things in programming.

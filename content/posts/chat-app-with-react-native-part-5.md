@@ -7,6 +7,7 @@ thumbnail: '../thumbnails/react.png'
 tags:
   - react-native
   - firebase
+canonicalUrl: 'https://heartbeat.fritz.ai/chat-app-with-react-native-part-5-create-and-fetch-real-time-messages-with-firestore-86fb012edaf5'
 ---
 
 ![cover](https://i.imgur.com/ROYjoYo.jpg)
@@ -455,7 +456,5 @@ In the [next part](https://amanhimself.dev/blog/chat-app-with-react-native-part-
 - [React Native’s New Architecture — Glossary of terms by Gabe Greenberg](https://www.g2i.co/blog/react-natives-new-architecture-glossary-of-terms)
 - [The Effect hook in React](https://reactjs.org/docs/hooks-effect.html)
 - [Debugging React Native apps](https://reactnative.dev/docs/debugging)
-
----
 
 [Originally Published at Heartbeat.Fritz.ai](https://heartbeat.fritz.ai/chat-app-with-react-native-part-5-create-and-fetch-real-time-messages-with-firestore-86fb012edaf5)

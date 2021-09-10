@@ -7,6 +7,7 @@ thumbnail: '../thumbnails/expo.png'
 tags:
   - expo
   - react-native
+canonicalUrl: 'https://blog.crowdbotics.com/add-search-bar-flatlist-react-native-apps/'
 ---
 
 ![cover_image](https://i.imgur.com/zeVnUHd.png)
@@ -445,7 +446,5 @@ This brings an end to this current tutorial. The screen implemented in this demo
 We use UI Kitten for our latest template libraries. Find more about how to create custom screens like this from our open source project [here](https://github.com/crowdbotics/blueprint-react-native-contacts-screen).
 
 You can also find the source code from this tutorial at this [Github repo](https://github.com/amandeepmittal/searchableFlatListDemo).
-
----
 
 Originally published at [Crowdbotics.com](https://blog.crowdbotics.com/add-search-bar-flatlist-react-native-apps)

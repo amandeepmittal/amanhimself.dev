@@ -7,6 +7,7 @@ thumbnail: '../thumbnails/react.png'
 tags:
   - react-native
   - firebase
+canonicalUrl: 'https://heartbeat.fritz.ai/chat-app-with-react-native-part-1-build-reusable-ui-form-elements-using-react-native-paper-75d82e2ca94f'
 ---
 
 ![cover](https://i.imgur.com/ROYjoYo.jpg)
@@ -519,7 +520,5 @@ You can find the complete source code for this project at [this Github repo](htt
 💙 To learn more about React Native, check out these resources:
 
 - [Official documentation](http://reactnative.dev/)
-
----
 
 _Originally published at [Heartbeat.Fritz.Ai](https://heartbeat.fritz.ai/chat-app-with-react-native-part-1-build-reusable-ui-form-elements-using-react-native-paper-75d82e2ca94f)_.

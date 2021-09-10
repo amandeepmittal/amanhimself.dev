@@ -6,6 +6,7 @@ slug: 'blog/how-to-build-a-news-reader-app-with-react-native-and-newsapi'
 thumbnail: '../thumbnails/react.png'
 tags:
   - react-native
+canonicalUrl: 'https://medium.com/crowdbotics/29-useful-open-source-libraries-for-nodejs-4cefe08f7205'
 ---
 
 React Native is a great platform to build cross-platform mobile applications for iOs and Android. While there are few other framework options available in the mobile app development space to build cross-platform applications, coming from JavaScript or web development background makes learning and using React Native as a framework easier.
@@ -422,7 +423,5 @@ I hope you enjoyed reading this tutorial and hopefully, you learned something ne
 If you have any questions, you can reach out to me on [**Twitter**](https://www.twitter.com/amanhimself) and you can find the complete code for this tutorial in the **Github Repository** 👇.
 
 [**amandeepmittal/newsApiDemo**](https://github.com/amandeepmittal/newsApiDemo)
-
----
 
 [Originally published at Crowdbotics](https://medium.com/crowdbotics/29-useful-open-source-libraries-for-nodejs-4cefe08f7205)

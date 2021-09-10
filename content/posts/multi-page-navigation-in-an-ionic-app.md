@@ -6,6 +6,7 @@ thumbnail: '../thumbnails/ionic.png'
 slug: 'blog/multi-page-navigation-in-an-ionic-app'
 tags:
   - ionic
+canonicalUrl: 'https://medium.com/hackernoon/multi-page-navigation-in-an-ionic-app-8b008f616cdb'
 ---
 
 ![cover_image](https://miro.medium.com/max/2400/0*XkFYDVAjZ4FnJdng.jpg)
@@ -251,7 +252,5 @@ The output shown can be best described in these screenshots:
 This is just a glimpse of how multi page navigation in Ionic might work that might help you to get started with development.
 
 _To get the full code, you can visit_ [**this Github Repository**](https://github.com/amandeepmittal/ionic-multi-page-nav)
-
----
 
 [Originally Published at Hackernoon.com](https://medium.com/hackernoon/multi-page-navigation-in-an-ionic-app-8b008f616cdb)

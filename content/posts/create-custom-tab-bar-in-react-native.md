@@ -6,6 +6,7 @@ template: post
 thumbnail: '../thumbnails/react.png'
 tags:
   - react-native
+canonicalUrl: 'https://blog.crowdbotics.com/how-to-create-a-custom-tab-bar-in-react-native/'
 ---
 
 ![cover_image](https://blog.crowdbotics.com/content/images/2021/05/React-Native-Featured-Image.png)
@@ -568,6 +569,4 @@ Running the app build on an Android device, the results are similar:
 
 We have discussed only one scenario of customizing the bottom tab bar. The main objective here is to get familiar with the component-based configuration of the Tab Navigator in the latest version of the react-navigation library and learn the steps to create a custom tab bar.
 
----
-
-#### Originally Published at **[Crowdbotics's Blog](https://blog.crowdbotics.com/how-to-create-a-custom-tab-bar-in-react-native/)**.
+Originally Published at **[Crowdbotics's Blog](https://blog.crowdbotics.com/how-to-create-a-custom-tab-bar-in-react-native/)**.

@@ -6,6 +6,7 @@ thumbnail: '../thumbnails/node.png'
 slug: 'blog/how-process-nexttick-works-in-node-js'
 tags:
   - nodejs
+canonicalUrl: 'https://amanhimself.dev/blog/how-process-nexttick-works-in-node-js/'
 ---
 
 The [process](https://nodejs.org/api/process.html) object is a one of the few global objects provided by the Node.js core API. It can be access from anywhere, thus its methods can also be accessed. Such is a method called `process.nextTick()` which is used by developers in realtime applications everyday to defer the execution of a function until the next [Event Loop Iteration](https://medium.com/@amanhimself/the-node-js-system-51090c35dddc).
@@ -39,7 +40,7 @@ Processed in the first iteration
 Processed in next iteration
 ```
 
-#### Further Reading:
+### Further Reading:
 
 - [process.nextTick vs setTimeout(fn, 0)](https://gist.github.com/mmalecki/1257394)
 - [Nodejs Official Docs](https://nodejs.org/docs/latest/api/process.html#process_process_nexttick_callback_args)

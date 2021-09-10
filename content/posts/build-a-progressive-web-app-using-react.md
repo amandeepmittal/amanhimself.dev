@@ -6,6 +6,7 @@ date: 2018-02-01
 thumbnail: '../thumbnails/react.png'
 tags:
   - react
+canonicalUrl: 'https://www.zeolearn.com/magazine/an-introduction-to-progressive-web-apps-pwa'
 ---
 
 ![cover_image](https://i.imgur.com/qQAmt3M.jpg)
@@ -87,15 +88,15 @@ import About from './components/About';
 class App extends Component {
   render() {
     return (
-      <div className='App'>
-        <div className='App-header'>
-          <img src={logo} className='App-logo' alt='logo' />
+      <div className="App">
+        <div className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
           <h2>React App</h2>
         </div>
         <BrowserRouter>
           <div>
-            <Route path='/' exact component={Home} />
-            <Route path='/about' exact component={About} />
+            <Route path="/" exact component={Home} />
+            <Route path="/about" exact component={About} />
           </div>
         </BrowserRouter>
       </div>
@@ -115,10 +116,10 @@ import { Link } from 'react-router-dom';
 
 const home = () => {
   return (
-    <div title='Home'>
+    <div title="Home">
       <h1>Home Page</h1>
       <p>
-        <Link to='/about'>About</Link>
+        <Link to="/about">About</Link>
       </p>
     </div>
   );
@@ -135,10 +136,10 @@ import { Link } from 'react-router-dom';
 
 const about = () => {
   return (
-    <div title='About'>
+    <div title="About">
       <h1>About Page</h1>
       <p>
-        <Link to='/'>Home</Link>
+        <Link to="/">Home</Link>
       </p>
     </div>
   );
@@ -433,7 +434,5 @@ This solves our main issue from starting regarding using HTTTPS over HTTP. With 
 The score looks good to me for our first application. The performance bar above of our application can be improved and there are few ways to that. I will not get into that since the scope of this application is for learning purpose.
 
 You can find the complete code at [this Github repository](https://github.com/amandeepmittal/react-pwa-app). Go ahead to clone the repo, don’t forget to `npm install` once inside the project directory and then head start by trying out aforementioned PWA tips and techniques.
-
----
 
 [Originally this article was published on Zeolearn.com](https://www.zeolearn.com/magazine/an-introduction-to-progressive-web-apps-pwa)

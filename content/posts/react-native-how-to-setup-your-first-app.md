@@ -6,6 +6,7 @@ thumbnail: '../thumbnails/react.png'
 template: post
 tags:
   - react-native
+canonicalUrl: 'https://levelup.gitconnected.com/react-native-how-to-setup-your-first-app-a36c450a8a2f'
 ---
 
 **PLEASE NOTE**

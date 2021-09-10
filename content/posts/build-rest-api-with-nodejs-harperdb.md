@@ -7,6 +7,7 @@ thumbnail: '../thumbnails/harperdb.png'
 tags:
   - nodejs
   - harperdb
+canonicalUrl: 'https://amanhimself.dev/blog/build-rest-api-with-nodejs-harperdb/'
 ---
 
 ![cover_image](https://i.imgur.com/9hGD05n.png)

@@ -8,6 +8,7 @@ tags:
   - expo
   - firebase
   - react-native
+canonicalUrl: 'https://amanhimself.dev/blog/implement-forgot-password-firebase-react-native/'
 ---
 
 In some of the previous posts, you built a React Native app using Firebase as the backend service provider for Email authentication and storing user's data upon successful sign-up.

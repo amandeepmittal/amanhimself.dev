@@ -7,6 +7,7 @@ template: post
 tags:
   - expo
   - react-native
+canonicalUrl: 'https://amanhimself.dev/blog/styling-the-react-native-way/'
 ---
 
 React Native comes with many in-built components that you can use to style cross-platform applications. Styling a mobile application is essential. I cannot put enough emphasis on how important it is for a mobile app to have a pleasing design and good use of colors can be provide a better user experience. Without a polished user interface, a potential user will be repelled by the lack of design in the mobile app.

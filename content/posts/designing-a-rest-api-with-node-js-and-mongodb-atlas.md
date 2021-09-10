@@ -6,6 +6,7 @@ slug: 'blog/designing-a-rest-api-with-node-js-and-mongodb-atlas'
 thumbnail: '../thumbnails/node.png'
 tags:
   - nodejs
+canonicalUrl: 'https://www.zeolearn.com/magazine/designing-a-rest-api-with-nodejs-and-mongodb-atlas'
 ---
 
 ![cover](https://i.imgur.com/5rvcM6q.png)
@@ -405,7 +406,5 @@ Try updating the task or removing it by using the endpoints we defined earlier a
 Hope you learned something valuable by reading this article.
 
 You can find the complete code at this [Github repository](https://github.com/amandeepmittal/nodejs-restapi).
-
----
 
 [Originally Published at Zeolearn.com](https://www.zeolearn.com/magazine/designing-a-rest-api-with-nodejs-and-mongodb-atlas)

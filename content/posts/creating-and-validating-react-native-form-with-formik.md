@@ -7,6 +7,7 @@ thumbnail: '../thumbnails/expo.png'
 tags:
   - expo
   - react-native
+canonicalUrl: 'https://amanhimself.dev/blog/creating-and-validating-react-native-form-with-formik'
 ---
 
 ![cover](https://i.imgur.com/Qg4x9He.jpg)
@@ -290,19 +291,13 @@ We will be using `errors`, `touched`, and `handleBlur` to know whether the input
 In the `Login` component, modify the following:
 
 ```js
-const {
-  handleChange,
-  handleSubmit,
-  handleBlur,
-  values,
-  errors,
-  touched
-} = useFormik({
-  validationSchema: LoginSchema,
-  initialValues: { email: '', password: '' },
-  onSubmit: values =>
-    alert(`Email: ${values.email}, Password: ${values.password}`)
-});
+const { handleChange, handleSubmit, handleBlur, values, errors, touched } =
+  useFormik({
+    validationSchema: LoginSchema,
+    initialValues: { email: '', password: '' },
+    onSubmit: values =>
+      alert(`Email: ${values.email}, Password: ${values.password}`)
+  });
 ```
 
 Then, for the email input field, add the following properties:

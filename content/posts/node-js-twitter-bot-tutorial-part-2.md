@@ -7,6 +7,7 @@ slug: 'blog/node-js-twitter-bot-tutorial-part-2'
 tags:
   - nodejs
   - twitter-bots
+canonicalUrl: 'https://community.risingstack.com/how-to-make-a-twitter-bot-with-node-js/'
 ---
 
 If you read the [first part of my tutorial](https://community.risingstack.com/node-js-twitter-bot-tutorial/), you already know how to make a Twitter Bot with Node.js that retweets and favorites tweets using the Twitter API.
@@ -180,7 +181,5 @@ If you are interested in Twitter Bots, check [Botwiki.org](https://botwiki.org/b
 The sole purpose of Bot as a web application is automation. For example, when I created my first Twitter Bot [@nodejstweets](https://twitter.com/nodejstweet), the whole idea was to remain up to date with the most recent happenings.
 
 You can do a lot of things with a Twitter Bot, whether for your own sole purpose or to solve a purpose for a community. See [@100DaysOfCode](http://twitter.com/@_100DaysOfCode) as a great example.
-
----
 
 [Originally Published at RisingStack.com](https://community.risingstack.com/how-to-make-a-twitter-bot-with-node-js/)

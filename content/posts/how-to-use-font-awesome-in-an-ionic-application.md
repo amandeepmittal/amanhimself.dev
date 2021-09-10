@@ -6,6 +6,7 @@ thumbnail: '../thumbnails/ionic.png'
 slug: 'blog/how-to-use-font-awesome-in-an-ionic-application'
 tags:
   - ionic
+canonicalUrl: 'https://medium.com/hackernoon/how-to-use-font-awesome-in-an-ionic-application-31638ed3f77d'
 ---
 
 ![cover_image](https://miro.medium.com/max/2400/0*-qOkYtOyZk6wvaAS.jpg)
@@ -102,7 +103,5 @@ To implement FontAwesome in this or any Ionic application after the above config
 There are more than 675 icons available in FontAwesome and I think a combination of both Ionicons and FontAwesome will be enough for some the applications out there. You can even style them, change their `font-size` and color as per your needs.
 
 [**_Full source code at this Github Repository_**](https://github.com/amandeepmittal/ionic-use-font-awesome)
-
----
 
 [Originally Published at Hackernoon.com](https://medium.com/hackernoon/how-to-use-font-awesome-in-an-ionic-application-31638ed3f77d)

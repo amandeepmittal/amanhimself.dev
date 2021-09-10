@@ -6,6 +6,7 @@ slug: 'blog/how-to-build-a-rest-api-with-nodejs-and-postgresql'
 thumbnail: '../thumbnails/node.png'
 tags:
   - nodejs
+canonicalUrl: 'https://medium.com/crowdbotics/how-to-build-a-rest-api-with-nodejs-and-postgresql-828c7ec1e8b1'
 ---
 
 ![cover](https://i.imgur.com/0ARGlWV.png)
@@ -648,7 +649,5 @@ This can also be verified by running `http://localhost:4000/api/todos`. In respo
 That’s it! In this article, you learned about using PostgreSQL as a database and using ORM tools like Sequelize, and how to migrate data models into database properly. We learned how to connect PostgreSQL database and what the correct configuration to do so. Also, we created a REST API using Express as the back-end server framework. Our REST API can be improved with better error handling and form validation. The possibilities from here are endless. The popularity of the PostgreSQL database among developers is at its peak.
 
 **The complete code for the tutorial at [this Github repository](https://github.com/amandeepmittal/rest-api-node-postgresql)**
-
----
 
 [Originally published at Crowdbotics](https://medium.com/crowdbotics/how-to-build-a-rest-api-with-nodejs-and-postgresql-828c7ec1e8b1)

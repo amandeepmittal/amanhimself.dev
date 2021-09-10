@@ -7,6 +7,7 @@ thumbnail: '../thumbnails/react.png'
 tags:
   - react-native
   - firebase
+canonicalUrl: 'https://heartbeat.fritz.ai/implement-firebase-phone-authentication-in-react-native-apps-237959027611'
 ---
 
 Phone authentication allows the user to sign in using their phone number. This could be done traditionally by associating a password and storing it when the user first registers with the app. However, another common pattern to log in a user using their phone number is by sending a verification code in their registered mobile number. This verification code is a unique number and the user is only allowed to sign in when it matches.
@@ -325,7 +326,5 @@ On success, it responds with a `uid` in an alert message that you can verify in 
 _Congratulations!_ You have learned how to integrate the Phone auth process using Firebase SDK in a React Native application.
 
 You can find the complete source code at **[this Github repo](https://github.com/amandeepmittal/rnPhoneAuthDemo)**.
-
----
 
 Originally published at [Heartbeat.Fritz.AI](https://heartbeat.fritz.ai/implement-firebase-phone-authentication-in-react-native-apps-237959027611)

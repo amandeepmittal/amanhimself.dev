@@ -6,6 +6,7 @@ thumbnail: '../thumbnails/atom.png'
 slug: 'blog/atom-an-editor-of-21st-century'
 tags:
   - tools
+canonicalUrl: 'https://amanhimself.dev/blog/atom-an-editor-of-21st-century'
 ---
 
 The [Atom](http://atom.io/) I am talking about is not a small particle in the world of developers. Built and maintained by Github and the community, it is more than just an editor.

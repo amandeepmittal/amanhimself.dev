@@ -7,7 +7,10 @@ thumbnail: '../thumbnails/react.png'
 tags:
   - react-native
   - firebase
+canonicalUrl: 'https://blog.jscrambler.com/integrating-firebase-with-react-native/'
 ---
+
+**This post has been updated in 2021. Please visit [this URL](https://blog.jscrambler.com/integrating-firebase-with-react-native/) to view the new post.**
 
 Firebase is a Backend as a Service (_BaaS_) that provides an advantage to mobile developers who use React Native for developing mobile applications. As a React Native developer, by using Firebase you can start building an MVP (minimum viable product), keeping the costs low and prototyping the application pretty fast. In this tutorial, we will be learning how to get started by integrating Firebase with a React Native application. We will also create a small application from scratch with the help of Firebase & React Native to see how they work together.
 
@@ -206,12 +209,12 @@ export default class Home extends Component {
       <View>
         <Text>Home Screen</Text>
         <Button
-          title='Add an Item'
+          title="Add an Item"
           onPress={() => this.props.navigation.navigate('AddItem')}
         />
         <Button
-          title='List of Items'
-          color='green'
+          title="List of Items"
+          color="green"
           onPress={() => this.props.navigation.navigate('List')}
         />
       </View>
@@ -301,7 +304,7 @@ export default class AddItem extends Component {
         <TextInput style={styles.itemInput} onChange={this.handleChange} />
         <TouchableHighlight
           style={styles.button}
-          underlayColor='white'
+          underlayColor="white"
           onPress={this.handleSubmit}
         >
           <Text style={styles.buttonText}>Add</Text>
@@ -460,7 +463,5 @@ This step concludes the integration of a Firebase database with our React Native
 In this tutorial, we’ve shown you how to integrate Firebase with a React Native application. You don’t a complete server that creates an API and further uses a database to prototype or build an MVP of your application.
 
 You can find the complete code inside [this Github repo](https://github.com/amandeepmittal/rnFirebaseDemo).
-
----
 
 [Originally published at Jscrambler](https://blog.jscrambler.com/integrating-firebase-with-react-native/)

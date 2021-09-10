@@ -6,6 +6,7 @@ thumbnail: '../thumbnails/node.png'
 slug: 'blog/nodejs-system'
 tags:
   - nodejs
+canonicalUrl: 'https://medium.com/hackernoon/the-node-js-system-51090c35dddc'
 ---
 
 When I started learning Node.js, I always wondered, how does it work? How is it inside Node.js? Event loop and Event Queue jargons are digested. But what exactly is going on? Where do those jargons Event Loop and Event Queue come from.To satisfy my curiosity as well to know the answer to my previous question, I went in depth as much as I can and came across some things which I’d like to share with you. In brief, this article is about **Node.js System** — a glimpse of internal workings of Node.
@@ -59,7 +60,5 @@ This is a JavaScript library that implements high-level Node.js API (a.k.a. node
 ![ss1](https://miro.medium.com/max/451/1*dTYKv5fII4doUAqJSA51Qg.png)
 
 The image borrowed above clarifies and represents a complete Node.js System. I hope this article has made things more clear as it did to me.
-
----
 
 [Orignally Published at Hackernoon.com](https://medium.com/hackernoon/the-node-js-system-51090c35dddc)

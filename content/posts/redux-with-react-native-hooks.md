@@ -8,6 +8,7 @@ tags:
   - expo
   - redux
   - react-native
+canonicalUrl: 'https://heartbeat.fritz.ai/using-redux-with-react-hooks-in-a-react-native-app-cc410a77f3e2'
 ---
 
 With React Hooks growing usage, the ability to handle a component's state and side effects is now a common pattern in the functional component. React Redux offers a set of Hook APIs as an alternative to the omnipresent `connect()` High Order Component.
@@ -347,7 +348,5 @@ With the addition to hooks such as `useSelector` and `useDispatch` not only redu
 For advanced usage of Hooks with Redux, you can check out the official documentation [**here**](https://react-redux.js.org/next/api/hooks).
 
 You can find the complete code for this tutorial in the [Github repo here](https://github.com/amandeepmittal/rnReduxhooks).
-
----
 
 Originally published at [Heartbeat.fritz.ai](https://heartbeat.fritz.ai/using-redux-with-react-hooks-in-a-react-native-app-cc410a77f3e2)

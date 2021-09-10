@@ -6,6 +6,7 @@ template: post
 thumbnail: '../thumbnails/firebase.png'
 tags:
   - firebase
+canonicalUrl: 'https://amanhimself.dev/blog/new-firebase-project/'
 ---
 
 Applications are often complex in terms of architecture. Usually, when they are implemented as full-stack or conjunction of a frontend and a backend application with a database.

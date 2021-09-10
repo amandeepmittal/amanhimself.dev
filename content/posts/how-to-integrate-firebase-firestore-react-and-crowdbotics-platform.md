@@ -7,6 +7,7 @@ thumbnail: '../thumbnails/firebase.png'
 tags:
   - firebase
   - react
+canonicalUrl: 'https://blog.crowdbotics.com/how-to-integrate-firebase-firestore-react-and-crowdbotics-platform/'
 ---
 
 Firebase is a Backend as a Service (BaaS) that gives an advantage to web developers who use ReactJS for developing web applications. It is a platform that got acquired by Google and has a healthy and active community. Most users in this community are web and mobile developers. It includes services like mobile analytics, push notification, crash reporting and out of the box provides email as well as social authentication. As a web developer, by using Firebase you can start building an MVP (minimum viable product) by keeping the costs low and utilizing your time and effort in building the application quite faster than adopting a traditional approach by building your own custom backend solution.
@@ -176,17 +177,17 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className='App'>
-        <header className='App-header'>
-          <img src={logo} className='App-logo' alt='logo' />
+      <div className="App">
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
           <p>
             Edit <code>src/App.js</code> and save to reload.
           </p>
           <a
-            className='App-link'
-            href='https://reactjs.org'
-            target='_blank'
-            rel='noopener noreferrer'
+            className="App-link"
+            href="https://reactjs.org"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             Learn React
           </a>
@@ -277,7 +278,5 @@ After adding filling up the form as above, click on the submit button. After you
 ## Conclusion
 
 You have now successfully integrated and added data to the Firebase store. The method discussed in this tutorial to access Firestore is not the only way, but yet a simple one. For more information or to dive deep, take a look at the Firestore documentation **[here](https://cloud.google.com/firestore/docs/)**.
-
----
 
 [Originally published at Crowdbotics](https://blog.crowdbotics.com/how-to-integrate-firebase-firestore-react-and-crowdbotics-platform/)

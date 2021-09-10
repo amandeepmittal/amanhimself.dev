@@ -6,6 +6,7 @@ template: post
 thumbnail: '../thumbnails/react.png'
 tags:
   - react-native
+canonicalUrl: 'https://blog.crowdbotics.com/how-to-create-a-custom-tab-bar-in-react-native/'
 ---
 
 ![cover_image](https://miro.medium.com/max/3000/1*l1LA9yCAkMQiHZYNpcHIZQ.png)
@@ -395,6 +396,4 @@ We have discussed only one scenario of creating a custom image gallery with Flat
 - [A complete list of props available on Carousel component from react-native-snap-carousel](https://github.com/meliorence/react-native-snap-carousel/blob/master/doc/PROPS_METHODS_AND_GETTERS.md)
 - [In detail guide on how to use Hooks in React & React Native apps](https://blog.crowdbotics.com/build-a-react-app-with-localstorage-api-and-hooks/)
 
----
-
-#### Originally Published at **[Crowdbotics's Blog](https://blog.crowdbotics.com/how-to-create-a-custom-tab-bar-in-react-native/)**.
+Originally Published at **[Crowdbotics's Blog](https://blog.crowdbotics.com/how-to-create-a-custom-tab-bar-in-react-native/)**.

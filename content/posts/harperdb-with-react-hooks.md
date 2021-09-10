@@ -7,6 +7,7 @@ thumbnail: '../thumbnails/harperdb.png'
 tags:
   - react
   - harperdb
+canonicalUrl: 'https://amanhimself.dev/blog/harperdb-with-react-hooks'
 ---
 
 ![cover](https://i.imgur.com/jN0o3ij.png)

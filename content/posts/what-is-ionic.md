@@ -6,6 +6,7 @@ thumbnail: '../thumbnails/ionic.png'
 slug: 'blog/what-is-ionic'
 tags:
   - ionic
+canonicalUrl: 'https://medium.com/hackernoon/what-is-ionic-c1da6eab0d8a'
 ---
 
 ![cover_image](https://miro.medium.com/max/2400/0*0DfSFC_T8pQhN0D_.jpg)
@@ -79,7 +80,5 @@ To install platform such as iOS and espcially android, I will want you to refer 
 
 - for iOS: [Cordova iOS Platform Guide](https://cordova.apache.org/docs/en/latest/guide/platforms/ios/)
 - for android: [Cordova android Platform Guide](https://cordova.apache.org/docs/en/latest/guide/platforms/android/)
-
----
 
 [Originally Published at Hackernoon.com](https://medium.com/hackernoon/what-is-ionic-c1da6eab0d8a)

@@ -7,6 +7,7 @@ slug: 'blog/how-to-use-eslint-in-node-js-applications'
 tags:
   - nodejs
   - tools
+canonicalUrl: 'https://medium.com/hackernoon/how-to-use-eslint-in-node-js-applications-cc4b2298ce55'
 ---
 
 ![cover_image](https://miro.medium.com/max/1400/0*Ktrwh00dFMh7e_ma.png)
@@ -135,7 +136,5 @@ To add a plugin to `.eslintrc`:
 Some plugins for popular libraries: [Angular](https://www.npmjs.com/package/eslint-plugin-angular) | [React](https://www.npmjs.com/package/eslint-plugin-react)
 
 Another plugin, I find very useful is [one variable per var](https://www.npmjs.com/package/eslint-plugin-one-variable-per-var) just to maintain code consistency over a large/open-source project.
-
----
 
 [Originally Published at Hackernoon.com](https://medium.com/hackernoon/how-to-use-eslint-in-node-js-applications-cc4b2298ce55)

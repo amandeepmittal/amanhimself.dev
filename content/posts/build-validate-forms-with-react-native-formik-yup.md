@@ -7,6 +7,7 @@ thumbnail: '../thumbnails/expo.png'
 tags:
   - expo
   - react-native
+canonicalUrl: 'https://heartbeat.fritz.ai/build-and-validate-forms-in-react-native-using-formik-and-yup-6489e2dff6a2'
 ---
 
 ![cover](https://i.imgur.com/JK4oQuJ.png)
@@ -693,7 +694,5 @@ You just learned how to create, handle, and validate forms in React Native using
 - [Official Formik docs](https://jaredpalmer.com/formik/docs/guides/react-native)
 - [Yup API](https://github.com/jquense/yup#api)
 - [Bamlab offers HOC components with `react-native-formik` such that you do not have write everything from scratch](https://github.com/bamlab/react-native-formik)
-
----
 
 [Originally published at Heartbeat](https://heartbeat.fritz.ai/build-and-validate-forms-in-react-native-using-formik-and-yup-6489e2dff6a2)

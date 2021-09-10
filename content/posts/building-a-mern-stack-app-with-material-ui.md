@@ -7,6 +7,7 @@ thumbnail: '../thumbnails/react.png'
 tags:
   - nodejs
   - react
+canonicalUrl: 'https://medium.com/crowdbotics/building-a-mern-stack-app-with-material-ui-33ff8ca4da01'
 ---
 
 ![cover](https://i.imgur.com/YHJ7UNq.png)
@@ -1498,7 +1499,5 @@ We have reached the end. Even though this tutorial is lengthy and, a lot is goin
 If you want to learn **how to deploy this application, you can continue to read** [**this article**](https://amanhimself.dev/blog/deploy-a-mern-stack-app-on-heroku)**.**
 
 **The complete code for the tutorial at [this Github repository](https://github.com/amandeepmittal/mern-material-demo)**
-
----
 
 [Originally published at Crowdbotics](https://medium.com/crowdbotics/building-a-mern-stack-app-with-material-ui-33ff8ca4da01)

@@ -6,6 +6,7 @@ thumbnail: '../thumbnails/avo.png'
 slug: 'blog/first-three-months-as-developer-advocate'
 tags:
   - devrel
+canonicalUrl: 'https://amanhimself.dev/blog/first-three-months-as-developer-advocate/'
 ---
 
 ![cover_image](https://i.imgur.com/TBebjua.jpg)

@@ -6,6 +6,7 @@ thumbnail: '../thumbnails/node.png'
 slug: 'blog/the-node-way'
 tags:
   - nodejs
+canonicalUrl: 'https:/amanhimself.dev/blog/the-node-way/'
 ---
 
 Last week, when [Node.js](https://nodejs.org/en/blog/) community introduced its logo, it got me into thinking of why this technology as fresh in my mind as when I was first introduced to it a few months back. Why is that spark still ignited in the back of my head? The answer to this is the philosophy behind the technology of Node.js platform.

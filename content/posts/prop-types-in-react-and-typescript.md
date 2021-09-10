@@ -5,7 +5,8 @@ slug: 'blog/prop-types-in-react-and-typescript'
 template: post
 thumbnail: '../thumbnails/typescript.png'
 tags:
-  - react  
+  - react
+canonicalUrl: 'https://amanhimself.dev/blog/prop-types-in-react-and-typescript/'
 ---
 
 [PropTypes](https://www.npmjs.com/package/prop-types) provide built-in typechecking capabilities when writing a React app. Checking the type of prop in a React component in a large application helps catch bugs at run-time.
@@ -28,7 +29,7 @@ FavoriteColor.propTypes = {
 // Parent component
 function App() {
   return (
-    <div className='App'>
+    <div className="App">
       <FavoriteColor color={'Red'} />
     </div>
   );
@@ -46,7 +47,7 @@ But what if in the `App` component, the value of prop `color` is changed to a nu
 ```js
 function App() {
   return (
-    <div className='App'>
+    <div className="App">
       <FavoriteColor color={120} />
     </div>
   );
@@ -61,7 +62,7 @@ The `prop-types` package provide validation at run-time. Not a great developer e
 
 ## PropTypes with TypeScript and React
 
-Take the previous code snippet, copy it in a `.tsx` file. Here is how the components will look. Notice the red squiggly line beneath the prop `color`. 
+Take the previous code snippet, copy it in a `.tsx` file. Here is how the components will look. Notice the red squiggly line beneath the prop `color`.
 
 ![s3](https://res.cloudinary.com/amanmittal/image/upload/v1624823702/s3_okboft.png)
 

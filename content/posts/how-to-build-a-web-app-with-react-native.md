@@ -6,6 +6,7 @@ thumbnail: '../thumbnails/react.png'
 template: post
 tags:
   - react-native
+canonicalUrl: 'https://heartbeat.fritz.ai/how-to-build-a-web-app-with-react-native-b93575a16a5e'
 ---
 
 The power of React Native as a framework continues to increase over time. For those who are unfamiliar, [React Native](https://facebook.github.io/react-native/) is a cross-platform framework developed by Facebook. It’s open source and lets you build mobile applications using JavaScript as its core.
@@ -211,7 +212,5 @@ Individuals and companies who love to work with React Native are working to clos
 _All the code used in this tutorial can be found in the GitHub repository below._
 
 [**amandeepmittal/reactnativeweb-demo**](https://github.com/amandeepmittal/reactnativeweb-demo)
-
----
 
 [Originally published at Heartbeat](https://heartbeat.fritz.ai/how-to-build-a-web-app-with-react-native-b93575a16a5e)

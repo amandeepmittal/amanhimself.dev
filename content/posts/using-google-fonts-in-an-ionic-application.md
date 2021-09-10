@@ -6,6 +6,7 @@ thumbnail: '../thumbnails/ionic.png'
 slug: 'blog/using-google-fonts-in-an-ionic-application'
 tags:
   - ionic
+canonicalUrl: 'https://medium.com/hackernoon/using-google-fonts-in-an-ionic-application-c3419c342f23'
 ---
 
 ![cover_image](https://miro.medium.com/max/2400/0*w4gIFLOzsl8cmNQn.jpg)
@@ -58,7 +59,5 @@ Output:
 ![](https://cdn-images-1.medium.com/max/800/0*cAeEa-sD5b1zHVNG.png)
 
 To get the full code, you can visit [**this Github Repository**](https://github.com/amandeepmittal/ionic-use-google-fonts).
-
----
 
 [Originally Published at Hackernoon.com](https://medium.com/hackernoon/using-google-fonts-in-an-ionic-application-c3419c342f23)

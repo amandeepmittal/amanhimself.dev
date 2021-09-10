@@ -6,6 +6,7 @@ template: post
 thumbnail: '../thumbnails/node.png'
 tags:
   - nodejs
+canonicalUrl: 'https://medium.com/crowdbotics/29-useful-open-source-libraries-for-nodejs-4cefe08f7205'
 ---
 
 ![cover_image](https://i.imgur.com/Yv3yfrm.png)
@@ -412,7 +413,5 @@ This module loads environment variables from a `.env` file that you create and 
 Nodejs is a mature platform. Working with third party libraries is a huge part of the JavaScript ecosystem and you cannot run from it. Apart from your personal opinion, if you do not appreciate working with different third party libraries then you should definitely think about the tech stack you are working with.
 
 _I hope this list gets you started to with most commonly used open source packages that are used in_ [**_Node.js_**](https://nodejs.org) _community._
-
----
 
 [Originally published at Crowdbotics](https://medium.com/crowdbotics/29-useful-open-source-libraries-for-nodejs-4cefe08f7205)

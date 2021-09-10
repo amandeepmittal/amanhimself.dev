@@ -6,6 +6,7 @@ thumbnail: '../thumbnails/node.png'
 slug: 'blog/migrating-from-expressjs-4-to-5'
 tags:
   - nodejs
+canonicalUrl: 'https://hackernoon.com/migrating-from-expressjs-4-to-5-156dcd80eb11'
 ---
 
 ExpressJS 5.0 is in alpha release stage but I believe we’ll be adding it as a dependency in our `package.json` files in matter of no time. This article gives some tips regarding the way we are writing code using this framework and how we should adapt the new changes even if we are using ExpressJS _version 4.0_.
@@ -32,7 +33,5 @@ Another notable method that is going to be deprecated in next version of Express
 Whether you are planning to use the alpha release of Express 5.0 or still going on with the latest versions of Express 4.0, I would suggest to start adapting these methods immediately.
 
 _The full list of changes or the official Express Migration Guide is to be found_ [here](http://expressjs.com/en/guide/migrating-5.html)**_._**
-
----
 
 [Originally Published at Hackernoon.com](https://hackernoon.com/migrating-from-expressjs-4-to-5-156dcd80eb11)

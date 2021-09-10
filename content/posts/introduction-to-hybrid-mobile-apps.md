@@ -6,6 +6,7 @@ thumbnail: '../thumbnails/ionic.png'
 slug: 'blog/introduction-to-hybrid-mobile-apps'
 tags:
   - ionic
+canonicalUrl: 'https://medium.com/hackernoon/introduction-to-hybrid-mobile-apps-c97720b30557'
 ---
 
 ![cover_image](https://miro.medium.com/max/1400/1*IDiX4JXxmO8E_d__O1lsTA.jpeg)
@@ -49,7 +50,5 @@ This will answer the question above and along with it, my POV is that if you alr
 There are few alternates/frameworks available in the world of Hybrid Development. One of them is [Ionic Framework](https://ionicframework.com/) and with its next release earlier this year, it provides better performance for the hybrid apps. It also has a huge and helpful community to help you out whenever you get stuck.
 
 Other options which I haven’t tried yet but think are worth mentioning include compile-to-native frameworks like [React Native](https://facebook.github.io/react-native/) and [NativeScript](https://www.nativescript.org/).
-
----
 
 [Originally Published at Hackernoon.com](https://medium.com/hackernoon/introduction-to-hybrid-mobile-apps-c97720b30557)

@@ -6,6 +6,7 @@ template: post
 thumbnail: '../thumbnails/react.png'
 tags:
   - react-native
+canonicalUrl: 'https://heartbeat.fritz.ai/how-to-use-the-geolocation-api-in-a-react-native-app-b5e611b00a0c'
 ---
 
 Geolocation as an API has different methods that can be used in a web application. But it’s also a powerful API for mobile development. Ride share mobile apps like Uber, map app like Google Maps, and location features implemented in apps like Instagram depend on using this API. React Native takes advantage of this API and its available methods by extending the [**Geolocation Web specification**](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation).
@@ -329,7 +330,7 @@ const Weather = () => {
   return (
     <View style={styles.weatherContainer}>
       <View style={styles.headerContainer}>
-        <Icon size={48} name='weather-sunny' color={'#fff'} />
+        <Icon size={48} name="weather-sunny" color={'#fff'} />
         <Text style={styles.tempText}>Temperature˚</Text>
       </View>
       <View style={styles.bodyContainer}>
@@ -466,7 +467,7 @@ const Weather = ({ weather, temperature }) => {
   return (
     <View style={styles.weatherContainer}>
       <View style={styles.headerContainer}>
-        <MaterialCommunityIcons size={48} name='weather-sunny' color={'#fff'} />
+        <MaterialCommunityIcons size={48} name="weather-sunny" color={'#fff'} />
         <Text style={styles.tempText}>{temperature}˚</Text>
       </View>
       <View style={styles.bodyContainer}>
@@ -613,7 +614,5 @@ We’ve made some additions by using available props with weather conditions to 
 ### Conclusion
 
 You’ve successfully used the knowledge of geolocation data and setting up permissions in a real-time scenario to build a weather forecast application using a third party API and React Native.
-
----
 
 [Originally published at Heartbeat](https://heartbeat.fritz.ai/how-to-use-the-geolocation-api-in-a-react-native-app-b5e611b00a0c)

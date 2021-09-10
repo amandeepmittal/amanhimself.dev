@@ -6,6 +6,7 @@ template: post
 thumbnail: '../thumbnails/react.png'
 tags:
   - react-native
+canonicalUrl: 'https://blog.crowdbotics.com/how-to-offer-multi-language-support-in-a-react-native-app/'
 ---
 
 ![cover_image](https://blog.crowdbotics.com/content/images/2021/08/React-Native--1-.png)
@@ -531,4 +532,4 @@ Please don't mind my translation for French text corresponding to English text. 
 - [useTranslation Hook](https://react.i18next.com/latest/usetranslation-hook)
 - [**You can find the complete source code at GitHub**](https://github.com/amandeepmittal/react-native-examples/tree/master/rnMultiLanguageExample)
 
-> [Originally Published at Crowdbotics.com](https://blog.crowdbotics.com/how-to-offer-multi-language-support-in-a-react-native-app/)
+[Originally Published at Crowdbotics.com](https://blog.crowdbotics.com/how-to-offer-multi-language-support-in-a-react-native-app/)

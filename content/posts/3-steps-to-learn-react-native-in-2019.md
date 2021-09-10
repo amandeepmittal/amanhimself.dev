@@ -6,6 +6,7 @@ template: post
 tags:
   - react-native
 thumbnail: '../thumbnails/react.png'
+canonicalUrl: 'https://medium.com/swlh/3-steps-to-learn-react-native-in-2019-5cdb3d1e1c84'
 ---
 
 ![cover_image](https://i.imgur.com/LUgTT2v.jpg)
@@ -65,7 +66,5 @@ Do not get overwhelmed by the number of mistakes you do or the errors you get. G
 ## Conclusion
 
 In simple words, React Native brings the React to mobile app development. Its goal isn’t to write the code once and run it on any platform. The main goal here is to learn once and write-anywhere. An important distinction to make.
-
----
 
 [Originally published at The Startup](https://medium.com/swlh/3-steps-to-learn-react-native-in-2019-5cdb3d1e1c84)

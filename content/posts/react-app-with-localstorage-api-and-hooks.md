@@ -6,6 +6,7 @@ template: post
 thumbnail: '../thumbnails/react.png'
 tags:
   - react
+canonicalUrl: 'https://blog.crowdbotics.com/build-a-react-app-with-localstorage-api-and-hooks/'
 ---
 
 Hooks in React have been available since the version 16.7.0-alpha. They are functions that allow you to use React state and a component's lifecycle methods in a functional component. Hooks do not work with classes. If you are familiar with React, you know that the functional component has been called as a functional stateless component. Not any more.
@@ -73,7 +74,7 @@ import { Button, Container } from 'reactstrap';
 function App() {
   return (
     <Container style={{ marginTop: 20 }}>
-      <Button color='success'>Let's start</Button>
+      <Button color="success">Let's start</Button>
     </Container>
   );
 }
@@ -111,10 +112,10 @@ function App() {
 
   return (
     <Container style={{ marginTop: 20 }}>
-      <p className='text-primary'>You clicked {count} times.</p>
-      <Button onClick={() => setCount(count + 1)} color='success'>
+      <p className="text-primary">You clicked {count} times.</p>
+      <Button onClick={() => setCount(count + 1)} color="success">
         Increase the count
-      </Button> <Button onClick={() => setCount(count - 1)} color='danger'>
+      </Button> <Button onClick={() => setCount(count - 1)} color="danger">
         Decrease the count
       </Button>
     </Container>
@@ -159,16 +160,16 @@ function App() {
   const [expenses, setExpenses] = useState(ALL_EXPENSES);
 
   return (
-    <Container className='text-center'>
+    <Container className="text-center">
       <Jumbotron fluid>
-        <h3 className='display-6'>
+        <h3 className="display-6">
           Expense Tracker React App
-          <img src={Logo} style={{ width: 50, height: 50 }} alt='react-logo' />
+          <img src={Logo} style={{ width: 50, height: 50 }} alt="react-logo" />
         </h3>
         <div>
           <p>
             Total Expense:{' '}
-            <span className='text-success'>
+            <span className="text-success">
               ${' '}
               {expenses.reduce((accumulator, currentValue) => {
                 return (accumulator += parseInt(currentValue.amount));
@@ -210,33 +211,33 @@ import {
 
 const Form = () => (
   <BTForm style={{ margin: 10 }}>
-    <FormGroup className='row'>
-      <Label for='exampleEmail' sm={2}>
+    <FormGroup className="row">
+      <Label for="exampleEmail" sm={2}>
         Name of Expense
       </Label>
       <Col sm={4}>
         <Input
-          type='text'
-          name='name'
-          id='expenseName'
-          placeholder='Name of expense?'
+          type="text"
+          name="name"
+          id="expenseName"
+          placeholder="Name of expense?"
         />
       </Col>
     </FormGroup>
-    <FormGroup className='row'>
-      <Label for='exampleEmail' sm={2}>
+    <FormGroup className="row">
+      <Label for="exampleEmail" sm={2}>
         $ Amount
       </Label>
       <Col sm={4}>
         <Input
-          type='number'
-          name='amount'
-          id='expenseAmount'
-          placeholder='0.00'
+          type="number"
+          name="amount"
+          id="expenseAmount"
+          placeholder="0.00"
         />
       </Col>
     </FormGroup>
-    <Button type='submit' color='primary'>
+    <Button type="submit" color="primary">
       Add
     </Button>
   </BTForm>
@@ -419,37 +420,37 @@ import {
 
 const Form = ({ name, amount, handleName, handleAmount, handleSubmitForm }) => (
   <BTForm style={{ margin: 10 }} onSubmit={handleSubmitForm}>
-    <FormGroup className='row'>
-      <Label for='exampleEmail' sm={2}>
+    <FormGroup className="row">
+      <Label for="exampleEmail" sm={2}>
         Name of Expense
       </Label>
       <Col sm={4}>
         <Input
-          type='text'
-          name='name'
-          id='expenseName'
-          placeholder='Name of expense?'
+          type="text"
+          name="name"
+          id="expenseName"
+          placeholder="Name of expense?"
           value={name}
           onChange={handleName}
         />
       </Col>
     </FormGroup>
-    <FormGroup className='row'>
-      <Label for='exampleEmail' sm={2}>
+    <FormGroup className="row">
+      <Label for="exampleEmail" sm={2}>
         $ Amount
       </Label>
       <Col sm={4}>
         <Input
-          type='number'
-          name='amount'
-          id='expenseAmount'
-          placeholder='0.00'
+          type="number"
+          name="amount"
+          id="expenseAmount"
+          placeholder="0.00"
           value={amount}
           onChange={handleAmount}
         />
       </Col>
     </FormGroup>
-    <Button type='submit' color='primary'>
+    <Button type="submit" color="primary">
       Add
     </Button>
   </BTForm>
@@ -600,40 +601,40 @@ const Form = ({
   handleClearExpenses
 }) => (
   <BTForm style={{ margin: 10 }} onSubmit={handleSubmitForm}>
-    <FormGroup className='row'>
-      <Label for='exampleEmail' sm={2}>
+    <FormGroup className="row">
+      <Label for="exampleEmail" sm={2}>
         Name of Expense
       </Label>
       <Col sm={4}>
         <Input
-          type='text'
-          name='name'
-          id='expenseName'
-          placeholder='Name of expense?'
+          type="text"
+          name="name"
+          id="expenseName"
+          placeholder="Name of expense?"
           value={name}
           onChange={handleName}
         />
       </Col>
     </FormGroup>
-    <FormGroup className='row'>
-      <Label for='exampleEmail' sm={2}>
+    <FormGroup className="row">
+      <Label for="exampleEmail" sm={2}>
         $ Amount
       </Label>
       <Col sm={4}>
         <Input
-          type='number'
-          name='amount'
-          id='expenseAmount'
-          placeholder='0.00'
+          type="number"
+          name="amount"
+          id="expenseAmount"
+          placeholder="0.00"
           value={amount}
           onChange={handleAmount}
         />
       </Col>
     </FormGroup>
-    <Button type='submit' color='primary'>
+    <Button type="submit" color="primary">
       Add
     </Button>{' '}
-    <Button type='submit' color='danger' onClick={handleClearExpenses}>
+    <Button type="submit" color="danger" onClick={handleClearExpenses}>
       Delete
     </Button>
   </BTForm>
@@ -661,7 +662,5 @@ You have just learned the basics of React hooks and how to implement them in a r
 - adding a uniquely generated id for each item
 
 To learn more about React hooks, I can highly recommend following React official documentation [**here**](https://reactjs.org/docs/hooks-effect.html).
-
----
 
 _Originally published at [Crowdbotics' Blog](https://blog.crowdbotics.com/build-a-react-app-with-localstorage-api-and-hooks/)_.

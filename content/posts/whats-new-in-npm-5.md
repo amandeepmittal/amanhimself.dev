@@ -6,6 +6,7 @@ thumbnail: '../thumbnails/node.png'
 slug: 'blog/whats-new-in-npm-5'
 tags:
   - tools
+canonicalUrl: 'https://amanhimself.dev/blog/whats-new-in-npm-5/'
 ---
 
 In May, in the very last week, [**npm**](https://npmjs.com/) announced the new major release for the JavaScript package manager. **5.0.0**, hopefully, will be shipped with upcoming version of [**Nodejs**](https://nodejs.org/en/) **(>=8.0.0)**as well. It seems a big step towards providing better tooling with significantly improved performance as quite a lot of developers made a switch to `yarn`, just because it could download the packages from the `npm` registery at a faster rate. However, this point is debatable, so let’s not get into that.

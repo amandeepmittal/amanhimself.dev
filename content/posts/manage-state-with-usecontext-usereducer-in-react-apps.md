@@ -6,6 +6,7 @@ template: post
 thumbnail: '../thumbnails/react.png'
 tags:
   - react
+canonicalUrl: 'https://amanhimself.dev/blog/manage-state-with-usecontext-usereducer-in-react-apps/'
 ---
 
 ![cover](https://i.imgur.com/Q0W4kzf.jpg)
@@ -139,7 +140,7 @@ import List from './components/List';
 export default function App() {
   return (
     <ExpenseContextProvider>
-      <Container className='text-center'>
+      <Container className="text-center">
         <Header />
         <Form />
         <List />
@@ -169,9 +170,9 @@ import Logo from '../logo.svg';
 export default function Headers() {
   return (
     <Jumbotron fluid>
-      <h3 className='display-6'>
+      <h3 className="display-6">
         Expense Tracker React App
-        <img src={Logo} style={{ width: 50, height: 50 }} alt='react-logo' />
+        <img src={Logo} style={{ width: 50, height: 50 }} alt="react-logo" />
       </h3>
     </Jumbotron>
   );
@@ -257,37 +258,37 @@ Lastly, add the following JSX to display the component.
 ```js
 return (
   <BTForm style={{ margin: 10 }} onSubmit={handleSubmitForm}>
-    <FormGroup className='row'>
-      <Label for='exampleEmail' sm={2}>
+    <FormGroup className="row">
+      <Label for="exampleEmail" sm={2}>
         Name of Expense
       </Label>
       <Col sm={4}>
         <Input
-          type='text'
-          name='name'
-          id='expenseName'
-          placeholder='Name of expense?'
+          type="text"
+          name="name"
+          id="expenseName"
+          placeholder="Name of expense?"
           value={name}
           onChange={handleName}
         />
       </Col>
     </FormGroup>
-    <FormGroup className='row'>
-      <Label for='exampleEmail' sm={2}>
+    <FormGroup className="row">
+      <Label for="exampleEmail" sm={2}>
         Amount
       </Label>
       <Col sm={4}>
         <Input
-          type='number'
-          name='amount'
-          id='expenseAmount'
-          placeholder='$ 0'
+          type="number"
+          name="amount"
+          id="expenseAmount"
+          placeholder="$ 0"
           value={amount}
           onChange={handleAmount}
         />
       </Col>
     </FormGroup>
-    <Button type='submit' color='primary'>
+    <Button type="submit" color="primary">
       Add
     </Button>
   </BTForm>

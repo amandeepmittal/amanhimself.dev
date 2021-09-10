@@ -7,6 +7,7 @@ thumbnail: '../thumbnails/heroku.png'
 tags:
   - nodejs
   - react
+canonicalUrl: 'https://medium.com/crowdbotics/deploy-a-mern-stack-app-on-heroku-b0c255744a70'
 ---
 
 ![cover](https://i.imgur.com/IP8rrV2.png)
@@ -714,7 +715,5 @@ You can then visit the URL given by Heroku like below. Do notice the already exi
 ### Conclusion
 
 There are many deployment techniques that you can try on Heroku. The technique described in this article is just one of them. I hope you have this article has helped you out.
-
----
 
 [Originally published at Crowdbotics](https://medium.com/crowdbotics/deploy-a-mern-stack-app-on-heroku-b0c255744a70)

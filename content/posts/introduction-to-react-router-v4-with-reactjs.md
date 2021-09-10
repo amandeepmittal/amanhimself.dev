@@ -6,6 +6,7 @@ template: post
 thumbnail: '../thumbnails/react.png'
 tags:
   - react
+canonicalUrl: 'https://blog.crowdbotics.com/introduction-to-react-router-v4-with-reactjs/'
 ---
 
 React is often used for building single page applications (SPAs). SPAs tend to have multiple page views. When navigating from one-page view to another, reloading the entire page view is a tedious and not so efficient task. In fact, it diminishes the benefits of a SPA. To work as it should, a SPA must render parts of views when required instead of reloading the entire page.
@@ -75,7 +76,7 @@ To create a route, we use `<Route>` from the `react-router-dom`. This is where t
 function App() {
   return (
     <Router>
-      <Route path='/' component={Home} />
+      <Route path="/" component={Home} />
     </Router>
   );
 }
@@ -116,8 +117,8 @@ function App() {
   return (
     <Router>
       <div>
-        <Route path='/' component={Home} />
-        <Route path='/about' component={About} />
+        <Route path="/" component={Home} />
+        <Route path="/about" component={About} />
       </div>
     </Router>
   );
@@ -133,8 +134,8 @@ The reason for this is that regular expression engine that React Router uses int
 ```js
 <Router>
   <div>
-    <Route path='/' exact component={Home} />
-    <Route path='/about' component={About} />
+    <Route path="/" exact component={Home} />
+    <Route path="/about" component={About} />
   </div>
 </Router>
 ```
@@ -179,16 +180,16 @@ function App() {
     <Router>
       <div>
         <nav style={{ margin: 10 }}>
-          <Link to='/' style={{ padding: 10 }}>
+          <Link to="/" style={{ padding: 10 }}>
             Home
           </Link>
 
-          <Link to='/about' style={{ padding: 10 }}>
+          <Link to="/about" style={{ padding: 10 }}>
             About
           </Link>
         </nav>
-        <Route path='/' exact component={Home} />
-        <Route path='/about' component={About} />
+        <Route path="/" exact component={Home} />
+        <Route path="/about" component={About} />
       </div>
     </Router>
   );
@@ -222,16 +223,16 @@ function App() {
     <Router>
       <div>
         <nav style={{ margin: 10 }}>
-          <NavLink to='/' style={{ padding: 10 }}>
+          <NavLink to="/" style={{ padding: 10 }}>
             Home
           </NavLink>
 
-          <NavLink to='/about' style={{ padding: 10 }}>
+          <NavLink to="/about" style={{ padding: 10 }}>
             About
           </NavLink>
         </nav>
-        <Route path='/' exact component={Home} />
-        <Route path='/about' component={About} />
+        <Route path="/" exact component={Home} />
+        <Route path="/about" component={About} />
       </div>
     </Router>
   );
@@ -301,7 +302,7 @@ The way `NavLink` works is almost similar to Route component in React Router API
 ```js
 // App.js
 
-<NavLink to='/' exact activeClassName='active'>
+<NavLink to="/" exact activeClassName="active">
   Home
 </NavLink>
 ```
@@ -334,7 +335,7 @@ class Posts extends React.Component {
 
   render() {
     return (
-      <div className='posts'>
+      <div className="posts">
         <h1>Posts List</h1>
       </div>
     );
@@ -375,19 +376,19 @@ function App() {
     <Router>
       <div>
         <nav style={{ margin: 10 }}>
-          <NavLink to='/' exact activeClassName='active'>
+          <NavLink to="/" exact activeClassName="active">
             Home
           </NavLink>
-          <NavLink to='/about' activeClassName='active'>
+          <NavLink to="/about" activeClassName="active">
             About
           </NavLink>
-          <NavLink to='/posts' activeClassName='active'>
+          <NavLink to="/posts" activeClassName="active">
             Posts
           </NavLink>
         </nav>
-        <Route path='/' exact component={Home} />
-        <Route path='/about' component={About} />
-        <Route path='/posts' component={Posts} />
+        <Route path="/" exact component={Home} />
+        <Route path="/about" component={About} />
+        <Route path="/posts" component={Posts} />
       </div>
     </Router>
   );
@@ -436,7 +437,7 @@ class Posts extends React.Component {
   render() {
     const { posts } = this.state;
     return (
-      <div className='posts'>
+      <div className="posts">
         <h1>Posts List</h1>
         <ul>
           {posts.map(post => (
@@ -445,7 +446,7 @@ class Posts extends React.Component {
             </li>
           ))}
         </ul>
-        <Route path='/posts/:id' component={Child} />
+        <Route path="/posts/:id" component={Child} />
       </div>
     );
   }
@@ -461,7 +462,5 @@ Also, the `Child` component reads anything coming from the URL parameters, such 
 ## Conclusion
 
 Hopefully, by now, you are familiar with the basic concepts of how React Router library works. It is a powerful library that helps you build better React apps. If you want to learn more about React Router visit its official documentation [here](https://reacttraining.com/react-router/).
-
----
 
 [Originally published at Crowdbotics](https://blog.crowdbotics.com/introduction-to-react-router-v4-with-reactjs/)

@@ -7,6 +7,7 @@ template: post
 tags:
   - expo
   - react-native
+canonicalUrl: 'https://medium.com/hackernoon/react-native-getting-started-with-lottie-and-expo-8b2105fbb496'
 ---
 
 In this tutorial, we will be using [Lottie](https://www.lottiefiles.com/) with React Native. Lottie is an opensource library that renders Adobe Effects by providing easy to use animations just like static images. These animations are beautiful. Lottie is a mobile library developed by AirBnB. These animations are exported as JSON files using [Bodymovin](https://github.com/airbnb/lottie-web) to render the natively on mobile and in web applications.
@@ -217,6 +218,4 @@ const styles = StyleSheet.create({
 
 You can also find the complete code at this [**Github repo**](https://github.com/amandeepmittal/rn-lottie-example)**,** in case you just want to play around this concept.
 
----
-
-[Originally this article was published on Hackernoon.com](https://medium.com/hackernoon/react-native-getting-started-with-lottie-and-expo-8b2105fbb496)
+_[Originally this article was published on Hackernoon.com](https://medium.com/hackernoon/react-native-getting-started-with-lottie-and-expo-8b2105fbb496)_

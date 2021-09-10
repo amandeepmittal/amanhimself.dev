@@ -7,6 +7,7 @@ template: post
 tags:
   - expo
   - react-native
+canonicalUrl: 'https://blog.jscrambler.com/how-to-use-react-native-geolocation-to-get-postal-address/'
 ---
 
 ![cover_image](https://blog.jscrambler.com/content/images/2021/02/jscrambler-blog-how-to-create-a-react-native-geolocation-app.jpg)
@@ -378,7 +379,6 @@ That's it! We hope you have found this tutorial helpful. We are adding some refe
 - [react-native-geolocation-service](https://github.com/Agontuk/react-native-geolocation-service)
 - [Hiring a React Native Developer: What Should You Look For? by Jess Marranco](https://www.g2i.co/blog/hiring-a-react-native-developer)
 
-
 **The source code is available at this [GitHub repo](https://github.com/amandeepmittal/react-native-examples/tree/master/expo-geolocation-example).**
 
-> Originally Published at [Jscrambler's Blog](https://blog.jscrambler.com/how-to-use-react-native-geolocation-to-get-postal-address/)
+_Originally Published at [Jscrambler's Blog](https://blog.jscrambler.com/how-to-use-react-native-geolocation-to-get-postal-address/)_

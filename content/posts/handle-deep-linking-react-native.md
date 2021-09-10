@@ -6,6 +6,7 @@ slug: 'slug/handle-deep-linking-react-native'
 thumbnail: '../thumbnails/react.png'
 tags:
   - react-native
+canonicalUrl: 'https://blog.jscrambler.com/how-to-handle-deep-linking-in-a-react-native-app/'
 ---
 
 ![cover](https://i.imgur.com/cHaZZW8.jpg)
@@ -377,7 +378,5 @@ Now, let us try to open a user's detail based on available ids from an external 
 ## Conclusion
 
 That's it. You have now a complete demo of a React Native app that handles deep linking using `react-navigation`.
-
----
 
 Originally published at [Jscrambler](https://blog.jscrambler.com/how-to-handle-deep-linking-in-a-react-native-app/)

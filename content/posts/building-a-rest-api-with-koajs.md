@@ -2,10 +2,11 @@
 title: 'Building a REST API with Koajs'
 date: 2018-10-16
 template: post
-slug: 'blog/building-a-rest-api-with-koajs/images/cover.png'
+slug: 'blog/building-a-rest-api-with-koajs/'
 thumbnail: '../thumbnails/node.png'
 tags:
   - nodejs
+canonicalUrl: 'https://medium.com/crowdbotics/building-a-rest-api-with-koajs-417c276929e2'
 ---
 
 ![cover](https://i.imgur.com/ohg3d3s.png)

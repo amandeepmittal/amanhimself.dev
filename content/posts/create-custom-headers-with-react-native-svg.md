@@ -7,6 +7,7 @@ thumbnail: '../thumbnails/expo.png'
 tags:
   - expo
   - react-native
+canonicalUrl: 'https://heartbeat.fritz.ai/creating-custom-wavy-headers-using-react-native-svg-639ce0861327'
 ---
 
 ![cover](https://i.imgur.com/z4d76AE.png)

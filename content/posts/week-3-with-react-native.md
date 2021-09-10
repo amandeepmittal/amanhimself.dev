@@ -7,6 +7,7 @@ template: post
 tags:
   - expo
   - react-native
+canonicalUrl: 'https://medium.com/hackernoon/week-3-with-react-native-107f6779a831'
 ---
 
 This week has been a hectic one for me. Deadline coming closer, and too many tasks to complete. It has been a happening one also. I got the invite to join Gatsbyjs open source team, to help and maintain the on going projects. I love contributing to open source communities and projects.
@@ -45,7 +46,5 @@ exp build:android
 There are shortcomings using Expo. I am not going to list them here but the team behind it seems to works rapidly to implement these new features. You can submit a feature or upvote one using this or get involved as a contributor.
 
 [**Feature Requests - Expo**](https://expo.canny.io/feature-requests)
-
----
 
 [Originally published at Hackernoon.com](https://medium.com/hackernoon/week-3-with-react-native-107f6779a831)

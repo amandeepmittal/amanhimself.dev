@@ -7,6 +7,7 @@ template: post
 tags:
   - expo
   - react-native
+canonicalUrl: 'https://amanhimself.dev/blog/starting-over-with-react-native/'
 ---
 
 ### Start of 2018 🚀

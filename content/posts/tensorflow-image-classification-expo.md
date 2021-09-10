@@ -7,6 +7,7 @@ template: post
 tags:
   - expo
   - react-native
+canonicalUrl: 'https://heartbeat.fritz.ai/image-classification-on-react-native-with-tensorflow-js-and-mobilenet-48a39185717c'
 ---
 
 Recently, the alpha version [Tensorflow.js](https://www.tensorflow.org/js/) for React Native and Expo applications was released. It currently provides the capabilities of loading pre-trained models and training. Here is the announcement tweet:
@@ -454,7 +455,5 @@ Here are some resources that I find extremely useful.
 - [Introduction to Tensorflow.js](https://medium.com/tensorflow/introducing-tensorflow-js-machine-learning-in-javascript-bf3eab376db)
 
 You can find the complete code at this [Github repo](https://github.com/amandeepmittal/mobilenet-tfjs-expo).
-
----
 
 Originally published at [Heartbeat.Fritz.ai](https://heartbeat.fritz.ai/image-classification-on-react-native-with-tensorflow-js-and-mobilenet-48a39185717c)

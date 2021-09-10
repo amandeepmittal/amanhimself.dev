@@ -6,6 +6,7 @@ thumbnail: '../thumbnails/node.png'
 slug: 'blog/converting-a-buffer-to-json-and-utf8-strings-in-nodejs'
 tags:
   - nodejs
+canonicalUrl: 'https://amanhimself.dev/blog/converting-a-buffer-to-json-and-utf8-strings-in-nodejs'
 ---
 
 ![cover_image](https://miro.medium.com/max/4000/1*1878GmSC5EtcjSNHONPO3Q.jpeg)

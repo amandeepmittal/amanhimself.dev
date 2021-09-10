@@ -7,6 +7,7 @@ slug: 'blog/node-js-twitter-bot-tutorial'
 tags:
   - nodejs
   - twitter-bots
+canonicalUrl: 'https://community.risingstack.com/node-js-twitter-bot-tutorial/'
 ---
 
 In this tutorial, we will create a Twitter Bot with Node.js that retweets or favorites based on hashtags, and replies to users if they follow the account.
@@ -357,8 +358,6 @@ $ npm start
 There are various ways to write a Twitter Bot, this is just one way. Your bot can be smart and you can do various things with it. You just have to refer to [twit documentation](https://www.npmjs.com/package/twit) for other RESTful API methods to manipulate [Twitter API endpoints](http://REST%20API%20Endpoints:%20https://dev.twitter.com/rest/public).
 
 For further reading check out [Botwiki.org](https://botwiki.org/bots/twitterbots/) for various types of bots on vast amount of platforms. For advanced reading, check out [Botwiki’s list of tutorials of Twitter Bots in different programming languages](https://botwiki.org/tutorials/twitterbots/).
-
----
 
 Update: the second part of this tutorial is available [here!](https://community.risingstack.com/how-to-make-a-twitter-bot-with-node-js/)
 

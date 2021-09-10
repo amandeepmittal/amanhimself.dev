@@ -7,6 +7,7 @@ thumbnail: '../thumbnails/react.png'
 tags:
   - expo
   - react-native
+canonicalUrl: 'https://heartbeat.fritz.ai/how-authentication-flow-works-in-react-native-apps-using-react-navigation-4-x-a30bb4d9e5d6'
 ---
 
 ![cover_image](https://i.imgur.com/0xwhr2a.png)
@@ -445,7 +446,5 @@ _You can find the complete code used in this tutorial at the Github repo [here](
 - [Stack Navigator](https://reactnavigation.org/docs/en/stack-navigator.html)
 - [Switch Navigator](https://reactnavigation.org/docs/en/switch-navigator.html)
 - [`navigation` props](https://reactnavigation.org/docs/en/navigation-prop.html)
-
----
 
 [Originally published at Heartbeat](https://heartbeat.fritz.ai/how-authentication-flow-works-in-react-native-apps-using-react-navigation-4-x-a30bb4d9e5d6)

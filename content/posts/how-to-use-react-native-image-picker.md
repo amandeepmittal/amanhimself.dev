@@ -6,6 +6,7 @@ template: post
 thumbnail: '../thumbnails/react.png'
 tags:
   - react-native
+canonicalUrl: 'https://blog.crowdbotics.com/how-to-use-react-native-image-picker/'
 ---
 
 React Native as a framework to develop cross-platform mobile apps has few options to select an image from a user's mobile phone gallery or camera and perform further actions on it. One module that does that is called [`react-native-image-picker`](https://github.com/react-native-community/react-native-image-picker).
@@ -197,7 +198,7 @@ import SimpleImagePicker from './src/screens/SimpleImagePicker';
 export default function () {
   return (
     <>
-      <StatusBar barStyle='light-content' />
+      <StatusBar barStyle="light-content" />
       <SimpleImagePicker />
     </>
   );
@@ -539,13 +540,13 @@ export default function SimpleImagePicker() {
           <Image
             source={require('../assets/placeholderimage.jpg')}
             style={STYLES.imageBox}
-            resizeMode='contain'
+            resizeMode="contain"
           />
         ) : (
           <Image
             source={{ uri: imageSource }}
             style={STYLES.imageBox}
-            resizeMode='contain'
+            resizeMode="contain"
           />
         )}
       </View>

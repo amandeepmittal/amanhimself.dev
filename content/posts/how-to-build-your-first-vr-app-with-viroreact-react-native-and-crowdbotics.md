@@ -6,6 +6,7 @@ thumbnail: '../thumbnails/react.png'
 template: post
 tags:
   - react-native
+canonicalUrl: 'https://medium.com/crowdbotics/how-to-build-your-first-vr-app-with-viroreact-react-native-and-crowdboticsp-a376b49e1e1d'
 ---
 
 Virtual Reality (VR) is an immersive technology that has intentions to improve the experience by providing a three-dimensional realistic environment rendered for the individual to feel real. The applications of this technology are boundless. You will find totally immersive and entertaining gaming applications as well as examples of healthcare simulations used to save lives.
@@ -175,13 +176,13 @@ To enable 3D text, there is a prop called `extrusionDepth` which is given a valu
 ```js
 <ViroText
   fontSize={40}
-  text='Hi, from Crowdbotics'
+  text="Hi, from Crowdbotics"
   width={2}
   height={2}
   position={[0, 0, -2]}
-  textAlign='center'
-  textAlignVertical='center'
-  color='#ffffff'
+  textAlign="center"
+  textAlignVertical="center"
+  color="#ffffff"
   extrusionDepth={8}
   materials={['frontMaterial', 'backMaterial', 'sideMaterial']}
 />
@@ -251,7 +252,5 @@ ViroReact provides a great set of API components that you can use to extend your
 The complete code for this tutorial is available in the Github repository below.
 
 [**crowdbotics-apps/rnvrdemo-1546**](https://github.com/crowdbotics-apps/rnvrdemo-1546/tree/master/vrappdemo)
-
----
 
 [Originally published at Crowdbotics](https://medium.com/crowdbotics/how-to-build-your-first-vr-app-with-viroreact-react-native-and-crowdboticsp-a376b49e1e1d)

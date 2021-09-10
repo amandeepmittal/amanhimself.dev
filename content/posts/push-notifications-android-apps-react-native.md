@@ -7,6 +7,7 @@ thumbnail: '../thumbnails/react.png'
 tags:
   - react-native
   - firebase
+canonicalUrl: 'https://blog.jscrambler.com/implementing-react-native-push-notifications-in-android-apps/'
 ---
 
 Relevant Push notifications are a great way to boost a user's engagement towards an application. According to some [analysis](http://info.localytics.com/blog/6-stats-that-prove-how-important-push-notifications-in-app-messaging-are-to-your-apps-success), push notifications increase app engagement by 88%. It’s also curious to see that the [click-through rate](https://clevertap.com/blog/mobile-marketing-stats-2019/) for push notifications in Android (4.06%) is much higher than in iOS (1.7%).
@@ -335,7 +336,5 @@ You can customize the title, message and another behavior of the Firebase Cloud 
 ## Conclusion
 
 Congratulations! You have successfully implemented both ways to send a push notification in a React Native app. Go ahead and try to implement a scheduled notification as a challenge.
-
----
 
 Originally published at [Jscrambler](https://blog.jscrambler.com/implementing-react-native-push-notifications-in-android-apps/)

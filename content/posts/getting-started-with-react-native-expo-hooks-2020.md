@@ -7,6 +7,7 @@ thumbnail: '../thumbnails/expo.png'
 tags:
   - expo
   - react-native
+canonicalUrl: 'https://heartbeat.fritz.ai/getting-started-with-react-native-and-expo-using-hooks-in-2020-fb466c25b04c'
 ---
 
 ![cover](https://i.imgur.com/TWlrrL2.png)
@@ -672,7 +673,5 @@ The demo app is complete and ready to be tested. In the Expo client image below,
 If you are getting started in React Native development, Expo as a toolkit can serve you well in your journey. Instead of dwelling much into iOS and Android development setup which can be overwhelming at the start, I'd recommend the least possible amount of tooling and incline more towards learning the core APIs and fundamentals of React Native.
 
 The way the Expo is being maintained and adding support for Web and universal apps, it going to be an important part of the journey.
-
----
 
 Originally published at [Heartbeat.fritz.ai](https://heartbeat.fritz.ai/getting-started-with-react-native-and-expo-using-hooks-in-2020-fb466c25b04c)

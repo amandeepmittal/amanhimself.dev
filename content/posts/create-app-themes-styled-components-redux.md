@@ -7,6 +7,7 @@ thumbnail: '../thumbnails/react.png'
 tags:
   - react-native
   - redux
+canonicalUrl: 'https://blog.jscrambler.com/changing-app-themes-using-react-native-styled-components-and-redux/'
 ---
 
 ![cover](https://i.imgur.com/RSo1BSr.jpg)

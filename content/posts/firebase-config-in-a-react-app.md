@@ -7,6 +7,7 @@ thumbnail: '../thumbnails/firebase.png'
 tags:
   - firebase
   - react
+canonicalUrl: 'https://amanhimself.dev/blog/firebase-config-in-a-react-app/'
 ---
 
 ![cover](https://i.imgur.com/u3tfk7P.png)

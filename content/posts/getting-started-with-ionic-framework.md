@@ -6,6 +6,7 @@ thumbnail: '../thumbnails/ionic.png'
 slug: 'blog/getting-started-with-ionic-framework'
 tags:
   - ionic
+canonicalUrl: 'https://hackernoon.com/getting-started-with-ionic-framework-an-overview-6725b687779b'
 ---
 
 ![cover_image](https://hackernoon.com/hn-images/1*nlhD6_U277a1s_VxSbH11g.jpeg)
@@ -162,7 +163,5 @@ This folder is the main folder of our application and its where the code of our 
 The last folder, `lib` contain the packages/dependencies that are installed using Bower. It contains a pre-loaded dependency of Ionic and Angular files.
 
 _I guess, you now have the idea of how an Hybrid application using Ionic Framework works._
-
----
 
 [Originally Published at Hackernoon.com](https://hackernoon.com/getting-started-with-ionic-framework-an-overview-6725b687779b)

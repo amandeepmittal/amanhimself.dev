@@ -8,6 +8,7 @@ tags:
   - expo
   - redux
   - react-native
+canonicalUrl: 'https://heartbeat.fritz.ai/build-a-custom-modal-with-the-animated-api-in-react-native-abf4b650622'
 ---
 
 ![cover_image](https://i.imgur.com/0bXMoSY.png)

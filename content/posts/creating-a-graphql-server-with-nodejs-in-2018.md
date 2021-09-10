@@ -7,6 +7,7 @@ thumbnail: '../thumbnails/graphql.png'
 tags:
   - nodejs
   - graphql
+canonicalUrl: 'https://medium.com/crowdbotics/creating-a-graphql-server-with-nodejs-ef9814a7e0e6'
 ---
 
 ![cover](https://i.imgur.com/kcItwPv.png)
@@ -535,7 +536,5 @@ If you completed this tutorial step by step, _Congratulations!🎉_
 You have learned how to configure an Express server with Apollo library to setup your own GraphQL API. Apollo Server is an open source project and is one the most stable solution to create GraphQL APIs for full-stack applications. It also supports client-side out of the box for React, Vue, Angular, Meteor, and Ember as well as Native mobile development with Swift and Java. More information about this can be found [**here**](https://www.apollographql.com/docs/react/).
 
 **The complete code for the tutorial at [this Github repository](https://github.com/amandeepmittal/apollo-express-demo)**
-
----
 
 [Originally published at Crowdbotics](https://medium.com/crowdbotics/creating-a-graphql-server-with-nodejs-ef9814a7e0e6)

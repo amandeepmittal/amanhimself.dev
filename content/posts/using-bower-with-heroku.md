@@ -6,6 +6,7 @@ thumbnail: '../thumbnails/heroku.png'
 slug: 'blog/using-bower-with-herokus'
 tags:
   - tools
+canonicalUrl: 'https://hackernoon.com/using-bower-with-heroku-cdc791320c88'
 ---
 
 Yes, I use [Bower](http://bower.io) to maintain front-end dependencies, mostly for my side projects. Whatever you say, Bower is good and I am too anxious to mess with npm dependencies for front-end development. Plus, I feel that maintaining front-end dependencies with Bower helps in keeping my application’s skeleton clean.
@@ -31,7 +32,5 @@ And then add a`postinstall` command in `npm scripts` :
 ```
 
 You can read more about customizing [**Heroku Build Process here**](https://devcenter.heroku.com/articles/nodejs-support#customizing-the-build-process)**.**
-
----
 
 [Originally Published at Hackernoon.com](https://hackernoon.com/using-bower-with-heroku-cdc791320c88)

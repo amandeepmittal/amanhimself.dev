@@ -6,6 +6,7 @@ slug: 'blog/build-chatbot-dialogflow-nodejs-webhooks'
 thumbnail: '../thumbnails/node.png'
 tags:
   - nodejs
+canonicalUrl: 'https://blog.crowdbotics.com/build-chatbot-dialogflow-nodejs-webhooks/'
 ---
 
 ![cover_image](https://i.imgur.com/cOAePoA.jpg)

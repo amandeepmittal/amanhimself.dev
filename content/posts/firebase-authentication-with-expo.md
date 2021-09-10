@@ -7,6 +7,7 @@ thumbnail: '../thumbnails/expo.png'
 tags:
   - expo
   - firebase
+canonicalUrl: 'https://blog.jscrambler.com/how-to-integrate-firebase-authentication-with-an-expo-app/'
 ---
 
 ![cover_image](https://blog.jscrambler.com/content/images/2021/07/jscrambler-blog-integrate-firebase-authentication-with-expo-app-thumbnail-1.jpg)
@@ -23,7 +24,7 @@ In this tutorial, let's take a look at how as a mobile developer building applic
 - create an auth flow by conditionally rendering between these navigators when a user is logged in or not;
 - and integrate Firebase Auth with the email/password method.
 
-[The source code for this tutorial is available on GitHub](https://github.com/amandeepmittal/react-native-examples/tree/master/expo-firebase-auth-example). 
+[The source code for this tutorial is available on GitHub](https://github.com/amandeepmittal/react-native-examples/tree/master/expo-firebase-auth-example).
 
 ## Prerequisites
 
@@ -35,9 +36,9 @@ To follow this tutorial, please make sure you have the following tools and utili
 
 ## Creating a React Native app with expo-cli
 
-The initial step is to either create a new React Native project using expo-cli by following the steps mentioned below or, if you know the lexicons of creating projects with Expo, integrate [Firebase JS SDK](https://github.com/firebase/firebase-js-sdk). 
+The initial step is to either create a new React Native project using expo-cli by following the steps mentioned below or, if you know the lexicons of creating projects with Expo, integrate [Firebase JS SDK](https://github.com/firebase/firebase-js-sdk).
 
-Yes, this guide is using Firebase JS SDK and [Expo managed workflow](https://docs.expo.io/introduction/managed-vs-bare/#managed-workflow). 
+Yes, this guide is using Firebase JS SDK and [Expo managed workflow](https://docs.expo.io/introduction/managed-vs-bare/#managed-workflow).
 
 Open your favorite terminal window, and execute the following command (where `firebase-auth` is an example name of the project directory)
 
@@ -69,39 +70,39 @@ expo install firebase dotenv expo-constants react-native-gesture-handler react-n
 
 To get started, you’re going to need a Firebase app. Once you’ve created a new account with Firebase and logged in, create a new project by clicking on the **Add Project** button.
 
-![ss2](https://i.imgur.com/QRL6R6K.png) 
+![ss2](https://i.imgur.com/QRL6R6K.png)
 
 Next, add the name of the new Firebase project and then click **Continue**.
 
-![ss3](https://i.imgur.com/679tjgf.png) 
+![ss3](https://i.imgur.com/679tjgf.png)
 
 You can disable Google Analytics as it won't be used in this example. Then click **Create Project**
 
-![ss4](https://i.imgur.com/PQZ6MYx.png) 
+![ss4](https://i.imgur.com/PQZ6MYx.png)
 
 Expo Managed workflow apps can run inside a client app Expo Go (in development mode). The Expo Go app currently supports Firebase JS SDK and not the react-native-firebase library. More information in [official Expo documentation](https://docs.expo.io/guides/using-firebase/).
 
-On the Dashboard screen, in the left side menu, click the settings icon, and then go to the *Project Settings* page and then look for the section *General > Your apps*. If it's a new project, there won't be any apps.
+On the Dashboard screen, in the left side menu, click the settings icon, and then go to the _Project Settings_ page and then look for the section _General > Your apps_. If it's a new project, there won't be any apps.
 
-![ss5](https://i.imgur.com/s5o5gsj.png) 
+![ss5](https://i.imgur.com/s5o5gsj.png)
 
-Click the Web button. It will prompt you to enter the details of your app. Enter the app’s nickname, and then click the *Register app* button.
+Click the Web button. It will prompt you to enter the details of your app. Enter the app’s nickname, and then click the _Register app_ button.
 
-![ss6](https://i.imgur.com/PRJmfvH.png) 
+![ss6](https://i.imgur.com/PRJmfvH.png)
 
 Then, Firebase will provide configuration objects with API keys and other keys that are required to use different Firebase services.
 
-![ss7](https://i.imgur.com/ZY40Mh4.png) 
+![ss7](https://i.imgur.com/ZY40Mh4.png)
 
-These API keys can be included in your React Native app as they are not used to access Firebase services’ backend resources. [That can only be done by Firebase security rules](https://firebase.google.com/docs/projects/api-keys). 
+These API keys can be included in your React Native app as they are not used to access Firebase services’ backend resources. [That can only be done by Firebase security rules](https://firebase.google.com/docs/projects/api-keys).
 
 This does not mean that you should expose these keys to a version control host such as GitHub. We will learn how to set up environment variables in an Expo app in the next section.
 
-Let's enable the email/password sign-in method. From the left side menu, go to the *Authentication* page. If you are using this service for the first time in your Firebase project, click the *Get Started* button.
+Let's enable the email/password sign-in method. From the left side menu, go to the _Authentication_ page. If you are using this service for the first time in your Firebase project, click the _Get Started_ button.
 
-Then, in the *Sign-in method* tab, click the status of *Email/Password*, enable it, and then click *Save*.
+Then, in the _Sign-in method_ tab, click the status of _Email/Password_, enable it, and then click _Save_.
 
-![ss8](https://i.imgur.com/SQlngt6.png) 
+![ss8](https://i.imgur.com/SQlngt6.png)
 
 ## Using Environment Variables
 
@@ -312,7 +313,7 @@ const styles = StyleSheet.create({
 export default IconButton;
 ```
 
-Add the following code snippet in `ErrorMessage.js`. This component will be used to display error messages either when signing up or logging in to the app. These messages are human-readable and thrown by the Firebase Auth service. You can go through the complete list of messages in the [Firebase official documentation](https://firebase.google.com/docs/auth/admin/errors). 
+Add the following code snippet in `ErrorMessage.js`. This component will be used to display error messages either when signing up or logging in to the app. These messages are human-readable and thrown by the Firebase Auth service. You can go through the complete list of messages in the [Firebase official documentation](https://firebase.google.com/docs/auth/admin/errors).
 
 ```js
 // components/ErrorMessage.js
@@ -427,7 +428,7 @@ The sole focus of this tutorial is to integrate Firebase SDK and not to teach ho
 
 Let's start by creating the structure of the screens directory. Once you have opened the Expo project in your preferred code editor, you will be welcomed by the default directory structure as shown below:
 
-![ss1](https://i.imgur.com/rqcklse.png) 
+![ss1](https://i.imgur.com/rqcklse.png)
 
 Create a new directory called `/screens` and add the following screen files:
 
@@ -467,13 +468,13 @@ export default function HomeScreen() {
   };
   return (
     <View style={styles.container}>
-      <StatusBar style='dark-content' />
+      <StatusBar style="dark-content" />
       <View style={styles.row}>
         <Text style={styles.title}>Welcome {user.email}!</Text>
         <IconButton
-          name='logout'
+          name="logout"
           size={24}
-          color='#fff'
+          color="#fff"
           onPress={handleSignOut}
         />
       </View>
@@ -560,7 +561,7 @@ export default function LoginScreen({ navigation }) {
 
   return (
     <View style={styles.container}>
-      <StatusBar style='dark-content' />
+      <StatusBar style="dark-content" />
       <Text style={styles.title}>Login</Text>
       <InputField
         inputStyle={{
@@ -570,11 +571,11 @@ export default function LoginScreen({ navigation }) {
           backgroundColor: '#fff',
           marginBottom: 20
         }}
-        leftIcon='email'
-        placeholder='Enter email'
-        autoCapitalize='none'
-        keyboardType='email-address'
-        textContentType='emailAddress'
+        leftIcon="email"
+        placeholder="Enter email"
+        autoCapitalize="none"
+        keyboardType="email-address"
+        textContentType="emailAddress"
         autoFocus={true}
         value={email}
         onChangeText={text => setEmail(text)}
@@ -587,12 +588,12 @@ export default function LoginScreen({ navigation }) {
           backgroundColor: '#fff',
           marginBottom: 20
         }}
-        leftIcon='lock'
-        placeholder='Enter password'
-        autoCapitalize='none'
+        leftIcon="lock"
+        placeholder="Enter password"
+        autoCapitalize="none"
         autoCorrect={false}
         secureTextEntry={passwordVisibility}
-        textContentType='password'
+        textContentType="password"
         rightIcon={rightIcon}
         value={password}
         onChangeText={text => setPassword(text)}
@@ -601,9 +602,9 @@ export default function LoginScreen({ navigation }) {
       {loginError ? <ErrorMessage error={loginError} visible={true} /> : null}
       <Button
         onPress={onLogin}
-        backgroundColor='#f57c00'
-        title='Login'
-        tileColor='#fff'
+        backgroundColor="#f57c00"
+        title="Login"
+        tileColor="#fff"
         titleSize={20}
         containerStyle={{
           marginBottom: 24
@@ -611,8 +612,8 @@ export default function LoginScreen({ navigation }) {
       />
       <RNButton
         onPress={() => navigation.navigate('Signup')}
-        title='Go to Signup'
-        color='#fff'
+        title="Go to Signup"
+        color="#fff"
       />
     </View>
   );
@@ -677,7 +678,7 @@ export default function SignupScreen({ navigation }) {
 
   return (
     <View style={styles.container}>
-      <StatusBar style='dark-content' />
+      <StatusBar style="dark-content" />
       <Text style={styles.title}>Create new account</Text>
       <InputField
         inputStyle={{
@@ -687,11 +688,11 @@ export default function SignupScreen({ navigation }) {
           backgroundColor: '#fff',
           marginBottom: 20
         }}
-        leftIcon='email'
-        placeholder='Enter email'
-        autoCapitalize='none'
-        keyboardType='email-address'
-        textContentType='emailAddress'
+        leftIcon="email"
+        placeholder="Enter email"
+        autoCapitalize="none"
+        keyboardType="email-address"
+        textContentType="emailAddress"
         autoFocus={true}
         value={email}
         onChangeText={text => setEmail(text)}
@@ -704,12 +705,12 @@ export default function SignupScreen({ navigation }) {
           backgroundColor: '#fff',
           marginBottom: 20
         }}
-        leftIcon='lock'
-        placeholder='Enter password'
-        autoCapitalize='none'
+        leftIcon="lock"
+        placeholder="Enter password"
+        autoCapitalize="none"
         autoCorrect={false}
         secureTextEntry={passwordVisibility}
-        textContentType='password'
+        textContentType="password"
         rightIcon={rightIcon}
         value={password}
         onChangeText={text => setPassword(text)}
@@ -718,9 +719,9 @@ export default function SignupScreen({ navigation }) {
       {signupError ? <ErrorMessage error={signupError} visible={true} /> : null}
       <Button
         onPress={onHandleSignup}
-        backgroundColor='#f57c00'
-        title='Signup'
-        tileColor='#fff'
+        backgroundColor="#f57c00"
+        title="Signup"
+        tileColor="#fff"
         titleSize={20}
         containerStyle={{
           marginBottom: 24
@@ -728,8 +729,8 @@ export default function SignupScreen({ navigation }) {
       />
       <RNButton
         onPress={() => navigation.navigate('Login')}
-        title='Go to Login'
-        color='#fff'
+        title="Go to Login"
+        color="#fff"
       />
     </View>
   );
@@ -803,8 +804,8 @@ const Stack = createStackNavigator();
 
 export default function HomeStack() {
   return (
-    <Stack.Navigator headerMode='none'>
-      <Stack.Screen name='Home' component={HomeScreen} />
+    <Stack.Navigator headerMode="none">
+      <Stack.Screen name="Home" component={HomeScreen} />
     </Stack.Navigator>
   );
 }
@@ -823,9 +824,9 @@ const Stack = createStackNavigator();
 
 export default function AuthStack() {
   return (
-    <Stack.Navigator headerMode='none'>
-      <Stack.Screen name='Login' component={LoginScreen} />
-      <Stack.Screen name='Signup' component={SignupScreen} />
+    <Stack.Navigator headerMode="none">
+      <Stack.Screen name="Login" component={LoginScreen} />
+      <Stack.Screen name="Signup" component={SignupScreen} />
     </Stack.Navigator>
   );
 }
@@ -861,6 +862,7 @@ This hook will trigger a re-render whenever the value of `user` changes from the
 The `onAuthStateChanged` listener will trigger inside the `useEffect` hook. It also returns an unsubscriber function which allows the app to stop listening for events whenever the hook is no longer in use.
 
 Add the following code snippet inside the `RootNavigator.js` file:
+
 ```js
 export default function RootNavigator() {
   const { user, setUser } = useContext(AuthenticatedUserContext);
@@ -884,7 +886,7 @@ export default function RootNavigator() {
   if (isLoading) {
     return (
       <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <ActivityIndicator size='large' />
+        <ActivityIndicator size="large" />
       </View>
     );
   }
@@ -930,11 +932,11 @@ Also, modify the `App.js` file to return `Routes`.
 
 Here is the demo of the complete authentication flow you will get after this step:
 
-![ss9](https://i.imgur.com/aEN728J.gif) 
+![ss9](https://i.imgur.com/aEN728J.gif)
 
-If you head over to the Firebase console and go to the **Users** tab on the Authentication page, you will see the details of the signed up user. 
+If you head over to the Firebase console and go to the **Users** tab on the Authentication page, you will see the details of the signed up user.
 
-![ss10](https://i.imgur.com/NEiqR2O.png)  
+![ss10](https://i.imgur.com/NEiqR2O.png)
 
 ## Conclusion
 
@@ -944,4 +946,4 @@ Using Firebase JS SDK allows integrating other sign-in providers such as Phone a
 
 If you need to take a look at the code for this tutorial, you can refer to this [GitHub repo](https://github.com/amandeepmittal/react-native-examples/tree/master/expo-firebase-auth-example).
 
-> Originally Published at [Jscrambler.com](https://blog.jscrambler.com/how-to-integrate-firebase-authentication-with-an-expo-app/).
+Originally Published at [Jscrambler.com](https://blog.jscrambler.com/how-to-integrate-firebase-authentication-with-an-expo-app/).

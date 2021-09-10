@@ -6,6 +6,7 @@ thumbnail: '../thumbnails/react.png'
 template: post
 tags:
   - react-native
+canonicalUrl: 'https://levelup.gitconnected.com/using-styled-components-with-react-native-de645fcf4787'
 ---
 
 ## Tldr
@@ -384,7 +385,7 @@ Inside the `Titlebar` view, add the icon.
 ```js
 <Titlebar>
   {/* ... */}
-  <Ionicons name='md-cart' size={32} color='red' />
+  <Ionicons name="md-cart" size={32} color="red" />
 </Titlebar>
 ```
 
@@ -396,9 +397,9 @@ To solve this, let us use the absolute positioning property as an inline style t
 
 ```js
 <Ionicons
-  name='md-cart'
+  name="md-cart"
   size={32}
-  color='red'
+  color="red"
   style={{ position: 'absolute', right: 20, top: 5 }}
 />
 ```
@@ -710,7 +711,5 @@ Have you tried styled-components with React Native before? If not, are you going
 You can find the complete code for this article in the Github repo 👇
 
 [**amandeepmittal/react-native-workspace**](https://github.com/amandeepmittal/react-native-workspace/tree/master/03-RNgrocery-ui)
-
----
 
 [Originally published at Level up coding](https://levelup.gitconnected.com/using-styled-components-with-react-native-de645fcf4787)

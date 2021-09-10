@@ -7,6 +7,7 @@ thumbnail: '../thumbnails/react.png'
 tags:
   - react-native
   - firebase
+canonicalUrl: 'https://heartbeat.fritz.ai/chat-app-with-react-native-part-6-create-a-custom-hook-to-change-status-bar-styles-da7073c5fa8d'
 ---
 
 ![cover](https://i.imgur.com/ROYjoYo.jpg)

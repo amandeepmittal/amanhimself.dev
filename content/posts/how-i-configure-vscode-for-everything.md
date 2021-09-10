@@ -6,6 +6,7 @@ template: post
 thumbnail: '../thumbnails/vscode.png'
 tags:
   - tools
+canonicalUrl: 'https://medium.com/better-programming/how-i-configure-vscode-for-everything-7df65a316a52'
 ---
 
 ![cover](https://i.imgur.com/hJ7W51N.jpg)
@@ -24,7 +25,7 @@ VS Code uses [Electron](https://electronjs.org/) as its base which enables it to
 
 Now, that’s what I call win-win. It’s fast compared to the previous editors ([Atom](https://atom.io/)) and IDE’s ([Webstorm](https://www.jetbrains.com/webstorm/)) I have used.
 
-### Themes
+## Themes
 
 The first thing I did was install themes that I see all day. I like my editor to be charming and appealing. Thus, I used the following themes for different purposes.
 
@@ -35,7 +36,7 @@ The first thing I did was install themes that I see all day. I like my editor to
 
 ![](https://cdn-images-1.medium.com/max/800/1*7utI1vJayaK97t7lYhrv_A.jpeg)
 
-### Configuring VS Code
+## Configuring VS Code
 
 Next, I changed a few things that I remembered from my previous settings.
 
@@ -85,7 +86,7 @@ With Prettier, I like to use my own set of configurations, as described below.
 }
 ```
 
-### Conclusion
+## Conclusion
 
 That’s the setup I now use for my JavaScript, Node.js, [React](https://reactjs.org/) and React Native work. What type of VS Code configuration do you use? What does it look like? I hope you enjoyed reading this post.
 

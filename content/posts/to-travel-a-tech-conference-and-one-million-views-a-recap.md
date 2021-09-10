@@ -6,6 +6,7 @@ template: post
 thumbnail: '../thumbnails/writing.png'
 tags:
   - writing
+canonicalUrl: 'https://medium.com/hackernoon/to-travel-a-tech-conference-and-one-million-views-a-recap-22e135a598c3'
 ---
 
 The year 2019 started for me a bit unusual than the previous ones. I never expected to get so much attraction on my blog posts that are mostly published here. Had only one trip planned, ended up doing two. Did end up attending a tech conference too. Something when I started my career as a developer I hadn’t thought of.
@@ -87,7 +88,5 @@ We all have our own reasons related to the word “Travel”. Mine is to learn n
 Traveling to different places do have a deep impact on me. There are some important things I learned about myself and especially how I want to take the approach in my career and life in general. And other things that are essential to the places I visited or the people I met along the way.
 
 I do have some future plans for traveling. I want to experiment with it this time, and not just take a vacation, but try to stay longer in one place. It might end up being a fulfilled personal goal that you get to hear about at the end of this year.
-
----
 
 [Originally published at Hackernoon](https://medium.com/hackernoon/to-travel-a-tech-conference-and-one-million-views-a-recap-22e135a598c3)

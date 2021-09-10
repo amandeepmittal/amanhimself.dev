@@ -7,6 +7,7 @@ thumbnail: '../thumbnails/expo.png'
 tags:
   - expo
   - react-native
+canonicalUrl: 'https://medium.com/react-native-training/accessing-geo-location-and-app-permissions-in-react-native-and-expo-e7a1bd4714a2'
 ---
 
 ![cover_image](https://i.imgur.com/jEjHKCI.jpg)
@@ -152,7 +153,5 @@ _You can find the complete code in this Github repository._ 👇
 If you want to learn more about working with Geolocation API in a React Native application, please go through the [**official documentation**](https://facebook.github.io/react-native/docs/geolocation)**.**
 
 [**Expo’s Documentation**](https://docs.expo.io/versions/latest/sdk/permissions#__next) has a lot more on **Permissions** too.
-
----
 
 [Originally published at React Native Training](https://medium.com/react-native-training/accessing-geo-location-and-app-permissions-in-react-native-and-expo-e7a1bd4714a2)

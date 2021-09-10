@@ -6,6 +6,7 @@ thumbnail: '../thumbnails/ionic.png'
 slug: 'blog/passing-data-between-pages-in-an-ionic-application'
 tags:
   - ionic
+canonicalUrl: 'https://medium.com/hackernoon/passing-data-between-pages-in-an-ionic-application-129b387c93b8'
 ---
 
 ![cover_image](https://miro.medium.com/max/2400/0*aysgAriQg5itBTeo.jpg)
@@ -174,7 +175,5 @@ When nothing entered in the input field, a default text passed and displayed:
 ![](https://cdn-images-1.medium.com/max/800/0*5lhp42R9R5pQVjSi.png)
 
 _To get the full code of this demo app, you can visit_ [**this Github Repository**](https://github.com/amandeepmittal/ionic-pass-data-pages).
-
----
 
 [Originally Published at Hackernoon.com](https://medium.com/hackernoon/passing-data-between-pages-in-an-ionic-application-129b387c93b8)

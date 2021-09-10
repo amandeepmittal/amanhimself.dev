@@ -6,6 +6,7 @@ template: post
 thumbnail: '../thumbnails/react.png'
 tags:
   - react-native
+canonicalUrl: 'https://medium.com/hackernoon/my-top-tutorials-in-web-development-and-react-native-in-2018-627da9e0481f'
 ---
 
 When the year 2018 started I wasn’t sure where am I headed to. I had recently started freelancing as a developer, paying bills for myself was my highest priority after leaving traditional 9 to 6(and the countless number of hours spent on commuting). One thing I had realised previously was that an expression of freedom was loving the work you do at your terms. There is no linear virgule to the path of success and financial independency.

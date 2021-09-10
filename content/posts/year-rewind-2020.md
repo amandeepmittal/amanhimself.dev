@@ -6,6 +6,7 @@ slug: 'blog/year-rewind-2020'
 thumbnail: '../thumbnails/writing.png'
 tags:
   - writing
+canonicalUrl: 'https://amanhimself.dev/blog/year-rewind-2020/'
 ---
 
 ![cover](https://i.imgur.com/Qfd1K4M.png)

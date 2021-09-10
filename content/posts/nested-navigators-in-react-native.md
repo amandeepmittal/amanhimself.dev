@@ -7,6 +7,7 @@ template: post
 tags:
   - expo
   - react-native
+canonicalUrl: 'https://heartbeat.fritz.ai/nesting-tab-and-stack-navigators-in-react-native-and-expo-apps-cc118a141e70'
 ---
 
 Using [`react-navigation`](https://reactnavigation.org/docs/en/getting-started.html) you can definitely nest different types of navigators. The term nesting navigators mean that rendering one navigator inside a screen of another navigator.
@@ -316,7 +317,5 @@ In this tutorial, we discuss only one scenario of nesting navigators. The main o
 Here is the link to the complete Tab Navigator API [here](https://reactnavigation.org/docs/en/bottom-tab-navigator.html) I'd recommend you to check.
 
 You can find the complete code for this tutorial at this [GitHub repo](https://github.com/amandeepmittal/react-native-examples/tree/master/reactnav5-tab-navigator).
-
----
 
 Originally published at [Heartbeat.fritz.ai](https://heartbeat.fritz.ai/nesting-tab-and-stack-navigators-in-react-native-and-expo-apps-cc118a141e70)

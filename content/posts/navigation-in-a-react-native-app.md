@@ -6,6 +6,7 @@ thumbnail: '../thumbnails/react.png'
 template: post
 tags:
   - react-native
+canonicalUrl: 'https://medium.com/hackernoon/navigation-in-a-react-native-app-cf61ed85e80b'
 ---
 
 Navigation plays an important role in mobile applications. Without navigation, there will be little use of an application. In this tutorial, we are going to learn how to implement Navigation in a React Native application from scratch. If you are familiar with web, or Reactjs as library, overall concept of navigation is same. It is used to navigate to different pages or screens (in our case). However, the implementation of a navigation library here is different from the web.
@@ -292,7 +293,5 @@ export default createBottomTabNavigator(
 ### Conclusion
 
 It might take a while to grasp them and use them for your application but once you get the whole of the basic concept, you can do wonders with it. You can even integrate Stack and Tab Navigators for complex scenarios. [react-navigation](https://reactnavigation.org/docs/en/getting-started.html) has a good documentation.
-
----
 
 [Originally published at Hackernoon.com](https://medium.com/hackernoon/navigation-in-a-react-native-app-cf61ed85e80b)

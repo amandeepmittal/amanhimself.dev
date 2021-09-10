@@ -8,6 +8,7 @@ tags:
   - expo
   - firebase
   - react-native
+canonicalUrl: 'https://amanhimself.dev/blog/context-api-react-native-firebase'
 ---
 
 ![cover](https://i.imgur.com/tEzuwkP.png)
@@ -178,11 +179,12 @@ export const FirebaseConsumer = FirebaseContext.Consumer;
 Lastly, let us declare an HoC (_High Order Component_) to generalize this Firebase Context. An HoC in React is a function that takes a component and returns another component. What this HoC will do is instead of importing and using `Firebase.Consumer` in every component necessary, all there is to be done is just pass the component as the argument to the following HoC.
 
 ```js
-export const withFirebaseHOC = Component => props => (
-  <FirebaseConsumer>
-    {state => <Component {...props} firebase={state} />}
-  </FirebaseConsumer>
-);
+export const withFirebaseHOC = Component => props =>
+  (
+    <FirebaseConsumer>
+      {state => <Component {...props} firebase={state} />}
+    </FirebaseConsumer>
+  );
 ```
 
 You will understand with more clarity in the next section when modifying the existing `Login` and `Signup` component with this HoC. Now, create a new file `index.js` to export both the `Firebase` object from the `firebase.js` file, the provider and the HoC.

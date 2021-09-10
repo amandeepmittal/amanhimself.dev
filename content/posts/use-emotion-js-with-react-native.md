@@ -7,6 +7,7 @@ template: post
 tags:
   - expo
   - react-native
+canonicalUrl: 'https://heartbeat.fritz.ai/how-to-use-emotion-js-with-react-native-fccac9c78779'
 ---
 
 Styling is an important aspect of any mobile application. You cannot put enough emphasis on how important it is for a mobile app to have a pleasing design and good use of colors for the app users to use it in the long term.
@@ -641,7 +642,5 @@ On rendering the final result, it looks like below.
 ## Conclusion
 
 You have completed the tutorial for creating UIs with Emotion-JS and integrate it into a React Native and Expo application. Now go ahead and create those beautiful UIs for your applications.
-
----
 
 [Originally published at Heartbeat](https://heartbeat.fritz.ai/how-to-use-emotion-js-with-react-native-fccac9c78779)

@@ -6,6 +6,7 @@ slug: 'blog/google-vision-api-firebase-react-native'
 thumbnail: '../thumbnails/react.png'
 tags:
   - react-native
+canonicalUrl: 'https://blog.jscrambler.com/create-a-react-native-image-recognition-app-with-google-vision-api/'
 ---
 
 ![cover](https://i.imgur.com/UIZsVjh.jpg)
@@ -201,10 +202,10 @@ export default class App extends React.Component {
           <View style={styles.helpContainer}>
             <Button
               onPress={this._pickImage}
-              title='Pick an image from camera roll'
+              title="Pick an image from camera roll"
             />
 
-            <Button onPress={this._takePhoto} title='Take a photo' />
+            <Button onPress={this._takePhoto} title="Take a photo" />
             {this.state.googleResponse && (
               <FlatList
                 data={this.state.googleResponse.responses[0].labelAnnotations}
@@ -244,7 +245,7 @@ export default class App extends React.Component {
             }
           ]}
         >
-          <ActivityIndicator color='#fff' animating size='large' />
+          <ActivityIndicator color="#fff" animating size="large" />
         </View>
       );
     }
@@ -268,7 +269,7 @@ export default class App extends React.Component {
         <Button
           style={{ marginBottom: 10 }}
           onPress={() => this.submitToGoogle()}
-          title='Analyze!'
+          title="Analyze!"
         />
 
         <View
@@ -516,7 +517,7 @@ The `Button` in our `App component` publishes the image to Google's Cloud Vision
 <Button
   style={{ marginBottom: 10 }}
   onPress={() => this.submitToGoogle()}
-  title='Analyze!'
+  title="Analyze!"
 />
 ```
 
@@ -635,7 +636,5 @@ If you have a real device, just download the Expo client, scan the QR code and t
 In this tutorial, we’ve shown you how to integrate Firebase storage services and use a machine learning API such as Google's Vision API with a React Native and Expo application.
 
 You can find the complete code inside [this Github repo](https://github.com/amandeepmittal/google-vision-rn-demo).
-
----
 
 [Originally published at Jscrambler](https://blog.jscrambler.com/create-a-react-native-image-recognition-app-with-google-vision-api/)

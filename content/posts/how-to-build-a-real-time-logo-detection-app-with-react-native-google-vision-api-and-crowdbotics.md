@@ -6,6 +6,7 @@ template: post
 thumbnail: '../thumbnails/react.png'
 tags:
   - react-native
+canonicalUrl: 'https://medium.com/crowdbotics/how-to-build-a-real-time-logo-detection-app-with-react-native-google-vision-api-and-crowdbotics-9ed65fbcd15'
 ---
 
 ![cover](https://i.imgur.com/bkKrNW9.jpg)
@@ -358,7 +359,7 @@ After the image has either been selected from the file system or clicked from th
 <Button
   style={{ marginBottom: 10 }}
   onPress={() => this.submitToGoogle()}
-  title='Analyze!'
+  title="Analyze!"
 />
 ```
 
@@ -469,7 +470,5 @@ I hope you enjoyed this tutorial. Let me know if you have any questions.
 You can find the complete code in the **Github repository** below.
 
 [**crowdbotics-apps/rngooglevisionapi-1400**](https://github.com/crowdbotics-apps/rngooglevisionapi-1400)
-
----
 
 [Originally published at Crowdbotics](https://medium.com/crowdbotics/how-to-build-a-real-time-logo-detection-app-with-react-native-google-vision-api-and-crowdbotics-9ed65fbcd15)

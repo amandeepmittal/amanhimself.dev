@@ -7,6 +7,7 @@ template: post
 tags:
   - expo
   - react-native
+canonicalUrl: 'https://heartbeat.fritz.ai/user-authentication-with-amplify-in-a-react-native-and-expo-app-d00cdaf1ac28'
 ---
 
 AWS Amplify is a fantastic framework that helps you develop your web or mobile applications quickly. Not only it enhances your current tech stack but actually has many features in-built that you don't have to worry about especially when your app is in the development process.
@@ -277,7 +278,5 @@ Notice how the sign-out button is appearing at top right corner next to the user
 You have now successfully to add an authentication flow with Amplify and use it in a React Native app. Try using the federation or social login flow and gather the similarities or differences between the two.
 
 You can find the complete code for this post in this [Github repository](https://github.com/amandeepmittal/expo-amplify-demo).
-
----
 
 [Originally published at Heartbeat](https://heartbeat.fritz.ai/user-authentication-with-amplify-in-a-react-native-and-expo-app-d00cdaf1ac28)

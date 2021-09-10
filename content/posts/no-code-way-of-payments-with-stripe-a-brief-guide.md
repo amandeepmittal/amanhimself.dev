@@ -6,6 +6,7 @@ template: post
 thumbnail: '../thumbnails/stripe.png'
 tags:
   - no-code
+canonicalUrl: 'https://amanhimself.dev/blog/no-code-way-of-payments-with-stripe-a-brief-guide/'
 ---
 
 ![cover_image](https://hackernoon.com/_next/image?url=https%3A%2F%2Fcdn.hackernoon.com%2Fimages%2FoBJp5NI1CqWkTYoCtrcit0KrDza2-lc3035ge.jpeg&w=3840&q=75)
@@ -13,7 +14,6 @@ tags:
 > Cover image credit: [Prayer X](https://unsplash.com/@x_prayer?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/galaxy?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 
 Stripe launched a new way to accept payments via [Payment Links](https://stripe.com/en-sg/payments/payment-links) recently. It's a big deal for many use-cases. I got to know about it after trying to figure out how to support payments for offline goods and services in an Expo app using [managed workflow](https://docs.expo.io/introduction/managed-vs-bare/?ref=hackernoon.com#managed-workflow). Yes, that's a niche use case. But Stripe's no-code way to enable payments in an app goes beyond that.
-
 
 Disclaimer: This article is not a take on code. I love to code. It's an appreciation post on how integration utilities like Stripe Payment Links come in handy far beyond code.
 
@@ -23,7 +23,7 @@ Disclaimer: This article is not a take on code. I love to code. It's an apprecia
 
 Accepting payments using a payment provider like Stripe includes a three-step process:
 
-- A server or serverless functions to handle logic, create tokens and secret keys. 
+- A server or serverless functions to handle logic, create tokens and secret keys.
 - UI for customers to enter their details when purchasing a product.
 - Tracking each transaction using [PaymentIntent](https://stripe.com/docs/payments/payment-intents).
 

@@ -7,6 +7,7 @@ thumbnail: '../thumbnails/react.png'
 tags:
   - react-native
   - firebase
+canonicalUrl: 'https://heartbeat.fritz.ai/chat-app-with-react-native-part-4-create-chat-ui-screens-with-react-native-gifted-chat-7ef428a60d30'
 ---
 
 ![cover](https://i.imgur.com/ROYjoYo.jpg)
@@ -590,7 +591,5 @@ You can find the complete source code for this project at [this Github repo](htt
 ## Further Reading
 
 - [React - Separation of Concerns by Andrei Calazans](https://www.g2i.co/blog/react-separation-of-concerns)
-
----
 
 [Originally Published at Heartbeat.Fritz.ai](https://heartbeat.fritz.ai/chat-app-with-react-native-part-4-create-chat-ui-screens-with-react-native-gifted-chat-7ef428a60d30)

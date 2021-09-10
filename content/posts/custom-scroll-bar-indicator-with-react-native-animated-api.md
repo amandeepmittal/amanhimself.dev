@@ -7,6 +7,7 @@ thumbnail: '../thumbnails/expo.png'
 tags:
   - expo
   - react-native
+canonicalUrl: 'https://amanhimself.dev/blog/custom-scroll-bar-indicator-with-react-native-animated-api/'
 ---
 
 > Updated on: August 4, 2021

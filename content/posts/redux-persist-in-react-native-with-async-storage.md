@@ -8,6 +8,7 @@ tags:
   - react-native
   - expo
   - redux
+canonicalUrl: 'https://blog.jscrambler.com/how-to-use-redux-persist-in-react-native-with-asyncstorage/'
 ---
 
 ![cover_image](https://blog.jscrambler.com/content/images/2021/01/jscrambler-blog-redux-persist-in-react-native.jpg)
@@ -167,14 +168,14 @@ const RootNavigator = () => {
   return (
     <NavigationContainer>
       <Tab.Navigator
-        initialRouteName='BooksList'
+        initialRouteName="BooksList"
         tabBarOptions={tabBarOptions}
         screenOptions={({ route }) => ({
           tabBarIcon: ({ color }) => screenOptions(route, color)
         })}
       >
-        <Tab.Screen name='BooksList' component={BooksList} />
-        <Tab.Screen name='BookmarksList' component={BookmarksList} />
+        <Tab.Screen name="BooksList" component={BooksList} />
+        <Tab.Screen name="BookmarksList" component={BookmarksList} />
       </Tab.Navigator>
     </NavigationContainer>
   );
@@ -405,7 +406,7 @@ const renderItem = ({ item }) => {
         {/* Book Cover */}
         <Image
           source={{ uri: item.image_url }}
-          resizeMode='cover'
+          resizeMode="cover"
           style={{ width: 100, height: 150, borderRadius: 10 }}
         />
         {/* Book Metadata */}
@@ -425,16 +426,16 @@ const renderItem = ({ item }) => {
             }}
           >
             <MaterialCommunityIcons
-              color='#64676D'
-              name='book-open-page-variant'
+              color="#64676D"
+              name="book-open-page-variant"
               size={20}
             />
             <Text style={{ fontSize: 14, paddingLeft: 10, color: '#64676D' }}>
               {item.num_pages}
             </Text>
             <MaterialCommunityIcons
-              color='#64676D'
-              name='star'
+              color="#64676D"
+              name="star"
               size={20}
               style={{ paddingLeft: 16 }}
             />
@@ -459,9 +460,9 @@ const renderItem = ({ item }) => {
               }}
             >
               <MaterialCommunityIcons
-                color='#64676D'
+                color="#64676D"
                 size={24}
-                name='bookmark-outline'
+                name="bookmark-outline"
               />
             </TouchableOpacity>
           </View>
@@ -710,7 +711,7 @@ export default function BookmarksList() {
           {/* Book Cover */}
           <Image
             source={{ uri: item.image_url }}
-            resizeMode='cover'
+            resizeMode="cover"
             style={{ width: 100, height: 150, borderRadius: 10 }}
           />
           {/* Book Metadata */}
@@ -730,16 +731,16 @@ export default function BookmarksList() {
               }}
             >
               <MaterialCommunityIcons
-                color='#64676D'
-                name='book-open-page-variant'
+                color="#64676D"
+                name="book-open-page-variant"
                 size={20}
               />
               <Text style={{ fontSize: 14, paddingLeft: 10, color: '#64676D' }}>
                 {item.num_pages}
               </Text>
               <MaterialCommunityIcons
-                color='#64676D'
-                name='star'
+                color="#64676D"
+                name="star"
                 size={20}
                 style={{ paddingLeft: 16 }}
               />
@@ -764,9 +765,9 @@ export default function BookmarksList() {
                 }}
               >
                 <MaterialCommunityIcons
-                  color='#64676D'
+                  color="#64676D"
                   size={24}
-                  name='bookmark-remove'
+                  name="bookmark-remove"
                 />
               </TouchableOpacity>
             </View>
@@ -816,6 +817,4 @@ And that's it! I hope you have found this tutorial helpful.
 
 - [Deep Dive Into React - Separation of Concerns by Andrei Calazans](https://www.g2i.co/blog/react-separation-of-concerns)
 
----
-
-> Originally published at [Jscrambler.com](https://blog.jscrambler.com/how-to-use-redux-persist-in-react-native-with-asyncstorage/)
+_Originally published at [Jscrambler.com](https://blog.jscrambler.com/how-to-use-redux-persist-in-react-native-with-asyncstorage/)_

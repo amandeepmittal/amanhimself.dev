@@ -6,6 +6,7 @@ thumbnail: '../thumbnails/gatsby.png'
 template: post
 tags:
   - gatsby
+canonicalUrl: 'https://medium.com/free-code-camp/setting-up-and-getting-used-to-gatsby-1fc27985ae8a'
 ---
 
 [Gatsby](https://www.gatsbyjs.org/) is a static site generator for React that released its first major version last month. It’s a tool that not only scaffolds projects (or websites) for you but claims that those sites are fast in performance. If you decide to use Gatsby you will be enjoying the power of the latest web technologies such as React.js, Webpack, and so on.
@@ -95,7 +96,7 @@ const Header = () => (
     >
       <h1 style={{ margin: 0 }}>
         <Link
-          to='/'
+          to="/"
           style={{
             color: 'white',
             textDecoration: 'none'
@@ -111,7 +112,7 @@ const Header = () => (
 const TemplateWrapper = ({ children }) => (
   <div>
     <Helmet
-      title='My First Gatsby Site'
+      title="My First Gatsby Site"
       meta={[
         { name: 'author', content: 'amanhimself' },
         { name: 'keywords', content: 'sample, something' }
@@ -157,7 +158,7 @@ const IndexPage = () => (
     <h1>Hi people</h1>
     <p>Welcome to your new Gatsby site.</p>
     <p>Now go build something great.</p>
-    <Link to='/page-2/'>Go to page 2</Link>
+    <Link to="/page-2/">Go to page 2</Link>
   </div>
 );
 
@@ -180,9 +181,9 @@ const ThirdPage = () => (
   <div>
     <h1>Third Page</h1>
     <p>This is my first Gtasby site</p>
-    <Link to='/page-2/'>Back to Page 2</Link>
+    <Link to="/page-2/">Back to Page 2</Link>
     <br />
-    <Link to='/'>Go back to the homepage</Link>
+    <Link to="/">Go back to the homepage</Link>
   </div>
 );
 
@@ -200,9 +201,9 @@ const IndexPage = () => (
     <h1>Hi people</h1>
     <p>Welcome to your new Gatsby site.</p>
     <p>Now go build something great.</p>
-    <Link to='/page-2/'>Go to page 2</Link>
+    <Link to="/page-2/">Go to page 2</Link>
     <br />
-    <Link to='/page-3'>New Page!</Link>
+    <Link to="/page-3">New Page!</Link>
   </div>
 );
 
@@ -236,7 +237,7 @@ const Header = () => (
     >
       <h1 style={{ margin: 0 }}>
         <Link
-          to='/'
+          to="/"
           style={{
             color: 'white',
             textDecoration: 'none'
@@ -252,7 +253,7 @@ const Header = () => (
                 textDecoration: 'none',
                 fontSize: 'x-large'
               }}
-              to='/'
+              to="/"
             >
               Home
             </Link>
@@ -264,7 +265,7 @@ const Header = () => (
                 textDecoration: 'none',
                 fontSize: 'x-large'
               }}
-              to='/page-2'
+              to="/page-2"
             >
               Page 2
             </Link>
@@ -276,7 +277,7 @@ const Header = () => (
                 textDecoration: 'none',
                 fontSize: 'x-large'
               }}
-              to='/page-3'
+              to="/page-3"
             >
               Page 3
             </Link>
@@ -348,7 +349,5 @@ npm run deploy
 **Great!** Your site is now live on `[https://username.github.io/project-name/](https://username.github.io/project-name/.)`[.](https://username.github.io/project-name/.)
 
 You can find the complete code of this project at this [GitHub Repo](https://github.com/amandeepmittal/first-gatsby-site)
-
----
 
 [Originally Published at freeCodeCamp.com](https://medium.com/free-code-camp/setting-up-and-getting-used-to-gatsby-1fc27985ae8a)

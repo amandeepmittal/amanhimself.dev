@@ -5,7 +5,8 @@ date: 2018-11-21
 thumbnail: '../thumbnails/gatsby.png'
 template: post
 tags:
-  - gatsby
+  -
+canonicalUrl: 'https://medium.com/crowdbotics/how-to-build-your-own-blog-from-scratch-with-gatsbyjs-graphql-react-and-markdown-78352c367bd1'
 ---
 
 There are lots of quick and easy, no-code ways to get blog up and running — such as [Medium](https://blog.crowdbotics.com/should-you-use-medium-as-your-business-blog-platform-2019-update/) or Wordpress — but, whether it’s to customize, monetize, add security, or just learn, today, I’ll show you how to code your own blog from scratch.
@@ -166,13 +167,13 @@ const Template = ({ data }) => {
   return (
     <div>
       <h1>{title}</h1>
-      <div className='blogpost' dangerouslySetInnerHTML={{ __html: html }} />
+      <div className="blogpost" dangerouslySetInnerHTML={{ __html: html }} />
     </div>
   );
 };
 
 export const postQuery = graphql`
-  query($pathSlug: String!) {
+  query ($pathSlug: String!) {
     markdownRemark(frontmatter: { path: { eq: $pathSlug } }) {
       html
       frontmatter {
@@ -273,7 +274,7 @@ const Template = ({ data }) => {
         <em>{date}</em>
       </div>
       <br />
-      <div className='blogpost' dangerouslySetInnerHTML={{ __html: html }} />
+      <div className="blogpost" dangerouslySetInnerHTML={{ __html: html }} />
     </div>
   );
 };
@@ -304,12 +305,12 @@ const Template = ({ data, pathContext }) => {
         <em>{date}</em>
       </div>
       <br />
-      <div className='blogpost' dangerouslySetInnerHTML={{ __html: html }} />
+      <div className="blogpost" dangerouslySetInnerHTML={{ __html: html }} />
       <p>
         {prev && (
           <Link to={prev.frontmatter.path}>
             {prev.frontmatter.title}{' '}
-            <span role='img' aria-label='point-left'>
+            <span role="img" aria-label="point-left">
               👈{' '}
             </span>
             Previous
@@ -320,7 +321,7 @@ const Template = ({ data, pathContext }) => {
         {next && (
           <Link to={next.frontmatter.path}>
             Next{' '}
-            <span role='img' aria-label='point-right'>
+            <span role="img" aria-label="point-right">
               👉
             </span>
             {next.frontmatter.title}
@@ -428,7 +429,5 @@ We now have a functioning blog!
 I challenge you to expand your own blog further by adding comments or tags functionalities. Gatsby has a lot to offer. You learn more about Gatsby at their [official documentation](https://www.gatsbyjs.org/).
 
 **The complete code for the tutorial at [this Github repository](https://github.com/amandeepmittal/gatsby-blog-starter)**
-
----
 
 [Originally published at Crowdbotics](https://medium.com/crowdbotics/how-to-build-your-own-blog-from-scratch-with-gatsbyjs-graphql-react-and-markdown-78352c367bd1)

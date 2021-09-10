@@ -7,6 +7,7 @@ thumbnail: '../thumbnails/expo.png'
 tags:
   - expo
   - react-native
+canonicalUrl: 'https://amanhimself.dev/blog/react-navigation-remove-tab-bar-border/'
 ---
 
 ![cover_image](https://i.imgur.com/Tu5dv1l.png)

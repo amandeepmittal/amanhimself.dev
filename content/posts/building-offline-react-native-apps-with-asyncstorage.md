@@ -7,6 +7,7 @@ thumbnail: '../thumbnails/expo.png'
 tags:
   - expo
   - react-native
+canonicalUrl: 'https://heartbeat.fritz.ai/building-offline-react-native-apps-with-asyncstorage-dcb4b0657f93'
 ---
 
 ![cover](https://i.imgur.com/5eoYxcI.png)
@@ -1088,7 +1089,5 @@ You will get the following result.
 ## Conclusion
 
 _Congratulations!_ You have just learned how to build an offline mobile application using latest tech stack and libraries like React Native, Expo, and Native Base component UI. You have learned many key points in this tutorial, and I hope you enjoyed following it, and reading it. Use the knowledge you have gained in this tutorial in a realtime application and show it to your peers. The possibilities to enhance this application or the use the knowledge is endless.
-
----
 
 [Originally published at Heartbeat](https://heartbeat.fritz.ai/building-offline-react-native-apps-with-asyncstorage-dcb4b0657f93)

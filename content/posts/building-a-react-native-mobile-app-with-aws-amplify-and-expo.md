@@ -7,6 +7,7 @@ thumbnail: '../thumbnails/expo.png'
 tags:
   - expo
   - react-native
+canonicalUrl: 'https://heartbeat.fritz.ai/building-a-react-native-mobile-app-with-aws-amplify-and-expo-fcab6ee0555e'
 ---
 
 ![cover](https://i.imgur.com/G1PqZSM.png)
@@ -472,7 +473,5 @@ On running `npm start` (_or if it is already running, just the save the App.js f
 This tutorial is complete. I am sure by now you have gained enough knowledge to build your own React Native app with AWS Amplify and AppAsync. Also, did you notice the amount of code written inside `App.js`? It is far less than a traditional app that uses self-backend techniques. This bare minimum demo can serve you a lot better.
 
 You can find the complete code for this post in this [Github repository](https://github.com/amandeepmittal/expo-amplify-demo).
-
----
 
 [Originally published at Heartbeat](https://heartbeat.fritz.ai/building-a-react-native-mobile-app-with-aws-amplify-and-expo-fcab6ee0555e)

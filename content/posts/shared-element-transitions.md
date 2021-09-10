@@ -7,6 +7,7 @@ thumbnail: '../thumbnails/expo.png'
 tags:
   - expo
   - react-native
+canonicalUrl: 'https://blog.logrocket.com/how-to-use-shared-element-transition-with-react-navigation-v5/'
 ---
 
 ![cover_image](https://blog.logrocket.com/wp-content/uploads/2021/01/reactnavigationv5.png)
@@ -645,4 +646,4 @@ I hope you had fun reading this tutorial. Sharing elements in between screens in
 
 Source code is available at this [GitHub repo.](https://github.com/amandeepmittal/react-native-examples/tree/master/shared-element-transitions)
 
-> Originally Published at [Logrocket](https://blog.logrocket.com/how-to-use-shared-element-transition-with-react-navigation-v5/)
+_Originally Published at [Logrocket](https://blog.logrocket.com/how-to-use-shared-element-transition-with-react-navigation-v5/)_

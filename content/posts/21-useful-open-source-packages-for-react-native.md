@@ -6,6 +6,7 @@ template: post
 tags:
   - react-native
 thumbnail: '../thumbnails/react.png'
+canonicalUrl: 'https://medium.com/crowdbotics/21-useful-open-source-packages-for-react-native-807f65a818a1'
 ---
 
 ![cover_image](https://i.imgur.com/nbq2XcZ.png)
@@ -247,7 +248,5 @@ Lastly, I leave you with the go to linting library used by almost every JavaScri
 ### Conclusion
 
 There are other libraries that modules available for React Native for different purposes. Expect more in future since mobile development is hard when it comes to accessing to different APIs. Libraries such as _axios_ for network calls and _Apollo Client_ to query [GraphQL APIs](https://medium.com/crowdbotics/creating-a-graphql-server-with-nodejs-ef9814a7e0e6) can also be used with React Native, as they are used with React JS. I didn’t think that they are worth mentioning here in detail. I hope the above list provides you ready made solutions to help you build better React Native applications.
-
----
 
 [Originally published at Crowdbotics](https://medium.com/crowdbotics/21-useful-open-source-packages-for-react-native-807f65a818a1)

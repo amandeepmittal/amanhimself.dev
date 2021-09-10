@@ -6,6 +6,7 @@ slug: 'blog/handle-navigation-in-webviews-react-native'
 thumbnail: '../thumbnails/react.png'
 tags:
   - react-native
+canonicalUrl: 'https://heartbeat.fritz.ai/how-to-handle-navigation-with-webviews-in-a-react-native-app-1ed51ab3342f'
 ---
 
 ![cover](https://i.imgur.com/bqjICSU.png)
@@ -91,7 +92,7 @@ Inside the `App` function component let us render this simple webview component.
 const App = () => {
   return (
     <>
-      <StatusBar barStyle='dark-content' />
+      <StatusBar barStyle="dark-content" />
       <SafeAreaView style={styles.flexContainer}>
         <WebView source={{ uri: 'https://heartbeat.fritz.ai/' }} />
       </SafeAreaView>
@@ -142,8 +143,8 @@ Add both of these props to `WebView` in `App.js`:
   startInLoadingState={true}
   renderLoading={() => (
     <ActivityIndicator
-      color='black'
-      size='large'
+      color="black"
+      size="large"
       style={styles.flexContainer}
     />
   )}
@@ -228,8 +229,8 @@ Add the props `ref` and `onNavigationStateChange` to the `WebView` component. Th
   startInLoadingState={true}
   renderLoading={() => (
     <ActivityIndicator
-      color='black'
-      size='large'
+      color="black"
+      size="large"
       style={styles.flexContainer}
     />
   )}
@@ -292,7 +293,5 @@ WebViews might not be the prominent way to create mobile apps but it does add an
 The `WebView` component has a great API that you can refer [here](https://facebook.github.io/react-native/docs/webview).
 
 You can find the complete code for this tutorial at this [Github repo](https://github.com/amandeepmittal/react-native-examples/tree/master/rnWebViewCustomNav).
-
----
 
 Originally published at [Heartbeat.fritz.ai](https://heartbeat.fritz.ai/how-to-handle-navigation-with-webviews-in-a-react-native-app-1ed51ab3342f)

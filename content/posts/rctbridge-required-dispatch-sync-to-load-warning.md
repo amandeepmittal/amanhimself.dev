@@ -6,6 +6,7 @@ thumbnail: '../thumbnails/react.png'
 template: post
 tags:
   - react-native
+canonicalUrl: 'https://amanhimself.dev/blog/rctbridge-required-dispatch-sync-to-load-warning/'
 ---
 
 The _RCTBridge required dispatch_sync to load RCTDevLoadingView_ has become a common occurence when developing React Native apps with version `0.64` and `0.65`.

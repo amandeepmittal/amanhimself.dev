@@ -6,6 +6,7 @@ thumbnail: '../thumbnails/vscode.png'
 template: post
 tags:
   - tools
+canonicalUrl: 'https://amanhimself.dev/blog/setup-macbook-m1/'
 ---
 
 > Updated on: September 4, 2021

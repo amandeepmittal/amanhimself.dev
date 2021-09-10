@@ -7,6 +7,7 @@ thumbnail: '../thumbnails/node.png'
 tags:
   - nodejs
   - graphql
+canonicalUrl: 'https://blog.crowdbotics.com/build-a-twitter-clone-server-with-apollo-graphql-nodejs-and-crowdbotics/'
 ---
 
 ![cover_image](https://i.imgur.com/Cg4Xsqq.jpg)
@@ -432,7 +433,5 @@ Not only did you learn how to configure and integrate an Express web server with
 Apollo Server is an open source project and is one the most stable solution to create GraphQL APIs for full-stack applications. It also supports client-side out of the box for React, Vue, Angular, Meteor, and Ember as well as Native mobile development with Swift and Java.
 
 You can find the complete code for the tutorial in this **[Github repository](https://github.com/amandeepmittal/twitter-clone-apollo-server)**.
-
----
 
 [Originally published at Crowdbotics](https://blog.crowdbotics.com/build-a-twitter-clone-server-with-apollo-graphql-nodejs-and-crowdbotics/)

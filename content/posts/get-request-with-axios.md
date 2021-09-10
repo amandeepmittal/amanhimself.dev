@@ -6,6 +6,7 @@ thumbnail: '../thumbnails/js.png'
 slug: 'blog/get-request-params-with-axios'
 tags:
   - javascript
+canonicalUrl: 'https://amanhimself.dev/blog/get-request-params-with-axios/'
 ---
 
 One of the popular libraries in JavaScript land to perform HTTP requests is [axios](https://github.com/axios/axios). It is promised based and allows writing code using `async await` syntax.

@@ -6,6 +6,7 @@ template: post
 thumbnail: '../thumbnails/node.png'
 tags:
   - nodejs
+canonicalUrl: 'https://medium.com/crowdbotics/how-to-build-a-serverless-backend-with-aws-lambda-and-nodejs-e0d1257086b4'
 ---
 
 Serverless architecture is a cloud computing execution model where a cloud provider like AWS, Azure or Google Cloud is used to deploy backend or server-side code. In comparison to traditionally deployed web applications, in serverless architecture, the developer does not has to maintain the servers or the infrastructure. They only have to pay a subscription to the third party vendor whereas the vendor is responsible to handle the operation of the backend logic of a server along with scalability, reliability, and security.
@@ -598,7 +599,5 @@ Note", "description": "This is a note."}'
 ```
 
 **The complete code for the tutorial at [this Github repository](https://github.com/amandeepmittal/aws-serverless-demo)**
-
----
 
 [Originally published at Crowdbotics](https://medium.com/crowdbotics/how-to-build-a-serverless-backend-with-aws-lambda-and-nodejs-e0d1257086b4)

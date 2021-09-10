@@ -6,6 +6,7 @@ thumbnail: '../thumbnails/ionic.png'
 slug: 'blog/basic-navigation-in-ionic-applications'
 tags:
   - ionic
+canonicalUrl: 'https://medium.com/hackernoon/https-medium-com-amanhimself-basic-navigation-in-ionic-applications-ecb199cdf15b'
 ---
 
 ![cover_image](https://miro.medium.com/max/1400/0*2UfFX3Dh2lLcloeF.jpg)
@@ -42,7 +43,5 @@ export class HomePage {
 Thus, we can access `NavController` and it's properties such as `push` and `pop` to navigate to a different page or back to the previous page.
 
 Note: _Deeplinking is available in Ionic with URLs but that is altogether a different topic._
-
----
 
 [Originally Published at Hackernoon.com](https://medium.com/hackernoon/https-medium-com-amanhimself-basic-navigation-in-ionic-applications-ecb199cdf15b)

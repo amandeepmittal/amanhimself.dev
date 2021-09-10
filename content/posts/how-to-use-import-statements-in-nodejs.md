@@ -6,6 +6,7 @@ slug: 'blog/how-to-use-import-statements-in-nodejs'
 thumbnail: '../thumbnails/node.png'
 tags:
   - nodejs
+canonicalUrl: 'https://medium.com/better-programming/how-to-use-import-statements-in-nodejs-94c85e23aeb7'
 ---
 
 > **UPDATE:** Up to date version of this post is at [How to use ES6 import syntax in Node.js](https://amanhimself.dev/blog/how-to-use-es6-import-syntax-in-node/).
@@ -154,7 +155,5 @@ Where `nr` is shorthand for `npm run`. You can also visit `http://localhost3000/
 This article has shown you how to create a bare minimum Node server from scratch, and how you can introduce upcoming JavaScript features in your Node.js environment using Babel. I’m sure now you are not going to make the same silly errors like me in _Nodejs_ + _insert a frontend framework/library of your choice_ as I did.
 
 _You can find the complete source code for the above article at_ [**_Github Repo_**](https://github.com/amandeepmittal/node-babel-setup)
-
----
 
 [Originally published at Better Programming](https://medium.com/better-programming/how-to-use-import-statements-in-nodejs-94c85e23aeb7)

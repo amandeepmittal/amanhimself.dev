@@ -7,6 +7,7 @@ thumbnail: '../thumbnails/expo.png'
 tags:
   - expo
   - react-native
+canonicalUrl: 'https://blog.jscrambler.com/how-to-upload-an-image-using-expo-camera-to-cloudinary/'
 ---
 
 ![cover_image](https://blog.jscrambler.com/content/images/2021/03/jscrambler-blog-how-to-upload-an-image-using-expo-camera-to-cloudinary.jpg)
@@ -501,6 +502,4 @@ In this post, we have successfully used Expo Camera to take a picture and then u
 
 The source code is available at this [Github repository](https://github.com/amandeepmittal/react-native-examples/tree/master/camera-upload-to-cloudinary).
 
----
-
-#### Originally Published at **[Jscrambler's Blog](https://blog.jscrambler.com/how-to-upload-an-image-using-expo-camera-to-cloudinary/)**.
+_Originally Published at **[Jscrambler's Blog](https://blog.jscrambler.com/how-to-upload-an-image-using-expo-camera-to-cloudinary/)**._
