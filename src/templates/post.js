@@ -5,7 +5,7 @@ import styled from 'styled-components';
 
 import { Layout, SEO, LinkButton } from '../components';
 import { config, slugify } from '../helpers';
-import { link } from '../styles/partials';
+
 // import banner from '../images/dev-apis-banner.png';
 
 const PostWrapper = styled.article`
@@ -22,12 +22,6 @@ const PostTitleWrapper = styled.div`
       line-height: 1.3;
     }
   }
-  a {
-    color: ${({ theme }) => theme.colors.black};
-    &:hover {
-      color: ${({ theme }) => theme.colors.primary};
-    }
-  }
 `;
 
 const PostMetaWrapper = styled.div`
@@ -41,7 +35,7 @@ const PostMetaWrapper = styled.div`
 const PostBodyWrapper = styled.section`
   margin: 2.25rem 0rem;
   font-size: 1.15rem;
-  ${link}
+
   .twitter-tweet {
     margin: 0 auto;
   }
