@@ -3,7 +3,7 @@ import { graphql } from 'gatsby';
 import styled from 'styled-components';
 import { Helmet } from 'react-helmet';
 
-import { Layout, Hero, SEO, PostInfo, InfoCard } from '../components';
+import { Layout, Hero, SEO, PostInfo, InfoCard, PostCard } from '../components';
 import { config } from '../helpers';
 
 const CenterEverything = styled.div`
@@ -18,18 +18,37 @@ const IndexPage = ({ data }) => {
       <SEO customDescription="Aman Mittal" />
       <Hero />
       <div>
-        <CenterEverything>
-          <h2>
-            <span role="img" aria-label="sparkle emoji">
-              ✨{' '}
-            </span>
-            Latest Articles
+        <span
+          style={{
+            display: 'flex',
+            flexDirection: 'row',
+            alignItems: 'center',
+            justfiyContent: 'space-between'
+          }}
+        >
+          <h2
+            style={{ fontSize: '28px', color: '#6a5acd', paddingRight: '20px' }}
+          >
+            Latest Articles{' '}
           </h2>
-          {posts.map(post => {
-            return <PostInfo post={post} />;
-          })}
-        </CenterEverything>
-        <CenterEverything>
+          <a
+            href="/blog"
+            style={{
+              fontSize: '14px',
+              color: '#6a5acd95',
+              border: '1px solid #6a5acd',
+              padding: '6px',
+              borderRadius: '0.3rem'
+            }}
+          >
+            View All
+          </a>
+        </span>
+        {posts.map(post => {
+          return <PostCard post={post} />;
+        })}
+
+        <div>
           <h2>
             <span role="img" aria-label="compass emoji">
               🧭{' '}
@@ -56,7 +75,8 @@ const IndexPage = ({ data }) => {
             href="https://github.com/freeCodeCamp/100DaysOfCode-twitter-bot"
             githubIcon
           />
-        </CenterEverything>
+        </div>
+
         {/* <CenterEverything>
           <h2>
             <span role="img" aria-label="speech bubble emoji">

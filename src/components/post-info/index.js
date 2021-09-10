@@ -20,24 +20,28 @@ const GridDiv = styled.div`
 `;
 
 const card = css`
-  width: 80%;
+  width: 100%;
   margin-bottom: 1rem;
   display: inline-block;
-  background: ${({ theme }) => theme.colors.white};
-  color: ${({ theme }) => theme.colors.black};
+  ${'' /* background: ${({ theme }) => theme.colors.white}; */}
+  ${'' /* color: ${({ theme }) => theme.colors.black}; */}
   padding: 0.5rem 0.75rem;
-  border-radius: 0.3rem;
-  transition: all 300ms;
-  border: 2px solid ${({ theme }) => theme.colors.black};
-  box-shadow: 3px 3px 0 ${({ theme }) => theme.colors.black} !important;
+  ${'' /* border-radius: 0.3rem; */}
+  ${'' /* transition: all 300ms; */}
+  ${'' /* border: 2px solid ${({ theme }) => theme.colors.black}; */}
+  ${
+    '' /* box-shadow: 3px 3px 0 ${({ theme }) => theme.colors.black} !important; */
+  }
 
   &.reverse {
     box-shadow: -3px 3px 0 ${({ theme }) => theme.colors.black} !important;
   }
   &:hover {
     color: inherit;
-    border: 2px solid ${({ theme }) => theme.colors.primary};
-    box-shadow: 0 5px 0 ${({ theme }) => theme.colors.primary} !important;
+    ${
+      '' /* border: 2px solid ${({ theme }) => theme.colors.primary};
+    box-shadow: 0 5px 0 ${({ theme }) => theme.colors.primary} !important; */
+    }
   }
   &.disabled {
     cursor: default;

@@ -3,11 +3,11 @@ import { graphql, Link } from 'gatsby';
 import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
 
-import { Layout, SEO, PostInfo } from '../components';
+import { Layout, SEO, PostInfo, PostCard } from '../components';
 import { config, slugify } from '../helpers';
 
 const Wrapper = styled.div`
-  text-align: center;
+  /* text-align: center; */
   input {
     width: 75%;
     margin-block-end: 2.25rem;
@@ -113,7 +113,7 @@ const BlogPage = ({ data }) => {
           })}
         </AllTagsWrapper>
         {posts.map(post => {
-          return <PostInfo post={post} />;
+          return <PostCard post={post} />;
         })}
       </Wrapper>
     </Layout>

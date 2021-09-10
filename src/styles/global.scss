@@ -123,6 +123,7 @@ img {
   margin: 0rem auto;
   border-radius: 0.3rem;
 }
+
 blockquote {
   border-left: 3px solid #6a5acd;
   font-style: inherit;
@@ -130,11 +131,19 @@ blockquote {
   margin: 0.5rem;
   padding: 0.55rem;
   border-radius: 0.2rem;
+
   p {
     color: #fff;
     font-weight: 600;
   }
+
+  a {
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+  }
 }
+
 ul {
   color: rgba(0, 0, 0, 0.8);
 }

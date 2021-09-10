@@ -70,7 +70,7 @@ const Hero = () => {
               rel="noopener noreferrer"
               aria-label="Twitter profile"
               className="twitter-follow-button"
-              data-size="large"
+              // data-size="large"
             >
               Twitter
             </a>
