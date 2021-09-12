@@ -9,7 +9,7 @@ tags:
 canonicalUrl: 'https://amanhimself.dev/blog/setup-macbook-m1/'
 ---
 
-> Updated on: September 4, 2021
+> 🕑 Updated on: September 4, 2021
 
 ![cover_image](https://i.imgur.com/tAJjTOU.png)
 
@@ -85,7 +85,7 @@ My local environment currently includes:
 - Dock:
   - Turn auto hiding on
 
-> Copy [dotfiles](https://github.com/amandeepmittal/dotfiles)
+> Copy [dotfiles](https://github.com/amandeepmittal/dotfiles).
 
 ## iTerm
 
