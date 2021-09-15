@@ -31,7 +31,7 @@ To follow this tutorial, please make sure you are familiarized with JavaScript/E
 
 After initializing a React Native project, make sure to install the external libraries to follow along with this tutorial. Navigate inside the project directory, and then run the following command install the following libraries:
 
-```sh
+```shell
 yarn add react-i18next i18next @react-navigation/native @react-navigation/bottom-tabs @react-native-async-storage/async-storage react-native-vector-icons react-native-screens react-native-safe-area-context react-native-reanimated react-native-localize react-native-gesture-handler
 
 # after this step, for iOS, install pods
