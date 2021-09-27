@@ -16,7 +16,7 @@ const Hero = () => {
           </h1>
           <p className={styles.subtitle}>
             I'm a <strong>software developer</strong> and a{' '}
-            <strong>technical writer</strong>.Currently working as Developer
+            <strong>technical writer</strong>. Currently working as Developer
             Advocate{' '}
             <span role="img" aria-label="avocado emoji">
               🥑{' '}
