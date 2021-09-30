@@ -270,6 +270,11 @@ pre[class*='language-xml']:before {
   background: #57cc99;
   color: white;
 }
+pre[class*='language-java']:before {
+  content: 'java';
+  background: #3d56b2;
+  color: white;
+}
 pre[class*='language-svg']:before {
   content: 'svg';
   background: #610094;
