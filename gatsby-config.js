@@ -115,7 +115,7 @@ module.exports = {
         description: 'Software engineer and technical writer.',
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#c792ea`,
+        theme_color: `#6a5acd`,
         display: `minimal-ui`,
         icon: `src/images/avatar.jpg` // This path is relative to the root of the site.
       }
