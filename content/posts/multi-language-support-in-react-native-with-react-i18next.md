@@ -11,6 +11,8 @@ canonicalUrl: 'https://blog.crowdbotics.com/how-to-offer-multi-language-support-
 
 ![cover_image](https://blog.crowdbotics.com/content/images/2021/08/React-Native--1-.png)
 
+_[Originally Published at Crowdbotics.com](https://blog.crowdbotics.com/how-to-offer-multi-language-support-in-a-react-native-app/)_
+
 Internationalization is an important feature to overcome the language barrier among people who use a particular software application. Not every app requires us to consider a global customer base. But if you have plans to include support for international users in your app, you’ll need internationalization in your React Native app.
 
 [i18next](https://www.i18next.com/) is an internationalization framework written in JavaScript and provides methods for localizing the app and implement the other standard i18n features.
@@ -531,5 +533,3 @@ Please don't mind my translation for French text corresponding to English text. 
 
 - [useTranslation Hook](https://react.i18next.com/latest/usetranslation-hook)
 - [**You can find the complete source code at GitHub**](https://github.com/amandeepmittal/react-native-examples/tree/master/rnMultiLanguageExample)
-
-[Originally Published at Crowdbotics.com](https://blog.crowdbotics.com/how-to-offer-multi-language-support-in-a-react-native-app/)
