@@ -84,10 +84,10 @@ const PostTemplate = ({ data, pageContext }) => {
             </p>
             <p className="heroButtons">
               <a
-                href="https://amanhimself.substack.com/subscribe"
+                href="https://www.getrevue.co/profile/amanhimself"
                 className="button"
                 rel="noopener noreferrer"
-                aria-label="Substack Newsletter page redirect"
+                aria-label="Revue Newsletter page redirect"
               >
                 Subscribe on Substack
               </a>

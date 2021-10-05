@@ -9,8 +9,6 @@ const links = [
   { name: 'Blog', path: '/blog' },
   { name: 'About', path: '/about' },
   { name: 'Speaking', path: '/speaking' }
-  // TODO: Remove Newsletter from navbar
-  // { name: 'Newsletter', path: 'https://amanhimself.substack.com/' }
 ];
 
 const Header = () => {

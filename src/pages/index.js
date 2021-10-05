@@ -131,7 +131,7 @@ const IndexPage = ({ data }) => {
               <li>Code Syntax Theme: fairyFloss, Morgan.codes</li>
               <li>Terminal: iTerm with ZSH shell</li>
               <li>Manage Blog posts pipeline: Notion</li>
-              <li>Newsletter: Substack (free)</li>
+              <li>Newsletter: Revue (free)</li>
             </ul>
           </div>
         </CenterEverything>

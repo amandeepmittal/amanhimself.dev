@@ -4,7 +4,7 @@ const config = {
   description: 'Software engineer and technical content writer.',
   username: 'Aman Mittal',
   shortname: '@amanhimself',
-  newsletter: 'https://amanhimself.substack.com/',
+  newsletter: 'https://www.getrevue.co/profile/amanhimself',
   github: 'https://github.com/amandeepmittal',
   twitter: 'https://twitter.com/amanhimself',
   medium: 'https://medium.com/@amanhimself',
