@@ -89,7 +89,7 @@ const PostTemplate = ({ data, pageContext }) => {
                 rel="noopener noreferrer"
                 aria-label="Revue Newsletter page redirect"
               >
-                Subscribe on Substack
+                Subscribe on Revue
               </a>
             </p>
           </div>
