@@ -50,10 +50,10 @@ const Hero = () => {
           </p>
           <p className={styles.heroButtons}>
             <a
-              href="https://amanhimself.substack.com/subscribe"
+              href="https://www.getrevue.co/profile/amanhimself"
               className={styles.button}
               rel="noopener noreferrer"
-              aria-label="Substack Newsletter page redirect"
+              aria-label="Revue Newsletter page redirect"
             >
               Newsletter
             </a>
