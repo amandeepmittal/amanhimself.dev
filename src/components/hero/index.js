@@ -44,7 +44,7 @@ const Hero = () => {
               rel="noopener noreferrer"
               aria-label="About me page"
             >
-              150 articles for more than 20 publications
+              150 articles for more than 25 publications
             </a>{' '}
             and organizations across the internet.
           </p>
