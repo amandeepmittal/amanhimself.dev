@@ -16,7 +16,7 @@ const config = {
   kofi: 'https://ko-fi.com/amanhimself',
   twitterBotRepo: 'https://github.com/freeCodeCamp/100DaysOfCode-twitter-bot',
   goodreads: 'https://www.goodreads.com/author/show/17657541.Aman_Mittal',
-  subscribersCount: '1200+'
+  subscribersCount: '1300+'
 };
 
 export const SavedTweets = {
