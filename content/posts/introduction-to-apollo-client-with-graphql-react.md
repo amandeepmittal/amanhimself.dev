@@ -1,6 +1,7 @@
 ---
 title: 'Introduction to Apollo Client with GraphQL and React'
 date: 2019-07-10
+template: post
 slug: 'blog/introduction-to-apollo-client-with-graphql-react'
 thumbnail: '../thumbnails/graphql.png'
 tags:
@@ -27,7 +28,7 @@ To learn more about the basics of GraphQL, how it differs from REST, its buildin
 - Conclusion
 - Bonus: _Challenge_
 
-### Requirements
+## Requirements
 
 In order to follow this tutorial, you are required to have installed the following on your local machine:
 
@@ -36,7 +37,7 @@ In order to follow this tutorial, you are required to have installed the followi
 
 _Bonus:_ You can now use `npx` to generate a new React project without installing `create-react-app`.
 
-### What is Apollo Client?
+## What is Apollo Client?
 
 Apollo is a team that builds and maintain a toolchain of GraphQL tools for various use cases like frontend (client), server and engine. The **Apollo Client** helps you use a GraphQL API on the frontend side of an application. It can integrate very well with popular frontend frameworks like React, Angular, Vue and so on.
 
@@ -44,7 +45,7 @@ The Apollo Server is the server part of GraphQL where you manage and define your
 
 Both the client and the server are open source tools by Apollo. The only thing that is paid is the Apollo Engine. It is worth to note that these three tools are not dependent on each other and can be used separately just like the current scenario where we are going to use only the Apollo Client. Also, it is worth to note that Apollo Client is the leading JavaScript client for GraphQL. It is easy to integrate and to consume a GraphQL API in your web application using React or any other frontend scenario.
 
-### Getting Started: Create a React App
+## Getting Started: Create a React App
 
 To create a new React project, run the following command from your terminal.
 
@@ -74,7 +75,7 @@ _What do these dependencies do?_ In brief:
 
 Once these dependencies are installed, let us proceed to the next section.
 
-### Creating your first Apollo Client
+## Creating your first Apollo Client
 
 In this section, we will start building a small application that will consume a GraphQL endpoint from this open source [Github repository](https://github.com/trevorblades/countries). This endpoint will allow us to fetch a list of countries or a specific country which will have nested data in the form of that country's information.
 
@@ -116,7 +117,7 @@ const client = new ApolloClient({
 
 With this done, let us complete the procedure to connect this apollo client with the React App.
 
-### Connect Apollo Client and React App
+## Connect Apollo Client and React App
 
 If you are familiar with creating web applications that consume data from a remote API endpoint you might be wondering, _Why_ are we creating a client when we can fetch data using JavaScript `.fetch()` API from any GraphQL endpoint like below.
 
@@ -257,11 +258,11 @@ To see it action, make sure you are running the development server using `npm ru
 
 ![](https://blog.crowdbotics.com/content/images/2019/05/ss2.gif)
 
-### Conclusion
+## Conclusion
 
 _Congratulations!_ You have successfully built your first GraphQL + React app that uses the power of Apollo Client. You have implemented an easy way to get started with React and GraphQL and start running queries. Not only you did you learn how to query data from a remote GraphQL API, render the data in a React component, but I hope, you understand the underlying concept of how to integrate Apollo Client in a React web application and its advantages.
 
-### Bonus: Challenge
+## Bonus: Challenge
 
 Here is a small challenge for you. Create a new component called `CountrySelect` which in return renders the UI for the user to select a country and then display the country code below the select box when selected. Here is a visual perspective for you.
 
