@@ -9,7 +9,7 @@ tags:
 canonicalUrl: 'https://amanhimself.dev/blog/setup-macbook-m1/'
 ---
 
-> 🕑 Updated on: September 4, 2021
+> 🕑 Updated on: October 12, 2021
 
 ![cover_image](https://i.imgur.com/tAJjTOU.png)
 
@@ -336,8 +336,17 @@ I am still using the same VSCode configuration from my previous setup:
   // TS IMPORT SUGGESTION
   "typescript.suggest.paths": false,
   // --------------------------------------
-  // BRACKET PAIR COLORIZER 2
-  "bracket-pair-colorizer-2.colors": ["#F72585", "#94b4a4", "#a3d8f4"],
+  // NATIVE BRACKER PAIR COLOR SETTINGS
+  "editor.bracketPairColorization.enabled": true,
+  "workbench.colorCustomizations": {
+    "editorBracketHighlight.foreground1": "#ffb86c",
+    "editorBracketHighlight.foreground2": "#8be9fd",
+    "editorBracketHighlight.foreground3": "#bd93f9",
+    "editorBracketHighlight.foreground4": "#50fa7b",
+    "editorBracketHighlight.foreground5": "#f1fa8c",
+    "editorBracketHighlight.foreground6": "#abb2c0",
+    "editorBracketHighlight.unexpectedBracket.foreground": "#ff5555"
+  },
   // --------------------------------------
   // PRETTIER ----------------------------------
   "prettier.singleQuote": true,
@@ -455,7 +464,7 @@ I use VSCode editor for both writing code and writing blog posts. Thus, the list
 - [Auto Complete Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-complete-tag)
 - [Auto Rename Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag)
 - [Babel JavaScript](https://marketplace.visualstudio.com/items?itemName=mgmcdermott.vscode-language-babel)
-- [Bracket Pair Colorizer 2](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2)
+- Bracket Pair Colorizer 2 - VSCode now supports this natively. Check out my post 👉 [How to configure VSCode Bracket Pair Colors Natively](https://amanhimself.dev/blog/how-to-configure-vscode-bracket-colors-natively/)
 - [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
 - [Code::Stats](https://codestats.net/)
 - [Color Highlight](https://marketplace.visualstudio.com/items?itemName=naumovs.color-highlight)
