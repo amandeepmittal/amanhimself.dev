@@ -17,7 +17,7 @@ I recently uninstalled the extension and thought, let's try to use the editor wi
 
 ![ss1](https://i.imgur.com/JBOVcnV.png)
 
-Recently, I came across [Rachel Leggett's tweet](https://twitter.com/rleggos/status/1433800613083729921) that describes how to enable this setting. Open the `settings.json` file for the VSCode editor and add the following.
+To enable this setting, open the `settings.json` file for the VSCode editor and add the following:
 
 ```json
 {
