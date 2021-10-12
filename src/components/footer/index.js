@@ -5,7 +5,6 @@ import {
   SiTwitter,
   SiGithub,
   SiInstagram,
-  SiHashnode,
   SiRss
 } from 'react-icons/si';
 import { FaDev } from 'react-icons/fa';
