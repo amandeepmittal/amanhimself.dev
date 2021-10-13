@@ -9,6 +9,8 @@ tags:
 canonicalUrl: 'https:/amanhimself.dev/blog/how-to-configure-vscode-bracket-colors-natively/'
 ---
 
+![cover image](https://res.cloudinary.com/practicaldev/image/fetch/s--lgaAXnJK--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/r84rtekdnk3qd4r4v31e.png)
+
 With an [update in August 2021](https://code.visualstudio.com/updates/v1_60#_high-performance-bracket-pair-colorization), VSCode started supporting Bracket pair colorization natively. It means there is no need to use the [Bracket Pair Colorizer](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer) extension (_which I love_).
 
 In their official announcement, the VSCode team states they choose to implement this feature natively to address performance issues.
