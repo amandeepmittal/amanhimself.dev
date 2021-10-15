@@ -14,6 +14,8 @@ canonicalUrl: 'https://amanhimself.dev/blog/safe-area-context-in-react-native-ap
 
 Most devices nowadays come with a notch. Therefore, when building a mobile application using React Native, it is vital to ensure that the content of an app screen is rendered correctly across different types of devices.
 
+In this article, let's take a look two different approaches to make app screens in React Native to avoid the content being positioned behind a notch or status bar. The first approach will discuss SafeAreaView component from React Native components API. The second approach will discuss the advantage of using [react-native-safe-area-context](https://amanhimself.dev/blog/safe-area-context-in-react-native-apps/) open source library and how it provides a cross-platform solution.
+
 ## The Problem
 
 When you are starting to build a screen in React Native app, you might add use the following code snippet to display text:
