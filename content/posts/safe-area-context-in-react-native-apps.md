@@ -10,13 +10,15 @@ tags:
 canonicalUrl: 'https://amanhimself.dev/blog/safe-area-context-in-react-native-apps/'
 ---
 
-![cover image](https://i.imgur.com/23BqZzO.png)
+![cover image](https://www.freecodecamp.org/news/content/images/size/w2000/2021/10/2-1.png)
 
 Most devices nowadays come with a notch. Therefore, when building a mobile application using React Native, it is vital to ensure that the content of an app screen is rendered correctly across different types of devices.
 
-In this article, let's take a look two different approaches to make app screens in React Native to avoid the content being positioned behind a notch or status bar. The first approach will discuss SafeAreaView component from React Native components API. The second approach will discuss the advantage of using [react-native-safe-area-context](https://amanhimself.dev/blog/safe-area-context-in-react-native-apps/) open source library and how it provides a cross-platform solution.
+In this article, let's take a look two different approaches to make app screens in React Native to avoid the content being positioned behind a notch or status bar.
 
-## The Problem
+The first approach will discuss `SafeAreaView` component from React Native components API. The second approach will discuss the advantage of using [react-native-safe-area-context](https://amanhimself.dev/blog/safe-area-context-in-react-native-apps/) open source library and how it provides a cross-platform solution.
+
+## The Notch Problem
 
 When you are starting to build a screen in React Native app, you might add use the following code snippet to display text:
 
@@ -54,7 +56,7 @@ On an Android device, the behavior is exactly the same:
 
 ![ss2](https://i.imgur.com/RY1tEfz.png)
 
-## Using SafeAreaView component from React Native
+## How to Use the SafeAreaView component from React Native
 
 One approach is to use [SafeAreaView component](https://reactnative.dev/docs/safeareaview) available in React Native.
 
@@ -87,7 +89,7 @@ It works perfectly on iOS:
 
 In React Native, this component is only applicable to iOS devices with iOS version 11 or later. Unfortunately, that means it doesn't work for Android devices as the screen's content is still behind the status bar.
 
-## Using React Native Safe Area Context library
+## How to Use React Native's Safe Area Context Library
 
 To use a cross-platform solution to handle safe areas on notch devices, there is a library called [react-native-safe-area-context](https://github.com/th3rdwave/react-native-safe-area-context). It provides a flexible API to handle safe area insets in JS and works on iOS, Android, and Web.
 
@@ -166,7 +168,7 @@ The `SafeAreaView` acts like a regular `View` component from React Native and in
 
 It also comes with an `edges` prop that customizes safe area insets around different edges such as top, bottom, left, and right.
 
-## Using useSafeAreaInsets hook
+## How to Use the useSafeAreaInsets Hook
 
 Another advantage of using this library is that it provides a hook called `useSafeAreaInsets`. It offers more flexibility. It also gives more control, and you can apply padding for each edge using a property from this hook. For example, a `View` component below uses only wants the padding to be applied at the top edge:
 
@@ -190,6 +192,8 @@ export const HomeScreen = () => {
 
 ## Conclusion
 
-Handling status bars and notches across different devices become seamless with the react-native-safe-area-context library.
+Handling status bars and notches across different devices become seamless with the react-native-safe-area-context library. Try it out in your next React Native app.
 
 _[Source code at this GitHub repository](https://github.com/amandeepmittal/react-native-examples/tree/master/rnSplashAndIconExample)_
+
+_This post was also published at [freeCodeCamp](https://www.freecodecamp.org/news/how-to-use-safe-area-context-to-avoid-notches-in-react-native-apps/)._
