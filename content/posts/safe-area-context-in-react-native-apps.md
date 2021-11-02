@@ -16,7 +16,7 @@ Most devices nowadays come with a notch or some kind of status bar. Therefore, w
 
 In this article, let's take a look at two different approaches to make app screens in React Native to avoid the content being positioned behind a notch or status bar.
 
-The first approach will discuss `SafeAreaView` component from React Native components API. The second approach will discuss the advantage of using [react-native-safe-area-context](https://amanhimself.dev/blog/safe-area-context-in-react-native-apps/) open source library and how it provides a cross-platform solution.
+The first approach will discuss `SafeAreaView` component from React Native components API. The second approach will discuss the advantage of using [react-native-safe-area-context](https://github.com/th3rdwave/react-native-safe-area-context#readme) open source library and how it provides a cross-platform solution.
 
 ## The Notch Problem
 
@@ -192,7 +192,7 @@ export const HomeScreen = () => {
 
 ## Conclusion
 
-Handling status bars and notches across different devices become seamless with the react-native-safe-area-context library. Try it out in your next React Native app.
+Handling status bars and notches across different devices become seamless with the [react-native-safe-area-context](https://github.com/th3rdwave/react-native-safe-area-context#readme) library. Try it out in your next React Native app.
 
 _[Source code at this GitHub repository](https://github.com/amandeepmittal/react-native-examples/tree/master/rnSplashAndIconExample)_
 
