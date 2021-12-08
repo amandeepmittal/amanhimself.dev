@@ -9,7 +9,7 @@ tags:
 canonicalUrl: 'https://amanhimself.dev/blog/setup-macbook-m1/'
 ---
 
-> 🕑 Updated on: October 12, 2021
+> 🕑 Updated on: December 08, 2021
 
 ![cover_image](https://i.imgur.com/tAJjTOU.png)
 
@@ -276,14 +276,16 @@ I am still using the same VSCode configuration from my previous setup:
   "editor.tabSize": 2,
   "editor.fontSize": 12.4,
   "editor.minimap.enabled": false,
-  "editor.cursorBlinking": "expand",
+  "editor.cursorBlinking": "phase",
   "editor.fontLigatures": false,
   "editor.wordWrap": "on",
   "editor.cursorSmoothCaretAnimation": true,
   "editor.tabCompletion": "on",
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
-  "breadcrumbs.enabled": true,
+  "editor.semanticHighlighting.enabled": true,
+  "editor.guides.bracketPairs": true,
+  "breadcrumbs.enabled": false,
   "explorer.openEditors.visible": 0,
   "search.exclude": {
     "**/node_modules": true,
@@ -400,47 +402,8 @@ I am still using the same VSCode configuration from my previous setup:
     "typescriptreact"
   ],
   // --------------------------------------
-  // ERROR LENS
-  // "errorLens.fontSize": "11",
-  // "errorLens.onSave": true,
-  // "errorLens.enabledDiagnosticLevels": ["error", "warning", "hint"],
-  // "workbench.colorCustomizations": {
-  //   "errorLens.hintForeground": "#ffc600A1",
-  //   "errorLens.hintBackground": "#ff00dd2f",
-  //   "errorLens.errorBackground": "#ff000005",
-  //   "editor.selectionBackground": "#ff1493",
-  //   "editor.selectionHighlightBackground": "#ff1493",
-  //   "editor.findMatchBackground": "#ff1493",
-  //   "editor.findMatchHighlightBackground": "#3cb371"
-  // },
-  // "errorLens.exclude": ["never (read|used)"],
-  // --------------------------------------
   // LANGUAGES SPECIFIC
   "javascript.updateImportsOnFileMove.enabled": "always"
-  // --------------------------------------
-  // GITHUB COPILOT
-  // "editor.inlineSuggest.enabled": true,
-  // "github.copilot.inlineSuggest.enable": true,
-  // "github.copilot.enable": {
-  //   "*": true,
-  //   "yaml": false,
-  //   "plaintext": false,
-  //   "javascript": true,
-  //   "markdown": true,
-  //   "javascriptreact": true,
-  //   "typescript": true,
-  //   "typescriptreact": true
-  // },
-  // "emmet.triggerExpansionOnTab": false,
-  // --------------------------------------
-  // CUSTOMIZED FAIRY FLOSS THEME
-  // "editor.tokenColorCustomizations": {
-  //   "[fairyfloss]": {
-  //     "comments": {
-  //       "foreground": "#8d99ae"
-  //     }
-  //   }
-  // },
 }
 ```
 
