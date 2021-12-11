@@ -83,7 +83,7 @@ To add the ability to show or hide the password field's visibility, let's create
 
 Start by importing the `useState` hook from React library. You will need to create two different state variables to toggle between the field's visibility and change the icon.
 
-Then define a function called `useTogglePasswordVisibility`. Inside this function, create two new state variables. The first one is called `passwordVisibility`. Its initial value is `true`. The reason is that this variable will be the value of the prop `secureTextEntry` on the `TextInput` component. You would want to hide the password field initially.
+Then define a function called `useTogglePasswordVisibility`. Inside this function, create two new state variables. The first one is called `passwordVisibility`. Its initial value is set to boolean `true`. The reason is that this variable will be the value of the prop `secureTextEntry` on the `TextInput` component. You would want to hide the password field initially when the user enters the password in the input field.
 
 The second state variable defined is called `rightIcon`. It has a default value of `eye`. This value depends on the Icon Library you're using in your React Native app. For this example, I'm using **MaterialCommunityIcons** from [Expo Vector Icons](https://docs.expo.dev/guides/icons/).
 
