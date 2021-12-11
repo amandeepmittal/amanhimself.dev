@@ -7,7 +7,7 @@ slug: 'blog/show-hide-password-in-react-native-using-custom-hook'
 tags:
   - expo
   - react-native
-canonicalUrl: 'https:/amanhimself.dev/show-hide-password-in-react-native-using-custom-hook'
+canonicalUrl: 'https:/amanhimself.dev/show-hide-password-in-react-native-using-custom-hook/'
 ---
 
 Building login and signup forms in a React Native app comprise input fields and buttons. One field that you will often find yourself adding to these forms is the password field. This password field is composed of using React Native's `TextInput` component.
