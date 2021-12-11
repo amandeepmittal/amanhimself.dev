@@ -147,7 +147,7 @@ export default function App() {
 }
 ```
 
-Modify the `TextInput` component's prop. Make sure to add the pass the `passwordVisibility` as the value to the `secureTextEntry` prop.
+Modify the `TextInput` component's prop. Make sure to add the `passwordVisibility` as the value to the `secureTextEntry` prop.
 
 ```js
 <TextInput
@@ -156,7 +156,7 @@ Modify the `TextInput` component's prop. Make sure to add the pass the `password
 />
 ```
 
-Inside the `View` component that wraps `TextInput`, add a button using the `Pressable` component. This button will allow the user to toggle between the hidden and shown state of the password field.
+Inside the `View` component that wraps the `TextInput`, add a button using the `Pressable` component. This button will allow the user to toggle between the hidden and shown state of the password field.
 
 This button wraps the icon component.
 
