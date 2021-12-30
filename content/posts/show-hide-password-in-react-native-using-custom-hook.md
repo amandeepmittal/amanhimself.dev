@@ -79,7 +79,7 @@ However, giving an option to a user to let them see the current value they enter
 
 ## Show or Hide Password Visibility Hook
 
-To add the ability to show or hide the password field's visibility, let's create a custom hook in a new file called `useTogglePasswordVisibility.js.js`.
+To add the ability to show or hide the password field's visibility, let's create a custom hook in a new file called `useTogglePasswordVisibility.js`.
 
 Start by importing the `useState` hook from React library. You will need to create two different state variables to toggle between the field's visibility and change the icon.
 
