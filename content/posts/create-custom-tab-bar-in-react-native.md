@@ -102,7 +102,7 @@ To build the app for iOS, please execute the command `npx react-native run-ios` 
 
 Here is the default app running after the building for iOS:
 
-![ss1](https://blog.crowdbotics.com/content/images/2021/02/ss1-3.png)
+![ss1](https://crowdbotics.ghost.io/content/images/2021/02/ss1-3.png)
 
 ## Add mock screens
 
@@ -394,7 +394,7 @@ export default App;
 
 On an iOS simulator, the tab bar is shown as below. There are no custom styles currently applicable on the tab bar. The way it looks is because the tab bar component from React Navigation library has some default styles.
 
-![ss2](https://blog.crowdbotics.com/content/images/2021/02/ss2-1.png)
+![ss2](https://crowdbotics.ghost.io/content/images/2021/02/ss2-1.png)
 
 ## Add icons to the tab bar
 
@@ -446,7 +446,7 @@ const TabNavigator = () => {
 
 Go back to the iOS simulator and you will notice that the icons for each tab route are now displayed.
 
-![ss3](https://blog.crowdbotics.com/content/images/2021/02/ss3.png)
+![ss3](https://crowdbotics.ghost.io/content/images/2021/02/ss3.png)
 
 ## Customizing the tab bar
 
@@ -529,7 +529,7 @@ Here is the final snippet for `CustomTabBar` component:
 
 The tab bar is now translucent. Here is the example app running on an iOS simulator.
 
-![ss4](https://blog.crowdbotics.com/content/images/2021/02/ss4.gif)
+![ss4](https://crowdbotics.ghost.io/content/images/2021/02/ss4.gif)
 
 Do notice that, since the `BlurView` component has the position set to `absolute` we need to apply the `paddingBottom` property at the `ScrollView` component inside the `Home.js` tab screen. The value of this property is going to be the height of the whole tab bar. To get the height of the current tab bar, the @react-navigation/bottom-tabs module has a hook called `useBottomTabBarHeight` that gives this value.
 
@@ -559,11 +559,11 @@ const Home = () => {
 
 Back in the iOS simulator, you will notice that it works fine now:
 
-![ss5](https://blog.crowdbotics.com/content/images/2021/02/ss5.gif)
+![ss5](https://crowdbotics.ghost.io/content/images/2021/02/ss5.gif)
 
 Running the app build on an Android device, the results are similar:
 
-![ss6](https://blog.crowdbotics.com/content/images/2021/02/ss6.gif)
+![ss6](https://crowdbotics.ghost.io/content/images/2021/02/ss6.gif)
 
 ## Conclusion
 
