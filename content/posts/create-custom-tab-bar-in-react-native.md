@@ -9,7 +9,7 @@ tags:
 canonicalUrl: 'https://blog.crowdbotics.com/how-to-create-a-custom-tab-bar-in-react-native/'
 ---
 
-![cover_image](https://blog.crowdbotics.com/content/images/2021/05/React-Native-Featured-Image.png)
+![cover_image](https://crowdbotics.ghost.io/content/images/2021/05/React-Native-Featured-Image.png)
 
 [React Native](https://reactnative.dev/) is an amazing tool for creating beautiful and high performing mobile applications that run on both iOS and Android. Developing these apps, you might need navigation to navigate from one screen to another. To implement navigation in a React Native app, [React Navigation](https://reactnavigation.org/docs/getting-started) library does an awesome job of providing various navigation patterns such as stack, tabs, and drawer that can be utilized and customize based on the UI design of the app.
 
