@@ -10,13 +10,13 @@ import {
   List,
   ListItem
 } from '@chakra-ui/react';
-import { promises as fs } from 'fs';
+import {  promises as fs } from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
-import { HiOutlineSearch } from 'react-icons/hi';
+import {  HiOutlineSearch } from 'react-icons/hi';
 import readingTime from 'reading-time';
 
-import { BlogPostCard, DocumentHead } from '../../src/components';
+import {  BlogPostCard, DocumentHead } from '../../src/components';
 
 // Fetch all posts
 export const getAllBlogPosts = async () => {

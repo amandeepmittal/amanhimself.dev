@@ -9,6 +9,7 @@ import BlogPostCard from './BlogPostCard';
 import MDXComponents from './MDXComponents';
 import LatestPostsSection from './LatestPostsSection';
 import DocumentHead from './SEO';
+import SubscribeBox from './SubscribeBox';
 
 export {
   ExternalLink,
@@ -21,5 +22,6 @@ export {
   BlogPostCard,
   MDXComponents,
   LatestPostsSection,
-  DocumentHead
+  DocumentHead,
+  SubscribeBox
 };
