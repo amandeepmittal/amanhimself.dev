@@ -19,7 +19,11 @@ import dayjs from 'dayjs';
 import readingTime from 'reading-time';
 
 import { getAllBlogPosts } from './index';
-import { DocumentHead, MDXComponents, SubscribeBox } from '../../src/components';
+import {
+  DocumentHead,
+  MDXComponents,
+  SubscribeBox
+} from '../../src/components';
 import imageMetadata from '../../src/utils/imageMetaData';
 
 export const readBlogPost = async (slug: string) => {
