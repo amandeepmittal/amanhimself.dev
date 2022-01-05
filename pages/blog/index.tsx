@@ -75,11 +75,7 @@ const Blog = ({ posts }) => {
 
   return (
     <>
-      <DocumentHead
-        pageTitle="Aman Mittal - Blog"
-        customDescription="I'm Aman Mittal (@amanhimself). I'm a Software Developer and Tech Writer currently working as a Senior Content Developer. Welcome to my digital garden!"
-        postPath="/blog"
-      />
+      <DocumentHead pageTitle="Aman Mittal - Blog" postPath="/blog" />
       <VStack spacing={3} alignItems="flex-start" w="full" as="section" pt={28}>
         <Heading size="xl" as="h1">
           Blog
