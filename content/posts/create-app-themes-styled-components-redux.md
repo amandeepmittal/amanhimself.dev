@@ -1,16 +1,15 @@
 ---
 title: 'Changing app themes using React Native, Styled Components and Redux'
-date: 2019-10-02
-template: post
-slug: 'blog/create-app-themes-styled-components-redux'
-thumbnail: '../thumbnails/react.png'
-tags:
-  - react-native
-  - redux
+date: '2019-10-02'
+slug: 'create-app-themes-styled-components-redux'
+thumbnail: '/thumbnails/react.png'
+tag: 'react-native'
 canonicalUrl: 'https://blog.jscrambler.com/changing-app-themes-using-react-native-styled-components-and-redux/'
 ---
 
 ![cover](https://i.imgur.com/RSo1BSr.jpg)
+
+> [Originally published at Jscrambler](https://blog.jscrambler.com/changing-app-themes-using-react-native-styled-components-and-redux/)
 
 If you are getting into React Native or have already dipped your toes, you know that there are different ways you can style a React Native app. React Native uses JavaScript objects to style by default. If you have some experience with the CSS of the web, you know that styling a component is nothing more than writing code by using proper styling syntax.
 
@@ -353,5 +352,3 @@ Now, go to the simulator running and you will notice a new button with a text th
 _Congratulations!_ You have successfully integrated redux and styled-components in a React Native app to create style attributes for React Native and manage themes. Using `props` in styled-components you learned how to manage and write composable components. This is just one of the way to create a themeable React Native app.
 
 To dwell more into styled-components, please refer to the official documentation [**here**](https://www.styled-components.com/docs/basics#react-native).
-
-[Originally published at Jscrambler](https://blog.jscrambler.com/changing-app-themes-using-react-native-styled-components-and-redux/)

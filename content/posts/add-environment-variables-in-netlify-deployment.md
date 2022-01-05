@@ -1,12 +1,10 @@
 ---
 title: 'Add Environment Variables in a Netlify Deployment'
-date: 2020-09-01
-template: post
-slug: 'blog/add-environment-variables-in-netlify-deployment'
-thumbnail: '../thumbnails/netlify.png'
-tags:
-  - nodejs
-canonicalUrl: 'https://amanhimsefl.dev/blog/add-environment-variables-in-netlify-deployment'
+date: '2020-09-01'
+slug: 'add-environment-variables-in-netlify-deployment'
+thumbnail: '/thumbnails/netlify.png'
+tag: 'nodejs'
+canonicalUrl: 'https://amanhimsefl.dev/blog/add-environment-variables-in-netlify-deployment/'
 ---
 
 ![cover_image](https://i.imgur.com/SX2uERE.png)

@@ -1,12 +1,9 @@
 ---
 title: 'How to create a custom hook to change status bar styles for every screen using React Navigation'
-slug: 'blog/create-custom-status-bar-hook-react-navigation'
-date: 2020-03-13
-template: post
-thumbnail: '../thumbnails/expo.png'
-tags:
-  - expo
-  - react-native
+slug: 'create-custom-status-bar-hook-react-navigation'
+date: '2020-03-13'
+thumbnail: '/thumbnails/expo.png'
+tag: 'react-native'
 canonicalUrl: 'https://heartbeat.fritz.ai/creating-custom-wavy-headers-using-react-native-svg-639ce0861327'
 ---
 

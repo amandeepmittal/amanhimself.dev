@@ -1,12 +1,9 @@
 ---
 title: 'How to use React Native Geolocation to get Postal Address'
-date: 2021-02-25
-slug: 'blog/react-native-geolocation-to-get-postal-address'
-thumbnail: '../thumbnails/expo.png'
-template: post
-tags:
-  - expo
-  - react-native
+date: '2021-02-25'
+slug: 'react-native-geolocation-to-get-postal-address'
+thumbnail: '/thumbnails/expo.png'
+tag: 'expo'
 canonicalUrl: 'https://blog.jscrambler.com/how-to-use-react-native-geolocation-to-get-postal-address/'
 ---
 

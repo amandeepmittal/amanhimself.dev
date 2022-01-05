@@ -1,11 +1,9 @@
 ---
 title: 'Using React Router to Optimize Single Page Applications (SPAs)'
-date: 2019-07-11
-slug: 'blog/introduction-to-react-router-v4-with-reactjs'
-template: post
-thumbnail: '../thumbnails/react.png'
-tags:
-  - react
+date: '2019-07-11'
+slug: 'introduction-to-react-router-v4-with-reactjs'
+thumbnail: '/thumbnails/react.png'
+tag: 'react'
 canonicalUrl: 'https://blog.crowdbotics.com/introduction-to-react-router-v4-with-reactjs/'
 ---
 
@@ -59,7 +57,7 @@ Please note that, for the rest of the tutorial, we will be using `yarn` as the J
 
 To run the React app, go to the terminal window and execute the command npm start. This will start the development server. You will be welcomed by the default boilerplate project screen in a web browser window on URL `http://localhost:3000/`.
 
-![ss1](https://blog.crowdbotics.com/content/images/2019/05/ss1-1.png)
+![ss1](https://crowdbotics.ghost.io/content/images/2019/05/ss1-1.png)
 
 ## First Route with React Router
 
@@ -96,7 +94,7 @@ function Home() {
 
 Now, visit the URL on port `3000` and you will see the `Home` component being rendered right now.
 
-![ss2](https://blog.crowdbotics.com/content/images/2019/05/ss2.png)
+![ss2](https://crowdbotics.ghost.io/content/images/2019/05/ss2.png)
 
 This is a bare minimum example. Now let us add another route with the same props as the `Home`. Call this route `About` with a similar rendering logic as `Home`.
 
@@ -127,7 +125,7 @@ function App() {
 
 Try visiting the URL `http://localhost:3000/about`. You will notice that both the components are being rendered right now on the path `/about`.
 
-![ss3](https://blog.crowdbotics.com/content/images/2019/05/ss3-1.png)
+![ss3](https://crowdbotics.ghost.io/content/images/2019/05/ss3-1.png)
 
 The reason for this is that regular expression engine that React Router uses internally considers both the routes that are being started with a forward slash `/` equal. To solve this issue, we can use another essential prop on the Home route called `exact`.
 
@@ -142,7 +140,7 @@ The reason for this is that regular expression engine that React Router uses int
 
 This exact is also known as a qualifier which states that the path must match the exactly the `/` and nothing after it, such as `/about`. Now, if you visit the browser window at the URL `http://localhost:3000/about` you will notice that only the about component is getting rendered this time.
 
-![ss4](https://blog.crowdbotics.com/content/images/2019/05/ss4.png)
+![ss4](https://crowdbotics.ghost.io/content/images/2019/05/ss4.png)
 
 ## What is BrowserRouter?
 
@@ -156,7 +154,7 @@ A `BrowserRouter` will always listen to URLs like `http://localhost:3000/about` 
 
 Here is a small task for you. Modify directory structure like below screenshot and separate the two functional components `Home` and `about` in their own component files such that, in future, if they grow with more JSX to render.
 
-![ss5](https://blog.crowdbotics.com/content/images/2019/05/ss5.png)
+![ss5](https://crowdbotics.ghost.io/content/images/2019/05/ss5.png)
 
 You can totally skip this if you want and move on to the next section. But performing this small task will benefit you to have an understanding of the above concepts.
 
@@ -200,7 +198,7 @@ export default App;
 
 In the above snippet, notice that all the Links are being added before all the Route components. The styling attributes inside `style` are optional for now. Start the development server and visit the browser window and you will notice a navigation menu pops up at the top. Try clicking links to navigate between different components.
 
-![ss5](https://blog.crowdbotics.com/content/images/2019/05/ss6-1.gif)
+![ss5](https://crowdbotics.ghost.io/content/images/2019/05/ss6-1.gif)
 
 Wherever a `Link` is rendered in a React project, an anchor `<a>` will be rendered in the application’s HTML.
 
@@ -289,11 +287,11 @@ return (
 
 Go back to the browser, open develop tools like below and you will notice, at first, the `Home` route has a class name `active`.
 
-![ss7](https://blog.crowdbotics.com/content/images/2019/05/ss7.png)
+![ss7](https://crowdbotics.ghost.io/content/images/2019/05/ss7.png)
 
 Try navigating to the `About` route and see what happens.
 
-![ss8](https://blog.crowdbotics.com/content/images/2019/05/ss8.gif)
+![ss8](https://crowdbotics.ghost.io/content/images/2019/05/ss8.gif)
 
 On navigating to `About` route did you notice that the active class name is also added to the corresponding route? However, the `Home` route still has the active class even though the URL matches the `/about`. Why?
 
@@ -309,7 +307,7 @@ The way `NavLink` works is almost similar to Route component in React Router API
 
 You will get the desired output this time.
 
-![ss9](https://blog.crowdbotics.com/content/images/2019/05/ss9.gif)
+![ss9](https://crowdbotics.ghost.io/content/images/2019/05/ss9.gif)
 
 ## Adding Parameters to the Routes
 
@@ -399,7 +397,7 @@ export default App;
 
 The existing navigation menu has a new route and its called Posts.
 
-![ss10](https://blog.crowdbotics.com/content/images/2019/05/ss10.png)
+![ss10](https://crowdbotics.ghost.io/content/images/2019/05/ss10.png)
 
 Open `Posts.js` to render the list of Posts and display them as a list whenever the current location in the web browser matches `/posts`.
 
@@ -457,10 +455,10 @@ export default Posts;
 
 Also, the `Child` component reads anything coming from the URL parameters, such as, in the above case, the `id` of each post. A `match` object contains information about how a `<Route path>` matched the URL, thus, in our case, the id of each post.
 
-![ss11](https://blog.crowdbotics.com/content/images/2019/05/ss11.png)
+![ss11](https://crowdbotics.ghost.io/content/images/2019/05/ss11.png)
 
 ## Conclusion
 
 Hopefully, by now, you are familiar with the basic concepts of how React Router library works. It is a powerful library that helps you build better React apps. If you want to learn more about React Router visit its official documentation [here](https://reacttraining.com/react-router/).
 
-[Originally published at Crowdbotics](https://blog.crowdbotics.com/introduction-to-react-router-v4-with-reactjs/)
+[Originally published at Crowdbotics](https://crowdbotics.ghost.io/introduction-to-react-router-v4-with-reactjs/)

@@ -1,11 +1,9 @@
 ---
-title: 'How I Configure VS Code for Everything'
-slug: 'blog/how-i-configure-vscode-for-everything'
-date: 2019-04-22
-template: post
-thumbnail: '../thumbnails/vscode.png'
-tags:
-  - tools
+title: 'How I Configure VSCode for Everything'
+slug: 'how-i-configure-vscode-for-everything'
+date: '2019-04-22'
+thumbnail: '/thumbnails/vscode.png'
+tag: 'tools'
 canonicalUrl: 'https://medium.com/better-programming/how-i-configure-vscode-for-everything-7df65a316a52'
 ---
 
@@ -34,7 +32,7 @@ The first thing I did was install themes that I see all day. I like my editor to
 - Night Owl (just to try something new).
 - Material-Icon-Theme (for file icons).
 
-![](https://cdn-images-1.medium.com/max/800/1*7utI1vJayaK97t7lYhrv_A.jpeg)
+<img src='https://cdn-images-1.medium.com/max/800/1*7utI1vJayaK97t7lYhrv_A.jpeg' />
 
 ## Configuring VS Code
 

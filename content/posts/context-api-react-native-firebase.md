@@ -1,13 +1,9 @@
 ---
 title: 'Using Context API with React Native'
-date: 2019-09-27
-template: post
-slug: 'blog/context-api-react-native-firebase'
-thumbnail: '../thumbnails/expo.png'
-tags:
-  - expo
-  - firebase
-  - react-native
+date: '2019-09-27'
+slug: 'context-api-react-native-firebase'
+thumbnail: '/thumbnails/expo.png'
+tag: 'react-native'
 canonicalUrl: 'https://amanhimself.dev/blog/context-api-react-native-firebase'
 ---
 
@@ -61,15 +57,15 @@ To follow this tutorial, please make sure you following installed on your local 
 
 Create a new [Firebase project from Firebase Console](https://console.firebase.google.com).
 
-![1](https://miro.medium.com/max/387/1*8ljVirzyESb2-YlcXTs91w.png)
+![1](https://i.imgur.com/7TSnVLL.png)
 
 Next, fill in the suitable details regarding the Firebase project and click on **Create project** button.
 
-![2](https://miro.medium.com/max/545/1*EY_yx-cFCXC0jGJJAS9-MA.png)
+![2](https://i.imgur.com/oXFOQBd.png)
 
 You will be re-directed towards the dashboard of the Firebase project. Go to **Project settings** from the sidebar menu and copy the `firebaseConfig` object. It has all the necessary API keys that we need in order to use a Firebase project as the backend for any React Native or Expo app.
 
-![3](https://miro.medium.com/max/859/1*BgwacmMBupYjZY-OMnBR5w.png)
+![3](https://i.imgur.com/XbVjdkB.png)
 
 Next, go inside the [Expo app](https://github.com/amandeepmittal/expo-firebase/releases/tag/0.5.0) and create a new directory called `config`. This folder will contain all the configuration files. Inside it, create `Firebase/firebaseConfig.js` file and paste the contents of the config object as below.
 
@@ -144,11 +140,11 @@ Cloud Firestore follows proper NoSQL terminology when it comes to storing data. 
 
 Go back to the Firebase console and in the Database section, choose the Cloud Firestore and click on the button **Create database**.
 
-![4](https://miro.medium.com/max/454/1*aciscrtAsywB3ISbOsLQ8A.png)
+![4](https://i.imgur.com/k7Ecql7.png)
 
 Then, choose the option Start in **test mode** and click the button **Next** as shown below.
 
-![5](https://miro.medium.com/max/678/1*gYf5QJQSXHTZ3rTas2-pjw.png)
+![5](https://i.imgur.com/jLWPy9K.png)
 
 ## Add Context API
 

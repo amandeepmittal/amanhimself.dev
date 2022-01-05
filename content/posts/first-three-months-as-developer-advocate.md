@@ -1,11 +1,9 @@
 ---
-date: 2021-05-25
 title: '🌱 Life at Draftbit - First 3 Months as a Developer Advocate'
-template: post
-thumbnail: '../thumbnails/avo.png'
-slug: 'blog/first-three-months-as-developer-advocate'
-tags:
-  - devrel
+date: '2021-05-25'
+thumbnail: '/thumbnails/avo.png'
+slug: 'first-three-months-as-developer-advocate'
+tag: 'devrel'
 canonicalUrl: 'https://amanhimself.dev/blog/first-three-months-as-developer-advocate/'
 ---
 
@@ -79,4 +77,4 @@ If you want to work with me, check out [draftbit.com/jobs](https://draftbit.com/
 
 If you want to talk about Draftbit, have questions, or React Native, or DevRel, please DM me on [Twitter](https://twitter.com/amanhimself).
 
-💌 To get notified about my future articles, subscribe my [personal newsletter here](https://amanhimself.substack.com/).
+💌 To get notified about my future articles, subscribe my [personal newsletter here](https://www.getrevue.co/profile/amanhimself).

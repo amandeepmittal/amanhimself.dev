@@ -1,11 +1,9 @@
 ---
 title: '21 Useful Open Source Packages for React Native'
-date: 2019-01-28
-slug: 'blog/21-useful-open-source-packages-for-react-native'
-template: post
-tags:
-  - react-native
-thumbnail: '../thumbnails/react.png'
+date: '2019-01-28'
+slug: '21-useful-open-source-packages-for-react-native'
+tag: 'react-native'
+thumbnail: '/thumbnails/react.png'
 canonicalUrl: 'https://medium.com/crowdbotics/21-useful-open-source-packages-for-react-native-807f65a818a1'
 ---
 

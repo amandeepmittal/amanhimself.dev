@@ -1,11 +1,9 @@
 ---
-title: 'How to use React-Navigation in a React Native App'
-date: 2018-09-28
-slug: 'blog/navigation-in-a-react-native-app'
-thumbnail: '../thumbnails/react.png'
-template: post
-tags:
-  - react-native
+title: 'How to use React Navigation in a React Native App'
+date: '2018-09-28'
+slug: 'navigation-in-a-react-native-app'
+thumbnail: '/thumbnails/react.png'
+tag: 'react-native'
 canonicalUrl: 'https://medium.com/hackernoon/navigation-in-a-react-native-app-cf61ed85e80b'
 ---
 
@@ -13,11 +11,11 @@ Navigation plays an important role in mobile applications. Without navigation, t
 
 ### Getting Started
 
-Before building a mobile application it is recommended that one spends an amount of time strategising how the application will handle navigation and routing. In this module, we will be covering different navigation techniques available to us. First, let us setup our project. We will use **react native CLI tool** for this. If you haven’t installed it, type the first line otherwise if you already installed, you can skip the first command.
+Before building a mobile application it is recommended that one spends an amount of time strategize how the application will handle navigation and routing. In this module, we will be covering different navigation techniques available to us. First, let us setup our project. We will use **react native CLI tool** for this. If you haven’t installed it, type the first line otherwise if you already installed, you can skip the first command.
 
 Next, we will navigate into the new project directory and will run the project to see if everything is working fine by running the following command.
 
-![](https://cdn-images-1.medium.com/max/800/1*NlX0zu7oVyFJv_CKdLXMMg.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*NlX0zu7oVyFJv_CKdLXMMg.png' />
 
 After that, we will install the dependency we need to implement navigation in our application.
 
@@ -221,15 +219,15 @@ export default App;
 
 We are importing `StackNavigator` from `react-navigation` and all other screens we created inside the source directory.
 
-![](https://cdn-images-1.medium.com/max/800/1*7ucBAxqZoAqvDGEbHfSniQ.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*7ucBAxqZoAqvDGEbHfSniQ.png' />
 
 _Screen One_
 
-![](https://cdn-images-1.medium.com/max/800/1*mwaLBOP-jYybqXn4dN10Sg.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*mwaLBOP-jYybqXn4dN10Sg.png' />
 
 _Screen Two_
 
-![](https://cdn-images-1.medium.com/max/800/1*1i4GrVvkqB1qHoF5GjY5mQ.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*1i4GrVvkqB1qHoF5GjY5mQ.png' />
 
 _Screen Three_
 
@@ -269,7 +267,7 @@ export default createBottomTabNavigator({
 });
 ```
 
-![](https://cdn-images-1.medium.com/max/800/1*f8_SrGnqj7wR7m31-9bnVg.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*f8_SrGnqj7wR7m31-9bnVg.png' />
 
 Of course, you can modularize it a bit by separating Home and Setting screen in different components of their own. For our demo application, the above example serves the purpose. You can add `tabBarOptions` to modify its look and feel.
 
@@ -288,7 +286,7 @@ export default createBottomTabNavigator(
 );
 ```
 
-![](https://cdn-images-1.medium.com/max/800/1*tATWRPRM39a6UkruTayrTw.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*tATWRPRM39a6UkruTayrTw.png' />
 
 ### Conclusion
 

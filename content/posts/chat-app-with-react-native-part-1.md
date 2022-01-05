@@ -1,12 +1,9 @@
 ---
 title: 'Chat app with React Native (part 1) - Build reusable UI form elements using react-native-paper'
-slug: 'blog/chat-app-with-react-native-part-1'
-date: 2020-04-06
-template: post
-thumbnail: '../thumbnails/react.png'
-tags:
-  - react-native
-  - firebase
+slug: 'chat-app-with-react-native-part-1'
+date: '2020-04-06'
+thumbnail: '/thumbnails/react.png'
+tag: 'react-native'
 canonicalUrl: 'https://heartbeat.fritz.ai/chat-app-with-react-native-part-1-build-reusable-ui-form-elements-using-react-native-paper-75d82e2ca94f'
 ---
 
@@ -167,7 +164,7 @@ To being implementing screens in the current app, start by creating the most ess
 
 Here is a demo of the screen you are going to achieve in this section.
 
-![ss1](https://miro.medium.com/max/700/1*IGoOjbiB5pWNogRPqfl7rA.png)
+<img src='https://miro.medium.com/max/700/1*IGoOjbiB5pWNogRPqfl7rA.png' />
 
 Inside `src/`, create another directory called `screens/`. In this directory, we are going to store all screen components. Inside it, also create `LoginScreen.js`.
 
@@ -264,7 +261,7 @@ The way you have defined styles by creating an object is the preferred way. Not 
 
 If the user is not registered to use the app but wants to make a new account to get authorized, this where the signup screen becomes useful.
 
-![ss2](https://miro.medium.com/max/700/1*a_LZfux_VkejnIgdZ0MjIQ.png)
+<img src='https://miro.medium.com/max/700/1*a_LZfux_VkejnIgdZ0MjIQ.png' />
 
 Create a new file called `SignupScreen.js` inside `src/screens/` directory. It is going to be similar to the login screen that you created in the previous section in many ways. I am going to leave it to you to find similarities and differences between the two screens. Take a look at the code snippet for the signup screen below.
 
@@ -495,7 +492,7 @@ npx react-native run-android
 
 Then, go to the simulator and you are going to get the following result.
 
-![ss3](https://miro.medium.com/max/684/1*7UqfiUWxFDtSyR2_CQoigQ.gif)
+<img src='https://miro.medium.com/max/684/1*7UqfiUWxFDtSyR2_CQoigQ.gif' />
 
 ---
 
@@ -521,4 +518,4 @@ You can find the complete source code for this project at [this Github repo](htt
 
 - [Official documentation](http://reactnative.dev/)
 
-_Originally published at [Heartbeat.Fritz.Ai](https://heartbeat.fritz.ai/chat-app-with-react-native-part-1-build-reusable-ui-form-elements-using-react-native-paper-75d82e2ca94f)_.
+Originally published at [Heartbeat.Fritz.Ai](https://heartbeat.fritz.ai/chat-app-with-react-native-part-1-build-reusable-ui-form-elements-using-react-native-paper-75d82e2ca94f)

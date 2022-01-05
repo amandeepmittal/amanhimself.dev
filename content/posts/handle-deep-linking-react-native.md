@@ -1,15 +1,15 @@
 ---
 title: 'How to handle Deep Links in a React Native app'
-date: 2020-01-08
-template: post
-slug: 'slug/handle-deep-linking-react-native'
-thumbnail: '../thumbnails/react.png'
-tags:
-  - react-native
+date: '2020-01-08'
+slug: 'handle-deep-linking-react-native'
+thumbnail: '/thumbnails/react.png'
+tag: 'react-native'
 canonicalUrl: 'https://blog.jscrambler.com/how-to-handle-deep-linking-in-a-react-native-app/'
 ---
 
 ![cover](https://i.imgur.com/cHaZZW8.jpg)
+
+> Originally published at [Jscrambler](https://blog.jscrambler.com/how-to-handle-deep-linking-in-a-react-native-app/)
 
 Deep Linking is a technique in which with a given URL or resource, a specific page or screen in mobile gets open. Navigating to this specific page or screen which can be under a series of hierarchical pages, hence the term "deep", is called deep linking.
 
@@ -378,5 +378,3 @@ Now, let us try to open a user's detail based on available ids from an external 
 ## Conclusion
 
 That's it. You have now a complete demo of a React Native app that handles deep linking using `react-navigation`.
-
-Originally published at [Jscrambler](https://blog.jscrambler.com/how-to-handle-deep-linking-in-a-react-native-app/)

@@ -1,11 +1,9 @@
 ---
 title: 'How to use iOS simulator in full-screen'
-date: 2021-09-15
-template: post
-slug: 'blog/how-to-use-ios-simulator-in-full-screen'
-thumbnail: '../thumbnails/xcode.png'
-tags:
-  - tools
+date: '2021-09-15'
+slug: 'how-to-use-ios-simulator-in-full-screen'
+thumbnail: '/thumbnails/xcode.png'
+tag: 'tools'
 canonicalUrl: 'https://amanhimself.dev/blog/how-to-use-ios-simulator-in-full-screen/'
 ---
 

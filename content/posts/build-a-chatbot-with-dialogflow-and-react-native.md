@@ -1,11 +1,9 @@
 ---
 title: 'Build a Chatbot with Dialogflow and React Native'
-date: 2019-03-26
-template: post
-slug: 'blog/build-a-chatbot-with-dialogflow-and-react-native'
-thumbnail: '../thumbnails/react.png'
-tags:
-  - react
+date: '2019-03-26'
+slug: 'build-a-chatbot-with-dialogflow-and-react-native'
+thumbnail: '/thumbnails/react.png'
+tag: 'react-native'
 canonicalUrl: 'https://blog.jscrambler.com/build-a-chatbot-with-dialogflow-and-react-native/'
 ---
 

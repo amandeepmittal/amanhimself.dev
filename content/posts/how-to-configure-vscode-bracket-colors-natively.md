@@ -1,11 +1,9 @@
 ---
 title: 'How to configure VSCode Bracket Pair Colors Natively'
-date: 2021-10-12
-template: post
-slug: 'blog/how-to-configure-vscode-bracket-colors-natively'
-thumbnail: '../thumbnails/vscode.png'
-tags:
-  - tools
+date: '2021-10-12'
+slug: 'how-to-configure-vscode-bracket-colors-natively'
+thumbnail: '/thumbnails/vscode.png'
+tag: 'tools'
 canonicalUrl: 'https:/amanhimself.dev/blog/how-to-configure-vscode-bracket-colors-natively/'
 ---
 

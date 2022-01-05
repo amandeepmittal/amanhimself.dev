@@ -1,15 +1,11 @@
 ---
-date: 2017-10-12
+date: '2017-10-12'
 title: 'What is Ionic?'
-template: post
-thumbnail: '../thumbnails/ionic.png'
-slug: 'blog/what-is-ionic'
-tags:
-  - ionic
+thumbnail: '/thumbnails/ionic.png'
+slug: 'what-is-ionic'
+tag: 'ionic'
 canonicalUrl: 'https://medium.com/hackernoon/what-is-ionic-c1da6eab0d8a'
 ---
-
-![cover_image](https://miro.medium.com/max/2400/0*0DfSFC_T8pQhN0D_.jpg)
 
 Ionic is an open source, front-end SDK for developing Hybrid Mobile Applications using web technologies such as HTML, CSS and JavaScript. It provides mobile optimised web technology based components as well as native APIs using Cordova and Ionic Native.
 

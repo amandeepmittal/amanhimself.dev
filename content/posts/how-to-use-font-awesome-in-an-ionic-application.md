@@ -1,15 +1,11 @@
 ---
-date: 2017-10-18
+date: '2017-10-18'
 title: 'How to use Font Awesome in an Ionic Application'
-template: post
-thumbnail: '../thumbnails/ionic.png'
-slug: 'blog/how-to-use-font-awesome-in-an-ionic-application'
-tags:
-  - ionic
+thumbnail: '/thumbnails/ionic.png'
+slug: 'how-to-use-font-awesome-in-an-ionic-application'
+tag: 'ionic'
 canonicalUrl: 'https://medium.com/hackernoon/how-to-use-font-awesome-in-an-ionic-application-31638ed3f77d'
 ---
-
-![cover_image](https://miro.medium.com/max/2400/0*-qOkYtOyZk6wvaAS.jpg)
 
 There is an element of confusion when it comes to use FontAwesome in an Ionic Application. To include this fonts library in Ionic needs a bit of configuration and this step by step guide will provide just that.
 
@@ -44,7 +40,7 @@ Ionic includes a copy script file that is called during the build process when t
 
 The location of this script file is under `node_modules` folder:
 
-![](https://cdn-images-1.medium.com/max/800/0*samQXT4FoWTgUXK1.png)
+<img src='https://cdn-images-1.medium.com/max/800/0*samQXT4FoWTgUXK1.png' />
 
 Copy this file and paste in inside a new directory called `config` under the root directory of your Ionic application. Open the file and add fontawesome entries at the bottom of this file.
 
@@ -59,7 +55,7 @@ copyFontawesomeFonts: {
   }
 ```
 
-### Include Custom Copy Script in `package.json`
+### Include Custom Copy Script in package.json
 
 We must include this custom script inside our `package.json` file to override the one where we copied the original file from. Open the `package.json` file and add this json code:
 
@@ -98,7 +94,7 @@ To implement FontAwesome in this or any Ionic application after the above config
 </ion-content>
 ```
 
-![](https://cdn-images-1.medium.com/max/800/0*RnPachma2AAxR_SY.png)
+<img src='https://cdn-images-1.medium.com/max/800/0*RnPachma2AAxR_SY.png' />
 
 There are more than 675 icons available in FontAwesome and I think a combination of both Ionicons and FontAwesome will be enough for some the applications out there. You can even style them, change their `font-size` and color as per your needs.
 

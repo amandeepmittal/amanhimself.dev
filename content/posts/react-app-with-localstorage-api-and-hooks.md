@@ -1,11 +1,9 @@
 ---
 title: 'Build an Expense Tracker app with React Hooks and LocalStorage API'
-date: 2020-03-11
-slug: 'blog/react-app-with-localstorage-api-and-hooks'
-template: post
-thumbnail: '../thumbnails/react.png'
-tags:
-  - react
+date: '2020-03-11'
+slug: 'react-app-with-localstorage-api-and-hooks'
+thumbnail: '/thumbnails/react.png'
+tag: 'react'
 canonicalUrl: 'https://blog.crowdbotics.com/build-a-react-app-with-localstorage-api-and-hooks/'
 ---
 
@@ -19,7 +17,7 @@ In this tutorial, you are going to build a small Expense Tracker app that using 
 
 Here is a demo of how the end result of this tutorial will look like.
 
-![ss10](https://blog.crowdbotics.com/content/images/2019/09/ss10.gif)
+![ss10](https://crowdbotics.ghost.io/content/images/2019/09/ss10.gif)
 
 ## Table of Contents
 
@@ -84,7 +82,7 @@ export default App;
 
 Now, go back to the terminal window and run `yarn start`. You will see similar results in the browser window on the URL `http://localhost:3000`.
 
-![ss1](https://blog.crowdbotics.com/content/images/2019/09/ss1-1.png)
+![ss1](https://crowdbotics.ghost.io/content/images/2019/09/ss1-1.png)
 
 That's it for setting up Bootstrap 4 in a React app.
 
@@ -125,7 +123,7 @@ function App() {
 
 Make sure that `yarn start` is running and go the browser window to see this component in action. Click on any of the button to increase or decrease the count's value.
 
-![ss2](https://blog.crowdbotics.com/content/images/2019/09/ss2.gif)
+![ss2](https://crowdbotics.ghost.io/content/images/2019/09/ss2.gif)
 
 It works!
 
@@ -191,7 +189,7 @@ The first argument, `accumulator` returns the value of the previous invocation o
 
 Now, if you go to the browser window, you will get the following result.
 
-![ss3](https://blog.crowdbotics.com/content/images/2019/09/ss3-1.png)
+![ss3](https://crowdbotics.ghost.io/content/images/2019/09/ss3-1.png)
 
 ## Add input fields
 
@@ -287,7 +285,7 @@ export default App
 
 In the browser window, you will get the following result.
 
-![ss4](https://blog.crowdbotics.com/content/images/2019/09/ss4.png)
+![ss4](https://crowdbotics.ghost.io/content/images/2019/09/ss4.png)
 
 ## Add a list to display expenses
 
@@ -352,7 +350,7 @@ function App() {
 
 Visiting the browser window will yield the following list.
 
-![ss5](https://blog.crowdbotics.com/content/images/2019/09/ss5.png)
+![ss5](https://crowdbotics.ghost.io/content/images/2019/09/ss5.png)
 
 ## Handling controlled input fields with Hooks
 
@@ -461,7 +459,7 @@ export default Form;
 
 Now, go to the browser window. Make sure to open **Console** tab from the **Developer Tools**. Start typing into an input field, and you will see the console statement corresponding to a particular input fields triggers.
 
-![ss6](https://blog.crowdbotics.com/content/images/2019/09/ss6-1.gif)
+![ss6](https://crowdbotics.ghost.io/content/images/2019/09/ss6-1.gif)
 
 ## Handling Form submission
 
@@ -493,11 +491,11 @@ Lastly, you have to clear both the input fields after the form submission. Set t
 
 Go the browser window and try adding a few items. Do notice that the **Total Expense** gets an update after each form submission.
 
-![ss7](https://blog.crowdbotics.com/content/images/2019/09/ss7.gif)
+![ss7](https://crowdbotics.ghost.io/content/images/2019/09/ss7.gif)
 
 On the empty submission, it will trigger the `else` clause. To see it in action, make sure you have **Console** tab from **Developer Tools** open.
 
-![ss8](https://blog.crowdbotics.com/content/images/2019/09/ss8.gif)
+![ss8](https://crowdbotics.ghost.io/content/images/2019/09/ss8.gif)
 
 ## Adding localStorage API to persist data
 
@@ -517,7 +515,7 @@ const ALL_EXPENSES = localStorage.getItem('expenses')
 
 Using the method `getItem()` from the `localStorage` API you can read any value stored. However, right now, there is no value stored so it is going to be an empty array. You can verify this by opening **Developer Tools** > **Application** > **Storage** > **LocalStorage** > **https://localhost:3000**.
 
-![ss9](https://blog.crowdbotics.com/content/images/2019/09/ss9.png)
+![ss9](https://crowdbotics.ghost.io/content/images/2019/09/ss9.png)
 
 ## Adding side-effects
 
@@ -547,11 +545,11 @@ The `useEffect` is still going to run after the initial render but won't run aft
 
 See the demo below.
 
-![ss10](https://blog.crowdbotics.com/content/images/2019/09/ss10-1.gif)
+![ss10](https://crowdbotics.ghost.io/content/images/2019/09/ss10-1.gif)
 
 Notice that it works. If you refresh the browser window, the list stays as it is.
 
-![ss11](https://blog.crowdbotics.com/content/images/2019/09/ss11.gif)
+![ss11](https://crowdbotics.ghost.io/content/images/2019/09/ss11.gif)
 
 ## Deleting all items from the list
 
@@ -645,11 +643,11 @@ export default Form;
 
 Notice, that right now there are three items in the list, as shown below.
 
-![ss12](https://blog.crowdbotics.com/content/images/2019/09/ss12.png)
+![ss12](https://crowdbotics.ghost.io/content/images/2019/09/ss12.png)
 
 On clicking the delete button will erase all the items from the localstorage.
 
-![ss13](https://blog.crowdbotics.com/content/images/2019/09/ss13.gif)
+![ss13](https://crowdbotics.ghost.io/content/images/2019/09/ss13.gif)
 
 ## Conclusion
 
@@ -663,4 +661,4 @@ You have just learned the basics of React hooks and how to implement them in a r
 
 To learn more about React hooks, I can highly recommend following React official documentation [**here**](https://reactjs.org/docs/hooks-effect.html).
 
-_Originally published at [Crowdbotics' Blog](https://blog.crowdbotics.com/build-a-react-app-with-localstorage-api-and-hooks/)_.
+_Originally published at [Crowdbotics' Blog](https://crowdbotics.ghost.io/build-a-react-app-with-localstorage-api-and-hooks/)_.

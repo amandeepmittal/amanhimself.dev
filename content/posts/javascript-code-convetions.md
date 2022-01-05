@@ -1,11 +1,9 @@
 ---
-date: 2016-01-08
+date: '2016-01-08'
 title: 'JavaScript Code Conventions'
-template: post
-thumbnail: '../thumbnails/js.png'
-slug: 'blog/javascript-code-conventions'
-tags:
-  - javascript
+thumbnail: '/thumbnails/js.png'
+slug: 'javascript-code-conventions'
+tag: 'javascript'
 canonicalUrl: 'https://amanhimself.dev/blog/javascript-code-conventions/'
 ---
 

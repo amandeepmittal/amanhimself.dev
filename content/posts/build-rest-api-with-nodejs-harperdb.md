@@ -1,12 +1,9 @@
 ---
 title: 'Build a REST API with Node.js and HarperDB'
-slug: 'blog/build-rest-api-with-nodejs-harperdb'
-date: 2020-07-23
-template: post
-thumbnail: '../thumbnails/harperdb.png'
-tags:
-  - nodejs
-  - harperdb
+slug: 'build-rest-api-with-nodejs-harperdb'
+date: '2020-07-23'
+thumbnail: '/thumbnails/harperdb.png'
+tag: 'harperdb'
 canonicalUrl: 'https://amanhimself.dev/blog/build-rest-api-with-nodejs-harperdb/'
 ---
 

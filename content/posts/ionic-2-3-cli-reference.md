@@ -1,15 +1,13 @@
 ---
-date: 2017-12-19
 title: 'Ionic 2/3 CLI Reference'
-template: post
-thumbnail: '../thumbnails/ionic.png'
-slug: 'blog/ionic-2-3-cli-reference'
-tags:
-  - ionic
+date: '2017-12-19'
+thumbnail: '/thumbnails/ionic.png'
+slug: 'ionic-2-3-cli-reference'
+tag: 'ionic'
 canonicalUrl: 'https://medium.com/hackernoon/ionic-2-3-cli-reference-13f9fae3f964'
 ---
 
-![cover_image](https://miro.medium.com/max/2560/0*bpOjlkmo8k7rocHb.jpg)
+> [Originally Published at Hackernoon.com](https://medium.com/hackernoon/ionic-2-3-cli-reference-13f9fae3f964)
 
 > _The Ionic CLI is your go-to tool for developing Ionic apps._
 
@@ -151,7 +149,7 @@ Now, generate resources for a specific platform:
 $ ionic cordova resources android
 ```
 
-## Add [Ionic Native](https://ionicframework.com/docs/v2/native/) Plugins
+## Add Ionic Plugins
 
 ```shell
 $ ionic cordova plugin [action] [plugin]
@@ -206,5 +204,3 @@ $ git log --oneline --graph --decorate --color
 # Output
 * 029f86e (HEAD -> master) Initial commit
 ```
-
-[Originally Published at Hackernoon.com](https://medium.com/hackernoon/ionic-2-3-cli-reference-13f9fae3f964)

@@ -1,11 +1,9 @@
 ---
 title: 'How to Build a Serverless Backend with AWS Lambda and Nodejs'
-date: 2018-11-13
-slug: 'blog/how-to-build-a-serverless-backend-with-aws-lambda-and-nodejs'
-template: post
-thumbnail: '../thumbnails/node.png'
-tags:
-  - nodejs
+date: '2018-11-13'
+slug: 'how-to-build-a-serverless-backend-with-aws-lambda-and-nodejs'
+thumbnail: '/thumbnails/node.png'
+tag: 'nodejs'
 canonicalUrl: 'https://medium.com/crowdbotics/how-to-build-a-serverless-backend-with-aws-lambda-and-nodejs-e0d1257086b4'
 ---
 
@@ -42,7 +40,7 @@ The execution duration here means that your Lambda function can only run a maxim
 
 A typical lambda function in a Node.js server will look like below.
 
-![](https://cdn-images-1.medium.com/max/1200/1*a8oVpnOEISTzsuLEH9UaqA.png)
+<img src='https://cdn-images-1.medium.com/max/1200/1*a8oVpnOEISTzsuLEH9UaqA.png' />
 
 In the above syntax, `handlerFunction` is the name of our Lambda function. The `event` object contains information about the event that triggers the lambda function on execution. The `context` object contains information about the runtime. Rest of the code is written inside the Lambda function and at last a `callback` is invoked with an error object and result object. We will learn more about these objects later when are going to implement them.
 
@@ -50,15 +48,15 @@ In the above syntax, `handlerFunction` is the name of our Lambda function. The `
 
 In order to setup a Lambda function on AWS, we need to first register an account for the access keys. Use your credentials to login or signup a new account on [console.amazon.com](https://portal.aws.amazon.com/billing/signup#/start) and once you are through the verification process you will be welcomed by the following screen.
 
-![](https://cdn-images-1.medium.com/max/1200/1*Z_nBXZzDdIuiuM6JdFGqGA.png)
+<img src='https://cdn-images-1.medium.com/max/1200/1*Z_nBXZzDdIuiuM6JdFGqGA.png' />
 
 To get the keys and permissions in order to deploy a function, we have to switch to Identity and Access Management (IAM). Then go to `Users` tab from the left hand sidebar and click on the button `Add user`. Fill in the details in the below form and do enable `Access Type > Programmatic Access`.
 
-![](https://cdn-images-1.medium.com/max/1200/1*PHUnYi1euJNBo1DCgIP2Sw.png)
+<img src='https://cdn-images-1.medium.com/max/1200/1*PHUnYi1euJNBo1DCgIP2Sw.png' />
 
 Then on the next page, select `Attach Existing Policies Directly` and then select a policy name `AdministratorAccess`.
 
-![](https://cdn-images-1.medium.com/max/1200/1*ZwcXfwj7ZtSW6PzZxGJDNQ.png)
+<img src='https://cdn-images-1.medium.com/max/1200/1*ZwcXfwj7ZtSW6PzZxGJDNQ.png' />
 
 Click `Next: Review` button and then click `Create User` button when displayed. Proceeding to the next step you will see the user was created. Now, and only now, will you have access to the users Access Key ID and Secret Access Key. This information is unique for every user you create.
 
@@ -78,15 +76,15 @@ serverless
 
 Or use the shorthand `sls` for `serverless`. This command will display all the available commands that come with the serverless framework.
 
-![](https://cdn-images-1.medium.com/max/1200/1*J5dUlRdUkpTqNY2POPK7ag.png)
+<img src='https://cdn-images-1.medium.com/max/1200/1*J5dUlRdUkpTqNY2POPK7ag.png' />
 
 After installing the `serverless` dependency as a global package, you are ready to create your first function. To start, you will need to configure your AWS registered user credentials. AWS gives you a link to download access keys when creating a user.
 
-![](https://cdn-images-1.medium.com/max/800/1*b8xegxAg6xjsMC4CHFsYzA.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*b8xegxAg6xjsMC4CHFsYzA.png' />
 
 You can also visit your username and visit _Security Credentials_ like below.
 
-![](https://cdn-images-1.medium.com/max/1200/1*9M0Nb4QTI9gFxoG1wVh1jA.png)
+<img src='https://cdn-images-1.medium.com/max/1200/1*9M0Nb4QTI9gFxoG1wVh1jA.png' />
 
 Now let us configure AWS with the serverless package.
 
@@ -96,7 +94,7 @@ sls config credentials --provider aws --key ACCESS_KEY --secret SECRET_KEY
 
 If the above command runs successfully you will get a success message like below
 
-![](https://cdn-images-1.medium.com/max/800/1*uqlYKZAAgpDAWmXhN8mB0A.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*uqlYKZAAgpDAWmXhN8mB0A.png' />
 
 The good thing about using `serverless` npm package is that it comes with pre-defined templates that you can create in your project using a command and also creates a basic configuration for us that is required to deploy our Lambda function. To get started, I am going to use `aws-nodejs` template inside a new directory.
 
@@ -148,7 +146,7 @@ sls deploy
 
 It will take a few minutes to finish the process. Our serverless function gets packed into a `.zip` file. Take a notice at the **Service Information** below. It contains all the information what endpoints are available, what is our function, where it is deployed and so on.
 
-![](https://cdn-images-1.medium.com/max/800/1*m2FL-IdSqaFhKMuSmKnT_Q.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*m2FL-IdSqaFhKMuSmKnT_Q.png' />
 
 You can try the `invoke` attribute like following to run the function and see the result.
 
@@ -158,7 +156,7 @@ sls invoke --function hello
 
 The output will look like below.
 
-![](https://cdn-images-1.medium.com/max/800/1*W_iWmZ_bVhyjp7mfbmBN6Q.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*W_iWmZ_bVhyjp7mfbmBN6Q.png' />
 
 Take a look at the configuration in `serverless.yml`.
 
@@ -283,23 +281,23 @@ We already have the first two, all we need is to setup a [MongoDB](https://mediu
 
 We will start by creating a database on the MongoDB Atlas. Login to the site and create an account if you do not have it already. We just need a sandbox environment to get hands-on experience so we must opt for free tier. Once you have your account set up, open up your account page and add a new organization.
 
-![](https://cdn-images-1.medium.com/max/800/1*7W3seaSdt-J2JfQYHidnhQ.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*7W3seaSdt-J2JfQYHidnhQ.png' />
 
 Now, after entering the name, proceed further and click on _Create Organization_.
 
-![](https://cdn-images-1.medium.com/max/800/1*PfITUpnG3MXuQz23mskXNQ.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*PfITUpnG3MXuQz23mskXNQ.png' />
 
 You will be then prompted to the main screen where you can create a new project. Type in the name of your project and proceed further.
 
-![](https://cdn-images-1.medium.com/max/800/1*d9BZjyAy5FPLB7TEXq3Ccw.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*d9BZjyAy5FPLB7TEXq3Ccw.png' />
 
 MongoDB Atlas is secured by default. You need to set permissions before we leverage its usage in our app. You can name the database at the pointed field below.
 
-![](https://cdn-images-1.medium.com/max/800/1*h1fSIz3G3svG6wzTCATiAA.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*h1fSIz3G3svG6wzTCATiAA.png' />
 
 Now, we can add our free sandbox to this project. It is called a cluster.
 
-![](https://cdn-images-1.medium.com/max/800/1*1PO22dNYhGRkSzuwEilmFg.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*1PO22dNYhGRkSzuwEilmFg.png' />
 
 After all that, just add an admin user for the cluster and give him a really strong password. As you can see the price for this cluster will be `$0.00` forever. Your cluster will take a few minutes to deploy. While that is underway, let us finally start writing some code.
 
@@ -562,8 +560,9 @@ Protecting our keys and other essentials is the first step to a secured backend 
 
 To find out our MongoDB URL, we need to go back to the mongodb atlas, to out previously created cluster. Click the button `Connect` and then you will be prompted a page where you can choose how to access the application. Click `Allow Access From Anywhere`.
 
-![](https://cdn-images-1.medium.com/max/800/1*tu5gwq1g-L_nWjpfUEz_ag.png)
-![](https://cdn-images-1.medium.com/max/800/1*sMkkGj1_unFYQveVf2Huew.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*tu5gwq1g-L_nWjpfUEz_ag.png' />
+
+<img src='https://cdn-images-1.medium.com/max/800/1*sMkkGj1_unFYQveVf2Huew.png' />
 
 Copy the mongodb URL from above and paste it in the `variables.env` file.
 
@@ -589,7 +588,7 @@ sls deploy
 
 Since we have connected our Lambda function, this command will prompt us with a different endpoints. Each handler function is deployed as a separate REST endpoint.
 
-![](https://cdn-images-1.medium.com/max/800/1*vNUMO69rnmx5y-QF3Kr6-Q.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*vNUMO69rnmx5y-QF3Kr6-Q.png' />
 
 You can test your API using CURL command from the terminal like below.
 

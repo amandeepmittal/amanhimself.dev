@@ -1,24 +1,17 @@
 ---
 title: 'Image Classification on React Native with TensorFlow.js and MobileNet'
-date: 2019-10-17
-slug: 'blog/tensorflow-image-classification-expo'
-thumbnail: '../thumbnails/expo.png'
-template: post
-tags:
-  - expo
-  - react-native
+date: '2019-10-17'
+slug: 'tensorflow-image-classification-expo'
+thumbnail: '/thumbnails/expo.png'
+tag: 'expo'
 canonicalUrl: 'https://heartbeat.fritz.ai/image-classification-on-react-native-with-tensorflow-js-and-mobilenet-48a39185717c'
 ---
 
 Recently, the alpha version [Tensorflow.js](https://www.tensorflow.org/js/) for React Native and Expo applications was released. It currently provides the capabilities of loading pre-trained models and training. Here is the announcement tweet:
 
-[Tweet](https://twitter.com/tensorflow/status/1169309153715732480?lang=en)
+> [Tweet](https://twitter.com/tensorflow/status/1169309153715732480?lang=en)
 
 TensorFlow.js provides many [pre-trained models](https://github.com/tensorflow/tfjs-models) that simplify the time-consuming task of training a machine learning model from scratch. In this tutorial, we are going to explore [Tensorflow.js](https://www.tensorflow.org/js/) and the MobileNet pre-trained model to classify image based on the input image provided in a React Native mobile application.
-
-By the end of this tutorial, the app will look like the following:
-
-![ss7](https://miro.medium.com/max/300/1*WAqYzWkHEiXMbFKrelpR7A.png)
 
 Here is the link to the complete code in a [Github repo](https://github.com/amandeepmittal/mobilenet-tfjs-expo) for your reference.
 
@@ -100,11 +93,11 @@ Since the lifecycle method is asynchronous, it will only update the value of `is
 
 You can see the output in the simulator device as shown below.
 
-![ss1](https://miro.medium.com/max/300/1*Qc2DyJWJztezFuQ8JltDlw.png)
+<img src='https://miro.medium.com/max/300/1*Qc2DyJWJztezFuQ8JltDlw.png' />
 
 Or in the console, if using the `console` statement as the above snippet.
 
-![ss2](https://miro.medium.com/max/319/1*0rmnFTDv6wAHCBdggIk8TA.png)
+<img src='https://miro.medium.com/max/319/1*0rmnFTDv6wAHCBdggIk8TA.png' />
 
 ## Loading Tensorflow model
 
@@ -147,11 +140,11 @@ Lastly, the display on the screen when the loading of the model is complete.
 
 When the model is being loaded, it will display the following message.
 
-![ss3](https://miro.medium.com/max/300/1*DIZZk1CMDLwnmq7XUq9TOA.png)
+<img src='https://miro.medium.com/max/300/1*DIZZk1CMDLwnmq7XUq9TOA.png' />
 
 When the loading of the MobileNet model is complete, you will get the following output.
 
-![ss4](https://miro.medium.com/max/300/1*hS5fFnGr4R_5Zuj9nHvtCg.png)
+<img src='https://miro.medium.com/max/300/1*hS5fFnGr4R_5Zuj9nHvtCg.png' />
 
 ## Asking user permissions
 
@@ -267,7 +260,7 @@ classifyImage = async () => {
 
 The results from the pre-trained model are yield in an array. An example is shown below.
 
-![ss5](https://miro.medium.com/max/376/1*MIDSYfqejEkwyLO6SKkY9Q.png)
+<img src='https://miro.medium.com/max/376/1*MIDSYfqejEkwyLO6SKkY9Q.png' />
 
 ## Allow user to pick the image
 
@@ -431,15 +424,15 @@ const styles = StyleSheet.create({
 
 Run the application by executing the `expo start` command from a terminal window. The first thing you’ll notice is that upon bootstrapping the app in the Expo client, it will ask for permissions.
 
-![ss6](https://miro.medium.com/max/300/1*yI8SE6c25GMpfSoqgethYg.png)
+<img src='https://miro.medium.com/max/300/1*yI8SE6c25GMpfSoqgethYg.png' />
 
 Then, once the model is ready, it will display the text **"Tap to choose image"** inside the box. Select an image to see the results.
 
-![ss8](https://miro.medium.com/max/358/1*qxXtE5tU7yuuFKVKjQbIFg.gif)
+<img src='https://miro.medium.com/max/358/1*qxXtE5tU7yuuFKVKjQbIFg.gif' />
 
 Predicting results can take some time. Here are the results of the previously selected image.
 
-![ss9](https://miro.medium.com/max/300/1*7yGIbTerLleJeSDUN5LW2A.png)
+<img src='https://miro.medium.com/max/300/1*7yGIbTerLleJeSDUN5LW2A.png' />
 
 ## Conclusion
 

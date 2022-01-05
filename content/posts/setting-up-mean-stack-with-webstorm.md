@@ -1,11 +1,9 @@
 ---
-date: 2017-07-02
+date: '2017-07-02'
 title: 'Setting up MEAN Stack with Webstorm'
-template: post
-thumbnail: '../thumbnails/node.png'
-slug: 'blog/setting-up-mean-stack-with-webstorm'
-tags:
-  - tools
+thumbnail: '/thumbnails/node.png'
+slug: 'setting-up-mean-stack-with-webstorm'
+tag: 'tools'
 canonicalUrl: 'https://amanhimself.dev/blog/setting-up-mean-stack-with-webstorm/'
 ---
 

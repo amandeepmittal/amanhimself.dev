@@ -1,16 +1,11 @@
 ---
 title: 'Handle different field types in React Native forms with formik and yup'
-date: 2019-10-26
-template: post
-slug: 'blog/handle-different-field-types-in-react-native-forms'
-thumbnail: '../thumbnails/expo.png'
-tags:
-  - expo
-  - react-native
+date: '2019-10-26'
+slug: 'handle-different-field-types-in-react-native-forms'
+thumbnail: '/thumbnails/expo.png'
+tag: 'expo'
 canonicalUrl: 'https://heartbeat.fritz.ai/handling-different-field-types-in-react-native-forms-with-formik-and-yup-fa9ea89d867e'
 ---
-
-![cover](https://i.imgur.com/CqvpN8D.png)
 
 In the [previous post](https://amanhimself.dev/build-validate-forms-with-react-native-formik-yup), you did a lot of things. From creating Login and Signup forms from scratch and using powerful libraries like Formik and yup to validate those forms.
 
@@ -188,7 +183,7 @@ See the below demonstration on how it works.
 
 In this section, you are going to add the ability to hide or show the password on the corresponding field. By the end of this section, the password input field is going to look like this.
 
-![3](https://cdn-images-1.medium.com/max/800/1*1-32GyAIseC81jkInsRxSg.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*1-32GyAIseC81jkInsRxSg.png' />
 
 To start, open `Login.js` file and import `TouchableOpacity` from `react-native` and `Ionicons` from expo's vector icons library which comes with Expo SDK.
 
@@ -232,7 +227,7 @@ rightIcon={
 
 This is the output you are going to get.
 
-![4](https://cdn-images-1.medium.com/max/800/1*m5e8YiiykjcR2h9-PuqwqA.gif)
+<img src='https://cdn-images-1.medium.com/max/800/1*m5e8YiiykjcR2h9-PuqwqA.gif' />
 
 ## Conclusion
 

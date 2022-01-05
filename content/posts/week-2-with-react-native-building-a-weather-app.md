@@ -1,14 +1,14 @@
 ---
 title: 'Week 2 With React Native - Building a Weather App'
-slug: 'blog/week-2-with-react-native-building-a-weather-app'
-date: 2018-07-16
-thumbnail: '../thumbnails/expo.png'
+slug: 'week-2-with-react-native-building-a-weather-app'
+date: '2018-07-16'
+thumbnail: '/thumbnails/expo.png'
 template: post
-tags:
-  - expo
-  - react-native
+tag: 'expo'
 canonicalUrl: 'https://medium.com/hackernoon/week-2-with-react-native-building-a-weather-app-ca50fcfcb1e1'
 ---
+
+> [Originally published at Hackernoon.com](https://medium.com/hackernoon/week-2-with-react-native-building-a-weather-app-ca50fcfcb1e1)
 
 This post was supposed to come out last weekend. I had a busy weekend could not find the time to write it nor had the energy to pull off it. Last week, I announced publicly, [in the first post](https://medium.com/@amanhimself/starting-over-with-react-native-aff0dbdf5909), that I have re-started learning and getting hands on experience using React Native. This post is a continuation to that one.
 
@@ -35,8 +35,8 @@ This tool is completely open source and saves a lot of my time and yours will to
 
 Next thing I worked on was a small application that I built to fetch weather of city using a third party API and display a set of data in the form of a card. This is how it looks like.
 
-![](https://cdn-images-1.medium.com/max/600/1*8sX4gioUkxc6CaCE3IY7fw.png)
-![](https://cdn-images-1.medium.com/max/600/1*VLrUivlGwriPsnfMWlwd-w.png)
+![](https://i.imgur.com/XPIOrxO.png)
+![](https://i.imgur.com/5rz4eNi.png)
 
 The main elements that I used in building this application are the following:
 
@@ -49,7 +49,7 @@ Background Image changes accordingly to the type of the weather which is fetched
 
 Developing for Mobile is different from developing an app for web. In mobile, there are so many different elements to use and take care of. For example, in the below screen notice two things. One is a little cross button to delete the text in one action from the input field (only supported for iOS by RN API, I am sure there might be solution for android but I haven’t tried yet). Next, is the `KeyboardAvoidingView` which automatically re-positions the keyboard (or any other UI element) in the view to show maximum display elements.
 
-![KeyboardAvoidingView Example](https://cdn-images-1.medium.com/max/800/1*h7Zm66n-FRz63uJ0PPqppw.gif)
+![KeyboardAvoidingView Example](https://i.imgur.com/a81AmEV.gif)
 
 In this process, I also learned that creating a custom component is not so hard but publishing it on `npm` for React Native apps is a difficult task. The card view in this application I am using can be found here as a separate component:
 
@@ -62,5 +62,3 @@ I had a fun week with React Native. I tried to spend as much time as I could get
 I also published another article this week on React Native:
 
 [_React Native: How to Setup Your First App_](https://medium.com/@amanhimself/react-native-how-to-setup-your-first-app-a36c450a8a2f)
-
-[Originally published at Hackernoon.com](https://medium.com/hackernoon/week-2-with-react-native-building-a-weather-app-ca50fcfcb1e1)

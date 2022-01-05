@@ -1,12 +1,9 @@
 ---
 title: 'How to Build an Audio Player in React Native'
-date: 2019-08-28
-template: post
-slug: 'blog/build-an-audio-player-in-react-native'
-thumbnail: '../thumbnails/expo.png'
-tags:
-  - expo
-  - react-native
+date: '2019-08-28'
+slug: 'build-an-audio-player-in-react-native'
+thumbnail: '/thumbnails/expo.png'
+tag: 'expo'
 canonicalUrl: 'https://blog.jscrambler.com/how-to-build-an-audio-player-in-react-native/'
 ---
 

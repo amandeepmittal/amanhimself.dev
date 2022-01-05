@@ -1,14 +1,13 @@
 ---
 title: 'Styling The React Native Way'
-slug: 'blog/styling-the-react-native-way'
-date: 2020-06-04
-thumbnail: '../thumbnails/expo.png'
-template: post
-tags:
-  - expo
-  - react-native
+slug: 'styling-the-react-native-way'
+date: '2020-06-04'
+thumbnail: '/thumbnails/expo.png'
+tag: 'expo'
 canonicalUrl: 'https://amanhimself.dev/blog/styling-the-react-native-way/'
 ---
+
+> [Originally published at Level up coding on January 14, 2019.](https://levelup.gitconnected.com/styling-the-react-native-way-3cc6d3ef52d0)
 
 React Native comes with many in-built components that you can use to style cross-platform applications. Styling a mobile application is essential. I cannot put enough emphasis on how important it is for a mobile app to have a pleasing design and good use of colors can be provide a better user experience. Without a polished user interface, a potential user will be repelled by the lack of design in the mobile app.
 
@@ -49,7 +48,7 @@ export default function App() {
 
 The result of the above code of snippet is following.
 
-![ss1](https://cdn-images-1.medium.com/max/200/1*MC9_WOIQrWsi8VEmHxQOOw.png)
+![ss1](https://i.imgur.com/GHvCHh4.png)
 
 In the post [**Getting Started with React Native in 2019**](https://amanhimself.dev/getting-started-with-react-native-in-2019-build-your-first-app/), I've described about `StyleSheet` object. It is the second way.
 
@@ -175,7 +174,7 @@ const styles = StyleSheet.create({
 
 The following is the result for the above snippet.
 
-![ss5](https://cdn-images-1.medium.com/max/200/1*K46jXY4aP6YfStmwRLN1Wg.png)
+![ss5](https://i.imgur.com/GHvCHh4.png)
 
 Do notice that, the last style passed in overrides the previous style when there is a duplicate `color` property.
 
@@ -270,10 +269,9 @@ By defining the state, you can declare the default value of the dark theme to be
 
 You can see this in action below.
 
-![ss6](https://cdn-images-1.medium.com/max/200/1*lG6ap43gDnoPulgdUiSwPA.gif)
+![ss6](https://i.imgur.com/uEQLG9f.gif)
 
 - You can find the complete code for the example at [this Expo Snack](https://snack.expo.io/@amanhimself/38e20d).
-- [Originally published at Level up coding on January 14, 2019.](https://levelup.gitconnected.com/styling-the-react-native-way-3cc6d3ef52d0)
 - A big thank you to [Catalin Miron](https://twitter.com/mironcatalin) for proof reading it 🤗
 
 **Resources & Further Reading:**

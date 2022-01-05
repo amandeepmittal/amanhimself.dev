@@ -1,11 +1,9 @@
 ---
 title: 'How to use the Geolocation API in a React Native app'
-slug: 'blog/how-to-use-the-geolocation-api-in-a-react-native-app'
-date: 2019-08-16
-template: post
-thumbnail: '../thumbnails/react.png'
-tags:
-  - react-native
+slug: 'how-to-use-the-geolocation-api-in-a-react-native-app'
+date: '2019-08-16'
+thumbnail: '/thumbnails/react.png'
+tag: 'react-native'
 canonicalUrl: 'https://heartbeat.fritz.ai/how-to-use-the-geolocation-api-in-a-react-native-app-b5e611b00a0c'
 ---
 
@@ -15,15 +13,15 @@ The Geolocation API returns different methods such as `getCurrentPosition` to ge
 
 Along with this, you’re going to implement a real-time feature to ask **user permissions**. Permissions in `react-native-cli` can be a bit tricky, but after reading this article, it should be much easier.
 
-### **What are we building?**
+### What are we building?
 
 In this tutorial, we’ll start by going to use basic methods from the Geolocation API and then build a complete app in React Native using a `react-native` command-line interface tool.
 
 The outcome of following this tutorial is going to be a complete React Native weather application that consumes weather data from a third-party API and presents that data in a simple UI.
 
-![](https://cdn-images-1.medium.com/max/800/1*PMstW38hq0Zza4T8mZr6qg.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*PMstW38hq0Zza4T8mZr6qg.png' />
 
-### **Table of Contents**
+### Table of Contents
 
 - Getting Started with `react-native-cli`
 - Accessing Geolocation API
@@ -68,7 +66,7 @@ react-native run-ios
 
 The second command will run the build process for the iOS platform. You can run `react-native run-android` if you wish to you use an Android emulator. Since our application is ‘bare minimum’ right now and doesn’t contain much source code, except in the `App.js` file, you’ll see the image below when the app runs for the first time in the simulator.
 
-![](https://cdn-images-1.medium.com/max/800/1*T3QXVm1-unXEjKEZhmKo7A.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*T3QXVm1-unXEjKEZhmKo7A.png' />
 
 If you take a look at the project structure, you’ll notice that there are separate build folders such as `/android` and `/ios` for each platform to bootstrap the application.
 
@@ -131,21 +129,21 @@ const styles = StyleSheet.create({
 
 Observe the function `findCoordinates`. It holds the logic of fetching a device's current location. We’re also using the local state object to store and display the returned data object provided by `position`.
 
-![](https://cdn-images-1.medium.com/max/800/1*LmcWwnrsZOXkGbmagtx7Mw.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*LmcWwnrsZOXkGbmagtx7Mw.png' />
 
 When you click the text `Find My Coords?` (it’s touchable since we’re using `TouchableOpacity`) it will first ask for permission, as shown below.
 
-![](https://cdn-images-1.medium.com/max/800/1*72jjzVbVBLl-mTdk_vMA7w.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*72jjzVbVBLl-mTdk_vMA7w.png' />
 
 Note that even in development mode and while running the app in a simulator, permission is only asked for once. To perform this again, you’ll have to delete the app from your simulator and re-run the command to start the Expo app. When permission is granted, it will fetch the result, store it in the app’s state, and display the returned object:
 
-![](https://cdn-images-1.medium.com/max/800/1*K5bwsAxiRQm0Z2qImvniaA.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*K5bwsAxiRQm0Z2qImvniaA.png' />
 
 ### Setting Permissions for iOS and Android
 
 In iOS, geolocation is enabled by default when a project is created using the `react-native-cli`. To use it, we just need to include a key in `info.plist`, which is inside the `ios/geoWeatherApp` directory.
 
-![](https://cdn-images-1.medium.com/max/800/1*2be8SbVAPPukbDgPUsl29g.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*2be8SbVAPPukbDgPUsl29g.png' />
 
 That field is already there if you check the file. In order to enable geolocation in the background, you need to include the `NSLocationAlwaysUsageDescription` key in `info.plist` file and add location as a background mode in the `Capabilities` tab through Xcode. Also, if you’re using CocoaPods for React Native, make sure to include the `RCTGeolocation` sub-podspec.
 
@@ -155,15 +153,15 @@ For Android, we need to add the following line in our `android/app/src/AndroidMa
 <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 ```
 
-![](https://cdn-images-1.medium.com/max/800/1*lDejJzVSE6YGIRGT_Lgbjw.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*lDejJzVSE6YGIRGT_Lgbjw.png' />
 
 Now if you run your application in the Android Emulator, you’ll see the same welcome screen as shown before in the iOS simulator. Click on the text `Find My Coords?` and you’ll be prompted to ask whether to allow the application to request the user’s location or not.
 
-![](https://cdn-images-1.medium.com/max/800/1*gJVJOiCG4NO45iEnmwfdtA.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*gJVJOiCG4NO45iEnmwfdtA.png' />
 
 If you press allow, you’ll see the following result.
 
-![](https://cdn-images-1.medium.com/max/800/1*H9Pj8TlBfWqlrtZfmPWteQ.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*H9Pj8TlBfWqlrtZfmPWteQ.png' />
 
 You can find the complete code for this part of the tutorial in the repository below.
 
@@ -173,7 +171,7 @@ In this section, we’re going to take what we learned in the last section and b
 
 First, we need to gather the API key from [OpenWeatherMap](https://openweathermap.org/api). Sign in or make a new account if you don’t already have one (it’s free, no worries). Using this API, we’re going to build a simple mobile application that uses a mobile device’s geolocation. The coordinates from a user’s location will be passed to the OpenWeatherMap API which, in return, will give us a forecast for that location.
 
-![](https://cdn-images-1.medium.com/max/800/1*8yiknE8jK7gnClfanEsSfw.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*8yiknE8jK7gnClfanEsSfw.png' />
 
 Once you’re logged in, visit [**https://home.openweathermap.org/api_keys**](https://home.openweathermap.org/api_keys) to fetch your API key. There’s a default API key provided by OpenWeatherMap, so we’re going to use that in our project.
 
@@ -206,7 +204,7 @@ const styles = StyleSheet.create({
 
 And you’ll see the following output is rendered.
 
-![](https://cdn-images-1.medium.com/max/800/1*mXaHYMh_TgpEeJjrKFz2ug.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*mXaHYMh_TgpEeJjrKFz2ug.png' />
 
 The next step is to install [**react-native-vector-icons**](https://oblador.github.io/react-native-vector-icons/). If you’ve already installed react-native-vector-icons, then you can skip this step. Otherwise, enter the following command in your terminal window.
 
@@ -284,7 +282,7 @@ render() {
 
 Right now, if you change to value of `isLoading` to true, you’ll notice the below screen appear.
 
-![](https://cdn-images-1.medium.com/max/800/1*fo8IAFglmCCWcBkSTiigLQ.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*fo8IAFglmCCWcBkSTiigLQ.png' />
 
 > Note: After testing for the above screen, make sure you set the default value of `isLoading` to false.
 
@@ -393,7 +391,7 @@ render() {
   }
 ```
 
-![](https://cdn-images-1.medium.com/max/800/1*dOKWGbyK8rLkcJb57lE8YQ.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*dOKWGbyK8rLkcJb57lE8YQ.png' />
 
 ### Fetching the Data
 
@@ -481,7 +479,7 @@ const Weather = ({ weather, temperature }) => {
 
 The result will be as follows:
 
-![](https://cdn-images-1.medium.com/max/800/1*pIZuRJJlYJwrNkm2we-8PA.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*pIZuRJJlYJwrNkm2we-8PA.png' />
 
 ### Adding Dynamic Weather Conditions
 
@@ -609,7 +607,7 @@ export default Weather;
 
 We’ve made some additions by using available props with weather conditions to dynamically change the background, icon, weather name, and the subtitle. You can play around with the styling to make it look more minimalistic or more exquisite — it’s up to you!
 
-![](https://cdn-images-1.medium.com/max/800/1*Z6Nv_m3cBRuj9w5qwiJStw.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*Z6Nv_m3cBRuj9w5qwiJStw.png' />
 
 ### Conclusion
 

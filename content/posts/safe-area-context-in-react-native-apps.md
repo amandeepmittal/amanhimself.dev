@@ -1,16 +1,11 @@
 ---
-date: 2021-10-14
+date: '2021-10-14'
 title: 'How to avoid notches with Safe Area Context in React Native apps'
-template: post
-thumbnail: '../thumbnails/react.png'
-slug: 'blog/safe-area-context-in-react-native-apps'
-tags:
-  - react-native
-  - expo
+thumbnail: '/thumbnails/react.png'
+slug: 'safe-area-context-in-react-native-apps'
+tag: 'expo'
 canonicalUrl: 'https://amanhimself.dev/blog/safe-area-context-in-react-native-apps/'
 ---
-
-![cover image](https://www.freecodecamp.org/news/content/images/size/w2000/2021/10/2-1.png)
 
 Most devices nowadays come with a notch or some kind of status bar. Therefore, when building a mobile application using React Native, it is vital to ensure that the content of an app screen is rendered correctly across different types of devices.
 

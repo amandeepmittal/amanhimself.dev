@@ -1,11 +1,9 @@
 ---
 title: 'The No-Code Way of Payments with Stripe: A Brief Guide'
-date: 2021-07-08
-slug: 'blog/no-code-way-of-payments-with-stripe-a-brief-guide'
-template: post
-thumbnail: '../thumbnails/stripe.png'
-tags:
-  - no-code
+date: '2021-07-08'
+slug: 'no-code-way-of-payments-with-stripe-a-brief-guide'
+thumbnail: '/thumbnails/stripe.png'
+tag: 'no-code'
 canonicalUrl: 'https://amanhimself.dev/blog/no-code-way-of-payments-with-stripe-a-brief-guide/'
 ---
 

@@ -1,11 +1,10 @@
 ---
 title: 'Getting Started with React Native in 2019 - Build Your First App'
-template: post
-slug: 'blog/getting-started-with-react-native-in-2019-build-your-first-app'
-date: 2019-01-04
-thumbnail: '../thumbnails/react.png'
-tags:
-  - react-native
+
+slug: 'getting-started-with-react-native-in-2019-build-your-first-app'
+date: '2019-01-04'
+thumbnail: '/thumbnails/react.png'
+tag: 'react-native'
 canonicalUrl: 'https://levelup.gitconnected.com/getting-started-with-react-native-in-2019-build-your-first-app-a41ebc0617e2'
 ---
 
@@ -50,7 +49,7 @@ However, in React Native, there is no DOM rather than Native Components which ar
 
 In simple words, React Native brings the React to mobile app development. Its goal isn’t to write the code once and run it on any platform. The main goal here is to learn once and write-anywhere. An important distinction to make. React Native is still relatively new, as at the time of writing this post, it is in its version `0.57`.
 
-![](https://cdn-images-1.medium.com/max/800/1*Ea-6Srtp9ykLmHNp5y-4fQ.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*Ea-6Srtp9ykLmHNp5y-4fQ.png' />
 
 ### Pre-requisites: Setting Up Development Environment
 
@@ -101,7 +100,7 @@ react-native init EmojiDictRN
 
 You can name it whatever you want. Once the process is done, traverse inside the project directory. You will be welcomed by a set of files like below.
 
-![](https://cdn-images-1.medium.com/max/800/1*Q0M1ohq6xC1H7VXDTBpEiA.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*Q0M1ohq6xC1H7VXDTBpEiA.png' />
 
 From above let us now take a brief look at the files or directories that are essential for us to understand:
 
@@ -136,11 +135,11 @@ react-native run-ios
 
 This command builds your app and starts it on iOS simulator. This process consumes some good amount of time when building the necessary iOS files for the first time for any React Native app. It will also open up a simulator device for you like below when the process is done.
 
-![](https://cdn-images-1.medium.com/max/800/1*DAShIjBe_a2yNNawkC6cNw.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*DAShIjBe_a2yNNawkC6cNw.png' />
 
 This iOS simulator is the default one with current Xcode version you have. However, you can run any sim device by adding a flag. By running the command:`xcrun simctl list devices` you can check out which devices you have available as simulators.
 
-![](https://cdn-images-1.medium.com/max/800/1*VeZj8AI0mA_LMyEqGw9lUg.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*VeZj8AI0mA_LMyEqGw9lUg.png' />
 
 The last `Booted` or `Shutdown` against each listed device in above image tells you which devices are currently running. To build and run for another device, you can run the following command.
 
@@ -156,11 +155,11 @@ You will need an Android device to run your React Native Android app. This can b
 
 If you wish to run it on a real device, you can follow the complete set of instructions [**here**](https://facebook.github.io/react-native/docs/running-on-device)**.** For running on an Android emulator, open the Android Studio, and choose the option to ‘open an existing project/folder’. Once the project gets opened and is indexed, you will see an icon looking exactly like below image in the right corner.
 
-![](https://cdn-images-1.medium.com/max/800/1*-qXxDE18Dz9uQp5J76vnUg.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*-qXxDE18Dz9uQp5J76vnUg.png' />
 
 This is an option for enabling an Android Virtual Device (_AVD_). If you have just installed Android Studio, you will likely need to create a new AVD. After the virtual device is running, you can run the command `react-native run-android` from your terminal window to open up the application.
 
-![](https://cdn-images-1.medium.com/max/800/1*0LUZsqEWNoQVwZVvQjtzbg.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*0LUZsqEWNoQVwZVvQjtzbg.png' />
 
 ### How to Modify App.js?
 
@@ -197,13 +196,13 @@ const styles = StyleSheet.create({
 
 The result of the following modification can be seen if you press `Cmd + R` on iOS and double `R` on Android.
 
-![](https://cdn-images-1.medium.com/max/1200/1*r0z57xfMMVAnhVboDFyghw.png)
+<img src='https://cdn-images-1.medium.com/max/1200/1*r0z57xfMMVAnhVboDFyghw.png' />
 
 ### Enable Hot Reloading
 
 Hot Reloading feature in react native application helps to display any updates occur in UI, whenever you save anything in react native app-code. On enabling this feature, you do not have to press `Cmd + R` on iOS and double `R` on Android again for seeing the changes on the UI you just made.
 
-![](https://cdn-images-1.medium.com/max/800/1*uZXfYtm9pPH8FX1ZFRzvyQ.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*uZXfYtm9pPH8FX1ZFRzvyQ.png' />
 
 To enable this feature, all you have to do is press `Ctrl + M/Cmd + M` depending on your OS, and select **Enable Hot Reloading** from the popup menu that appears as shown above.
 
@@ -244,7 +243,7 @@ Getting in detail about each of them is out of the scope of this article and wil
 
 You are going to build a small application to just familiarize yourself with basic components. The app is shown in the image below is going to be the end result.
 
-![](https://cdn-images-1.medium.com/max/800/1*dKe0pfmB74jfoGTVp9nNmg.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*dKe0pfmB74jfoGTVp9nNmg.png' />
 
 The above is nothing but a list of text coming directly from the component’s state. Create a new `src/components` directory in the root of the project and inside `components/` create a new file called `EmojiDict.js` with the following snippet of code.
 
@@ -295,7 +294,7 @@ export default class App extends Component {
 
 Now if you take a look at the simulator screen you will see the following result.
 
-![](https://cdn-images-1.medium.com/max/800/1*p8x7i3e3jIUvn-KpntKwng.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*p8x7i3e3jIUvn-KpntKwng.png' />
 
 _What is going on?_ Take a look at the `EmojiDict` file first. We are importing basic components from React Native. We start by declaring a `View` component, which is the basic building block in React Native file. It maps to fundamental native iOS (`UIView`) and Android (`View`) components, hence the name. You can think this component as mere `div` element from HTML where all other elements are placed inside. Hence, a `View` component can contain nested components.
 
@@ -321,7 +320,7 @@ render() {
 
 You will get the following result on refreshing the simulator.
 
-![](https://cdn-images-1.medium.com/max/800/1*DqJex2fRcRlI9FSuouaD8g.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*DqJex2fRcRlI9FSuouaD8g.png' />
 
 The way we are creating a list of emojis isn’t a pragmatic approach to handle data whether it comes from a third party API or manage by the component’s state and render it as a list as we do above. Let us convert our simple view into `FlatList`.
 
@@ -339,7 +338,7 @@ The way we are creating a list of emojis isn’t a pragmatic approach to handle 
 
 `FlatList` is cross-platform, by default vertical way to display a list of data items. It requires two props: `data` and `renderItem`. `data` is the source of information for the list. `renderItem` takes one item from the source and returns a formatted component to render. Styles that can be applied to a `FlatList` component is done by the prop `contentContainerStyle` that accepts the value of `Stylesheet` object. What we have above is the simplest version of flatlist. Moreover, FlatList in React Native has support to pull to refresh interaction and horizontal display mode.
 
-![](https://cdn-images-1.medium.com/max/800/1*dKe0pfmB74jfoGTVp9nNmg.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*dKe0pfmB74jfoGTVp9nNmg.png' />
 
 This completes our first React Native App. I am sure, you might have learned a thing or two. It is a just a basic component that renders a list of items.
 

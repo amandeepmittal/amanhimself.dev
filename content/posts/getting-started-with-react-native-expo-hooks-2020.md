@@ -1,16 +1,11 @@
 ---
 title: 'Getting Started with React Native and Expo using Hooks in 2020'
-date: 2020-01-17
-template: post
-image: 'blog/getting-started-with-react-native-expo-hooks-2020'
-thumbnail: '../thumbnails/expo.png'
-tags:
-  - expo
-  - react-native
+date: '2020-01-17'
+image: 'getting-started-with-react-native-expo-hooks-2020'
+thumbnail: '/thumbnails/expo.png'
+tag: 'expo'
 canonicalUrl: 'https://heartbeat.fritz.ai/getting-started-with-react-native-and-expo-using-hooks-in-2020-fb466c25b04c'
 ---
-
-![cover](https://i.imgur.com/TWlrrL2.png)
 
 We live in the world of a variety of mobile devices majorly dominated by two platforms, iOS, and Android. It is a two-horse race and I am sure we can all agree on that. Building a mobile application is not an easy task though.
 
@@ -124,7 +119,7 @@ The `Text` component is in many ways just like the `View` component, except that
 
 To see the default app in action, start the development server from the terminal window `expo start`. Either using a simulator or a real device (make sure it has an Expo client installed from the app store) you can test the app.
 
-![js1](https://miro.medium.com/max/509/1*9xg5D_74gvTYRyt89JL_KA.png)
+<img src='https://miro.medium.com/max/509/1*9xg5D_74gvTYRyt89JL_KA.png' />
 
 ## Setting up a stack navigation
 
@@ -211,7 +206,7 @@ export default function App() {
 
 Make sure the development server is running. You are going to get the following output in an Expo client.
 
-![js2](https://miro.medium.com/max/509/1*yVurLxAGaVp5CiEynWKl5w.png)
+<img src='https://miro.medium.com/max/509/1*yVurLxAGaVp5CiEynWKl5w.png' />
 
 ## Adding the second screen to the stack navigator
 
@@ -335,11 +330,11 @@ const styles = StyleSheet.create({
 
 In the Expo client you are going to get the following output:
 
-![js3](https://miro.medium.com/max/509/1*o_Sco68X5QLpboYqHkg8kw.png)
+<img src='https://miro.medium.com/max/509/1*o_Sco68X5QLpboYqHkg8kw.png' />
 
 Also, when you click the FAB button, it will navigate you to the `AddNotes` screen.
 
-![js4](https://miro.medium.com/max/378/1*G1YJr6IgxikVul-JVhNhsQ.gif)
+<img src='https://miro.medium.com/max/378/1*G1YJr6IgxikVul-JVhNhsQ.gif' />
 
 This is done by navigation props from `react-navigation`. Using `navigation.navigate` as the value of the button press prop `onPress`, the app will navigate to the screen with its name passed as the second parameter.
 
@@ -421,7 +416,7 @@ function ViewNotes({ navigation }) {
 
 The following is going to be the output.
 
-![js5](https://miro.medium.com/max/509/1*PbKVolX0GTycuojptMpSBQ.png)
+<img src='https://miro.medium.com/max/509/1*PbKVolX0GTycuojptMpSBQ.png' />
 
 Similarly, modify the `AddNotes.js` file.
 
@@ -446,7 +441,7 @@ function AddNotes() {
 
 Here is the output:
 
-![js6](https://miro.medium.com/max/509/1*WBDEbWvNeRd-QMWRPvqxXQ.png)
+<img src='https://miro.medium.com/max/509/1*WBDEbWvNeRd-QMWRPvqxXQ.png' />
 
 ## Implementing Hooks
 
@@ -660,13 +655,13 @@ export default AddNote;
 
 Here is the output you are going to get when navigating to the `AddNotes` screen.
 
-![js7](https://miro.medium.com/max/509/1*bwq4b8Y-YilTgZkWO2YCEA.png)
+<img src='https://miro.medium.com/max/509/1*bwq4b8Y-YilTgZkWO2YCEA.png' />
 
 ## Running the app
 
 The demo app is complete and ready to be tested. In the Expo client image below, and you can find a demo for adding a note and rendering the note.
 
-![js8](https://miro.medium.com/max/378/1*hcV-c1jFreqaSOkHORxoMA.gif)
+<img src='https://miro.medium.com/max/378/1*hcV-c1jFreqaSOkHORxoMA.gif' />
 
 ## Conclusion
 

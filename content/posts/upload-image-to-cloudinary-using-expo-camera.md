@@ -1,18 +1,15 @@
 ---
 title: 'How to upload an image using Expo Camera to Cloudinary'
-date: 2021-03-31
-template: post
-slug: 'blog/upload-image-to-cloudinary-using-expo-camera'
-thumbnail: '../thumbnails/expo.png'
-tags:
-  - expo
-  - react-native
+date: '2021-03-31'
+slug: 'upload-image-to-cloudinary-using-expo-camera'
+thumbnail: '/thumbnails/expo.png'
+tag: 'expo'
 canonicalUrl: 'https://blog.jscrambler.com/how-to-upload-an-image-using-expo-camera-to-cloudinary/'
 ---
 
 ![cover_image](https://blog.jscrambler.com/content/images/2021/03/jscrambler-blog-how-to-upload-an-image-using-expo-camera-to-cloudinary.jpg)
 
-#### Originally Published at **[Jscrambler's Blog](https://blog.jscrambler.com/how-to-upload-an-image-using-expo-camera-to-cloudinary/)**.
+> Originally Published at **[Jscrambler's Blog](https://blog.jscrambler.com/how-to-upload-an-image-using-expo-camera-to-cloudinary/)**.
 
 The camera feature in a mobile device allows it to capture pictures and record videos, making it very helpful in many circumstances. By using the expo-camera library the process of adding that camera feature to an application becomes seamless, which is why in this tutorial, we’ll take a look at how to use [Expo Camera](https://docs.expo.io/versions/latest/sdk/camera/) to take a picture and then upload that same picture to a real-time cloud service [Cloudinary](https://cloudinary.com/).
 
@@ -86,7 +83,7 @@ return (
 );
 ```
 
-## Why use `absoluteFillObject` to position View component
+## Why use absoluteFillObject to position View component
 
 The `absoluteFillObject` automatically sets a `View` component to be full screen and absolutely positioned. It also allows overriding the values such as `top`. For example, you may want to absolute position the `View` component with an offset like `top: 30` to display it below the status bar.
 

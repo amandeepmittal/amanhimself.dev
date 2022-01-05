@@ -1,11 +1,9 @@
 ---
 title: 'How to use Import statements in Nodejs'
-date: 2018-11-01
-template: post
-slug: 'blog/how-to-use-import-statements-in-nodejs'
-thumbnail: '../thumbnails/node.png'
-tags:
-  - nodejs
+date: '2018-11-01'
+slug: 'how-to-use-import-statements-in-nodejs'
+thumbnail: '/thumbnails/node.png'
+tag: 'nodejs'
 canonicalUrl: 'https://medium.com/better-programming/how-to-use-import-statements-in-nodejs-94c85e23aeb7'
 ---
 
@@ -56,7 +54,7 @@ Next, create a new file with the following command from your terminal:
 touch index.js
 ```
 
-![](https://cdn-images-1.medium.com/max/800/1*cToGazhSQLTx3oIwsJULPQ.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*cToGazhSQLTx3oIwsJULPQ.png' />
 
 That’s all we need to set up a bare minimum project directory. In the next section, we take a look at what dependencies we have to install and why we need those dependencies.
 
@@ -95,7 +93,7 @@ import express from 'express';
 
 Run the same command `node index.js` and stay at the terminal window. This time the server does not start as there is an error in the process. It’s the same error I told you about at the start of this article. Nodejs cannot execute `import` statements by default.
 
-![](https://cdn-images-1.medium.com/max/800/1*itCGCm0lnbBG94KS6D0bOg.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*itCGCm0lnbBG94KS6D0bOg.png' />
 
 ### Using Babel
 
@@ -146,7 +144,7 @@ app.listen(PORT, () => {
 
 From terminal write `nr dev`. If there are no errors, you’ll get the following:
 
-![](https://cdn-images-1.medium.com/max/800/1*Rz9TPPfk6B4p4NPTntXKvg.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*Rz9TPPfk6B4p4NPTntXKvg.png' />
 
 Where `nr` is shorthand for `npm run`. You can also visit `http://localhost3000/` in your browser to verify the result and see if the server is working or not.
 
@@ -155,5 +153,3 @@ Where `nr` is shorthand for `npm run`. You can also visit `http://localhost3000/
 This article has shown you how to create a bare minimum Node server from scratch, and how you can introduce upcoming JavaScript features in your Node.js environment using Babel. I’m sure now you are not going to make the same silly errors like me in _Nodejs_ + _insert a frontend framework/library of your choice_ as I did.
 
 _You can find the complete source code for the above article at_ [**_Github Repo_**](https://github.com/amandeepmittal/node-babel-setup)
-
-[Originally published at Better Programming](https://medium.com/better-programming/how-to-use-import-statements-in-nodejs-94c85e23aeb7)

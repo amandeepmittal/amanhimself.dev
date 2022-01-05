@@ -1,11 +1,9 @@
 ---
 title: 'How To Build a News Reader App with React Native and NewsAPI'
-date: 2019-02-12
-template: post
-slug: 'blog/how-to-build-a-news-reader-app-with-react-native-and-newsapi'
-thumbnail: '../thumbnails/react.png'
-tags:
-  - react-native
+date: '2019-02-12'
+slug: 'how-to-build-a-news-reader-app-with-react-native-and-newsapi'
+thumbnail: '/thumbnails/react.png'
+tag: 'react-native'
 canonicalUrl: 'https://medium.com/crowdbotics/29-useful-open-source-libraries-for-nodejs-4cefe08f7205'
 ---
 
@@ -70,7 +68,7 @@ That’s all. Let us get going with the development process.
 
 You are going to use NewsApi for this tutorial. So it is better to get the API key in the start before you start developing your application. To get the API key, proceed to [**newsapi.org**](https://newsapi.org/) and sign in with your email id. After logging in, you will receive an API key when you click the button `Get API key`.
 
-![](https://cdn-images-1.medium.com/max/1200/1*KPz9LFthqxokfaoNeZpBxQ.png)
+<img src='https://cdn-images-1.medium.com/max/1200/1*KPz9LFthqxokfaoNeZpBxQ.png' />
 
 To save this API key, create a new folder called `src` and inside create another new directory called `config`. Inside `config` create a new file called `env.js` and save the API key as below.
 
@@ -99,11 +97,11 @@ export async function getUSANews() {
 
 In the above file, we start by importing the `API_KEY`. Then we take the URL as a constant with the same name. It contains all the data we need. To verify that the URL is correct, visit the URL itself and replace of `${API_KEY}` with your own API key. You will get similar results in form of articles.
 
-![](https://cdn-images-1.medium.com/max/800/1*FIkn5xklfPK7D-G6pbVbAw.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*FIkn5xklfPK7D-G6pbVbAw.png' />
 
 This is a data representation of what we are getting from hitting the API URL.
 
-![](https://cdn-images-1.medium.com/max/1200/1*NLk6XCk71Px7dpBhhEGx2g.png)
+<img src='https://cdn-images-1.medium.com/max/1200/1*NLk6XCk71Px7dpBhhEGx2g.png' />
 
 The function `getUSANews()` is returning only the array `articles` from above. We will consume this array by traversing it and displaying each article along with the headline, its image URL.
 
@@ -146,7 +144,7 @@ All third-party libraries in React Native have some native dependencies that use
 
 Whenever you link a library, you will always get a prompt message informing you whether the library has been successfully linked or not like below.
 
-![](https://cdn-images-1.medium.com/max/800/1*SPv563AHWRByVg_aQqCmeA.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*SPv563AHWRByVg_aQqCmeA.png' />
 
 ### The Article Component
 
@@ -297,7 +295,7 @@ const styles = StyleSheet.create({
 
 We are importing the `Article` class component from its file inside `/components/`. If you refresh the iOS/android simulator, you will get the following result.
 
-![](https://cdn-images-1.medium.com/max/800/1*ZxFndMVOWSZsgJ-uYAe_eQ.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*ZxFndMVOWSZsgJ-uYAe_eQ.png' />
 
 Now, you get it. Take a look at the whole `Card`. It adds the outer most border on its own. Inside the card, notice how the `featuredTitle` is working its charm over the `image` prop. If you had used the simple `title`, you won't be getting similar result like above.
 
@@ -410,11 +408,11 @@ export default class App extends Component {
 
 In the `App.js` file, all we have to do is import `News` component to render its content. Check out the image below of how the data renders on the screen.
 
-![](https://cdn-images-1.medium.com/max/800/1*mmO4jSlXr3WUOwK8fWJ5xg.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*mmO4jSlXr3WUOwK8fWJ5xg.png' />
 
 If you pull the list down, the spinner animation will appear and if there is new data, it will update the list on the mobile screen.
 
-![](https://cdn-images-1.medium.com/max/800/1*LJIVaD-W1YFfHw4zhpfRQQ.gif)
+<img src='https://cdn-images-1.medium.com/max/800/1*LJIVaD-W1YFfHw4zhpfRQQ.gif' />
 
 ### Conclusion
 

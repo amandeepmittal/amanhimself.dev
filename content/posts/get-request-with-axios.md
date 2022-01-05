@@ -1,11 +1,9 @@
 ---
-date: 2021-08-11
 title: 'GET Request params with Axios'
-template: post
-thumbnail: '../thumbnails/js.png'
-slug: 'blog/get-request-params-with-axios'
-tags:
-  - javascript
+date: '2021-08-11'
+thumbnail: '/thumbnails/js.png'
+slug: 'get-request-params-with-axios'
+tag: 'javascript'
 canonicalUrl: 'https://amanhimself.dev/blog/get-request-params-with-axios/'
 ---
 

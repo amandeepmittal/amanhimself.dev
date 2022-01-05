@@ -1,11 +1,9 @@
 ---
 title: 'Year Rewind: 2020'
-date: 2020-12-23
-template: post
-slug: 'blog/year-rewind-2020'
-thumbnail: '../thumbnails/writing.png'
-tags:
-  - writing
+date: '2020-12-23'
+slug: 'year-rewind-2020'
+thumbnail: '/thumbnails/writing.png'
+tag: 'writing'
 canonicalUrl: 'https://amanhimself.dev/blog/year-rewind-2020/'
 ---
 
@@ -125,15 +123,11 @@ I did manage to scrape through some good books this year. Here some of my picks 
 
 ### The Unicorn Project by Gene Kim
 
-<img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1568700319l/45293317.jpg" width="150"/>
-
 I like to read about the world of technology whether it is written from a perspective of fiction narrative or non-fiction. The Unicorn Project is one of the first books I read this year and it definitely goes in-depth about the process of what goes into a tech company and the importance of communication. The narrative might not be too true but overall it resonates.
 
 - [Goodreads](https://www.goodreads.com/book/show/45293317-the-unicorn-project)
 
 ### The Developer's Guide to Content Creation by Stephanie Morillo
-
-<img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1580824856l/50996057._SY475_.jpg" width="150"/>
 
 This book resonated with me a lot. It offers good insights and guidance for a developer who is interested in creating content.
 
@@ -141,15 +135,11 @@ This book resonated with me a lot. It offers good insights and guidance for a de
 
 ### The Company of One by Paul Jarvis
 
-<img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1520119678l/38922272._SY475_.jpg" width="150"/>
-
 This book is about the mindset of working for oneself and I would add that it's a semi-autobiography of Paul's own journey of what he did when he left the traditional corporate world and how scaling and growth from an individual's perspective or for small-scaled bootstrapped business are not what it seems or the perception I had.
 
 - [Goodreads](https://www.goodreads.com/book/show/38922272-company-of-one)
 
 ### Writing for Software Developers by Philip Kiely
-
-<img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1590249599l/53466825._SX318_.jpg" width="150"/>
 
 This book goes in-depth about being a technical writer from a software developer's point of view. It offers great guidance on how to get started, managing one's workflow and where can one find publications to publish their own piece of posts and articles. It also discusses the business aspect of being a technical writer.
 
@@ -157,15 +147,11 @@ This book goes in-depth about being a technical writer from a software developer
 
 ### The Practice by Seth Godin
 
-<img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1598245238l/53479927.jpg" width="150"/>
-
 This book by Seth Godin is all about why practice is important and how quantity helps one sustain that quality of work in their own domain.
 
 - [Goodreads](https://www.goodreads.com/book/show/53479927-the-practice)
 
 ### The Midnight Library by Matt Haig
-
-<img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1590677390l/53568397._SY475_.jpg" width="150"/>
 
 My favorite fiction read of the year and why experiencing life matters.
 

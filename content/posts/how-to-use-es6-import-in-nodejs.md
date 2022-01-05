@@ -1,11 +1,9 @@
 ---
-date: 2021-04-07
 title: 'How to use ES6 import syntax in Node.js'
-template: post
-thumbnail: '../thumbnails/node.png'
-slug: 'blog/how-to-use-es6-import-syntax-in-node'
-tags:
-  - nodejs
+date: '2021-04-07'
+thumbnail: '/thumbnails/node.png'
+slug: 'how-to-use-es6-import-syntax-in-node'
+tag: 'nodejs'
 canonicalUrl: 'https://amanhimself.dev/blog/how-to-use-es6-import-syntax-in-node/'
 ---
 

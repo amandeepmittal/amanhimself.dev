@@ -1,12 +1,8 @@
 ---
 title: 'Building a React Native Mobile App with AWS Amplify and Expo'
-date: 2019-05-09
-template: post
-image: 'blog/building-a-react-native-mobile-app-with-aws-amplify-and-expo'
-thumbnail: '../thumbnails/expo.png'
-tags:
-  - expo
-  - react-native
+date: '2019-05-09'
+thumbnail: '/thumbnails/expo.png'
+tag: 'expo'
 canonicalUrl: 'https://heartbeat.fritz.ai/building-a-react-native-mobile-app-with-aws-amplify-and-expo-fcab6ee0555e'
 ---
 
@@ -85,7 +81,7 @@ amplify configure
 
 This will open up the AWS console dashboard. Go back to terminal and press enter to continue.
 
-![](https://cdn-images-1.medium.com/max/800/1*MdFM6jQ1y-AAONd9OFJ4dA.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*MdFM6jQ1y-AAONd9OFJ4dA.png' />
 
 Next, are going to be a bunch of questions in order to configure a user account to use Amplify with your React Native application. These questions are as following:
 
@@ -94,23 +90,23 @@ Next, are going to be a bunch of questions in order to configure a user account 
 
 On entering the username, press enter and it will open AWS console again in a browser window for you to add a user.
 
-![](https://cdn-images-1.medium.com/max/800/1*61bLl2uI4m4r6liLVWUFPQ.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*61bLl2uI4m4r6liLVWUFPQ.png' />
 
 In the above screen, make sure that **Programmatic access** is checked. It allows adding the newly created user to have access to create resources in the form of different APIs and tools by providing you with an access key and secret key. Then click on button **Next: Permissions**.
 
-![](https://cdn-images-1.medium.com/max/800/1*25jaknfbqMWRnqiR_EvQ8A.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*25jaknfbqMWRnqiR_EvQ8A.png' />
 
 In the above screen, you will notice that a policy has been selected by default. Let it be. This provides you the full access to AWS services by enabling the aws user (_the current user you are creating_) to be an administrator. Then, click on **Next: Tags**.
 
-![](https://cdn-images-1.medium.com/max/800/1*Ust7wTI9lbNMvrXzPnsiHA.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*Ust7wTI9lbNMvrXzPnsiHA.png' />
 
 Leave this one blank, and click on **Next: Review**.
 
-![](https://cdn-images-1.medium.com/max/800/1*uJEWxsCGDpGOYomhqrlrzw.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*uJEWxsCGDpGOYomhqrlrzw.png' />
 
 Click on **Create user** on the next page and you will be directed to a new page where you will find **Access Key** and **Secret Key**. Do not close this window yet.
 
-![](https://cdn-images-1.medium.com/max/800/1*74JJCqo-N-uYRTRC24d-pg.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*74JJCqo-N-uYRTRC24d-pg.png' />
 
 Go to your terminal window, press the Enter key and it will ask you for the Access Key and the Secret Key. Enter both of them sequentially. Lastly, it will ask you about the profile name. You can enter the project name or user name here. Pressing enter for the last time will create a new AWS user. This section is complete.
 
@@ -126,15 +122,15 @@ amplify init
 
 This command will help you setup amplify SDK inside the React Native app. First, a few sets of questions that are prompted can be seen below.
 
-![](https://cdn-images-1.medium.com/max/800/1*9azNVPxkeEVPZ_Nsg7YP5w.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*9azNVPxkeEVPZ_Nsg7YP5w.png' />
 
 Next, you will be prompted with a question on whether to use an AWS profile or not. You have to choose `Yes` and then on to the next question, choose the user name that you created in the previous steps when configuring amplify. If you are setting up for the time, you are probably going to have only one username in the list, unlike below.
 
-![](https://cdn-images-1.medium.com/max/800/1*KEorokAmLOGIaeOFfdu2SQ.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*KEorokAmLOGIaeOFfdu2SQ.png' />
 
 After the amplify SDK initialization process is complete, notice there are some new file changes inside the project directory. A new directory `amplify/` and a new file `aws-exports.js`
 
-![](https://cdn-images-1.medium.com/max/800/1*LA_uIoKTDhVgT-tqogeOhA.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*LA_uIoKTDhVgT-tqogeOhA.png' />
 
 The `amplify` directory takes care of configuration files that required in order to setup and makes amplify SDK work with the current React Native app. These configuration files are further divided into two parts. One set of files are just for your local machine and another is for aws cloud. Please remember, whenever you make changes related to amplify SDK in your app, they are, by default, modifications made to the local part or development part. When you are done making modifications and are ready to deploy your changes to the cloud, you use special amplify commands such as `push`. After running this `push` command, only the changes are written in aws cloud.
 
@@ -162,17 +158,17 @@ amplify add api
 
 This CLI execution automatically creates a fully functional GraphQL API including data sources, resolvers with basic schema structure for queries, mutations, and subscriptions, downloads client-side code and configuration files that are required in order to run these operations by sending requests. The above command will prompt you to choose between what type of API you want to write in. Choose **GraphQL**, and enter a **profile API name**.
 
-![](https://cdn-images-1.medium.com/max/800/1*0A5e8OUG9xZr7JkOgAG32g.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*0A5e8OUG9xZr7JkOgAG32g.png' />
 
 Next, it will again, give you two options to choose as to how you want to authenticate your AWS AppSync API. In a real-time application, you will have different users accessing the database and making requests to it. For that, you will always go with **Amazon Cognito User Pool**. This is more of a pragmatic approach. That step needs authentication process and we will be covering that in a future post. For the current demo, choose the option **API Key**.
 
 Do note that this option is only for brief prototype sessions or development process. Any AppSync API key expires after seven days lifecycle. For the next question **Do you have an annotated GraphQL schema?** the answer is `N` or no. Amplify comes with pre-defined schemas that can be changed later. Press `Y` for the next question: **Do you want a guided schema creation?**
 
-![](https://cdn-images-1.medium.com/max/800/1*szS_04apcvVgkUjeMPLrVg.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*szS_04apcvVgkUjeMPLrVg.png' />
 
 Select `single object with fields`. Next, it will ask if you want to edit the GraphQL Schema. Say yes to that for now. This will open up a new file called `schema.graphql` which contains a schema of type `Todo` with a different set of fields. This step does create a new folder inside `amplify/backend/api/` that further contains the metadata information related to GraphQL API.
 
-![](https://cdn-images-1.medium.com/max/800/1*3E2yW1nN6T4E_d_c_vU3XA.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*3E2yW1nN6T4E_d_c_vU3XA.png' />
 
 Here is the model inside `schema.graphql` file.
 
@@ -196,19 +192,19 @@ Save this file, go back to the terminal window and press enter. You will be prom
 
 To publish all the changes you have made (or left it default) in the local environment to AWS Cloud, run the command `amplify push`.
 
-![](https://cdn-images-1.medium.com/max/800/1*6gTwOhKVRGSzjZzP48WUTA.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*6gTwOhKVRGSzjZzP48WUTA.png' />
 
 On running the command, as a prompt, you get a table in return with information about resources that you have used and modified or enabled. The name of these resources is described in the Category section. The **Resource name** in the above table is the API name you choose in the previous section. Next column is the type of operation for the API to be sent, that is currently, **Create**. The provider plugin column signifies that these resources are now being published to the cloud. Press `Y` to continue.
 
 Amplify CLI interface will now check for the schema and then compile it for any errors before publishing final changes to the cloud.
 
-![](https://cdn-images-1.medium.com/max/800/1*pA5KjvyCwGgTDKeR8W3IyA.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*pA5KjvyCwGgTDKeR8W3IyA.png' />
 
 In the next step, it prompts whether you want to generate code for your newly created GraphQL API? Press `Y`. Then choose javascript as the code generation language. If you are using `TypeScript` or `flow`, now is the time to pick one. In the above image, for the last question, press `Y`. This will create a new folder inside the src directory which contains GraphQL schema, query, mutations, subscriptions as JavaScript files. On operating the API, these files can be accessible for different operations later.
 
 Press `Y` to the next question that asks you to update all GraphQL related operations. Also, let maximum statement depth be the default value of `2`. It will take a few moments to update the resources on the aws cloud and will prompt with a success message when done.
 
-![](https://cdn-images-1.medium.com/max/800/1*QIYXuBoTZFvbSPiTyDG8tA.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*QIYXuBoTZFvbSPiTyDG8tA.png' />
 
 At the end of the success message you will get a GraphQL API endpoint and a GraphQL API Key (_which we learned previously that it expires on the 7th day_). You do not have to save it somewhere on your desktop and panic. This information is added to `aws-exports.js` file automatically for you now.
 
@@ -340,7 +336,7 @@ const styles = StyleSheet.create({
 
 Go to the terminal window and run the command `npm start` to view this either in an iOS simulator or an android emulator. You will get the following result.
 
-![](https://cdn-images-1.medium.com/max/800/1*gj26-fBY1i3hRAmTm8Jj8A.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*gj26-fBY1i3hRAmTm8Jj8A.png' />
 
 ## Adding a Mutation using Graphql API
 
@@ -441,7 +437,7 @@ async componentDidMount() {
 
 Refresh the app by saving the file you will notice that on UI screen nothing happens. That's because we haven't added the rendering logic to display this list of items. However, you can verify that data is being fetched using `console` statement and by looking quickly at the Expo CLI.
 
-![](https://cdn-images-1.medium.com/max/800/1*jY4FwniW2IJtfpGxoXxNgQ.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*jY4FwniW2IJtfpGxoXxNgQ.png' />
 
 During the previous step, I did add an item to the list. That's the proof of that. Now let us display this item on the device's screen. Inside the render method, add this after the `TouchableOpacity` component. We are going to use JavaScript's `map` function to traverse the `todos` array.
 
@@ -466,7 +462,7 @@ todo: {
 
 On running `npm start` (_or if it is already running, just the save the App.js file_) you will get the following output.
 
-![](https://cdn-images-1.medium.com/max/800/1*uOotu-Fbfy7FnfDRwQXNOw.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*uOotu-Fbfy7FnfDRwQXNOw.png' />
 
 ## Conclusion
 

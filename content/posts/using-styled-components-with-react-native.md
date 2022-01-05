@@ -1,11 +1,9 @@
 ---
 title: 'Using Styled Components with React Native'
-date: 2019-03-19
-slug: 'blog/using-styled-components-with-react-native'
-thumbnail: '../thumbnails/react.png'
-template: post
-tags:
-  - react-native
+date: '2019-03-19'
+slug: 'using-styled-components-with-react-native'
+thumbnail: '/thumbnails/react.png'
+tag: 'react-native'
 canonicalUrl: 'https://levelup.gitconnected.com/using-styled-components-with-react-native-de645fcf4787'
 ---
 
@@ -105,7 +103,7 @@ const styles = StyleSheet.create({
 
 From your terminal, run the command: `npm run ios` if you are on macOS. For Linux and Windows users the command is `npm run android`, but make sure you have an Android virtual device running in the background. Our code currently looks like below.
 
-![](https://cdn-images-1.medium.com/max/800/1*FJYy0ggO0KlAjamE81Z19w.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*FJYy0ggO0KlAjamE81Z19w.png' />
 
 Let’s make some changes to it and use our newly installed library. To get started, import the library like below.
 
@@ -146,7 +144,7 @@ const Title = styled.Text`
 `;
 ```
 
-![](https://cdn-images-1.medium.com/max/800/1*FJYy0ggO0KlAjamE81Z19w.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*FJYy0ggO0KlAjamE81Z19w.png' />
 
 The complete code for `App.js` file after changes.
 
@@ -232,13 +230,13 @@ render() {
 
 On running the simulator, you will get the following result.
 
-![](https://cdn-images-1.medium.com/max/800/1*NtpTxTjtBxNl_IR4W-W7lA.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*NtpTxTjtBxNl_IR4W-W7lA.png' />
 
 ### Building the app — Grocery UI
 
 In this section we are building a UI screen for an app that would be used for a grocery store. You are going to build the home screen that looks like the one below.
 
-![](https://cdn-images-1.medium.com/max/800/1*qRd6EyuiB_nvs3jolhOCeA.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*qRd6EyuiB_nvs3jolhOCeA.png' />
 
 We will be using our knowledge of `styled-components` so let's get started! Open up `App.js`. Declare a new `Container` `View` using `styled`. Inside the backticks, you can put pure CSS code there with the exact same syntax. The `View` element is like a `div` in HTML or web programming in general. Also, create another view called `Titlebar` inside `Container`.
 
@@ -292,7 +290,7 @@ const Name = styled.Text`
 
 Run `npm run ios` and see it in action.
 
-![](https://cdn-images-1.medium.com/max/800/1*QWsjF7juUsD8wHsuD_4M-A.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*QWsjF7juUsD8wHsuD_4M-A.png' />
 
 Right now, the content is in the middle of the screen. We need the `Titlebar` and its contents at the top of the mobile screen. So styles for `Container` will be as below.
 
@@ -334,7 +332,7 @@ const Avatar = styled.Image`
 
 You will get the following result.
 
-![](https://cdn-images-1.medium.com/max/800/1*AR9C05E4OOHGmWVkrnxjVQ.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*AR9C05E4OOHGmWVkrnxjVQ.png' />
 
 Now notice that the avatar image and the text are piling up. They are taking the same space on the screen. To avoid this, you are going to use `position: absolute` CSS property.
 
@@ -368,7 +366,7 @@ Usually, with position absolute property, you are going to use a combination of 
 
 In our case above, we use `top` and `left` both set to `0` pixels. You will get the following output.
 
-![](https://cdn-images-1.medium.com/max/800/1*xuQEJUyE0rGBNCuzz14ajw.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*xuQEJUyE0rGBNCuzz14ajw.png' />
 
 ### Adding icons in a React Native
 
@@ -391,7 +389,7 @@ Inside the `Titlebar` view, add the icon.
 
 Each icon needs props for the name that you can choose, size and color. Right now, if you look at the simulator, you will notice the same problem we had when adding the avatar image. There is no space between the icon and other UI elements inside the title bar.
 
-![](https://cdn-images-1.medium.com/max/800/1*k0ongnUA5ZLGzvK-QBDvXQ.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*k0ongnUA5ZLGzvK-QBDvXQ.png' />
 
 To solve this, let us use the absolute positioning property as an inline style to `<Ionicons />`.
 
@@ -406,7 +404,7 @@ To solve this, let us use the absolute positioning property as an inline style t
 
 Why an inline style? Because `Ionicons` is not generated using styled-components.
 
-![](https://cdn-images-1.medium.com/max/800/1*EjxFzga9cQWUDNXesQ5KkA.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*EjxFzga9cQWUDNXesQ5KkA.png' />
 
 ### Mapping through a List
 
@@ -454,7 +452,7 @@ return (
 
 You will get the following output.
 
-![](https://cdn-images-1.medium.com/max/800/1*kkLH38JDwcNg6gNCBFs-eA.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*kkLH38JDwcNg6gNCBFs-eA.png' />
 
 There can be a number of categories. To make the names of categories dynamic, we can send it through `App.js`file.
 
@@ -510,7 +508,7 @@ You will notice not a single change in the UI. By default scrollable lists in Re
 
 It works but does not looks good.
 
-![](https://cdn-images-1.medium.com/max/800/1*ynb8YhFnnn56-nLYqSPThg.gif)
+<img src='https://cdn-images-1.medium.com/max/800/1*ynb8YhFnnn56-nLYqSPThg.gif' />
 
 Let us add some inline styles to the `ScrollView`.
 
@@ -533,7 +531,7 @@ Let us add some inline styles to the `ScrollView`.
 
 Now it looks better. The prop `showsHorizontalScrollIndicator` hides the horizontal scroll bar that by default appears beneath the name of the categories.
 
-![](https://cdn-images-1.medium.com/max/800/1*IYqopJpgJkPAyif2slhVEw.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*IYqopJpgJkPAyif2slhVEw.png' />
 
 ### Adding a vertical ScrollView
 
@@ -570,13 +568,13 @@ const Subtitle = styled.Text`
 
 It renders like below.
 
-![](https://cdn-images-1.medium.com/max/800/1*X9Db80WNDFSLRVGC1sdkWw.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*X9Db80WNDFSLRVGC1sdkWw.png' />
 
 ### Building a card component
 
 In this section, we are going to create a card component that will hold an item’s image, the name of the item and the price as text. Each card component is going to have curved borders and box shadow. This is how it is going to look like.
 
-![](https://cdn-images-1.medium.com/max/800/1*bNCJQ4koGEZVKtbGu6EeqA.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*bNCJQ4koGEZVKtbGu6EeqA.png' />
 
 Create a new component file called `Card.js` inside `components` directory. The structure of the `Card` component is going to be.
 
@@ -702,7 +700,7 @@ After `Subtitle`add a new view called `ItemsLayout`. This is going to be a layou
 
 On rendering the screen of the simulator, looks like below.
 
-![](https://cdn-images-1.medium.com/max/800/1*qRd6EyuiB_nvs3jolhOCeA.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*qRd6EyuiB_nvs3jolhOCeA.png' />
 
 ### Conclusion
 

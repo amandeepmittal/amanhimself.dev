@@ -1,15 +1,11 @@
 ---
-date: 2017-12-03
+date: '2017-12-03'
 title: 'Passing Data Between Pages in an Ionic Application'
-template: post
-thumbnail: '../thumbnails/ionic.png'
-slug: 'blog/passing-data-between-pages-in-an-ionic-application'
-tags:
-  - ionic
+thumbnail: '/thumbnails/ionic.png'
+slug: 'passing-data-between-pages-in-an-ionic-application'
+tag: 'ionic'
 canonicalUrl: 'https://medium.com/hackernoon/passing-data-between-pages-in-an-ionic-application-129b387c93b8'
 ---
-
-![cover_image](https://miro.medium.com/max/2400/0*aysgAriQg5itBTeo.jpg)
 
 In the previous posts, we have seen [how to setup a basic navigation between multiple Ionic app Pages](https://hackernoon.com/https-medium-com-amanhimself-basic-navigation-in-ionic-applications-ecb199cdf15b). This post concerns what if you want to send some data from the previous page to the next page in the stack? For the Ionic provides `NavParams` class to transfer data from one page to another.
 
@@ -160,20 +156,20 @@ Here are some screenshots:
 
 Home Page:
 
-![](https://cdn-images-1.medium.com/max/800/0*eftZuH7QmZQqs4-Y.png)
+<img src='https://cdn-images-1.medium.com/max/800/0*eftZuH7QmZQqs4-Y.png' />
 
 User Input being entered:
 
-![](https://cdn-images-1.medium.com/max/800/0*g25oMDTJV3TS7mTB.png)
+<img src='https://cdn-images-1.medium.com/max/800/0*g25oMDTJV3TS7mTB.png' />
 
 Data passed form Home Page displayed on About Page:
 
-![](https://cdn-images-1.medium.com/max/800/0*ay_xx0zGGCDDuXXY.png)
+<img src='https://cdn-images-1.medium.com/max/800/0*ay_xx0zGGCDDuXXY.png' />
 
 When nothing entered in the input field, a default text passed and displayed:
 
-![](https://cdn-images-1.medium.com/max/800/0*5lhp42R9R5pQVjSi.png)
+<img src='https://cdn-images-1.medium.com/max/800/0*5lhp42R9R5pQVjSi.png' />
 
 _To get the full code of this demo app, you can visit_ [**this Github Repository**](https://github.com/amandeepmittal/ionic-pass-data-pages).
 
-[Originally Published at Hackernoon.com](https://medium.com/hackernoon/passing-data-between-pages-in-an-ionic-application-129b387c93b8)
+> [Originally Published at Hackernoon.com](https://medium.com/hackernoon/passing-data-between-pages-in-an-ionic-application-129b387c93b8)

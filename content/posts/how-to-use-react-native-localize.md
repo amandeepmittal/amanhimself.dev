@@ -1,11 +1,9 @@
 ---
 title: 'How to use React Native Localize in React Native apps'
-date: 2020-01-01
-template: post
-slug: 'blog/how-to-use-react-native-localize'
-thumbnail: '../thumbnails/react.png'
-tags:
-  - react-native
+date: '2020-01-01'
+slug: 'how-to-use-react-native-localize'
+thumbnail: '/thumbnails/react.png'
+tag: 'react-native'
 canonicalUrl: 'https://heartbeat.fritz.ai/how-to-use-react-native-localize-in-react-native-apps-3bb3d510f801'
 ---
 
@@ -202,11 +200,11 @@ react-native run-android
 
 When the app's build process is complete, it is going to run the English locales by default.
 
-![ss1](https://miro.medium.com/max/350/1*3KLq-CScY5yMp1pPnf1qjg.png)
+<img src='https://miro.medium.com/max/350/1*3KLq-CScY5yMp1pPnf1qjg.png' />
 
 On changing the locale, the correct result is reflected in the app.
 
-![ss2](https://miro.medium.com/max/377/1*cURVMx8splW7SgIaLd6y_g.gif)
+<img src='https://miro.medium.com/max/377/1*cURVMx8splW7SgIaLd6y_g.gif' />
 
 ## Conclusion
 

@@ -1,12 +1,9 @@
 ---
 title: 'How to create a custom scrollbar with React Native Animated API'
-date: 2020-12-10
-template: post
-slug: 'blog/custom-scroll-bar-indicator-with-react-native-animated-api'
-thumbnail: '../thumbnails/expo.png'
-tags:
-  - expo
-  - react-native
+date: '2020-12-10'
+slug: 'custom-scroll-bar-indicator-with-react-native-animated-api'
+thumbnail: '/thumbnails/react.png'
+tag: 'react-native'
 canonicalUrl: 'https://amanhimself.dev/blog/custom-scroll-bar-indicator-with-react-native-animated-api/'
 ---
 
@@ -55,7 +52,7 @@ To follow this tutorial, please make sure you are familiarized with JavaScript/E
 
 Note: All of the code mentioned in this tutorial works with the React Native CLI project as well.
 
-## Create a new React Native project with `expo-cli`
+## Create a new React Native project with expo-cli
 
 To create a new React Native project using `expo-cli`, execute the following command from a terminal window:
 

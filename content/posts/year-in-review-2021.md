@@ -1,11 +1,9 @@
 ---
 title: '2021 - A year in review'
-slug: 'blog/year-in-review-2021'
-date: 2021-12-31
-thumbnail: '../thumbnails/writing.png'
-template: post
-tags:
-  - writing
+slug: 'year-in-review-2021'
+date: '2021-12-31'
+thumbnail: '/thumbnails/writing.png'
+tag: 'writing'
 canonicalUrl: 'https://amanhimself.dev/blog/year-in-review-2021/'
 ---
 
@@ -63,9 +61,7 @@ Giving talks or speaking is not my strongest asset, and I used to find it quite 
 
 Thanks to React Day Bangalore for inviting me for a panel discussion on React Native. It's on [YouTube](https://www.youtube.com/watch?v=_HKzhe8f47Y). I also [gave workshops](https://amanhimself.dev/speaking) due to my role of working as a Developer Advocate.
 
-I also got invited to speak at a Twitter space. Thanks to my friend Ankur ([@TheAnkurTyagi](https://twitter.com/TheAnkurTyagi/)) for the invitation and hosting it. We talked about tech writing and its impact on being a Developer Advocate role and working with startups.
-
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Hey everyone!📢<br><br>🔷Twitter Space.<br><br>Today 4:00PM CET, 8:30 PM IST<br><br>Guest: <a href="https://twitter.com/amanhimself?ref_src=twsrc%5Etfw">@amanhimself</a> <br><br>Let&#39;s talk about:<br><br>- Writing as a developer <br>- Working with startups.<br>- How does writing help you as a developer advocate. <br><br>See you all there 🙌 <a href="https://t.co/lPeq9lWXxS">pic.twitter.com/lPeq9lWXxS</a></p>&mdash; Ankur💻🎧💪🥑 (@TheAnkurTyagi) <a href="https://twitter.com/TheAnkurTyagi/status/1465624585773228034?ref_src=twsrc%5Etfw">November 30, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+I also got invited [to speak at a Twitter space](https://twitter.com/TheAnkurTyagi/status/1465624585773228034). Thanks to my friend Ankur ([@TheAnkurTyagi](https://twitter.com/TheAnkurTyagi/)) for the invitation and hosting it. We talked about tech writing and its impact on being a Developer Advocate role and working with startups.
 
 ## Highlights from my GitHub 🐙
 
@@ -73,13 +69,7 @@ Last year, I started to maintain [a single GitHub repo](https://github.com/amand
 
 Another thing I maintain is an [Expo Community project](https://github.com/expo-community/expo-firebase-starter) that integrates Firebase JS SDK in an Expo app. Since the Expo SDK's exponential growth in the past year with the awesome tooling, Developer Experience (DX), and support for native modules, I have some thoughts on what changes I'll be doing next year. Keep an eye on this [GitHub repo](https://github.com/expo-community/expo-firebase-starter).
 
-I also got my first GitHub sponsor this year 🤩
-
-<br />
-
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">I got my GitHub sponsor whaaaaaatttt🤩<br><br>Thank you so much <a href="https://twitter.com/Quantium?ref_src=twsrc%5Etfw">@Quantium</a> for sponsoring 🙏<br><br>🔗 <a href="https://t.co/IbkGZd0P7f">https://t.co/IbkGZd0P7f</a> <a href="https://t.co/Dwe4oi0RGP">pic.twitter.com/Dwe4oi0RGP</a></p>&mdash; Aman Mittal ⚛️☕🖖 (@amanhimself) <a href="https://twitter.com/amanhimself/status/1454352509124820994?ref_src=twsrc%5Etfw">October 30, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-<br />
+I also got my first [GitHub sponsor](https://twitter.com/amanhimself/status/1454352509124820994) this year 🤩
 
 ## Newsletter saga continues 💌
 
@@ -99,7 +89,7 @@ I did manage to go through some good books this year. Here are some of my picks 
 
 During the end of the year, I managed to get out of New Delhi for the first time in two years for a [weekend trip](https://www.instagram.com/p/CXsVqr9lJyY/):
 
-![ss5](https://i.imgur.com/l5qdc5Q.jpg)
+![ss5](https://i.imgur.com/qRBwCNO.jpg)
 
 ## Wrapping up
 

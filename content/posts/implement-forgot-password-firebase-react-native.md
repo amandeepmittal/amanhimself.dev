@@ -1,15 +1,13 @@
 ---
 title: 'How to implement Forgot Password feature in React Native with Firebase'
-date: 2019-10-25
-slug: 'blog/implement-forgot-password-firebase-react-native'
-template: post
-thumbnail: '../thumbnails/expo.png'
-tags:
-  - expo
-  - firebase
-  - react-native
+date: '2019-10-25'
+slug: 'implement-forgot-password-firebase-react-native'
+thumbnail: '/thumbnails/expo.png'
+tag: 'expo'
 canonicalUrl: 'https://amanhimself.dev/blog/implement-forgot-password-firebase-react-native/'
 ---
+
+> Originally published at [Heartbeat.Fritz.ai](https://heartbeat.fritz.ai/how-to-implement-forgot-password-feature-in-react-native-and-firebase-app-890b572d9759)
 
 In some of the previous posts, you built a React Native app using Firebase as the backend service provider for Email authentication and storing user's data upon successful sign-up.
 
@@ -109,11 +107,11 @@ Next, add the a `Button` component after the `Signup` button. The value of the `
 
 Now, open a simulator or a real device with an Expo client installed and run the command `expo start` from a terminal window. You will be welcomed by the following screen.
 
-![ss1](https://miro.medium.com/max/300/1*vvUAZu_uhyp-Px48OmtrWg.png)
+![ss1](https://i.imgur.com/U7hRwYl.png)
 
 Clicking on the button `Forgot Password ?` will lead you to the new screen.
 
-![ss2](https://miro.medium.com/max/300/1*HIQGUGXvHaPd6PIZfQROoQ.png)
+![ss2](https://i.imgur.com/UrH4dJY.png)
 
 ## Add a method to send a password reset email
 
@@ -242,7 +240,7 @@ export default withFirebaseHOC(ForgotPassword);
 
 Now go back to the simulator and you will get the following screen.
 
-![ss3](https://miro.medium.com/max/300/1*qBc8caiV3wlG8ynR-cVcSg.png)
+![ss3](https://i.imgur.com/2ry1EAn.png)
 
 ## Handle Password Reset
 
@@ -266,35 +264,31 @@ handlePasswordReset = async (values, actions) => {
 
 The above snippet signifies that if the email provided as the input is valid, it will send the request to reset the password. On success, a message on Expo's console will be displayed as shown below.
 
-![ss4](https://miro.medium.com/max/320/1*d2vfME5m_5HwyEgTHhwlBg.png)
+![ss4](https://i.imgur.com/zDL0Pfg.png)
 
 Also, on success, it will navigate the user back to the login screen. On errors, the code inside the `catch` block will be triggered.
 
 To try it out, register a user with a valid email address such that you can receive an email. On registering a new user, right now, the app will log you in. Sign out from the app which will take you back to the login screen. Next, go the `Forgot Password` screen and enter the valid email.
 
-![ss8](https://miro.medium.com/max/300/1*hP_5xGat5m0_JMI-w7hypg.png)
+![ss8](https://i.imgur.com/YwJ191G.png)
 
 You will receive an email like the below. It uses the default Firebase template. To demonstrate, I am using my personal Gmail address.
 
-![ss5](https://miro.medium.com/max/1044/1*tiWgvVfF-JiWlzbxR4Q3Yg.png)
+![ss5](https://i.imgur.com/kmgey8U.png)
 
 Click on the link and it will redirect you to a webpage like below.
 
-![ss6](https://miro.medium.com/max/1220/1*74va2kM35i4yazyiG3n6Vg.png)
+![ss6](https://i.imgur.com/vhuApsk.png)
 
 Upon successful password change, it will prompt with the following message to the user.
 
-![ss7](https://miro.medium.com/max/1201/1*M9duWHCvOLPfOsevaF1hpw.png)
+![ss7](https://i.imgur.com/rLPkUeE.png)
 
 ## Conclusion
 
 That's it! It is that simple. With a new password, you can try to login to the app now and it will work. If you have come this far, I am hope enjoyed reading this post. These are some of the strategies I try to follow with any Firebase + React Native projects.
 
 I hope any of the codebase used in this tutorial helps you. To find the complete code, you will have to visit this [Github repo release](https://github.com/amandeepmittal/expo-firebase/releases/tag/0.7.0).
-
----
-
-> Originally published at [Heartbeat.Fritz.ai](https://heartbeat.fritz.ai/how-to-implement-forgot-password-feature-in-react-native-and-firebase-app-890b572d9759)
 
 ## Further reading
 

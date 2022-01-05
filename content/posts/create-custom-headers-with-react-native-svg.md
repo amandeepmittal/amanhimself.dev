@@ -1,16 +1,13 @@
 ---
 title: 'How to create custom wavy headers with react-native-svg'
-template: post
-slug: 'blog/create-custom-headers-with-react-native-svg'
-date: 2020-05-26
-thumbnail: '../thumbnails/expo.png'
-tags:
-  - expo
-  - react-native
+slug: 'create-custom-headers-with-react-native-svg'
+date: '2020-05-26'
+thumbnail: '/thumbnails/expo.png'
+tag: 'expo'
 canonicalUrl: 'https://heartbeat.fritz.ai/creating-custom-wavy-headers-using-react-native-svg-639ce0861327'
 ---
 
-![cover](https://i.imgur.com/z4d76AE.png)
+> [Originally Published at Heartbeat.Fritz.ai](https://heartbeat.fritz.ai/creating-custom-wavy-headers-using-react-native-svg-639ce0861327)
 
 In React Native apps, the support for SVG graphics is provided by an open-source module called [`react-native-svg`](https://github.com/react-native-community/react-native-svg) that is maintained by React Native community.
 
@@ -26,7 +23,7 @@ This format consists of shapes rather than pixels which can further be concluded
 
 In this post, let us learn how to use `react-native-svg` in React Native and Expo apps and create some custom examples such as wavy header shown below.
 
-![ss1](https://miro.medium.com/max/598/1*aivsFUf_OF6mYBSfOCGrTQ.gif)
+<img src='https://miro.medium.com/max/598/1*aivsFUf_OF6mYBSfOCGrTQ.gif' />
 
 ## Requirements
 
@@ -56,7 +53,7 @@ That's it for installing this library. The `react-native-svg` library contains c
 
 In the next few sections, let us try to create a custom header background that has a bottom border with the form of a wave as shown below.
 
-![ss3](https://miro.medium.com/max/700/1*mf6AmpW-7j4nS1nixMDiVQ.png)
+<img src='https://miro.medium.com/max/700/1*mf6AmpW-7j4nS1nixMDiVQ.png' />
 
 Start by creating a new screen component inside `src/screens/ScreenOne.js` file that displays a heading on the screen. (_Create the directory if it doesn't exist._)
 
@@ -114,7 +111,7 @@ export default function App() {
 
 Lastly, to see this simple header text on a device's screen, from the terminal window, execute the command `expo start`. You should results similar to the screenshot below:
 
-![ss1](https://miro.medium.com/max/700/1*kwennRzVGQSDL0fASGCC5g.png)
+<img src='https://miro.medium.com/max/700/1*kwennRzVGQSDL0fASGCC5g.png' />
 
 ## Create a custom header component with waves
 
@@ -124,7 +121,7 @@ The SVG component that we intend to create is going to wrap the path drawing pri
 
 To generate the SVG background as you have seen in the previous section, I am going to make use of [getwaves.io](https://getwaves.io/). This web tool allows you to generate custom wave patterns in SVG format. Check out their website, it is simple and fulfils the purpose. You can create different patterns using this tool.
 
-![ss2](https://miro.medium.com/max/984/1*NzoVM40QM6VUNSGyCQLZ7g.gif)
+<img src='https://miro.medium.com/max/984/1*NzoVM40QM6VUNSGyCQLZ7g.gif' />
 
 Make sure to copy the values of properties such as `viewbox` and `d` as shown above.
 
@@ -213,7 +210,7 @@ From the snippet, you can notice that using the `Dimensions` API from `react-nat
 
 The final result is going to be as the following.
 
-![ss3](https://miro.medium.com/max/700/1*mf6AmpW-7j4nS1nixMDiVQ.png)
+<img src='https://miro.medium.com/max/700/1*mf6AmpW-7j4nS1nixMDiVQ.png' />
 
 ## Make WavyHeader component reusable
 
@@ -278,15 +275,15 @@ export default function ScreenOne() {
 
 You won’t see a difference in the result on the device’s screen unless you change the values of these props.
 
-![ss3](https://miro.medium.com/max/700/1*mf6AmpW-7j4nS1nixMDiVQ.png)
+<img src='https://miro.medium.com/max/700/1*mf6AmpW-7j4nS1nixMDiVQ.png' />
 
 ## Conclusion
 
 You can try adding more custom screens to have different wave patterns and try to use the `WavyHeader` component as reusable for different screens. Here is an example below that displays two different screens with different wave patterns as well as background color and height.
 
-![ss4](https://miro.medium.com/max/700/1*ZmqxTfYO5jfv24ktveRzxg.png)
+<img src='https://miro.medium.com/max/700/1*ZmqxTfYO5jfv24ktveRzxg.png' />
 
-![ss5](https://miro.medium.com/max/598/1*aivsFUf_OF6mYBSfOCGrTQ.gif)
+<img src='https://miro.medium.com/max/598/1*aivsFUf_OF6mYBSfOCGrTQ.gif' />
 
 - [Source code](https://github.com/amandeepmittal/wavySVGExample).
 - Or try using an Expo client [here](https://expo.io/@amanhimself/rnwavysvg).
@@ -297,5 +294,3 @@ Here is the list of resources used in order to create this post:
 - [react-native-svg](https://github.com/react-native-community/react-native-svg)
 - [getwaves.io](https://getwaves.io/)
 - [What are Paths?](https://www.w3.org/TR/SVG/paths.html)
-
-[Originally Published at Heartbeat.Fritz.ai](https://heartbeat.fritz.ai/creating-custom-wavy-headers-using-react-native-svg-639ce0861327)

@@ -1,11 +1,9 @@
 ---
-date: 2017-09-10
+date: '2017-09-10'
 title: 'Setup Nodemon to auto restart Nodejs application server'
-template: post
-thumbnail: '../thumbnails/node.png'
-slug: 'blog/setup-nodemon-to-auto-restart-nodejs-application-server'
-tags:
-  - nodejs
+thumbnail: '/thumbnails/node.png'
+slug: 'setup-nodemon-to-auto-restart-nodejs-application-server'
+tag: 'nodejs'
 canonicalUrl: 'https://medium.com/hackernoon/setup-nodemon-to-auto-restart-nodejs-application-server-8d8993b7dfd9'
 ---
 

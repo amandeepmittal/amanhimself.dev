@@ -1,11 +1,9 @@
 ---
 title: 'An in-depth guide on how to use React Native Image Picker'
-date: 2020-04-27
-slug: 'blog/how-to-use-react-native-image-picker'
-template: post
-thumbnail: '../thumbnails/react.png'
-tags:
-  - react-native
+date: '2020-04-27'
+slug: 'how-to-use-react-native-image-picker'
+thumbnail: '/thumbnails/react.png'
+tag: 'react-native'
 canonicalUrl: 'https://blog.crowdbotics.com/how-to-use-react-native-image-picker/'
 ---
 
@@ -57,7 +55,7 @@ npx react-native run-android
 
 Go to the simulator or the device you have connected to run this app and you are going to get default React Native app.
 
-![cb1](https://blog.crowdbotics.com/content/images/2020/04/cb1-1.png)
+<img src='https://crowdbotics.ghost.io/content/images/2020/04/cb1-1.png' />
 
 Cheers! You have created a new React Native app. Let us now get started with this tutorial.
 
@@ -102,7 +100,7 @@ Another necessary step to make this app run on iOS is to install Cocoapods for t
 npx pod-install
 ```
 
-![cb2](https://blog.crowdbotics.com/content/images/2020/04/cb2-1.png)
+<img src='https://crowdbotics.ghost.io/content/images/2020/04/cb2-1.png' />
 
 Make sure to run the build command mentioned in the previous section to run the app again after this step.
 
@@ -207,7 +205,7 @@ export default function () {
 
 Go back to a simulator or the physical device you are using to run this app and you are going to be welcomed by the following screen.
 
-![cb3](https://blog.crowdbotics.com/content/images/2020/04/cb3-1.png)
+<img src='https://crowdbotics.ghost.io/content/images/2020/04/cb3-1.png' />
 
 ## How to pick an image?
 
@@ -314,37 +312,37 @@ export const STYLES = StyleSheet.create({
 
 Now go back to the simulator and you are going to see the new button we have just added is being displayed.
 
-![cb4](https://blog.crowdbotics.com/content/images/2020/04/cb4-1.png)
+<img src='https://crowdbotics.ghost.io/content/images/2020/04/cb4-1.png' />
 
 Click the button and there is going to be an alert box pop up.
 
-![cb5](https://blog.crowdbotics.com/content/images/2020/04/cb5-1.png)
+<img src='https://crowdbotics.ghost.io/content/images/2020/04/cb5-1.png' />
 
 It gives you the option to select an image from the library or take a photo from the device's camera (Since I am using a simulator, taking a photo is not possible).
 
 At this moment, if you press `Cancel`, you are going to see another alert box (that we intentionally added to the screen component).
 
-![cb6](https://blog.crowdbotics.com/content/images/2020/04/cb6-1.png)
+<img src='https://crowdbotics.ghost.io/content/images/2020/04/cb6-1.png' />
 
 The console statements are also being logged correctly by the metro bundler terminal window. You can verify that as shown in the image below.
 
-![cb7](https://blog.crowdbotics.com/content/images/2020/04/cb7.png)
+<img src='https://crowdbotics.ghost.io/content/images/2020/04/cb7.png' />
 
 To make the alert box disappear, click the button `Ok`. Click the UI button to select an image again, and this time, choose an image from the library.
 
 The first thing it is going to do is to ask for permission. This only happens for the first time when the user is using the app.
 
-![cb8](https://blog.crowdbotics.com/content/images/2020/04/cb8.png)
+<img src='https://crowdbotics.ghost.io/content/images/2020/04/cb8.png' />
 
 Next, select an image if you have in the library as shown below.
 
-![cb9](https://blog.crowdbotics.com/content/images/2020/04/cb9.png)
+<img src='https://crowdbotics.ghost.io/content/images/2020/04/cb9.png' />
 
-![cb10](https://blog.crowdbotics.com/content/images/2020/04/cb10.png)
+<img src='https://crowdbotics.ghost.io/content/images/2020/04/cb10.png' />
 
 After you have selected the image, nothing happens. This is because we still have to write the code to display the image. For now, go to the terminal window and you are going to the `response` object as well `source` object with data and information about the image.
 
-![cb11](https://blog.crowdbotics.com/content/images/2020/04/cb11-1.png)
+<img src='https://crowdbotics.ghost.io/content/images/2020/04/cb11-1.png' />
 
 If it is not visible or understandable, take a look at the JSON snippet below.
 
@@ -423,7 +421,7 @@ let options = {
 
 After adding this property, the new `response` object won't have a `data` field.
 
-![cb12](https://blog.crowdbotics.com/content/images/2020/04/cb12-1.png)
+<img src='https://crowdbotics.ghost.io/content/images/2020/04/cb12-1.png' />
 
 The type of the source is essential for the image picker to know such as if you only want the user to select an image instead of a video file, then you can set another property called `mediaType` at `options` object.
 
@@ -445,7 +443,7 @@ There are separate functions provided by `ImagePicker` to use for selected metho
 
 Using these methods eliminates the need of showing the alert box to select an option when choosing an image.
 
-![cb5](https://blog.crowdbotics.com/content/images/2020/04/cb5-2.png)
+<img src='https://crowdbotics.ghost.io/content/images/2020/04/cb5-2.png' />
 
 These methods are for a direct use case such as when you only want the user to select the image either from the device's library or take a photo from the device's camera. You want to give the user only one option from these two, then you should use one of these methods.
 
@@ -471,7 +469,7 @@ ImagePicker.launchImageLibrary(options, response => {
 
 Now go back to the device and you are going to notice only one difference. The image library opens as soon as the button from the app is clicked.
 
-![cb13](https://blog.crowdbotics.com/content/images/2020/04/cb13.gif)
+<img src='https://crowdbotics.ghost.io/content/images/2020/04/cb13.gif' />
 
 The rest of the process is going to be the same.
 
@@ -584,11 +582,11 @@ export const STYLES = StyleSheet.create({
 
 Go back to the app and when an image is not picked, you are going to see the following result.
 
-![cb14](https://blog.crowdbotics.com/content/images/2020/04/cb14.png)
+<img src='https://crowdbotics.ghost.io/content/images/2020/04/cb14.png' />
 
 When an image is selected, it is going to be displayed instead of the placeholder image.
 
-![cb15](https://blog.crowdbotics.com/content/images/2020/04/cb15-1.png)
+<img src='https://crowdbotics.ghost.io/content/images/2020/04/cb15-1.png' />
 
 ## Conclusion
 
@@ -598,4 +596,4 @@ Here is the link to the complete [API](https://github.com/react-native-community
 
 The complete code for this tutorial is available at this GitHub repo [here](https://github.com/amandeepmittal/react-native-examples/tree/master/rnImagePickerExample).
 
-[Originally Published at Crowdbotics](https://blog.crowdbotics.com/how-to-use-react-native-image-picker/).
+[Originally Published at Crowdbotics](https://crowdbotics.ghost.io//how-to-use-react-native-image-picker/).

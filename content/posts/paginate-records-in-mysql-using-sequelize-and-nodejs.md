@@ -1,15 +1,11 @@
 ---
-date: 2017-06-20
+date: '2017-06-20'
 title: 'How to paginate records in MySQL using Sequelize and Nodejs'
-template: post
-thumbnail: '../thumbnails/node.png'
-slug: 'blog/paginate-records-in-mysql-using-sequelize-and-nodejs'
-tags:
-  - nodejs
+thumbnail: '/thumbnails/node.png'
+slug: 'paginate-records-in-mysql-using-sequelize-and-nodejs'
+tag: 'nodejs'
 canonicalUrl: 'https://medium.com/hackernoon/how-to-paginate-records-in-mysql-using-sequelize-and-nodejs-a3465d12aad5'
 ---
-
-![cover_image](https://miro.medium.com/max/1400/0*ShbzlvZjT-VI72oW.png)
 
 Often at times, I find my self struggling with Sequelize to find a direct answer for my query. Recently, I have been working on a fullstack application in which there was a basic requirement of paginating results from backend (REST API) to the frontend. I struggled for two reasons. Firstly, coming from NoSQL background it’s hard to grasp SQL DBs. Second reason being is Sequelize documentation does not provide a clear and direct solution to this very basic abstraction. Lot of people assume things in the world of SQL databases.
 
@@ -83,4 +79,4 @@ router.get('/:page', (req, res) => {
 
 `findAndCountAll` is the model for searching multiple records in the database and it returns both the data required and the count of elements in that table. The above query will get 50 user records at once until the next page is called to fetch the next 50 records. `limit` and `offset` are required in queries related to pagination in which `limit` fetches the number of rows based on the query whereas `offset` is used to skip the number of rows in the database table.
 
-[Originally Published at Hackernoon.com](https://medium.com/hackernoon/how-to-paginate-records-in-mysql-using-sequelize-and-nodejs-a3465d12aad5)
+> [Originally Published at Hackernoon.com](https://medium.com/hackernoon/how-to-paginate-records-in-mysql-using-sequelize-and-nodejs-a3465d12aad5)

@@ -1,17 +1,15 @@
 ---
-date: 2017-08-24
 title: 'What’s New in npm 5?'
-template: post
-thumbnail: '../thumbnails/node.png'
-slug: 'blog/whats-new-in-npm-5'
-tags:
-  - tools
+date: '2017-08-24'
+thumbnail: '/thumbnails/node.png'
+slug: 'whats-new-in-npm-5'
+tag: 'tools'
 canonicalUrl: 'https://amanhimself.dev/blog/whats-new-in-npm-5/'
 ---
 
 In May, in the very last week, [**npm**](https://npmjs.com/) announced the new major release for the JavaScript package manager. **5.0.0**, hopefully, will be shipped with upcoming version of [**Nodejs**](https://nodejs.org/en/) **(>=8.0.0)**as well. It seems a big step towards providing better tooling with significantly improved performance as quite a lot of developers made a switch to `yarn`, just because it could download the packages from the `npm` registery at a faster rate. However, this point is debatable, so let’s not get into that.
 
-### A Peek at Major Changes
+## A Peek at Major Changes
 
 Some of the major changes which I want to hightlight in this article and am eagerly looking forward to are:
 

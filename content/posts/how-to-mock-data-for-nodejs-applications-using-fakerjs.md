@@ -1,15 +1,13 @@
 ---
-date: 2017-04-01
 title: 'How to Mock Data for Node.js Applications using faker.js'
-template: post
-thumbnail: '../thumbnails/node.png'
-slug: 'blog/how-to-mock-data-for-nodejs-applications-using-fakerjs'
-tags:
-  - nodejs
+date: '2017-04-01'
+thumbnail: '/thumbnails/node.png'
+slug: 'how-to-mock-data-for-nodejs-applications-using-fakerjs'
+tag: 'nodejs'
 canonicalUrl: 'https://hackernoon.com/how-to-mock-data-for-node-js-applications-using-faker-js-b1f4c0e78102'
 ---
 
-![cover_image](https://hackernoon.com/hn-images/1*ENk6O_-iQYdMlnrM4w82kw.jpeg)
+> [Originally Published at Hackernoon.com](https://hackernoon.com/how-to-mock-data-for-node-js-applications-using-faker-js-b1f4c0e78102)
 
 When we start to build an application, we generally do not want to worry much about data. To create a database and fill it with sample data seems much of a hassle to me personally. I instead focus more on creating RESTful API and the front end of the application when I am prototyping.
 
@@ -48,7 +46,7 @@ const User = {
 module.exports = User;
 ```
 
-![](https://cdn-images-1.medium.com/max/1200/1*t8BjRlFjuUnbf0iXl-FZCQ.png)
+<img src='https://cdn-images-1.medium.com/max/1200/1*t8BjRlFjuUnbf0iXl-FZCQ.png' />
 
 That’s it. This is how you mock data using faker.js. It’s quick, simple to setup and no hassle at all. You just have to add it to your `npm` dependencies:
 
@@ -91,5 +89,3 @@ Another good thing about Faker I like is that it’s not only restricted to serv
 This API will help you to prototype your JavaScript/Node.js applications at a faster rate. Not only that, you can easily mock your TDD/BDD tests when creating a RESTful API utilizing this library.
 
 For full source code at [this Github Repository](https://github.com/amandeepmittal/fakerjs)
-
-[Originally Published at Hackernoon.com](https://hackernoon.com/how-to-mock-data-for-node-js-applications-using-faker-js-b1f4c0e78102)

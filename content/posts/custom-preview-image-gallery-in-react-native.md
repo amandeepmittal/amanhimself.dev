@@ -1,15 +1,11 @@
 ---
 title: 'How to Create a Custom Image Gallery in React Native'
-slug: 'blog/custom-preview-image-gallery-in-react-native'
-date: 2021-05-17
-template: post
-thumbnail: '../thumbnails/react.png'
-tags:
-  - react-native
+slug: 'custom-preview-image-gallery-in-react-native'
+date: '2021-05-17'
+thumbnail: '/thumbnails/react.png'
+tag: 'react-native'
 canonicalUrl: 'https://blog.crowdbotics.com/how-to-create-a-custom-tab-bar-in-react-native/'
 ---
-
-![cover_image](https://miro.medium.com/max/3000/1*l1LA9yCAkMQiHZYNpcHIZQ.png)
 
 In React Native, there are many ways to display a collection of images in a gallery view. One form is commonly known as carousel. Using an open-source library such as [react-native-swiper](https://github.com/leecade/react-native-swiper) or more advance [react-native-snap-carousel](https://github.com/meliorence/react-native-snap-carousel) serves the purpose. But what if we want to create a custom gallery view with additional functionality?
 
@@ -116,7 +112,7 @@ To initialize the development server for iOS, please execute the command `npx re
 
 Here is the app running after this step on an iOS simulator:
 
-![ss1](https://miro.medium.com/max/880/0*kS7PBYWOT71qfQ-g.png)
+<img src='https://miro.medium.com/max/880/0*kS7PBYWOT71qfQ-g.png' />
 
 ## Add a carousel view with react-native-snap-carousel
 
@@ -166,7 +162,7 @@ return (
 
 In the simulator you are going to get the following result:
 
-![ss2](https://miro.medium.com/max/536/0*9-RZy5PEztyt-lEF.gif)
+<img src='https://miro.medium.com/max/536/0*9-RZy5PEztyt-lEF.gif' />
 
 ## Add a dot indicator
 
@@ -221,7 +217,7 @@ Now, add a prop to the `Carousel` component called `onSnapToItem`. It accepts a 
 
 In the simulator, you will get the following result. The dot indicator now syncs with the Carousel item.
 
-![ss3](https://miro.medium.com/max/588/0*hE8I2aJxoFp5UnDu.gif)
+<img src='https://miro.medium.com/max/588/0*hE8I2aJxoFp5UnDu.gif' />
 
 Let's add another view component below the `View` that wraps the carousel to display the total number of images and the current image index number.
 
@@ -247,7 +243,7 @@ Let's add another view component below the `View` that wraps the carousel to dis
 
 Here is the result after this step:
 
-![ss4](https://miro.medium.com/max/800/0*9h1KAqUOt9LzOORL.png)
+<img src='https://miro.medium.com/max/800/0*9h1KAqUOt9LzOORL.png' />
 
 Awesome! The configuration for the Carousel component is now complete. Let's see how to sync it with a custom FlatList component in the next section.
 
@@ -291,11 +287,11 @@ Add the following code snippet after Carousel's View:
 
 The list of thumbnails renders as shown below:
 
-![ss5](https://miro.medium.com/max/800/0*JyzPZ5toA-v8mg3k.png)
+<img src='https://miro.medium.com/max/800/0*JyzPZ5toA-v8mg3k.png' />
 
 In the previous image, you will see that the first image is selected. You cannot change the currently selected image yet in the FlatList.
 
-## Syncing the Carousel view with the `FlatList`
+## Syncing the Carousel view with the FlatList
 
 The basic element that is going to allow us to sync the image change between both the Carousel view and the thumbnail is a React hook called `useRef`.
 
@@ -342,11 +338,11 @@ Next, add an `onPress` prop on the `TouchableOpacity` component:
 
 Here is the output after this step:
 
-![ss6](https://miro.medium.com/max/582/0*TdtJeFSTFtRUV5L_.gif)
+<img src='https://miro.medium.com/max/582/0*TdtJeFSTFtRUV5L_.gif' />
 
 The selection sync works do you notice there is a problem with the `FlatList` component? It doesn't scroll on its own when an image from the Carousel is selected that is not in the current view on the screen.
 
-## Scroll the FlatList using `scrollToOffset`
+## Scroll the FlatList using scrollToOffset
 
 Start by creating a new ref called `flatListRef` in `App.js` and add the ref prop to `FlatList` component:
 
@@ -384,7 +380,7 @@ const onSelect = indexSelected => {
 
 Here is the output after this step:
 
-![ss7](https://miro.medium.com/max/584/0*YVetWmnrP5zLKCi5.gif)
+<img src='https://miro.medium.com/max/584/0*YVetWmnrP5zLKCi5.gif' />
 
 ## Conclusion
 

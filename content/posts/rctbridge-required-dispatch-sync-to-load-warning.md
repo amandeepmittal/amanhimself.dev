@@ -1,11 +1,9 @@
 ---
 title: 'How to solve RCTBridge required dispatch_sync to load warning on iOS for React Native'
-slug: 'blog/rctbridge-required-dispatch-sync-to-load-warning'
-date: 2021-09-04
-thumbnail: '../thumbnails/react.png'
-template: post
-tags:
-  - react-native
+slug: 'rctbridge-required-dispatch-sync-to-load-warning'
+date: '2021-09-04'
+thumbnail: '/thumbnails/react.png'
+tag: 'react-native'
 canonicalUrl: 'https://amanhimself.dev/blog/rctbridge-required-dispatch-sync-to-load-warning/'
 ---
 

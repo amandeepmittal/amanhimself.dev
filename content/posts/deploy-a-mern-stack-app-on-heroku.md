@@ -1,12 +1,9 @@
 ---
 title: 'Deploy a MERN stack app on Heroku'
-date: 2018-10-12
-template: post
-slug: 'blog/deploy-a-mern-stack-app-on-heroku'
-thumbnail: '../thumbnails/heroku.png'
-tags:
-  - nodejs
-  - react
+date: '2018-10-12'
+slug: 'deploy-a-mern-stack-app-on-heroku'
+thumbnail: '/thumbnails/heroku.png'
+tag: 'heroku'
 canonicalUrl: 'https://medium.com/crowdbotics/deploy-a-mern-stack-app-on-heroku-b0c255744a70'
 ---
 
@@ -78,7 +75,7 @@ Now, I made following changes in `package.json` for this program to work.
 
 To see if everything is working, run the command `npm start server` that we just defined in `package.json` as a script. If there are no errors, you will get the following result. Visit the following url: `[http://localhost:5000](http://localhost:5000.)`[.](http://localhost:5000.)
 
-![](https://cdn-images-1.medium.com/max/800/1*fza80DTPXuhFwJapj2ZIbQ.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*fza80DTPXuhFwJapj2ZIbQ.png' />
 
 Please note that onwards Express version `4.16.0` body parser middleware function is a built-in middleware and there is no need to import it as a separate dependency. Body parser middleware is required to handle incoming AJAX requests that come in the form of JSON payloads or urlencoded payloads.
 
@@ -187,7 +184,7 @@ router.use('/api/books', bookRoutes);
 module.exports = router;
 ```
 
-I am adding a prefix `/api/books` before the routes. This way, you can only access them as `[http://localhost:5000/api/books](http://localhost:5000/api/books.)`[.](http://localhost:5000/api/books.)
+I am adding a prefix `/api/books` before the routes. This way, you can only access them as `http://localhost:5000/api/books`.
 
 For this to work, I am going to import book routes in the `server.js` file after every other middleware defined and before we have bootstrapped the server.
 
@@ -207,15 +204,15 @@ Also remove the default route `app.get('/')...` that was previously created. We 
 
 I am going to use [**mlab**](https://mlab.com) to host the database of our application on the cloud. Once you create an account, your dashboard will look similar to mine. I already have few sandboxes running, so do not mind them.
 
-![](https://cdn-images-1.medium.com/max/800/1*gnhdXtIORiT1EsMEv3MSUg.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*gnhdXtIORiT1EsMEv3MSUg.png' />
 
 To create a new one, click on the button `Create New` under MongoDB deployments. After that, you select the plan type Sandbox which provides the free tier up to 500MB.
 
-![](https://cdn-images-1.medium.com/max/800/1*LiDzbwLDCpC-e4Igs7qptg.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*LiDzbwLDCpC-e4Igs7qptg.png' />
 
 After the MongoDB deployment is created, a database user is required by the mlab to have you connect to this database. To create one now, visit the ‘Users’ tab and click the ‘Add database user’ button.
 
-![](https://cdn-images-1.medium.com/max/800/1*GyHzO_0P76__Y6_UOG1zXA.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*GyHzO_0P76__Y6_UOG1zXA.png' />
 
 Now copy the string provided by mlab such as:
 
@@ -283,7 +280,7 @@ app.listen(PORT, () => {
 
 Now run the server again and if you get the following message, that means your database is gracefully connected to the web server.
 
-![](https://cdn-images-1.medium.com/max/800/1*560qCrzs2900Z2zqwUK2oA.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*560qCrzs2900Z2zqwUK2oA.png' />
 
 ### Building the FrontEnd with React
 
@@ -534,7 +531,7 @@ There are two build steps we have to undergo through in making a connection betw
 
 Next step is to run the command `yarn build` inside the client directory such that it builds up the project. If you haven't run this command before in this project, you will notice a new directory suddenly appears.
 
-![](https://cdn-images-1.medium.com/max/800/1*K5i8irozZCKYpIodE6hgng.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*K5i8irozZCKYpIodE6hgng.png' />
 
 We also need to make two changes to our backend, to serve this `build` directory. The reason we are doing this is to deploy our full stack application later on Heroku as one. Of course, you can two deployment servers where one is serving the REST API such as our backend and the other serves the client end, the build folder we just created.
 
@@ -594,16 +591,17 @@ npm run start
 
 This will trigger our server at url `http://localhost:5000`. Visit it using a browser and see your MERN stack app in action like below. For brevity, I haven't much styled but go ahead and showcase your CSS skills.
 
-![](https://cdn-images-1.medium.com/max/800/1*V3ZbTRYfdUc2jnEWHsPEdQ.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*V3ZbTRYfdUc2jnEWHsPEdQ.png' />
 
 To verify that the data from our application is being added to the database, go to your mlab MongoDB deployment. You will notice a collection appearing with the name of `books`. Open it and you can see the data you have just submitted through the form. Here is how mine looks like.
 
-![](https://cdn-images-1.medium.com/max/800/1*mNSQyfBe_qzh_IyUZdaT_w.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*mNSQyfBe_qzh_IyUZdaT_w.png' />
 
 I already have two records.
 
-![](https://cdn-images-1.medium.com/max/800/1*dfYnIQotE5nFr3UhkDIb9g.png)
-![](https://cdn-images-1.medium.com/max/800/1*mauB7W6yd80fS5gmWHomPA.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*dfYnIQotE5nFr3UhkDIb9g.png' />
+
+<img src='https://cdn-images-1.medium.com/max/800/1*mauB7W6yd80fS5gmWHomPA.png' />
 
 Since everything is running locally without any problem, we can move to the next part.
 
@@ -637,7 +635,7 @@ Modify `package.json` by adding the following script.
 
 Login to your Heroku account with credentials by running command `heroku login` like below.
 
-![](https://cdn-images-1.medium.com/max/800/1*Tfgopqciv5qCw_YzDXOM6A.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*Tfgopqciv5qCw_YzDXOM6A.png' />
 
 Next, create a `Procfile` in the root folder with following value.
 
@@ -668,7 +666,7 @@ heroku create
 
 When this command runs successfully, it gives you an app id like this. Remember this app id as we are going to use it set our existing mlab MongoDB URI.
 
-![](https://cdn-images-1.medium.com/max/800/1*75t_1Se-SNCHrQ67CIKwmQ.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*75t_1Se-SNCHrQ67CIKwmQ.png' />
 
 Next step is to connect the existing mlab deployment from our Heroku app.
 
@@ -706,11 +704,11 @@ This points to Heroku remote instead of `origin`. This above command sends the s
 
 Finishing the building of your project may look similar to mine.
 
-![](https://cdn-images-1.medium.com/max/800/1*jsmi-MziaelOUtB_2Mbn4Q.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*jsmi-MziaelOUtB_2Mbn4Q.png' />
 
 You can then visit the URL given by Heroku like below. Do notice the already existing data that we deployed using local server in the previous section.
 
-![](https://cdn-images-1.medium.com/max/800/1*PQTWi9hFs29cI2B2IsRRDw.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*PQTWi9hFs29cI2B2IsRRDw.png' />
 
 ### Conclusion
 

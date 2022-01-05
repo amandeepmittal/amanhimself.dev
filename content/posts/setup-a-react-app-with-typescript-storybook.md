@@ -1,11 +1,9 @@
 ---
 title: 'How to Setup a React App with TypeScript, Storybook'
-slug: 'blog/setup-a-react-app-with-typescript-storybook'
-date: 2019-06-14
-thumbnail: '../thumbnails/react.png'
-template: post
-tags:
-  - react
+slug: 'setup-a-react-app-with-typescript-storybook'
+date: '2019-06-14'
+thumbnail: '/thumbnails/react.png'
+tag: 'react'
 canonicalUrl: 'https://blog.crowdbotics.com/setup-a-react-app-with-typescript-storybook-and-crowdbotics/'
 ---
 
@@ -44,11 +42,11 @@ create-react-app hello-tsx-storybook
 
 This command will take a few moments to execute completely. Once the React + TypeScript project is generated you will get the following file structure. Notice how there some of the files in the root directory are TypeScript's configuration files and in `src` directory, where the magic happens, has component files (such as `App.tsx`) with an extension of `tsx` at the end of file name rather a `.js`. This indicates that the component file now supports TypeScript.
 
-![](https://blog.crowdbotics.com/content/images/2019/05/ss1-3.png)
+![](https://crowdbotics.ghost.io/content/images/2019/05/ss1-3.png)
 
 To run the app in the current state, open command line interface, traverse inside the project root and run `npm start`. Once the webpack dev server starts, you will be directed to the URL `http://localhost:3000/` in a default web browser window with the following screen like below.
 
-![](https://blog.crowdbotics.com/content/images/2019/05/ss2-2.png)
+![](https://crowdbotics.ghost.io/content/images/2019/05/ss2-2.png)
 
 ## Adding Storybook
 
@@ -92,7 +90,7 @@ touch addons.js config.js tsconfig.json webpack.config.js
 
 The output of the above command is going to be:
 
-![](https://blog.crowdbotics.com/content/images/2019/05/ss3-3.png)
+![](https://crowdbotics.ghost.io/content/images/2019/05/ss3-3.png)
 
 For a basic Storybook configuration, the only thing you need to do is tell Storybook where to find stories and include the path inside `.storybook/config.js`. In our current scenario, we are going to stories inside the `src/components` directory (_just a personal preference_).
 
@@ -224,12 +222,12 @@ storiesOf('Button', module)
 
 Go to the terminal window and run the script `yarn run storybook`. This will open a new window in your default web browser at URL: `http://localhost:4000/?path=/story/button--with-text` with the following result.
 
-![](https://blog.crowdbotics.com/content/images/2019/05/ss4-2.png)
+![](https://crowdbotics.ghost.io/content/images/2019/05/ss4-2.png)
 
-![](https://blog.crowdbotics.com/content/images/2019/05/ss5-3.png)
+![](https://crowdbotics.ghost.io/content/images/2019/05/ss5-3.png)
 
 ## Conclusion
 
 Kudos to you if have reached so far. You have configured Storybook work with TypeScript and wrote a story for a custom `Button` component using the TypeScript. This tutorial was just an introduction. To dive deep inside the world of storybooks, I would recommend you to go through their official docs [here](https://storybook.js.org/docs/guides/guide-react/).
 
-[Originally published at Crowdbotics](https://blog.crowdbotics.com/setup-a-react-app-with-typescript-storybook-and-crowdbotics/)
+[Originally published at Crowdbotics](https://crowdbotics.ghost.io/setup-a-react-app-with-typescript-storybook-and-crowdbotics/)

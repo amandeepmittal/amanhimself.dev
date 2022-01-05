@@ -1,11 +1,9 @@
 ---
-date: 2016-03-10
 title: 'The Node way - Philosophy of a Platform'
-template: post
-thumbnail: '../thumbnails/node.png'
-slug: 'blog/the-node-way'
-tags:
-  - nodejs
+date: '2016-03-10'
+thumbnail: '/thumbnails/node.png'
+slug: 'the-node-way'
+tag: 'nodejs'
 canonicalUrl: 'https:/amanhimself.dev/blog/the-node-way/'
 ---
 

@@ -1,12 +1,9 @@
 ---
 title: 'Nesting Tab and Stack navigators in React Native and Expo apps'
-date: 2020-02-26
-slug: 'blog/nested-navigators-in-react-native'
-thumbnail: '../thumbnails/expo.png'
-template: post
-tags:
-  - expo
-  - react-native
+date: '2020-02-26'
+slug: 'nested-navigators-in-react-native'
+thumbnail: '/thumbnails/expo.png'
+tag: 'expo'
 canonicalUrl: 'https://heartbeat.fritz.ai/nesting-tab-and-stack-navigators-in-react-native-and-expo-apps-cc118a141e70'
 ---
 
@@ -146,7 +143,7 @@ export default function App() {
 
 Go back to the terminal window, execute `expo start` and open up an Expo client inside a simulator or a real device. You are going to get the following result.
 
-![ss1](https://miro.medium.com/max/369/1*_noQNKBA1wUf8EkgNyCsQA.gif)
+<img src='https://miro.medium.com/max/369/1*_noQNKBA1wUf8EkgNyCsQA.gif' />
 
 ## Adding icon and changing active tint color
 
@@ -168,7 +165,7 @@ Add the following:
 
 Go to the simulator device, you are going to notice that the active tab bar label has a color of black from the previous blue.
 
-![ss2](https://miro.medium.com/max/350/1*y3hy861GwUm_mj1HCvr3Ew.png)
+<img src='https://miro.medium.com/max/350/1*y3hy861GwUm_mj1HCvr3Ew.png' />
 
 Let us add some icons to the tab bar. Start by importing the `Ionicons` from `@expo/vector-icons`.
 
@@ -207,7 +204,7 @@ Then, in each `Tab.Screen`, add an options prop that is going to have a property
 
 Here is the output:
 
-![ss3](https://miro.medium.com/max/350/1*3G4fINzTR9vNIGQzujkegQ.png)
+<img src='https://miro.medium.com/max/350/1*3G4fINzTR9vNIGQzujkegQ.png' />
 
 You can even change the background of the tab bar by adding a `style` property to `tabBarOptions`.
 
@@ -226,7 +223,7 @@ You can even change the background of the tab bar by adding a `style` property t
 
 Here is the output for the above snippet:
 
-![ss4](https://miro.medium.com/max/350/1*Gxk9p_0XQ2z-y-sYHH7Epw.png)
+<img src='https://miro.medium.com/max/350/1*Gxk9p_0XQ2z-y-sYHH7Epw.png' />
 
 ## Passing screenOptions in a Tab Navigator
 
@@ -263,7 +260,7 @@ function MainTabNavigator() {
 
 There is no change in the functioning of the tab navigator from the previous section, as you can notice below:
 
-![ss5](https://miro.medium.com/max/369/1*X06mUqbYfHKYEDdPAVBJjA.gif)
+<img src='https://miro.medium.com/max/369/1*X06mUqbYfHKYEDdPAVBJjA.gif' />
 
 ## Updating the header title for the nested child navigator
 
@@ -306,7 +303,7 @@ Then, [as per the recommended way](https://reactnavigation.org/docs/en/screen-op
 
 Now, when visiting the `Profile` tab, you are going to get the desired title in the header.
 
-![ss6](https://miro.medium.com/max/369/1*gCs24QDMEQ_D6DcDxjiALw.gif)
+<img src='https://miro.medium.com/max/369/1*gCs24QDMEQ_D6DcDxjiALw.gif' />
 
 ## Conclusion
 

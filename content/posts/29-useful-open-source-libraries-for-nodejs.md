@@ -1,15 +1,15 @@
 ---
 title: 'Top open source libraries for Node.js'
-slug: 'blog/29-useful-open-source-libraries-for-nodejs'
-date: 2019-01-31
-template: post
-thumbnail: '../thumbnails/node.png'
-tags:
-  - nodejs
+slug: '29-useful-open-source-libraries-for-nodejs'
+date: '2019-01-31'
+thumbnail: '/thumbnails/node.png'
+tag: 'nodejs'
 canonicalUrl: 'https://medium.com/crowdbotics/29-useful-open-source-libraries-for-nodejs-4cefe08f7205'
 ---
 
 ![cover_image](https://i.imgur.com/Yv3yfrm.png)
+
+> [Originally published at Crowdbotics](https://medium.com/crowdbotics/29-useful-open-source-libraries-for-nodejs-4cefe08f7205)
 
 [**Node.js**](https://nodejs.org) has become more and more popular as a framework because provides quick and efficient solutions for back-end development and integrates well with front-end platforms.
 
@@ -37,7 +37,7 @@ It differs from other Nodejs web frameworks such as Express and Koa in manner th
 
 AdonisJS is combination of multiple packages that work together gracefully integrate with the application. For example, it provides a built-in ORM that is works well with SQL databases such as Postgres and MySQL. It helps to create efficient SQL- queries and is based on active record idea. Its query builder is easy to learn and allows us to build simple queries quickly.
 
-[**adonisjs/adonis-framework**]https://github.com/adonisjs/adonis-framework)
+[**adonisjs/adonis-framework**](https://github.com/adonisjs/adonis-framework)
 
 ### MomentJS
 
@@ -413,5 +413,3 @@ This module loads environment variables from a `.env` file that you create and 
 Nodejs is a mature platform. Working with third party libraries is a huge part of the JavaScript ecosystem and you cannot run from it. Apart from your personal opinion, if you do not appreciate working with different third party libraries then you should definitely think about the tech stack you are working with.
 
 _I hope this list gets you started to with most commonly used open source packages that are used in_ [**_Node.js_**](https://nodejs.org) _community._
-
-[Originally published at Crowdbotics](https://medium.com/crowdbotics/29-useful-open-source-libraries-for-nodejs-4cefe08f7205)

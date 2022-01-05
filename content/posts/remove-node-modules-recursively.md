@@ -1,11 +1,9 @@
 ---
-date: 2017-09-10
+date: '2017-09-10'
 title: 'Remove node_modules Recursively'
-template: post
-thumbnail: '../thumbnails/node.png'
-slug: 'blog/remove-node-modules-recursively'
-tags:
-  - nodejs
+thumbnail: '/thumbnails/node.png'
+slug: 'remove-node-modules-recursively'
+tag: 'nodejs'
 canonicalUrl: 'https://amanhimself.dev/blog/remove-node-modules-recursively/'
 ---
 
@@ -15,7 +13,7 @@ Each day `npm` registry is getting around [350 million downloads](https://twitte
 
 Here’s Laurie Voss [(@seldo)](https://twitter.com/seldo) [tweet](https://twitter.com/seldo/status/864298310785310720), sharing the aforementioned details:
 
-![](https://cdn-images-1.medium.com/max/800/0*HHMm699bdI2QMoOy.jpg)
+<img src='https://cdn-images-1.medium.com/max/800/0*HHMm699bdI2QMoOy.jpg' />
 
 Nonetheless, after all your efforts are paid of and everything is deployed and is over cloud, either Github or some deployment service you or your client prefers, I think it will be generous to remove `node_modules` that take useful space on our local machines (especially, Mac users with limited GigaBytes of SSD).
 

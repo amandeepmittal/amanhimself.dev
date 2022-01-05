@@ -1,22 +1,21 @@
 ---
 title: 'How to add a Search bar in a FlatList in React Native apps'
-template: post
-date: 2020-04-16
-slug: 'blog/add-search-bar-to-a-flatlist-in-react-native'
-thumbnail: '../thumbnails/expo.png'
-tags:
-  - expo
-  - react-native
+date: '2020-04-16'
+slug: 'add-search-bar-to-a-flatlist-in-react-native'
+thumbnail: '/thumbnails/expo.png'
+tag: 'expo'
 canonicalUrl: 'https://blog.crowdbotics.com/add-search-bar-flatlist-react-native-apps/'
 ---
 
 ![cover_image](https://i.imgur.com/zeVnUHd.png)
 
+> Originally published at [Crowdbotics.com](https://blog.crowdbotics.com/add-search-bar-flatlist-react-native-apps)
+
 There are few ways to create scrollable lists in React Native. Two of the common ways available in React Native core are `ScrollView` and `FlatList` components. Each has its strength and in this tutorial, let us dive deep to create a search bar with `FlatList` component.
 
 The final result you are going to achieve at the end of this tutorial is shown below.
 
-![ss8](https://blog.crowdbotics.com/content/images/2020/01/ss8.gif)
+![ss8](https://i.imgur.com/a5FpiUm.gif)
 
 ## Table of contents
 
@@ -80,7 +79,7 @@ expo start
 
 I am using an iOS simulator for the demo. Here is the output of the above code snippet.
 
-![ss1](https://blog.crowdbotics.com/content/images/2020/01/ss1.png)
+![ss1](https://i.imgur.com/TZ173Uv.png)
 
 ## What is FlatList?
 
@@ -140,13 +139,13 @@ const HomeScreen = () => (
 
 If the Expo cli command to run the development server is still running, you are going to get the following result.
 
-![ss2](https://blog.crowdbotics.com/content/images/2020/01/ss2.png)
+![ss2](https://i.imgur.com/penUpT7.png)
 
 ## Fetching data from Remote API in a FlatList
 
 You can even play around with it. Try to fetch data from a real-time remote API and display them in the list instead of mock data. For a start, you can use a public API URL such as [Randomuser.me API](https://randomuser.me/api/). The result to obtain at the end of this section is displayed below.
 
-![ss3](https://blog.crowdbotics.com/content/images/2020/01/ss3.png)
+![ss3](https://i.imgur.com/cAwKEaD.png)
 
 Open, `App.js` file and a state object with some properties to keep track of data from the Random User API. Also, do not forget to modify the import statements.
 
@@ -227,7 +226,7 @@ renderFooter = () => {
 
 Here is the output you are going to get when the loading indicator is shown.
 
-![ss5](https://blog.crowdbotics.com/content/images/2020/01/ss5.png)
+![ss5](https://i.imgur.com/FYDMKsp.png)
 
 ## Adding a custom Separator to FlatList component
 
@@ -294,7 +293,7 @@ You can also use this prop to render other information at the bottom of all the 
 
 Here is the output so far.
 
-![ss4](https://blog.crowdbotics.com/content/images/2020/01/ss4.gif)
+![ss4](https://i.imgur.com/eszTsxG.gif)
 
 ## Adding a Search bar
 
@@ -416,11 +415,11 @@ That's it to add a search bar to the FlatList component.
 
 To run the app, make sure the `expo start` command is running. Next, go to Expo client and you are going to be prompted by the following screen:
 
-![ss6](https://blog.crowdbotics.com/content/images/2020/01/ss6.png)
+![ss6](https://i.imgur.com/nUcoa0G.png)
 
 Next, try to add a user name from the list being rendered.
 
-![ss7](https://blog.crowdbotics.com/content/images/2020/01/ss7.gif)
+![ss7](https://i.imgur.com/KCL5zYz.gif)
 
 ## Add clear button to input text field
 
@@ -437,7 +436,7 @@ Let us add another prop called `clearButtonMode` that allows the input field to 
 
 Now go back to the Expo client and see it in action
 
-![ss8](https://blog.crowdbotics.com/content/images/2020/01/ss8-1.gif)
+![ss8](https://i.imgur.com/fQvxr4j.gif)
 
 ## Conclusion
 
@@ -446,5 +445,3 @@ This brings an end to this current tutorial. The screen implemented in this demo
 We use UI Kitten for our latest template libraries. Find more about how to create custom screens like this from our open source project [here](https://github.com/crowdbotics/blueprint-react-native-contacts-screen).
 
 You can also find the source code from this tutorial at this [Github repo](https://github.com/amandeepmittal/searchableFlatListDemo).
-
-Originally published at [Crowdbotics.com](https://blog.crowdbotics.com/add-search-bar-flatlist-react-native-apps)

@@ -1,15 +1,12 @@
 ---
 title: 'React Native Performance Do and Dont'
-slug: 'blog/react-native-performance-do-and-dont'
-date: 2021-02-13
-template: post
-thumbnail: '../thumbnails/react.png'
-tags:
-  - react-native
+slug: 'react-native-performance-do-and-dont'
+date: '2021-02-13'
+
+thumbnail: '/thumbnails/react.png'
+tag: 'react-native'
 canonicalUrl: 'https://medium.com/crowdbotics/react-native-performance-do-and-dont-88424e873bbd'
 ---
-
-![cover_image](https://miro.medium.com/max/700/1*l1LA9yCAkMQiHZYNpcHIZQ.png)
 
 Performance is one of the few topics that change the overall perspective of using a framework like React Native in real-world mobile applications. React Native is fast by default. While working on a React Native app you can experience performance issues and do not assume it can be fixed by testing components. In this post, there is a list of suggestions that can be applied while building a React Native app.
 
@@ -131,7 +128,7 @@ Then, modify the `.babelrc` file to remove all console statements:
 }
 ```
 
-## DON'T: Use <ScrollView> to render a huge list of data items
+## DON'T: Use ScrollView to render a huge list of data items
 
 There are few ways to create scrollable lists in React Native. Two of the common ways available in React Native core are `ScrollView` and `FlatList` components.
 

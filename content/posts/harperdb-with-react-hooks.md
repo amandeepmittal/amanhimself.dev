@@ -1,12 +1,9 @@
 ---
 title: 'How to use HarperDB instance with React Hooks'
-date: 2020-10-07
-template: post
-slug: 'blog/harperdb-with-react-hooks'
-thumbnail: '../thumbnails/harperdb.png'
-tags:
-  - react
-  - harperdb
+date: '2020-10-07'
+slug: 'harperdb-with-react-hooks'
+thumbnail: '/thumbnails/harperdb.png'
+tag: 'harperdb'
 canonicalUrl: 'https://amanhimself.dev/blog/harperdb-with-react-hooks'
 ---
 

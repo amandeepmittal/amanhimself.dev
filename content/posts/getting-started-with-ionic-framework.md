@@ -1,15 +1,13 @@
 ---
-date: 2017-02-26
 title: 'Getting Started with Ionic Framework'
-template: post
-thumbnail: '../thumbnails/ionic.png'
-slug: 'blog/getting-started-with-ionic-framework'
-tags:
-  - ionic
+date: '2017-02-26'
+thumbnail: '/thumbnails/ionic.png'
+slug: 'getting-started-with-ionic-framework'
+tag: 'ionic'
 canonicalUrl: 'https://hackernoon.com/getting-started-with-ionic-framework-an-overview-6725b687779b'
 ---
 
-![cover_image](https://hackernoon.com/hn-images/1*nlhD6_U277a1s_VxSbH11g.jpeg)
+> [Originally Published at Hackernoon.com](https://hackernoon.com/getting-started-with-ionic-framework-an-overview-6725b687779b)
 
 I have been getting familiar with [Ionic Framework](http://ionicframework.com/) in past recent days. To start, I had a question in mind which might be similar to yours. **_Why choose Ionic Framework?_**
 
@@ -31,7 +29,7 @@ With above “list of reasoning” I am also including few more points that Ioni
 
 With all that said, I am going to briefly discuss few things in this article that you should know of if/when you are planning to start developing applications using _Ionic Framework_.
 
-### **Hybrid Mobile Architecture**
+### Hybrid Mobile Architecture
 
 Did you think I am going to start this article by discussing some [**myths around Hybrid Mobile Applications**](https://devdactic.com/myth-hybrid-development/)? Well I am not because there’s already an awesome article written by Simon on [DevDactic.com](https://devdactic.com)
 
@@ -55,8 +53,7 @@ The application on a specific mobile operating system runs via tool like [Cordov
 
 WebView communicates with Cordova’s APIs which then further communicates with mobile devices.
 
-![Courtesy of [https://www.linkedin.com/in/shindesantosh](https://www.linkedin.com/in/shindesantosh)](https://cdn-images-1.medium.com/max/800/1*hdwWntqxD-qOL8vf87DmAQ.png)
-Courtesy of [https://www.linkedin.com/in/shindesantosh](https://www.linkedin.com/in/shindesantosh)
+<img src='https://cdn-images-1.medium.com/max/800/1*hdwWntqxD-qOL8vf87DmAQ.png' />
 
 WebViews are so common these days that you can build desktop applications using [Electron](http://electron.atom.io/).
 
@@ -98,7 +95,7 @@ To get a list of all Ionic templates available type in terminal:
 
 `ionic start` is the command that is used to scaffold an Ionic application.
 
-![](https://cdn-images-1.medium.com/max/800/1*zYrkeFhqj6-YCDaF0LcWMg.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*zYrkeFhqj6-YCDaF0LcWMg.png' />
 
 #### Scaffolding an Ionic Application
 
@@ -129,11 +126,11 @@ $ ionic serve
 
 It will open a browser window in the default web browser and you will see similar to this:
 
-![](https://cdn-images-1.medium.com/max/800/1*JNQywRjia3Z98oF1cdwByA.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*JNQywRjia3Z98oF1cdwByA.png' />
 
 `ionic serve --lab` will run the app locally showing two instances of the app for iOS & Android.
 
-![](https://cdn-images-1.medium.com/max/800/1*LMFf8hdbrt1zPB1EAfoNPg.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*LMFf8hdbrt1zPB1EAfoNPg.png' />
 
 To run the application deliberately on a different port number: `ionic serve -p 8080`
 
@@ -141,7 +138,7 @@ To run the application deliberately on a different port number: `ionic serve -p 
 
 Following is the root structure of an Ionic Project after scaffolding:
 
-![](https://cdn-images-1.medium.com/max/800/1*k9wGw8Kg_lr2yjaGWIefPA.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*k9wGw8Kg_lr2yjaGWIefPA.png' />
 
 I will start describing what each folder/file in the root folder of the app contains, from top to bottom.
 
@@ -163,5 +160,3 @@ This folder is the main folder of our application and its where the code of our 
 The last folder, `lib` contain the packages/dependencies that are installed using Bower. It contains a pre-loaded dependency of Ionic and Angular files.
 
 _I guess, you now have the idea of how an Hybrid application using Ionic Framework works._
-
-[Originally Published at Hackernoon.com](https://hackernoon.com/getting-started-with-ionic-framework-an-overview-6725b687779b)

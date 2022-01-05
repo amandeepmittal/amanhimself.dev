@@ -1,12 +1,9 @@
 ---
 title: 'Creating and Validating React Native Forms with Formik'
-date: 2020-10-16
-template: post
-slug: 'blog/creating-and-validating-react-native-form-with-formik'
-thumbnail: '../thumbnails/expo.png'
-tags:
-  - expo
-  - react-native
+date: '2020-10-16'
+slug: 'creating-and-validating-react-native-form-with-formik'
+thumbnail: '/thumbnails/expo.png'
+tag: 'react-native'
 canonicalUrl: 'https://amanhimself.dev/blog/creating-and-validating-react-native-form-with-formik'
 ---
 

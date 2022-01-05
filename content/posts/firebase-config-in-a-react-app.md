@@ -1,12 +1,9 @@
 ---
 title: 'How to setup a React App with a Firebase project'
-slug: 'blog/firebase-config-in-a-react-app'
-date: 2020-06-05
-template: post
-thumbnail: '../thumbnails/firebase.png'
-tags:
-  - firebase
-  - react
+slug: 'firebase-config-in-a-react-app'
+date: '2020-06-05'
+thumbnail: '/thumbnails/firebase.png'
+tag: 'firebase'
 canonicalUrl: 'https://amanhimself.dev/blog/firebase-config-in-a-react-app/'
 ---
 

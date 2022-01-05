@@ -1,13 +1,13 @@
 ---
 title: 'Top Node.js Libraries and Tools For Machine Learning'
-slug: 'blog/top-nodejs-libraries-and-tools-for-machine-learning'
-date: 2018-12-19
-thumbnail: '../thumbnails/node.png'
-template: post
-tags:
-  - nodejs
+slug: 'top-nodejs-libraries-and-tools-for-machine-learning'
+date: '2018-12-19'
+thumbnail: '/thumbnails/node.png'
+tag: 'nodejs'
 canonicalUrl: 'https://medium.com/crowdbotics/top-nodejs-libraries-and-tools-for-machine-learning-ae0c106c9a69'
 ---
+
+> [Originally published at Crowdbotics](https://medium.com/crowdbotics/top-nodejs-libraries-and-tools-for-machine-learning-ae0c106c9a69)
 
 Javascript is often thought of a web programming language but Javascript, and javascript frameworks such as NodeJS, have many applications apart from just web apps including desktop applications, mobile applications, embedded systems, and back-end development.
 
@@ -283,5 +283,3 @@ JavaScript might be not a go-to programming language for machine learning yet, b
 Many machine learning library developers and teams write libraries using using C, LIBSVM, LIBLINEAR, and so on. These can be implemented in Node.js too, using native extensions provided by the Node.js core APIs.
 
 I hope, this post prove useful to you as well for learning and using different libraries mentioned in your Node.js application.
-
-_[Originally published at Crowdbotics](https://medium.com/crowdbotics/top-nodejs-libraries-and-tools-for-machine-learning-ae0c106c9a69)_

@@ -1,15 +1,11 @@
 ---
-date: 2017-11-19
+date: '2017-11-19'
 title: 'Multi Page Navigation in an Ionic App'
-template: post
-thumbnail: '../thumbnails/ionic.png'
-slug: 'blog/multi-page-navigation-in-an-ionic-app'
-tags:
-  - ionic
+thumbnail: '/thumbnails/ionic.png'
+slug: 'multi-page-navigation-in-an-ionic-app'
+tag: 'ionic'
 canonicalUrl: 'https://medium.com/hackernoon/multi-page-navigation-in-an-ionic-app-8b008f616cdb'
 ---
-
-![cover_image](https://miro.medium.com/max/2400/0*XkFYDVAjZ4FnJdng.jpg)
 
 Ionic makes it easy to create multiple pages navigation using `NavController` as the genesis of navigation stack. In this little application, I will try to make the concept clear to you.
 
@@ -245,9 +241,11 @@ $ ionic serve --lab
 
 The output shown can be best described in these screenshots:
 
-![1](https://cdn-images-1.medium.com/max/800/0*sMnNW4P3ONmaUZCP.png)
-![2](https://cdn-images-1.medium.com/max/800/0*iPNMEzroixe-Dmlj.png)
-![3](https://cdn-images-1.medium.com/max/800/0*7oSIkMCTVC0JOaQ5.png)
+<img src='https://cdn-images-1.medium.com/max/800/0*sMnNW4P3ONmaUZCP.png' />
+
+<img src='https://cdn-images-1.medium.com/max/800/0*iPNMEzroixe-Dmlj.png' />
+
+<img src='https://cdn-images-1.medium.com/max/800/0*7oSIkMCTVC0JOaQ5.png' />
 
 This is just a glimpse of how multi page navigation in Ionic might work that might help you to get started with development.
 

@@ -1,5 +1,8 @@
+.next
 .cache
-package.json
 package-lock.json
 public
 node_modules
+next-env.d.ts
+next.config.js
+.eslintrc.json

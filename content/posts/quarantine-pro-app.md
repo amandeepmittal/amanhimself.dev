@@ -1,12 +1,9 @@
 ---
 title: 'Creating "Quarantine Pro" — A Fun Learning Experiment in React Native'
-slug: 'blog/quarantine-pro-app'
-date: 2020-05-14
-template: post
-thumbnail: '../thumbnails/expo.png'
-tags:
-  - expo
-  - react-native
+slug: 'quarantine-pro-app'
+date: '2020-05-14'
+thumbnail: '/thumbnails/expo.png'
+tag: 'expo'
 canonicalUrl: 'https://blog.jscrambler.com/creating-quarantine-pro-a-fun-learning-experiment-in-react-native/'
 ---
 
@@ -84,7 +81,7 @@ After placing the file inside the newly created directory, the file structure wi
 
 When you are downloading a font to use in an Expo React Native app, make sure you download either a font in either `.otf` or `.ttf` format. Those are the two formats that work across all Expo platforms such as web, iOS, and Android.
 
-### Use The `useFonts` Hook
+### Use The useFonts Hook
 
 To use any [hook](https://blog.jscrambler.com/introducing-react-hooks/) in a React or React Native app, you have to use functional components. To set up a new font, start by importing the following statements.
 

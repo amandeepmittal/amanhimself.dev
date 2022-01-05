@@ -1,16 +1,15 @@
 ---
 title: 'How To Integrate Firebase Authentication With an Expo App'
-date: 2021-07-04
-slug: 'blog/firebase-authentication-with-expo'
-template: post
-thumbnail: '../thumbnails/expo.png'
-tags:
-  - expo
-  - firebase
+date: '2021-07-04'
+slug: 'firebase-authentication-with-expo'
+thumbnail: '/thumbnails/expo.png'
+tag: 'expo'
 canonicalUrl: 'https://blog.jscrambler.com/how-to-integrate-firebase-authentication-with-an-expo-app/'
 ---
 
 ![cover_image](https://blog.jscrambler.com/content/images/2021/07/jscrambler-blog-integrate-firebase-authentication-with-expo-app-thumbnail-1.jpg)
+
+> Originally Published at [Jscrambler.com](https://blog.jscrambler.com/how-to-integrate-firebase-authentication-with-an-expo-app/).
 
 [Firebase](https://console.firebase.google.com/) is a Backend as a Service (BaaS) that provides a variety of services for web and mobile app development. Most of the mobile apps built using React Native and Expo require knowing the identity of a user. This allows an app to securely save user data in the cloud and provide more personalized functionalities.
 
@@ -945,5 +944,3 @@ You have now successfully integrated the Firebase Auth service in a React Native
 Using Firebase JS SDK allows integrating other sign-in providers such as Phone authentication, Facebook and Google. Refer to [Expo’s official documentation](https://docs.expo.io/guides/using-firebase/#login-methods) to try out other login providers.
 
 If you need to take a look at the code for this tutorial, you can refer to this [GitHub repo](https://github.com/amandeepmittal/react-native-examples/tree/master/expo-firebase-auth-example).
-
-Originally Published at [Jscrambler.com](https://blog.jscrambler.com/how-to-integrate-firebase-authentication-with-an-expo-app/).

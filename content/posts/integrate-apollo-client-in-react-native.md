@@ -1,13 +1,9 @@
 ---
 title: 'How to integrate GraphQL and Apollo Client in React Native app'
-slug: 'blog/integrate-apollo-client-in-react-native'
-date: 2020-05-11
-thumbnail: '../thumbnails/expo.png'
-template: post
-tags:
-  - expo
-  - graphql
-  - react-native
+slug: 'integrate-apollo-client-in-react-native'
+date: '2020-05-11'
+thumbnail: '/thumbnails/expo.png'
+tag: 'expo'
 canonicalUrl: 'https://blog.crowdbotics.com/integrate-graphql-and-apollo-client-in-react-native-app/'
 ---
 
@@ -183,7 +179,7 @@ That's it. Our basic navigational flow is ready to be tested. Open the terminal 
 
 Here is the demo of the navigational flow we have set up so far.
 
-![ss1](https://blog.crowdbotics.com/content/images/2020/02/ss1.gif)
+<img src='https://crowdbotics.ghost.io/content/images/2020/02/ss1.gif' />
 
 # How to configure Apollo Client in a React Native app
 
@@ -201,7 +197,7 @@ The apollo-link-rest package allows you to use third-party APIs that do not have
 
 The API endpoint we are going to use is a REST endpoint from [CryptoCompare.com](https://www.cryptocompare.com/). Make sure, at this point, you have access to the API Key (_that is free at the time of writing this tutorial_). Their API offers many endpoints for different use case but we are going to use fetch a number of top coins by their total volume across all markets in the last 24 hours.
 
-![ss2](https://blog.crowdbotics.com/content/images/2020/02/ss2.png)
+<img src='https://crowdbotics.ghost.io/content/images/2020/02/ss2.png' />
 
 Add a RestLink for the Rest API endpoint and pass headers which is an object representing values to be sent as headers on the request. The value you need to sent while requesting data from the API endpoint is the API key.
 
@@ -284,7 +280,7 @@ export const FETCH_COIN_LIST = gql`
 
 The data structure fetched from this API endpoint in JSON format looks like below:
 
-![ss3](https://blog.crowdbotics.com/content/images/2020/02/ss3.png)
+<img src='https://crowdbotics.ghost.io/content/images/2020/02/ss3.png' />
 
 ## Make a request to REST endpoint with Apollo Client
 
@@ -328,15 +324,15 @@ Make sure the `expo start` command is running from the terminal window. Then, go
 
 This is what the developer menu in an Expo client looks like:
 
-![ss4](https://blog.crowdbotics.com/content/images/2020/02/ss4.png)
+<img src='https://crowdbotics.ghost.io/content/images/2020/02/ss4.png' />
 
 Choose the option `Debug Remote JS`. A debugger like below should appear in your default web browser.
 
-![ss5](https://blog.crowdbotics.com/content/images/2020/02/ss5.png)
+<img src='https://crowdbotics.ghost.io/content/images/2020/02/ss5.png' />
 
 Open the `Console` tab from the `Developer Tools` of the web browser. You are going to get the following result.
 
-![ss6](https://blog.crowdbotics.com/content/images/2020/02/ss6.png)
+<img src='https://crowdbotics.ghost.io/content/images/2020/02/ss6.png' />
 
 That's it! The Apollo integration is working and you can start displaying the data in the app.
 
@@ -383,7 +379,7 @@ const styles = StyleSheet.create({
 
 Now go back to the Expo client and see the result yourself.
 
-![ss7](https://blog.crowdbotics.com/content/images/2020/02/ss7.gif)
+<img src='https://crowdbotics.ghost.io/content/images/2020/02/ss7.gif' />
 
 ## Display data in a list using FlatList
 
@@ -517,13 +513,13 @@ const styles = StyleSheet.create({
 
 Now, go back to the simulator device and you are going to get the following result.
 
-![ss8](https://blog.crowdbotics.com/content/images/2020/02/ss8.png)
+<img src='https://crowdbotics.ghost.io/content/images/2020/02/ss8.png' />
 
 On touching one of the coins from the list, it is going to take the user to the `Detail` screen which for now, does not contain any details. This is navigation is done by using `navigation` props from the `react-navigation` library. Do note that, the params `coin` is also getting passed. This will be useful when displaying the data on the `Detail` screen from the same GraphQL query.
 
 For now, you can see that the navigation works.
 
-![ss9](https://blog.crowdbotics.com/content/images/2020/02/ss9.gif)
+<img src='https://crowdbotics.ghost.io/content/images/2020/02/ss9.gif' />
 
 ## Completing the Detail Screen
 
@@ -646,13 +642,13 @@ const styles = StyleSheet.create({
 
 On visiting the detail of any Coin in the list, the following is going to be displayed.
 
-![s10](https://blog.crowdbotics.com/content/images/2020/02/ss10.png)
+<img src='https://crowdbotics.ghost.io/content/images/2020/02/ss10.png' />
 
 ## Display coin name in the header in the Detail screen
 
 The last piece of functionality that you could add to make the current app look better is to display the name of the coin instead of `Detail`.
 
-![ss11](https://blog.crowdbotics.com/content/images/2020/02/ss11.png)
+<img src='https://crowdbotics.ghost.io/content/images/2020/02/ss11.png' />
 
 To do this, all you have to do is add the following snippet:
 
@@ -666,10 +662,10 @@ Each screen component in your app is provided with the `navigation` prop automat
 
 Now, go back to the app and open the details of any coin from the list rendered. You are going to notice that the short name of the coin is displayed in the header as shown below.
 
-![ss12](https://blog.crowdbotics.com/content/images/2020/02/ss12.png)
+<img src='https://crowdbotics.ghost.io/content/images/2020/02/ss12.png' />
 
 ## Conclusion
 
 That's it for this tutorial. I hope you learned how to use rest endpoint and integrate Apollo Client to any API endpoint to query desired results in a React Native and Expo app. Moreover, I hope you have seen a good use case of creating stack navigators too from the `react-navigation` library.
 
-Originally published at [Crowdbotics' blog](https://blog.crowdbotics.com/integrate-graphql-and-apollo-client-in-react-native-app/).
+Originally published at [Crowdbotics' blog](https://crowdbotics.ghost.io/integrate-graphql-and-apollo-client-in-react-native-app/).

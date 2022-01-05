@@ -1,16 +1,15 @@
 ---
 title: 'Build a Twitter Clone Server with Apollo, GraphQL, Nodejs, and Crowdbotics'
-date: 2019-06-13
-template: post
-slug: 'blog/build-a-twitter-clone-server-with-apollo-graphql-nodejs'
-thumbnail: '../thumbnails/node.png'
-tags:
-  - nodejs
-  - graphql
-canonicalUrl: 'https://blog.crowdbotics.com/build-a-twitter-clone-server-with-apollo-graphql-nodejs-and-crowdbotics/'
+date: '2019-06-13'
+slug: 'build-a-twitter-clone-server-with-apollo-graphql-nodejs'
+thumbnail: '/thumbnails/node.png'
+tag: 'nodejs'
+canonicalUrl: 'https://crowdbotics.ghost.io/build-a-twitter-clone-server-with-apollo-graphql-nodejs-and-crowdbotics/'
 ---
 
 ![cover_image](https://i.imgur.com/Cg4Xsqq.jpg)
+
+> [Originally published at Crowdbotics](https://crowdbotics.ghost.io/build-a-twitter-clone-server-with-apollo-graphql-nodejs-and-crowdbotics/)
 
 In the last few years, GraphQL becomes a popular choice to build an API. It serves a great alternative to the REST APIs approach. Not only it is an open source application-layer query language, in comparison to REST, GraphQL fulfills the approach that a client request's only the desired set of information from the server in a single request.
 
@@ -173,7 +172,7 @@ app.listen(port, () =>
 
 Now, go back to the terminal window and run `node index.js` command to trigger the server up and running. Visit `http://localhost:5000/graphql` in a browser window to see that API endpoint in action. Apollo comes with a default playground in order to test the API.
 
-![ss1](https://blog.crowdbotics.com/content/images/2019/05/ss1-4.png)
+<img src='https://crowdbotics.ghost.io/content/images/2019/05/ss1-4.png' />
 
 ## Adding a Mongoose Schema
 
@@ -364,7 +363,7 @@ mutation {
 
 On running this mutation you will get the following result.
 
-![ss3](https://blog.crowdbotics.com/content/images/2019/05/ss2-3.png)
+<img src='https://crowdbotics.ghost.io/content/images/2019/05/ss2-3.png' />
 
 Add a bunch of more tweets by running the above mutation again. Now, let us run a query to fetch all the tweets from the database.
 
@@ -380,7 +379,7 @@ query {
 
 Writing the keyword `query` is an option only in the case of running a query. This is not possible in the case of running a mutation operation. You have to specify the keyword `mutation`. The above query fetches the unique identifier of each tweet in the database as well as the tweet and the name of the author itself. See the result below.
 
-![ss3](https://blog.crowdbotics.com/content/images/2019/05/ss3-4.png)
+<img src='https://crowdbotics.ghost.io/content/images/2019/05/ss3-4.png' />
 
 To delete a tweet from the database, all you have to provide is the `_id` of the tweet and provide sub-fields. Providing at least sub-field is necessary for the delete mutation to run, otherwise, it will throw an error.
 
@@ -395,11 +394,11 @@ mutation {
 
 You will get the following result.
 
-![ss4](https://blog.crowdbotics.com/content/images/2019/05/ss4-3.png)
+<img src='https://crowdbotics.ghost.io/content/images/2019/05/ss4-3.png' />
 
 Run the query to fetch all the tweets to see how many tweets are left.
 
-![ss5](https://blog.crowdbotics.com/content/images/2019/05/ss5-4.png)
+<img src='https://crowdbotics.ghost.io/content/images/2019/05/ss5-4.png' />
 
 The last operation is to update a tweet. Again, it is a mutation. All you to provide is the updated tweet in the form of a string and `_id` of the tweet you want to update.
 
@@ -418,11 +417,11 @@ mutation {
 
 The output you get:
 
-![ss6](https://blog.crowdbotics.com/content/images/2019/05/ss6-1.png)
+<img src='https://crowdbotics.ghost.io/content/images/2019/05/ss6-1.png' />
 
 By fetching all the tweets you can verify that the updating mutation worked!
 
-![ss7](https://blog.crowdbotics.com/content/images/2019/05/ss7-2.png)
+<img src='https://crowdbotics.ghost.io/content/images/2019/05/ss7-2.png' />
 
 ## Conclusion
 
@@ -433,5 +432,3 @@ Not only did you learn how to configure and integrate an Express web server with
 Apollo Server is an open source project and is one the most stable solution to create GraphQL APIs for full-stack applications. It also supports client-side out of the box for React, Vue, Angular, Meteor, and Ember as well as Native mobile development with Swift and Java.
 
 You can find the complete code for the tutorial in this **[Github repository](https://github.com/amandeepmittal/twitter-clone-apollo-server)**.
-
-[Originally published at Crowdbotics](https://blog.crowdbotics.com/build-a-twitter-clone-server-with-apollo-graphql-nodejs-and-crowdbotics/)

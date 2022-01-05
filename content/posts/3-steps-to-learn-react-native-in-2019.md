@@ -1,11 +1,9 @@
 ---
 title: '3 Steps to learn React Native in 2019'
-slug: 'blog/3-steps-to-learn-react-native-in-2019'
-date: 2019-01-04
-template: post
-tags:
-  - react-native
-thumbnail: '../thumbnails/react.png'
+slug: '3-steps-to-learn-react-native-in-2019'
+date: '2019-01-04'
+tag: 'react-native'
+thumbnail: '/thumbnails/react.png'
 canonicalUrl: 'https://medium.com/swlh/3-steps-to-learn-react-native-in-2019-5cdb3d1e1c84'
 ---
 
@@ -19,7 +17,7 @@ However, in React Native, there is no DOM rather than Native Components which ar
 
 Here is what I think you can do to advance with React Native development.
 
-## Start with basics
+## Start with basics
 
 This article just provides you with an overview of what inside the React Native app development process and how things work behind the scenes, briefly. I often come across (especially through [_#100DaysOfCode_](https://twitter.com/_100DaysOfCOde) campaign) developers who struggle to learn a new framework with little no background in specific the programming language. My advice, before you leap to make gigantic projects, start with the basics. Learn the concepts as each specific component to the curve, make sure to apply them as much as you can and build small things.
 

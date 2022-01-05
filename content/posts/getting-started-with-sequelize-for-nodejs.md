@@ -1,15 +1,13 @@
 ---
-date: 2017-05-30
 title: 'Getting Started with Sequelize for Nodejs Applications'
-template: post
-thumbnail: '../thumbnails/node.png'
-slug: 'blog/getting-started-with-sequelize-for-nodejs'
-tags:
-  - nodejs
+date: '2017-05-30'
+thumbnail: '/thumbnails/node.png'
+slug: 'getting-started-with-sequelize-for-nodejs'
+tag: 'nodejs'
 canonicalUrl: 'https://medium.com/hackernoon/getting-started-with-sequelize-for-nodejs-applications-2854c58ffb8c'
 ---
 
-![cover_image](https://miro.medium.com/max/1400/0*ShbzlvZjT-VI72oW.png)
+> [Originally Published at Hackernoon.com](https://medium.com/hackernoon/getting-started-with-sequelize-for-nodejs-applications-2854c58ffb8c)
 
 ### Introduction to ORM
 
@@ -157,5 +155,3 @@ This setup can be auto-generated with the help of [Sequelize CLI](https://github
 ### Conclusion
 
 Sequelize is feature rich ORM for Node.js. It has a documentation that at times may not provide direct solutions to your problems but there always Github issues for that. What I like about is its Promise based control flow. Coming from NoSQL background (and using MongoDB), understanding Sequelize really took less time. Most of the query based models are quite similar to that in MongoDB (especially the CRUD operations). I am looking for a brighter, more improved documentation and ease of support from Sequelize.
-
-[Originally Published at Hackernoon.com](https://medium.com/hackernoon/getting-started-with-sequelize-for-nodejs-applications-2854c58ffb8c)

@@ -1,12 +1,9 @@
 ---
 title: 'How to Animate a Header View on Scroll With React Native Animated'
-slug: 'blog/animate-header-view-on-scroll-with-react-native-animated-api'
-date: 2020-10-01
-template: post
-thumbnail: '../thumbnails/expo.png'
-tags:
-  - expo
-  - react-native
+slug: 'animate-header-view-on-scroll-with-react-native-animated-api'
+date: '2020-10-01'
+thumbnail: '/thumbnails/expo.png'
+tag: 'expo'
 canonicalUrl: 'https://blog.jscrambler.com/how-to-animate-a-header-view-on-scroll-with-react-native-animated/'
 ---
 

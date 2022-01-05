@@ -1,13 +1,9 @@
 ---
 title: 'How to use redux-persist in React Native with Asyncstorage'
-slug: 'blog/redux-persist-in-react-native-with-async-storage'
-date: 2021-01-08
-template: post
-thumbnail: '../thumbnails/expo.png'
-tags:
-  - react-native
-  - expo
-  - redux
+slug: 'redux-persist-in-react-native-with-async-storage'
+date: '2021-01-08'
+thumbnail: '/thumbnails/expo.png'
+tag: 'expo'
 canonicalUrl: 'https://blog.jscrambler.com/how-to-use-redux-persist-in-react-native-with-asyncstorage/'
 ---
 

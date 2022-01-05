@@ -1,12 +1,9 @@
 ---
 title: 'Chat app with React Native (Part 6) - Create a custom hook to change status bar styles'
-date: 2020-05-18
-template: post
-slug: 'blog/chat-app-with-react-native-part-6'
-thumbnail: '../thumbnails/react.png'
-tags:
-  - react-native
-  - firebase
+date: '2020-05-18'
+slug: 'chat-app-with-react-native-part-6'
+thumbnail: '/thumbnails/react.png'
+tag: 'react-native'
 canonicalUrl: 'https://heartbeat.fritz.ai/chat-app-with-react-native-part-6-create-a-custom-hook-to-change-status-bar-styles-da7073c5fa8d'
 ---
 
@@ -18,7 +15,7 @@ This part is going to be a bit different. Instead of writing code to communicate
 
 Here is a screen shot of the type of bug I am talking about it. Notice how the status bar remains dark in color on both lighter and darker backgrounds.
 
-![ss1](https://miro.medium.com/max/714/1*JwA7n-QlUjayTGgb2m1tfw.gif)
+<img src='https://miro.medium.com/max/714/1*JwA7n-QlUjayTGgb2m1tfw.gif' />
 
 Do notice that the status bar looks fine when the background is light in colour. This happens when the modal screen to create a new chat room is displayed. But on rest of the screens, when chat rooms are displayed or inside a chat room, the status bar does not matches well with the coloured background of header on both of these screens.
 
@@ -72,11 +69,11 @@ export default function HomeScreen({ navigation }) {
 
 Go back to the simulator and you are going to notice the changes now.
 
-![ss2](https://miro.medium.com/max/692/1*jaEgKwnoaiLeMCs2bkmsIg.png)
+<img src='https://miro.medium.com/max/692/1*jaEgKwnoaiLeMCs2bkmsIg.png' />
 
 It works. If you look closely at the header bar of the `Home` screen, you are going to see that the status bar has the value of light styles applied. However, this style is also applied to all of the other screens, even on those screens such as `AddRoomScreen` where a darker status bar would be preferred.
 
-![ss3](https://miro.medium.com/max/714/1*JSa1Ndh9tYt4BzdBUJG4mA.gif)
+<img src='https://miro.medium.com/max/714/1*JSa1Ndh9tYt4BzdBUJG4mA.gif' />
 
 To fix this, you have to explicitly mention the styles of the status bar for each component using the custom hook we created in the previous section.
 
@@ -108,7 +105,7 @@ export default function RoomScreen({ route }) {
 
 Now, go back to the simulator and you are going to find everything is in order and works as expected.
 
-![ss4](https://miro.medium.com/max/714/1*laUY_xJJwoI079wS0NKI3Q.gif)
+<img src='https://miro.medium.com/max/714/1*laUY_xJJwoI079wS0NKI3Q.gif' />
 
 ## Animate the value for smoother transitions
 
@@ -128,7 +125,7 @@ The animation used by the hook itself is going to the default transition of nati
 
 Now you can go back to the simulator (_the below demo is using iOS simulator_) and notice the difference between the previous section and this one.
 
-![ss5](https://miro.medium.com/max/714/1*_X5Ye5IJpkOYbUsED8ELYg.gif)
+<img src='https://miro.medium.com/max/714/1*_X5Ye5IJpkOYbUsED8ELYg.gif' />
 
 ## A last challenge
 
@@ -138,7 +135,7 @@ Though I leave you with a small challenge. Implement the logout button in the he
 
 Here is a little demo showcasing what has to be implement:
 
-![ss6](https://miro.medium.com/max/664/1*5XHPu7A9R9s9d_lYKcd1sw.gif)
+<img src='https://miro.medium.com/max/664/1*5XHPu7A9R9s9d_lYKcd1sw.gif' />
 
 Try to do it yourself and try to think other ways you can implement log out functionality in this app. If you feel stuck or want to jump ahead to the the GitHub commit [**here**](https://github.com/amandeepmittal/react-native-examples/commit/b1383ccc9fca20214b6c91bfe5a2a5d72a1f8d16).
 

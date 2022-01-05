@@ -1,11 +1,9 @@
 ---
 title: 'Blogging tips after 3 years and a 100+ posts'
-slug: 'blog/blogging-tips-after-3-years'
-template: post
-date: 2020-04-13
-thumbnail: '../thumbnails/writing.png'
-tags:
-  - writing
+slug: 'blogging-tips-after-3-years'
+date: '2020-04-13'
+thumbnail: '/thumbnails/writing.png'
+tag: 'writing'
 canonicalUrl: 'https://amanhimself.dev/blog/blogging-tips-after-3-years/'
 ---
 

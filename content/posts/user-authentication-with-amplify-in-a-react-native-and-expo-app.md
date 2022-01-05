@@ -1,12 +1,9 @@
 ---
 title: 'User Authentication with Amplify in a React Native and Expo app'
 slug: 'blog/user-authentication-with-amplify-in-a-react-native-and-expo-app'
-date: 2019-05-22
-thumbnail: '../thumbnails/expo.png'
-template: post
-tags:
-  - expo
-  - react-native
+date: '2019-05-22'
+thumbnail: '/thumbnails/expo.png'
+tag: 'expo'
 canonicalUrl: 'https://heartbeat.fritz.ai/user-authentication-with-amplify-in-a-react-native-and-expo-app-d00cdaf1ac28'
 ---
 
@@ -85,7 +82,7 @@ This will open up the AWS console dashboard. Go back to terminal and press enter
 
 Here is a summary of questions prompted by AWS Amplify CLI.
 
-![](https://cdn-images-1.medium.com/max/800/1*amSKLCe6467xU_wJ5Kgr0g.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*amSKLCe6467xU_wJ5Kgr0g.png' />
 
 This process is easy, but if you are going through it for the first time, I'd recommend you to give the below link a visit and only in few minutes you will realise how easy it is to setup a new IAM user for AWS services.
 
@@ -105,7 +102,7 @@ amplify init
 
 Once you run this command, you will be prompted for the following questions.
 
-![](https://cdn-images-1.medium.com/max/800/1*d1aVKZuIFzZN1Mgo86cAfQ.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*d1aVKZuIFzZN1Mgo86cAfQ.png' />
 
 After the Amplify SDK initialization process is complete, notice there are some new file changes inside the project directory. A new directory `amplify/` which stores any local or cloud changes are made to configuration files. Also, a new file called `aws-exports.js` appears at the root that doesn't require to be committed over your Github account (_always remember_).
 
@@ -154,7 +151,7 @@ const styles = StyleSheet.create({
 
 To verify that everything is on order and the app works fine, you can go ahead and run `npm start` command. Then select which mobile platform you want to run. If there no errors, you will get to see the following result.
 
-![](https://cdn-images-1.medium.com/max/800/1*3CQuczlaCMHVnFBojLqhVQ.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*3CQuczlaCMHVnFBojLqhVQ.png' />
 
 ## Enable Amplify Auth Resource
 
@@ -168,17 +165,17 @@ amplify add auth
 
 On running the above command, you will be prompted with the first question like below.
 
-![](https://cdn-images-1.medium.com/max/800/1*br7DyESd83gE1fz2gWV5Lg.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*br7DyESd83gE1fz2gWV5Lg.png' />
 
 This option is to choose the default authentication and security configuration. The second option to include a social provider like Facebook. Another option to look out for is Manual configuration about which you can read more at the [official amplify docs](https://aws-amplify.github.io/docs/js/react).
 
-![](https://cdn-images-1.medium.com/max/800/1*w9im1GzV1CjKGdPpVR-DLg.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*w9im1GzV1CjKGdPpVR-DLg.png' />
 
 Next, it will prompt you to choose the default sign in method. Choose `Username`.
 
 Amplify’s command line interface is so interactive and in detail that it prompts you to provide input fields and select them from your terminal. Look at below.
 
-![](https://cdn-images-1.medium.com/max/800/1*IIw8O4dwLrkyGoi9x5Y4iA.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*IIw8O4dwLrkyGoi9x5Y4iA.png' />
 
 Choose `Email`. Now run the following command to publish all the local changes to the AWS in order to create a user pool.
 
@@ -188,13 +185,13 @@ amplify push
 
 You will get the following screen after you execute the above command.
 
-![](https://cdn-images-1.medium.com/max/800/1*14ONUYoXLzlwlVcSKLzWtQ.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*14ONUYoXLzlwlVcSKLzWtQ.png' />
 
 This shows the details of the current working environment (_which we manually entered at the time of configuring AWS IAM user_) and displays the status of the resource we are currently using ,that is `Auth`.
 
 Executing this command will take some time to update the resources in order to enable and create a user pool for your React Native app. So go ahead, pause here, drink a cup of coffee. The user authentication setup is complete for now.
 
-## `withAuthenticator`: Adding a High Order Component
+## withAuthenticator: Adding a High Order Component
 
 Enough with the configuration part. Let us work with some app code. For React Native apps, the simplest way to add authentication flow into the app is to use `withAuthenticator` [High Order Component](https://reactjs.org/docs/higher-order-components.html).
 
@@ -239,19 +236,19 @@ This HOC wraps the `App` component. It automatically detects the authentication 
 
 By default, on running `npm` start, you will get the Sign In screen like below.
 
-![](https://cdn-images-1.medium.com/max/800/1*cNDW73k-43-FiHndSZ8YKw.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*cNDW73k-43-FiHndSZ8YKw.png)' />
 
 Do notice that right now in the above screen, the Sign In button is disabled since there the input fields are empty. This a too good to for the default flow. If you enter a username followed by a password, it even throws an error like below.
 
-![](https://cdn-images-1.medium.com/max/800/1*33BkYtrQA_9NfumRr6ebWA.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*33BkYtrQA_9NfumRr6ebWA.png' />
 
 By clicking on Sign up button, you will go to the registration screen.
 
-![](https://cdn-images-1.medium.com/max/800/1*jw2fK8IJ0xjL1MR4iBK2QA.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*jw2fK8IJ0xjL1MR4iBK2QA.png' />
 
 On clicking Forgot Password, will take you to another screen where it will ask you for the registered username.
 
-![](https://cdn-images-1.medium.com/max/800/1*mccJmsNibLlxIKtJ11USjw.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*mccJmsNibLlxIKtJ11USjw.png' />
 
 If the user is signed in, the underlying component (_in current scenario, the `App` component_) is displayed otherwise signin/signup controls are displayed. Also, did you notice that just by adding two lines of code you have authentication flow that looks pretty decent? In the next section, let us see if it works or not.
 
@@ -265,11 +262,11 @@ Currently, there no user’s registered to our app. So let us register one. Crea
 
 Once you are done, click the `SIGN UP` button at the end of the registration form. You will get the following screen asking for the confirmation/verification code.
 
-![](https://cdn-images-1.medium.com/max/800/1*fY2whWIX4Unwhrekjqleiw.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*fY2whWIX4Unwhrekjqleiw.png' />
 
 Enter the verification code and click the confirm button. If it is confirmed, you will be directed back to the Sign in screen. Enter the credentials to login inside the app. You will be successfully logged in if you enter the correct credentials.
 
-![](https://cdn-images-1.medium.com/max/800/1*8Xa9uKiLOikHO-A786fpJw.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*8Xa9uKiLOikHO-A786fpJw.png' />
 
 Notice how the sign-out button is appearing at top right corner next to the username. Yes, amplify greets the user and has the code for it integrated already at `withAuthenticator` HOC. Do take note in the above screen that the `App` component is getting rendered now.
 

@@ -1,15 +1,15 @@
 ---
 title: 'Designing a REST API with Node.js and MongoDB Atlas'
-date: 2018-01-22
-template: post
-slug: 'blog/designing-a-rest-api-with-node-js-and-mongodb-atlas'
-thumbnail: '../thumbnails/node.png'
-tags:
-  - nodejs
+date: '2018-01-22'
+slug: 'designing-a-rest-api-with-node-js-and-mongodb-atlas'
+thumbnail: '/thumbnails/node.png'
+tag: 'nodejs'
 canonicalUrl: 'https://www.zeolearn.com/magazine/designing-a-rest-api-with-nodejs-and-mongodb-atlas'
 ---
 
 ![cover](https://i.imgur.com/5rvcM6q.png)
+
+> [Originally Published at Zeolearn.com](https://www.zeolearn.com/magazine/designing-a-rest-api-with-nodejs-and-mongodb-atlas)
 
 Nodejs is a remarkable technology for the fulfilling and developing web applications. Being open source and in the past few years, we have seen it rising. It might be a bit different from other traditional web technologies in terms of learning curve but I urge you to stick with it if you are getting in to web development and have opted [Node.js](https://www.zeolearn.com/node-js-training) ecosystem. In this tutorial, I will walk you through the basics of REST API design with using Node.js ecosystem.
 
@@ -52,29 +52,29 @@ For the sake of brevity, I am going to use [MongoDB Atlas](https://www.mongodb.c
 
 I already have an account setup, so I’d suggest you to sign up on mongodb atlas’ site with your email. Once you have logged in, you will get the below screen:
 
-![](https://cdn-images-1.medium.com/max/1200/0*K-3GHE1axS48h85u.png)
+<img src='https://cdn-images-1.medium.com/max/1200/0*K-3GHE1axS48h85u.png' />
 
 At this point, you can either take time to explore what MongoDB Atlas is or you can skip and together we will setup a Sandbox for our sample application. Click on the “New Project” button on the right side of the web page.
 
-![](https://d6vdma9166ldh.cloudfront.net/media/images/b7a62c69-71a3-4678-89d3-276832706d9a.png)
+<img src='https://d6vdma9166ldh.cloudfront.net/media/images/b7a62c69-71a3-4678-89d3-276832706d9a.png' />
 
-![](https://d6vdma9166ldh.cloudfront.net/media/images/e910bddb-5e50-4d0a-aaa4-d7d36939e491.png)
+<img src='https://d6vdma9166ldh.cloudfront.net/media/images/e910bddb-5e50-4d0a-aaa4-d7d36939e491.png' />
 
 Then you will be prompted to fill in the details. See screenshots below, enter a name for your project and click “next” and then click “Create Project”. Per one account in MongoDB Atlas, you will get one free tier/cluster. Follow the steps below to setup one.
 
-![](https://d6vdma9166ldh.cloudfront.net/media/images/71db2429-c41d-48bb-a9e1-21281f5cfbcb.png)
+<img src='https://d6vdma9166ldh.cloudfront.net/media/images/71db2429-c41d-48bb-a9e1-21281f5cfbcb.png' />
 
 Click on the Build new Cluster button.
 
-![](https://d6vdma9166ldh.cloudfront.net/media/images/145b86aa-63c1-45e4-ae53-f92bdf852562.png)
+<img src='https://d6vdma9166ldh.cloudfront.net/media/images/145b86aa-63c1-45e4-ae53-f92bdf852562.png' />
 
 Scroll down a bit, and then select the free tier M0. Per free cluster, we get 512mb of space. More than enough for what we need for this tutorial.
 
-![](https://d6vdma9166ldh.cloudfront.net/media/images/9c0385c7-e282-4fd7-a266-487425841b0e.png)
+<img src='https://d6vdma9166ldh.cloudfront.net/media/images/9c0385c7-e282-4fd7-a266-487425841b0e.png' />
 
 Then enter username and password for an Admin connection that we will use to connect to our database through our application. Make sure you remember both username and password and password must a bit strong. Lastly, click on confirm and deploy and the service will take at least 10 minutes to setup a database cluster.
 
-![](https://d6vdma9166ldh.cloudfront.net/media/images/17807485-9b69-43c4-9d83-e9c7aa5abb1f.png)
+<img src='https://d6vdma9166ldh.cloudfront.net/media/images/17807485-9b69-43c4-9d83-e9c7aa5abb1f.png' />
 
 That’s it. The database is now ready to be used. Now let us setup our application.
 
@@ -123,7 +123,7 @@ Now, add an npm script to package.json file to test and start our server.
 
 From terminal, npm run start or npm start and you should see the success message without any error.
 
-![](https://d6vdma9166ldh.cloudfront.net/media/images/180b1cc9-7178-44ff-8319-8747548ad6cd.png)
+<img src='https://d6vdma9166ldh.cloudfront.net/media/images/180b1cc9-7178-44ff-8319-8747548ad6cd.png' />
 
 ## Setting up Mongoose
 
@@ -190,15 +190,15 @@ To get the connection string you have to follow the following steps:
 
 First click on the connect button on your MongoDB Atlas page the following screen will prompt.
 
-![](https://d6vdma9166ldh.cloudfront.net/media/images/1ed9e590-2aad-47e2-989b-95bcad69e339.png)
+<img src='https://d6vdma9166ldh.cloudfront.net/media/images/1ed9e590-2aad-47e2-989b-95bcad69e339.png' />
 
 Then, click “Allow Access from Anywhere” to white list our server URL.
 
-![](https://d6vdma9166ldh.cloudfront.net/media/images/1434b0f6-7bde-4e3c-8a13-68fe382894e2.png)
+<img src='https://d6vdma9166ldh.cloudfront.net/media/images/1434b0f6-7bde-4e3c-8a13-68fe382894e2.png' />
 
 Then, copy the URI string for version 3.4:
 
-![](https://d6vdma9166ldh.cloudfront.net/media/images/d7458a10-1220-4c67-ac1f-eafcce4190b4.png)
+<img src='https://d6vdma9166ldh.cloudfront.net/media/images/d7458a10-1220-4c67-ac1f-eafcce4190b4.png' />
 
 And enter the username and password you entered during the setup of our instance in place of `username:<password>` and remove the placeholders `<>`. I am using options variable to spike your curiosity such that you will explore about it and the power of mongoose. You can read more about connection options that provided by mongoose here.
 
@@ -221,7 +221,7 @@ app.listen(port, () => {
 
 Now restart our server from command line and you will see the success prompt:
 
-![](https://d6vdma9166ldh.cloudfront.net/media/images/2f7929df-6a92-4823-b48d-a7e3cffe86ee.png)
+<img src='https://d6vdma9166ldh.cloudfront.net/media/images/2f7929df-6a92-4823-b48d-a7e3cffe86ee.png' />
 
 Do you notice one thing here? For every change we make in our application, we have to restart our server from command line and to ignore this tedious process we can make use of a powerful utility called nodemon developed by Remy Sharp.
 
@@ -387,24 +387,22 @@ Now let us test our API routes using Postman.
 
 Open postman and type http://localhost:3301/tasks and selct the POSTmethod. We will first use the POST request to create a new task since our database is currently empty and does not have any data. Use body to fill in the data which follows same schema we defined in our model.
 
-![](https://d6vdma9166ldh.cloudfront.net/media/images/36858c3c-1a16-4a84-9821-804b2b5435dc.png)
+<img src='https://d6vdma9166ldh.cloudfront.net/media/images/36858c3c-1a16-4a84-9821-804b2b5435dc.png' />
 
 Hitting the send button should respond with 200 status and the data we created structured exactly like our schema in JSON format.
 
-![](https://d6vdma9166ldh.cloudfront.net/media/images/eb03c175-41f7-4bc0-859a-0a007086af91.png)
+<img src='https://d6vdma9166ldh.cloudfront.net/media/images/eb03c175-41f7-4bc0-859a-0a007086af91.png' />
 
 Similarly, we can test other endpoints of our API. Such as getting all tasks (so far we have so it will give only one task that we just created):
 
-![](https://d6vdma9166ldh.cloudfront.net/media/images/b1300d7d-6493-43b0-8e10-e4642e57e421.png)
+<img src='https://d6vdma9166ldh.cloudfront.net/media/images/b1300d7d-6493-43b0-8e10-e4642e57e421.png' />
 
 Getting the task by its \_id:
 
-![](https://d6vdma9166ldh.cloudfront.net/media/images/86018023-045d-4cc5-8db4-cead1261a6a4.png)
+<img src='https://d6vdma9166ldh.cloudfront.net/media/images/86018023-045d-4cc5-8db4-cead1261a6a4.png' />
 
 Try updating the task or removing it by using the endpoints we defined earlier and changing the HTTP method from Postman yourself.
 
 Hope you learned something valuable by reading this article.
 
 You can find the complete code at this [Github repository](https://github.com/amandeepmittal/nodejs-restapi).
-
-[Originally Published at Zeolearn.com](https://www.zeolearn.com/magazine/designing-a-rest-api-with-nodejs-and-mongodb-atlas)

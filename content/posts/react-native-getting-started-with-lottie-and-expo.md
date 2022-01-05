@@ -1,12 +1,9 @@
 ---
 title: 'React Native - Getting Started with Lottie and Expo'
-date: 2018-03-09
-slug: 'blog/react-native-getting-started-with-lottie-and-expo'
-thumbnail: '../thumbnails/expo.png'
-template: post
-tags:
-  - expo
-  - react-native
+date: '2018-03-09'
+slug: 'react-native-getting-started-with-lottie-and-expo'
+thumbnail: '/thumbnails/expo.png'
+tag: 'expo'
 canonicalUrl: 'https://medium.com/hackernoon/react-native-getting-started-with-lottie-and-expo-8b2105fbb496'
 ---
 
@@ -18,15 +15,15 @@ In this tutorial, we will be using [Lottie](https://www.lottiefiles.com/) with R
 
 I will be using Expo XDE for brevity and to get started quickly. Create a new project using it. I am going to call `rn-lottie-example` but you can call whatever you want.
 
-![1](https://cdn-images-1.medium.com/max/800/0*POyT_Icv07TuPXTE.png)
+<img src='https://cdn-images-1.medium.com/max/800/0*POyT_Icv07TuPXTE.png' />
 
 When the XDE completes running ReactNative Package Manager and builds up the project, you can go to `Device` dropdown menu at the right and click on whichever simulator you have installed depending on the operations system you are using. Windows users please make sure you have android studio and necessary files installed and MacOS users, please have XCode installed or up to date.
 
-![2](https://cdn-images-1.medium.com/max/800/0*fX2Q-CxR1HRTvJA-.png)
+<img src='https://cdn-images-1.medium.com/max/800/0*fX2Q-CxR1HRTvJA-.png' />
 
 You can also view the application, by running it using Expo Client on your mobile device. Note that, depending on your internet connection, this can be slow and your mobile device and development machine must be on same wifi. Scan the QR code in `Share` section, you are ready to go. Once, the app is rendered, you will be welcomed by the default screen:
 
-![](https://cdn-images-1.medium.com/max/800/0*MiGY3Fi2WDSbBXvP.png)
+<img src='https://cdn-images-1.medium.com/max/800/0*MiGY3Fi2WDSbBXvP.png' />
 
 Now open your favorite text editor/IDE because we are going to start writing code in next section.
 
@@ -133,7 +130,7 @@ const styles = StyleSheet.create({
 
 You can see the application working
 
-![3](https://cdn-images-1.medium.com/max/800/0*ojXTyWvdJ70ut1Yl.gif)
+<img src='https://cdn-images-1.medium.com/max/800/0*ojXTyWvdJ70ut1Yl.gif' />
 
 This tutorial shows how you can get started with Lottie animation library using React Native and Expo. There are other ways to define animations and you can go in-depth as much as you want. This article is written for a beginner’s point of view.
 

@@ -1,11 +1,9 @@
 ---
-date: 2016-07-14
 title: 'ATOM- An Editor of 21st Century'
-template: post
-thumbnail: '../thumbnails/atom.png'
-slug: 'blog/atom-an-editor-of-21st-century'
-tags:
-  - tools
+date: '2016-07-14'
+thumbnail: '/thumbnails/atom.png'
+slug: 'atom-an-editor-of-21st-century'
+tag: 'tools'
 canonicalUrl: 'https://amanhimself.dev/blog/atom-an-editor-of-21st-century'
 ---
 

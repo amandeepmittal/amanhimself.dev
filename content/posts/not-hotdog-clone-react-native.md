@@ -1,13 +1,9 @@
 ---
 title: 'Build a Not Hotdog clone with React Native'
-date: 2019-08-27
-slug: 'blog/not-hotdog-clone-react-native'
-template: post
-thumbnail: '../thumbnails/expo.png'
-tags:
-  - expo
-  - firebase
-  - react-native
+date: '2019-08-27'
+slug: 'not-hotdog-clone-react-native'
+thumbnail: '/thumbnails/expo.png'
+tag: 'expo'
 canonicalUrl: 'https://heartbeat.fritz.ai/build-a-not-hotdog-clone-with-react-native-8f9b9eb75bd2'
 ---
 
@@ -17,7 +13,7 @@ Google's Vision API is a machine learning tool that classifies details from an i
 
 ## What are we building?
 
-![hb1](https://cdn-images-1.medium.com/max/800/1*Hg6nlnaROCavW5_YLygtEA.gif)
+<img src='https://cdn-images-1.medium.com/max/800/1*Hg6nlnaROCavW5_YLygtEA.gif' />
 
 ## Table of Contents
 
@@ -49,11 +45,11 @@ In this section, let us set up a new Firebase project. If you are already famili
 
 Visit [Firebase](https://console.firebase.google.com/) and sign-in with your Google ID. Once signed in, click on a new project and enter a name. Lastly, hit the **Create project** button.
 
-![hb1](https://cdn-images-1.medium.com/max/800/1*BDhg-K1-ekeYg4D2AAir3A.jpeg)
+<img src='https://cdn-images-1.medium.com/max/800/1*BDhg-K1-ekeYg4D2AAir3A.jpeg' />
 
 After creating the project and being redirected to the dashboard screen, on the left side menu, click the **settings** icon, and then go to **Project settings**.
 
-![hb2](https://cdn-images-1.medium.com/max/800/1*yJvioMA9wqdBcPGS5HiwYQ.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*yJvioMA9wqdBcPGS5HiwYQ.png' />
 
 The whole the `firebaseConfig` object, as shown above, is required to integrate Firebase with a React Native or Expo app. Save them somewhere or make sure you know how to navigate to this page.
 
@@ -116,27 +112,27 @@ All the Xs are values of each key in the `firebaseConfig` object from the previo
 
 Once you are signed in to Google Cloud Platform, you can visit the [Google Cloud Console](https://console.cloud.google.com/), to create a new project.
 
-![hb3](https://cdn-images-1.medium.com/max/800/1*xVCIMrUY0EDtGMfUKJC5Hg.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*xVCIMrUY0EDtGMfUKJC5Hg.png' />
 
 From the dropdown menu center, select a project. Then click the button **New Project** in the screen below. Notice you have already generated a Firebase project, select that from the list available.
 
-![hb4](https://cdn-images-1.medium.com/max/800/1*FUsemE_BjGBUN2T1gorSUg.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*FUsemE_BjGBUN2T1gorSUg.png' />
 
 Right now you are at the screen called **Dashboard** inside the console. From the top left, click on the menu button and a sidebar menu will pop up. Select **APIs & Services > Dashboard**.
 
-![hb5](https://cdn-images-1.medium.com/max/800/1*ggHFyid_JjNABDZh6JfsMA.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*ggHFyid_JjNABDZh6JfsMA.png' />
 
 At the Dashboard, select the button **Enable APIs and Services**.
 
-![hb6](https://cdn-images-1.medium.com/max/800/1*rhVkQAIWdeqV9wSZsjacew.jpeg)
+<img src='https://cdn-images-1.medium.com/max/800/1*rhVkQAIWdeqV9wSZsjacew.jpeg' />
 
 Then search for the **Vision API** and make sure to click the button **Enable**.
 
-![hb7](https://cdn-images-1.medium.com/max/800/1*DzHGkXJQyTeYCHqETkhIPA.jpeg)
+<img src='https://cdn-images-1.medium.com/max/800/1*DzHGkXJQyTeYCHqETkhIPA.jpeg' />
 
 Now, go back to the **Dashboard** and go to **Credentials** to generate an API key. Click the button **Create Credentials** and you will undergo a small process to generate the API key.
 
-![hb8](https://cdn-images-1.medium.com/max/800/1*8SdYi2l3aGS3VcvG7PU-Fg.jpeg)
+<img src='https://cdn-images-1.medium.com/max/800/1*8SdYi2l3aGS3VcvG7PU-Fg.jpeg' />
 
 Once it is done, save the API key in `App.js` file after all the import statements.
 
@@ -237,15 +233,15 @@ const styles = StyleSheet.create({
 
 If either or both are not granted, the app will display the message `No access to Camera or Gallery!`, also as shown below.
 
-![hb9](https://cdn-images-1.medium.com/max/800/1*RPW_mo8N7A303-1dKqHsRA.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*RPW_mo8N7A303-1dKqHsRA.png' />
 
 When tested on a real android device, it did ask for permissions.
 
-![hb10](https://cdn-images-1.medium.com/max/800/1*Z-YtLTjjd-jbDtNKA9gWNw.jpeg)
+<img src='https://cdn-images-1.medium.com/max/800/1*Z-YtLTjjd-jbDtNKA9gWNw.jpeg' />
 
 Similarly, to use camera:
 
-![hb11](https://cdn-images-1.medium.com/max/800/1*c0BRdUMxfP_WTYt0VoVTRA.jpeg)
+<img src='https://cdn-images-1.medium.com/max/800/1*c0BRdUMxfP_WTYt0VoVTRA.jpeg' />
 
 ## Create a Header component
 
@@ -285,11 +281,11 @@ The UI library has a pre-defined component called `Header` that you can use righ
 
 The `Header` component also has a `statusBarProps` prop to change the color of the Status bar and works cross-platform. It will give the following output.
 
-![hb12](https://cdn-images-1.medium.com/max/800/1*HUDX6p1wtfbrBGmNNanPVw.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*HUDX6p1wtfbrBGmNNanPVw.png' />
 
 Both the icons are touchable, but right now they do not have an associated handler method except that a dummy `alert` message.
 
-![hb13](https://cdn-images-1.medium.com/max/800/1*uKMGmdh-AQESyamwCwZ3tA.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*uKMGmdh-AQESyamwCwZ3tA.png' />
 
 The `react-native-elements` library by default uses Material Icons and has a peer dependency of [`react-native-vector-icons`](https://github.com/oblador/react-native-vector-icons).
 
@@ -351,7 +347,7 @@ import UploadingOverlay from './components/UploadingOverlay';
 
 The above condition states that, if the value of `this.state.uploading` is true, it will show the overlay screen. To test it out, temporarily set the value of `uploading` in the state object to `true`.
 
-![hb14](https://cdn-images-1.medium.com/max/800/1*xcmtOrumJIUGwTIVaV8lSQ.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*xcmtOrumJIUGwTIVaV8lSQ.png' />
 
 An endless spinner will continue to appear. Set the value of `uploading` back to false before proceeding.
 
@@ -493,7 +489,7 @@ Now you can add both the functions, `pickImage` and `takePhoto` as the value of 
 
 Here is an example of accessing Camera roll.
 
-![hb15](https://cdn-images-1.medium.com/max/800/1*dEcP_2OfNpFepEiWpwg3lA.gif)
+<img src='https://cdn-images-1.medium.com/max/800/1*dEcP_2OfNpFepEiWpwg3lA.gif' />
 
 ## Add functionality to determine a Hotdog
 
@@ -636,7 +632,7 @@ Lastly, do not forget to add `renderImage` inside `App` component's `render` met
 
 Here is a short demo of how the app looks and works on a real android device using Expo client to run the app.
 
-![hb17](https://cdn-images-1.medium.com/max/800/1*Hg6nlnaROCavW5_YLygtEA.gif)
+<img src='https://cdn-images-1.medium.com/max/800/1*Hg6nlnaROCavW5_YLygtEA.gif' />
 
 Here is complete source code for `StyleSheet` object.
 
@@ -686,7 +682,7 @@ export default App;
 
 If you visit the storage section in Firebase, you can notice that each image is stored with a name of base64 binary string.
 
-![hb16](https://cdn-images-1.medium.com/max/800/1*CIWmTd4__kyKZRBBqQG0iw.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*CIWmTd4__kyKZRBBqQG0iw.png' />
 
 ## Conclusion
 

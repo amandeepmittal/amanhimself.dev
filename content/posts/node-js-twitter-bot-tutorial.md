@@ -1,12 +1,9 @@
 ---
-date: 2016-12-25
+date: '2016-12-25'
 title: 'Writing a Node.js Twitter Bot Part 1'
-template: post
-thumbnail: '../thumbnails/node.png'
-slug: 'blog/node-js-twitter-bot-tutorial'
-tags:
-  - nodejs
-  - twitter-bots
+thumbnail: '/thumbnails/node.png'
+slug: 'node-js-twitter-bot-tutorial'
+tag: 'nodejs'
 canonicalUrl: 'https://community.risingstack.com/node-js-twitter-bot-tutorial/'
 ---
 

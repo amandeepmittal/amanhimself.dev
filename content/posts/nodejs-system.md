@@ -1,11 +1,9 @@
 ---
-date: 2016-04-22
 title: 'The Node.js system'
-template: post
-thumbnail: '../thumbnails/node.png'
-slug: 'blog/nodejs-system'
-tags:
-  - nodejs
+date: '2016-04-22'
+thumbnail: '/thumbnails/node.png'
+slug: 'nodejs-system'
+tag: 'nodejs'
 canonicalUrl: 'https://medium.com/hackernoon/the-node-js-system-51090c35dddc'
 ---
 
@@ -57,8 +55,8 @@ It’s a runtime engine[ developed by Google for Chrome browser for JavaScript](
 
 This is a JavaScript library that implements high-level Node.js API (a.k.a. node-core).
 
-![ss1](https://miro.medium.com/max/451/1*dTYKv5fII4doUAqJSA51Qg.png)
+<img src='https://miro.medium.com/max/451/1*dTYKv5fII4doUAqJSA51Qg.png' />
 
 The image borrowed above clarifies and represents a complete Node.js System. I hope this article has made things more clear as it did to me.
 
-[Orignally Published at Hackernoon.com](https://medium.com/hackernoon/the-node-js-system-51090c35dddc)
+> [Orignally Published at Hackernoon.com](https://medium.com/hackernoon/the-node-js-system-51090c35dddc)

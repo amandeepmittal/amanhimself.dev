@@ -1,15 +1,11 @@
 ---
-date: 2017-08-10
 title: 'Converting a Buffer to JSON and Utf8 Strings in Nodejs'
-template: post
-thumbnail: '../thumbnails/node.png'
-slug: 'blog/converting-a-buffer-to-json-and-utf8-strings-in-nodejs'
-tags:
-  - nodejs
+date: '2017-08-10'
+thumbnail: '/thumbnails/node.png'
+slug: 'converting-a-buffer-to-json-and-utf8-strings-in-nodejs'
+tag: 'nodejs'
 canonicalUrl: 'https://amanhimself.dev/blog/converting-a-buffer-to-json-and-utf8-strings-in-nodejs'
 ---
-
-![cover_image](https://miro.medium.com/max/4000/1*1878GmSC5EtcjSNHONPO3Q.jpeg)
 
 Nodejs and browser based JavaScript differ because Node has a way to handle binary data even before the ES6 draft came up with `ArrayBuffer`. In Node, `Buffer` class is the primary data structure used with most I/O operations. It is a raw binary data that is allocated outside the V8 heap and once allocated, cannot be resized.
 
@@ -71,7 +67,3 @@ console.log(bufferOriginal.toString('utf8'));
 `.toString()` is not the only way to convert a buffer to a string. Also, it by defaults converts to a utf-8 format string.
 
 The other way to convert a buffer to a string is using `StringDecoder` core module from Nodejs API.
-
----
-
-[Originally Published at Hackernoon.com](https://medium.com/hackernoon/https-medium-com-amanhimself-converting-a-buffer-to-json-and-utf8-strings-in-nodejs-2150b1e3de57)

@@ -1,11 +1,9 @@
 ---
 title: 'How To Build A Blog From Scratch With React, Markdown, GraphQL and Gatsbyjs'
-slug: 'blog/how-to-build-your-own-blog-from-scratch-with-gatsbyjs-graphql-react-and-markdown'
-date: 2018-11-21
-thumbnail: '../thumbnails/gatsby.png'
-template: post
-tags:
-  - gatsby
+slug: 'how-to-build-your-own-blog-from-scratch-with-gatsbyjs-graphql-react-and-markdown'
+date: '2018-11-21'
+thumbnail: '/thumbnails/gatsby.png'
+tag: 'gatsby'
 canonicalUrl: 'https://medium.com/crowdbotics/how-to-build-your-own-blog-from-scratch-with-gatsbyjs-graphql-react-and-markdown-78352c367bd1'
 ---
 
@@ -69,19 +67,19 @@ gatsby new gatsby-blog-starter
 
 This process will take a minute or two and, at the end of it, you will have a new directory. Traverse inside it. Gatsby’s default project structure looks like this:
 
-![](https://cdn-images-1.medium.com/max/800/1*Y2MEtJVZ4BmnmALDO-D1lw.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*Y2MEtJVZ4BmnmALDO-D1lw.png' />
 
 To see what we get by default, run `gatsby develop`. This will run the project without creating the official build directory on a development server through webpack (used by Gatsby internally). After the command runs successfully, you will be prompted by the following screen like below in your terminal.
 
-![](https://cdn-images-1.medium.com/max/800/1*CC6dYalWGIY2d0DQ1Gg5yw.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*CC6dYalWGIY2d0DQ1Gg5yw.png' />
 
 You can visit `http://localhost:8000` to see the default site in action.
 
-![](https://cdn-images-1.medium.com/max/1200/1*1Ow9OKXVy8-T1x_bGiTjRg.png)
+<img src='https://cdn-images-1.medium.com/max/1200/1*1Ow9OKXVy8-T1x_bGiTjRg.png' />
 
 ### Running a GraphQL Query
 
-![](https://cdn-images-1.medium.com/max/800/1*L8BlmC_0Xx_B75e7Lv4osQ.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*L8BlmC_0Xx_B75e7Lv4osQ.png' />
 
 Every Gatsby project contains at least these files. You might be familiar with some of these such as `node_modules`and `public` directory, which is served when deployed. It also contains `package.json`, which contains the metadata of any modern Javascript application.
 
@@ -98,15 +96,15 @@ siteMetadata: {
 
 Gatsby allows us to query metadata fields described in this file as a GraphQL query. In order to take a look at what kind of stuff we can query from Gatsby, run `gatsby develop` from the terminal. You will not see any changes at `http://localhost:8000/` yet because we haven't modified the component responsible for that. However, we can verify by running a simple GraphQL query. Open `http://localhost:8000/___graphql` in the browser.
 
-![](https://cdn-images-1.medium.com/max/1200/1*0F7_m7zpVpipIjc1qU9SMw.png)
+<img src='https://cdn-images-1.medium.com/max/1200/1*0F7_m7zpVpipIjc1qU9SMw.png' />
 
 We’ve got the GraphQL browser open and over on the side here, we can see the documentation explorer, which lets us go through our schema and look at what kind of stuff we can query for. Click on the `query` type on the right hand side to see what query fields we can access.
 
-![](https://cdn-images-1.medium.com/max/800/1*JsaxRxF-uWp4CCotFWBrMQ.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*JsaxRxF-uWp4CCotFWBrMQ.png' />
 
 This gives us a list of all of the query types that we can look for. Take a look at the `site` and the `siteMetadata`. You can start typing a `s`, and you will see an autocomplete for the query type `site`. This is really helpful. Run the below query.
 
-![](https://cdn-images-1.medium.com/max/1200/1*zt1jv_nlaWMFNPgmZTSGYw.png)
+<img src='https://cdn-images-1.medium.com/max/1200/1*zt1jv_nlaWMFNPgmZTSGYw.png' />
 
 Great!
 
@@ -135,7 +133,7 @@ The rest of the plugins remain same. `gatsby-transformer-remark` is used parse M
 
 To understand it better, let us add some posts. Traverse to `src/pages` directory and then add one or two posts in a year, month, and date format with a slug like below.
 
-![](https://cdn-images-1.medium.com/max/800/1*kVIkKPBAX029E6DmXYUScQ.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*kVIkKPBAX029E6DmXYUScQ.png' />
 
 Each markdown file is supposed to have some frontmatter fields that are used to create and update our posts. Open the `2018-11-14-hello-world.md` and the following content.
 
@@ -149,7 +147,7 @@ One important note is that path will be used when we dynamically create our page
 
 If you take a look at your blog in a browser, you will see that Gatsby is not yet displaying any blog posts that you have created. This is because Gatsby still does not know where these blog posts are or that you even want them to be displayed in the browser. However, if you try to query it in the _GraphiQL_ browser tab, you can see that **frontmatter** data of blog post is available.
 
-![](https://cdn-images-1.medium.com/max/1200/1*f2k6uRd0tZ31BIWJbXHRqg.png)
+<img src='https://cdn-images-1.medium.com/max/1200/1*f2k6uRd0tZ31BIWJbXHRqg.png' />
 
 Each Markdown file is parsed into a node of type `MarkdownRemark`. To query all markdown files in on query, we are using `allMarkdownRemark`. All **frontmatter** fields are converted into GraphQL fields.
 
@@ -258,7 +256,7 @@ Since our home page is still not done to display a list of blog posts you will h
 - For the first post, visit: `[http://localhost:8000/first-post](http://localhost:8000/first-post)`
 - For the second post, visit: `[http://localhost:8000/second-post](http://localhost:8000/second-post)`
 
-![](https://cdn-images-1.medium.com/max/800/1*FfBpJzPlwG8h5-3CvR8mJQ.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*FfBpJzPlwG8h5-3CvR8mJQ.png' />
 
 Try to modify the `Template` component and other fields from the frontmatter. Open `src/blogPost.js`.
 
@@ -282,7 +280,7 @@ const Template = ({ data }) => {
 
 To represent the changes, I have added the date in italics just before the content of the blog post and after the title. Visit any post’s URL and see it in action.
 
-![](https://cdn-images-1.medium.com/max/800/1*cmFx6s6ZsVpGNHoI8wSMLQ.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*cmFx6s6ZsVpGNHoI8wSMLQ.png' />
 
 ### Adding Previous and Next Blog Post Links
 
@@ -357,7 +355,7 @@ The context object now contains two keys called `prev` and `next`. We are also u
 
 Visit the first post and you will get the following result.
 
-![](https://cdn-images-1.medium.com/max/800/1*43qrMpLgEskYZzuZ2cFOQA.gif)
+<img src='https://cdn-images-1.medium.com/max/800/1*43qrMpLgEskYZzuZ2cFOQA.gif' />
 
 ### Display all posts on Homepage
 
@@ -420,7 +418,7 @@ export default IndexPage;
 
 On visiting the Home page URL: `http://localhost:8000/` you will get the following result.
 
-![](https://cdn-images-1.medium.com/max/800/1*Ei7BmnjIcRvG0JmhGwVDZw.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*Ei7BmnjIcRvG0JmhGwVDZw.png' />
 
 ### Conclusion
 

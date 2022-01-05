@@ -1,17 +1,15 @@
 ---
 title: 'Build a Custom Modal with the Animated API in React Native'
-template: post
-date: 2019-06-13
-slug: 'blog/build-a-custom-modal-with-the-animated-api-in-react-native'
-thumbnail: '../thumbnails/expo.png'
-tags:
-  - expo
-  - redux
-  - react-native
+date: '2019-06-13'
+slug: 'build-a-custom-modal-with-the-animated-api-in-react-native'
+thumbnail: '/thumbnails/expo.png'
+tag: 'react-native'
 canonicalUrl: 'https://heartbeat.fritz.ai/build-a-custom-modal-with-the-animated-api-in-react-native-abf4b650622'
 ---
 
 ![cover_image](https://i.imgur.com/0bXMoSY.png)
+
+> [Originally published at Heartbeat](https://heartbeat.fritz.ai/build-a-custom-modal-with-the-animated-api-in-react-native-abf4b650622)
 
 Creating a better user experience is one of the most important aspects of any application. This is where animations in mobile applications come into play. Animations are an important part of your mobile application.
 
@@ -19,7 +17,7 @@ Fortunately, for React Native developers, there is recommended a way to create d
 
 In this tutorial, you are going to take dive deep in creating a custom modal and animated it on a button click. This is the final result we looking to achieve in a React Native application.
 
-![](https://miro.medium.com/max/367/1*F9LUoINWB7uRjTYX5FCDdg.gif)
+<img src='https://miro.medium.com/max/367/1*F9LUoINWB7uRjTYX5FCDdg.gif' />
 
 ### Table of Contents
 
@@ -170,7 +168,7 @@ export default function App() {
 
 On running the application using `yarn start` you will get the following result. The header has a breakthrough line indicates that the stack navigator has been integrated into our app.
 
-![](https://cdn-images-1.medium.com/max/800/1*VRSKOFVSI-C0KEaTlyW_Pw.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*VRSKOFVSI-C0KEaTlyW_Pw.png' />
 
 ## Setting up Redux
 
@@ -281,7 +279,7 @@ class HomeScreen extends React.Component {
 
 You will get the following result in your simulator.
 
-![](https://cdn-images-1.medium.com/max/800/1*rIrz_kLxluX_9Pll7tj-Vg.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*rIrz_kLxluX_9Pll7tj-Vg.png' />
 
 Great! Now that we can see the Custom Model on the screen, let us start applying some animations. To apply animations in this demo application, we will be using `Animated` API from React Native. You do not have to install anything rather than import the API from React Native core. Open `CustomModel.js` and modify it. In the below snippet, also define an initial state.
 
@@ -351,7 +349,7 @@ To trigger this animation on the first render of the component `CustomModal`, we
 
 You will get the following result.
 
-![](https://cdn-images-1.medium.com/max/800/1*Nl3yw5Rgy4Wo3NnBGpvSbg.gif)
+<img src='https://cdn-images-1.medium.com/max/800/1*Nl3yw5Rgy4Wo3NnBGpvSbg.gif' />
 
 We need to add a button to close the modal. Let us add the styles and view for the close button on the modal. Create a `CloseView` component with `styled-components` library inside a `TouchableOpacity` button. Also, for the close icon, we are going to use `@expo/vector-icons` library.
 
@@ -449,7 +447,7 @@ The third place where the variable `screenHeight` are the styles of the view con
 
 You will get the following result in your simulator device.
 
-![](https://cdn-images-1.medium.com/max/800/1*ZCOwR-WWqOjoE1gkuKkArQ.gif)
+<img src='https://cdn-images-1.medium.com/max/800/1*ZCOwR-WWqOjoE1gkuKkArQ.gif' />
 
 ## Integrating Redux to Modal
 
@@ -555,7 +553,7 @@ export default connect(mapStateToProps, mapDispatchToProps)(HomeScreen);
 
 Click the button `Open Modal` on the UI screen and you will get similar results as follows.
 
-![](https://cdn-images-1.medium.com/max/800/1*4RgkT_Rmn2gqO-6Q99wXHA.gif)
+<img src='https://cdn-images-1.medium.com/max/800/1*4RgkT_Rmn2gqO-6Q99wXHA.gif' />
 
 _Congratulations! You have just created a custom model that is animated and integrated it from another screen_. You can end this tutorial right here if it serves the purpose or the as the title suggests. Though, if you want to continue, let us add some animations to the HomeScreen to create a pleasing UI in the next section.
 
@@ -563,7 +561,7 @@ _Congratulations! You have just created a custom model that is animated and inte
 
 In the `HomeScreen` component we are going to import quite a few APIs from React Native. The result we are trying to achieve is as follows. It will be easier for you to view what we want to happen to understand the code in this section.
 
-![](https://cdn-images-1.medium.com/max/800/1*F9LUoINWB7uRjTYX5FCDdg.gif)
+<img src='https://cdn-images-1.medium.com/max/800/1*F9LUoINWB7uRjTYX5FCDdg.gif' />
 
 Now that you have seen that let us first go through what are we going to import from `react-native`.
 
@@ -762,5 +760,3 @@ In the above snippet, do take note of `RootView`. We are also converting the goo
 ## Conclusion
 
 This completes this tutorial about creating animated custom modal to provide a pleasant user experience in your react native application. You learned how to use the animated library and some of its methods such as `spring`, `timing` along with `Easing` module. With the help of redux to manage state, you created a custom modal UI.
-
-[Originally published at Heartbeat](https://heartbeat.fritz.ai/build-a-custom-modal-with-the-animated-api-in-react-native-abf4b650622)

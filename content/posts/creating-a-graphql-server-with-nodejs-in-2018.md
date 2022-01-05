@@ -1,16 +1,15 @@
 ---
 title: 'Creating a GraphQL server with Nodejs'
-date: 2018-11-05
-template: post
-slug: 'blog/creating-a-graphql-server-with-nodejs-in-2018'
-thumbnail: '../thumbnails/graphql.png'
-tags:
-  - nodejs
-  - graphql
+date: '2018-11-05'
+slug: 'creating-a-graphql-server-with-nodejs-in-2018'
+thumbnail: '/thumbnails/graphql.png'
+tag: 'graphql'
 canonicalUrl: 'https://medium.com/crowdbotics/creating-a-graphql-server-with-nodejs-ef9814a7e0e6'
 ---
 
 ![cover](https://i.imgur.com/kcItwPv.png)
+
+> [Originally published at Crowdbotics](https://medium.com/crowdbotics/creating-a-graphql-server-with-nodejs-ef9814a7e0e6)
 
 When it comes to network requests between a client and a server application, REST (which stands for _Representational state transfer_) is one of the most popular choices for connecting the two. In the world of [REST APIs](https://blog.crowdbotics.com/how-to-build-a-rest-api-with-koajs/), everything revolves around the idea of having resources as accessible URLs. We then use CRUD operations (Create, Read, Update, Delete), which are basically HTTP methods such as GET, POST, PUT & DELETE, to interact with the data.
 
@@ -224,13 +223,13 @@ The schema above defines the shape of a user object with a required field `id` d
 
 **Queries** are what you use to make a request to a GraphQL API. For instance, in our example above, when we are fetching the data related to a Star Wars character. Let us simplify this. To query in GraphQL, it is about asking for specific fields on objects. For example, using the same API as we did above, we fetch the name of all the characters in Star Wars. Below you can see the difference. On left-hand side of the image, is the query and on the right-hand side is the image.
 
-![](https://cdn-images-1.medium.com/max/1200/1*L-Z_EF1tNkq4jUhsopHasw.png)
+<img src='https://cdn-images-1.medium.com/max/1200/1*L-Z_EF1tNkq4jUhsopHasw.png' />
 
 The good thing about GraphQL queries is that they can be nested to go as deep as you’d like. This is hard to do in a REST API. The operation becomes much more complex.
 
 Below is another example of a nested query, a more complex one
 
-![](https://cdn-images-1.medium.com/max/1200/1*ug3h4hZmAeuNHyy93Ygy2Q.png)
+<img src='https://cdn-images-1.medium.com/max/1200/1*ug3h4hZmAeuNHyy93Ygy2Q.png' />
 
 **Mutations:** In REST architecture, to modify the data we either use `POST` to add data or `PUT` to update the existing fields with the data. In GraphQL, the overall concept is similar. You will send a query to cause the write operations on the server side. However, this form of the query is called a Mutation.
 
@@ -263,7 +262,7 @@ Let us understand briefly what these dependencies do.
 
 You can take a look at the following image of all the dependencies I installed without any error.
 
-![](https://cdn-images-1.medium.com/max/800/1*gCozaTuzY6DHaPG4Ya43zA.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*gCozaTuzY6DHaPG4Ya43zA.png' />
 
 Create a new file called `index.js` at the root of your project with the following code.
 
@@ -301,15 +300,15 @@ Lastly, we bootstrap the server by using `app.listen()` which is provided by the
 
 Apollo Server sets up GraphQL Playground for you so that you can start running queries and exploring schemas quickly as shown below.
 
-![](https://cdn-images-1.medium.com/max/1200/1*ba4JULFAk5VbSFRsNxof8g.png)
+<img src='https://cdn-images-1.medium.com/max/1200/1*ba4JULFAk5VbSFRsNxof8g.png' />
 
 To run a query, type the following query on the left-hand side which is the editable space and then press the ▶ (play) button in the middle.
 
-![](https://cdn-images-1.medium.com/max/1200/1*SGaIF-GZ0E0QLg2K6sJ7CA.png)
+<img src='https://cdn-images-1.medium.com/max/1200/1*SGaIF-GZ0E0QLg2K6sJ7CA.png' />
 
 The schema tab on the right-hand side describes the data type of our query `hello`. This is coming straight from the `typeDefs` we defined in our server.
 
-![](https://cdn-images-1.medium.com/max/800/1*3v_Uh_k2gjC-XueD9PhWvQ.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*3v_Uh_k2gjC-XueD9PhWvQ.png' />
 
 _Voila!_ You just created your first GraphQL server. Now let us extend our current knowledge for the real world.
 
@@ -375,7 +374,7 @@ app.listen({ port: 4000 }, () =>
 
 From terminal write `npm run dev`. If there are no errors, you will get the following:
 
-![](https://cdn-images-1.medium.com/max/800/1*Cix-Zl8mbZf90qpuHxEB8g.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*Cix-Zl8mbZf90qpuHxEB8g.png' />
 
 You can also visit `http://localhost:4000/` in a browser window to see it action.
 
@@ -492,7 +491,7 @@ Now to test our GraphQL API, hop on to `http://localhost:4000/graphql` URL in a 
 
 Hit the _play_ button and you will see a familiar result on the right side section like below.
 
-![](https://cdn-images-1.medium.com/max/1200/1*BnyLxWTl_9yDpoIDLH-Xzg.png)
+<img src='https://cdn-images-1.medium.com/max/1200/1*BnyLxWTl_9yDpoIDLH-Xzg.png' />
 
 This is all happening because our query type `allPeople` has custom business logic to retrieve all the data (in our case the mock data we are providing as an array inside `resolvers.js`) using a resolver. To fetch a single person object try running another query like this. Remember you have to provide the ID.
 
@@ -507,7 +506,7 @@ This is all happening because our query type `allPeople` has custom business log
 
 Run the above query, and as a result, you can have the values of each field/property you have mentioned to query up on. Your result will be similar to the following.
 
-![](https://cdn-images-1.medium.com/max/1200/1*DOSW6mN894ZYg498rVxNKg.png)
+<img src='https://cdn-images-1.medium.com/max/1200/1*DOSW6mN894ZYg498rVxNKg.png' />
 
 Great! I am sure you must have got hold of how to create a GraphQL query and run it. Apollo Server library is a powerful one. It also enables us to edit the playground. _Suppose we want to edit the theme of the playground?_ All we have to do is provide an option when creating `ApolloServer` instance, in our case the `SERVER`.
 
@@ -527,7 +526,7 @@ The `playground` property has many features such defining a default endpoint for
 
 After changing the theme we get the following.
 
-![](https://cdn-images-1.medium.com/max/1200/1*cZ7KO6x0FVXql9c04ZshIA.png)
+<img src='https://cdn-images-1.medium.com/max/1200/1*cZ7KO6x0FVXql9c04ZshIA.png' />
 
 ### Conclusion
 
@@ -536,5 +535,3 @@ If you completed this tutorial step by step, _Congratulations!🎉_
 You have learned how to configure an Express server with Apollo library to setup your own GraphQL API. Apollo Server is an open source project and is one the most stable solution to create GraphQL APIs for full-stack applications. It also supports client-side out of the box for React, Vue, Angular, Meteor, and Ember as well as Native mobile development with Swift and Java. More information about this can be found [**here**](https://www.apollographql.com/docs/react/).
 
 **The complete code for the tutorial at [this Github repository](https://github.com/amandeepmittal/apollo-express-demo)**
-
-[Originally published at Crowdbotics](https://medium.com/crowdbotics/creating-a-graphql-server-with-nodejs-ef9814a7e0e6)

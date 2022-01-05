@@ -4,7 +4,7 @@
   "arrowParens": "avoid",
   "proseWrap": "preserve",
   "quoteProps": "as-needed",
-  "jsxBracketSameLine": false,
+  "bracketSameLine": false,
   "bracketSpacing": true,
   "tabWidth": 2
 }

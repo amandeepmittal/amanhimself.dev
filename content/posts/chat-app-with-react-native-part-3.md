@@ -1,12 +1,9 @@
 ---
 title: 'Chat app with React Native (part 3) - Create Firestore collections to store chat rooms'
-date: 2020-04-21
-template: post
-slug: 'blog/chat-app-with-react-native-part-3'
-thumbnail: '../thumbnails/react.png'
-tags:
-  - react-native
-  - firebase
+date: '2020-04-21'
+slug: 'chat-app-with-react-native-part-3'
+thumbnail: '/thumbnails/react.png'
+tag: 'react-native'
 canonicalUrl: 'https://heartbeat.fritz.ai/chat-app-with-react-native-part-3-add-firestore-to-create-and-store-chat-rooms-94f0c7e09e9d'
 ---
 
@@ -48,7 +45,7 @@ export default function HomeStack() {
 
 Go back to the simulator and you are going to get the following result.
 
-![ss1](https://miro.medium.com/max/940/1*Jxk6KkKBzhv_rc9kXD6iMA.png)
+<img src='https://miro.medium.com/max/940/1*Jxk6KkKBzhv_rc9kXD6iMA.png' />
 
 ## Add a separate stack navigator for modal screen
 
@@ -58,7 +55,7 @@ A _modal screen_ displays the content that temporarily blocks interactions with 
 
 Here's a flowchart to help visualize the navigation flow we're trying to achieve by the end of this section.
 
-![ss5](https://miro.medium.com/max/1400/1*kU6S7zzWSrtwgkNI0eygiQ.jpeg)
+<img src='https://miro.medium.com/max/1400/1*kU6S7zzWSrtwgkNI0eygiQ.jpeg' />
 
 Start by creating a new screen file called `AddRoomScreen.js` inside `src/screens` directory with the following content.
 
@@ -165,17 +162,17 @@ export default function HomeStack() {
 
 Go to the simulator. You are going to find the `Add room` button on the home screen as shown below.
 
-![ss2](https://miro.medium.com/max/940/1*pLjnE31zjSqkUwGiRS3ldA.png)
+<img src='https://miro.medium.com/max/940/1*pLjnE31zjSqkUwGiRS3ldA.png' />
 
 Click on the button and notice the transition when the modal screen pops up.
 
-![ss3](https://miro.medium.com/max/684/1*iwaMYjCAkCv1Gf0UcnEiag.gif)
+<img src='https://miro.medium.com/max/684/1*iwaMYjCAkCv1Gf0UcnEiag.gif' />
 
 ## How to add an icon in the header bar
 
 The modal stack is working as per the requirement. But the way the user would navigate from the home screen to modal is not by clicking a button in the center of the home screen. This action is going to be done by clicking an icon button from the header.
 
-![ss4](https://miro.medium.com/max/636/1*nA9W978m4sziQwKeepKSow.png)
+<img src='https://miro.medium.com/max/636/1*nA9W978m4sziQwKeepKSow.png' />
 
 Luckily, the `react-navigation` library provides props for us to implement this action without any hassle. Import `IconButton` from `react-native-paper` UI library inside the file `src/navigation/HomeStack.js`.
 
@@ -207,7 +204,7 @@ Also, remove `FormButton` in `HomeScreen.js` you create in the previous section.
 
 Here is how the home screen in the simulator looks like after this step.
 
-![ss6](https://miro.medium.com/max/940/1*x40CeNj7FEFO6Exg8mLa2Q.png)
+<img src='https://miro.medium.com/max/940/1*x40CeNj7FEFO6Exg8mLa2Q.png' />
 
 ## Complete the modal screen
 
@@ -295,11 +292,11 @@ const styles = StyleSheet.create({
 
 If you go to the modal screen, you are going to get the following result.
 
-![ss7](https://miro.medium.com/max/940/1*ylHD71PivqxothYaSrypfg.png)
+<img src='https://miro.medium.com/max/940/1*ylHD71PivqxothYaSrypfg.png' />
 
 Here is the complete flow of the `HomeStack` navigator so far.
 
-![ss8](https://miro.medium.com/max/684/1*7d5TY6H9ZznNmdJ5QRG1UQ.gif)
+<img src='https://miro.medium.com/max/684/1*7d5TY6H9ZznNmdJ5QRG1UQ.gif' />
 
 The **Create** button will remain disabled unless the user starts typing.
 
@@ -372,11 +369,11 @@ function handleButtonPress() {
 
 Go back to the simulator and try to create a new chat room.
 
-![ss9](https://miro.medium.com/max/684/1*hJ5PwM-DWhfRpunWSX4fYg.gif)
+<img src='https://miro.medium.com/max/684/1*hJ5PwM-DWhfRpunWSX4fYg.gif' />
 
 After that, go to the Firebase database console and verify if the `THREADS` collection has a room called `Room 1` or not.
 
-![ss10](https://miro.medium.com/max/1400/1*HHM2H9Y2e2yIsDdBCk-8bg.png)
+<img src='https://miro.medium.com/max/1400/1*HHM2H9Y2e2yIsDdBCk-8bg.png' />
 
 ## Display a list of chat rooms on the home screen
 
@@ -482,7 +479,7 @@ const styles = StyleSheet.create({
 
 Go back to the simulator device and you are going to get the following result.
 
-![ss11](https://miro.medium.com/max/684/1*5owHh4tZ5mmOyVfsn9kOwA.gif)
+<img src='https://miro.medium.com/max/684/1*5owHh4tZ5mmOyVfsn9kOwA.gif' />
 
 ## Conclusion
 

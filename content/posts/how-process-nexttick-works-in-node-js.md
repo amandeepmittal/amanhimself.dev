@@ -1,11 +1,9 @@
 ---
-date: 2016-06-25
 title: 'How process.nextTick() works in Node.js?'
-template: post
-thumbnail: '../thumbnails/node.png'
-slug: 'blog/how-process-nexttick-works-in-node-js'
-tags:
-  - nodejs
+date: '2016-06-25'
+thumbnail: '/thumbnails/node.png'
+slug: 'how-process-nexttick-works-in-node-js'
+tag: 'nodejs'
 canonicalUrl: 'https://amanhimself.dev/blog/how-process-nexttick-works-in-node-js/'
 ---
 

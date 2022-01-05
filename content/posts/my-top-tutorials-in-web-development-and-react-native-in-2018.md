@@ -1,11 +1,9 @@
 ---
 title: 'My Top Tutorials in Web Development and React Native in 2018'
-date: 2018-12-31
-slug: 'blog/my-top-tutorials-in-web-development-and-react-native-2018'
-template: post
-thumbnail: '../thumbnails/react.png'
-tags:
-  - react-native
+date: '2018-12-31'
+slug: 'my-top-tutorials-in-web-development-and-react-native-2018'
+thumbnail: '/thumbnails/react.png'
+tag: 'react-native'
 canonicalUrl: 'https://medium.com/hackernoon/my-top-tutorials-in-web-development-and-react-native-in-2018-627da9e0481f'
 ---
 
@@ -28,7 +26,7 @@ Creating content with the thought glued in your consciousness that you have to p
 
 Thus, in below, I am summarising a list of articles that I think will help you achieve your goal or fill that gap in the year 2019 if your goal in the new is to become a developer 🎉.
 
-### **Web Development**
+### Web Development
 
 Javascript is often thought of a web programming language but Javascript, and javascript frameworks such as NodeJS, have many applications apart from just web apps including desktop applications, mobile applications, embedded systems, and back-end development.
 

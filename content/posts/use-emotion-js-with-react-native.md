@@ -1,12 +1,10 @@
 ---
 title: 'Building Stylistic UIs with Emotion-JS for React Native'
-date: 2019-06-04
-slug: 'blog/use-emotion-js-with-react-native'
-thumbnail: '../thumbnails/expo.png'
+date: '2019-06-04'
+slug: 'use-emotion-js-with-react-native'
+thumbnail: '/thumbnails/expo.png'
 template: post
-tags:
-  - expo
-  - react-native
+tag: 'expo'
 canonicalUrl: 'https://heartbeat.fritz.ai/how-to-use-emotion-js-with-react-native-fccac9c78779'
 ---
 
@@ -87,7 +85,7 @@ const Title = styled.Text`
 
 Notice the `Container` is a React Native `View` and has styling attached to it. Similarly, `Title` is utilizing `Text` component from React Native. You will get the following result.
 
-![](https://cdn-images-1.medium.com/max/800/1*f74HA6IWnJM-cE_BNE9CTQ.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*f74HA6IWnJM-cE_BNE9CTQ.png' />
 
 Here is the complete code for `App.js` file.
 
@@ -187,7 +185,7 @@ export default class App extends React.Component {
 
 On running the simulator, you will get the following result.
 
-![](https://cdn-images-1.medium.com/max/800/1*Cy1MdQqq5Uw4i6uNtXFTbQ.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*Cy1MdQqq5Uw4i6uNtXFTbQ.png' />
 
 ## Inline Styling
 
@@ -210,7 +208,7 @@ const CustomButton = props => (
 
 The `style` tag in the above snippet uses `css` prop from `@emotion/native` library to allow us to add inline styles.
 
-![](https://cdn-images-1.medium.com/max/800/1*WYeeuL0Xoq6gHDWOnW0P7w.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*WYeeuL0Xoq6gHDWOnW0P7w.png' />
 
 ## Building the Grocery UI
 
@@ -268,7 +266,7 @@ const Name = styled.Text`
 
 You will get the following result in the simulator.
 
-![](https://cdn-images-1.medium.com/max/800/1*NOix_tBDR5Ya7U9vxKBWkA.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*NOix_tBDR5Ya7U9vxKBWkA.png' />
 
 Right now, everything is how in the middle of the screen. We need the `Titlebar` and its contents at the top of the mobile screen. So styles for `Container` can be modified as below.
 
@@ -281,7 +279,7 @@ const Container = styled.View`
 
 You will get the following result.
 
-![](https://cdn-images-1.medium.com/max/800/1*_y_4hWxNgScpmXjtJQngXQ.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*_y_4hWxNgScpmXjtJQngXQ.png' />
 
 ## Adding the user avatar image
 
@@ -310,7 +308,7 @@ const Avatar = styled.Image`
 
 You will get the following result.
 
-![](https://cdn-images-1.medium.com/max/800/1*86D8gQeBHwo42NwJ2bKbkA.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*86D8gQeBHwo42NwJ2bKbkA.png' />
 
 ## Absolute Positioning in React Native
 
@@ -342,7 +340,7 @@ Usually, with position absolute property, you are going to use a combination of 
 
 In the case above, we use `top` and `left` and both are set to `0` pixels. You will get the following output.
 
-![](https://cdn-images-1.medium.com/max/800/1*VyDbIWkN4io9aMFw9-Jucg.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*VyDbIWkN4io9aMFw9-Jucg.png' />
 
 ## Mapping through a list of categories
 
@@ -388,7 +386,7 @@ All the data is static right now. Import this component in `App.js` and place it
 
 You will get the following result.
 
-![](https://cdn-images-1.medium.com/max/800/1*UzOFxbJegk5DgdnWIIDFAA.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*UzOFxbJegk5DgdnWIIDFAA.png' />
 
 There can be a number of categories. To make the names of categories dynamic, we can send it through `App.js` file.
 
@@ -433,7 +431,7 @@ const Name = styled.Text`
 
 There is no change in the UI.
 
-![](https://cdn-images-1.medium.com/max/800/1*97cGkaf4B-iuoBqtaU_82g.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*97cGkaf4B-iuoBqtaU_82g.png' />
 
 ## Adding Horizontal ScrollView
 
@@ -462,7 +460,7 @@ You will notice not a single change in the UI. By default, scrollable lists in R
 
 It works.
 
-![](https://cdn-images-1.medium.com/max/800/1*Ca8deMUYzKMefqll-U8d2w.gif)
+<img src='https://cdn-images-1.medium.com/max/800/1*Ca8deMUYzKMefqll-U8d2w.gif' />
 
 To make it appear better, add some inline styling using `css` prop.
 
@@ -479,7 +477,7 @@ To make it appear better, add some inline styling using `css` prop.
 
 Now it looks better.
 
-![](https://cdn-images-1.medium.com/max/800/1*Wv5LHX6N-LNKYFBLnzZZjw.gif)
+<img src='https://cdn-images-1.medium.com/max/800/1*Wv5LHX6N-LNKYFBLnzZZjw.gif' />
 
 ## Adding a vertical ScrollView
 
@@ -505,13 +503,13 @@ Notice that we are adding another emotion component called `Subtitle` which is n
 
 It renders like below.
 
-![](https://cdn-images-1.medium.com/max/800/1*pm3WO-qUP4JhE3yagUo93A.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*pm3WO-qUP4JhE3yagUo93A.png' />
 
 ## Building a card component
 
 In this section, we are going to create a card component that will hold an item’s image, the name of the item and the price as text. Each card component is going to have curved borders and box shadow. This is how it is going to look like.
 
-![](https://cdn-images-1.medium.com/max/800/1*LACepyEU54zhnt028sfh5g.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*LACepyEU54zhnt028sfh5g.png' />
 
 Create a new component file called `Card.js` inside the `components` directory. The structure of the Card component is going to be.
 
@@ -637,7 +635,7 @@ After `Subtitle` adds a new view called `ItemsLayout`. This is going to be a lay
 
 On rendering the final result, it looks like below.
 
-![](https://cdn-images-1.medium.com/max/800/1*1buKFeJ-C7yzw41ezKTv6g.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*1buKFeJ-C7yzw41ezKTv6g.png' />
 
 ## Conclusion
 

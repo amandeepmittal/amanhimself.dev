@@ -1,11 +1,9 @@
 ---
 title: 'Prop types in React and TypeScript'
-date: 2021-06-28
-slug: 'blog/prop-types-in-react-and-typescript'
-template: post
-thumbnail: '../thumbnails/typescript.png'
-tags:
-  - react
+date: '2021-06-28'
+slug: 'prop-types-in-react-and-typescript'
+thumbnail: '/thumbnails/typescript.png'
+tag: 'react'
 canonicalUrl: 'https://amanhimself.dev/blog/prop-types-in-react-and-typescript/'
 ---
 
@@ -88,7 +86,7 @@ FavoriteColor.propTypes = {
 
 Code compiles, and there are no errors.
 
-## Using `type` keyword to declare prop type definitions
+## Using type keyword to declare prop type definitions
 
 TypeScript comes with a `type` keyword. It can be used to define prop types without using the `prop-types` package.
 

@@ -1,11 +1,9 @@
 ---
 title: 'Setup Macbook M1 for Web and React Native development'
-slug: 'blog/setup-macbook-m1'
-date: 2021-03-14
-thumbnail: '../thumbnails/vscode.png'
-template: post
-tags:
-  - tools
+slug: 'setup-macbook-m1'
+date: '2021-03-14'
+thumbnail: '/thumbnails/vscode.png'
+tag: 'tools'
 canonicalUrl: 'https://amanhimself.dev/blog/setup-macbook-m1/'
 ---
 
@@ -13,14 +11,9 @@ canonicalUrl: 'https://amanhimself.dev/blog/setup-macbook-m1/'
 
 ![cover_image](https://i.imgur.com/tAJjTOU.png)
 
-_Note:_ Most of this article was updated in August 2021. The Macbook Pro M1 I was using crashed and stopped working without any reason on August 25, 2021. In just seven months of use.
+_Note:_ Most of this article was updated in August 2021. The Macbook Pro M1 I was using crashed and stopped working without any reason on [August 25, 2021](https://twitter.com/amanhimself/status/1430788513226702849). In just seven months of use.
 
 It took time to get it repaired. That forced me to buy another laptop. While setting up the new laptop, I thought it is an excellent time to update this post.
-
-<br />
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">lol <a href="https://twitter.com/Apple?ref_src=twsrc%5Etfw">@apple</a> started shipping used/damaged products to India by boxing them as NEW?<br><br>cc: <a href="https://twitter.com/AppleSupport?ref_src=twsrc%5Etfw">@AppleSupport</a> <a href="https://t.co/hmgZwiS5Kl">pic.twitter.com/hmgZwiS5Kl</a></p>&mdash; Aman Mittal ⚛️☕🖖🥑 (@amanhimself) <a href="https://twitter.com/amanhimself/status/1430788513226702849?ref_src=twsrc%5Etfw">August 26, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-<br />
 
 I recently upgraded from [Macbook Air 2017](https://www.instagram.com/p/B6lInd3AhsN/) to Macbook Pro with an M1 chip. My four-year-old Macbook Air was giving up. The performance to run heavy tasks like using the iOS simulator when developing and working on React Native apps was declining. I had long given up using the Android emulator and used an actual Android device for testing. December 2020 was the time I decided its time to upgrade.
 

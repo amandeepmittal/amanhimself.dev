@@ -1,15 +1,11 @@
 ---
-date: 2017-10-05
+date: '2017-10-05'
 title: 'Introduction to Hybrid Mobile Apps'
-template: post
-thumbnail: '../thumbnails/ionic.png'
-slug: 'blog/introduction-to-hybrid-mobile-apps'
-tags:
-  - ionic
+thumbnail: '/thumbnails/ionic.png'
+slug: 'introduction-to-hybrid-mobile-apps'
+tag: 'ionic'
 canonicalUrl: 'https://medium.com/hackernoon/introduction-to-hybrid-mobile-apps-c97720b30557'
 ---
-
-![cover_image](https://miro.medium.com/max/1400/1*IDiX4JXxmO8E_d__O1lsTA.jpeg)
 
 ### What is a Hybrid Mobile App?
 
@@ -35,7 +31,7 @@ The application on a specific mobile operating system runs via tool like [Cordov
 
 WebView communicates with Cordova’s APIs which then further communicates with mobile devices.
 
-![](https://cdn-images-1.medium.com/max/800/1*hdwWntqxD-qOL8vf87DmAQ.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*hdwWntqxD-qOL8vf87DmAQ.png' />
 
 WebViews are so common these days that you can build desktop applications using [Electron](http://electron.atom.io/).
 

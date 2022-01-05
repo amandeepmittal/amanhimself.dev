@@ -1,12 +1,9 @@
 ---
 title: 'How to remove bottom tab bar border in React Navigation'
-slug: 'blog/react-navigation-remove-tab-bar-border'
-date: 2021-01-17
-template: post
-thumbnail: '../thumbnails/expo.png'
-tags:
-  - expo
-  - react-native
+slug: 'react-navigation-remove-tab-bar-border'
+date: '2021-01-17'
+thumbnail: '/thumbnails/expo.png'
+tag: 'expo'
 canonicalUrl: 'https://amanhimself.dev/blog/react-navigation-remove-tab-bar-border/'
 ---
 

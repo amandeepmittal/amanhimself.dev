@@ -1,12 +1,9 @@
 ---
 title: 'Implement Push notifications for Android apps with React Native'
-date: 2019-11-19
-slug: 'blog/push-notifications-android-apps-react-native'
-template: post
-thumbnail: '../thumbnails/react.png'
-tags:
-  - react-native
-  - firebase
+date: '2019-11-19'
+slug: 'push-notifications-android-apps-react-native'
+thumbnail: '/thumbnails/react.png'
+tag: 'react-native'
 canonicalUrl: 'https://blog.jscrambler.com/implementing-react-native-push-notifications-in-android-apps/'
 ---
 

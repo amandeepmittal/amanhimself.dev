@@ -1,18 +1,17 @@
 ---
 title: 'React Hooks Basics — Building a React Native App with React Hooks'
-date: 2019-04-19
-template: post
-slug: 'blog/build-a-react-native-app-with-react-hooks'
-thumbnail: '../thumbnails/expo.png'
-tags:
-  - expo
-  - react-native
+date: '2019-04-19'
+slug: 'build-a-react-native-app-with-react-hooks'
+thumbnail: '/thumbnails/expo.png'
+tag: 'react-native'
 canonicalUrl: 'https://medium.com/crowdbotics/build-a-react-native-app-with-react-hooks-5498e1d5fdf6'
 ---
 
 ![cover_image](https://i.imgur.com/5QMLIPd.png)
 
-React `16.8` welcomed the dawn of **Hooks**. This new addition is both a new concept and pragmatic approach that helps you use state and lifecycle methods behavior in functional React components, that is, without writing a class. The intention to implement this new feature in React ecosystem is to benefit all the community.
+> [Originally published at Crowdbotics](https://medium.com/crowdbotics/build-a-react-native-app-with-react-hooks-5498e1d5fdf6)
+
+React `16.8` welcomed the dawn of Hooks. This new addition is both a new concept and pragmatic approach that helps you use state and lifecycle methods behavior in functional React components, that is, without writing a class. The intention to implement this new feature in React ecosystem is to benefit all the community.
 
 Whether you are a developer with a front-end role or write mobile apps using React Native, chances are that you are going to come across Hooks often enough in your working environment. Of course, you do not have to use them. You can still write class components, they are not going anywhere yet. However, I personally like to think it is an important part of being a developer and using something like React in our work/day-job/side-hustle projects by keeping up to date with these new features.
 
@@ -20,7 +19,7 @@ Following the footsteps of ReactJS, React Native community recently announced th
 
 In this tutorial, I will walk you through the steps on using Hooks in a React Native application by building a small demo app and understand the most common Hooks in detail before that. Moreover, I am going to briefly introduce you to the concept of `flexbox` and how is it significantly different in React Native than the web.
 
-#### **Tldr;**
+#### Tldr;
 
 - Requirements
 - Setting up Crowdbotics Project
@@ -34,7 +33,7 @@ In this tutorial, I will walk you through the steps on using Hooks in a React Na
 - Completing and Deleting an Item
 - Conclusion
 
-### **Requirements**
+### Requirements
 
 In order to follow this tutorial, you are required to have the following installed on your dev machine:
 
@@ -46,17 +45,17 @@ In order to follow this tutorial, you are required to have the following install
 
 For a complete walkthrough on how you can set up a development environment for React Native, you can go through [official documentation here](https://facebook.github.io/react-native/docs/getting-started).
 
-### **Setting up a Crowdbotics Project**
+### Setting up a Crowdbotics Project
 
 In this section, you will be setting up a Crowdbotics project that has React Native pre-defined template with stable and latest dependencies for you to leverage. However, at the time of writing this tutorial, the template does not use React Native version `0.59`. So instead of going into too much hassle about upgrading this React Native app, I will be walking you through creating a new React Native project in the next section.
 
 To follow along, setting up a new project using Crowdbotics app builder service is easy. Visit [app.crowdbotics.com](http://app.crowdbotics.com) dashboard. Once you are logged in, choose `Create a new application`.
 
-![](https://cdn-images-1.medium.com/max/800/1*9gollubzgEx8AyxPs_TjFw.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*9gollubzgEx8AyxPs_TjFw.png' />
 
 On `Create an Application page`, choose `React Native` template under Mobile App. Lastly, choose the name of your template at the bottom of this page and then click the button `Create by app!` After a few moments, your Crowdbotics project will be created. Upon creation, it will redirect you to the app dashboard, where you can see a link to GitHub, Heroku, and Slack. Once your project is created, you will get an invitation from Crowdbotics to download your project or clone the repository from Github either on them email you logged in or as a notification if you chose Github authentication.
 
-### **Setup a React Native App**
+### Setup a React Native App
 
 Once you installed \`react-native-cli\` you can begin by generating a React Native project. Run the below command to initialize a new React Native project. Also, note that you can name your React Native app anything.
 
@@ -64,11 +63,11 @@ Once you installed \`react-native-cli\` you can begin by generating a React Nati
 
 Using this command, a new project folder will be generated, traverse inside it and you will be welcome by a slightly different file system (a new file that you might not have seen before is `metro.config.js`, which you can ignore it for now).
 
-![](https://cdn-images-1.medium.com/max/800/1*vk2tjcthKq5R5CI4CoSYhg.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*vk2tjcthKq5R5CI4CoSYhg.png' />
 
 Also, note that `RNHooksTODOAPP` is the project and directory name, so in its place, you can enter anything. For more information on the current release candidate of React Native, you can visit their Github project.
 
-[**facebook/react-native**  
+[facebook/react-native  
 \_A framework for building native apps with React. Contribute to facebook/react-native development by creating an account…\_github.com](https://github.com/facebook/react-native/releases 'https://github.com/facebook/react-native/releases')[](https://github.com/facebook/react-native/releases)
 
 To run the mobile application in an iOS/Android simulator you can run the same old CLI commands like `react-native run-ios` or `run-android`.
@@ -143,11 +142,11 @@ react-native run-ios
 
 Once the build files are created, the simulator will show you a similar result like below.
 
-![](https://cdn-images-1.medium.com/max/800/1*_Ecf_sv3Sx1UyzlYHFHIbw.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*_Ecf_sv3Sx1UyzlYHFHIbw.png' />
 
 If you play around a bit and hit the button `Click me`, you will see the counter's value is increased.
 
-![](https://cdn-images-1.medium.com/max/800/1*GKTkcgsmsqdrIMoNWKAyhg.gif)
+<img src='https://cdn-images-1.medium.com/max/800/1*GKTkcgsmsqdrIMoNWKAyhg.gif' />
 
 As you know by now, that the `App` component is nothing but a function that has state. You can even refactor it like below by introducing another function to handle `Button` click event and it will still work.
 
@@ -240,15 +239,15 @@ const styles = StyleSheet.create({
 
 We need a text input field to add items to our list. For that, `TextInput` is imported from `react-native`. For demonstration purposes, I am keeping styles simple, especially the background color. If you want to make the UI look good, go ahead. In the above code, there is a header called `Todo List` which has corresponding `header` styles defined using `StyleSheet.create` object. Also, take notice of the `View` which uses `justifyContent` with a value of `flex-start`.
 
-### What is `flexbox`?
+### What is flexbox?
 
 Creating a UI in a React Native app heavily depends on styling with `flexbox`. Even if you decide to use a third party library kit such as `nativebase` or `react-native-elements`, their styling is based on `flexbox` too.
 
-The `flexbox` layout starts by creating a flex container with an element of `display:flex`. If you are using `flexbox` for the web you will have to define this `display` property. In react native, it is automatically defined for you. The flex container can have its own children across two axes. The **main axis** and **cross axis**. They both are perpendicular to each other.
+The `flexbox` layout starts by creating a flex container with an element of `display:flex`. If you are using `flexbox` for the web you will have to define this `display` property. In react native, it is automatically defined for you. The flex container can have its own children across two axes. The main axis and cross axis. They both are perpendicular to each other.
 
 These axes can be changed as a result of property `flexDirection`. In the web, by default, it is a row. In React Native, by default, it is a column.
 
-![](https://cdn-images-1.medium.com/max/800/1*t9nPsrpaOMDMv-FIPzdc3g.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*t9nPsrpaOMDMv-FIPzdc3g.png' />
 
 To align an element along the horizontal axis or the cross axis in React Native you have to specify in the `StyleSheet` object with the property of `flexDirection: 'row'`. We have done the same in the above code for the `View` that contains `TextInput` field.
 
@@ -256,7 +255,7 @@ Flexbox is an algorithm that is designed to provide a consistent layout on diffe
 
 Back to our app. Right now, if you run it in a simulator, it will look like below.
 
-![](https://cdn-images-1.medium.com/max/800/1*yq7SnNuaSIdCyn7FehC6xg.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*yq7SnNuaSIdCyn7FehC6xg.png' />
 
 Let us add an icon to represent a button to add items to the todo list. Go to the terminal window right now and install `react-native-vector-icons`.
 
@@ -299,7 +298,7 @@ Next step is to add the `Icon` element inside `TouchableOpacity` next to the `Te
 
 Now if you go back to the simulator you will have the following screen.
 
-![](https://cdn-images-1.medium.com/max/800/1*Tt5Dqz4LZvxdFu8D5rd3wA.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*Tt5Dqz4LZvxdFu8D5rd3wA.png' />
 
 ### Adding Hooks to the App
 
@@ -486,7 +485,7 @@ return (
 
 The `ScrollView` is a component that renders all its child at once. A good case to use when you are not rendering a large amount of data or data coming from a third party API. Now, enter a new task (_like below_) and try adding it to the todo list.
 
-![](https://cdn-images-1.medium.com/max/800/1*yQ1-JAtWzgF8paZLnBbxxg.gif)
+<img src='https://cdn-images-1.medium.com/max/800/1*yQ1-JAtWzgF8paZLnBbxxg.gif' />
 
 ### Completing and Deleting an Item
 
@@ -598,7 +597,7 @@ const styles = StyleSheet.create({
 
 Now run the app and see it in action.
 
-![](https://cdn-images-1.medium.com/max/800/1*wKSEa-PSOHjNXNbMQ-5WvQ.gif)
+<img src='https://cdn-images-1.medium.com/max/800/1*wKSEa-PSOHjNXNbMQ-5WvQ.gif' />
 
 ### Conclusion
 
@@ -606,10 +605,8 @@ This completes our tutorial. I hope this tutorial helps you understand the basic
 
 You can extend this demo application by adding `AsyncStorage` or a cloud database provider and making this application real time. Also, do not forget to enhance the UI to your liking.
 
-_To read more about React Hooks check out the_ [**_official Overview page here_**](https://reactjs.org/docs/hooks-state.html)_._
+_To read more about React Hooks check out the_ [_official Overview page here_](https://reactjs.org/docs/hooks-state.html)_._
 
 _The complete code for this tutorial is available in the Github repository below._
 
-[**amandeepmittal/RNHooksTODOAPP**](https://github.com/amandeepmittal/RNHooksTODOAPP)
-
-[Originally published at Crowdbotics](https://medium.com/crowdbotics/build-a-react-native-app-with-react-hooks-5498e1d5fdf6)
+[amandeepmittal/RNHooksTODOAPP](https://github.com/amandeepmittal/RNHooksTODOAPP)

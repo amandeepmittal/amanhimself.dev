@@ -1,11 +1,9 @@
 ---
 title: 'How to add Dark mode functionality with React Hooks'
-date: 2020-01-09
-template: post
-slug: 'blog/dark-mode-with-react-hooks'
-thumbnail: '../thumbnails/react.png'
-tags:
-  - react
+date: '2020-01-09'
+slug: 'dark-mode-with-react-hooks'
+thumbnail: '/thumbnails/react.png'
+tag: 'react'
 canonicalUrl: 'https://blog.crowdbotics.com/how-to-add-dark-mode-functionality-with-react-hooks/'
 ---
 
@@ -98,7 +96,7 @@ export default App;
 
 Now, try to run the app using the command `yarn start` from a terminal window. Visit the URL `http://localhost:3000` in a browser window and you will get the following result.
 
-![ss1](https://blog.crowdbotics.com/content/images/2019/08/ss1-1.png)
+![ss1](https://crowdbotics.ghost.io/content/images/2019/08/ss1-1.png)
 
 Head back to the `App.css` file and create base styles for the dark theme.
 
@@ -137,7 +135,7 @@ function App() {
 
 Looking back at the browser window, you get the following result.
 
-![ss2](https://blog.crowdbotics.com/content/images/2019/08/ss2-1.png)
+![ss2](https://crowdbotics.ghost.io/content/images/2019/08/ss2-1.png)
 
 At this point, you have a very simplified version of the app, but it doesn't fulfill the purpose. It has to keep track of which theme the user selects and show the styles accordingly.
 
@@ -187,7 +185,7 @@ The `button` uses an `onClick` event to toggle the behavior of light and a dark 
 
 Here is the output in the browser window. Click the `Toggle Theme` button to change the theme and the heading in the content.
 
-![ss3](https://blog.crowdbotics.com/content/images/2019/08/ss3.gif)
+![ss3](https://crowdbotics.ghost.io/content/images/2019/08/ss3.gif)
 
 Here are the corresponding styles for the `button-container`.
 
@@ -216,11 +214,11 @@ Using an arrow function as the first argument, it is setting the value of `darkT
 
 Now, go back to the browser window and open dev tools. In the tab, `Application` look for the **Storage > Local Storage** as described in the image below. You will find a key `dark` that has the value of `false`.
 
-![ss4](https://blog.crowdbotics.com/content/images/2019/08/ss4.png)
+![ss4](https://crowdbotics.ghost.io/content/images/2019/08/ss4.png)
 
 On clicking the button `Toggle Theme` the value of the key `dark` in the local storage changes to `true`.
 
-![ss5](https://blog.crowdbotics.com/content/images/2019/08/ss5-1.png)
+![ss5](https://crowdbotics.ghost.io/content/images/2019/08/ss5-1.png)
 
 It works but on reloading the React app, switches back to the light theme. This is because the default value provided to the dark theme is always false. Let us change that.
 
@@ -241,7 +239,7 @@ function getDefaultTheme() {
 
 Notice in below demo of how the value of the dark is saved in the local storage even when the React app reloads.
 
-![ss6](https://blog.crowdbotics.com/content/images/2019/08/ss6-1.gif)
+![ss6](https://crowdbotics.ghost.io/content/images/2019/08/ss6-1.gif)
 
 ## Connecting Crowdbotics support to your Github Repo
 
@@ -259,7 +257,7 @@ git commit -m "update"
 
 Once all the files are committed, add this repository to your Github account. Crowdbotics app building platform now gives you an option to connect a Github repository directly using GitHub OAuth integration ( which means you need to have a Crowdbotics account or login into one using your Github account).
 
-![ss7](https://blog.crowdbotics.com/content/images/2019/08/ss7.png)
+![ss7](https://crowdbotics.ghost.io/content/images/2019/08/ss7.png)
 
 More and in-detail information about this process could be found [here](https://medium.com/crowdbotics/connect-your-github-repo-to-crowdbotics-36008d35e681).
 
@@ -268,6 +266,6 @@ More and in-detail information about this process could be found [here](https://
 _Congratulations!_ You have made to the end. I hope you learned something useful here. React Hooks is a powerful concept, and getting more commonly used as the time progress. Here are some resources related to this post:
 
 - [Hooks official docs](https://reactjs.org/docs/hooks-intro.html)
-- [Using Hooks in a React Native app](https://blog.crowdbotics.com/react-hooks-basics-building-a-react-native-app-with-react-hooks/)
+- [Using Hooks in a React Native app](https://crowdbotics.ghost.io/react-hooks-basics-building-a-react-native-app-with-react-hooks/)
 
-Originally published at [Crowdbotics.com](https://blog.crowdbotics.com/how-to-add-dark-mode-functionality-with-react-hooks/)
+Originally published at [Crowdbotics.com](https://crowdbotics.ghost.io/how-to-add-dark-mode-functionality-with-react-hooks/)

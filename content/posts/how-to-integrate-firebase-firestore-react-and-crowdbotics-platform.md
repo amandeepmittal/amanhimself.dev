@@ -1,13 +1,10 @@
 ---
 title: 'How to integrate Firebase and Firestore cloud database with a React application'
-date: 2019-06-20
-slug: 'blog/how-to-integrate-firebase-firestore-react-and-crowdbotics-platform'
-template: post
-thumbnail: '../thumbnails/firebase.png'
-tags:
-  - firebase
-  - react
-canonicalUrl: 'https://blog.crowdbotics.com/how-to-integrate-firebase-firestore-react-and-crowdbotics-platform/'
+date: '2019-06-20'
+slug: 'how-to-integrate-firebase-firestore-react-and-crowdbotics-platform'
+thumbnail: '/thumbnails/firebase.png'
+tag: 'firebase'
+canonicalUrl: 'https://blog.crowdbotics.com//how-to-integrate-firebase-firestore-react-and-crowdbotics-platform/'
 ---
 
 Firebase is a Backend as a Service (BaaS) that gives an advantage to web developers who use ReactJS for developing web applications. It is a platform that got acquired by Google and has a healthy and active community. Most users in this community are web and mobile developers. It includes services like mobile analytics, push notification, crash reporting and out of the box provides email as well as social authentication. As a web developer, by using Firebase you can start building an MVP (minimum viable product) by keeping the costs low and utilizing your time and effort in building the application quite faster than adopting a traditional approach by building your own custom backend solution.
@@ -33,15 +30,15 @@ In order to gain everything by reading this tutorial, make sure you have:
 
 To get started you need a Firebase account. To sign-up or log-in for one, visit [console.firebase.com](https://console.firebase.google.com). Once you are logged in, you will be welcomed by a screen below.
 
-![](https://blog.crowdbotics.com/content/images/2019/05/ss1-2.png)
+<img src='https://crowdbotics.ghost.io/content/images/2019/05/ss1-2.png' />
 
 Click on the button **Add Project**. This leads to another screen which contains a form to be fulfilled in order to create a new Firebase project.
 
-![](https://blog.crowdbotics.com/content/images/2019/05/ss2-1.png)
+<img src='https://crowdbotics.ghost.io/content/images/2019/05/ss2-1.png' />
 
 Fill the name of the project, check both the boxes for now and click on the button `Create project`. This will take some moments. Once the Firebase project is created, you will be welcomed by the home screen like below.
 
-![](https://blog.crowdbotics.com/content/images/2019/05/ss3-2.png)
+<img src='https://crowdbotics.ghost.io/content/images/2019/05/ss3-2.png' />
 
 Take a look at the side menu bar on the left. This is the main navigation in any Firebase project. That's it for now. It is that simple to create a new Firebase project via the official console.
 
@@ -67,7 +64,7 @@ To generate a new project run `create-react-app react-firebase-demo`. This will 
 
 To connect Firebase with a React app, you need API key and store in the client side app somewhere (_probably as environmental variables when deploying the app_). Click on the settings ⚙️ in the sidebar menu and go to **Project settings**. There you will see under **Your apps** section all the platforms available such as iOS, and web. Click on the **Web** as shown below.
 
-![](https://blog.crowdbotics.com/content/images/2019/05/ss4-1.png)
+<img src='https://crowdbotics.ghost.io/content/images/2019/05/ss4-1.png' />
 
 Next, copy only the `config` variable in a new file called `firebase.js` inside the `src` directory of the React project. Initially, the file might look like below snippet.
 
@@ -110,7 +107,7 @@ While importing, if you use just `firebase`, it will include the whole bunch of 
 
 There are two types of cloud-based database services provided by Firebase. One is called Cloud Firestore and the other one is a Real-time Database. This does not mean that Cloud Firestore cannot be used for real-time applications. Also, note that both of them are NoSQL databases.
 
-![](https://blog.crowdbotics.com/content/images/2019/05/ss5-2.png)
+<img src='https://crowdbotics.ghost.io/content/images/2019/05/ss5-2.png' />
 
 Real-time database stores data as one large JSON tree. Complex and scalable data is hard to organize in it. Firestore follows proper NoSQL terminology when it comes to storing data. It stores data in documents and each document can have sub-collections thus making it suitable for scalable and complex data scenarios.
 
@@ -143,19 +140,19 @@ Also, exporting the firestore instance will let you use it to query the database
 
 Now, go back to the Firebase console and go to the **Data** tab under Firestore.
 
-![](https://blog.crowdbotics.com/content/images/2019/05/ss6.png)
+<img src='https://crowdbotics.ghost.io/content/images/2019/05/ss6.png' />
 
 You will notice that there is currently no data inside the database. The **Add Collection** button represents the column that will contain the name of each collection that you might have in the database. Let us add some data using Firebase console interface such that we can query and display it in the next section. Click on the button **Add Collection** and enter the name of the collection as shown below.
 
-![](https://blog.crowdbotics.com/content/images/2019/05/ss7-1.png)
+<img src='https://crowdbotics.ghost.io/content/images/2019/05/ss7-1.png' />
 
 Click **Next** and enter two fields. One for the title of the book and the other one for the author's name. By default, the ID for each document will be auto-generated if the above option `Auto-id` is selected or remained untouched. Note that both of these fields represent one document as a whole.
 
-![](https://blog.crowdbotics.com/content/images/2019/05/ss8.png)
+<img src='https://crowdbotics.ghost.io/content/images/2019/05/ss8.png' />
 
 Notice that, we have not defined value for both the fields. Also, both the fields are of data type `string`. Of course, there are [other data types available and supported by Firestore](https://firebase.google.com/docs/firestore/manage-data/data-types). At last, click on the **Save** button to save the first, though the empty, entry in the Firestore database.
 
-![](https://blog.crowdbotics.com/content/images/2019/05/ss9.png)
+<img src='https://crowdbotics.ghost.io/content/images/2019/05/ss9.png' />
 
 _Did you notice how the ID for the document is generated on its own in the above image?_
 
@@ -163,7 +160,7 @@ _Did you notice how the ID for the document is generated on its own in the above
 
 In this section, let us wire the React app to have a simple form that can be further used to send data and store it in the cloud. Currently, the React app is bare-minimum or default that is generated by the scaffolding tool `create-react-app`. To run it in its current state, from the terminal window execute `npm start`. This will start the development server, and open a new browser window in your default browser at the URL: `http://localhost:3000/`. If you do not have any errors (_which you won't_) you will see the following screen.
 
-![](https://blog.crowdbotics.com/content/images/2019/05/ss10-1.png)
+<img src='https://crowdbotics.ghost.io/content/images/2019/05/ss10-1.png' />
 
 The code that is being rendered in the above screen comes from the only component we have so far in our React app, inside `App.js` file. Open this file and then define the following state. Right now, the `App` component is a functional component.
 
@@ -233,7 +230,7 @@ render() {
 
 This creates a not so awesome looking form but does serve the purpose of learning about Firestore.
 
-![](https://blog.crowdbotics.com/content/images/2019/05/ss11-1.png)
+<img src='https://crowdbotics.ghost.io/content/images/2019/05/ss11-1.png' />
 
 Both the input fields have a `value` attribute to specify which field is a target from the state object. Also, both the fields call a custom method `updateInput` to update the component's the state corresponding to the book's data from the input field. Let us right the business logic behind it before the render function in the above snippet.
 
@@ -269,14 +266,14 @@ In the above snippet, let us start by import an instance of the firestore from `
 
 Next, using the `firestore.collection("books")` points to the correct database collection where the data will be added on submitting the form. The collection name here is `books`. The `.add()` method submits the data from the updated to the firestore. Try adding one. Make sure `npm start` is running.
 
-![](https://blog.crowdbotics.com/content/images/2019/05/ss12.png)
+<img src='https://crowdbotics.ghost.io/content/images/2019/05/ss12.png' />
 
 After adding filling up the form as above, click on the submit button. After you add a book's title and its author, both the input field is set to the empty string, which is the default state and is a necessary step to add more data. Now, go back to the firebase console, to the books' collection and you will notice, as shown below, a new object with a random but unique ID and corresponding data in it.
 
-![](https://blog.crowdbotics.com/content/images/2019/05/ss13.png)
+<img src='https://crowdbotics.ghost.io/content/images/2019/05/ss13.png' />
 
 ## Conclusion
 
 You have now successfully integrated and added data to the Firebase store. The method discussed in this tutorial to access Firestore is not the only way, but yet a simple one. For more information or to dive deep, take a look at the Firestore documentation **[here](https://cloud.google.com/firestore/docs/)**.
 
-[Originally published at Crowdbotics](https://blog.crowdbotics.com/how-to-integrate-firebase-firestore-react-and-crowdbotics-platform/)
+[Originally published at Crowdbotics](https://crowdbotics.ghost.io/how-to-integrate-firebase-firestore-react-and-crowdbotics-platform/)

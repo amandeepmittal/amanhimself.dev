@@ -1,17 +1,15 @@
 ---
 title: 'How to Offer Multi-language Support in a React Native App'
-slug: 'blog/multi-language-support-in-react-native-with-react-i18next'
-date: 2021-08-16
-template: post
-thumbnail: '../thumbnails/react.png'
-tags:
-  - react-native
+slug: 'multi-language-support-in-react-native-with-react-i18next'
+date: '2021-08-16'
+thumbnail: '/thumbnails/react.png'
+tag: 'react-native'
 canonicalUrl: 'https://blog.crowdbotics.com/how-to-offer-multi-language-support-in-a-react-native-app/'
 ---
 
-![cover_image](https://blog.crowdbotics.com/content/images/2021/08/React-Native--1-.png)
+![cover_image](https://crowdbotics.ghost.io/content/images/2021/08/React-Native--1-.png)
 
-_[Originally Published at Crowdbotics.com](https://blog.crowdbotics.com/how-to-offer-multi-language-support-in-a-react-native-app/)_
+_[Originally Published at Crowdbotics.com](https://crowdbotics.ghost.io/how-to-offer-multi-language-support-in-a-react-native-app/)_
 
 Internationalization is an important feature to overcome the language barrier among people who use a particular software application. Not every app requires us to consider a global customer base. But if you have plans to include support for international users in your app, you’ll need internationalization in your React Native app.
 
@@ -27,7 +25,7 @@ To follow this tutorial, please make sure you are familiarized with JavaScript/E
 - Have access to one package manager such as npm or yarn or npx.
 - [react-native-cli](https://www.npmjs.com/package/react-native-cli) installed, or use npx.
 
-<!-- Depending on your skill level and experience, it may be beneficial to brush up on **[how to scaffold a new custom mobile app with Crowdbotics](https://blog.crowdbotics.com/how-to-create-a-custom-mobile-react-native-app-with-crowdbotics/)** prior to jumping into this tutorial. -->
+<!-- Depending on your skill level and experience, it may be beneficial to brush up on **[how to scaffold a new custom mobile app with Crowdbotics](https://crowdbotics.ghost.io/how-to-create-a-custom-mobile-react-native-app-with-crowdbotics/)** prior to jumping into this tutorial. -->
 
 ## Setting up a React Native app
 
@@ -155,7 +153,7 @@ export default function App() {
 
 At this point, if you run the `npx react-native run-ios` or `npx react-native run-android` command, you should see the following screen on a simulator/emulator or on a device:
 
-![cb1](https://blog.crowdbotics.com/content/images/2021/08/cb1.png)
+![cb1](https://crowdbotics.ghost.io/content/images/2021/08/cb1.png)
 
 ## Create translation files
 
@@ -167,7 +165,7 @@ Inside each language directory, create separate files that will split the transl
 
 Here is how the directory structure would like under `translations/`:
 
-![cb2](https://blog.crowdbotics.com/content/images/2021/08/cb2.png)
+![cb2](https://crowdbotics.ghost.io/content/images/2021/08/cb2.png)
 
 Inside `en/common.js` file, add the following snippet:
 
@@ -438,7 +436,7 @@ export default function SettingsScreen() {
 
 Here is the output in the simulator after this step:
 
-![cb3](https://blog.crowdbotics.com/content/images/2021/08/cb3.png)
+![cb3](https://crowdbotics.ghost.io/content/images/2021/08/cb3.png)
 
 ## Using the useTranslation hook
 
@@ -462,7 +460,7 @@ Next, modify the `Text` component contents used to define the title:
 
 Here is the output. The default or the initial language in our case is English. When the next language is selected, it translates the title on the Settings screen.
 
-![cb4](https://blog.crowdbotics.com/content/images/2021/08/cb4.gif)
+![cb4](https://crowdbotics.ghost.io/content/images/2021/08/cb4.gif)
 
 You can also modify the text strings according to the previously defined namespaces in the translation files.
 
@@ -521,7 +519,7 @@ export default function RootNavigator() {
 
 Here is the final output:
 
-![cb5](https://blog.crowdbotics.com/content/images/2021/08/cb5.gif)
+![cb5](https://crowdbotics.ghost.io/content/images/2021/08/cb5.gif)
 
 ## Conclusion
 

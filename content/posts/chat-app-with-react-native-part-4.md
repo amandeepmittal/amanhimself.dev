@@ -1,12 +1,9 @@
 ---
 title: 'Chat app with React Native (part 4) - A guide to create Chat UI Screens with react-native-gifted-chat'
-date: 2020-04-28
-template: post
-slug: 'blog/chat-app-with-react-native-part-4'
-thumbnail: '../thumbnails/react.png'
-tags:
-  - react-native
-  - firebase
+date: '2020-04-28'
+slug: 'chat-app-with-react-native-part-4'
+thumbnail: '/thumbnails/react.png'
+tag: 'react-native'
 canonicalUrl: 'https://heartbeat.fritz.ai/chat-app-with-react-native-part-4-create-chat-ui-screens-with-react-native-gifted-chat-7ef428a60d30'
 ---
 
@@ -229,11 +226,11 @@ const styles = StyleSheet.create({
 
 Go to the simulator window and you are going to get the following result.
 
-![ss1](https://miro.medium.com/max/684/1*us9hK50YmGKMfhLHR62RjQ.gif)
+<img src='https://miro.medium.com/max/684/1*us9hK50YmGKMfhLHR62RjQ.gif' />
 
 Great! The chat UI for each room is now accessible. Try to send a message, of course, it won't get saved since there is no database connected yet.
 
-![ss2](https://miro.medium.com/max/684/1*Z90LuoopOAmDJ6XEDNMouA.gif)
+<img src='https://miro.medium.com/max/684/1*Z90LuoopOAmDJ6XEDNMouA.gif' />
 
 Once the user exits the room and comes back later, only the mock message is displayed. Do notice that the system message `New room created` is displayed as well.
 
@@ -265,7 +262,7 @@ When using the `react-navigation` library for routing, each screen component is 
 
 Here is the output you are going to get on the device.
 
-![ss3](https://miro.medium.com/max/684/1*EU5dtN80Hfm9DkVcrptWxw.gif)
+<img src='https://miro.medium.com/max/684/1*EU5dtN80Hfm9DkVcrptWxw.gif' />
 
 ## Modifying the Chat screen UI: Changing the chat bubble
 
@@ -273,7 +270,7 @@ Gifted chat module gives an advantage for creating a Chat UI in a React Native a
 
 Right now the chat bubble appears as shown below.
 
-![ss4](https://miro.medium.com/max/222/1*HDpbiswqzzq-7gWbeaUG3Q.png)
+<img src='https://miro.medium.com/max/222/1*HDpbiswqzzq-7gWbeaUG3Q.png' />
 
 Let us change the background color of this bubble to reflect the same color as in the header bar (which is used at many instances in the app). This is going to be done in the following steps:
 
@@ -324,7 +321,7 @@ export default function RoomScreen() {
 
 With that done, here is the output you are going to get.
 
-![ss5](https://miro.medium.com/max/177/1*k-uFSzdbiXLtwEyg6CCYGw.png)
+<img src='https://miro.medium.com/max/177/1*k-uFSzdbiXLtwEyg6CCYGw.png' />
 
 ## Adding other modifications to Chat UI
 
@@ -342,11 +339,11 @@ You can modify the placeholder text using the prop `placeholder` as shown below.
 
 Previously the placeholder text says:
 
-![ss6](https://miro.medium.com/max/636/1*2lsV60N_T2aPPFeRTmEYcA.png)
+<img src='https://miro.medium.com/max/636/1*2lsV60N_T2aPPFeRTmEYcA.png' />
 
 After adding the `placeholder` prop, it looks like:
 
-![ss7](https://miro.medium.com/max/654/1*JaJ8K1w8W2pbud6i9Tj7qw.png)
+<img src='https://miro.medium.com/max/654/1*JaJ8K1w8W2pbud6i9Tj7qw.png' />
 
 You can add the prop `showUserAvatar` to always display the user avatar of the current user.
 
@@ -361,7 +358,7 @@ You can add the prop `showUserAvatar` to always display the user avatar of the c
 />
 ```
 
-![ss8](https://miro.medium.com/max/744/1*ZmQvR95wG7tAGdPtbdtNtg.png)
+<img src='https://miro.medium.com/max/744/1*ZmQvR95wG7tAGdPtbdtNtg.png' />
 
 Right now, the send button only appears when the user is typing a message. Add the prop `alwaysShowSend` to always show the send button to the current user.
 
@@ -377,7 +374,7 @@ Right now, the send button only appears when the user is typing a message. Add t
 />
 ```
 
-![ss9](https://miro.medium.com/max/748/1*390BD7LTZ5G2Ew_h8BYQrw.png)
+<img src='https://miro.medium.com/max/748/1*390BD7LTZ5G2Ew_h8BYQrw.png' />
 
 ## Add a custom send button
 
@@ -437,13 +434,13 @@ const styles = StyleSheet.create({
 
 Here is the output you are going to get after this step.
 
-![ss10](https://miro.medium.com/max/742/1*qol2YSd4FJH13CP_NWep1g.png)
+<img src='https://miro.medium.com/max/742/1*qol2YSd4FJH13CP_NWep1g.png' />
 
 ## Add a scroll to the bottom button
 
 Right now, in the Chat UI, there is no way for the current user to scroll to the latest message. They have to manually scroll down to see the latest message in the thread. Here is a demo of the problem.
 
-![ss11](https://miro.medium.com/max/684/1*XSF9AJNiqT08s1mBiJxvDQ.gif)
+<img src='https://miro.medium.com/max/684/1*XSF9AJNiqT08s1mBiJxvDQ.gif' />
 
 This can be solved by adding prop `scrollToBottom`.
 
@@ -463,7 +460,7 @@ This can be solved by adding prop `scrollToBottom`.
 
 Take a look at the down caret sign at the right side of the app shown below.
 
-![ss12](https://miro.medium.com/max/700/1*5wo3Pu65wxWdATlsTxqs3A.png)
+<img src='https://miro.medium.com/max/700/1*5wo3Pu65wxWdATlsTxqs3A.png' />
 
 This is not pleasing at all with the current background of the screen. Let us modify this button with a custom background. This can be done in three simple steps.
 
@@ -513,7 +510,7 @@ const styles = StyleSheet.create({
 
 Here is the output.
 
-![ss13](https://miro.medium.com/max/684/1*dDTq0Wpr_aFMyN_RWttPIg.gif)
+<img src='https://miro.medium.com/max/684/1*dDTq0Wpr_aFMyN_RWttPIg.gif' />
 
 ## Add a loading spinner when the room screen initializes
 
@@ -571,7 +568,7 @@ const styles = StyleSheet.create({
 
 On the current screen you might see a loading indicator when you refresh the app for the first time or when the screen initializes for the first time.
 
-![ss14](https://miro.medium.com/max/684/1*Ztwt_qL30dreUv_JMvhhwg.gif)
+<img src='https://miro.medium.com/max/684/1*Ztwt_qL30dreUv_JMvhhwg.gif' />
 
 ## What's Next?
 

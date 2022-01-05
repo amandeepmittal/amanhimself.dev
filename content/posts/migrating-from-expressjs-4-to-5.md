@@ -1,19 +1,17 @@
 ---
-date: 2017-01-11
+date: '2017-01-11'
 title: 'Migrating from Expressjs 4 to 5'
-template: post
-thumbnail: '../thumbnails/node.png'
-slug: 'blog/migrating-from-expressjs-4-to-5'
-tags:
-  - nodejs
+thumbnail: '/thumbnails/node.png'
+slug: 'migrating-from-expressjs-4-to-5'
+tag: ' nodejs'
 canonicalUrl: 'https://hackernoon.com/migrating-from-expressjs-4-to-5-156dcd80eb11'
 ---
 
 ExpressJS 5.0 is in alpha release stage but I believe we’ll be adding it as a dependency in our `package.json` files in matter of no time. This article gives some tips regarding the way we are writing code using this framework and how we should adapt the new changes even if we are using ExpressJS _version 4.0_.
 
-I’ll start with most common thing such as `response` .
+I’ll start with most common thing such as `response`.
 
-Express 5 no longer supports the signature `res.send` , instead we should adapt using this method in this form:
+Express 5 no longer supports the signature `res.send`, instead we should adapt using this method in this form:
 
 `res.status(statusCode).send();`
 
@@ -28,7 +26,7 @@ res.json()-- > res.status().json();
 res.jsonp()-- > res.status.jsonp();
 ```
 
-Another notable method that is going to be deprecated in next version of ExpressJS is `res.sendfile()` . Instead, we must adapt its new form, the camelCase one: `res.sendFile()` which is already been supported by the ExpressJS versions later than `4.8.x` . It comes with optional parameters that you can check them [**here**](http://expressjs.com/en/4x/api.html#res.sendFile)**.**
+Another notable method that is going to be deprecated in next version of ExpressJS is `res.sendfile()`. Instead, we must adapt its new form, the camelCase one: `res.sendFile()` which is already been supported by the ExpressJS versions later than `4.8.x`. It comes with optional parameters that you can check them [**here**](http://expressjs.com/en/4x/api.html#res.sendFile)**.**
 
 Whether you are planning to use the alpha release of Express 5.0 or still going on with the latest versions of Express 4.0, I would suggest to start adapting these methods immediately.
 

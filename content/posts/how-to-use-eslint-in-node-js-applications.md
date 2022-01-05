@@ -1,16 +1,13 @@
 ---
-date: 2017-04-28
 title: 'How to use ESLint in Node.js Applications'
-template: post
-thumbnail: '../thumbnails/node.png'
+date: '2017-04-28'
+thumbnail: '/thumbnails/node.png'
 slug: 'blog/how-to-use-eslint-in-node-js-applications'
-tags:
-  - nodejs
-  - tools
+tag: 'nodejs'
 canonicalUrl: 'https://medium.com/hackernoon/how-to-use-eslint-in-node-js-applications-cc4b2298ce55'
 ---
 
-![cover_image](https://miro.medium.com/max/1400/0*Ktrwh00dFMh7e_ma.png)
+> [Originally Published at Hackernoon.com](https://medium.com/hackernoon/how-to-use-eslint-in-node-js-applications-cc4b2298ce55)
 
 ESLint is an open source JavaScript linting utility that help you overcome developer errors as JavaScript is loosely-typed language. There are quite a few options such as JSHint and JSCS in Javascript community for code linting and this post doesn’t suggest that you cannot use them.
 
@@ -70,7 +67,7 @@ Other case, if you have installed it locally to a project, you will need to type
 
 In both cases, you will be prompted with set of basic questions to generate `.eslintrc` file.
 
-![](https://cdn-images-1.medium.com/max/800/0*RMPR1vjmB6jsHtHw.png)
+<img src='https://cdn-images-1.medium.com/max/800/0*RMPR1vjmB6jsHtHw.png' />
 
 An example of file generated after above prompt:
 
@@ -136,5 +133,3 @@ To add a plugin to `.eslintrc`:
 Some plugins for popular libraries: [Angular](https://www.npmjs.com/package/eslint-plugin-angular) | [React](https://www.npmjs.com/package/eslint-plugin-react)
 
 Another plugin, I find very useful is [one variable per var](https://www.npmjs.com/package/eslint-plugin-one-variable-per-var) just to maintain code consistency over a large/open-source project.
-
-[Originally Published at Hackernoon.com](https://medium.com/hackernoon/how-to-use-eslint-in-node-js-applications-cc4b2298ce55)

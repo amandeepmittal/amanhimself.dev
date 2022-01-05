@@ -1,22 +1,17 @@
 ---
 title: 'How to build a xylophone app with Audio API, React Native, and Expo'
-date: 2019-07-22
-template: post
-slug: 'blog/how-to-use-emotion-js-with-react-native'
-thumbnail: '../thumbnails/expo.png'
-tags:
-  - expo
-  - react-native
+date: '2019-07-22'
+slug: 'how-to-use-emotion-js-with-react-native'
+thumbnail: '/thumbnails/expo.png'
+tag: 'expo'
 canonicalUrl: 'https://heartbeat.fritz.ai/how-to-build-a-xylophone-app-with-audio-api-react-native-and-expo-7d6754a0603c'
 ---
-
-![cover](https://i.imgur.com/XYwv5Yp.png)
 
 React Native when used with Expo as a toolchain eases out the common pain to manage ios and android applications. After saying that, I realized that there is a delight to use this ever-growing open source mobile application framework. Expo has gained a lot of credibility as a framework to provide collective solutions to build React Native applications by lowering the time and effort of the developer using it. They are continuing to enhance it from time to time and keeping up with the latest changes in React Native community. That said, Expo SDK33 is a blast.
 
 That being said, let us dive into one of the Expo's API. In this tutorial, you are going to build an application using Expo's Audio API. You are going to develop the following app (_a toy xylophone app_) step-by-step.
 
-![ss2](https://miro.medium.com/max/350/1*YE5sb3gX_ValSM48QGT1eQ.png)
+<img src='https://miro.medium.com/max/350/1*YE5sb3gX_ValSM48QGT1eQ.png' />
 
 **Table of Contents**
 
@@ -144,7 +139,7 @@ const styles = StyleSheet.create({
 
 To see the current state of the application in action, go back to the terminal window and run the command `yarn start` or `expo start` if you do not have yarn installed. In the simulator screen, you are going to be welcomed, as shown in the below image.
 
-![ss1](https://miro.medium.com/max/350/1*jzwOoqsEJkTUSMMEKCwOPg.png)
+<img src='https://miro.medium.com/max/350/1*jzwOoqsEJkTUSMMEKCwOPg.png' />
 
 ## Adding the Audio functionality
 
@@ -326,7 +321,7 @@ const styles = StyleSheet.create({
 
 Now run the application in the simulator, and you will get the following screen.
 
-![ss2](https://miro.medium.com/max/350/1*YE5sb3gX_ValSM48QGT1eQ.png)
+<img src='https://miro.medium.com/max/350/1*YE5sb3gX_ValSM48QGT1eQ.png' />
 
 ## Conlusion
 

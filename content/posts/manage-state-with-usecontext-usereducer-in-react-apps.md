@@ -1,11 +1,9 @@
 ---
 title: 'How to manage state in React apps with useReducer and useContext hooks'
-date: 2020-11-06
-slug: 'blog/manage-state-with-usecontext-usereducer-in-react-apps'
-template: post
-thumbnail: '../thumbnails/react.png'
-tags:
-  - react
+date: '2020-11-06'
+slug: 'manage-state-with-usecontext-usereducer-in-react-apps'
+thumbnail: '/thumbnails/react.png'
+tag: 'react'
 canonicalUrl: 'https://amanhimself.dev/blog/manage-state-with-usecontext-usereducer-in-react-apps/'
 ---
 

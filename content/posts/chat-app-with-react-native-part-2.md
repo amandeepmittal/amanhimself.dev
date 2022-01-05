@@ -1,12 +1,9 @@
 ---
 title: 'Chat app with React Native (part 2) - Firebase Email Authentication with react-native-firebase'
-date: 2020-04-16
-template: post
-slug: 'blog/chat-app-with-react-native-part-2'
-thumbnail: '../thumbnails/react.png'
-tags:
-  - react-native
-  - firebase
+date: '2020-04-16'
+slug: 'chat-app-with-react-native-part-2'
+thumbnail: '/thumbnails/react.png'
+tag: 'react-native'
 canonicalUrl: 'https://heartbeat.fritz.ai/chat-app-with-react-native-part-2-firebase-user-authentication-with-react-native-firebase-533352870497'
 ---
 
@@ -22,21 +19,21 @@ To access the Firebase credentials for each mobile OS platform and configure the
 
 Create a new project as shown below.
 
-![ss4](https://miro.medium.com/max/1400/1*wYi5SITEofv4nuIAPnQglg.png)
+<img src='https://miro.medium.com/max/1400/1*wYi5SITEofv4nuIAPnQglg.png' />
 
 Complete the details of your Firebase project:
 
-![ss5](https://miro.medium.com/max/1090/1*UDDFg0ZBF7w1jwRRIqxcwA.png)
+<img src='https://miro.medium.com/max/1090/1*UDDFg0ZBF7w1jwRRIqxcwA.png' />
 
 Click the button **Create project** and you are going to be redirected to the dashboard screen. That's it. You have successfully created a new Firebase project.
 
 Now make sure that the **Email** **Sign-in method** is enabled. From the Firebase console and navigate to **Authentication** section from the side menu.
 
-![ss6](https://miro.medium.com/max/257/1*mGwJz9i3SAzboUgZhs21Ng.png)
+<img src='https://miro.medium.com/max/257/1*mGwJz9i3SAzboUgZhs21Ng.png' />
 
 Go to the second tab **Sign-in method** and make sure to enable the **Email** sign-in provider.
 
-![ss7](https://miro.medium.com/max/1400/1*lYvrmJXPQBRrs8Xpvqn05w.png)
+<img src='https://miro.medium.com/max/1400/1*lYvrmJXPQBRrs8Xpvqn05w.png' />
 
 ## Add Firebase SDK to React Native app
 
@@ -56,23 +53,23 @@ Firebase provides a file called `GoogleService-Info.plist` that contains all the
 
 To get these credentials, go to back to the [Firebase console](http://console.firebase.google.com/) in a browser window. From the dashboard screen of your Firebase project, open **Project settings** from the side menu.
 
-![ss8](https://miro.medium.com/max/241/1*Vh9zbrjZEGjKJl0XDCfFQQ.png)
+<img src='https://miro.medium.com/max/241/1*Vh9zbrjZEGjKJl0XDCfFQQ.png' />
 
 Go to **Your apps** section and click on the icon iOS to select the platform.
 
-![ss9](https://miro.medium.com/max/1396/1*nYRgVjO8DFSOdOJhPU-1DA.png)
+<img src='https://miro.medium.com/max/1396/1*nYRgVjO8DFSOdOJhPU-1DA.png' />
 
 Enter the application details and click on **Register app**.
 
-![ss10](https://miro.medium.com/max/1270/1*Z1v4E3vhPGXmwfwrFtaxsA.png)
+<img src='https://miro.medium.com/max/1270/1*Z1v4E3vhPGXmwfwrFtaxsA.png' />
 
 Then download the `GoogleService-Info.plist` file as shown below.
 
-![ss11](https://miro.medium.com/max/1400/1*mKKqIHaDcv2UQsG-3idn7Q.png)
+<img src='https://miro.medium.com/max/1400/1*mKKqIHaDcv2UQsG-3idn7Q.png' />
 
 Open Xcode, then open the file `/ios/ChatApp.xcodeproj` file. Right-click on the project name and **Add Files** option, then select the file to add to this project.
 
-![ss12](https://miro.medium.com/max/273/1*800RInfgPmKJXt_k58xQ4w.png)
+<img src='https://miro.medium.com/max/273/1*800RInfgPmKJXt_k58xQ4w.png' />
 
 Then open `ios/ChatApp/AppDelegate.m` and add the following header.
 
@@ -414,11 +411,11 @@ const styles = StyleSheet.create({
 
 Go to the simulator, and you are going to get similar results as shown below. Perform these steps. Try creating a new user from the sign-up screen, and you are going to get their `uid` on the home screen.
 
-![ss13](https://miro.medium.com/max/684/1*2HWlA1jyqJzAIhxgHDB0sg.gif)
+<img src='https://miro.medium.com/max/684/1*2HWlA1jyqJzAIhxgHDB0sg.gif' />
 
 You can verify the `uid` of the current user by going to the dashboard screen from Firebase console.
 
-![ss14](https://miro.medium.com/max/1400/1*NVUhPQOP2YjgYF_qmCdXBQ.png)
+<img src='https://miro.medium.com/max/1400/1*NVUhPQOP2YjgYF_qmCdXBQ.png' />
 
 ## Conclusion
 
@@ -441,12 +438,5 @@ You can find the complete source code for this project at [this Github repo](htt
 - Reactjs [Context API](https://reactjs.org/docs/context.html#reactcreatecontext)
 - [Firebase Authentication reference](https://invertase.io/oss/react-native-firebase/v6/auth/quick-start) from `react-native-firebase`
 - Getting started with stack navigator using `react-navigation` v5 [here](https://heartbeat.fritz.ai/getting-started-with-stack-navigator-using-react-navigation-5-in-react-native-and-expo-apps-4c516becaee1)
-
----
-
-💙 To learn more about React Native, check out these resources:
-
-- [Official documentation](http://reactnative.dev/)
-- [My personal newsletter](https://www.getrevue.co/profile/amanhimself)
 
 Originally published at [Heartbeat.Fritz.Ai](https://heartbeat.fritz.ai/chat-app-with-react-native-part-2-firebase-user-authentication-with-react-native-firebase-533352870497).

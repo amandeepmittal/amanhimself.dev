@@ -1,16 +1,15 @@
 ---
 title: 'How to use shared element transitions in React Native'
-slug: 'blog/shared-element-transitions'
-date: 2021-01-19
-template: post
-thumbnail: '../thumbnails/expo.png'
-tags:
-  - expo
-  - react-native
+slug: 'shared-element-transitions'
+date: '2021-01-19'
+thumbnail: '/thumbnails/expo.png'
+tag: 'expo'
 canonicalUrl: 'https://blog.logrocket.com/how-to-use-shared-element-transition-with-react-navigation-v5/'
 ---
 
 ![cover_image](https://blog.logrocket.com/wp-content/uploads/2021/01/reactnavigationv5.png)
+
+> Originally Published at [Logrocket](https://blog.logrocket.com/how-to-use-shared-element-transition-with-react-navigation-v5/)
 
 Transitions in mobile applications provide design continuity. This continuity is provided by connecting common elements from one view to the next while navigating in the app. This tutorial is going to provide a guide for you who is a React Native developer and is able to create such interfaces and make sure they are tangible.
 
@@ -645,5 +644,3 @@ Here is the final output:
 I hope you had fun reading this tutorial. Sharing elements in between screens in React Native using the React Navigation Shared Element module makes both the process of development and end-user experience smooth. I would recommend you to check out the [official documentation here](https://github.com/IjzerenHein/react-navigation-shared-element) for more information.
 
 Source code is available at this [GitHub repo.](https://github.com/amandeepmittal/react-native-examples/tree/master/shared-element-transitions)
-
-_Originally Published at [Logrocket](https://blog.logrocket.com/how-to-use-shared-element-transition-with-react-navigation-v5/)_

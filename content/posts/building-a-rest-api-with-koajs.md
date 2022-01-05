@@ -1,15 +1,15 @@
 ---
 title: 'Building a REST API with Koajs'
-date: 2018-10-16
-template: post
-slug: 'blog/building-a-rest-api-with-koajs/'
-thumbnail: '../thumbnails/node.png'
-tags:
-  - nodejs
+date: '2018-10-16'
+slug: 'building-a-rest-api-with-koajs/'
+thumbnail: '/thumbnails/node.png'
+tag: 'nodejs'
 canonicalUrl: 'https://medium.com/crowdbotics/building-a-rest-api-with-koajs-417c276929e2'
 ---
 
 ![cover](https://i.imgur.com/ohg3d3s.png)
+
+> [Originally published at Crowdbotics](https://medium.com/crowdbotics/building-a-rest-api-with-koajs-417c276929e2)
 
 There are quite a few [Node.js](http://crowdbotics.com/build/node-js?utm_source=medium&utm_campaign=nodeh&utm_medium=node&utm_content=koa-rest-api) frameworks available for web development to build a back-end server for a web or a mobile application. The most popular framework is ExpressJS, which has been used widely in the industry for a long time.
 
@@ -97,13 +97,13 @@ If you are not prompted with an error, that means the server ran successfully.
 
 Right now, we are not getting anything exciting from the terminal. If you go to `http://localhost:3000` in your browser window, you should see a `Hello World` message greeting you!
 
-![](https://cdn-images-1.medium.com/max/800/1*vmF-dRrg83Uq4Zt6BbkAEg.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*vmF-dRrg83Uq4Zt6BbkAEg.png' />
 
 To understand more about what is happening, let’s import the Koa library into our `app.js` file.
 
 Next, we define an instance called `app` that will access all the methods that are included in Koa's API such as `use()` and `listen()`. `app.use()` is how th middleware function is defined. We are using this middleware function as a route. The `app.listen()` is how the server knows to run on a port number specified such as `3000`.
 
-### Wait, what is `ctx`?
+### Wait, what is ctx?
 
 Another important feature that we use in our bare minimum example is `ctx`. I do hope you noticed it there.
 
@@ -253,7 +253,7 @@ app.listen(3000);
 
 Next step is to run the command: `npm run dev` and visit the url `http://localhost:3000/books` to see the following result.
 
-![](https://cdn-images-1.medium.com/max/800/1*d-GFucqnhOEIeORSytPH4w.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*d-GFucqnhOEIeORSytPH4w.png' />
 
 > _Congratulations! 🎉 You just build your first route using Koa._
 
@@ -280,11 +280,11 @@ router.get('/:id', (ctx, next) => {
 
 Routing parameters are named segments that are used capture the values specified in the URL. In our case, such as`:id`. Above, we define a routing middleware function that can handle incoming requests from URLs such as `http:localhost:3000/books/103`. Enter this URL in your browser window and you will get the following result.
 
-![](https://cdn-images-1.medium.com/max/800/1*-F6g2j_QsvwBjXUdrVsZhw.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*-F6g2j_QsvwBjXUdrVsZhw.png' />
 
 In case of when `id` does not exist or is invalid, you have to send an error message with an HTTP status of `404`.
 
-![](https://cdn-images-1.medium.com/max/800/1*BKDmJ80xYVoOsVQTNaMiKw.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*BKDmJ80xYVoOsVQTNaMiKw.png' />
 
 ### Handling a POST request
 
@@ -319,7 +319,7 @@ The `/new` route is used for creating a new book add it into our `books` array. 
 
 If everything is fine, this routing middleware accepts the data and returns success message with correct HTTP status of code for creating a new record. To run this URL, I am using `curl` command from my terminal but you can use any REST client such as Postman or Insomnia.
 
-![](https://cdn-images-1.medium.com/max/800/1*qbXL75_xqOrtgE0UTXEPPw.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*qbXL75_xqOrtgE0UTXEPPw.png' />
 
 For our all routes to be more descriptive and follow REST API pattern, I have re-written every `ctx.body` object from each routing middleware function. Here is how the complete routing file looks so far.
 
@@ -399,10 +399,8 @@ router.post('/new', (ctx, next) => {
 module.exports = router;
 ```
 
-![](https://cdn-images-1.medium.com/max/800/1*R2_CY-WOiEM2pqE-bLQbRg.png)
+<img src='https://cdn-images-1.medium.com/max/800/1*R2_CY-WOiEM2pqE-bLQbRg.png' />
 
 This completes the basics of building a REST API using Koa as a Node.js framework. It’s a pretty minimal framework with all the necessary ways to tackle incoming requests and send the response back from the server. Koa also supports ready-made middleware functions to make use for logging, handling errors, testing, compression, and security.
 
 > You can find the complete code used in this tutorial at [this Github repository](https://github.com/amandeepmittal/koa-rest-api-tut)
-
-[Originally published at Crowdbotics](https://medium.com/crowdbotics/building-a-rest-api-with-koajs-417c276929e2)

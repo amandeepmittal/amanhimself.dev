@@ -1,15 +1,15 @@
 ---
 title: 'How to Create a Chatbot with Dialogflow, NodeJS, and Webhooks'
-template: post
-date: 2019-07-19
-slug: 'blog/build-chatbot-dialogflow-nodejs-webhooks'
-thumbnail: '../thumbnails/node.png'
-tags:
-  - nodejs
-canonicalUrl: 'https://blog.crowdbotics.com/build-chatbot-dialogflow-nodejs-webhooks/'
+date: '2019-07-19'
+slug: 'build-chatbot-dialogflow-nodejs-webhooks'
+thumbnail: '/thumbnails/node.png'
+tag: 'nodejs'
+canonicalUrl: 'https://crowdbotics.ghost.io/build-chatbot-dialogflow-nodejs-webhooks/'
 ---
 
 ![cover_image](https://i.imgur.com/cOAePoA.jpg)
+
+> [Originally published at Crowdbotics](https://crowdbotics.ghost.io/build-chatbot-dialogflow-nodejs-webhooks/)
 
 Chatbots are the hottest things in the modern digital world. Every day, organizations and individuals are powering their digital products such as websites or messenger apps to provide conversational experiences for their users. Each conversational experience depends on the implementation of the chatbot to either be a good or poor experience for the user. The modern day world is living in the technology wave of Artificial Intelligence, and chatbots are a massive part of it.
 
@@ -87,7 +87,7 @@ API_KEY=XXXX
 
 The Xs are going to be the value of the API key that you have got from registering an account at OMDB API. Replace the value of these Xs with that key. Now, go to the terminal window and execute the command `node index.js`. This will prompt with the message you have defined in the above snippet. Visit the URL `http://localhost:3000` from the browser window, and you will get the following result.
 
-![ss3](https://blog.crowdbotics.com/content/images/2019/07/ss3-1.png)
+<img src='https://crowdbotics.ghost.io/content/images/2019/07/ss3-1.png' />
 
 ## Fetching the Movie
 
@@ -187,7 +187,7 @@ From this considerable object, you are only using some amount of information des
 
 Open your favorite rest clients such as Postman or Insomnia. Enter the URL `http://localhost:3000/getmovie` and even though it is POST request, and you will have to enter the `parameters` as shown below. Let us test out if the API is returning the details of the movie name entered or not. In the below image, you can verify that the information related to the data is being replaced.
 
-![ss4](https://blog.crowdbotics.com/content/images/2019/07/SS4.png)
+<img src='https://crowdbotics.ghost.io/content/images/2019/07/SS4.png' />
 
 ## Deploy the Webhook on Heroku
 
@@ -204,15 +204,15 @@ Before you proceed with any of the steps below, in the `package.json` file, make
 
 Once you log in, you will be welcomed by the screen known as Dashboard. Create on the button **New** on the top right corner and then create choose **Create new app**.
 
-![ss5](https://blog.crowdbotics.com/content/images/2019/07/ss5-1.png)
+<img src='https://crowdbotics.ghost.io/content/images/2019/07/ss5-1.png' />
 
 Fill in the name of the application. Once you have entered the details, click the button **Create app**.
 
-![ss6](https://blog.crowdbotics.com/content/images/2019/07/ss6-1.png)
+<img src='https://crowdbotics.ghost.io/content/images/2019/07/ss6-1.png' />
 
 Now, you will be welcomed by the following page that has instructions to deploy your current Node app. If you are using Github, go ahead and choose the **Connect to Github** deployment method. I am going to use [heroku-cli](https://devcenter.heroku.com/articles/heroku-cli).
 
-![ss7](https://blog.crowdbotics.com/content/images/2019/07/ss7-1.png)
+<img src='https://crowdbotics.ghost.io/content/images/2019/07/ss7-1.png' />
 
 To proceed with the following set of instructions, also as mentioned in the above screen under the section **Deploy using Heroku Git**. What this means is that the instance of your complete Node application is going to be deployed from the local development environment where the application is currently located. Once you have installed the Heroku CLI, enter the following command to proceed. Also, if you are using the Crowdbotics platform to generate the current demo app or have initialized the directory, you are working using the command `git init`, ignore the section **Clone the repository** in the above image.
 
@@ -240,21 +240,21 @@ You will get the URL `https://getmoviehook.herokuapp.com/` from the above deploy
 
 You will get successful results.
 
-![ss8](https://blog.crowdbotics.com/content/images/2019/07/ss8-1.png)
+<img src='https://crowdbotics.ghost.io/content/images/2019/07/ss8-1.png' />
 
 ## Setup Dialogflow
 
 Dialogflow is a Natural Language Processing (NLP) service from Google. It has many integrations, SDKs for programming languages and some prebuilt agents. It works very straightforward with Google Assistant. Visit the [Dialogflow website](https://dialogflow.com/) and create a new account or log-in with your existing Google ID.
 
-![ss9](https://blog.crowdbotics.com/content/images/2019/07/ss9-2.png)
+<img src='https://crowdbotics.ghost.io/content/images/2019/07/ss9-2.png' />
 
 Once you are logged in, you will be welcomed by a screen that consists of different **Agents**.
 
-![ss10](https://blog.crowdbotics.com/content/images/2019/07/ss10.png)
+<img src='https://crowdbotics.ghost.io/content/images/2019/07/ss10.png' />
 
 Click on the Create Agent button to make one for yourself. Name it something similar to `OMDBbot`. Fill in the details like below.
 
-![ss11](https://blog.crowdbotics.com/content/images/2019/07/ss11.png)
+<img src='https://crowdbotics.ghost.io/content/images/2019/07/ss11.png' />
 
 After filling out the details, click on the button **Create**.
 
@@ -266,7 +266,7 @@ Generally, for small applications, you will have one agent. In Dialogflow, the b
 
 These agents understand the varied nuances of human language. They can translate that to standard and structured meaning that chatbot applications and services can understand. Each agent contains different **intents**. The intent is the action taken based on the user's input. It can be the response sent back to the user in a chatbot application. It can contain different types of responses or actions. The next step in the process is to create your first intent.
 
-![ss12](https://blog.crowdbotics.com/content/images/2019/07/ss12.png)
+<img src='https://crowdbotics.ghost.io/content/images/2019/07/ss12.png' />
 
 Click on the button **Create intent** and fill in the name `getmovie`. You can name your intent anything.
 
@@ -276,7 +276,7 @@ Intent can be a simple text response that is displayed back to the user or a set
 
 Let us create new training phrases in this section. To create a new phrase, go to the section **Training phrases** and a unique user expression as shows below.
 
-![ss13](https://blog.crowdbotics.com/content/images/2019/07/ss13.png)
+<img src='https://crowdbotics.ghost.io/content/images/2019/07/ss13.png' />
 
 For the movie chatbot, each user expression is going to contain the name of the movie. The Dialogflow agent is not smart enough to extract the name of the movie out of the user's expression. You have to provide an entity that can highlight the name of the movie every time a new training phrase is introduced to the bot.
 
@@ -288,32 +288,30 @@ req.body.queryResult.parameters.movie;
 
 Once you have saved your entity, go back to the intent.
 
-![ss14](https://blog.crowdbotics.com/content/images/2019/07/ss14.png)
+<img src='https://crowdbotics.ghost.io/content/images/2019/07/ss14.png' />
 
 ## Enable the Webhook
 
 To test out that everything is working, let us use the default response provided by the Dialogflow intent. As shown below, on the right-hand side of the screen, you can test out by entering a user expression. The movie chatbot will return the default response.
 
-![ss15](https://blog.crowdbotics.com/content/images/2019/07/ss15.png)
+<img src='https://crowdbotics.ghost.io/content/images/2019/07/ss15.png' />
 
 This is okay and verifies that the intent has been created successfully. Now, to use the real-time data from the OMDB API, you are going to enable the webhook. From the sidebar menu, go to the **Fulfillment** section. You will be welcomed by the following screen.
 
-![ss16](https://blog.crowdbotics.com/content/images/2019/07/ss16.png)
+<img src='https://crowdbotics.ghost.io/content/images/2019/07/ss16.png' />
 
 Enable the **Webhook** and then enter the **URL** of the deployed endpoint.
 
-![ss17](https://blog.crowdbotics.com/content/images/2019/07/ss17.png)
+<img src='https://crowdbotics.ghost.io/content/images/2019/07/ss17.png' />
 
 Once that is done, go back to the **Intents** section, and scroll down to the bottom of the web page. There is a **Fulfillment** section. Toggle the button to **Enable webhook call for this intent**.
 
-![ss18](https://blog.crowdbotics.com/content/images/2019/07/ss18.png)
+<img src='https://crowdbotics.ghost.io/content/images/2019/07/ss18.png' />
 
 Once that is done, go to the right side of the screen to test it out. Fill in the user expression similar to a training phrase you have provided earlier. The agent will get a response back with the details of the movie.
 
-![ss19](https://blog.crowdbotics.com/content/images/2019/07/ss19.png)
+<img src='https://crowdbotics.ghost.io/content/images/2019/07/ss19.png' />
 
 ## Conclusion
 
 You have successfully created, deployed, and tested a Nodejs Webhook for Dialogflow chatbot application. By the end of this tutorial, we are sure you have learned how easy it is to create a new chatbot agent using Dialogflow. The possibilities of using a powerful API such as Dialogflow are endless. In no time, you can build up your own chatbot interface for front-end clients using Reactjs, Angular, and even mobile cross-platform framework like React Native. We hope this tutorial provided you an easy walkthrough to grab the concepts and build something of your own.
-
-[Originally published at Crowdbotics](https://blog.crowdbotics.com/build-chatbot-dialogflow-nodejs-webhooks/)
