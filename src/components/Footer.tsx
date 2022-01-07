@@ -89,7 +89,7 @@ const thirdGroup = [
   },
   {
     href: GOODREADS,
-    label: 'GoodReads'
+    label: 'Goodreads'
   },
   {
     href: KOFI,
