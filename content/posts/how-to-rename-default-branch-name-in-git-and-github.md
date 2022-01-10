@@ -9,13 +9,15 @@ canonicalUrl: 'https://amanhimself.dev/blog/how-to-rename-default-branch-name-in
 
 I'm currently [maintaining a GitHub repo](https://github.com/amandeepmittal/react-native-examples) that is grown over the last year. It primarily contains all the example code that I create when working on React Native and Expo articles and tutorials.
 
-Recently, I switched the default branch to main. Here are the steps I took. All of these commands execute inside a terminal window.
+Recently, I switched the default branch to `main`. Here are the steps I took. All of these commands execute inside a terminal window.
 
 Start by moving the default branch locally using the `-m` flag.
 
 ```shell
 git branch -m master main
 ```
+
+Above, `master` is the old branch name and `main` is the new branch name.
 
 Set the new branch as the local default on the remote. By default, Git doesn't allow renaming a remote branch.
 
@@ -37,7 +39,7 @@ Now, go to the GitHub repo. Open Settings > Branches. Under Default Branch, clic
 
 ![ss1](https://i.imgur.com/T9Mm8g5.png)
 
-Now, go back to the terminal window and run the following command to delete the previous old default branch.
+Now, go back to the terminal window and run the following command to delete the previous default branch name.
 
 ```shell
 git push origin --delete master
