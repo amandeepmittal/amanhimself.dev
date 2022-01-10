@@ -57,7 +57,7 @@ const DocumentHead = ({
 
       <meta property="og:title" content={pageTitle} />
       <meta name="og:description" content={description} />
-      <meta name="og:image:alt" content={pageTitle} />
+      <meta name="og:image:alt" content={socialBanner} />
       <meta property="og:url" content={postPath ? postUrl : siteURL} />
       <meta property="og:type" content={postPath ? 'article' : 'website'} />
       <meta property="og:site_name" content="Aman Mittal's Blog" />
