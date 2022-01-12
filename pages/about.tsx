@@ -108,6 +108,18 @@ const AboutPage: NextPage = () => {
           </ListItem>
           <ListItem fontSize="lg">
             <ListIcon as={MdCheckCircle} color="green.500" />
+            In 2021, one of my post on{' '}
+            <ExternalLink href="https://amanhimself.dev/blog/firebase-authentication-with-expo/">
+              integrating Firebase auth in an Expo app
+            </ExternalLink>{' '}
+            was recommended as an official resource by{' '}
+            <ExternalLink href="https://devlibrary.withgoogle.com/products/firebase">
+              Google&#39;s Dev Library
+            </ExternalLink>
+            .
+          </ListItem>
+          <ListItem fontSize="lg">
+            <ListIcon as={MdCheckCircle} color="green.500" />
             By 2022, Worked with more than 25+ organizations and tech
             publications and have written over more than 100+ articles and
             tutorials.
@@ -223,7 +235,6 @@ const AboutPage: NextPage = () => {
               </ListItem>
             </List>
           </ListItem>
-          <ListItem>Freelance (Fullstack, 2017 - 2018)</ListItem>
           <ListItem>
             Node.js Developer (2016 - 2017) at Unique Touch Solution
           </ListItem>
