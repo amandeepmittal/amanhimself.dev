@@ -216,9 +216,7 @@ const AboutPage: NextPage = () => {
           Work History
         </Heading>
         <List spacing={4}>
-          <ListItem>
-            🥑 Developer Advocate at Draftbit (2021 - Present)
-          </ListItem>
+          <ListItem>🥑 Developer Advocate at Draftbit (2021 - 2022)</ListItem>
           <ListItem>
             💻 📝 Contract Developer & Tech Writer
             <List spacing={2}>

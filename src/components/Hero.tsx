@@ -70,9 +70,7 @@ const Hero = () => {
           </Stack>
 
           <Text lineHeight="175%" as="h2" fontSize="lg">
-            I&apos;m a software developer and a technical writer. I work at{' '}
-            <ExternalLink href="https://draftbit.com">Draftbit</ExternalLink> as
-            a <strong>Developer Advocate 🥑</strong>.
+            I&apos;m a software developer and a technical writer.
           </Text>
           <Text lineHeight="175%" as="h2" fontSize="lg">
             Here, I share through my writing my experience in software
