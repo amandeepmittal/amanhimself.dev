@@ -3,7 +3,7 @@ title: '2021 - A year in review'
 slug: 'year-in-review-2021'
 date: '2021-12-31'
 thumbnail: '/thumbnails/writing.png'
-tag: 'writing'
+tag: 'year-review'
 canonicalUrl: 'https://amanhimself.dev/blog/year-in-review-2021/'
 ---
 

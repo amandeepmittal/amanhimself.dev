@@ -3,7 +3,7 @@ title: 'Year Rewind: 2020'
 date: '2020-12-23'
 slug: 'year-rewind-2020'
 thumbnail: '/thumbnails/writing.png'
-tag: 'writing'
+tag: 'year-review'
 canonicalUrl: 'https://amanhimself.dev/blog/year-rewind-2020/'
 ---
 
