@@ -8,11 +8,11 @@ const SubscribeBox = () => {
           Enjoyed this post? Sign up to my newsletter!
         </Heading>
         <Text lineHeight="175%" as="h2" fontSize="lg">
-          A periodic update about my recent blog posts and tutorials.{' '}
-          <strong>Join 1300+ devs!</strong>
+          A periodic update about my recent blog posts and tutorials delivered
+          directly to your email. <strong>Join 1300+ devs!</strong>
         </Text>
         <Text lineHeight="175%" as="h2" fontSize="lg">
-          No spam, unsubscribe at any time!
+          Unsubscribe at any time!
         </Text>
         <Stack spacing={3}>
           <Button
