@@ -65,7 +65,7 @@ const Hero = () => {
                   alt="Hand Wave Emoji"
                 />
               </RotateBox>{' '}
-              Hey, I&apos;m Aman.
+              Hey, I&apos;m Aman
             </Heading>
           </Stack>
 
@@ -73,8 +73,8 @@ const Hero = () => {
             I&apos;m a software developer and a technical writer.
           </Text>
           <Text lineHeight="175%" as="h2" fontSize="lg">
-            Here, I share through my writing my experience in software
-            development and everything I learn about Node.js, Reactjs, React
+            I started this blog to put together my thoughts and share my
+            learnings in software development including Node.js, Reactjs, React
             Native, and Expo.
           </Text>
           <Text lineHeight="175%" as="h2" fontSize="lg">
