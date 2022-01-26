@@ -10,8 +10,7 @@ import {
   Text,
   Divider,
   Link,
-  Box,
-  useColorModeValue
+  Box
 } from '@chakra-ui/react';
 import { promises as fs } from 'fs';
 import path from 'path';
@@ -22,7 +21,8 @@ import { getAllBlogPosts } from './index';
 import {
   DocumentHead,
   MDXComponents,
-  SubscribeBox
+  SubscribeBox,
+  TagsSummary
 } from '../../src/components';
 import imageMetadata from '../../src/utils/imageMetaData';
 
@@ -110,17 +110,9 @@ const BlogPostPage = ({
             <Text color="gray.500" fontSize="sm">
               {timeToRead}
             </Text>
-            <Box
-              bg={useColorModeValue('white', 'gray.700')}
-              p={1}
-              borderRadius={8}
-            >
-              <Text
-                color={useColorModeValue('gray.700', 'white')}
-                fontSize="sm"
-              >
-                #{tag}
-              </Text>
+
+            <Box bg="purple.500" p={1} borderRadius={8}>
+              <TagsSummary tag={tag} />
             </Box>
           </HStack>
         </VStack>

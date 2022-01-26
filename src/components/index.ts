@@ -10,6 +10,7 @@ import MDXComponents from './MDXComponents';
 import LatestPostsSection from './LatestPostsSection';
 import DocumentHead from './SEO';
 import SubscribeBox from './SubscribeBox';
+import TagsSummary from './TagSummary';
 
 export {
   ExternalLink,
@@ -23,5 +24,6 @@ export {
   MDXComponents,
   LatestPostsSection,
   DocumentHead,
-  SubscribeBox
+  SubscribeBox,
+  TagsSummary
 };

@@ -33,7 +33,7 @@ export const getAllBlogPosts = async () => {
       const { text: timeToRead } = readingTime(fileContent);
 
       const {
-        data: { title, date, thumbnail }
+        data: { title, date, thumbnail, tag }
       } = matter(fileContent);
 
       result.push({
@@ -41,7 +41,8 @@ export const getAllBlogPosts = async () => {
         date,
         slug,
         thumbnail,
-        timeToRead
+        timeToRead,
+        tag
       });
     })
   );
