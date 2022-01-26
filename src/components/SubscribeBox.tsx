@@ -17,8 +17,9 @@ const SubscribeBox = () => {
         <Stack spacing={3}>
           <Button
             as={Link}
-            variant="outline"
-            color="purple.500"
+            variant="solid"
+            bg="purple.500"
+            color="white"
             href="https://www.getrevue.co/profile/amanhimself"
             target="_blank"
             px={2}
