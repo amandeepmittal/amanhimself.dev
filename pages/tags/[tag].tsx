@@ -32,13 +32,14 @@ export const getStaticProps = async ({ params }) => {
 
 const TagPage = ({ posts, tag }) => {
   const [displayPosts] = useState(posts);
+  let filteredPostsLength = displayPosts.length;
 
   return (
     <>
       <DocumentHead pageTitle={`Search by - ${tag}`} postPath="/tags" />
       <VStack spacing={3} alignItems="flex-start" w="full" as="section" pt={28}>
         <Heading size="xl" as="h1">
-          Posts filtered by tag: &quot;{tag}&quot;
+          🔥 {filteredPostsLength} Posts filtered by tag &quot;{tag}&quot;
         </Heading>
       </VStack>
       <List spacing={1} w="full">
