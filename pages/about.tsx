@@ -57,7 +57,7 @@ const AboutPage: NextPage = () => {
           Twitter Bot (the original one) in Node.js for{' '}
           <ExternalLink href="https://github.com/freeCodeCamp/100DaysOfCode-twitter-bot">
             freeCodeCamp
-          </ExternalLink>
+          </ExternalLink>{' '}
           and{' '}
           <ExternalLink href="https://twitter.com/_100Daysofcode">
             #100DaysOfCode
