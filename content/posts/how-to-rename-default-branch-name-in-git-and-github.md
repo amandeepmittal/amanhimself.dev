@@ -7,7 +7,7 @@ tag: 'tools'
 canonicalUrl: 'https://amanhimself.dev/blog/how-to-rename-default-branch-name-in-git-and-github/'
 ---
 
-I'm currently [maintaining a GitHub repo](https://github.com/amandeepmittal/react-native-examples) that is grown over the last year. It primarily contains all the example code that I create when working on React Native and Expo articles and tutorials.
+I'm currently [maintaining a GitHub repo](https://github.com/amandeepmittal/react-native-examples) that has grown over the last year. It primarily contains all the example code that I create when working on React Native and Expo articles and tutorials.
 
 Recently, I switched the default branch to `main`. Here are the steps I took. All of these commands execute inside a terminal window.
 
