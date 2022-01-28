@@ -11,7 +11,7 @@ type Props = {
 const ProjectsSectionList = ({ projects }: Props) => {
   return (
     <VStack w="full" alignItems="flex-start" spacing={4} as="section" mt={16}>
-      <Heading size="md">Open Source Projects I&#39;ve Worked on</Heading>
+      <Heading size="lg">Open Source Projects I&#39;ve Worked on</Heading>
       <List spacing={6}>
         {projects.map(project => (
           <ListItem key={project.href}>

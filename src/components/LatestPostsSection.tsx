@@ -14,7 +14,7 @@ const LatestPostsSection = ({ posts }) => {
   return (
     <VStack w="full" alignItems="flex-start" spacing={4} as="section" mt={16}>
       <HStack justifyContent="center" alignItems="center">
-        <Heading size="md">Latest Posts</Heading>
+        <Heading size="lg">Latest Posts</Heading>
         <Button as={Link} variant="outline" href="/blog" px={1} size="sm">
           View all
         </Button>
