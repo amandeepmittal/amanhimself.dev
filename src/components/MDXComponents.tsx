@@ -24,7 +24,6 @@ import {
   CSS,
   JSON,
   TypeScript,
-  Xml,
   Git,
   GraphQL,
   Prisma,
