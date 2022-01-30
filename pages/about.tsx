@@ -21,8 +21,7 @@ const AboutPage: NextPage = () => {
         </Heading>
         <small>Last Update: January 4, 2022</small>
         <Text lineHeight="175%" as="h2" fontSize="lg" pt={2}>
-          Hi! My name is Aman Mital. I&#39;m currently work as a Developer
-          Advocate at{' '}
+          Hi! My name is Aman Mital. I currently work as a Developer Advocate at{' '}
           <ExternalLink href="https://draftbit.com">Draftbit</ExternalLink>.
           Before that, I&#39;ve been working as a independent contract developer
           and a technical writer.
