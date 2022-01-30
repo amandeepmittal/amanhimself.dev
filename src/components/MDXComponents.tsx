@@ -7,7 +7,6 @@ import {
   Kbd,
   useColorModeValue,
   useColorMode,
-  Divider,
   HStack,
   Button,
   useClipboard
@@ -17,19 +16,18 @@ import NextImage from 'next/image';
 import slugify from 'slugify';
 import Highlight, { defaultProps } from 'prism-react-renderer';
 import dracula from 'prism-react-renderer/themes/dracula';
-
+import { DiJsBadge } from 'react-icons/di';
+import { IoClipboardOutline, IoTerminal } from 'react-icons/io5';
+import { FaGitAlt } from 'react-icons/fa';
 import {
-  JavaScript,
-  HTML,
-  CSS,
-  JSON,
-  TypeScript,
-  Git,
-  GraphQL,
-  Prisma,
-  ReactSVG,
-  Bash
-} from '../utils/codeblocks';
+  SiReact,
+  SiHtml5,
+  SiCsswizardry,
+  SiPrisma,
+  SiTypescript,
+  SiGraphql
+} from 'react-icons/si';
+import { VscJson } from 'react-icons/vsc';
 
 const ChakraHighlight = chakra(Highlight, {
   shouldForwardProp: prop =>
@@ -74,16 +72,14 @@ const CopyButton = ({ value }) => {
       textTransform="uppercase"
       role="button"
       onClick={onCopy}
-      fontSize="sm"
-      bgColor="#202020"
-      mr={4}
-      p={2}
+      fontSize="md"
+      mr={2}
+      p={1}
       _hover={{
-        bgColor: '#202020',
-        color: '#f7df1e'
+        bgColor: '#202020'
       }}
     >
-      {hasCopied ? 'Copied!' : 'Copy'}
+      <IoClipboardOutline size={16} color="white" />
     </Button>
   );
 };
@@ -93,37 +89,35 @@ const CodeHighlight = ({ children: codeString, className: language }: any) => {
   const showLanguage = () => {
     switch (language) {
       case 'typescript':
-        return <TypeScript />;
+        return <SiTypescript size={24} color="#408ef5" />;
       case 'tsx':
-        return <TypeScript />;
+        return <SiTypescript size={24} color="#408ef5" />;
       case 'ts':
-        return <TypeScript />;
+        return <SiTypescript size={24} color="#408ef5" />;
       case 'javascript':
-        return <JavaScript />;
+        return <DiJsBadge size={24} color="#f7df1e" />;
       case 'js':
-        return <JavaScript />;
+        return <DiJsBadge size={24} color="#f7df1e" />;
       case 'bash':
-        return <Bash />;
+        return <IoTerminal size={24} color="#57cc99" />;
       case 'git':
-        return <Bash />;
+        return <FaGitAlt size={24} color="#57cc99" />;
       case 'shell':
-        return <Bash />;
-      case 'jsx':
-        return <ReactSVG />;
-      case 'html':
-        return <HTML />;
-      case 'css':
-        return <CSS />;
-      case 'json':
-        return <JSON />;
-      case 'prisma':
-        return <Prisma />;
-      case 'git':
-        return <Git />;
+        return <IoTerminal size={24} color="#57cc99" />;
       case 'diff':
-        return <Git />;
+        return <FaGitAlt size={24} color="#57cc99" />;
+      case 'jsx':
+        return <SiReact size={24} color="#61dafb" />;
+      case 'html':
+        return <SiHtml5 size={24} color="#ff9800" />;
+      case 'css':
+        return <SiCsswizardry size={24} color="#610094" />;
+      case 'json':
+        return <VscJson size={24} color="#e6ffed" />;
+      case 'prisma':
+        return <SiPrisma size={24} color="#57cc99" />;
       case 'graphql':
-        return <GraphQL />;
+        return <SiGraphql size={24} color="#e10098" />;
       default:
         break;
     }
@@ -156,7 +150,6 @@ const CodeHighlight = ({ children: codeString, className: language }: any) => {
                 <CopyButton value={codeString.trim()} />
                 {showLanguage()}
               </HStack>
-              <Divider mb={2} />
               {tokens.map((line, i) => {
                 const lineProps = getLineProps({ line, key: i });
                 return (
