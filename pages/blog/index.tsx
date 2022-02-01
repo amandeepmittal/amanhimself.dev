@@ -27,6 +27,7 @@ const tagsArray = [
   'react',
   'nodejs',
   'gatsby',
+  'git',
   'ionic',
   'writing',
   'year-review',
