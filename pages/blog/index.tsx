@@ -30,7 +30,8 @@ const tagsArray = [
   'ionic',
   'writing',
   'year-review',
-  'devrel'
+  'devrel',
+  'tools'
 ];
 
 // Fetch all posts
