@@ -69,7 +69,9 @@ const Hero = () => {
           </Stack>
 
           <Text lineHeight="175%" as="h2" fontSize="lg">
-            I&apos;m a software developer and a technical writer.
+            I&apos;m a software developer and a technical writer. Currently
+            working as a Senior Content Developer at{' '}
+            <ExternalLink href="https://vercel.com/">Vercel</ExternalLink>.
           </Text>
           <Text lineHeight="175%" as="h2" fontSize="lg">
             I started this blog to put together my thoughts and share my
