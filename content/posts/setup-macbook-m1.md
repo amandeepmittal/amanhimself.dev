@@ -7,7 +7,7 @@ tag: 'tools'
 canonicalUrl: 'https://amanhimself.dev/blog/setup-macbook-m1/'
 ---
 
-> 🕑 Updated on: December 08, 2021
+> 🕑 Updated on: February 01, 2022
 
 ![cover_image](https://i.imgur.com/tAJjTOU.png)
 
@@ -196,7 +196,7 @@ After installation, make sure that the file `.zshrc` is exporting the below path
 
 ```shell
 # Path to your oh-my-zsh installation
-export ZSH="/Users/<USERNAME>/.oh-my-zsh/oh-my-zsh.sh"
+export ZSH="/Users/<USERNAME>/.oh-my-zsh"
 ```
 
 The first I like to do after setting up the bare minimum ZSH configuration is to install a plugin called [
