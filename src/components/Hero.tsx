@@ -12,7 +12,6 @@ import Image from 'next/image';
 
 import ExternalLink from './ExternalLink';
 import HeroImage from './HeroImage';
-
 import { NEWSLETTER, TWITTER, GITHUB } from '../data/socialLinks';
 
 const socialLinks = [
