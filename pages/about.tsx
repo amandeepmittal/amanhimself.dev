@@ -120,6 +120,14 @@ const AboutPage: NextPage = () => {
           </ListItem>
           <ListItem fontSize="lg">
             <ListIcon as={MdCheckCircle} color="green.500" />
+            In November, 2021, became got certified from{' '}
+            <ExternalLink href="https://dzone.com/users/4503532/amanhimself.html">
+              DZone
+            </ExternalLink>{' '}
+            as a DZone Core member.
+          </ListItem>
+          <ListItem fontSize="lg">
+            <ListIcon as={MdCheckCircle} color="green.500" />
             By 2022, Worked with more than 25+ organizations and tech
             publications and have written over more than 100+ articles and
             tutorials.
