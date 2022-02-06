@@ -142,7 +142,7 @@ Using the terminal, you can install the Homebrew by executing the default comman
 
 **brew installs**:
 
-- node/npm
+- Node.js and npm via Node Version Manager (NVM). [Read the complete blog post on how to install Node.js using NVM](https://amanhimself.dev/blog/install-nodejs-using-nvm-on-macos-m1/).
 - [scrcpy](https://github.com/Genymobile/scrcpy) (control Android devices connect via USB on mac)
 - adoptopenjdk8 (required for React Native)
 - Karabiner-Elements (remapping function keys for Macbook Air or with Macbooks without touchbar)
