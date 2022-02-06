@@ -74,9 +74,16 @@ const Hero = () => {
             <ExternalLink href="https://vercel.com/">Vercel</ExternalLink>.
           </Text>
           <Text lineHeight="175%" as="h2" fontSize="lg">
-            I started this blog to put together my thoughts and share my
-            learnings in software development including Node.js, Reactjs, React
-            Native, and Expo.
+            Previously, I&apos;ve worked as{' '}
+            <ExternalLink href="https://amanhimself.dev/blog/first-three-months-as-developer-advocate/">
+              Developer Advocate
+            </ExternalLink>
+            , independent consultant, and technical writer for many online
+            publications.
+          </Text>
+          <Text lineHeight="175%" as="h2" fontSize="lg">
+            I started this blog to share my software development learning,
+            including Node.js, React, React Native, and Expo.
           </Text>
           <Text lineHeight="175%" as="h2" fontSize="lg">
             I&apos;ve been writing online since 2017, mostly on web and mobile
@@ -85,7 +92,7 @@ const Hero = () => {
           </Text>
           <Text>
             <ExternalLink href="https://amanhimself.dev/about">
-              Learn more about me
+              Learn more about me!
             </ExternalLink>
           </Text>
 
