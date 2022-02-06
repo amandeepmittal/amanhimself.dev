@@ -5,7 +5,7 @@ A [personal website](https://amanhimself.dev/) where I keep:
 - information about myself
 - blog posts
 
-I have written for over 20+ tech publications and over 150+ posts. This website is an alternate platform to the collection of the blog posts and tutorials I have written so far.
+I have written for over 25+ tech publications and over 150+ posts. This website is an alternate platform to the collection of the blog posts and tutorials I have written so far.
 
 ## License
 
