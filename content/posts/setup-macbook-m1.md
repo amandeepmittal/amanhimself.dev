@@ -145,7 +145,7 @@ Using the terminal, you can install the Homebrew by executing the default comman
 - node/npm
 - [scrcpy](https://github.com/Genymobile/scrcpy) (control Android devices connect via USB on mac)
 - adoptopenjdk8 (required for React Native)
-- Karabiner-Elements (remapping function keys)
+- Karabiner-Elements (remapping function keys for Macbook Air or with Macbooks without touchbar)
 - watchman (required for React Native)
 
 ### What is Karabiner-Elements?
@@ -267,7 +267,7 @@ I am still using the same VSCode configuration from my previous setup:
   "workbench.editor.enablePreview": false,
   "window.restoreFullscreen": true,
   "editor.tabSize": 2,
-  "editor.fontSize": 12.4,
+  "editor.fontSize": 14,
   "editor.minimap.enabled": false,
   "editor.cursorBlinking": "phase",
   "editor.fontLigatures": false,
@@ -396,7 +396,12 @@ I am still using the same VSCode configuration from my previous setup:
   ],
   // --------------------------------------
   // LANGUAGES SPECIFIC
-  "javascript.updateImportsOnFileMove.enabled": "always"
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "security.workspace.trust.banner": "never",
+  "emmet.includeLanguages": {
+    "typescript": "typescriptreact",
+    "javascript": "javascriptreact"
+  }
 }
 ```
 
@@ -428,10 +433,12 @@ I use VSCode editor for both writing code and writing blog posts. Thus, the list
 - [ESLint](https://eslint.org/)
 - [Expo Tools](https://marketplace.visualstudio.com/items?itemName=byCedric.vscode-expo)
 - [Flow Language Support](https://marketplace.visualstudio.com/items?itemName=flowtype.flow-for-vscode)
+- [Git Lens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
 - [Highlight Matching Tag](https://marketplace.visualstudio.com/items?itemName=vincaslt.highlight-matching-tag)
 - [Indent rainbow](https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow)
 - [iOS common files](https://marketplace.visualstudio.com/items?itemName=Orta.vscode-ios-common-files)
-- [macros](https://marketplace.visualstudio.com/items?itemName=geddski.macros)
+- [Material Icon Theme](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme)
+- [MDX](https://marketplace.visualstudio.com/items?itemName=silvenon.mdx) - For syntax highlighting of `.mdx` files
 - [npm](https://marketplace.visualstudio.com/items?itemName=eg2.vscode-npm-script)
 - [npm intellisense](https://marketplace.visualstudio.com/items?itemName=christian-kohler.npm-intellisense)
 - [Path intellisense](https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense)
@@ -440,13 +447,14 @@ I use VSCode editor for both writing code and writing blog posts. Thus, the list
 - [Read Time](https://marketplace.visualstudio.com/items?itemName=johnpapa.read-time)
 - [SVG Viewer](https://marketplace.visualstudio.com/items?itemName=cssho.vscode-svgviewer)
 - [TODO Highlight](https://marketplace.visualstudio.com/items?itemName=wayou.vscode-todo-highlight)
+- [Version Lens](https://marketplace.visualstudio.com/items?itemName=pflannery.vscode-versionlens)
 - [vscode-styled-components](https://marketplace.visualstudio.com/items?itemName=jpoissonnier.vscode-styled-components)
 - [Word Count](https://marketplace.visualstudio.com/items?itemName=ms-vscode.wordcount)
 - [GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot)
 
 ## Global NPM Packages I use
 
-- [gatsby-cli](https://www.npmjs.com/package/gatsby-cli) To build and test out [my personal blog built with Gatsby](https://amanhimself.dev/).
+- ~~[gatsby-cli](https://www.npmjs.com/package/gatsby-cli) To build and test out [my personal blog built with Gatsby](https://amanhimself.dev/).~~
 - [expo-cli](https://docs.expo.io/workflow/expo-cli/)
 - [npm-check](https://www.npmjs.com/package/npm-check) to check for outdated, incorrect, and unused dependencies.
 - [git-watch-log](https://github.com/sukima/git-watch-log) to watch a git repo and recent changes.
