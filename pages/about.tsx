@@ -24,8 +24,8 @@ const AboutPage: NextPage = () => {
           Hi! My name is Aman Mittal. Currently working as a Senior Content
           Developer at{' '}
           <ExternalLink href="https://vercel.com/">Vercel</ExternalLink>. Before
-          that, I&#39;ve been working as a independent contract developer and a
-          technical writer.
+          that, I&#39;ve worked as a Developer Advocate, independent contract
+          developer and a technical writer.
         </Text>
         <Text lineHeight="175%" as="h2" fontSize="lg">
           I run a{' '}
@@ -212,6 +212,35 @@ const AboutPage: NextPage = () => {
             Instamobile, & Soshace.
           </ListItem>
         </List>
+        {/* TODO: Add info about posts listed in Newsletters */}
+        <Text lineHeight="175%" as="h2" fontSize="lg" fontWeight="700" pt={2}>
+          Some of my blog articles and tutorials have featured in esteemed
+          Newsletters:{' '}
+          <ExternalLink href="https://nodeweekly.com/issues/190">
+            Node Weekly
+          </ExternalLink>
+          ,{' '}
+          <ExternalLink href="https://react.statuscode.com/issues/148">
+            React Status
+          </ExternalLink>
+          ,{' '}
+          <ExternalLink href="https://mobiledevweekly.com/issues/201">
+            Mobile Dev Weekly
+          </ExternalLink>
+          ,{' '}
+          <ExternalLink href="https://daily.dev/blog/weekly-picks-73-development-posts">
+            Daily.dev Weekly Picks
+          </ExternalLink>
+          ,{' '}
+          <ExternalLink href="https://issues.mobiledeveloperscafe.com/issues/weekly-issue-33-985474">
+            Mobile Developers Café
+          </ExternalLink>
+          , and{' '}
+          <ExternalLink href="https://reactnative.cc/issues/2021/08-17-2021.html">
+            React Native Newsletter
+          </ExternalLink>
+          .
+        </Text>
         <Heading size="lg" as="h1" pt={8}>
           Work History
         </Heading>
