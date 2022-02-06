@@ -293,7 +293,6 @@ I am still using the same VSCode configuration from my previous setup:
     ".vscode": true
   },
   "extensions.autoUpdate": false,
-  // "editor.multiCursorModifier": "ctrlCmd",
   // --------------------------------------
   // EXPO TOOLS
   "json.schemas": [
