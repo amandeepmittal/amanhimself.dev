@@ -24,8 +24,8 @@ const AboutPage: NextPage = () => {
           Hi! My name is Aman Mittal. Currently working as a Senior Content
           Developer at{' '}
           <ExternalLink href="https://vercel.com/">Vercel</ExternalLink>. Before
-          that, I&#39;ve worked as a Developer Advocate, independent contract
-          developer and a technical writer.
+          that, I&#39;ve worked as a Developer Advocate, independent consultant
+          and a technical writer.
         </Text>
         <Text lineHeight="175%" as="h2" fontSize="lg">
           I run a{' '}
