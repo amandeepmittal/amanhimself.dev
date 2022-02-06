@@ -24,6 +24,8 @@ Make sure you have installed the following before proceeding:
 
 If you have an existing Node.js version installed, please remove it before installing NVM. For example, my machine already has a node version installed via Homebrew.
 
+This step is optional. If you haven't install Node.js previously, skip this.
+
 Open the terminal window and run:
 
 ```shell
