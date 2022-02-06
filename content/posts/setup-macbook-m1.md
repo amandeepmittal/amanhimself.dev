@@ -7,7 +7,7 @@ tag: 'tools'
 canonicalUrl: 'https://amanhimself.dev/blog/setup-macbook-m1/'
 ---
 
-> 🕑 Updated on: February 01, 2022
+> 🕑 Updated on: February 06, 2022
 
 ![cover_image](https://i.imgur.com/tAJjTOU.png)
 
