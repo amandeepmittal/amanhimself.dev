@@ -65,6 +65,12 @@ const UsesPage: NextPage = () => {
             </ExternalLink>
             - For creating GIFs.
           </ListItem>
+          <ListItem fontSize="lg">
+            <ExternalLink href="https://www.cockos.com/licecap/">
+              CleanShot X
+            </ExternalLink>
+            - For capturing screenshots on macOS devices.
+          </ListItem>
         </List>
         <Text>
           Find out more about what VSCode extensions I regularly use{' '}
