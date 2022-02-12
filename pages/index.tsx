@@ -8,7 +8,6 @@ import {
   DocumentHead
 } from '../src/components';
 import { ProjectsList } from '../src/data';
-
 import { getAllBlogPosts } from './blog';
 
 export const getRecentBlogPosts = async () => {
