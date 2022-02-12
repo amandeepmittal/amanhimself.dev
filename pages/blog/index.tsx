@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import type { InferGetStaticPropsType } from 'next';
+import React, { useState } from 'react';
 import {
   Heading,
   Text,
@@ -79,10 +80,10 @@ export const getStaticProps = async () => {
   };
 };
 
-const Blog = ({ posts }) => {
+const Blog = ({ posts }: InferGetStaticPropsType<typeof getStaticProps>) => {
   const [displayPosts, setDisplayPosts] = useState(posts);
 
-  const onSearch = event => {
+  const onSearch = (event: React.FormEvent<HTMLInputElement>) => {
     const query = event.currentTarget.value;
 
     const filteredPosts = posts.filter(post =>
