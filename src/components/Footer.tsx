@@ -1,4 +1,3 @@
-import { useRouter } from 'next/router';
 import NextLink from 'next/link';
 import {
   Stack,
@@ -98,7 +97,6 @@ const thirdGroup = [
 ];
 
 const Footer = () => {
-  const { pathname } = useRouter();
   const linkColor = useColorModeValue('gray.600', 'white');
 
   return (
