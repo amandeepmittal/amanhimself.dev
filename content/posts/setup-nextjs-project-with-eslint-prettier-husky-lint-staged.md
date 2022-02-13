@@ -7,7 +7,7 @@ tag: 'nextjs'
 canonicalUrl: 'https://amanhimself.dev/blog/setup-nextjs-project-with-eslint-prettier-husky-lint-staged/'
 ---
 
-Working on large codebases, having a consistent style guide is important. Inconsistencies can occur by using single quotes instead of double quotes, tabs instead of spaces, etc.
+Working on a large codebase, having a consistent style guide is important. Inconsistencies can occur by using single quotes instead of double quotes, tabs instead of spaces, etc.
 
 A pre-commit hook can address this problem. Before making a new commit, a pre-commit hook can check for types in TypeScript files, run a lint test, use prettier to format files, etc. All of this is possible by using:
 
