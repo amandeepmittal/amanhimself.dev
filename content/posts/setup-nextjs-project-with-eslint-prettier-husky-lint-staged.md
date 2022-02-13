@@ -188,7 +188,7 @@ yarn lint-staged
 # npm run lint-staged
 ```
 
-To test it, I've modified the `/pages/_app.tsx` file and removed the reference of `AppProps`. This will return a type error when committing this file:
+To test it, I have modified the `/pages/_app.tsx` file and removed the reference of `AppProps`. This will return a type error when committing this file:
 
 ![ss1](https://i.imgur.com/ubLHL12.png)
 
