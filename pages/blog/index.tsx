@@ -25,8 +25,9 @@ import { BlogPostCard, DocumentHead, TagsSummary } from '../../src/components';
 const tagsArray = [
   'expo',
   'react-native',
-  'react',
   'nodejs',
+  'react',
+  'nextjs',
   'gatsby',
   'firebase',
   'git',
