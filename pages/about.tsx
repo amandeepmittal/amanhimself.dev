@@ -143,13 +143,13 @@ const AboutPage: NextPage = () => {
             </ExternalLink>
           </ListItem>
           <ListItem>
-            <ExternalLink href="https://www.freecodecamp.org/news/author/amanhimself/">
-              freeCodeCamp
+            <ExternalLink href="https://blog.jscrambler.com/author/aman-mittal">
+              Jscrambler
             </ExternalLink>
           </ListItem>
           <ListItem>
-            <ExternalLink href="https://blog.crowdbotics.com/author/amanhimself/">
-              Crowdbotics
+            <ExternalLink href="https://www.freecodecamp.org/news/author/amanhimself/">
+              freeCodeCamp
             </ExternalLink>
           </ListItem>
           <ListItem>
@@ -158,8 +158,13 @@ const AboutPage: NextPage = () => {
             </ExternalLink>
           </ListItem>
           <ListItem>
-            <ExternalLink href="https://blog.jscrambler.com/author/aman-mittal">
-              Jscrambler
+            <ExternalLink href="https://blog.appsignal.com/authors/aman-mittal">
+              AppSignal
+            </ExternalLink>
+          </ListItem>
+          <ListItem>
+            <ExternalLink href="https://blog.crowdbotics.com/author/amanhimself/">
+              Crowdbotics
             </ExternalLink>
           </ListItem>
           <ListItem>
