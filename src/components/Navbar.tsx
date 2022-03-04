@@ -72,7 +72,16 @@ const Navbar = props => {
             <LinkItem href="/">Home</LinkItem>
             <LinkItem href="/blog">Blog</LinkItem>
             <LinkItem href="/about">About</LinkItem>
-            <LinkItem href="/speaking">Speaking</LinkItem>
+            <LinkItem
+              _target="_blank"
+              href="https://www.getrevue.co/profile/amanhimself"
+              display="inline-flex"
+              alignItems="center"
+              style={{ gap: 4 }}
+              pl={2}
+            >
+              Newsletter
+            </LinkItem>
           </Stack>
         ) : (
           <Stack
