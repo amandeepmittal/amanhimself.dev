@@ -23,7 +23,7 @@ After going through some online reviews and research, the kind of performance I 
 
 My local environment currently includes:
 
-- Homebrew (now [supported Apple Silicon machines](https://brew.sh/2020/12/01/homebrew-2.6.0/) since `2.6.0`)
+- Homebrew ([supports Apple Silicon machines](https://brew.sh/2020/12/01/homebrew-2.6.0/) since `2.6.0`)
 - Git
 - Node.js
 - npm
