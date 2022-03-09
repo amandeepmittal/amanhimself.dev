@@ -19,7 +19,7 @@ I recently upgraded from [Macbook Air 2017](https://www.instagram.com/p/B6lInd3A
 
 I had a long internal discussion with myself for almost a month about whether I should upgrade to M1 or stick with Intel-based chips and spend them bucks. Don't get me wrong here, M1 is not cheap either as I did go for a RAM upgrade to max limits, which is currently 16GB in the base model.
 
-After going through some online reviews and research, the kind of performance I was expecting has been worth it so far (it is fast, no doubt). I received it two weeks back when writing this post, and since then, I have installed all the necessary tools and utilities that help me work on Web development and React Native apps.
+After going through some online reviews and research, the kind of performance I was expecting has been worth it so far (it is fast, no doubt). I received it two weeks back when writing this post, and since then, I have installed all the necessary tools and utilities that help me work on [Web development](https://learnersbucket.com/) and React Native apps.
 
 My local environment currently includes:
 
