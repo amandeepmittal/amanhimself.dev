@@ -460,7 +460,7 @@ I use VSCode editor for both writing code and writing blog posts. Thus, the list
 
 ## For React Native Development
 
-- install node
+- [install Node.js](http://localhost:3000/blog/install-nodejs-using-nvm-on-macos-m1/)
 - install [Watchman](https://facebook.github.io/watchman/) to watch changes in the filesystem using the command: `brew install watchman`.
 - install following gems:
 
