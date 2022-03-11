@@ -29,47 +29,46 @@ const UsesPage: NextPage = () => {
               Scott Spences
             </ExternalLink>{' '}
             introduced me to VS Code. At that time, we were both using Atom. I
-            have never looked back.
+            have never looked back
           </ListItem>
           <ListItem fontSize="lg">
             <ExternalLink href="https://www.jetbrains.com/lp/mono/">
               Jetbrains Mono
             </ExternalLink>
-            - I like this font.
+            - I like this font
           </ListItem>
           <ListItem fontSize="lg">
             <ExternalLink href="https://brave.com/">Brave</ExternalLink>- as my
-            personal browser. I also use Chrome and sometimes Safari and
-            Firefox.
+            personal browser. I also use Chrome and sometimes Safari and Firefox
           </ListItem>
           <ListItem fontSize="lg">
             <ExternalLink href="https://marketplace.visualstudio.com/items?itemName=nopjmp.fairyfloss">
               fairyFloss
             </ExternalLink>
             - As much as I love to try new themes in VSCode, I always come back
-            to fairyFloss.
+            to fairyFloss
           </ListItem>
           <ListItem fontSize="lg">
             <ExternalLink href="https://iterm2.com/">item2</ExternalLink>- My
-            terminal of choice, with ZSH shell.
+            terminal of choice, with ZSH shell
           </ListItem>
           <ListItem fontSize="lg">
             <ExternalLink href="https://cheatsheets.xyz/homebrew/">
               Homebrew
             </ExternalLink>
-            - For installing other libs and softwares.
+            - For installing other libs and softwares
           </ListItem>
           <ListItem fontSize="lg">
             <ExternalLink href="https://www.cockos.com/licecap/">
               LICEcap
             </ExternalLink>
-            - For creating GIFs.
+            - For creating GIFs
           </ListItem>
           <ListItem fontSize="lg">
             <ExternalLink href="https://www.cockos.com/licecap/">
               CleanShot X
             </ExternalLink>
-            - For capturing screenshots on macOS devices.
+            - For capturing screenshots on macOS devices
           </ListItem>
         </List>
         <Text>
@@ -77,7 +76,6 @@ const UsesPage: NextPage = () => {
           <ExternalLink href="https://amanhimself.dev/blog/setup-macbook-m1/">
             here
           </ExternalLink>
-          .
         </Text>
         <Heading size="md" as="h2" pt={8}>
           Gear
@@ -88,13 +86,13 @@ const UsesPage: NextPage = () => {
             <ExternalLink href="https://www.apple.com/in/shop/buy-mac/macbook-pro">
               Macbook Pro 13&rdquo;
             </ExternalLink>
-            - Apple M1 chip.
+            - Apple M1 chip
           </ListItem>
           <ListItem fontSize="lg">
             <ExternalLink href="https://amanhimself.dev/about">
               Desk & Chair
             </ExternalLink>
-            - Pretty much, any flat surface.
+            - Pretty much, any flat surface
           </ListItem>
         </List>
       </VStack>
