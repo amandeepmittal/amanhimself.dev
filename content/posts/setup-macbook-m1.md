@@ -7,7 +7,7 @@ tag: 'tools'
 canonicalUrl: 'https://amanhimself.dev/blog/setup-macbook-m1/'
 ---
 
-> 🕑 Updated on: February 06, 2022
+> 🕑 Updated on: March 12, 2022
 
 ![cover_image](https://i.imgur.com/tAJjTOU.png)
 
@@ -21,7 +21,7 @@ I had a long internal discussion with myself for almost a month about whether I 
 
 After going through some online reviews and research, the kind of performance I was expecting has been worth it so far (it is fast, no doubt). I received it two weeks back when writing this post, and since then, I have installed all the necessary tools and utilities that help me work on [Web development](https://learnersbucket.com/) and React Native apps.
 
-My local environment currently includes:
+**My local environment currently includes:**
 
 - Homebrew ([supports Apple Silicon machines](https://brew.sh/2020/12/01/homebrew-2.6.0/) since `2.6.0`)
 - Git
@@ -66,7 +66,7 @@ My local environment currently includes:
 **System Settings**:
 
 - Disable Ask Siri
-- Disable Spotlight search except Applications, Calculator, Definition, and System Preferences.
+- Disable Spotlight search except Applications, Calculator, Conversion, Definition, and System Preferences.
 - Trackpad:
   - Fix direction: Scroll & Zoom > Natural off
   - Right click: Point & Click > Secondary Click
