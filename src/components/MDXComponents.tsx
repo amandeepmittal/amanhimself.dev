@@ -75,9 +75,7 @@ const CopyButton = ({ value }) => {
       fontSize="md"
       mr={2}
       p={1}
-      _hover={{
-        bgColor: '#202020'
-      }}
+      bgColor="#202020"
     >
       <IoClipboardOutline size={16} color="white" />
     </Button>
