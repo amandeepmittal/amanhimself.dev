@@ -116,20 +116,6 @@ Make sure to have the following setting configured from
 
 For terminal prompt, I use [Spaceship ZSH](https://github.com/denysdovhan/spaceship-prompt).
 
-## Xcode
-
-After installing Git, for me, the next step is to install [Xcode app](https://apps.apple.com/us/app/xcode/id497799835?mt=12) from Apple's App Store.
-
-Then, install "command line tools". It is required by many of the formulae in Homebrew.
-
-```shell
-xcode-select --install
-```
-
-After installing it, make sure to open it for the first time, from the menu bar, open **Xcode > Preferences > Locations** and make sure that **Command Line Tools** point towards the current Xcode app.
-
-![ss3](https://i.imgur.com/ZXS88QM.png)
-
 ## Homebrew
 
 On December 1, 2020, the Homebrew team announced on their [website](https://brew.sh/2020/12/01/homebrew-2.6.0/) about the version release `2.6.0`. The most significant changes among others they listed were the support for macOS Big Sur, using `brew` commands instead of `brew cask` and beginning to support macOS M1 and Apple Silicon or ARM-based chips.
@@ -147,6 +133,20 @@ Using the terminal, you can install the Homebrew by executing the default comman
 - adoptopenjdk8 (required for React Native)
 - Karabiner-Elements (remapping function keys for Macbook Air or with Macbooks without touchbar)
 - watchman (required for React Native)
+
+## Xcode
+
+After installing Git, for me, the next step is to install [Xcode app](https://apps.apple.com/us/app/xcode/id497799835?mt=12) from Apple's App Store.
+
+Then, install "command line tools". It is required by many of the formulae in Homebrew.
+
+```shell
+xcode-select --install
+```
+
+After installing it, make sure to open it for the first time, from the menu bar, open **Xcode > Preferences > Locations** and make sure that **Command Line Tools** point towards the current Xcode app.
+
+![ss3](https://i.imgur.com/ZXS88QM.png)
 
 ### What is Karabiner-Elements?
 
