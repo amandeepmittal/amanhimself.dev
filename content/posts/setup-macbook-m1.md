@@ -176,7 +176,7 @@ brew install git
 
 To authenticate GitHub to be used from the terminal environment, I'd recommend you to check out the [official document](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token) on creating and accessing personal tokens.
 
-_🔥 Tip:_ As of Git version `2.28` there is a new config option to set the default branch to `main`. Set it globally and forget about it.
+> _🔥 Tip:_ As of Git version `2.28` there is a new config option to set the default branch to `main`. Set it globally and forget about it.
 
 ```shell
 git config --global init.defaultBranch main
