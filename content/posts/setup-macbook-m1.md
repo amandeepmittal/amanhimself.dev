@@ -130,7 +130,7 @@ Using the terminal, you can install the Homebrew by executing the default comman
 
 - Node.js and npm via Node Version Manager (NVM). [Read the complete blog post on how to install Node.js using NVM](https://amanhimself.dev/blog/install-nodejs-using-nvm-on-macos-m1/).
 - [scrcpy](https://github.com/Genymobile/scrcpy) (control Android devices connect via USB on mac)
-- adoptopenjdk8 (required for React Native)
+- JDK (required for React Native)
 - Karabiner-Elements (remapping function keys for Macbook Air or with Macbooks without touchbar)
 - watchman (required for React Native)
 
@@ -463,8 +463,8 @@ I use VSCode editor for both writing code and writing blog posts. Thus, the list
 - [install Node.js](http://localhost:3000/blog/install-nodejs-using-nvm-on-macos-m1/)
 - install [Watchman](https://facebook.github.io/watchman/) to watch changes in the filesystem using the command: `brew install watchman`
 - install following [cocoapods](https://formulae.brew.sh/formula/cocoapods): `brew install cocoapods`
-- install Java Development Kit using the command: `brew install --cask adoptopenjdk/openjdk/adoptopenjdk8`.
-- Currently, I am using Arctic Fox Canary that supports [Apple's based machines](https://androidstudio.googleblog.com/2021/04/android-studio-arctic-fox-canary-15.html) for Android Studio
+- According to [a post by React Native guru Jamon Holmgren](https://shift.infinite.red/dont-use-the-wrong-jdk-for-react-native-if-you-re-using-an-m1-mac-252533dd47a2) that all this time I've been using installing JDK wrong on my m1 machine 😱. To learn more how to install "the m1 way", go to his post and give it a read (and leave an appreciation clap 😄)
+- Versions later than Arctic Fox Canary now supports [Apple's Silicon based machines](https://androidstudio.googleblog.com/2021/04/android-studio-arctic-fox-canary-15.html) for Android Studio. You can also check out the [archive](https://developer.android.com/studio/archive) to see what beta/canary version supports Silicon machines
 - Then install Android SDK (I do not prefer AVD and use an actual device for testing)
 - [scrcpy](https://github.com/Genymobile/scrcpy) to display and control Android devices connect via USB on Mac
 
