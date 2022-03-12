@@ -461,18 +461,12 @@ I use VSCode editor for both writing code and writing blog posts. Thus, the list
 ## For React Native Development
 
 - [install Node.js](http://localhost:3000/blog/install-nodejs-using-nvm-on-macos-m1/)
-- install [Watchman](https://facebook.github.io/watchman/) to watch changes in the filesystem using the command: `brew install watchman`.
-- install following gems:
-
-```shell
-gem install ffi
-gem install cocoapods
-```
-
+- install [Watchman](https://facebook.github.io/watchman/) to watch changes in the filesystem using the command: `brew install watchman`
+- install following [cocoapods](https://formulae.brew.sh/formula/cocoapods): `brew install cocoapods`
 - install Java Development Kit using the command: `brew install --cask adoptopenjdk/openjdk/adoptopenjdk8`.
-- Currently, I am using Arctic Fox Canary that supports [Apple's based machines](https://androidstudio.googleblog.com/2021/04/android-studio-arctic-fox-canary-15.html) for Android Studio.
+- Currently, I am using Arctic Fox Canary that supports [Apple's based machines](https://androidstudio.googleblog.com/2021/04/android-studio-arctic-fox-canary-15.html) for Android Studio
 - Then install Android SDK (I do not prefer AVD and use an actual device for testing)
-- [scrcpy](https://github.com/Genymobile/scrcpy) to display and control Android devices connect via USB on Mac.
+- [scrcpy](https://github.com/Genymobile/scrcpy) to display and control Android devices connect via USB on Mac
 
 <br />
 
