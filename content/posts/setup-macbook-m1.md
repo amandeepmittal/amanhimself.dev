@@ -7,7 +7,7 @@ tag: 'tools'
 canonicalUrl: 'https://amanhimself.dev/blog/setup-macbook-m1/'
 ---
 
-> 🕑 Updated on: March 13, 2022
+> 🕑 Updated on: March 14, 2022
 
 ![cover_image](https://i.imgur.com/tAJjTOU.png)
 
@@ -80,6 +80,20 @@ After going through some online reviews and research, the kind of performance I 
 
 > Copy [dotfiles](https://github.com/amandeepmittal/dotfiles).
 
+## System Preferences
+
+Override default system preferences with from a terminal window:
+
+```shell
+# show hidden files
+defaults write com.apple.finder AppleShowAllFiles YES
+
+# show status bar
+defaults write com.apple.finder ShowStatusBar -bool true
+
+killall Finder;
+```
+
 ## iTerm
 
 My favorite terminal app that I have been using for years is [iTerm](https://iterm2.com/downloads.html). I am currently using two versions of iTerm on my setup. One with Rosetta 2 enabled and the default one. This way, I can only use the Rosetta 2 emulator when required. There are no performance issues I have found with using iTerm with Rosetta 2 for ARM-based applications.
@@ -133,6 +147,16 @@ Using the terminal, you can install the Homebrew by executing the default comman
 - JDK (required for React Native)
 - Karabiner-Elements (remapping function keys for Macbook Air or with Macbooks without touchbar)
 - watchman (required for React Native)
+
+### After installing Node.js
+
+Node.js comes with default package manager `npm`. Set defaults for it:
+
+```shell
+npm set init.author.name "your name"
+npm set init.author.email "you@example.com"
+npm set init.author.url "example.com"
+```
 
 ## Xcode
 
