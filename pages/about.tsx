@@ -19,7 +19,7 @@ const AboutPage: NextPage = () => {
         <Heading size="lg" as="h1">
           About Me
         </Heading>
-        <small>Last Update: January 4, 2022</small>
+        <small>Last Update: March 13, 2022</small>
         <Text lineHeight="175%" as="h2" fontSize="lg" pt={2}>
           Hi! My name is Aman Mittal. Currently working as a Senior Content
           Developer at{' '}
@@ -28,11 +28,11 @@ const AboutPage: NextPage = () => {
           and a technical writer.
         </Text>
         <Text lineHeight="175%" as="h2" fontSize="lg">
-          I run a{' '}
+          I write a{' '}
           <ExternalLink href="https://www.getrevue.co/profile/amanhimself">
-            bi-weekly newsletter
+            newsletter
           </ExternalLink>{' '}
-          and love sharing and helping people become better developers.
+          in which I share my latest tutorials and articles.
         </Text>
         <Text lineHeight="175%" as="h2" fontSize="lg">
           When I am not writing code or working on a blog post, I&#39;m probably
