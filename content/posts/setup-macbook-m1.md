@@ -257,7 +257,7 @@ I am still using the same VSCode configuration from my previous setup:
 ```json
 {
   // VSCODE EDITOR
-  "workbench.colorTheme": "Quiet Light",
+  "workbench.colorTheme": "fairyfloss",
   "workbench.startupEditor": "welcomePage",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.editor.tabSizing": "shrink",
