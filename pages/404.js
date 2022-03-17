@@ -7,11 +7,10 @@ import {
   Divider,
   Button
 } from '@chakra-ui/react';
-import type { NextPage } from 'next';
 
 import { DocumentHead } from '../src/components';
 
-const NotFound: NextPage = () => {
+const NotFound = () => {
   return (
     <>
       <DocumentHead pageTitle="404 - Page Not Found - Aman Mittal" />

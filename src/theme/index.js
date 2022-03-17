@@ -1,13 +1,13 @@
-import { extendTheme, theme as base, ThemeConfig } from '@chakra-ui/react';
+import { extendTheme, theme as base } from '@chakra-ui/react';
 import { mode } from '@chakra-ui/theme-tools';
 
-const config: ThemeConfig = {
+const config = {
   initialColorMode: 'light',
   useSystemColorMode: false
 };
 
 const styles = {
-  global: (props: any) => ({
+  global: props => ({
     body: {
       bg: mode('#f3f3f3', '#202023')(props)
     }

@@ -1,4 +1,3 @@
-import type { InferGetStaticPropsType } from 'next';
 import React, { useState } from 'react';
 import {
   Heading,
@@ -40,7 +39,7 @@ const tagsArray = [
 
 // Fetch all posts
 export const getAllBlogPosts = async () => {
-  const result: any = [];
+  const result = [];
   const dir = path.join(process.cwd(), './content/posts');
   const blogPosts = await fs.readdir(dir);
 
@@ -81,10 +80,10 @@ export const getStaticProps = async () => {
   };
 };
 
-const Blog = ({ posts }: InferGetStaticPropsType<typeof getStaticProps>) => {
+const Blog = ({ posts }) => {
   const [displayPosts, setDisplayPosts] = useState(posts);
 
-  const onSearch = (event: React.FormEvent<HTMLInputElement>) => {
+  const onSearch = () => {
     const query = event.currentTarget.value;
 
     const filteredPosts = posts.filter(post =>

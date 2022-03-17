@@ -1,9 +1,8 @@
-import type { NextPage } from 'next';
 import { VStack, Heading, Text, List, ListItem } from '@chakra-ui/react';
 
 import { DocumentHead, ExternalLink } from '../src/components';
 
-const UsesPage: NextPage = () => {
+const UsesPage = () => {
   return (
     <>
       <DocumentHead pageTitle="Aman Mittal - Uses" postPath="/uses" />

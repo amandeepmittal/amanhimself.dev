@@ -31,12 +31,9 @@
     "unist-util-visit": "^4.1.0"
   },
   "devDependencies": {
-    "@types/node": "17.0.5",
-    "@types/react": "17.0.38",
     "eslint": "8.6.0",
     "eslint-config-next": "12.0.7",
-    "prettier": "^2.5.1",
-    "typescript": "4.5.4"
+    "prettier": "^2.5.1"
   },
   "license": "CC-BY-NC-4.0",
   "repository": {

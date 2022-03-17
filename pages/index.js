@@ -1,5 +1,3 @@
-import type { NextPage } from 'next';
-
 import {
   Hero,
   ProjectsSectionList,
@@ -32,7 +30,7 @@ export const getStaticProps = async () => {
   };
 };
 
-const HomePage: NextPage = ({ posts }) => {
+const HomePage = ({ posts }) => {
   return (
     <>
       <DocumentHead pageTitle="Aman Mittal – Software Developer, Tech Writer." />

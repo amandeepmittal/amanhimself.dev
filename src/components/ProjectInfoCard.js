@@ -10,10 +10,7 @@ import {
 } from '@chakra-ui/react';
 import { SiExpo, SiGithub } from 'react-icons/si';
 
-import { Project } from '../types';
 import ExternalLink from './ExternalLink';
-
-type Props = Project;
 
 const ProjectInfoCard = ({
   id,
@@ -22,7 +19,7 @@ const ProjectInfoCard = ({
   href,
   expoIcon,
   githubIcon
-}: Props) => {
+}) => {
   const bgColorStack = useColorModeValue('purple.100', 'purple.700');
   const iconColor = useColorModeValue('gray.700', 'white');
   return (
