@@ -1,14 +1,8 @@
 import { VStack, Heading, List, ListItem } from '@chakra-ui/react';
 
-import { Project } from '../types';
 import ProjectInfoCard from './ProjectInfoCard';
-ProjectInfoCard;
 
-type Props = {
-  projects: Project[];
-};
-
-const ProjectsSectionList = ({ projects }: Props) => {
+const ProjectsSectionList = ({ projects }) => {
   return (
     <VStack w="full" alignItems="flex-start" spacing={4} as="section" mt={16}>
       <Heading size="lg">Open Source Projects I&#39;ve Worked on</Heading>

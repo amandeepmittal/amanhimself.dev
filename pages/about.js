@@ -1,4 +1,3 @@
-import type { NextPage } from 'next';
 import {
   VStack,
   Heading,
@@ -11,7 +10,7 @@ import { MdCheckCircle } from 'react-icons/md';
 
 import { DocumentHead, ExternalLink } from '../src/components';
 
-const AboutPage: NextPage = () => {
+const AboutPage = () => {
   return (
     <>
       <DocumentHead pageTitle="Aman Mittal - About" postPath="/about" />

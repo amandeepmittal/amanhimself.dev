@@ -1,6 +1,6 @@
-import { Link, LinkProps, useColorModeValue as mode } from '@chakra-ui/react';
+import { Link, useColorModeValue as mode } from '@chakra-ui/react';
 
-const ExternalLink = ({ children, ...linkProps }: LinkProps) => {
+const ExternalLink = ({ children, ...linkProps }) => {
   return (
     <span>
       <Link

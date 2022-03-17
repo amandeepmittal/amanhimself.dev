@@ -26,7 +26,7 @@ import {
 } from '../../src/components';
 import imageMetadata from '../../src/utils/imageMetaData';
 
-export const readBlogPost = async (slug: string) => {
+export const readBlogPost = async slug => {
   const postPath = path.join(process.cwd(), './content/posts', `${slug}.md`);
 
   return await fs.readFile(postPath, 'utf8');
@@ -42,7 +42,7 @@ export const getStaticPaths = async () => {
 };
 
 export const getStaticProps = async ctx => {
-  const slug = ctx.params.slug as string;
+  const slug = ctx.params.slug;
 
   const postContent = await readBlogPost(slug);
   const { text: timeToRead } = readingTime(postContent);
@@ -81,7 +81,7 @@ const BlogPostPage = ({
   canonicalUrl
 }) => {
   const { query } = useRouter();
-  const slug = query.slug as string;
+  const slug = query.slug;
 
   const postIndex = allPosts.findIndex(post => post.slug === slug);
   const previousArticle = allPosts[postIndex - 1] || null;

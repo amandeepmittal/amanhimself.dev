@@ -1,26 +1,13 @@
 import imageSize from 'image-size';
-import { ISizeCalculationResult } from 'image-size/dist/types/interface';
 import path from 'path';
 import { getPlaiceholder } from 'plaiceholder';
-import { Node } from 'unist';
 import { visit } from 'unist-util-visit';
 import { promisify } from 'util';
 
 const sizeOf = promisify(imageSize);
-type ImageNode = {
-  type: 'element';
-  tagName: 'img';
-  properties: {
-    src: string;
-    height?: number;
-    width?: number;
-    blurDataURL?: string;
-    placeholder?: 'blur' | 'empty';
-  };
-};
 
-function isImageNode(node: Node): node is ImageNode {
-  const img = node as ImageNode;
+function isImageNode(node) {
+  const img = node;
 
   return (
     img.type === 'element' &&
@@ -30,9 +17,9 @@ function isImageNode(node: Node): node is ImageNode {
   );
 }
 
-async function addProps(node: ImageNode): Promise<void> {
-  let res: ISizeCalculationResult;
-  let blur64: string;
+async function addProps(node) {
+  let res;
+  let blur64;
   const isExternal = node.properties.src.startsWith('http');
 
   if (!isExternal) {
@@ -57,8 +44,8 @@ async function addProps(node: ImageNode): Promise<void> {
 }
 
 const imageMetadata = () => {
-  return async function transformer(tree: Node): Promise<Node> {
-    const images: ImageNode[] = [];
+  return async function transformer(tree) {
+    const images = [];
 
     visit(tree, 'element', node => {
       if (isImageNode(node)) {

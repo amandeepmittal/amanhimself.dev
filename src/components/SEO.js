@@ -7,18 +7,12 @@ const description =
   "I'm Aman Mittal (@amanhimself). Software Developer and Tech Writer. Currently working as a Senior Content Developer. Welcome to my digital garden!";
 const socialBanner = '/card.png';
 
-type Props = {
-  pageTitle: string;
-  postPath?: string;
-  canonicalUrl?: string;
-};
-
 const DocumentHead = ({
   pageTitle,
 
   postPath,
   canonicalUrl
-}: Props) => {
+}) => {
   let postUrl = `${siteURL}`;
 
   if (postPath) {

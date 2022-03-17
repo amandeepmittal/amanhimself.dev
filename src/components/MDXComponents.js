@@ -82,7 +82,7 @@ const CopyButton = ({ value }) => {
   );
 };
 
-const CodeHighlight = ({ children: codeString, className: language }: any) => {
+const CodeHighlight = ({ children: codeString, className: language }) => {
   language = language.replace('language-', '');
   const showLanguage = () => {
     switch (language) {
@@ -183,7 +183,7 @@ const CodeHighlight = ({ children: codeString, className: language }: any) => {
   );
 };
 
-const InlineCode = (props: any) => (
+const InlineCode = props => (
   <chakra.code
     apply="mdx.code"
     color={useColorModeValue('purple.500', 'purple.200')}
@@ -195,8 +195,8 @@ const InlineCode = (props: any) => (
   />
 );
 
-const LinkedHeading = (props: HTMLChakraProps<'h2'>) => {
-  const slug = slugify(props.children as string, { lower: true });
+const LinkedHeading = props => {
+  const slug = slugify(props.children, { lower: true });
   return (
     <Link href={`#${slug}`} name={slug} role="group">
       <Box

@@ -1,6 +1,4 @@
-import { Project } from '../types';
-
-export const ProjectsList: Project[] = [
+export const ProjectsList = [
   {
     id: '1',
     title: 'Expo Firebase Starter',

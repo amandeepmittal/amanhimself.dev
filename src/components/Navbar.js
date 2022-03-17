@@ -12,7 +12,7 @@ import {
 
 import ThemeToggleButton from './ThemeToggleButton';
 
-const LinkItem = ({ href, _target, children, ...props }: any) => {
+const LinkItem = ({ href, _target, children, ...props }) => {
   return (
     <NextLink href={href} passHref>
       <Link
