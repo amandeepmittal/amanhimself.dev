@@ -5,6 +5,7 @@ import ShareArticle from './ShareArticle';
 import Tag from './Tag';
 import TimeToRead from './TimeToRead';
 import SubscribeCard from './SubscribeCard';
+import SponsorCard from './SponsorCard';
 
 export {
   PublishedDate,
@@ -13,5 +14,6 @@ export {
   AuthorCard,
   ShareArticle,
   Tag,
-  TimeToRead
+  TimeToRead,
+  SponsorCard
 };

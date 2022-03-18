@@ -18,7 +18,8 @@ import {
   ArticleNavigator,
   TimeToRead,
   PublishedDate,
-  Tag
+  Tag,
+  SponsorCard
 } from '../../src/components/BlogPostPage';
 
 export const readBlogPost = async slug => {
@@ -110,6 +111,9 @@ const BlogPostPage = ({
           </HStack>
         </VStack>
         <MDXRemote {...source} components={MDXComponents} />
+        {/* Sponsor - only uncomment when there is an actual sponsor */}
+        <SponsorCard />
+        {/* Share article on Twitter */}
         <ShareArticle title={title} slug={slug} />
         <Divider />
         {/* Article Navigator */}
