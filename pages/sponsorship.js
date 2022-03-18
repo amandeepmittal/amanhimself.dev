@@ -176,7 +176,7 @@ const SponsorshipPage = () => {
         <Text lineHeight="175%" as="h2" fontSize="lg">
           Contact me at{' '}
           <Link
-            isExternal="mailto:amanmittal.work@gmail.com"
+            href="mailto:amanmittal.work@gmail.com"
             textDecoration="underline"
           >
             my email
