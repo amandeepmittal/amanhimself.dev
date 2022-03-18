@@ -1,0 +1,51 @@
+import { HStack, Box, Text, Link, useColorModeValue } from '@chakra-ui/react';
+import NextLink from 'next/link';
+
+const ArticleNavigator = ({ previousArticle, nextArticle }) => {
+  const textMode = useColorModeValue('black', 'white');
+  return (
+    <>
+      <Text as="h2" fontSize="2xl" fontWeight="600" color={textMode}>
+        More Articles
+      </Text>
+
+      <HStack justifyContent="space-between">
+        {previousArticle !== null ? (
+          <Box
+            borderRadius="14px"
+            bgColor="#e2e2e2"
+            padding="8px 12px"
+            alignItems="center"
+          >
+            <NextLink href={previousArticle.slug}>
+              <Link>
+                <Text as="h2" fontSize="md" fontWeight="600" color="black">
+                  ⬅️ Previous: {previousArticle.title}
+                </Text>
+              </Link>
+            </NextLink>
+          </Box>
+        ) : null}
+        {nextArticle !== null ? (
+          <Box
+            borderRadius="14px"
+            bgColor="#e2e2e2"
+            padding="8px 12px"
+            alignItems="center"
+            justifyContent="center"
+          >
+            <NextLink href={nextArticle.slug}>
+              <Link>
+                <Text as="h2" fontSize="md" fontWeight="600" color="black">
+                  Next: {nextArticle.title} ➡️
+                </Text>
+              </Link>
+            </NextLink>
+          </Box>
+        ) : null}
+      </HStack>
+    </>
+  );
+};
+
+export default ArticleNavigator;

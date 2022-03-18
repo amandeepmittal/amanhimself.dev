@@ -19,6 +19,7 @@ import imageMetadata from '../../src/utils/imageMetaData';
 import Tag from '../../src/components/BlogPostPage/Tag';
 import PublishedDate from '../../src/components/BlogPostPage/PublishedDate';
 import TimeToRead from '../../src/components/BlogPostPage/TimeToRead';
+import ArticleNavigator from '../../src/components/BlogPostPage/ArticleNavigator';
 
 export const readBlogPost = async slug => {
   const postPath = path.join(process.cwd(), './content/posts', `${slug}.md`);
@@ -111,26 +112,11 @@ const BlogPostPage = ({
         <MDXRemote {...source} components={MDXComponents} />
         <Divider />
 
-        <HStack justifyContent="space-between">
-          {previousArticle !== null ? (
-            <NextLink href={previousArticle.slug}>
-              <Link>
-                <Text as="h2" fontSize="md" fontWeight="600" _hover={{}}>
-                  ⬅️ Previous: {previousArticle.title}
-                </Text>
-              </Link>
-            </NextLink>
-          ) : null}
-          {nextArticle !== null ? (
-            <NextLink href={nextArticle.slug}>
-              <Link>
-                <Text as="h2" fontSize="md" fontWeight="600">
-                  Next: {nextArticle.title} ➡️
-                </Text>
-              </Link>
-            </NextLink>
-          ) : null}
-        </HStack>
+        {/* Article Navigator */}
+        <ArticleNavigator
+          previousArticle={previousArticle}
+          nextArticle={nextArticle}
+        />
       </VStack>
       <SubscribeBox />
     </>
