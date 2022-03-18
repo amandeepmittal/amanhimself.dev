@@ -37,7 +37,7 @@ const AuthorCard = () => {
                   href="https://github.com/sponsors/amandeepmittal?frequency=one-time"
                 >
                   <Text fontSize="13px" color="purple.500">
-                    GitHub Sponsor
+                    Buy me coffee
                   </Text>
                 </Link>
               </Box>
