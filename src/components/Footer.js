@@ -15,7 +15,6 @@ import {
   MEDIUM,
   GITHUB,
   NEWSLETTER,
-  HASHNODE,
   POLYWORK
 } from '../data/socialLinks';
 
@@ -27,51 +26,12 @@ const Footer = () => {
   return (
     <VStack pb={8} as="footer" alignItems="flex-start">
       <Divider />
-      {/* <Stack
-        direction={{ base: 'row', md: 'row' }}
-        justifyContent="space-between"
-        w="full"
-        spacing={{ base: 2, md: 8 }}
-      >
-        <VStack alignItems="flex-start">
-          {firstGroup.map(({ href, label }) => (
-            <NextLink key={href} href={href} passHref>
-              <Link isExternal={href.startsWith('http')} color={linkColor}>
-                {label}
-              </Link>
-            </NextLink>
-          ))}
-        </VStack>
-        <VStack alignItems="flex-start">
-          {secondGroup.map(({ href, label }) => (
-            <NextLink key={href} href={href} passHref>
-              <Link
-                isExternal={href.startsWith('http')}
-                target="_blank"
-                color={linkColor}
-              >
-                {label}
-              </Link>
-            </NextLink>
-          ))}
-        </VStack>
-        <VStack alignItems="flex-start">
-          {thirdGroup.map(({ href, label }) => (
-            <NextLink key={href} href={href} passHref>
-              <Link isExternal={href.startsWith('http')} color={linkColor}>
-                {label}
-              </Link>
-            </NextLink>
-          ))}
-        </VStack>
-      </Stack> */}
+
       <Stack
         w="full"
         direction={{ base: 'column', md: 'row' }}
         alignItems="center"
         justifyContent={{ base: 'center', md: 'space-between' }}
-        // spacing={0}
-        // gridRowGap={1}
       >
         <Text color={linkColor}>
           Copyright &copy;&nbsp; 2019-
