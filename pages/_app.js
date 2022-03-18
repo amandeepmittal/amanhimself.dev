@@ -27,7 +27,7 @@ const App = ({ Component, pageProps }) => {
     //  - Do not include https://
     //  - This must be an exact match of your domain.
     //  - If you're using www. for your domain, make sure you include that here.
-    Fathom.load(process.env.FATHOM_TRACKING_CODE, {
+    Fathom.load('HABFBPUB', {
       includedDomains: ['amanhimself.dev', 'www.amanhimself.dev']
     });
 
