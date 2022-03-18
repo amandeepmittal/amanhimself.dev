@@ -3,15 +3,7 @@ import { useRouter } from 'next/router';
 import { serialize } from 'next-mdx-remote/serialize';
 import NextLink from 'next/link';
 import matter from 'gray-matter';
-import {
-  VStack,
-  Heading,
-  HStack,
-  Text,
-  Divider,
-  Link,
-  Box
-} from '@chakra-ui/react';
+import { VStack, Heading, HStack, Text, Divider, Link } from '@chakra-ui/react';
 import { promises as fs } from 'fs';
 import path from 'path';
 import dayjs from 'dayjs';
@@ -21,10 +13,10 @@ import { getAllBlogPosts } from './index';
 import {
   DocumentHead,
   MDXComponents,
-  SubscribeBox,
-  TagsSummary
+  SubscribeBox
 } from '../../src/components';
 import imageMetadata from '../../src/utils/imageMetaData';
+import Tag from '../../src/components/BlogPostPage/Tag';
 
 export const readBlogPost = async slug => {
   const postPath = path.join(process.cwd(), './content/posts', `${slug}.md`);
@@ -111,9 +103,8 @@ const BlogPostPage = ({
               {timeToRead}
             </Text>
 
-            <Box bg="purple.500" p={1} borderRadius={8}>
-              <TagsSummary tag={tag} />
-            </Box>
+            {/* Tag */}
+            <Tag tag={tag} />
           </HStack>
         </VStack>
         <MDXRemote {...source} components={MDXComponents} />
