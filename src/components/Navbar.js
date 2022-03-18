@@ -97,6 +97,7 @@ const Navbar = props => {
             <LinkItem href="/about">About</LinkItem>
             <LinkItem href="/speaking">Speaking</LinkItem>
             <LinkItem href="/uses">Uses</LinkItem>
+            <LinkItem href="/sponsorship">Sponsorship</LinkItem>
             <LinkItem
               _target="_blank"
               href="https://www.getrevue.co/profile/amanhimself"
