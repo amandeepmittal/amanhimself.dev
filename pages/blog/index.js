@@ -6,11 +6,9 @@ import {
   InputGroup,
   InputLeftElement,
   VStack,
-  HStack,
   Icon,
   List,
-  ListItem,
-  Box
+  ListItem
 } from '@chakra-ui/react';
 import { promises as fs } from 'fs';
 import path from 'path';
@@ -18,9 +16,8 @@ import matter from 'gray-matter';
 import { HiOutlineSearch } from 'react-icons/hi';
 import readingTime from 'reading-time';
 
-import { BlogPostCard, DocumentHead, TagsSummary } from '../../src/components';
-import TAGS_ARRAY from '../../src/data/tagsArray';
-import TagsCloud from '../../src/components/BlogPage/TagsCloud';
+import { BlogPostCard, DocumentHead } from '../../src/components';
+import TagsCloud from '../../src/components/BlogIndexPage/TagsCloud';
 
 // Fetch all posts
 export const getAllBlogPosts = async () => {
