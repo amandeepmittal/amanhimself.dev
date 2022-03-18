@@ -20,7 +20,7 @@ const ArticleNavigator = ({ previousArticle, nextArticle }) => {
       <HStack justifyContent="space-between">
         {previousArticle !== null ? (
           <Box
-            borderRadius="14px"
+            borderRadius="md"
             bgColor="#e2e2e2"
             padding="8px 12px"
             alignItems="center"
@@ -36,7 +36,7 @@ const ArticleNavigator = ({ previousArticle, nextArticle }) => {
         ) : null}
         {nextArticle !== null ? (
           <Box
-            borderRadius="14px"
+            borderRadius="md"
             bgColor="#e2e2e2"
             padding="8px 12px"
             alignItems="center"

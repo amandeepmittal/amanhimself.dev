@@ -13,7 +13,7 @@ const SubscribeCard = () => {
   const textMode = useColorModeValue('black', 'white');
   return (
     <Box
-      borderRadius="14px"
+      borderRadius="md"
       padding="8px 12px"
       alignItems="center"
       border="1px solid #805AD5"

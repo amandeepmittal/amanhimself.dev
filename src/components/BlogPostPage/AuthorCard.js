@@ -11,7 +11,7 @@ const AuthorCard = () => {
   const textMode = useColorModeValue('black', 'white');
   return (
     <Box
-      borderRadius="14px"
+      borderRadius="md"
       padding="8px 12px"
       alignItems="center"
       border="1px solid #805AD5"
@@ -27,7 +27,7 @@ const AuthorCard = () => {
             </Text>
             <HStack justifyContent="flex-end">
               <Box
-                borderRadius="4px"
+                borderRadius="md"
                 padding="2px 2px"
                 alignItems="center"
                 border="1px solid #805AD5"
@@ -39,7 +39,7 @@ const AuthorCard = () => {
                 </Link>
               </Box>
               <Box
-                borderRadius="4px"
+                borderRadius="md"
                 padding="2px 2px"
                 alignItems="center"
                 border="1px solid #805AD5"
