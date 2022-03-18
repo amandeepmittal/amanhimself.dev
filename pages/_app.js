@@ -28,7 +28,7 @@ const App = ({ Component, pageProps }) => {
     //  - This must be an exact match of your domain.
     //  - If you're using www. for your domain, make sure you include that here.
     Fathom.load(process.env.FATHOM_TRACKING_CODE, {
-      includedDomains: ['amanhimself.com', 'www.amanhimself.dev']
+      includedDomains: ['amanhimself.dev', 'www.amanhimself.dev']
     });
 
     function onRouteChangeComplete() {
