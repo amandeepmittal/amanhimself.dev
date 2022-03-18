@@ -112,7 +112,7 @@ const BlogPostPage = ({
         </VStack>
         <MDXRemote {...source} components={MDXComponents} />
         {/* Sponsor - only uncomment when there is an actual sponsor */}
-        <SponsorCard />
+        {/* <SponsorCard /> */}
         {/* Share article on Twitter */}
         <ShareArticle title={title} slug={slug} />
         <Divider />
