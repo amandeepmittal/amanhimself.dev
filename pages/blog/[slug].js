@@ -6,7 +6,7 @@ import matter from 'gray-matter';
 import { VStack, Heading, HStack, Text, Divider, Link } from '@chakra-ui/react';
 import { promises as fs } from 'fs';
 import path from 'path';
-import dayjs from 'dayjs';
+
 import readingTime from 'reading-time';
 
 import { getAllBlogPosts } from './index';
@@ -17,6 +17,7 @@ import {
 } from '../../src/components';
 import imageMetadata from '../../src/utils/imageMetaData';
 import Tag from '../../src/components/BlogPostPage/Tag';
+import PublishedDate from '../../src/components/BlogPostPage/PublishedDate';
 
 export const readBlogPost = async slug => {
   const postPath = path.join(process.cwd(), './content/posts', `${slug}.md`);
@@ -96,9 +97,8 @@ const BlogPostPage = ({
               </Text>
             }
           >
-            <Text color="gray.500" fontSize="sm">
-              {dayjs(date).format('MMM D, YYYY')}
-            </Text>
+            {/* Published Date */}
+            <PublishedDate date={date} />
             <Text color="gray.500" fontSize="sm">
               {timeToRead}
             </Text>
