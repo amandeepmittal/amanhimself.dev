@@ -9,7 +9,6 @@ import BlogPostCard from './BlogPostCard';
 import MDXComponents from './MDXComponents';
 import LatestPostsSection from './LatestPostsSection';
 import DocumentHead from './SEO';
-import SubscribeBox from './SubscribeBox';
 import TagsSummary from './TagSummary';
 
 export {
@@ -24,6 +23,5 @@ export {
   MDXComponents,
   LatestPostsSection,
   DocumentHead,
-  SubscribeBox,
   TagsSummary
 };
