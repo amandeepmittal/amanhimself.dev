@@ -139,7 +139,7 @@ const CodeHighlight = ({ children: codeString, className: language }) => {
               className={className}
               sx={{ ...style, backgroundColor: preBackground }}
               overflowX="auto"
-              rounded="md"
+              borderRadius="md"
               p={4}
               mx={-4}
             >
@@ -217,7 +217,7 @@ const LinkedHeading = props => {
         _focus={{ opacity: 1, boxShadow: 'outline' }}
         opacity={0}
         _groupHover={{ opacity: 1 }}
-        ml="0.375rem"
+        ml="0.35rem"
       >
         🔗
       </chakra.span>
