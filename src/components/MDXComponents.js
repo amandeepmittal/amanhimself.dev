@@ -276,7 +276,7 @@ const MDXComponents = {
   th: THead,
   td: TData,
   a: Anchor,
-  p: props => <chakra.p apply="mdx.p" fontSize="xl" {...props} />,
+  p: props => <chakra.p apply="mdx.p" fontSize="lg" {...props} />,
   ul: props => <chakra.ul px={{ base: 4, md: 8 }} apply="mdx.ul" {...props} />,
   ol: props => <chakra.ol apply="mdx.ul" {...props} />,
   li: props => <chakra.li pb="4px" fontSize="lg" {...props} />,
