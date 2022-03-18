@@ -1,9 +1,8 @@
 import { MDXRemote } from 'next-mdx-remote';
 import { useRouter } from 'next/router';
 import { serialize } from 'next-mdx-remote/serialize';
-import NextLink from 'next/link';
 import matter from 'gray-matter';
-import { VStack, Heading, HStack, Text, Divider, Link } from '@chakra-ui/react';
+import { VStack, Heading, HStack, Text, Divider } from '@chakra-ui/react';
 import { promises as fs } from 'fs';
 import path from 'path';
 
@@ -111,7 +110,6 @@ const BlogPostPage = ({
         </VStack>
         <MDXRemote {...source} components={MDXComponents} />
         <Divider />
-
         {/* Article Navigator */}
         <ArticleNavigator
           previousArticle={previousArticle}
