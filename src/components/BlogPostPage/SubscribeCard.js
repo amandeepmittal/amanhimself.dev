@@ -21,9 +21,9 @@ const SubscribeCard = () => {
       <VStack alignItems="stetch" as="section" pt={2}>
         <HStack justifyContent="space-between">
           <Text as="h2" fontSize="lg" fontWeight="600" color={textMode}>
-            Enjoy the read?{' '}
+            Join <strong>1300+ devs</strong>{' '}
             <Link isExternal href="https://www.getrevue.co/profile/amanhimself">
-              Sign up to my newsletter!
+              & subscribe to my newsletter!
             </Link>
           </Text>
           {isMobile ? null : (
@@ -32,13 +32,12 @@ const SubscribeCard = () => {
             </Text>
           )}
         </HStack>
-
-        <Text fontSize="md" color={textMode}>
-          <strong>1300+ devs</strong> subscribe to my newsletter to get the
-          latest content by email. Unsubscribe any time.
-        </Text>
+        {/* <Text fontSize="md" color={textMode}>
+          Subscribe to my newsletter to get the latest content by email.
+          Unsubscribe any time.
+        </Text> */}
         <Link isExternal href="https://www.getrevue.co/profile/amanhimself">
-          <Text fontSize="md" fontWeight="700" color={textMode}>
+          <Text fontSize="md" fontWeight="700" color="purple.500">
             🔗 Subscribe on Revue
           </Text>
         </Link>

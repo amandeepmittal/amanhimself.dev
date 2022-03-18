@@ -1,35 +1,10 @@
-import {
-  Box,
-  Stack,
-  VStack,
-  Heading,
-  Text,
-  Button,
-  Link
-} from '@chakra-ui/react';
+import { Box, Stack, VStack, Heading, Text } from '@chakra-ui/react';
 import styled from '@emotion/styled';
 import Image from 'next/image';
 
 import ExternalLink from './ExternalLink';
+import ExternalLinksCloud from './ExternalLinksCloud';
 import HeroImage from './HeroImage';
-import { NEWSLETTER, TWITTER, GITHUB } from '../data/socialLinks';
-
-const socialLinks = [
-  {
-    href: NEWSLETTER,
-    label: 'Newsletter',
-    color: 'purple.500'
-  },
-  {
-    href: TWITTER,
-    label: 'Twitter',
-    color: 'twitter'
-  },
-  {
-    href: GITHUB,
-    label: 'GitHub'
-  }
-];
 
 const RotateBox = styled.span`
   &:hover img {
@@ -70,8 +45,7 @@ const Hero = () => {
 
           <Text lineHeight="175%" as="h2" fontSize="lg">
             I&apos;m a software developer and a technical writer. Currently
-            working as a Senior Content Developer at{' '}
-            <ExternalLink href="https://vercel.com/">Vercel</ExternalLink>.
+            working as a Senior Content Developer at <strong>Vercel</strong>.
           </Text>
           <Text lineHeight="175%" as="h2" fontSize="lg">
             Previously, I&apos;ve worked as{' '}
@@ -90,28 +64,7 @@ const Hero = () => {
             development. I&apos;ve written over 150 articles for more than 25
             publications and organizations across the internet.
           </Text>
-          <Text>
-            <ExternalLink href="https://amanhimself.dev/about">
-              Learn more about me!
-            </ExternalLink>
-          </Text>
-
-          <Stack spacing={3} direction={{ base: 'row', md: 'row' }}>
-            {socialLinks.map(({ href, label, color }) => (
-              <Button
-                key={href}
-                as={Link}
-                variant="outline"
-                color={color}
-                href={href}
-                target="_blank"
-                px={2}
-                justifyContent={{ base: 'flex-start', md: 'center' }}
-              >
-                {label}
-              </Button>
-            ))}
-          </Stack>
+          <ExternalLinksCloud />
         </VStack>
         <HeroImage />
       </Stack>

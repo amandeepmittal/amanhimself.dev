@@ -4,12 +4,10 @@ import {
   VStack,
   Link,
   useColorModeValue,
-  HStack,
-  useMediaQuery
+  HStack
 } from '@chakra-ui/react';
 
 const SponsorCard = () => {
-  // const [isMobile] = useMediaQuery('(max-width: 768px)');
   const textMode = useColorModeValue('black', 'white');
   return (
     <Box
