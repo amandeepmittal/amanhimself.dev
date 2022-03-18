@@ -9,17 +9,14 @@ import path from 'path';
 import readingTime from 'reading-time';
 
 import { getAllBlogPosts } from './index';
-import {
-  DocumentHead,
-  MDXComponents,
-  SubscribeBox
-} from '../../src/components';
+import { DocumentHead, MDXComponents } from '../../src/components';
 import imageMetadata from '../../src/utils/imageMetaData';
 import Tag from '../../src/components/BlogPostPage/Tag';
 import PublishedDate from '../../src/components/BlogPostPage/PublishedDate';
 import TimeToRead from '../../src/components/BlogPostPage/TimeToRead';
 import ArticleNavigator from '../../src/components/BlogPostPage/ArticleNavigator';
 import ShareArticle from '../../src/components/BlogPostPage/ShareArticle';
+import SubscribeCard from '../../src/components/BlogPostPage/SubscribeCard';
 
 export const readBlogPost = async slug => {
   const postPath = path.join(process.cwd(), './content/posts', `${slug}.md`);
@@ -117,8 +114,8 @@ const BlogPostPage = ({
           previousArticle={previousArticle}
           nextArticle={nextArticle}
         />
+        <SubscribeCard />
       </VStack>
-      <SubscribeBox />
     </>
   );
 };
