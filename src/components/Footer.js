@@ -1,108 +1,33 @@
-import NextLink from 'next/link';
 import {
   Stack,
   VStack,
   Divider,
   Link,
   Text,
-  useColorModeValue
+  useColorModeValue,
+  HStack,
+  useMediaQuery
 } from '@chakra-ui/react';
 
 import {
   TWITTER,
-  INSTAGRAM,
   DEVTO,
   MEDIUM,
   GITHUB,
-  GOODREADS,
   NEWSLETTER,
-  EMAIL,
   HASHNODE,
-  POLYWORK,
-  KOFI
+  POLYWORK
 } from '../data/socialLinks';
 
-const firstGroup = [
-  {
-    href: '/',
-    label: 'Home'
-  },
-  {
-    href: '/blog',
-    label: 'Blog'
-  },
-  {
-    href: NEWSLETTER,
-    label: 'Newsletter'
-  },
-  {
-    href: '/about',
-    label: 'About me'
-  },
-  {
-    href: '/speaking',
-    label: 'Speaking'
-  },
-  {
-    href: EMAIL,
-    label: 'Email'
-  }
-];
-
-const secondGroup = [
-  {
-    href: TWITTER,
-    label: 'Twitter'
-  },
-  {
-    href: GITHUB,
-    label: 'GitHub'
-  },
-  {
-    href: MEDIUM,
-    label: 'Medium'
-  },
-  {
-    href: DEVTO,
-    label: 'Dev.to'
-  },
-  {
-    href: HASHNODE,
-    label: 'Hashnode'
-  }
-];
-
-const thirdGroup = [
-  {
-    href: '/uses',
-    label: 'Uses/Gear'
-  },
-
-  {
-    href: POLYWORK,
-    label: 'Polywork'
-  },
-  {
-    href: INSTAGRAM,
-    label: 'Instagram'
-  },
-  {
-    href: GOODREADS,
-    label: 'Goodreads'
-  },
-  {
-    href: KOFI,
-    label: 'Buy me coffee'
-  }
-];
-
 const Footer = () => {
+  const [isMobile] = useMediaQuery('(max-width: 768px)');
   const linkColor = useColorModeValue('gray.600', 'white');
+  const textMode = useColorModeValue('gray.500', 'gray.500');
 
   return (
-    <VStack pb={8} spacing={8} as="footer" alignItems="flex-start">
+    <VStack pb={8} as="footer" alignItems="flex-start">
       <Divider />
-      <Stack
+      {/* <Stack
         direction={{ base: 'row', md: 'row' }}
         justifyContent="space-between"
         w="full"
@@ -139,20 +64,95 @@ const Footer = () => {
             </NextLink>
           ))}
         </VStack>
-      </Stack>
+      </Stack> */}
       <Stack
         w="full"
         direction={{ base: 'column', md: 'row' }}
         alignItems="center"
         justifyContent={{ base: 'center', md: 'space-between' }}
-        spacing={0}
-        gridRowGap={4}
+        // spacing={0}
+        // gridRowGap={1}
       >
         <Text color={linkColor}>
           Copyright &copy;&nbsp; 2019-
           {`${new Date().getFullYear()} Aman Mittal · All Rights Reserved.`}
         </Text>
       </Stack>
+      <HStack
+        justifyContent="space-between"
+        divider={
+          <Text color="gray.500" mx={2}>
+            •
+          </Text>
+        }
+      >
+        {isMobile ? (
+          <HStack
+            justifyContent="space-between"
+            divider={
+              <Text color="gray.500" mx={2}>
+                •
+              </Text>
+            }
+          >
+            <Link isExternal href={NEWSLETTER}>
+              <Text fontSize="sm" color={textMode}>
+                Newsletter
+              </Text>
+            </Link>
+            <Link isExternal href={TWITTER}>
+              <Text fontSize="sm" color={textMode}>
+                Twitter
+              </Text>
+            </Link>
+            <Link isExternal href={MEDIUM}>
+              <Text fontSize="sm" color={textMode}>
+                Medium
+              </Text>
+            </Link>
+          </HStack>
+        ) : (
+          <HStack
+            justifyContent="space-between"
+            divider={
+              <Text color="gray.500" mx={2}>
+                •
+              </Text>
+            }
+          >
+            <Link isExternal href={NEWSLETTER}>
+              <Text fontSize="sm" color={textMode}>
+                Newsletter
+              </Text>
+            </Link>
+            <Link isExternal href={TWITTER}>
+              <Text fontSize="sm" color={textMode}>
+                Twitter
+              </Text>
+            </Link>
+            <Link isExternal href={MEDIUM}>
+              <Text fontSize="sm" color={textMode}>
+                Medium
+              </Text>
+            </Link>
+            <Link isExternal href={DEVTO}>
+              <Text fontSize="sm" color={textMode}>
+                Dev.to
+              </Text>
+            </Link>
+            <Link isExternal href={GITHUB}>
+              <Text fontSize="sm" color={textMode}>
+                GitHub
+              </Text>
+            </Link>
+            <Link isExternal href={POLYWORK}>
+              <Text fontSize="sm" color={textMode}>
+                Polywork
+              </Text>
+            </Link>
+          </HStack>
+        )}
+      </HStack>
     </VStack>
   );
 };
