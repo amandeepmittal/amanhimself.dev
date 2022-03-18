@@ -3,7 +3,6 @@ import {
   Box,
   chakra,
   Link,
-  HTMLChakraProps,
   Kbd,
   useColorModeValue,
   useColorMode,
