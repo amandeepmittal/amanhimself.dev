@@ -48,7 +48,7 @@ const AuthorCard = () => {
                 border="1px solid #805AD5"
               >
                 <Link isExternal href="https://twitter.com/amanhimself">
-                  <Text fontSize="14px" color="purple.500">
+                  <Text fontSize="13px" color="purple.500">
                     Follow
                   </Text>
                 </Link>

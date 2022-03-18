@@ -115,7 +115,9 @@ const BlogPostPage = ({
           previousArticle={previousArticle}
           nextArticle={nextArticle}
         />
+        {/* Subscribe Card */}
         <SubscribeCard />
+        {/* Author Card */}
         <AuthorCard />
       </VStack>
     </>
