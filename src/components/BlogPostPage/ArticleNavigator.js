@@ -2,6 +2,7 @@ import { HStack, Box, Text, Link, useColorModeValue } from '@chakra-ui/react';
 import NextLink from 'next/link';
 
 const ArticleNavigator = ({ previousArticle, nextArticle }) => {
+  const bgColor = useColorModeValue('gray.200', 'purple.700');
   const textMode = useColorModeValue('black', 'white');
   return (
     <>
@@ -21,13 +22,13 @@ const ArticleNavigator = ({ previousArticle, nextArticle }) => {
         {previousArticle !== null ? (
           <Box
             borderRadius="md"
-            bgColor="#e2e2e2"
+            bgColor={bgColor}
             padding="8px 12px"
             alignItems="center"
           >
             <NextLink href={previousArticle.slug}>
               <Link>
-                <Text as="h2" fontSize="md" fontWeight="600" color="black">
+                <Text as="h2" fontSize="md" fontWeight="600" color={textMode}>
                   ⬅️ Previous: {previousArticle.title}
                 </Text>
               </Link>
@@ -37,14 +38,14 @@ const ArticleNavigator = ({ previousArticle, nextArticle }) => {
         {nextArticle !== null ? (
           <Box
             borderRadius="md"
-            bgColor="#e2e2e2"
+            bgColor={bgColor}
             padding="8px 12px"
             alignItems="center"
             justifyContent="center"
           >
             <NextLink href={nextArticle.slug}>
               <Link>
-                <Text as="h2" fontSize="md" fontWeight="600" color="black">
+                <Text as="h2" fontSize="md" fontWeight="600" color={textMode}>
                   Next: {nextArticle.title} ➡️
                 </Text>
               </Link>
