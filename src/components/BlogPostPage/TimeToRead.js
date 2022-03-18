@@ -1,8 +1,10 @@
-import { Text } from '@chakra-ui/react';
+import { Text, useColorModeValue } from '@chakra-ui/react';
 
 const TimeToRead = ({ timeToRead }) => {
+  const textMode = useColorModeValue('#555', 'white');
+
   return (
-    <Text color="gray.500" fontSize="sm">
+    <Text color={textMode} fontSize="sm">
       {timeToRead}
     </Text>
   );
