@@ -5,10 +5,18 @@ const ArticleNavigator = ({ previousArticle, nextArticle }) => {
   const textMode = useColorModeValue('black', 'white');
   return (
     <>
-      <Text as="h2" fontSize="2xl" fontWeight="600" color={textMode}>
-        More Articles
-      </Text>
-
+      <HStack justifyContent="space-between">
+        <Text as="h2" fontSize="2xl" fontWeight="600" color={textMode}>
+          More Articles
+        </Text>
+        <NextLink href="/blog">
+          <Link>
+            <Text fontWeight="600" color="purple.500">
+              Browse all articles
+            </Text>
+          </Link>
+        </NextLink>
+      </HStack>
       <HStack justifyContent="space-between">
         {previousArticle !== null ? (
           <Box
