@@ -18,6 +18,7 @@ import {
 import imageMetadata from '../../src/utils/imageMetaData';
 import Tag from '../../src/components/BlogPostPage/Tag';
 import PublishedDate from '../../src/components/BlogPostPage/PublishedDate';
+import TimeToRead from '../../src/components/BlogPostPage/TimeToRead';
 
 export const readBlogPost = async slug => {
   const postPath = path.join(process.cwd(), './content/posts', `${slug}.md`);
@@ -89,7 +90,9 @@ const BlogPostPage = ({
       />
       <VStack spacing={8} alignItems="stetch" w="full" as="section" pt={28}>
         <VStack spacing={3} alignItems="flex-start">
+          {/* Post Title */}
           <Heading size="lg">{title}</Heading>
+          {/* Post Meta */}
           <HStack
             divider={
               <Text color="gray.500" mx={2}>
@@ -99,10 +102,8 @@ const BlogPostPage = ({
           >
             {/* Published Date */}
             <PublishedDate date={date} />
-            <Text color="gray.500" fontSize="sm">
-              {timeToRead}
-            </Text>
-
+            {/* Time to read */}
+            <TimeToRead timeToRead={timeToRead} />
             {/* Tag */}
             <Tag tag={tag} />
           </HStack>
