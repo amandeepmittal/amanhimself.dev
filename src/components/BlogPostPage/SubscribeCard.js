@@ -27,7 +27,7 @@ const SubscribeCard = () => {
             </Link>
           </Text>
           {isMobile ? null : (
-            <Text fontSize="md" color="purple.500" as="i">
+            <Text fontSize="sm" color="purple.500" as="i">
               NEWSLETTER
             </Text>
           )}
