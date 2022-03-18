@@ -17,6 +17,7 @@ import TimeToRead from '../../src/components/BlogPostPage/TimeToRead';
 import ArticleNavigator from '../../src/components/BlogPostPage/ArticleNavigator';
 import ShareArticle from '../../src/components/BlogPostPage/ShareArticle';
 import SubscribeCard from '../../src/components/BlogPostPage/SubscribeCard';
+import AuthorCard from '../../src/components/BlogPostPage/AuthorCard';
 
 export const readBlogPost = async slug => {
   const postPath = path.join(process.cwd(), './content/posts', `${slug}.md`);
@@ -115,6 +116,7 @@ const BlogPostPage = ({
           nextArticle={nextArticle}
         />
         <SubscribeCard />
+        <AuthorCard />
       </VStack>
     </>
   );
