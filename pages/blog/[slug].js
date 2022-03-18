@@ -1,30 +1,26 @@
 import { MDXRemote } from 'next-mdx-remote';
 import { useRouter } from 'next/router';
 import { serialize } from 'next-mdx-remote/serialize';
-import NextLink from 'next/link';
 import matter from 'gray-matter';
-import {
-  VStack,
-  Heading,
-  HStack,
-  Text,
-  Divider,
-  Link,
-  Box
-} from '@chakra-ui/react';
+import { VStack, Heading, HStack, Text, Divider } from '@chakra-ui/react';
 import { promises as fs } from 'fs';
 import path from 'path';
-import dayjs from 'dayjs';
+
 import readingTime from 'reading-time';
 
 import { getAllBlogPosts } from './index';
-import {
-  DocumentHead,
-  MDXComponents,
-  SubscribeBox,
-  TagsSummary
-} from '../../src/components';
+import { DocumentHead, MDXComponents } from '../../src/components';
 import imageMetadata from '../../src/utils/imageMetaData';
+import {
+  AuthorCard,
+  SubscribeCard,
+  ShareArticle,
+  ArticleNavigator,
+  TimeToRead,
+  PublishedDate,
+  Tag,
+  SponsorCard
+} from '../../src/components/BlogPostPage';
 
 export const readBlogPost = async slug => {
   const postPath = path.join(process.cwd(), './content/posts', `${slug}.md`);
@@ -96,7 +92,9 @@ const BlogPostPage = ({
       />
       <VStack spacing={8} alignItems="stetch" w="full" as="section" pt={28}>
         <VStack spacing={3} alignItems="flex-start">
+          {/* Post Title */}
           <Heading size="lg">{title}</Heading>
+          {/* Post Meta */}
           <HStack
             divider={
               <Text color="gray.500" mx={2}>
@@ -104,43 +102,30 @@ const BlogPostPage = ({
               </Text>
             }
           >
-            <Text color="gray.500" fontSize="sm">
-              {dayjs(date).format('MMM D, YYYY')}
-            </Text>
-            <Text color="gray.500" fontSize="sm">
-              {timeToRead}
-            </Text>
-
-            <Box bg="purple.500" p={1} borderRadius={8}>
-              <TagsSummary tag={tag} />
-            </Box>
+            {/* Published Date */}
+            <PublishedDate date={date} />
+            {/* Time to read */}
+            <TimeToRead timeToRead={timeToRead} />
+            {/* Tag */}
+            <Tag tag={tag} />
           </HStack>
         </VStack>
         <MDXRemote {...source} components={MDXComponents} />
+        {/* Sponsor - only uncomment when there is an actual sponsor */}
+        {/* <SponsorCard /> */}
+        {/* Share article on Twitter */}
+        <ShareArticle title={title} slug={slug} />
         <Divider />
-
-        <HStack justifyContent="space-between">
-          {previousArticle !== null ? (
-            <NextLink href={previousArticle.slug}>
-              <Link>
-                <Text as="h2" fontSize="md" fontWeight="600" _hover={{}}>
-                  ⬅️ Previous: {previousArticle.title}
-                </Text>
-              </Link>
-            </NextLink>
-          ) : null}
-          {nextArticle !== null ? (
-            <NextLink href={nextArticle.slug}>
-              <Link>
-                <Text as="h2" fontSize="md" fontWeight="600">
-                  Next: {nextArticle.title} ➡️
-                </Text>
-              </Link>
-            </NextLink>
-          ) : null}
-        </HStack>
+        {/* Article Navigator */}
+        <ArticleNavigator
+          previousArticle={previousArticle}
+          nextArticle={nextArticle}
+        />
+        {/* Subscribe Card */}
+        <SubscribeCard />
+        {/* Author Card */}
+        <AuthorCard />
       </VStack>
-      <SubscribeBox />
     </>
   );
 };

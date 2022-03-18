@@ -3,7 +3,6 @@ import {
   Box,
   chakra,
   Link,
-  HTMLChakraProps,
   Kbd,
   useColorModeValue,
   useColorMode,
@@ -140,9 +139,10 @@ const CodeHighlight = ({ children: codeString, className: language }) => {
               className={className}
               sx={{ ...style, backgroundColor: preBackground }}
               overflowX="auto"
-              rounded="md"
-              p={4}
+              borderRadius="md"
+              p={2}
               mx={-4}
+              fontSize="sm"
             >
               <HStack justifyContent="flex-end" pb={2}>
                 <CopyButton value={codeString.trim()} />
@@ -218,7 +218,7 @@ const LinkedHeading = props => {
         _focus={{ opacity: 1, boxShadow: 'outline' }}
         opacity={0}
         _groupHover={{ opacity: 1 }}
-        ml="0.375rem"
+        ml="0.35rem"
       >
         🔗
       </chakra.span>
@@ -276,7 +276,7 @@ const MDXComponents = {
   th: THead,
   td: TData,
   a: Anchor,
-  p: props => <chakra.p apply="mdx.p" fontSize="xl" {...props} />,
+  p: props => <chakra.p apply="mdx.p" fontSize="lg" {...props} />,
   ul: props => <chakra.ul px={{ base: 4, md: 8 }} apply="mdx.ul" {...props} />,
   ol: props => <chakra.ol apply="mdx.ul" {...props} />,
   li: props => <chakra.li pb="4px" fontSize="lg" {...props} />,

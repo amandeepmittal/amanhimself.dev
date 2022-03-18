@@ -12,6 +12,9 @@ import {
 } from '@chakra-ui/react';
 import dayjs from 'dayjs';
 
+import TimeToRead from './BlogPostPage/TimeToRead';
+import PublishedDate from './BlogPostPage/PublishedDate';
+
 const BlogPostCard = ({ title, date, slug, thumbnail, timeToRead }) => {
   const [isMobile] = useMediaQuery('(max-width: 768px)');
   const bgColorHover = useColorModeValue('gray.200', 'gray.600');
@@ -54,12 +57,8 @@ const BlogPostCard = ({ title, date, slug, thumbnail, timeToRead }) => {
                   </Text>
                 }
               >
-                <Text fontSize="sm" color={textMode}>
-                  {dayjs(date).format('MMM D, YYYY')}
-                </Text>
-                <Text fontSize="sm" color={textMode}>
-                  {timeToRead}
-                </Text>
+                <PublishedDate date={date} />
+                <TimeToRead timeToRead={timeToRead} />
               </HStack>
             </VStack>
           ) : (
@@ -69,14 +68,19 @@ const BlogPostCard = ({ title, date, slug, thumbnail, timeToRead }) => {
                   <Text as="h2" fontSize="lg" fontWeight="600" color={textMode}>
                     {title}
                   </Text>
-                  <Text fontSize="sm" color={textMode}>
-                    {timeToRead}
-                  </Text>
+                  <HStack
+                    justifyContent="flex-start"
+                    divider={
+                      <Text color="gray.500" mx={2}>
+                        •
+                      </Text>
+                    }
+                  >
+                    <PublishedDate date={date} />
+                    <TimeToRead timeToRead={timeToRead} />
+                  </HStack>
                 </LinkOverlay>
               </Link>
-              <Text fontSize="sm" color={textMode}>
-                {dayjs(date).format('MMM D, YYYY')}
-              </Text>
             </HStack>
           )}
         </VStack>

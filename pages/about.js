@@ -127,7 +127,7 @@ const AboutPage = () => {
           </ListItem>
           <ListItem fontSize="lg">
             <ListIcon as={MdCheckCircle} color="green.500" />
-            By 2022, Worked with more than 25+ organizations and tech
+            By 2022, worked with more than 25+ organizations and tech
             publications and have written over more than 100+ articles and
             tutorials.
           </ListItem>
