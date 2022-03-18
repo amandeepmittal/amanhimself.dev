@@ -4,21 +4,10 @@ import {
   VStack,
   Link,
   useColorModeValue,
-  HStack,
-  useMediaQuery,
-  Stack
+  HStack
 } from '@chakra-ui/react';
 
-// const AuthorImage = () => {
-//   return (
-//     <Box mr="1">
-//       <Image src="/avatar.jpg" width={140} height={140} alt="Avatar Image" />
-//     </Box>
-//   );
-// };
-
 const AuthorCard = () => {
-  const [isMobile] = useMediaQuery('(max-width: 768px)');
   const textMode = useColorModeValue('black', 'white');
   return (
     <Box
