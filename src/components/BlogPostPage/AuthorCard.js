@@ -17,7 +17,7 @@ const AuthorCard = () => {
       border="1px solid #805AD5"
     >
       <HStack justifyContent="flex-start">
-        <VStack alignItems="stetch" as="section" pt={2}>
+        <VStack alignItems="stretch" as="section" pt={2}>
           <HStack justifyContent="space-between">
             <Text fontSize="md" fontWeight="600" color={textMode}>
               AMAN MITTAL{' '}
