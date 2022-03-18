@@ -140,8 +140,9 @@ const CodeHighlight = ({ children: codeString, className: language }) => {
               sx={{ ...style, backgroundColor: preBackground }}
               overflowX="auto"
               borderRadius="md"
-              p={4}
+              p={2}
               mx={-4}
+              fontSize="sm"
             >
               <HStack justifyContent="flex-end" pb={2}>
                 <CopyButton value={codeString.trim()} />
