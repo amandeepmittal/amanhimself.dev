@@ -149,8 +149,8 @@ const Footer = () => {
         gridRowGap={4}
       >
         <Text color={linkColor}>
-          &copy;&nbsp; 2019-
-          {`${new Date().getFullYear()} Aman Mittal · All Rights Reserved`}
+          Copyright &copy;&nbsp; 2019-
+          {`${new Date().getFullYear()} Aman Mittal · All Rights Reserved.`}
         </Text>
       </Stack>
     </VStack>
