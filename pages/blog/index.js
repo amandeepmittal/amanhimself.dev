@@ -65,15 +65,16 @@ export const getStaticProps = async () => {
 const Blog = ({ posts }) => {
   const [displayPosts, setDisplayPosts] = useState(posts);
 
-  const onSearch = () => {
-    const query = event.currentTarget.value;
+  // const onSearch = () => {
+  //   console.log(event);
+  //   const query = event.currentTarget.value;
 
-    const filteredPosts = posts.filter(post =>
-      post.title.toLowerCase().includes(query)
-    );
+  //   const filteredPosts = posts.filter(post =>
+  //     post.title.toLowerCase().includes(query)
+  //   );
 
-    setDisplayPosts(filteredPosts);
-  };
+  //   setDisplayPosts(filteredPosts);
+  // };
 
   return (
     <>
@@ -90,7 +91,7 @@ const Blog = ({ posts }) => {
           tutorials and posts on internet. This site is a collection of most of
           the them.
         </Text>
-        <InputGroup>
+        {/* <InputGroup>
           <InputLeftElement pointerEvents="none">
             <Icon as={HiOutlineSearch} color="gray.400" />
           </InputLeftElement>
@@ -99,7 +100,7 @@ const Blog = ({ posts }) => {
             variant="filled"
             onChange={onSearch}
           />
-        </InputGroup>
+        </InputGroup> */}
         {/* Common Tags cloud */}
         <TagsCloud />
       </VStack>
