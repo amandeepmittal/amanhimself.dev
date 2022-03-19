@@ -10,3 +10,4 @@ export const GOODREADS =
 export const HASHNODE = 'https://amanhimself.hashnode.dev/';
 export const POLYWORK = 'https://www.polywork.com/amanhimself';
 export const KOFI = 'https://ko-fi.com/amanhimself';
+export const RSS = 'https://amanhimself.dev/rss/feed.xml';

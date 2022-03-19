@@ -15,7 +15,7 @@ import {
   MEDIUM,
   GITHUB,
   NEWSLETTER,
-  POLYWORK
+  RSS
 } from '../data/socialLinks';
 
 const Footer = () => {
@@ -65,9 +65,9 @@ const Footer = () => {
                 Twitter
               </Text>
             </Link>
-            <Link isExternal href={MEDIUM}>
+            <Link isExternal href={RSS}>
               <Text fontSize="sm" color={textMode}>
-                Medium
+                RSS
               </Text>
             </Link>
           </HStack>
@@ -105,9 +105,9 @@ const Footer = () => {
                 GitHub
               </Text>
             </Link>
-            <Link isExternal href={POLYWORK}>
+            <Link isExternal href={RSS}>
               <Text fontSize="sm" color={textMode}>
-                Polywork
+                RSS
               </Text>
             </Link>
           </HStack>
