@@ -43,7 +43,8 @@ export const getAllBlogPosts = async () => {
         slug,
         thumbnail,
         timeToRead,
-        tag
+        tag,
+        fileContent
       });
     })
   );
