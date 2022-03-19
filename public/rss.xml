@@ -4,7 +4,7 @@
         <title>Aman Mittal' blog</title>
         <link>https://amanhimself.dev/</link>
         <description></description>
-        <lastBuildDate>Sat, 19 Mar 2022 07:50:34 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 19 Mar 2022 07:57:19 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Feed for Node.js</generator>
         <copyright>2019 - 2022, Aman Mittal · All Rights Reserved.</copyright>
@@ -12,7 +12,7 @@
             <title><![CDATA[Set up a Next.js project with ESLint, Prettier, Husky, and Lint Staged]]></title>
             <link>https://amanhimself.dev//blog/setup-nextjs-project-with-eslint-prettier-husky-lint-staged</link>
             <guid>https://amanhimself.dev//blog/setup-nextjs-project-with-eslint-prettier-husky-lint-staged</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[Set up a Next.js project with ESLint, Prettier, Husky, and Lint Staged]]></description>
             <content:encoded><![CDATA[---
 title: 'Set up a Next.js project with ESLint, Prettier, Husky, and Lint Staged'
@@ -218,7 +218,7 @@ That's all for setting up ESLint, Prettier, Husky, and Lint Staged with a minima
             <title><![CDATA[How to install Node.js using NVM on macOS M1]]></title>
             <link>https://amanhimself.dev//blog/install-nodejs-using-nvm-on-macos-m1</link>
             <guid>https://amanhimself.dev//blog/install-nodejs-using-nvm-on-macos-m1</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[How to install Node.js using NVM on macOS M1]]></description>
             <content:encoded><![CDATA[---
 title: 'How to install Node.js using NVM on macOS M1'
@@ -337,7 +337,7 @@ nvm uninstall 14
             <title><![CDATA[Implementing Infinite Scroll with React Query and FlatList in React Native]]></title>
             <link>https://amanhimself.dev//blog/infinite-scroll-with-react-query-and-flatlist-in-react-native</link>
             <guid>https://amanhimself.dev//blog/infinite-scroll-with-react-query-and-flatlist-in-react-native</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[Implementing Infinite Scroll with React Query and FlatList in React Native]]></description>
             <content:encoded><![CDATA[---
 title: 'Implementing Infinite Scroll with React Query and FlatList in React Native'
@@ -744,7 +744,7 @@ You can also check the [complete source code for this example is at this GitHub 
             <title><![CDATA[How to rename default branch in Git and GitHub]]></title>
             <link>https://amanhimself.dev//blog/how-to-rename-default-branch-name-in-git-and-github</link>
             <guid>https://amanhimself.dev//blog/how-to-rename-default-branch-name-in-git-and-github</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[How to rename default branch in Git and GitHub]]></description>
             <content:encoded><![CDATA[---
 title: 'How to rename default branch in Git and GitHub'
@@ -805,7 +805,7 @@ That's it!
             <title><![CDATA[Tamagui for React Native: Create faster design systems]]></title>
             <link>https://amanhimself.dev//blog/tamagui-for-react-native</link>
             <guid>https://amanhimself.dev//blog/tamagui-for-react-native</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[Tamagui for React Native: Create faster design systems]]></description>
             <content:encoded><![CDATA[---
 title: 'Tamagui for React Native: Create faster design systems'
@@ -1194,7 +1194,7 @@ As a developer, I'll be keeping a close eye on Tamagui’s development and growt
             <title><![CDATA[2021 - A year in review]]></title>
             <link>https://amanhimself.dev//blog/year-in-review-2021</link>
             <guid>https://amanhimself.dev//blog/year-in-review-2021</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[2021 - A year in review]]></description>
             <content:encoded><![CDATA[---
 title: '2021 - A year in review'
@@ -1303,7 +1303,7 @@ Have a great 2022!
             <title><![CDATA[Create a custom hook to Show/Hide Password Visibility in React Native]]></title>
             <link>https://amanhimself.dev//blog/show-hide-password-in-react-native-using-custom-hook</link>
             <guid>https://amanhimself.dev//blog/show-hide-password-in-react-native-using-custom-hook</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[Create a custom hook to Show/Hide Password Visibility in React Native]]></description>
             <content:encoded><![CDATA[---
 title: 'Create a custom hook to Show/Hide Password Visibility in React Native'
@@ -1547,7 +1547,7 @@ const styles = StyleSheet.create({
             <title><![CDATA[How to avoid notches with Safe Area Context in React Native apps]]></title>
             <link>https://amanhimself.dev//blog/safe-area-context-in-react-native-apps</link>
             <guid>https://amanhimself.dev//blog/safe-area-context-in-react-native-apps</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[How to avoid notches with Safe Area Context in React Native apps]]></description>
             <content:encoded><![CDATA[---
 date: '2021-10-14'
@@ -1750,7 +1750,7 @@ _This post was also published at [freeCodeCamp](https://www.freecodecamp.org/new
             <title><![CDATA[How to configure VSCode Bracket Pair Colors Natively]]></title>
             <link>https://amanhimself.dev//blog/how-to-configure-vscode-bracket-colors-natively</link>
             <guid>https://amanhimself.dev//blog/how-to-configure-vscode-bracket-colors-natively</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[How to configure VSCode Bracket Pair Colors Natively]]></description>
             <content:encoded><![CDATA[---
 title: 'How to configure VSCode Bracket Pair Colors Natively'
@@ -1801,7 +1801,7 @@ By the way, the above colors are from [Dracula theme's 🧛‍♂️ color palet
             <title><![CDATA[How to add Splash Screen and an App Icon in React Native]]></title>
             <link>https://amanhimself.dev//blog/how-to-add-a-splash-screen-and-app-icon-in-react-native-with-react-native-bootsplash</link>
             <guid>https://amanhimself.dev//blog/how-to-add-a-splash-screen-and-app-icon-in-react-native-with-react-native-bootsplash</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[How to add Splash Screen and an App Icon in React Native]]></description>
             <content:encoded><![CDATA[---
 title: 'How to add Splash Screen and an App Icon in React Native'
@@ -2309,7 +2309,7 @@ For more advanced usage of `react-native-bootsplash` please check its [official 
             <title><![CDATA[How to use iOS simulator in full-screen]]></title>
             <link>https://amanhimself.dev//blog/how-to-use-ios-simulator-in-full-screen</link>
             <guid>https://amanhimself.dev//blog/how-to-use-ios-simulator-in-full-screen</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[How to use iOS simulator in full-screen]]></description>
             <content:encoded><![CDATA[---
 title: 'How to use iOS simulator in full-screen'
@@ -2350,7 +2350,7 @@ It's already challenging to keep distractions at bay. But, sometimes, a little b
             <title><![CDATA[How to solve RCTBridge required dispatch_sync to load warning on iOS for React Native]]></title>
             <link>https://amanhimself.dev//blog/rctbridge-required-dispatch-sync-to-load-warning</link>
             <guid>https://amanhimself.dev//blog/rctbridge-required-dispatch-sync-to-load-warning</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[How to solve RCTBridge required dispatch_sync to load warning on iOS for React Native]]></description>
             <content:encoded><![CDATA[---
 title: 'How to solve RCTBridge required dispatch_sync to load warning on iOS for React Native'
@@ -2412,7 +2412,7 @@ The warning will be gone now.
             <title><![CDATA[How to Offer Multi-language Support in a React Native App]]></title>
             <link>https://amanhimself.dev//blog/multi-language-support-in-react-native-with-react-i18next</link>
             <guid>https://amanhimself.dev//blog/multi-language-support-in-react-native-with-react-i18next</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[How to Offer Multi-language Support in a React Native App]]></description>
             <content:encoded><![CDATA[---
 title: 'How to Offer Multi-language Support in a React Native App'
@@ -2954,7 +2954,7 @@ Please don't mind my translation for French text corresponding to English text. 
             <title><![CDATA[GET Request params with Axios]]></title>
             <link>https://amanhimself.dev//blog/get-request-with-axios</link>
             <guid>https://amanhimself.dev//blog/get-request-with-axios</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[GET Request params with Axios]]></description>
             <content:encoded><![CDATA[---
 title: 'GET Request params with Axios'
@@ -3025,7 +3025,7 @@ axios.get(`${BASE_URL}/movie/popular`, {
             <title><![CDATA[Environment Variables in Expo and TypeScript]]></title>
             <link>https://amanhimself.dev//blog/environment-variables-in-expo-managed-workflow</link>
             <guid>https://amanhimself.dev//blog/environment-variables-in-expo-managed-workflow</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[Environment Variables in Expo and TypeScript]]></description>
             <content:encoded><![CDATA[---
 title: 'Environment Variables in Expo and TypeScript'
@@ -3082,7 +3082,7 @@ const API_KEY = Constants?.manifest?.extra?.apiKey;
             <title><![CDATA[The No-Code Way of Payments with Stripe: A Brief Guide]]></title>
             <link>https://amanhimself.dev//blog/no-code-way-of-payments-with-stripe-a-brief-guide</link>
             <guid>https://amanhimself.dev//blog/no-code-way-of-payments-with-stripe-a-brief-guide</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[The No-Code Way of Payments with Stripe: A Brief Guide]]></description>
             <content:encoded><![CDATA[---
 title: 'The No-Code Way of Payments with Stripe: A Brief Guide'
@@ -3144,7 +3144,7 @@ I also wrote a post on how to use Stripe Payment Links when creating a mobile ap
             <title><![CDATA[How To Integrate Firebase Authentication With an Expo App]]></title>
             <link>https://amanhimself.dev//blog/firebase-authentication-with-expo</link>
             <guid>https://amanhimself.dev//blog/firebase-authentication-with-expo</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[How To Integrate Firebase Authentication With an Expo App]]></description>
             <content:encoded><![CDATA[---
 title: 'How To Integrate Firebase Authentication With an Expo App'
@@ -4099,7 +4099,7 @@ If you need to take a look at the code for this tutorial, you can refer to this 
             <title><![CDATA[Common Prop Types in TypeScript and React]]></title>
             <link>https://amanhimself.dev//blog/common-proptypes-in-react-and-typescript</link>
             <guid>https://amanhimself.dev//blog/common-proptypes-in-react-and-typescript</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[Common Prop Types in TypeScript and React]]></description>
             <content:encoded><![CDATA[---
 title: 'Common Prop Types in TypeScript and React'
@@ -4201,7 +4201,7 @@ function add(x: number, y: number): number {
             <title><![CDATA[Prop types in React and TypeScript]]></title>
             <link>https://amanhimself.dev//blog/prop-types-in-react-and-typescript</link>
             <guid>https://amanhimself.dev//blog/prop-types-in-react-and-typescript</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[Prop types in React and TypeScript]]></description>
             <content:encoded><![CDATA[---
 title: 'Prop types in React and TypeScript'
@@ -4333,7 +4333,7 @@ type Props = {
             <title><![CDATA[🌱 Life at Draftbit - First 3 Months as a Developer Advocate]]></title>
             <link>https://amanhimself.dev//blog/first-three-months-as-developer-advocate</link>
             <guid>https://amanhimself.dev//blog/first-three-months-as-developer-advocate</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[🌱 Life at Draftbit - First 3 Months as a Developer Advocate]]></description>
             <content:encoded><![CDATA[---
 title: '🌱 Life at Draftbit - First 3 Months as a Developer Advocate'
@@ -4422,7 +4422,7 @@ If you want to talk about Draftbit, have questions, or React Native, or DevRel, 
             <title><![CDATA[How to Create a Custom Image Gallery in React Native]]></title>
             <link>https://amanhimself.dev//blog/custom-preview-image-gallery-in-react-native</link>
             <guid>https://amanhimself.dev//blog/custom-preview-image-gallery-in-react-native</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[How to Create a Custom Image Gallery in React Native]]></description>
             <content:encoded><![CDATA[---
 title: 'How to Create a Custom Image Gallery in React Native'
@@ -4826,7 +4826,7 @@ Originally Published at **[Crowdbotics's Blog](https://blog.crowdbotics.com/how-
             <title><![CDATA[How to Create a Custom Tab Bar in React Native]]></title>
             <link>https://amanhimself.dev//blog/create-custom-tab-bar-in-react-native</link>
             <guid>https://amanhimself.dev//blog/create-custom-tab-bar-in-react-native</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[How to Create a Custom Tab Bar in React Native]]></description>
             <content:encoded><![CDATA[---
 title: 'How to Create a Custom Tab Bar in React Native'
@@ -5403,7 +5403,7 @@ Originally Published at **[Crowdbotics's Blog](https://blog.crowdbotics.com/how-
             <title><![CDATA[How to use ES6 import syntax in Node.js]]></title>
             <link>https://amanhimself.dev//blog/how-to-use-es6-import-in-nodejs</link>
             <guid>https://amanhimself.dev//blog/how-to-use-es6-import-in-nodejs</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[How to use ES6 import syntax in Node.js]]></description>
             <content:encoded><![CDATA[---
 title: 'How to use ES6 import syntax in Node.js'
@@ -5498,7 +5498,7 @@ An example of running Node server using `npm run dev` script:
             <title><![CDATA[How to upload an image using Expo Camera to Cloudinary]]></title>
             <link>https://amanhimself.dev//blog/upload-image-to-cloudinary-using-expo-camera</link>
             <guid>https://amanhimself.dev//blog/upload-image-to-cloudinary-using-expo-camera</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[How to upload an image using Expo Camera to Cloudinary]]></description>
             <content:encoded><![CDATA[---
 title: 'How to upload an image using Expo Camera to Cloudinary'
@@ -6009,7 +6009,7 @@ _Originally Published at **[Jscrambler's Blog](https://blog.jscrambler.com/how-t
             <title><![CDATA[Setup Macbook M1 for Web and React Native development]]></title>
             <link>https://amanhimself.dev//blog/setup-macbook-m1</link>
             <guid>https://amanhimself.dev//blog/setup-macbook-m1</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[Setup Macbook M1 for Web and React Native development]]></description>
             <content:encoded><![CDATA[---
 title: 'Setup Macbook M1 for Web and React Native development'
@@ -6535,7 +6535,7 @@ That’s the setup I now use for my JavaScript, Node.js, React and React Native.
             <title><![CDATA[How to use React Native Geolocation to get Postal Address]]></title>
             <link>https://amanhimself.dev//blog/react-native-geolocation-to-get-postal-address</link>
             <guid>https://amanhimself.dev//blog/react-native-geolocation-to-get-postal-address</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[How to use React Native Geolocation to get Postal Address]]></description>
             <content:encoded><![CDATA[---
 title: 'How to use React Native Geolocation to get Postal Address'
@@ -6925,7 +6925,7 @@ _Originally Published at [Jscrambler's Blog](https://blog.jscrambler.com/how-to-
             <title><![CDATA[React Native Performance Do and Dont]]></title>
             <link>https://amanhimself.dev//blog/react-native-performance-do-and-dont</link>
             <guid>https://amanhimself.dev//blog/react-native-performance-do-and-dont</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[React Native Performance Do and Dont]]></description>
             <content:encoded><![CDATA[---
 title: 'React Native Performance Do and Dont'
@@ -7097,7 +7097,7 @@ _[Originally Published at Crowdbotics](https://medium.com/crowdbotics/react-nati
             <title><![CDATA[How to use shared element transitions in React Native]]></title>
             <link>https://amanhimself.dev//blog/shared-element-transitions</link>
             <guid>https://amanhimself.dev//blog/shared-element-transitions</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[How to use shared element transitions in React Native]]></description>
             <content:encoded><![CDATA[---
 title: 'How to use shared element transitions in React Native'
@@ -7752,7 +7752,7 @@ Source code is available at this [GitHub repo.](https://github.com/amandeepmitta
             <title><![CDATA[How to remove bottom tab bar border in React Navigation]]></title>
             <link>https://amanhimself.dev//blog/react-navigation-remove-tab-bar-border</link>
             <guid>https://amanhimself.dev//blog/react-navigation-remove-tab-bar-border</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[How to remove bottom tab bar border in React Navigation]]></description>
             <content:encoded><![CDATA[---
 title: 'How to remove bottom tab bar border in React Navigation'
@@ -7829,7 +7829,7 @@ style: {
             <title><![CDATA[How to use redux-persist in React Native with Asyncstorage]]></title>
             <link>https://amanhimself.dev//blog/redux-persist-in-react-native-with-async-storage</link>
             <guid>https://amanhimself.dev//blog/redux-persist-in-react-native-with-async-storage</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[How to use redux-persist in React Native with Asyncstorage]]></description>
             <content:encoded><![CDATA[---
 title: 'How to use redux-persist in React Native with Asyncstorage'
@@ -8654,7 +8654,7 @@ _Originally published at [Jscrambler.com](https://blog.jscrambler.com/how-to-use
             <title><![CDATA[How to add an app icon in a React Native Android app]]></title>
             <link>https://amanhimself.dev//blog/app-icon-react-native-android</link>
             <guid>https://amanhimself.dev//blog/app-icon-react-native-android</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[How to add an app icon in a React Native Android app]]></description>
             <content:encoded><![CDATA[---
 title: 'How to add an app icon in a React Native Android app'
@@ -8743,7 +8743,7 @@ That's it to generate and a new icon for your Android app. Please find the [link
             <title><![CDATA[Year Rewind: 2020]]></title>
             <link>https://amanhimself.dev//blog/year-rewind-2020</link>
             <guid>https://amanhimself.dev//blog/year-rewind-2020</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[Year Rewind: 2020]]></description>
             <content:encoded><![CDATA[---
 title: 'Year Rewind: 2020'
@@ -8928,7 +8928,7 @@ Have a great 2021!
             <title><![CDATA[How to create a custom scrollbar with React Native Animated API]]></title>
             <link>https://amanhimself.dev//blog/custom-scroll-bar-indicator-with-react-native-animated-api</link>
             <guid>https://amanhimself.dev//blog/custom-scroll-bar-indicator-with-react-native-animated-api</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[How to create a custom scrollbar with React Native Animated API]]></description>
             <content:encoded><![CDATA[---
 title: 'How to create a custom scrollbar with React Native Animated API'
@@ -9325,7 +9325,7 @@ I hope you had fun reading this tutorial. If you are trying the Animated library
             <title><![CDATA[How to manage state in React apps with useReducer and useContext hooks]]></title>
             <link>https://amanhimself.dev//blog/manage-state-with-usecontext-usereducer-in-react-apps</link>
             <guid>https://amanhimself.dev//blog/manage-state-with-usecontext-usereducer-in-react-apps</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[How to manage state in React apps with useReducer and useContext hooks]]></description>
             <content:encoded><![CDATA[---
 title: 'How to manage state in React apps with useReducer and useContext hooks'
@@ -9672,7 +9672,7 @@ Using `useReducer` in conjunction with React's Context API is a great way to qui
             <title><![CDATA[Creating and Validating React Native Forms with Formik]]></title>
             <link>https://amanhimself.dev//blog/creating-and-validating-react-native-form-with-formik</link>
             <guid>https://amanhimself.dev//blog/creating-and-validating-react-native-form-with-formik</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[Creating and Validating React Native Forms with Formik]]></description>
             <content:encoded><![CDATA[---
 title: 'Creating and Validating React Native Forms with Formik'
@@ -10130,7 +10130,7 @@ The last section where we used `ref` to change the focus from one input field to
             <title><![CDATA[How to use HarperDB instance with React Hooks]]></title>
             <link>https://amanhimself.dev//blog/harperdb-with-react-hooks</link>
             <guid>https://amanhimself.dev//blog/harperdb-with-react-hooks</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[How to use HarperDB instance with React Hooks]]></description>
             <content:encoded><![CDATA[---
 title: 'How to use HarperDB instance with React Hooks'
@@ -10412,7 +10412,7 @@ Hooks are a great addition in the React world and they certainly help us write l
             <title><![CDATA[How to Animate a Header View on Scroll With React Native Animated]]></title>
             <link>https://amanhimself.dev//blog/animate-header-view-on-scroll-with-react-native-animated-api</link>
             <guid>https://amanhimself.dev//blog/animate-header-view-on-scroll-with-react-native-animated-api</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[How to Animate a Header View on Scroll With React Native Animated]]></description>
             <content:encoded><![CDATA[---
 title: 'How to Animate a Header View on Scroll With React Native Animated'
@@ -10797,7 +10797,7 @@ Originally published at [Jscrambler](https://blog.jscrambler.com/how-to-animate-
             <title><![CDATA[Add Environment Variables in a Netlify Deployment]]></title>
             <link>https://amanhimself.dev//blog/add-environment-variables-in-netlify-deployment</link>
             <guid>https://amanhimself.dev//blog/add-environment-variables-in-netlify-deployment</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[Add Environment Variables in a Netlify Deployment]]></description>
             <content:encoded><![CDATA[---
 title: 'Add Environment Variables in a Netlify Deployment'
@@ -10862,7 +10862,7 @@ Here is a list of all the links I came across when resolving this issue. Might b
             <title><![CDATA[How to use React Router and real time user monitoring in React apps]]></title>
             <link>https://amanhimself.dev//blog/react-router-real-time-user-monitoring-react-apps</link>
             <guid>https://amanhimself.dev//blog/react-router-real-time-user-monitoring-react-apps</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[How to use React Router and real time user monitoring in React apps]]></description>
             <content:encoded><![CDATA[---
 title: 'How to use React Router and real time user monitoring in React apps'
@@ -11333,7 +11333,7 @@ Monitoring user experience in Real-time brings an advantage to single-page appli
             <title><![CDATA[Build a REST API with Node.js and HarperDB]]></title>
             <link>https://amanhimself.dev//blog/build-rest-api-with-nodejs-harperdb</link>
             <guid>https://amanhimself.dev//blog/build-rest-api-with-nodejs-harperdb</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[Build a REST API with Node.js and HarperDB]]></description>
             <content:encoded><![CDATA[---
 title: 'Build a REST API with Node.js and HarperDB'
@@ -11748,7 +11748,7 @@ I hope this post does convey you to try the capabilities of HarperDB. I personal
             <title><![CDATA[How to setup a React App with a Firebase project]]></title>
             <link>https://amanhimself.dev//blog/firebase-config-in-a-react-app</link>
             <guid>https://amanhimself.dev//blog/firebase-config-in-a-react-app</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[How to setup a React App with a Firebase project]]></description>
             <content:encoded><![CDATA[---
 title: 'How to setup a React App with a Firebase project'
@@ -12039,7 +12039,7 @@ Here is a summary of what has been done in this tutorial so far.
             <title><![CDATA[Styling The React Native Way]]></title>
             <link>https://amanhimself.dev//blog/styling-the-react-native-way</link>
             <guid>https://amanhimself.dev//blog/styling-the-react-native-way</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[Styling The React Native Way]]></description>
             <content:encoded><![CDATA[---
 title: 'Styling The React Native Way'
@@ -12327,7 +12327,7 @@ You can see this in action below.
             <title><![CDATA[How to create custom wavy headers with react-native-svg]]></title>
             <link>https://amanhimself.dev//blog/create-custom-headers-with-react-native-svg</link>
             <guid>https://amanhimself.dev//blog/create-custom-headers-with-react-native-svg</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[How to create custom wavy headers with react-native-svg]]></description>
             <content:encoded><![CDATA[---
 title: 'How to create custom wavy headers with react-native-svg'
@@ -12632,7 +12632,7 @@ Here is the list of resources used in order to create this post:
             <title><![CDATA[How to integrate Material UI library in React apps]]></title>
             <link>https://amanhimself.dev//blog/material-ui-integration-with-react</link>
             <guid>https://amanhimself.dev//blog/material-ui-integration-with-react</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[How to integrate Material UI library in React apps]]></description>
             <content:encoded><![CDATA[---
 title: 'How to integrate Material UI library in React apps'
@@ -12960,7 +12960,7 @@ References:
             <title><![CDATA[Chat app with React Native (Part 6) - Create a custom hook to change status bar styles]]></title>
             <link>https://amanhimself.dev//blog/chat-app-with-react-native-part-6</link>
             <guid>https://amanhimself.dev//blog/chat-app-with-react-native-part-6</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[Chat app with React Native (Part 6) - Create a custom hook to change status bar styles]]></description>
             <content:encoded><![CDATA[---
 title: 'Chat app with React Native (Part 6) - Create a custom hook to change status bar styles'
@@ -13120,7 +13120,7 @@ Otherwise, you can find the complete code at this [GitHub repo](https://github.c
             <title><![CDATA[Creating "Quarantine Pro" — A Fun Learning Experiment in React Native]]></title>
             <link>https://amanhimself.dev//blog/quarantine-pro-app</link>
             <guid>https://amanhimself.dev//blog/quarantine-pro-app</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[Creating "Quarantine Pro" — A Fun Learning Experiment in React Native]]></description>
             <content:encoded><![CDATA[---
 title: 'Creating "Quarantine Pro" — A Fun Learning Experiment in React Native'
@@ -13725,7 +13725,7 @@ Originally published at [Jscrambler's blog](https://blog.jscrambler.com/creating
             <title><![CDATA[Chat app with React Native (Part 5) - Create and Fetch Real-Time Messages with Firestore]]></title>
             <link>https://amanhimself.dev//blog/chat-app-with-react-native-part-5</link>
             <guid>https://amanhimself.dev//blog/chat-app-with-react-native-part-5</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[Chat app with React Native (Part 5) - Create and Fetch Real-Time Messages with Firestore]]></description>
             <content:encoded><![CDATA[---
 title: 'Chat app with React Native (Part 5) - Create and Fetch Real-Time Messages with Firestore'
@@ -14191,7 +14191,7 @@ In the [next part](https://amanhimself.dev/blog/chat-app-with-react-native-part-
             <title><![CDATA[How to integrate GraphQL and Apollo Client in React Native app]]></title>
             <link>https://amanhimself.dev//blog/integrate-apollo-client-in-react-native</link>
             <guid>https://amanhimself.dev//blog/integrate-apollo-client-in-react-native</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[How to integrate GraphQL and Apollo Client in React Native app]]></description>
             <content:encoded><![CDATA[---
 title: 'How to integrate GraphQL and Apollo Client in React Native app'
@@ -14871,7 +14871,7 @@ Originally published at [Crowdbotics' blog](https://crowdbotics.ghost.io/integra
             <title><![CDATA[Chat app with React Native (part 4) - A guide to create Chat UI Screens with react-native-gifted-chat]]></title>
             <link>https://amanhimself.dev//blog/chat-app-with-react-native-part-4</link>
             <guid>https://amanhimself.dev//blog/chat-app-with-react-native-part-4</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[Chat app with React Native (part 4) - A guide to create Chat UI Screens with react-native-gifted-chat]]></description>
             <content:encoded><![CDATA[---
 title: 'Chat app with React Native (part 4) - A guide to create Chat UI Screens with react-native-gifted-chat'
@@ -15472,7 +15472,7 @@ You can find the complete source code for this project at [this Github repo](htt
             <title><![CDATA[An in-depth guide on how to use React Native Image Picker]]></title>
             <link>https://amanhimself.dev//blog/how-to-use-react-native-image-picker</link>
             <guid>https://amanhimself.dev//blog/how-to-use-react-native-image-picker</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[An in-depth guide on how to use React Native Image Picker]]></description>
             <content:encoded><![CDATA[---
 title: 'An in-depth guide on how to use React Native Image Picker'
@@ -16080,7 +16080,7 @@ The complete code for this tutorial is available at this GitHub repo [here](http
             <title><![CDATA[Chat app with React Native (part 3) - Create Firestore collections to store chat rooms]]></title>
             <link>https://amanhimself.dev//blog/chat-app-with-react-native-part-3</link>
             <guid>https://amanhimself.dev//blog/chat-app-with-react-native-part-3</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[Chat app with React Native (part 3) - Create Firestore collections to store chat rooms]]></description>
             <content:encoded><![CDATA[---
 title: 'Chat app with React Native (part 3) - Create Firestore collections to store chat rooms'
@@ -16587,7 +16587,7 @@ You can find the complete source code for this project at [this Github repo](htt
             <title><![CDATA[How to add a Search bar in a FlatList in React Native apps]]></title>
             <link>https://amanhimself.dev//blog/add-search-bar-to-a-flatlist-in-react-native</link>
             <guid>https://amanhimself.dev//blog/add-search-bar-to-a-flatlist-in-react-native</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[How to add a Search bar in a FlatList in React Native apps]]></description>
             <content:encoded><![CDATA[---
 title: 'How to add a Search bar in a FlatList in React Native apps'
@@ -17043,7 +17043,7 @@ You can also find the source code from this tutorial at this [Github repo](https
             <title><![CDATA[Chat app with React Native (part 2) - Firebase Email Authentication with react-native-firebase]]></title>
             <link>https://amanhimself.dev//blog/chat-app-with-react-native-part-2</link>
             <guid>https://amanhimself.dev//blog/chat-app-with-react-native-part-2</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[Chat app with React Native (part 2) - Firebase Email Authentication with react-native-firebase]]></description>
             <content:encoded><![CDATA[---
 title: 'Chat app with React Native (part 2) - Firebase Email Authentication with react-native-firebase'
@@ -17494,7 +17494,7 @@ Originally published at [Heartbeat.Fritz.Ai](https://heartbeat.fritz.ai/chat-app
             <title><![CDATA[Blogging tips after 3 years and a 100+ posts]]></title>
             <link>https://amanhimself.dev//blog/blogging-tips-after-3-years</link>
             <guid>https://amanhimself.dev//blog/blogging-tips-after-3-years</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[Blogging tips after 3 years and a 100+ posts]]></description>
             <content:encoded><![CDATA[---
 title: 'Blogging tips after 3 years and a 100+ posts'
@@ -17600,7 +17600,7 @@ Happy Writing!
             <title><![CDATA[Chat app with React Native (part 1) - Build reusable UI form elements using react-native-paper]]></title>
             <link>https://amanhimself.dev//blog/chat-app-with-react-native-part-1</link>
             <guid>https://amanhimself.dev//blog/chat-app-with-react-native-part-1</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[Chat app with React Native (part 1) - Build reusable UI form elements using react-native-paper]]></description>
             <content:encoded><![CDATA[---
 title: 'Chat app with React Native (part 1) - Build reusable UI form elements using react-native-paper'
@@ -18130,7 +18130,7 @@ Originally published at [Heartbeat.Fritz.Ai](https://heartbeat.fritz.ai/chat-app
             <title><![CDATA[How to create a custom hook to change status bar styles for every screen using React Navigation]]></title>
             <link>https://amanhimself.dev//blog/create-custom-status-bar-hook-react-navigation</link>
             <guid>https://amanhimself.dev//blog/create-custom-status-bar-hook-react-navigation</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[How to create a custom hook to change status bar styles for every screen using React Navigation]]></description>
             <content:encoded><![CDATA[---
 title: 'How to create a custom hook to change status bar styles for every screen using React Navigation'
@@ -18347,7 +18347,7 @@ I hope this short tutorial was useful to you. Thanks for reading it!
             <title><![CDATA[Build an Expense Tracker app with React Hooks and LocalStorage API]]></title>
             <link>https://amanhimself.dev//blog/react-app-with-localstorage-api-and-hooks</link>
             <guid>https://amanhimself.dev//blog/react-app-with-localstorage-api-and-hooks</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[Build an Expense Tracker app with React Hooks and LocalStorage API]]></description>
             <content:encoded><![CDATA[---
 title: 'Build an Expense Tracker app with React Hooks and LocalStorage API'
@@ -19020,7 +19020,7 @@ _Originally published at [Crowdbotics' Blog](https://crowdbotics.ghost.io/build-
             <title><![CDATA[Nesting Tab and Stack navigators in React Native and Expo apps]]></title>
             <link>https://amanhimself.dev//blog/nested-navigators-in-react-native</link>
             <guid>https://amanhimself.dev//blog/nested-navigators-in-react-native</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[Nesting Tab and Stack navigators in React Native and Expo apps]]></description>
             <content:encoded><![CDATA[---
 title: 'Nesting Tab and Stack navigators in React Native and Expo apps'
@@ -19347,7 +19347,7 @@ Originally published at [Heartbeat.fritz.ai](https://heartbeat.fritz.ai/nesting-
             <title><![CDATA[Getting Started with Stack Navigator using react-navigation 5 in React Native and Expo apps]]></title>
             <link>https://amanhimself.dev//blog/stack-navigator-with-react-navigation-v5</link>
             <guid>https://amanhimself.dev//blog/stack-navigator-with-react-navigation-v5</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[Getting Started with Stack Navigator using react-navigation 5 in React Native and Expo apps]]></description>
             <content:encoded><![CDATA[---
 title: 'Getting Started with Stack Navigator using react-navigation 5 in React Native and Expo apps'
@@ -20079,7 +20079,7 @@ Originally published at [Heartbeat.fritz.ai](https://heartbeat.fritz.ai/getting-
             <title><![CDATA[How to handle navigation in WebViews in a React Native app]]></title>
             <link>https://amanhimself.dev//blog/handle-navigation-in-webviews-react-native</link>
             <guid>https://amanhimself.dev//blog/handle-navigation-in-webviews-react-native</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[How to handle navigation in WebViews in a React Native app]]></description>
             <content:encoded><![CDATA[---
 title: 'How to handle navigation in WebViews in a React Native app'
@@ -20381,7 +20381,7 @@ Originally published at [Heartbeat.fritz.ai](https://heartbeat.fritz.ai/how-to-h
             <title><![CDATA[Getting Started with React Native and Expo using Hooks in 2020]]></title>
             <link>https://amanhimself.dev//blog/getting-started-with-react-native-expo-hooks-2020</link>
             <guid>https://amanhimself.dev//blog/getting-started-with-react-native-expo-hooks-2020</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[Getting Started with React Native and Expo using Hooks in 2020]]></description>
             <content:encoded><![CDATA[---
 title: 'Getting Started with React Native and Expo using Hooks in 2020'
@@ -21062,7 +21062,7 @@ Originally published at [Heartbeat.fritz.ai](https://heartbeat.fritz.ai/getting-
             <title><![CDATA[How to add Dark mode functionality with React Hooks]]></title>
             <link>https://amanhimself.dev//blog/dark-mode-with-react-hooks</link>
             <guid>https://amanhimself.dev//blog/dark-mode-with-react-hooks</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[How to add Dark mode functionality with React Hooks]]></description>
             <content:encoded><![CDATA[---
 title: 'How to add Dark mode functionality with React Hooks'
@@ -21342,7 +21342,7 @@ Originally published at [Crowdbotics.com](https://crowdbotics.ghost.io/how-to-ad
             <title><![CDATA[How to handle Deep Links in a React Native app]]></title>
             <link>https://amanhimself.dev//blog/handle-deep-linking-react-native</link>
             <guid>https://amanhimself.dev//blog/handle-deep-linking-react-native</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[How to handle Deep Links in a React Native app]]></description>
             <content:encoded><![CDATA[---
 title: 'How to handle Deep Links in a React Native app'
@@ -21731,7 +21731,7 @@ That's it. You have now a complete demo of a React Native app that handles deep 
             <title><![CDATA[How to use React Native Localize in React Native apps]]></title>
             <link>https://amanhimself.dev//blog/how-to-use-react-native-localize</link>
             <guid>https://amanhimself.dev//blog/how-to-use-react-native-localize</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[How to use React Native Localize in React Native apps]]></description>
             <content:encoded><![CDATA[---
 title: 'How to use React Native Localize in React Native apps'
@@ -21957,7 +21957,7 @@ Originally published at [Heartbeat.fritz.ai](https://heartbeat.fritz.ai/how-to-u
             <title><![CDATA[Implement Push notifications for Android apps with React Native]]></title>
             <link>https://amanhimself.dev//blog/push-notifications-android-apps-react-native</link>
             <guid>https://amanhimself.dev//blog/push-notifications-android-apps-react-native</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[Implement Push notifications for Android apps with React Native]]></description>
             <content:encoded><![CDATA[---
 title: 'Implement Push notifications for Android apps with React Native'
@@ -22303,7 +22303,7 @@ Originally published at [Jscrambler](https://blog.jscrambler.com/implementing-re
             <title><![CDATA[Handle different field types in React Native forms with formik and yup]]></title>
             <link>https://amanhimself.dev//blog/handle-different-field-types-in-react-native-forms</link>
             <guid>https://amanhimself.dev//blog/handle-different-field-types-in-react-native-forms</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[Handle different field types in React Native forms with formik and yup]]></description>
             <content:encoded><![CDATA[---
 title: 'Handle different field types in React Native forms with formik and yup'
@@ -22550,7 +22550,7 @@ You can go ahead and add the toggle password visibility to the `Signup` form scr
             <title><![CDATA[How to implement Forgot Password feature in React Native with Firebase]]></title>
             <link>https://amanhimself.dev//blog/implement-forgot-password-firebase-react-native</link>
             <guid>https://amanhimself.dev//blog/implement-forgot-password-firebase-react-native</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[How to implement Forgot Password feature in React Native with Firebase]]></description>
             <content:encoded><![CDATA[---
 title: 'How to implement Forgot Password feature in React Native with Firebase'
@@ -22854,7 +22854,7 @@ I hope any of the codebase used in this tutorial helps you. To find the complete
             <title><![CDATA[Image Classification on React Native with TensorFlow.js and MobileNet]]></title>
             <link>https://amanhimself.dev//blog/tensorflow-image-classification-expo</link>
             <guid>https://amanhimself.dev//blog/tensorflow-image-classification-expo</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[Image Classification on React Native with TensorFlow.js and MobileNet]]></description>
             <content:encoded><![CDATA[---
 title: 'Image Classification on React Native with TensorFlow.js and MobileNet'
@@ -23315,7 +23315,7 @@ Originally published at [Heartbeat.Fritz.ai](https://heartbeat.fritz.ai/image-cl
             <title><![CDATA[Build and validate forms in React Native using Formik and Yup]]></title>
             <link>https://amanhimself.dev//blog/build-validate-forms-with-react-native-formik-yup</link>
             <guid>https://amanhimself.dev//blog/build-validate-forms-with-react-native-formik-yup</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[Build and validate forms in React Native using Formik and Yup]]></description>
             <content:encoded><![CDATA[---
 title: 'Build and validate forms in React Native using Formik and Yup'
@@ -24019,7 +24019,7 @@ You just learned how to create, handle, and validate forms in React Native using
             <title><![CDATA[Changing app themes using React Native, Styled Components and Redux]]></title>
             <link>https://amanhimself.dev//blog/create-app-themes-styled-components-redux</link>
             <guid>https://amanhimself.dev//blog/create-app-themes-styled-components-redux</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[Changing app themes using React Native, Styled Components and Redux]]></description>
             <content:encoded><![CDATA[---
 title: 'Changing app themes using React Native, Styled Components and Redux'
@@ -24382,7 +24382,7 @@ To dwell more into styled-components, please refer to the official documentation
             <title><![CDATA[Using Context API with React Native]]></title>
             <link>https://amanhimself.dev//blog/context-api-react-native-firebase</link>
             <guid>https://amanhimself.dev//blog/context-api-react-native-firebase</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[Using Context API with React Native]]></description>
             <content:encoded><![CDATA[---
 title: 'Using Context API with React Native'
@@ -25035,7 +25035,7 @@ To find the complete code, you will have to visit [this Github repo release](htt
             <title><![CDATA[How Authentication Flow works in React Native apps using React Navigation 4.x]]></title>
             <link>https://amanhimself.dev//blog/authentication-navigation-flow-in-react-native-apps</link>
             <guid>https://amanhimself.dev//blog/authentication-navigation-flow-in-react-native-apps</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[How Authentication Flow works in React Native apps using React Navigation 4.x]]></description>
             <content:encoded><![CDATA[---
 title: 'How Authentication Flow works in React Native apps using React Navigation 4.x'
@@ -25491,7 +25491,7 @@ _You can find the complete code used in this tutorial at the Github repo [here](
             <title><![CDATA[How to Build an Audio Player in React Native]]></title>
             <link>https://amanhimself.dev//blog/build-an-audio-player-in-react-native</link>
             <guid>https://amanhimself.dev//blog/build-an-audio-player-in-react-native</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[How to Build an Audio Player in React Native]]></description>
             <content:encoded><![CDATA[---
 title: 'How to Build an Audio Player in React Native'
@@ -25987,7 +25987,7 @@ The resources used in order to create this tutorial can be found below:
             <title><![CDATA[Build a Not Hotdog clone with React Native]]></title>
             <link>https://amanhimself.dev//blog/not-hotdog-clone-react-native</link>
             <guid>https://amanhimself.dev//blog/not-hotdog-clone-react-native</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[Build a Not Hotdog clone with React Native]]></description>
             <content:encoded><![CDATA[---
 title: 'Build a Not Hotdog clone with React Native'
@@ -26691,7 +26691,7 @@ By integrating Firebase storage and using Google's Vision API with React Native,
             <title><![CDATA[Building offline React Native apps with AsyncStorage]]></title>
             <link>https://amanhimself.dev//blog/building-offline-react-native-apps-with-asyncstorage</link>
             <guid>https://amanhimself.dev//blog/building-offline-react-native-apps-with-asyncstorage</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[Building offline React Native apps with AsyncStorage]]></description>
             <content:encoded><![CDATA[---
 title: 'Building offline React Native apps with AsyncStorage'
@@ -27790,7 +27790,7 @@ _Congratulations!_ You have just learned how to build an offline mobile applicat
             <title><![CDATA[How to use the Geolocation API in a React Native app]]></title>
             <link>https://amanhimself.dev//blog/how-to-use-the-geolocation-api-in-a-react-native-app</link>
             <guid>https://amanhimself.dev//blog/how-to-use-the-geolocation-api-in-a-react-native-app</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[How to use the Geolocation API in a React Native app]]></description>
             <content:encoded><![CDATA[---
 title: 'How to use the Geolocation API in a React Native app'
@@ -28415,7 +28415,7 @@ You’ve successfully used the knowledge of geolocation data and setting up perm
             <title><![CDATA[How to build a xylophone app with Audio API, React Native, and Expo]]></title>
             <link>https://amanhimself.dev//blog/how-to-build-xylophone-app-with-expo</link>
             <guid>https://amanhimself.dev//blog/how-to-build-xylophone-app-with-expo</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[How to build a xylophone app with Audio API, React Native, and Expo]]></description>
             <content:encoded><![CDATA[---
 title: 'How to build a xylophone app with Audio API, React Native, and Expo'
@@ -28754,7 +28754,7 @@ You have reached the end of this tutorial. I hope you have learned how to integr
             <title><![CDATA[How to Create a Chatbot with Dialogflow, NodeJS, and Webhooks]]></title>
             <link>https://amanhimself.dev//blog/build-chatbot-dialogflow-nodejs-webhooks</link>
             <guid>https://amanhimself.dev//blog/build-chatbot-dialogflow-nodejs-webhooks</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[How to Create a Chatbot with Dialogflow, NodeJS, and Webhooks]]></description>
             <content:encoded><![CDATA[---
 title: 'How to Create a Chatbot with Dialogflow, NodeJS, and Webhooks'
@@ -29080,7 +29080,7 @@ You have successfully created, deployed, and tested a Nodejs Webhook for Dialogf
             <title><![CDATA[Using React Router to Optimize Single Page Applications (SPAs)]]></title>
             <link>https://amanhimself.dev//blog/introduction-to-react-router-v4-with-reactjs</link>
             <guid>https://amanhimself.dev//blog/introduction-to-react-router-v4-with-reactjs</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[Using React Router to Optimize Single Page Applications (SPAs)]]></description>
             <content:encoded><![CDATA[---
 title: 'Using React Router to Optimize Single Page Applications (SPAs)'
@@ -29553,7 +29553,7 @@ Hopefully, by now, you are familiar with the basic concepts of how React Router 
             <title><![CDATA[To Travel, A Tech Conference and One Million views - a Recap]]></title>
             <link>https://amanhimself.dev//blog/to-travel-a-tech-conference-and-one-million-views-a-recap</link>
             <guid>https://amanhimself.dev//blog/to-travel-a-tech-conference-and-one-million-views-a-recap</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[To Travel, A Tech Conference and One Million views - a Recap]]></description>
             <content:encoded><![CDATA[---
 title: 'To Travel, A Tech Conference and One Million views - a Recap'
@@ -29652,7 +29652,7 @@ I do have some future plans for traveling. I want to experiment with it this tim
             <title><![CDATA[How to integrate Firebase and Firestore cloud database with a React application]]></title>
             <link>https://amanhimself.dev//blog/how-to-integrate-firebase-firestore-react-and-crowdbotics-platform</link>
             <guid>https://amanhimself.dev//blog/how-to-integrate-firebase-firestore-react-and-crowdbotics-platform</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[How to integrate Firebase and Firestore cloud database with a React application]]></description>
             <content:encoded><![CDATA[---
 title: 'How to integrate Firebase and Firestore cloud database with a React application'
@@ -29940,7 +29940,7 @@ You have now successfully integrated and added data to the Firebase store. The m
             <title><![CDATA[How to Setup a React App with TypeScript, Storybook]]></title>
             <link>https://amanhimself.dev//blog/setup-a-react-app-with-typescript-storybook</link>
             <guid>https://amanhimself.dev//blog/setup-a-react-app-with-typescript-storybook</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[How to Setup a React App with TypeScript, Storybook]]></description>
             <content:encoded><![CDATA[---
 title: 'How to Setup a React App with TypeScript, Storybook'
@@ -30182,7 +30182,7 @@ Kudos to you if have reached so far. You have configured Storybook work with Typ
             <title><![CDATA[Build a Custom Modal with the Animated API in React Native]]></title>
             <link>https://amanhimself.dev//blog/build-a-custom-modal-with-the-animated-api-in-react-native</link>
             <guid>https://amanhimself.dev//blog/build-a-custom-modal-with-the-animated-api-in-react-native</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[Build a Custom Modal with the Animated API in React Native]]></description>
             <content:encoded><![CDATA[---
 title: 'Build a Custom Modal with the Animated API in React Native'
@@ -30953,7 +30953,7 @@ This completes this tutorial about creating animated custom modal to provide a p
             <title><![CDATA[Build a Twitter Clone Server with Apollo, GraphQL, Nodejs, and Crowdbotics]]></title>
             <link>https://amanhimself.dev//blog/build-a-twitter-clone-server-with-apollo-graphql-nodejs</link>
             <guid>https://amanhimself.dev//blog/build-a-twitter-clone-server-with-apollo-graphql-nodejs</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[Build a Twitter Clone Server with Apollo, GraphQL, Nodejs, and Crowdbotics]]></description>
             <content:encoded><![CDATA[---
 title: 'Build a Twitter Clone Server with Apollo, GraphQL, Nodejs, and Crowdbotics'
@@ -31396,7 +31396,7 @@ You can find the complete code for the tutorial in this **[Github repository](ht
             <title><![CDATA[Building Stylistic UIs with Emotion-JS for React Native]]></title>
             <link>https://amanhimself.dev//blog/use-emotion-js-with-react-native</link>
             <guid>https://amanhimself.dev//blog/use-emotion-js-with-react-native</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[Building Stylistic UIs with Emotion-JS for React Native]]></description>
             <content:encoded><![CDATA[---
 title: 'Building Stylistic UIs with Emotion-JS for React Native'
@@ -32049,7 +32049,7 @@ You have completed the tutorial for creating UIs with Emotion-JS and integrate i
             <title><![CDATA[User Authentication with Amplify in a React Native and Expo app]]></title>
             <link>https://amanhimself.dev//blog/user-authentication-with-amplify-in-a-react-native-and-expo-app</link>
             <guid>https://amanhimself.dev//blog/user-authentication-with-amplify-in-a-react-native-and-expo-app</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[User Authentication with Amplify in a React Native and Expo app]]></description>
             <content:encoded><![CDATA[---
 title: 'User Authentication with Amplify in a React Native and Expo app'
@@ -32337,7 +32337,7 @@ You can find the complete code for this post in this [Github repository](https:/
             <title><![CDATA[Building a React Native Mobile App with AWS Amplify and Expo]]></title>
             <link>https://amanhimself.dev//blog/building-a-react-native-mobile-app-with-aws-amplify-and-expo</link>
             <guid>https://amanhimself.dev//blog/building-a-react-native-mobile-app-with-aws-amplify-and-expo</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[Building a React Native Mobile App with AWS Amplify and Expo]]></description>
             <content:encoded><![CDATA[---
 title: 'Building a React Native Mobile App with AWS Amplify and Expo'
@@ -32819,7 +32819,7 @@ You can find the complete code for this post in this [Github repository](https:/
             <title><![CDATA[How I Configure VSCode for Everything]]></title>
             <link>https://amanhimself.dev//blog/how-i-configure-vscode-for-everything</link>
             <guid>https://amanhimself.dev//blog/how-i-configure-vscode-for-everything</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[How I Configure VSCode for Everything]]></description>
             <content:encoded><![CDATA[---
 title: 'How I Configure VSCode for Everything'
@@ -32921,7 +32921,7 @@ Happy Coding!
             <title><![CDATA[React Hooks Basics — Building a React Native App with React Hooks]]></title>
             <link>https://amanhimself.dev//blog/build-a-react-native-app-with-react-hooks</link>
             <guid>https://amanhimself.dev//blog/build-a-react-native-app-with-react-hooks</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[React Hooks Basics — Building a React Native App with React Hooks]]></description>
             <content:encoded><![CDATA[---
 title: 'React Hooks Basics — Building a React Native App with React Hooks'
@@ -33542,7 +33542,7 @@ _The complete code for this tutorial is available in the Github repository below
             <title><![CDATA[How To Build Your First VR App with ViroReact, React Native, and Crowdbotics]]></title>
             <link>https://amanhimself.dev//blog/how-to-build-your-first-vr-app-with-viroreact-react-native-and-crowdbotics</link>
             <guid>https://amanhimself.dev//blog/how-to-build-your-first-vr-app-with-viroreact-react-native-and-crowdbotics</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[How To Build Your First VR App with ViroReact, React Native, and Crowdbotics]]></description>
             <content:encoded><![CDATA[---
 title: 'How To Build Your First VR App with ViroReact, React Native, and Crowdbotics'
@@ -33805,7 +33805,7 @@ The complete code for this tutorial is available in the Github repository below.
             <title><![CDATA[Build a Chatbot with Dialogflow and React Native]]></title>
             <link>https://amanhimself.dev//blog/build-a-chatbot-with-dialogflow-and-react-native</link>
             <guid>https://amanhimself.dev//blog/build-a-chatbot-with-dialogflow-and-react-native</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[Build a Chatbot with Dialogflow and React Native]]></description>
             <content:encoded><![CDATA[---
 title: 'Build a Chatbot with Dialogflow and React Native'
@@ -34224,7 +34224,7 @@ The possibilities of using a powerful API such as Dialogflow are endless. In no 
             <title><![CDATA[How to Build a Real Time Logo Detection App with React Native & Google Vision API]]></title>
             <link>https://amanhimself.dev//blog/how-to-build-a-real-time-logo-detection-app-with-react-native-google-vision-api-and-crowdbotics</link>
             <guid>https://amanhimself.dev//blog/how-to-build-a-real-time-logo-detection-app-with-react-native-google-vision-api-and-crowdbotics</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[How to Build a Real Time Logo Detection App with React Native & Google Vision API]]></description>
             <content:encoded><![CDATA[---
 title: 'How to Build a Real Time Logo Detection App with React Native & Google Vision API'
@@ -34704,7 +34704,7 @@ You can find the complete code in the **Github repository** below.
             <title><![CDATA[Using Styled Components with React Native]]></title>
             <link>https://amanhimself.dev//blog/using-styled-components-with-react-native</link>
             <guid>https://amanhimself.dev//blog/using-styled-components-with-react-native</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[Using Styled Components with React Native]]></description>
             <content:encoded><![CDATA[---
 title: 'Using Styled Components with React Native'
@@ -35426,7 +35426,7 @@ You can find the complete code for this article in the Github repo 👇
             <title><![CDATA[Create a React Native Image Recognition App with Google Vision API]]></title>
             <link>https://amanhimself.dev//blog/google-vision-api-firebase-react-native</link>
             <guid>https://amanhimself.dev//blog/google-vision-api-firebase-react-native</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[Create a React Native Image Recognition App with Google Vision API]]></description>
             <content:encoded><![CDATA[---
 title: 'Create a React Native Image Recognition App with Google Vision API'
@@ -36073,7 +36073,7 @@ You can find the complete code inside [this Github repo](https://github.com/aman
             <title><![CDATA[How To Build a News Reader App with React Native and NewsAPI]]></title>
             <link>https://amanhimself.dev//blog/how-to-build-a-news-reader-app-with-react-native-and-newsapi</link>
             <guid>https://amanhimself.dev//blog/how-to-build-a-news-reader-app-with-react-native-and-newsapi</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[How To Build a News Reader App with React Native and NewsAPI]]></description>
             <content:encoded><![CDATA[---
 title: 'How To Build a News Reader App with React Native and NewsAPI'
@@ -36507,7 +36507,7 @@ If you have any questions, you can reach out to me on [**Twitter**](https://www.
             <title><![CDATA[Top open source libraries for Node.js]]></title>
             <link>https://amanhimself.dev//blog/29-useful-open-source-libraries-for-nodejs</link>
             <guid>https://amanhimself.dev//blog/29-useful-open-source-libraries-for-nodejs</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[Top open source libraries for Node.js]]></description>
             <content:encoded><![CDATA[---
 title: 'Top open source libraries for Node.js'
@@ -36931,7 +36931,7 @@ _I hope this list gets you started to with most commonly used open source packag
             <title><![CDATA[21 Useful Open Source Packages for React Native]]></title>
             <link>https://amanhimself.dev//blog/21-useful-open-source-packages-for-react-native</link>
             <guid>https://amanhimself.dev//blog/21-useful-open-source-packages-for-react-native</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[21 Useful Open Source Packages for React Native]]></description>
             <content:encoded><![CDATA[---
 title: '21 Useful Open Source Packages for React Native'
@@ -37190,7 +37190,7 @@ There are other libraries that modules available for React Native for different 
             <title><![CDATA[3 Steps to learn React Native in 2019]]></title>
             <link>https://amanhimself.dev//blog/3-steps-to-learn-react-native-in-2019</link>
             <guid>https://amanhimself.dev//blog/3-steps-to-learn-react-native-in-2019</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[3 Steps to learn React Native in 2019]]></description>
             <content:encoded><![CDATA[---
 title: '3 Steps to learn React Native in 2019'
@@ -37267,7 +37267,7 @@ In simple words, React Native brings the React to mobile app development. Its go
             <title><![CDATA[Getting Started with React Native in 2019 - Build Your First App]]></title>
             <link>https://amanhimself.dev//blog/getting-started-with-react-native-in-2019-build-your-first-app</link>
             <guid>https://amanhimself.dev//blog/getting-started-with-react-native-in-2019-build-your-first-app</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[Getting Started with React Native in 2019 - Build Your First App]]></description>
             <content:encoded><![CDATA[---
 title: 'Getting Started with React Native in 2019 - Build Your First App'
@@ -37667,7 +37667,7 @@ Do not get overwhelmed by the number of mistakes you do or the errors you get. G
             <title><![CDATA[My Top Tutorials in Web Development and React Native in 2018]]></title>
             <link>https://amanhimself.dev//blog/my-top-tutorials-in-web-development-and-react-native-in-2018</link>
             <guid>https://amanhimself.dev//blog/my-top-tutorials-in-web-development-and-react-native-in-2018</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[My Top Tutorials in Web Development and React Native in 2018]]></description>
             <content:encoded><![CDATA[---
 title: 'My Top Tutorials in Web Development and React Native in 2018'
@@ -37745,7 +37745,7 @@ In 2019, I look forward to add more value to the tech community and help fellow 
             <title><![CDATA[Top Node.js Libraries and Tools For Machine Learning]]></title>
             <link>https://amanhimself.dev//blog/top-nodejs-libraries-and-tools-for-machine-learning</link>
             <guid>https://amanhimself.dev//blog/top-nodejs-libraries-and-tools-for-machine-learning</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[Top Node.js Libraries and Tools For Machine Learning]]></description>
             <content:encoded><![CDATA[---
 title: 'Top Node.js Libraries and Tools For Machine Learning'
@@ -38039,7 +38039,7 @@ I hope, this post prove useful to you as well for learning and using different l
             <title><![CDATA[How To Build a REST API With Nodejs and PostgreSQL]]></title>
             <link>https://amanhimself.dev//blog/how-to-build-a-rest-api-with-nodejs-and-postgresql</link>
             <guid>https://amanhimself.dev//blog/how-to-build-a-rest-api-with-nodejs-and-postgresql</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[How To Build a REST API With Nodejs and PostgreSQL]]></description>
             <content:encoded><![CDATA[---
 title: 'How To Build a REST API With Nodejs and PostgreSQL'
@@ -38699,7 +38699,7 @@ That’s it! In this article, you learned about using PostgreSQL as a database a
             <title><![CDATA[Integrating Firebase with React Native]]></title>
             <link>https://amanhimself.dev//blog/integrating-firebase-with-react-native</link>
             <guid>https://amanhimself.dev//blog/integrating-firebase-with-react-native</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[Integrating Firebase with React Native]]></description>
             <content:encoded><![CDATA[---
 title: 'Integrating Firebase with React Native'
@@ -39172,7 +39172,7 @@ You can find the complete code inside [this Github repo](https://github.com/aman
             <title><![CDATA[How To Build A Blog From Scratch With React, Markdown, GraphQL and Gatsbyjs]]></title>
             <link>https://amanhimself.dev//blog/how-to-build-your-own-blog-from-scratch-with-gatsbyjs-graphql-react-and-markdown</link>
             <guid>https://amanhimself.dev//blog/how-to-build-your-own-blog-from-scratch-with-gatsbyjs-graphql-react-and-markdown</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[How To Build A Blog From Scratch With React, Markdown, GraphQL and Gatsbyjs]]></description>
             <content:encoded><![CDATA[---
 title: 'How To Build A Blog From Scratch With React, Markdown, GraphQL and Gatsbyjs'
@@ -39612,7 +39612,7 @@ I challenge you to expand your own blog further by adding comments or tags funct
             <title><![CDATA[Building an authenticated MERN Stack App Using Material UI]]></title>
             <link>https://amanhimself.dev//blog/building-a-mern-stack-app-with-material-ui</link>
             <guid>https://amanhimself.dev//blog/building-a-mern-stack-app-with-material-ui</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[Building an authenticated MERN Stack App Using Material UI]]></description>
             <content:encoded><![CDATA[---
 title: 'Building an authenticated MERN Stack App Using Material UI'
@@ -41121,7 +41121,7 @@ If you want to learn **how to deploy this application, you can continue to read*
             <title><![CDATA[How to Build a Serverless Backend with AWS Lambda and Nodejs]]></title>
             <link>https://amanhimself.dev//blog/how-to-build-a-serverless-backend-with-aws-lambda-and-nodejs</link>
             <guid>https://amanhimself.dev//blog/how-to-build-a-serverless-backend-with-aws-lambda-and-nodejs</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[How to Build a Serverless Backend with AWS Lambda and Nodejs]]></description>
             <content:encoded><![CDATA[---
 title: 'How to Build a Serverless Backend with AWS Lambda and Nodejs'
@@ -41732,7 +41732,7 @@ Note", "description": "This is a note."}'
             <title><![CDATA[Creating a GraphQL server with Nodejs]]></title>
             <link>https://amanhimself.dev//blog/creating-a-graphql-server-with-nodejs-in-2018</link>
             <guid>https://amanhimself.dev//blog/creating-a-graphql-server-with-nodejs-in-2018</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[Creating a GraphQL server with Nodejs]]></description>
             <content:encoded><![CDATA[---
 title: 'Creating a GraphQL server with Nodejs'
@@ -42278,7 +42278,7 @@ You have learned how to configure an Express server with Apollo library to setup
             <title><![CDATA[How to use Import statements in Nodejs]]></title>
             <link>https://amanhimself.dev//blog/how-to-use-import-statements-in-nodejs</link>
             <guid>https://amanhimself.dev//blog/how-to-use-import-statements-in-nodejs</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[How to use Import statements in Nodejs]]></description>
             <content:encoded><![CDATA[---
 title: 'How to use Import statements in Nodejs'
@@ -42442,7 +42442,7 @@ _You can find the complete source code for the above article at_ [**_Github Repo
             <title><![CDATA[Setting up Nodejs Backend for a React App]]></title>
             <link>https://amanhimself.dev//blog/setting-up-nodejs-backend-for-a-react-app</link>
             <guid>https://amanhimself.dev//blog/setting-up-nodejs-backend-for-a-react-app</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[Setting up Nodejs Backend for a React App]]></description>
             <content:encoded><![CDATA[---
 title: 'Setting up Nodejs Backend for a React App'
@@ -42666,7 +42666,7 @@ _[Originally published at Crowdbotics](https://medium.com/crowdbotics/setting-up
             <title><![CDATA[Building a REST API with Koajs]]></title>
             <link>https://amanhimself.dev//blog/building-a-rest-api-with-koajs</link>
             <guid>https://amanhimself.dev//blog/building-a-rest-api-with-koajs</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[Building a REST API with Koajs]]></description>
             <content:encoded><![CDATA[---
 title: 'Building a REST API with Koajs'
@@ -43081,7 +43081,7 @@ This completes the basics of building a REST API using Koa as a Node.js framewor
             <title><![CDATA[Deploy a MERN stack app on Heroku]]></title>
             <link>https://amanhimself.dev//blog/deploy-a-mern-stack-app-on-heroku</link>
             <guid>https://amanhimself.dev//blog/deploy-a-mern-stack-app-on-heroku</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[Deploy a MERN stack app on Heroku]]></description>
             <content:encoded><![CDATA[---
 title: 'Deploy a MERN stack app on Heroku'
@@ -43807,7 +43807,7 @@ There are many deployment techniques that you can try on Heroku. The technique d
             <title><![CDATA[How to use React Navigation in a React Native App]]></title>
             <link>https://amanhimself.dev//blog/navigation-in-a-react-native-app</link>
             <guid>https://amanhimself.dev//blog/navigation-in-a-react-native-app</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[How to use React Navigation in a React Native App]]></description>
             <content:encoded><![CDATA[---
 title: 'How to use React Navigation in a React Native App'
@@ -44111,7 +44111,7 @@ It might take a while to grasp them and use them for your application but once y
             <title><![CDATA[Accessing Geo-location and App Permissions in React Native and Expo]]></title>
             <link>https://amanhimself.dev//blog/accessing-geo-location-and-app-permissions-in-react-native-and-expo</link>
             <guid>https://amanhimself.dev//blog/accessing-geo-location-and-app-permissions-in-react-native-and-expo</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[Accessing Geo-location and App Permissions in React Native and Expo]]></description>
             <content:encoded><![CDATA[---
 title: 'Accessing Geo-location and App Permissions in React Native and Expo'
@@ -44269,7 +44269,7 @@ If you want to learn more about working with Geolocation API in a React Native a
             <title><![CDATA[Simple Recipe to Build a Theme App in React Native]]></title>
             <link>https://amanhimself.dev//blog/simple-recipe-to-build-a-theme-app-in-react-native</link>
             <guid>https://amanhimself.dev//blog/simple-recipe-to-build-a-theme-app-in-react-native</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[Simple Recipe to Build a Theme App in React Native]]></description>
             <content:encoded><![CDATA[---
 title: 'Simple Recipe to Build a Theme App in React Native'
@@ -44362,7 +44362,7 @@ In above, `handleThemeChange` handles the dispatching of the only action we defi
             <title><![CDATA[How to integrate Redux into your application with React Native and Expo]]></title>
             <link>https://amanhimself.dev//blog/how-to-integrate-redux-into-your-application-with-react-native-and-expo</link>
             <guid>https://amanhimself.dev//blog/how-to-integrate-redux-into-your-application-with-react-native-and-expo</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[How to integrate Redux into your application with React Native and Expo]]></description>
             <content:encoded><![CDATA[---
 title: 'How to integrate Redux into your application with React Native and Expo'
@@ -44561,7 +44561,7 @@ _Do you remember me telling you about a particular file structure I followed in 
             <title><![CDATA[Week 3 with React Native - Why use Expo?]]></title>
             <link>https://amanhimself.dev//blog/week-3-with-react-native</link>
             <guid>https://amanhimself.dev//blog/week-3-with-react-native</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[Week 3 with React Native - Why use Expo?]]></description>
             <content:encoded><![CDATA[---
 title: 'Week 3 with React Native - Why use Expo?'
@@ -44617,7 +44617,7 @@ There are shortcomings using Expo. I am not going to list them here but the team
             <title><![CDATA[Week 2 With React Native - Building a Weather App]]></title>
             <link>https://amanhimself.dev//blog/week-2-with-react-native-building-a-weather-app</link>
             <guid>https://amanhimself.dev//blog/week-2-with-react-native-building-a-weather-app</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[Week 2 With React Native - Building a Weather App]]></description>
             <content:encoded><![CDATA[---
 title: 'Week 2 With React Native - Building a Weather App'
@@ -44690,7 +44690,7 @@ I also published another article this week on React Native:
             <title><![CDATA[React Native - How to Setup Your First App]]></title>
             <link>https://amanhimself.dev//blog/react-native-how-to-setup-your-first-app</link>
             <guid>https://amanhimself.dev//blog/react-native-how-to-setup-your-first-app</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[React Native - How to Setup Your First App]]></description>
             <content:encoded><![CDATA[---
 title: 'React Native - How to Setup Your First App'
@@ -44816,7 +44816,7 @@ It is more in-depth, and covers almost every basic aspect about React Native eco
             <title><![CDATA[Starting Over with React Native]]></title>
             <link>https://amanhimself.dev//blog/starting-over-with-react-native</link>
             <guid>https://amanhimself.dev//blog/starting-over-with-react-native</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[Starting Over with React Native]]></description>
             <content:encoded><![CDATA[---
 title: 'Starting Over with React Native'
@@ -44871,7 +44871,7 @@ _Thank you reading this post. I know I haven’t shared much about React Native 
             <title><![CDATA[How to Upload a File with Reactjs and Nodejs]]></title>
             <link>https://amanhimself.dev//blog/connecting-a-node-js-and-reactjs-example</link>
             <guid>https://amanhimself.dev//blog/connecting-a-node-js-and-reactjs-example</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[How to Upload a File with Reactjs and Nodejs]]></description>
             <content:encoded><![CDATA[---
 title: 'How to Upload a File with Reactjs and Nodejs'
@@ -45195,7 +45195,7 @@ You can find the complete code for this example at [**FileUpload-Example**](http
             <title><![CDATA[React Native - Building a Minimalist Weather App using Expo XDE]]></title>
             <link>https://amanhimself.dev//blog/react-native-building-a-minimalist-weather-app-using-expo-xde</link>
             <guid>https://amanhimself.dev//blog/react-native-building-a-minimalist-weather-app-using-expo-xde</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[React Native - Building a Minimalist Weather App using Expo XDE]]></description>
             <content:encoded><![CDATA[---
 title: 'React Native - Building a Minimalist Weather App using Expo XDE'
@@ -45727,7 +45727,7 @@ The whole code for this application is available at this [Github Repo](https://g
             <title><![CDATA[React Native - Getting Started with Lottie and Expo]]></title>
             <link>https://amanhimself.dev//blog/react-native-getting-started-with-lottie-and-expo</link>
             <guid>https://amanhimself.dev//blog/react-native-getting-started-with-lottie-and-expo</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[React Native - Getting Started with Lottie and Expo]]></description>
             <content:encoded><![CDATA[---
 title: 'React Native - Getting Started with Lottie and Expo'
@@ -45954,7 +45954,7 @@ _[Originally this article was published on Hackernoon.com](https://medium.com/ha
             <title><![CDATA[Build a Progressive Web App using React]]></title>
             <link>https://amanhimself.dev//blog/build-a-progressive-web-app-using-react</link>
             <guid>https://amanhimself.dev//blog/build-a-progressive-web-app-using-react</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[Build a Progressive Web App using React]]></description>
             <content:encoded><![CDATA[---
 title: 'Build a Progressive Web App using React'
@@ -46399,7 +46399,7 @@ You can find the complete code at [this Github repository](https://github.com/am
             <title><![CDATA[Designing a REST API with Node.js and MongoDB Atlas]]></title>
             <link>https://amanhimself.dev//blog/designing-a-rest-api-with-node-js-and-mongodb-atlas</link>
             <guid>https://amanhimself.dev//blog/designing-a-rest-api-with-node-js-and-mongodb-atlas</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[Designing a REST API with Node.js and MongoDB Atlas]]></description>
             <content:encoded><![CDATA[---
 title: 'Designing a REST API with Node.js and MongoDB Atlas'
@@ -46816,7 +46816,7 @@ You can find the complete code at this [Github repository](https://github.com/am
             <title><![CDATA[Gatsby.js - How to set up and use the React Static Site Generator]]></title>
             <link>https://amanhimself.dev//blog/setting-up-and-getting-used-to-gatsby</link>
             <guid>https://amanhimself.dev//blog/setting-up-and-getting-used-to-gatsby</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[Gatsby.js - How to set up and use the React Static Site Generator]]></description>
             <content:encoded><![CDATA[---
 title: 'Gatsby.js - How to set up and use the React Static Site Generator'
@@ -47176,7 +47176,7 @@ You can find the complete code of this project at this [GitHub Repo](https://git
             <title><![CDATA[Ionic 2/3 CLI Reference]]></title>
             <link>https://amanhimself.dev//blog/ionic-2-3-cli-reference</link>
             <guid>https://amanhimself.dev//blog/ionic-2-3-cli-reference</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[Ionic 2/3 CLI Reference]]></description>
             <content:encoded><![CDATA[---
 title: 'Ionic 2/3 CLI Reference'
@@ -47391,7 +47391,7 @@ $ git log --oneline --graph --decorate --color
             <title><![CDATA[Passing Data Between Pages in an Ionic Application]]></title>
             <link>https://amanhimself.dev//blog/passing-data-between-pages-in-an-ionic-application</link>
             <guid>https://amanhimself.dev//blog/passing-data-between-pages-in-an-ionic-application</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[Passing Data Between Pages in an Ionic Application]]></description>
             <content:encoded><![CDATA[---
 date: '2017-12-03'
@@ -47575,7 +47575,7 @@ _To get the full code of this demo app, you can visit_ [**this Github Repository
             <title><![CDATA[Tips for Creating Nodejs REST APIs]]></title>
             <link>https://amanhimself.dev//blog/tips-for-creating-node-js-rest-apis</link>
             <guid>https://amanhimself.dev//blog/tips-for-creating-node-js-rest-apis</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[Tips for Creating Nodejs REST APIs]]></description>
             <content:encoded><![CDATA[---
 title: 'Tips for Creating Nodejs REST APIs'
@@ -47649,7 +47649,7 @@ Express, Koa, Hapi all can be used for creating browser based applications but R
             <title><![CDATA[Multi Page Navigation in an Ionic App]]></title>
             <link>https://amanhimself.dev//blog/multi-page-navigation-in-an-ionic-app</link>
             <guid>https://amanhimself.dev//blog/multi-page-navigation-in-an-ionic-app</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[Multi Page Navigation in an Ionic App]]></description>
             <content:encoded><![CDATA[---
 date: '2017-11-19'
@@ -47912,7 +47912,7 @@ _To get the full code, you can visit_ [**this Github Repository**](https://githu
             <title><![CDATA[Using Google Fonts in an Ionic Application]]></title>
             <link>https://amanhimself.dev//blog/using-google-fonts-in-an-ionic-application</link>
             <guid>https://amanhimself.dev//blog/using-google-fonts-in-an-ionic-application</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[Using Google Fonts in an Ionic Application]]></description>
             <content:encoded><![CDATA[---
 date: '2017-11-09'
@@ -47980,7 +47980,7 @@ To get the full code, you can visit [**this Github Repository**](https://github.
             <title><![CDATA[Basic Navigation in Ionic Applications]]></title>
             <link>https://amanhimself.dev//blog/basic-navigation-in-ionic-applications</link>
             <guid>https://amanhimself.dev//blog/basic-navigation-in-ionic-applications</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[Basic Navigation in Ionic Applications]]></description>
             <content:encoded><![CDATA[---
 title: 'Basic Navigation in Ionic Applications'
@@ -48032,7 +48032,7 @@ Note: _Deeplinking is available in Ionic with URLs but that is altogether a diff
             <title><![CDATA[How to use Font Awesome in an Ionic Application]]></title>
             <link>https://amanhimself.dev//blog/how-to-use-font-awesome-in-an-ionic-application</link>
             <guid>https://amanhimself.dev//blog/how-to-use-font-awesome-in-an-ionic-application</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[How to use Font Awesome in an Ionic Application]]></description>
             <content:encoded><![CDATA[---
 date: '2017-10-18'
@@ -48144,7 +48144,7 @@ There are more than 675 icons available in FontAwesome and I think a combination
             <title><![CDATA[What is Ionic?]]></title>
             <link>https://amanhimself.dev//blog/what-is-ionic</link>
             <guid>https://amanhimself.dev//blog/what-is-ionic</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[What is Ionic?]]></description>
             <content:encoded><![CDATA[---
 date: '2017-10-12'
@@ -48233,7 +48233,7 @@ To install platform such as iOS and espcially android, I will want you to refer 
             <title><![CDATA[Introduction to Hybrid Mobile Apps]]></title>
             <link>https://amanhimself.dev//blog/introduction-to-hybrid-mobile-apps</link>
             <guid>https://amanhimself.dev//blog/introduction-to-hybrid-mobile-apps</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[Introduction to Hybrid Mobile Apps]]></description>
             <content:encoded><![CDATA[---
 date: '2017-10-05'
@@ -48292,7 +48292,7 @@ Other options which I haven’t tried yet but think are worth mentioning include
             <title><![CDATA[Remove node_modules Recursively]]></title>
             <link>https://amanhimself.dev//blog/remove-node-modules-recursively</link>
             <guid>https://amanhimself.dev//blog/remove-node-modules-recursively</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[Remove node_modules Recursively]]></description>
             <content:encoded><![CDATA[---
 date: '2017-09-10'
@@ -48341,7 +48341,7 @@ find . -name "bower_components" -exec rm -rf '{}' +
             <title><![CDATA[Setup Nodemon to auto restart Nodejs application server]]></title>
             <link>https://amanhimself.dev//blog/setup-nodemon-to-auto-restart-nodejs-application-server</link>
             <guid>https://amanhimself.dev//blog/setup-nodemon-to-auto-restart-nodejs-application-server</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[Setup Nodemon to auto restart Nodejs application server]]></description>
             <content:encoded><![CDATA[---
 date: '2017-09-10'
@@ -48511,7 +48511,7 @@ Full Source at [this Github Repository](https://github.com/amandeepmittal/nodemo
             <title><![CDATA[What’s New in npm 5?]]></title>
             <link>https://amanhimself.dev//blog/whats-new-in-npm-5</link>
             <guid>https://amanhimself.dev//blog/whats-new-in-npm-5</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[What’s New in npm 5?]]></description>
             <content:encoded><![CDATA[---
 title: 'What’s New in npm 5?'
@@ -48556,7 +48556,7 @@ npm install -g npm@latest
             <title><![CDATA[Converting a Buffer to JSON and Utf8 Strings in Nodejs]]></title>
             <link>https://amanhimself.dev//blog/converting-a-buffer-to-json-and-utf8-strings-in-nodejs</link>
             <guid>https://amanhimself.dev//blog/converting-a-buffer-to-json-and-utf8-strings-in-nodejs</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[Converting a Buffer to JSON and Utf8 Strings in Nodejs]]></description>
             <content:encoded><![CDATA[---
 title: 'Converting a Buffer to JSON and Utf8 Strings in Nodejs'
@@ -48634,7 +48634,7 @@ The other way to convert a buffer to a string is using `StringDecoder` core modu
             <title><![CDATA[Setting up MEAN Stack with Webstorm]]></title>
             <link>https://amanhimself.dev//blog/setting-up-mean-stack-with-webstorm</link>
             <guid>https://amanhimself.dev//blog/setting-up-mean-stack-with-webstorm</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[Setting up MEAN Stack with Webstorm]]></description>
             <content:encoded><![CDATA[---
 date: '2017-07-02'
@@ -48668,7 +48668,7 @@ I am sharing a video here which shows on how to get started with MEAN using JetB
             <title><![CDATA[How to paginate records in MySQL using Sequelize and Nodejs]]></title>
             <link>https://amanhimself.dev//blog/paginate-records-in-mysql-using-sequelize-and-nodejs</link>
             <guid>https://amanhimself.dev//blog/paginate-records-in-mysql-using-sequelize-and-nodejs</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[How to paginate records in MySQL using Sequelize and Nodejs]]></description>
             <content:encoded><![CDATA[---
 date: '2017-06-20'
@@ -48759,7 +48759,7 @@ router.get('/:page', (req, res) => {
             <title><![CDATA[Getting Started with Sequelize for Nodejs Applications]]></title>
             <link>https://amanhimself.dev//blog/getting-started-with-sequelize-for-nodejs</link>
             <guid>https://amanhimself.dev//blog/getting-started-with-sequelize-for-nodejs</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[Getting Started with Sequelize for Nodejs Applications]]></description>
             <content:encoded><![CDATA[---
 title: 'Getting Started with Sequelize for Nodejs Applications'
@@ -48925,7 +48925,7 @@ Sequelize is feature rich ORM for Node.js. It has a documentation that at times 
             <title><![CDATA[How to use ESLint in Node.js Applications]]></title>
             <link>https://amanhimself.dev//blog/how-to-use-eslint-in-node-js-applications</link>
             <guid>https://amanhimself.dev//blog/how-to-use-eslint-in-node-js-applications</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[How to use ESLint in Node.js Applications]]></description>
             <content:encoded><![CDATA[---
 title: 'How to use ESLint in Node.js Applications'
@@ -49069,7 +49069,7 @@ Another plugin, I find very useful is [one variable per var](https://www.npmjs.c
             <title><![CDATA[How to Mock Data for Node.js Applications using faker.js]]></title>
             <link>https://amanhimself.dev//blog/how-to-mock-data-for-nodejs-applications-using-fakerjs</link>
             <guid>https://amanhimself.dev//blog/how-to-mock-data-for-nodejs-applications-using-fakerjs</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[How to Mock Data for Node.js Applications using faker.js]]></description>
             <content:encoded><![CDATA[---
 title: 'How to Mock Data for Node.js Applications using faker.js'
@@ -49169,7 +49169,7 @@ For full source code at [this Github Repository](https://github.com/amandeepmitt
             <title><![CDATA[Getting Started with Ionic Framework]]></title>
             <link>https://amanhimself.dev//blog/getting-started-with-ionic-framework</link>
             <guid>https://amanhimself.dev//blog/getting-started-with-ionic-framework</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[Getting Started with Ionic Framework]]></description>
             <content:encoded><![CDATA[---
 title: 'Getting Started with Ionic Framework'
@@ -49340,7 +49340,7 @@ _I guess, you now have the idea of how an Hybrid application using Ionic Framewo
             <title><![CDATA[Migrating from Expressjs 4 to 5]]></title>
             <link>https://amanhimself.dev//blog/migrating-from-expressjs-4-to-5</link>
             <guid>https://amanhimself.dev//blog/migrating-from-expressjs-4-to-5</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[Migrating from Expressjs 4 to 5]]></description>
             <content:encoded><![CDATA[---
 date: '2017-01-11'
@@ -49384,7 +49384,7 @@ _The full list of changes or the official Express Migration Guide is to be found
             <title><![CDATA[Using Bower With Heroku]]></title>
             <link>https://amanhimself.dev//blog/using-bower-with-heroku</link>
             <guid>https://amanhimself.dev//blog/using-bower-with-heroku</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[Using Bower With Heroku]]></description>
             <content:encoded><![CDATA[---
 title: 'Using Bower With Heroku'
@@ -49427,7 +49427,7 @@ You can read more about customizing [**Heroku Build Process here**](https://devc
             <title><![CDATA[Writing a Node.js Twitter Bot Part 1]]></title>
             <link>https://amanhimself.dev//blog/node-js-twitter-bot-tutorial</link>
             <guid>https://amanhimself.dev//blog/node-js-twitter-bot-tutorial</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[Writing a Node.js Twitter Bot Part 1]]></description>
             <content:encoded><![CDATA[---
 date: '2016-12-25'
@@ -49797,7 +49797,7 @@ Update: the second part of this tutorial is available [here!](https://community.
             <title><![CDATA[Writing a Node.js Twitter Bot Part 2]]></title>
             <link>https://amanhimself.dev//blog/node-js-twitter-bot-tutorial-part-2</link>
             <guid>https://amanhimself.dev//blog/node-js-twitter-bot-tutorial-part-2</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[Writing a Node.js Twitter Bot Part 2]]></description>
             <content:encoded><![CDATA[---
 date: '2016-12-25'
@@ -49988,7 +49988,7 @@ You can do a lot of things with a Twitter Bot, whether for your own sole purpose
             <title><![CDATA[Create a Simple Twitter Bot with Node.js]]></title>
             <link>https://amanhimself.dev//blog/create-a-simple-twitter-bot-with-node-js</link>
             <guid>https://amanhimself.dev//blog/create-a-simple-twitter-bot-with-node-js</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[Create a Simple Twitter Bot with Node.js]]></description>
             <content:encoded><![CDATA[---
 title: 'Create a Simple Twitter Bot with Node.js'
@@ -50360,7 +50360,7 @@ For further reading check out [Botwiki.org](https://botwiki.org/bots/twitterbots
             <title><![CDATA[ATOM- An Editor of 21st Century]]></title>
             <link>https://amanhimself.dev//blog/atom-an-editor-of-21st-century</link>
             <guid>https://amanhimself.dev//blog/atom-an-editor-of-21st-century</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[ATOM- An Editor of 21st Century]]></description>
             <content:encoded><![CDATA[---
 title: 'ATOM- An Editor of 21st Century'
@@ -50443,7 +50443,7 @@ _Note: At the time of writing this post, Webstorm IDE did not have support for f
             <title><![CDATA[How process.nextTick() works in Node.js?]]></title>
             <link>https://amanhimself.dev//blog/how-process-nexttick-works-in-node-js</link>
             <guid>https://amanhimself.dev//blog/how-process-nexttick-works-in-node-js</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[How process.nextTick() works in Node.js?]]></description>
             <content:encoded><![CDATA[---
 title: 'How process.nextTick() works in Node.js?'
@@ -50497,7 +50497,7 @@ Processed in next iteration
             <title><![CDATA[The Node.js system]]></title>
             <link>https://amanhimself.dev//blog/nodejs-system</link>
             <guid>https://amanhimself.dev//blog/nodejs-system</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[The Node.js system]]></description>
             <content:encoded><![CDATA[---
 title: 'The Node.js system'
@@ -50568,7 +50568,7 @@ The image borrowed above clarifies and represents a complete Node.js System. I h
             <title><![CDATA[The Node way - Philosophy of a Platform]]></title>
             <link>https://amanhimself.dev//blog/the-node-way</link>
             <guid>https://amanhimself.dev//blog/the-node-way</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[The Node way - Philosophy of a Platform]]></description>
             <content:encoded><![CDATA[---
 title: 'The Node way - Philosophy of a Platform'
@@ -50608,7 +50608,7 @@ Another important aspect in the Node Philosophy is the dependency of each packag
             <title><![CDATA[JavaScript Code Conventions]]></title>
             <link>https://amanhimself.dev//blog/javascript-code-convetions</link>
             <guid>https://amanhimself.dev//blog/javascript-code-convetions</guid>
-            <pubDate>Sat, 19 Mar 2022 07:50:34 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2022 07:57:19 GMT</pubDate>
             <description><![CDATA[JavaScript Code Conventions]]></description>
             <content:encoded><![CDATA[---
 date: '2016-01-08'

@@ -42,7 +42,7 @@ const generateRssFeed = async () => {
     updated: date,
     generator: 'Feed for Node.js',
     feedLinks: {
-      rss2: `${siteURL}/rss/feed.xml`,
+      rss2: `${siteURL}/rss.xml`,
       json: `${siteURL}/rss/feed.json`,
       atom: `${siteURL}/rss/atom.xml`
     },
@@ -64,7 +64,7 @@ const generateRssFeed = async () => {
   });
 
   fs.mkdirSync('./public/rss', { recursive: true });
-  fs.writeFileSync('./public/rss/feed.xml', feed.rss2());
+  fs.writeFileSync('./public/rss.xml', feed.rss2());
   fs.writeFileSync('./public/rss/atom.xml', feed.atom1());
   fs.writeFileSync('./public/rss/feed.json', feed.json1());
 };
