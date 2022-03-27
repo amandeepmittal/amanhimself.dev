@@ -4,7 +4,7 @@ slug: 'use-key-extractor-in-react-native-flatlist'
 date: '2022-03-27'
 thumbnail: '/thumbnails/react.png'
 tag: 'react-native'
-canonicalUrl: 'https://heartbeat.fritz.ai/user-authentication-with-amplify-in-a-react-native-and-expo-app-d00cdaf1ac28'
+canonicalUrl: 'https://amanhimself.dev/blog/use-key-extractor-in-react-native-flatlist'
 ---
 
 ![cover_image](https://i.imgur.com/sRxXsyt.png)

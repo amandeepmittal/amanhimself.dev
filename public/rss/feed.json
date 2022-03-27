@@ -10,11 +10,11 @@
     "items": [
         {
             "id": "https://amanhimself.dev//blog/use-key-extractor-in-react-native-flatlist",
-            "content_html": "---\ntitle: \"When to use keyExtractor prop in React Native's FlatList\"\nslug: 'use-key-extractor-in-react-native-flatlist'\ndate: '2022-03-27'\nthumbnail: '/thumbnails/react.png'\ntag: 'react-native'\ncanonicalUrl: 'https://heartbeat.fritz.ai/user-authentication-with-amplify-in-a-react-native-and-expo-app-d00cdaf1ac28'\n---\n\n![cover_image](https://i.imgur.com/sRxXsyt.png)\n\n# When to use keyExtractor in React Native's FlatList\n\nIn React Native, the [FlatList component](https://reactnative.dev/docs/flatlist) works well to render a long list of data. It renders only the items are shown on the screen in a scrolling list and not all the data items at once.\n\nTo render a scrollable list of items using `FlatList`, you need to pass the required `data` prop to the component. The `data` prop accepts an array of items. Each item in the array represents a single item in the list. Another required prop is `renderItem`, which takes an item from the `data` and renders it on the list. This prop accepts a function that returns the JSX to be rendered.\n\nTo display an item in the scrollable list, the `FlatList` component requires that each item has a unique key such as an `id`. This key is what allows the `FlatList` component (since it uses [VirtualizedList](https://reactnative.dev/docs/virtualizedlist) under the hood) to track the order of items in the list. The key from the data array is extracted using the `keyExtractor` prop on the `FlatList` component.\n\nIn this post, let's talk about where you might need to use `keyExtractor` and what scenarios it is not required.\n\n## Display a list of items using FlatList\n\nConsider the following structure of data. There are ten items in the array, and each item has two properties, `id` and `title`. The `id` is the unique key for each item.\n\n```js\nconst DATA_WITH_ID = [\n  {\n    id: 1,\n    title: 'quidem molestiae enim'\n  },\n  {\n    id: 2,\n    title: 'sunt qui excepturi placeat culpa'\n  },\n  {\n    id: 3,\n    title: 'omnis laborum odio'\n  },\n  {\n    id: 4,\n    title: 'non esse culpa molestiae omnis sed optio'\n  },\n  {\n    id: 5,\n    title: 'eaque aut omnis a'\n  },\n  {\n    id: 6,\n    title: 'natus impedit quibusdam illo est'\n  },\n  {\n    id: 7,\n    title: 'quibusdam autem aliquid et et quia'\n  },\n  {\n    id: 8,\n    title: 'qui fuga est a eum'\n  },\n  {\n    id: 9,\n    title: 'saepe unde necessitatibus rem'\n  },\n  {\n    id: 10,\n    title: 'distinctio laborum qui'\n  }\n];\n```\n\nUsing the `FlatList` component, you want to render the `title` of each item as shown below:\n\n```js\nexport default function App() {\n  const renderList = ({ item }) => {\n    return (\n      <View style={styles.listItem}>\n        <Text style={styles.listItemText}>{item.title}</Text>\n      </View>\n    );\n  };\n\n  return (\n    <View style={styles.container}>\n      <FlatList data={DATA_WITH_ID} renderItem={renderList} />\n    </View>\n  );\n}\n```\n\nThe result of the above component will display a list of items without any errors or warnings. In addition, the `FlatList` component doesn't require a unique key to identify each item since the original data structure already contains a key called `id`.\n\nHere is the output on a device's screen from the above snippet:\n\n![ss2](https://i.imgur.com/ShoysNV.png)\n\n## Using the keyExtractor prop\n\nBy default, the `keyExtractor` prop checks for properties like `key` and `id` (in that order). If any of the two is present in the original data structure, it will be considered a the unique key by the `FlatList` component. In this case(as in the previous example), you do not have to explicitly use the `keyExtractor` prop.\n\nIf none of them are provided, the `FlatList` component will throw a warning \"VirtualizedList: missing keys for items ...\":\n\n![ss1](https://i.imgur.com/0zN4FXy.png)\n\nNow, let's consider a scenario where array of data contains a unique key with each list item but the name of the unique key is neither `key` nor `id`. It contains a unique key property with the name of `userId`.\n\n```js\nconst DATA_WITH_USER_ID = [\n  {\n    userId: 1,\n    title: 'quidem molestiae enim'\n  },\n  {\n    userId: 2,\n    title: 'sunt qui excepturi placeat culpa'\n  },\n  {\n    userId: 3,\n    title: 'omnis laborum odio'\n  },\n  {\n    userId: 4,\n    title: 'non esse culpa molestiae omnis sed optio'\n  },\n  {\n    userId: 5,\n    title: 'eaque aut omnis a'\n  },\n  {\n    userId: 6,\n    title: 'natus impedit quibusdam illo est'\n  },\n  {\n    userId: 7,\n    title: 'quibusdam autem aliquid et et quia'\n  },\n  {\n    userId: 8,\n    title: 'qui fuga est a eum'\n  },\n  {\n    userId: 9,\n    title: 'saepe unde necessitatibus rem'\n  },\n  {\n    userId: 10,\n    title: 'distinctio laborum qui'\n  }\n];\n```\n\nWhen rendering the list, you will see the warning in this case because the `FlatList` component doesn't recognize the `userId` as the `key` or `id` name in the original data structure.\n\nFor custom key names such as `userId` in the example above, the `keyExtractor` prop is used. It extracts the unique key name and its value and tells the `FlatList` component to track the items based on that value.\n\nFor the above array of data, modify the `FlatList` component and use the `keyExtractor` prop to extract the key:\n\n```js\n<FlatList\n  data={DATA_WITH_ID}\n  renderItem={renderList}\n  keyExtractor={item => item.userId}\n/>\n```\n\nThe warning will also disappear after this step.\n\n## Conclusion\n\nWhen using a `FlatList` component, if the data array has a unique `id` or a `key` property, you do not need to use the `keyExtractor` prop explicitly. However, for custom id names, use the `keyExtractor` prop to explicitly tell the component which unique key to extract.\n\nIf you like to learn more about React Native, check out the [React Native category](https://amanhimself.dev/tags/react-native/) and [Expo category](https://amanhimself.dev/tags/expo/) pages on my blog. You can also subscribe my [newsletter](https://www.getrevue.co/profile/amanhimself) or follow on [Twitter](https://twitter.com/amanhimself) to get updates on whenever I publish a new article or tutorial.\n",
+            "content_html": "---\ntitle: \"When to use keyExtractor prop in React Native's FlatList\"\nslug: 'use-key-extractor-in-react-native-flatlist'\ndate: '2022-03-27'\nthumbnail: '/thumbnails/react.png'\ntag: 'react-native'\ncanonicalUrl: 'https://amanhimself.dev/blog/use-key-extractor-in-react-native-flatlist'\n---\n\n![cover_image](https://i.imgur.com/sRxXsyt.png)\n\n# When to use keyExtractor in React Native's FlatList\n\nIn React Native, the [FlatList component](https://reactnative.dev/docs/flatlist) works well to render a long list of data. It renders only the items are shown on the screen in a scrolling list and not all the data items at once.\n\nTo render a scrollable list of items using `FlatList`, you need to pass the required `data` prop to the component. The `data` prop accepts an array of items. Each item in the array represents a single item in the list. Another required prop is `renderItem`, which takes an item from the `data` and renders it on the list. This prop accepts a function that returns the JSX to be rendered.\n\nTo display an item in the scrollable list, the `FlatList` component requires that each item has a unique key such as an `id`. This key is what allows the `FlatList` component (since it uses [VirtualizedList](https://reactnative.dev/docs/virtualizedlist) under the hood) to track the order of items in the list. The key from the data array is extracted using the `keyExtractor` prop on the `FlatList` component.\n\nIn this post, let's talk about where you might need to use `keyExtractor` and what scenarios it is not required.\n\n## Display a list of items using FlatList\n\nConsider the following structure of data. There are ten items in the array, and each item has two properties, `id` and `title`. The `id` is the unique key for each item.\n\n```js\nconst DATA_WITH_ID = [\n  {\n    id: 1,\n    title: 'quidem molestiae enim'\n  },\n  {\n    id: 2,\n    title: 'sunt qui excepturi placeat culpa'\n  },\n  {\n    id: 3,\n    title: 'omnis laborum odio'\n  },\n  {\n    id: 4,\n    title: 'non esse culpa molestiae omnis sed optio'\n  },\n  {\n    id: 5,\n    title: 'eaque aut omnis a'\n  },\n  {\n    id: 6,\n    title: 'natus impedit quibusdam illo est'\n  },\n  {\n    id: 7,\n    title: 'quibusdam autem aliquid et et quia'\n  },\n  {\n    id: 8,\n    title: 'qui fuga est a eum'\n  },\n  {\n    id: 9,\n    title: 'saepe unde necessitatibus rem'\n  },\n  {\n    id: 10,\n    title: 'distinctio laborum qui'\n  }\n];\n```\n\nUsing the `FlatList` component, you want to render the `title` of each item as shown below:\n\n```js\nexport default function App() {\n  const renderList = ({ item }) => {\n    return (\n      <View style={styles.listItem}>\n        <Text style={styles.listItemText}>{item.title}</Text>\n      </View>\n    );\n  };\n\n  return (\n    <View style={styles.container}>\n      <FlatList data={DATA_WITH_ID} renderItem={renderList} />\n    </View>\n  );\n}\n```\n\nThe result of the above component will display a list of items without any errors or warnings. In addition, the `FlatList` component doesn't require a unique key to identify each item since the original data structure already contains a key called `id`.\n\nHere is the output on a device's screen from the above snippet:\n\n![ss2](https://i.imgur.com/ShoysNV.png)\n\n## Using the keyExtractor prop\n\nBy default, the `keyExtractor` prop checks for properties like `key` and `id` (in that order). If any of the two is present in the original data structure, it will be considered a the unique key by the `FlatList` component. In this case(as in the previous example), you do not have to explicitly use the `keyExtractor` prop.\n\nIf none of them are provided, the `FlatList` component will throw a warning \"VirtualizedList: missing keys for items ...\":\n\n![ss1](https://i.imgur.com/0zN4FXy.png)\n\nNow, let's consider a scenario where array of data contains a unique key with each list item but the name of the unique key is neither `key` nor `id`. It contains a unique key property with the name of `userId`.\n\n```js\nconst DATA_WITH_USER_ID = [\n  {\n    userId: 1,\n    title: 'quidem molestiae enim'\n  },\n  {\n    userId: 2,\n    title: 'sunt qui excepturi placeat culpa'\n  },\n  {\n    userId: 3,\n    title: 'omnis laborum odio'\n  },\n  {\n    userId: 4,\n    title: 'non esse culpa molestiae omnis sed optio'\n  },\n  {\n    userId: 5,\n    title: 'eaque aut omnis a'\n  },\n  {\n    userId: 6,\n    title: 'natus impedit quibusdam illo est'\n  },\n  {\n    userId: 7,\n    title: 'quibusdam autem aliquid et et quia'\n  },\n  {\n    userId: 8,\n    title: 'qui fuga est a eum'\n  },\n  {\n    userId: 9,\n    title: 'saepe unde necessitatibus rem'\n  },\n  {\n    userId: 10,\n    title: 'distinctio laborum qui'\n  }\n];\n```\n\nWhen rendering the list, you will see the warning in this case because the `FlatList` component doesn't recognize the `userId` as the `key` or `id` name in the original data structure.\n\nFor custom key names such as `userId` in the example above, the `keyExtractor` prop is used. It extracts the unique key name and its value and tells the `FlatList` component to track the items based on that value.\n\nFor the above array of data, modify the `FlatList` component and use the `keyExtractor` prop to extract the key:\n\n```js\n<FlatList\n  data={DATA_WITH_ID}\n  renderItem={renderList}\n  keyExtractor={item => item.userId}\n/>\n```\n\nThe warning will also disappear after this step.\n\n## Conclusion\n\nWhen using a `FlatList` component, if the data array has a unique `id` or a `key` property, you do not need to use the `keyExtractor` prop explicitly. However, for custom id names, use the `keyExtractor` prop to explicitly tell the component which unique key to extract.\n\nIf you like to learn more about React Native, check out the [React Native category](https://amanhimself.dev/tags/react-native/) and [Expo category](https://amanhimself.dev/tags/expo/) pages on my blog. You can also subscribe my [newsletter](https://www.getrevue.co/profile/amanhimself) or follow on [Twitter](https://twitter.com/amanhimself) to get updates on whenever I publish a new article or tutorial.\n",
             "url": "https://amanhimself.dev//blog/use-key-extractor-in-react-native-flatlist",
             "title": "When to use keyExtractor prop in React Native's FlatList",
             "summary": "When to use keyExtractor prop in React Native's FlatList",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -26,7 +26,7 @@
             "url": "https://amanhimself.dev//blog/setup-nextjs-project-with-eslint-prettier-husky-lint-staged",
             "title": "Set up a Next.js project with ESLint, Prettier, Husky, and Lint Staged",
             "summary": "Set up a Next.js project with ESLint, Prettier, Husky, and Lint Staged",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -38,7 +38,7 @@
             "url": "https://amanhimself.dev//blog/install-nodejs-using-nvm-on-macos-m1",
             "title": "How to install Node.js using NVM on macOS M1",
             "summary": "How to install Node.js using NVM on macOS M1",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -50,7 +50,7 @@
             "url": "https://amanhimself.dev//blog/infinite-scroll-with-react-query-and-flatlist-in-react-native",
             "title": "Implementing Infinite Scroll with React Query and FlatList in React Native",
             "summary": "Implementing Infinite Scroll with React Query and FlatList in React Native",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -62,7 +62,7 @@
             "url": "https://amanhimself.dev//blog/how-to-rename-default-branch-name-in-git-and-github",
             "title": "How to rename default branch in Git and GitHub",
             "summary": "How to rename default branch in Git and GitHub",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -74,7 +74,7 @@
             "url": "https://amanhimself.dev//blog/tamagui-for-react-native",
             "title": "Tamagui for React Native: Create faster design systems",
             "summary": "Tamagui for React Native: Create faster design systems",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -86,7 +86,7 @@
             "url": "https://amanhimself.dev//blog/year-in-review-2021",
             "title": "2021 - A year in review",
             "summary": "2021 - A year in review",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -98,7 +98,7 @@
             "url": "https://amanhimself.dev//blog/show-hide-password-in-react-native-using-custom-hook",
             "title": "Create a custom hook to Show/Hide Password Visibility in React Native",
             "summary": "Create a custom hook to Show/Hide Password Visibility in React Native",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -110,7 +110,7 @@
             "url": "https://amanhimself.dev//blog/safe-area-context-in-react-native-apps",
             "title": "How to avoid notches with Safe Area Context in React Native apps",
             "summary": "How to avoid notches with Safe Area Context in React Native apps",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -122,7 +122,7 @@
             "url": "https://amanhimself.dev//blog/how-to-configure-vscode-bracket-colors-natively",
             "title": "How to configure VSCode Bracket Pair Colors Natively",
             "summary": "How to configure VSCode Bracket Pair Colors Natively",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -134,7 +134,7 @@
             "url": "https://amanhimself.dev//blog/how-to-add-a-splash-screen-and-app-icon-in-react-native-with-react-native-bootsplash",
             "title": "How to add Splash Screen and an App Icon in React Native",
             "summary": "How to add Splash Screen and an App Icon in React Native",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -146,7 +146,7 @@
             "url": "https://amanhimself.dev//blog/how-to-use-ios-simulator-in-full-screen",
             "title": "How to use iOS simulator in full-screen",
             "summary": "How to use iOS simulator in full-screen",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -158,7 +158,7 @@
             "url": "https://amanhimself.dev//blog/rctbridge-required-dispatch-sync-to-load-warning",
             "title": "How to solve RCTBridge required dispatch_sync to load warning on iOS for React Native",
             "summary": "How to solve RCTBridge required dispatch_sync to load warning on iOS for React Native",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -170,7 +170,7 @@
             "url": "https://amanhimself.dev//blog/multi-language-support-in-react-native-with-react-i18next",
             "title": "How to Offer Multi-language Support in a React Native App",
             "summary": "How to Offer Multi-language Support in a React Native App",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -182,7 +182,7 @@
             "url": "https://amanhimself.dev//blog/get-request-with-axios",
             "title": "GET Request params with Axios",
             "summary": "GET Request params with Axios",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -194,7 +194,7 @@
             "url": "https://amanhimself.dev//blog/environment-variables-in-expo-managed-workflow",
             "title": "Environment Variables in Expo and TypeScript",
             "summary": "Environment Variables in Expo and TypeScript",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -206,7 +206,7 @@
             "url": "https://amanhimself.dev//blog/no-code-way-of-payments-with-stripe-a-brief-guide",
             "title": "The No-Code Way of Payments with Stripe: A Brief Guide",
             "summary": "The No-Code Way of Payments with Stripe: A Brief Guide",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -218,7 +218,7 @@
             "url": "https://amanhimself.dev//blog/firebase-authentication-with-expo",
             "title": "How To Integrate Firebase Authentication With an Expo App",
             "summary": "How To Integrate Firebase Authentication With an Expo App",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -230,7 +230,7 @@
             "url": "https://amanhimself.dev//blog/common-proptypes-in-react-and-typescript",
             "title": "Common Prop Types in TypeScript and React",
             "summary": "Common Prop Types in TypeScript and React",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -242,7 +242,7 @@
             "url": "https://amanhimself.dev//blog/prop-types-in-react-and-typescript",
             "title": "Prop types in React and TypeScript",
             "summary": "Prop types in React and TypeScript",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -254,7 +254,7 @@
             "url": "https://amanhimself.dev//blog/first-three-months-as-developer-advocate",
             "title": "🌱 Life at Draftbit - First 3 Months as a Developer Advocate",
             "summary": "🌱 Life at Draftbit - First 3 Months as a Developer Advocate",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -266,7 +266,7 @@
             "url": "https://amanhimself.dev//blog/custom-preview-image-gallery-in-react-native",
             "title": "How to Create a Custom Image Gallery in React Native",
             "summary": "How to Create a Custom Image Gallery in React Native",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -278,7 +278,7 @@
             "url": "https://amanhimself.dev//blog/create-custom-tab-bar-in-react-native",
             "title": "How to Create a Custom Tab Bar in React Native",
             "summary": "How to Create a Custom Tab Bar in React Native",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -290,7 +290,7 @@
             "url": "https://amanhimself.dev//blog/how-to-use-es6-import-in-nodejs",
             "title": "How to use ES6 import syntax in Node.js",
             "summary": "How to use ES6 import syntax in Node.js",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -302,7 +302,7 @@
             "url": "https://amanhimself.dev//blog/upload-image-to-cloudinary-using-expo-camera",
             "title": "How to upload an image using Expo Camera to Cloudinary",
             "summary": "How to upload an image using Expo Camera to Cloudinary",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -314,7 +314,7 @@
             "url": "https://amanhimself.dev//blog/setup-macbook-m1",
             "title": "Setup Macbook M1 for Web and React Native development",
             "summary": "Setup Macbook M1 for Web and React Native development",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -326,7 +326,7 @@
             "url": "https://amanhimself.dev//blog/react-native-geolocation-to-get-postal-address",
             "title": "How to use React Native Geolocation to get Postal Address",
             "summary": "How to use React Native Geolocation to get Postal Address",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -338,7 +338,7 @@
             "url": "https://amanhimself.dev//blog/react-native-performance-do-and-dont",
             "title": "React Native Performance Do and Dont",
             "summary": "React Native Performance Do and Dont",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -350,7 +350,7 @@
             "url": "https://amanhimself.dev//blog/shared-element-transitions",
             "title": "How to use shared element transitions in React Native",
             "summary": "How to use shared element transitions in React Native",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -362,7 +362,7 @@
             "url": "https://amanhimself.dev//blog/react-navigation-remove-tab-bar-border",
             "title": "How to remove bottom tab bar border in React Navigation",
             "summary": "How to remove bottom tab bar border in React Navigation",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -374,7 +374,7 @@
             "url": "https://amanhimself.dev//blog/redux-persist-in-react-native-with-async-storage",
             "title": "How to use redux-persist in React Native with Asyncstorage",
             "summary": "How to use redux-persist in React Native with Asyncstorage",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -386,7 +386,7 @@
             "url": "https://amanhimself.dev//blog/app-icon-react-native-android",
             "title": "How to add an app icon in a React Native Android app",
             "summary": "How to add an app icon in a React Native Android app",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -398,7 +398,7 @@
             "url": "https://amanhimself.dev//blog/year-rewind-2020",
             "title": "Year Rewind: 2020",
             "summary": "Year Rewind: 2020",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -410,7 +410,7 @@
             "url": "https://amanhimself.dev//blog/custom-scroll-bar-indicator-with-react-native-animated-api",
             "title": "How to create a custom scrollbar with React Native Animated API",
             "summary": "How to create a custom scrollbar with React Native Animated API",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -422,7 +422,7 @@
             "url": "https://amanhimself.dev//blog/manage-state-with-usecontext-usereducer-in-react-apps",
             "title": "How to manage state in React apps with useReducer and useContext hooks",
             "summary": "How to manage state in React apps with useReducer and useContext hooks",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -434,7 +434,7 @@
             "url": "https://amanhimself.dev//blog/creating-and-validating-react-native-form-with-formik",
             "title": "Creating and Validating React Native Forms with Formik",
             "summary": "Creating and Validating React Native Forms with Formik",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -446,7 +446,7 @@
             "url": "https://amanhimself.dev//blog/harperdb-with-react-hooks",
             "title": "How to use HarperDB instance with React Hooks",
             "summary": "How to use HarperDB instance with React Hooks",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -458,7 +458,7 @@
             "url": "https://amanhimself.dev//blog/animate-header-view-on-scroll-with-react-native-animated-api",
             "title": "How to Animate a Header View on Scroll With React Native Animated",
             "summary": "How to Animate a Header View on Scroll With React Native Animated",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -470,7 +470,7 @@
             "url": "https://amanhimself.dev//blog/add-environment-variables-in-netlify-deployment",
             "title": "Add Environment Variables in a Netlify Deployment",
             "summary": "Add Environment Variables in a Netlify Deployment",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -482,7 +482,7 @@
             "url": "https://amanhimself.dev//blog/react-router-real-time-user-monitoring-react-apps",
             "title": "How to use React Router and real time user monitoring in React apps",
             "summary": "How to use React Router and real time user monitoring in React apps",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -494,7 +494,7 @@
             "url": "https://amanhimself.dev//blog/build-rest-api-with-nodejs-harperdb",
             "title": "Build a REST API with Node.js and HarperDB",
             "summary": "Build a REST API with Node.js and HarperDB",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -506,7 +506,7 @@
             "url": "https://amanhimself.dev//blog/firebase-config-in-a-react-app",
             "title": "How to setup a React App with a Firebase project",
             "summary": "How to setup a React App with a Firebase project",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -518,7 +518,7 @@
             "url": "https://amanhimself.dev//blog/styling-the-react-native-way",
             "title": "Styling The React Native Way",
             "summary": "Styling The React Native Way",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -530,7 +530,7 @@
             "url": "https://amanhimself.dev//blog/create-custom-headers-with-react-native-svg",
             "title": "How to create custom wavy headers with react-native-svg",
             "summary": "How to create custom wavy headers with react-native-svg",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -542,7 +542,7 @@
             "url": "https://amanhimself.dev//blog/material-ui-integration-with-react",
             "title": "How to integrate Material UI library in React apps",
             "summary": "How to integrate Material UI library in React apps",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -554,7 +554,7 @@
             "url": "https://amanhimself.dev//blog/chat-app-with-react-native-part-6",
             "title": "Chat app with React Native (Part 6) - Create a custom hook to change status bar styles",
             "summary": "Chat app with React Native (Part 6) - Create a custom hook to change status bar styles",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -566,7 +566,7 @@
             "url": "https://amanhimself.dev//blog/quarantine-pro-app",
             "title": "Creating \"Quarantine Pro\" — A Fun Learning Experiment in React Native",
             "summary": "Creating \"Quarantine Pro\" — A Fun Learning Experiment in React Native",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -578,7 +578,7 @@
             "url": "https://amanhimself.dev//blog/chat-app-with-react-native-part-5",
             "title": "Chat app with React Native (Part 5) - Create and Fetch Real-Time Messages with Firestore",
             "summary": "Chat app with React Native (Part 5) - Create and Fetch Real-Time Messages with Firestore",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -590,7 +590,7 @@
             "url": "https://amanhimself.dev//blog/integrate-apollo-client-in-react-native",
             "title": "How to integrate GraphQL and Apollo Client in React Native app",
             "summary": "How to integrate GraphQL and Apollo Client in React Native app",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -602,7 +602,7 @@
             "url": "https://amanhimself.dev//blog/chat-app-with-react-native-part-4",
             "title": "Chat app with React Native (part 4) - A guide to create Chat UI Screens with react-native-gifted-chat",
             "summary": "Chat app with React Native (part 4) - A guide to create Chat UI Screens with react-native-gifted-chat",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -614,7 +614,7 @@
             "url": "https://amanhimself.dev//blog/how-to-use-react-native-image-picker",
             "title": "An in-depth guide on how to use React Native Image Picker",
             "summary": "An in-depth guide on how to use React Native Image Picker",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -626,19 +626,7 @@
             "url": "https://amanhimself.dev//blog/chat-app-with-react-native-part-3",
             "title": "Chat app with React Native (part 3) - Create Firestore collections to store chat rooms",
             "summary": "Chat app with React Native (part 3) - Create Firestore collections to store chat rooms",
-            "date_modified": "2022-03-27T16:35:10.858Z",
-            "author": {
-                "name": "Aman Mittal",
-                "url": "https://twitter.com/amanhimself"
-            }
-        },
-        {
-            "id": "https://amanhimself.dev//blog/chat-app-with-react-native-part-2",
-            "content_html": "---\ntitle: 'Chat app with React Native (part 2) - Firebase Email Authentication with react-native-firebase'\ndate: '2020-04-16'\nslug: 'chat-app-with-react-native-part-2'\nthumbnail: '/thumbnails/react.png'\ntag: 'react-native'\ncanonicalUrl: 'https://heartbeat.fritz.ai/chat-app-with-react-native-part-2-firebase-user-authentication-with-react-native-firebase-533352870497'\n---\n\n![cover](https://i.imgur.com/ROYjoYo.jpg)\n\nIn [the first part of this tutorial series](https://amanhimself.dev/blog/chat-app-with-react-native-part-1) to build a chat-based app in React Native, we learned how to create reusable form elements using the react-native-paper UI library. Along with that, we learned how to install the navigation library react-navigation and configure a basic authentication stack navigator using two routes.\n\nIn this tutorial, let us start using a backend service to add real-time features to the Chat app. For backend services, I am going to use Firebase. You are going to learn how to install and configure Firebase SDK in a react native app with the help of [`react-native-firebase`](https://rnfirebase.io/) module as well as set up and configure Email authentication. In order to follow this tutorial and future posts, you are required to use a Firebase project.\n\n## Create a new Firebase project from console\n\nTo access the Firebase credentials for each mobile OS platform and configure them to use Firebase SDK, create a new Firebase project or use one if you have access already from [Firebase console](http://console.firebase.google.com/), you can skip this step.\n\nCreate a new project as shown below.\n\n<img src='https://miro.medium.com/max/1400/1*wYi5SITEofv4nuIAPnQglg.png' />\n\nComplete the details of your Firebase project:\n\n<img src='https://miro.medium.com/max/1090/1*UDDFg0ZBF7w1jwRRIqxcwA.png' />\n\nClick the button **Create project** and you are going to be redirected to the dashboard screen. That's it. You have successfully created a new Firebase project.\n\nNow make sure that the **Email** **Sign-in method** is enabled. From the Firebase console and navigate to **Authentication** section from the side menu.\n\n<img src='https://miro.medium.com/max/257/1*mGwJz9i3SAzboUgZhs21Ng.png' />\n\nGo to the second tab **Sign-in method** and make sure to enable the **Email** sign-in provider.\n\n<img src='https://miro.medium.com/max/1400/1*lYvrmJXPQBRrs8Xpvqn05w.png' />\n\n## Add Firebase SDK to React Native app\n\nIf you have used `react-native-firebase` version 5 or below, you must have noticed that it was a monorepo that used to manage all Firebase dependencies from one module.\n\nVersion 6 of this library wants you to only install those dependencies based on Firebase features that you want to use. For example, in the current app, to support the email authentication feature you are going to install the auth and core app package.\n\nFrom the terminal window execute the following command.\n\n```shell\nyarn add @react-native-firebase/app @react-native-firebase/auth\n```\n\n## Add Firebase credentials to your iOS app\n\nFirebase provides a file called `GoogleService-Info.plist` that contains all the API keys as well as other credentials for iOS devices to authenticate the correct Firebase project.\n\nTo get these credentials, go to back to the [Firebase console](http://console.firebase.google.com/) in a browser window. From the dashboard screen of your Firebase project, open **Project settings** from the side menu.\n\n<img src='https://miro.medium.com/max/241/1*Vh9zbrjZEGjKJl0XDCfFQQ.png' />\n\nGo to **Your apps** section and click on the icon iOS to select the platform.\n\n<img src='https://miro.medium.com/max/1396/1*nYRgVjO8DFSOdOJhPU-1DA.png' />\n\nEnter the application details and click on **Register app**.\n\n<img src='https://miro.medium.com/max/1270/1*Z1v4E3vhPGXmwfwrFtaxsA.png' />\n\nThen download the `GoogleService-Info.plist` file as shown below.\n\n<img src='https://miro.medium.com/max/1400/1*mKKqIHaDcv2UQsG-3idn7Q.png' />\n\nOpen Xcode, then open the file `/ios/ChatApp.xcodeproj` file. Right-click on the project name and **Add Files** option, then select the file to add to this project.\n\n<img src='https://miro.medium.com/max/273/1*800RInfgPmKJXt_k58xQ4w.png' />\n\nThen open `ios/ChatApp/AppDelegate.m` and add the following header.\n\n```c\n#import <Firebase.h>\n```\n\nIn the same file, within the `didFinishLaunchingWithOptions` method, add the following configure method.\n\n```c\n- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {\n    if ([FIRApp defaultApp] == nil) {\n      [FIRApp configure];\n    }\n```\n\nLastly, go back to the terminal window to install pods.\n\n```js\ncd ios/ && pod install\n# after pods are installed\ncd ..\n```\n\nMake sure you build the iOS app.\n\n```js\nnpx react-native run-ios\n```\n\nThat's it. The configuration to set up a Firebase SDK and credentials in a React Native app is complete.\n\n## Create a home screen\n\nIn the previous post, you have successfully configured an Auth stack that displays those screens when the end-user is not authorized or logged in inside the app. There are a set of screens that are only going to be accessible to the user when they are logged in. Let us call the group of screens that are visible after login, home stack.\n\nOne such screen is going to be a home screen where all the chat rooms are going to be listed. In this section, let us start by creating a basic home screen such that you can complete navigational flow between the home stack and the auth stack.\n\nCreate a new screen component called `HomeScreen.js` inside `src/screens/` directory with the following code snippet.\n\n```js\nimport React from 'react';\nimport { View, StyleSheet } from 'react-native';\nimport { Title } from 'react-native-paper';\n\nexport default function HomeScreen() {\n  return (\n    <View style={styles.container}>\n      <Title>Home Screen</Title>\n      <Title>All chat rooms will be listed here</Title>\n      <FormButton modeValue=\"contained\" title=\"Logout\" />\n    </View>\n  );\n}\n\nconst styles = StyleSheet.create({\n  container: {\n    backgroundColor: '#f5f5f5',\n    flex: 1,\n    justifyContent: 'center',\n    alignItems: 'center'\n  }\n});\n```\n\n## Create home stack navigator\n\nCreate a new stack navigator file called `HomeStack.js` inside `src/navigation.js` that is going to have those routes which are only available after logging in. You can think of these routes as protected routes.\n\nOpen this file and add the following code snippet. Nothing new is going in terms of creating a stack navigator as shown below.\n\n```js\nimport React from 'react';\nimport { createStackNavigator } from '@react-navigation/stack';\nimport HomeScreen from '../screens/HomeScreen';\n\nconst Stack = createStackNavigator();\n\nexport default function HomeStack() {\n  return (\n    <Stack.Navigator>\n      <Stack.Screen name=\"Home\" component={HomeScreen} />\n    </Stack.Navigator>\n  );\n}\n```\n\n## Create an auth provider\n\nIn this section, you are going to create an authentication provider to check whether the user is logged in or not and access them if they are logged in.\n\nCreate a new file called `AuthProvider.js` inside `src/navigation/`. Start by importing the following statements.\n\n```js\nimport React, { createContext, useState } from 'react';\nimport auth from '@react-native-firebase/auth';\n```\n\nThen create an `AuthContext` and make sure to export it since you are going to use it on several different screens.\n\n```js\nexport const AuthContext = createContext({});\n```\n\nIn Reactjs, the [Context API](https://reactjs.org/docs/context.html#reactcreatecontext) is designed to share data that is considered global for a tree of React components. When you are creating a context (like above), there is a requirement to pass a default value. This value is used when a component does not have a matching Provider.\n\nThe Provider allows the React components to subscribe to the context changes. To create an auth provider, export a function called `AuthProvider`. This provider is going to allow the screen components to access the current user in the application. Define a state variable called `user`.\n\n```js\nexport const AuthProvider = ({ children }) => {\n  const [user, setUser] = useState(null);\n\n  return (\n    <AuthContext.Provider\n      value={{\n        user,\n        setUser,\n        login: async (email, password) => {\n          try {\n            await auth().signInWithEmailAndPassword(email, password);\n          } catch (e) {\n            console.log(e);\n          }\n        },\n        register: async (email, password) => {\n          try {\n            await auth().createUserWithEmailAndPassword(email, password);\n          } catch (e) {\n            console.log(e);\n          }\n        },\n        logout: async () => {\n          try {\n            await auth().signOut();\n          } catch (e) {\n            console.error(e);\n          }\n        }\n      }}\n    >\n      {children}\n    </AuthContext.Provider>\n  );\n};\n```\n\nIn the `value` prop above, also define some functions. These functions are now available to be used anywhere in the screens component tree using React Context.\n\nEach of the functions is consuming Firebase methods to interact with real-time Firebase backend service. Both the login and register functions require the user's `email` and `password` to verify/save credentials. The logout method invokes a simple `signOut()` method. All these Firebase methods are available from the `@react-native-firebase/auth` package. Do note that, all these functions are asynchronous actions and thus, using `async await` syntax helps.\n\n## Wrapping routes with auth provider\n\nNow, that the provider is created, but how to use for a set of components in the current app tree? Well, you have to wrap this provider around the `Routes` such as to use the helper functions as well as the value of current `user` (as described above) in the screen components.\n\nOpen `navigation/index.js` file and modify it as follows.\n\n```js\nimport React from 'react';\nimport { Provider as PaperProvider } from 'react-native-paper';\nimport { AuthProvider } from './AuthProvider';\nimport Routes from './Routes';\n\n/**\n * Wrap all providers here\n */\n\nexport default function Providers() {\n  return (\n    <PaperProvider>\n      <AuthProvider>\n        <Routes />\n      </AuthProvider>\n    </PaperProvider>\n  );\n}\n```\n\nRemember, from the previous post, we added that comment that to wrap all components using all providers in this file? Well, that's what this file is for.\n\n## Check if the user is logged in or not\n\nTo check if the user is logged or not, let us modify the `navigation/Routes.js` file. Using the value of the `user` from the auth provider, you are going to switch between the stack navigators. To start, make sure you imported the following statements.\n\n```js\nimport React, { useContext, useState, useEffect } from 'react';\nimport { NavigationContainer } from '@react-navigation/native';\nimport auth from '@react-native-firebase/auth';\nimport AuthStack from './AuthStack';\nimport HomeStack from './HomeStack';\nimport { AuthContext } from './AuthProvider';\nimport Loading from '../components/Loading';\n```\n\nFrom the above snippet, ignore the `Loading` component for now. You are going to create it at the end of this section.\n\nNow, inside the `Routes` function, you are two define two state variables `initializing` and `loading` to check whether the user's state is logged in or not. Also, from the context value, fetch `user` and `setUser`.\n\nThen, define a function called `onAuthStateChanged` which is going to handle user state changes. Using `useEffect` hook, you can subscribe to this state change function and make sure you unsubscribe it when the component unmounts. This method allows you to subscribe to real-time events when the user performs an action. The action here can be, logging in, signing out, and so on.\n\n```js\nexport default function Routes() {\n  const { user, setUser } = useContext(AuthContext);\n  const [loading, setLoading] = useState(true);\n  const [initializing, setInitializing] = useState(true);\n\n  // Handle user state changes\n  function onAuthStateChanged(user) {\n    setUser(user);\n    if (initializing) setInitializing(false);\n    setLoading(false);\n  }\n\n  useEffect(() => {\n    const subscriber = auth().onAuthStateChanged(onAuthStateChanged);\n    return subscriber; // unsubscribe on unmount\n  }, []);\n\n  if (loading) {\n    return <Loading />;\n  }\n\n  return (\n    <NavigationContainer>\n      {user ? <HomeStack /> : <AuthStack />}\n    </NavigationContainer>\n  );\n}\n```\n\nLastly, create a new component file called `Loading.js` inside `src/components/` directory. This component is going to be responsible to display a loading spinner.\n\n```js\nimport React from 'react';\nimport { View, ActivityIndicator, StyleSheet } from 'react-native';\n\nexport default function Loading() {\n  return (\n    <View style={styles.loadingContainer}>\n      <ActivityIndicator size=\"large\" color=\"#6646ee\" />\n    </View>\n  );\n}\n\nconst styles = StyleSheet.create({\n  loadingContainer: {\n    flex: 1,\n    alignItems: 'center',\n    justifyContent: 'center'\n  }\n});\n```\n\n## Completing the app\n\nIn order for the user to perform auth actions in the app, you have to use the context in each of the screen components for different actions.\n\nStart by opening `LoginScreen.js`. Import `useContext` from react and `AuthContext` from `AuthProvider`.\n\n```js\nimport React, { useState, useContext } from 'react';\n// rest of the import statements remain same\nimport { AuthContext } from '../navigation/AuthProvider';\n\nexport default function LoginScreen({ navigation }) {\n  const { login } = useContext(AuthContext);\n\n  // rest remains statements\n}\n```\n\nInside the `LoginScreen` function, make sure to add an `onPress` prop as shown below.\n\n```js\n<FormButton\n  title=\"Login\"\n  modeValue=\"contained\"\n  labelStyle={styles.loginButtonLabel}\n  onPress={() => login(email, password)}\n/>\n```\n\nSimilarly, you have to modify the `SignupScreen.js` file.\n\n```js\nimport React, { useState, useContext } from 'react';\n// rest of the import statements remain same\nimport { AuthContext } from '../navigation/AuthProvider';\n\nexport default function SignupScreen({ navigation }) {\n  const { register } = useContext(AuthContext);\n  // rest remains statements\n}\n\n// Add the onPress prop to <FormButton />\n\n<FormButton\n  title=\"Signup\"\n  modeValue=\"contained\"\n  labelStyle={styles.loginButtonLabel}\n  onPress={() => register(email, password)}\n/>;\n```\n\nLastly, modify the `HomeScreen` to add a sign out button and when the user is in the logged-in state, display their user `uid` (_the unique identifier in Firebase to differentiate and store different users_).\n\n```js\nimport React, { useContext } from 'react';\nimport { View, StyleSheet } from 'react-native';\nimport { Title } from 'react-native-paper';\nimport { AuthContext } from '../navigation/AuthProvider';\nimport FormButton from '../components/FormButton';\n\nexport default function HomeScreen() {\n  const { user, logout } = useContext(AuthContext);\n\n  return (\n    <View style={styles.container}>\n      <Title>Home Screen</Title>\n      <Title>All chat rooms will be listed here</Title>\n      <Title>{user.uid}</Title>\n      <FormButton\n        modeValue=\"contained\"\n        title=\"Logout\"\n        onPress={() => logout()}\n      />\n    </View>\n  );\n}\n\nconst styles = StyleSheet.create({\n  container: {\n    backgroundColor: '#f5f5f5',\n    flex: 1,\n    justifyContent: 'center',\n    alignItems: 'center'\n  }\n});\n```\n\nGo to the simulator, and you are going to get similar results as shown below. Perform these steps. Try creating a new user from the sign-up screen, and you are going to get their `uid` on the home screen.\n\n<img src='https://miro.medium.com/max/684/1*2HWlA1jyqJzAIhxgHDB0sg.gif' />\n\nYou can verify the `uid` of the current user by going to the dashboard screen from Firebase console.\n\n<img src='https://miro.medium.com/max/1400/1*NVUhPQOP2YjgYF_qmCdXBQ.png' />\n\n## Conclusion\n\n_Congratulations!_ You've completed this tutorial and successfully added an authentication flow between the two stack navigators. In the next part of this series, we'll explore more features such as creating and storing chat rooms in a collection in Firestore, as well as displaying all chat rooms on the home screen. To create a new chat room, we'll create a new modal screen and make changes to the current home stack accordingly.\n\n---\n\n## What's Next?\n\nIn the [next post](https://amanhimself.dev/blog/chat-app-with-react-native-part-3) of this series, we are going to explore how to create a modal screen using `react-navigation` stack navigator. This modal screen is going to have separate navigator as well as to be used to create a new chat room.\n\nThen, we are going to add Firebase NoSQL database Firestore and add a query to store the name of a chat room in a collection.\n\nYou can find the complete source code for this project at [this Github repo](https://github.com/amandeepmittal/react-native-examples/tree/master/ChatApp).\n\n---\n\n👉 Here is a list of resources used in this tutorial:\n\n- Reactjs [Context API](https://reactjs.org/docs/context.html#reactcreatecontext)\n- [Firebase Authentication reference](https://invertase.io/oss/react-native-firebase/v6/auth/quick-start) from `react-native-firebase`\n- Getting started with stack navigator using `react-navigation` v5 [here](https://heartbeat.fritz.ai/getting-started-with-stack-navigator-using-react-navigation-5-in-react-native-and-expo-apps-4c516becaee1)\n\nOriginally published at [Heartbeat.Fritz.Ai](https://heartbeat.fritz.ai/chat-app-with-react-native-part-2-firebase-user-authentication-with-react-native-firebase-533352870497).\n",
-            "url": "https://amanhimself.dev//blog/chat-app-with-react-native-part-2",
-            "title": "Chat app with React Native (part 2) - Firebase Email Authentication with react-native-firebase",
-            "summary": "Chat app with React Native (part 2) - Firebase Email Authentication with react-native-firebase",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -650,7 +638,19 @@
             "url": "https://amanhimself.dev//blog/add-search-bar-to-a-flatlist-in-react-native",
             "title": "How to add a Search bar in a FlatList in React Native apps",
             "summary": "How to add a Search bar in a FlatList in React Native apps",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
+            "author": {
+                "name": "Aman Mittal",
+                "url": "https://twitter.com/amanhimself"
+            }
+        },
+        {
+            "id": "https://amanhimself.dev//blog/chat-app-with-react-native-part-2",
+            "content_html": "---\ntitle: 'Chat app with React Native (part 2) - Firebase Email Authentication with react-native-firebase'\ndate: '2020-04-16'\nslug: 'chat-app-with-react-native-part-2'\nthumbnail: '/thumbnails/react.png'\ntag: 'react-native'\ncanonicalUrl: 'https://heartbeat.fritz.ai/chat-app-with-react-native-part-2-firebase-user-authentication-with-react-native-firebase-533352870497'\n---\n\n![cover](https://i.imgur.com/ROYjoYo.jpg)\n\nIn [the first part of this tutorial series](https://amanhimself.dev/blog/chat-app-with-react-native-part-1) to build a chat-based app in React Native, we learned how to create reusable form elements using the react-native-paper UI library. Along with that, we learned how to install the navigation library react-navigation and configure a basic authentication stack navigator using two routes.\n\nIn this tutorial, let us start using a backend service to add real-time features to the Chat app. For backend services, I am going to use Firebase. You are going to learn how to install and configure Firebase SDK in a react native app with the help of [`react-native-firebase`](https://rnfirebase.io/) module as well as set up and configure Email authentication. In order to follow this tutorial and future posts, you are required to use a Firebase project.\n\n## Create a new Firebase project from console\n\nTo access the Firebase credentials for each mobile OS platform and configure them to use Firebase SDK, create a new Firebase project or use one if you have access already from [Firebase console](http://console.firebase.google.com/), you can skip this step.\n\nCreate a new project as shown below.\n\n<img src='https://miro.medium.com/max/1400/1*wYi5SITEofv4nuIAPnQglg.png' />\n\nComplete the details of your Firebase project:\n\n<img src='https://miro.medium.com/max/1090/1*UDDFg0ZBF7w1jwRRIqxcwA.png' />\n\nClick the button **Create project** and you are going to be redirected to the dashboard screen. That's it. You have successfully created a new Firebase project.\n\nNow make sure that the **Email** **Sign-in method** is enabled. From the Firebase console and navigate to **Authentication** section from the side menu.\n\n<img src='https://miro.medium.com/max/257/1*mGwJz9i3SAzboUgZhs21Ng.png' />\n\nGo to the second tab **Sign-in method** and make sure to enable the **Email** sign-in provider.\n\n<img src='https://miro.medium.com/max/1400/1*lYvrmJXPQBRrs8Xpvqn05w.png' />\n\n## Add Firebase SDK to React Native app\n\nIf you have used `react-native-firebase` version 5 or below, you must have noticed that it was a monorepo that used to manage all Firebase dependencies from one module.\n\nVersion 6 of this library wants you to only install those dependencies based on Firebase features that you want to use. For example, in the current app, to support the email authentication feature you are going to install the auth and core app package.\n\nFrom the terminal window execute the following command.\n\n```shell\nyarn add @react-native-firebase/app @react-native-firebase/auth\n```\n\n## Add Firebase credentials to your iOS app\n\nFirebase provides a file called `GoogleService-Info.plist` that contains all the API keys as well as other credentials for iOS devices to authenticate the correct Firebase project.\n\nTo get these credentials, go to back to the [Firebase console](http://console.firebase.google.com/) in a browser window. From the dashboard screen of your Firebase project, open **Project settings** from the side menu.\n\n<img src='https://miro.medium.com/max/241/1*Vh9zbrjZEGjKJl0XDCfFQQ.png' />\n\nGo to **Your apps** section and click on the icon iOS to select the platform.\n\n<img src='https://miro.medium.com/max/1396/1*nYRgVjO8DFSOdOJhPU-1DA.png' />\n\nEnter the application details and click on **Register app**.\n\n<img src='https://miro.medium.com/max/1270/1*Z1v4E3vhPGXmwfwrFtaxsA.png' />\n\nThen download the `GoogleService-Info.plist` file as shown below.\n\n<img src='https://miro.medium.com/max/1400/1*mKKqIHaDcv2UQsG-3idn7Q.png' />\n\nOpen Xcode, then open the file `/ios/ChatApp.xcodeproj` file. Right-click on the project name and **Add Files** option, then select the file to add to this project.\n\n<img src='https://miro.medium.com/max/273/1*800RInfgPmKJXt_k58xQ4w.png' />\n\nThen open `ios/ChatApp/AppDelegate.m` and add the following header.\n\n```c\n#import <Firebase.h>\n```\n\nIn the same file, within the `didFinishLaunchingWithOptions` method, add the following configure method.\n\n```c\n- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {\n    if ([FIRApp defaultApp] == nil) {\n      [FIRApp configure];\n    }\n```\n\nLastly, go back to the terminal window to install pods.\n\n```js\ncd ios/ && pod install\n# after pods are installed\ncd ..\n```\n\nMake sure you build the iOS app.\n\n```js\nnpx react-native run-ios\n```\n\nThat's it. The configuration to set up a Firebase SDK and credentials in a React Native app is complete.\n\n## Create a home screen\n\nIn the previous post, you have successfully configured an Auth stack that displays those screens when the end-user is not authorized or logged in inside the app. There are a set of screens that are only going to be accessible to the user when they are logged in. Let us call the group of screens that are visible after login, home stack.\n\nOne such screen is going to be a home screen where all the chat rooms are going to be listed. In this section, let us start by creating a basic home screen such that you can complete navigational flow between the home stack and the auth stack.\n\nCreate a new screen component called `HomeScreen.js` inside `src/screens/` directory with the following code snippet.\n\n```js\nimport React from 'react';\nimport { View, StyleSheet } from 'react-native';\nimport { Title } from 'react-native-paper';\n\nexport default function HomeScreen() {\n  return (\n    <View style={styles.container}>\n      <Title>Home Screen</Title>\n      <Title>All chat rooms will be listed here</Title>\n      <FormButton modeValue=\"contained\" title=\"Logout\" />\n    </View>\n  );\n}\n\nconst styles = StyleSheet.create({\n  container: {\n    backgroundColor: '#f5f5f5',\n    flex: 1,\n    justifyContent: 'center',\n    alignItems: 'center'\n  }\n});\n```\n\n## Create home stack navigator\n\nCreate a new stack navigator file called `HomeStack.js` inside `src/navigation.js` that is going to have those routes which are only available after logging in. You can think of these routes as protected routes.\n\nOpen this file and add the following code snippet. Nothing new is going in terms of creating a stack navigator as shown below.\n\n```js\nimport React from 'react';\nimport { createStackNavigator } from '@react-navigation/stack';\nimport HomeScreen from '../screens/HomeScreen';\n\nconst Stack = createStackNavigator();\n\nexport default function HomeStack() {\n  return (\n    <Stack.Navigator>\n      <Stack.Screen name=\"Home\" component={HomeScreen} />\n    </Stack.Navigator>\n  );\n}\n```\n\n## Create an auth provider\n\nIn this section, you are going to create an authentication provider to check whether the user is logged in or not and access them if they are logged in.\n\nCreate a new file called `AuthProvider.js` inside `src/navigation/`. Start by importing the following statements.\n\n```js\nimport React, { createContext, useState } from 'react';\nimport auth from '@react-native-firebase/auth';\n```\n\nThen create an `AuthContext` and make sure to export it since you are going to use it on several different screens.\n\n```js\nexport const AuthContext = createContext({});\n```\n\nIn Reactjs, the [Context API](https://reactjs.org/docs/context.html#reactcreatecontext) is designed to share data that is considered global for a tree of React components. When you are creating a context (like above), there is a requirement to pass a default value. This value is used when a component does not have a matching Provider.\n\nThe Provider allows the React components to subscribe to the context changes. To create an auth provider, export a function called `AuthProvider`. This provider is going to allow the screen components to access the current user in the application. Define a state variable called `user`.\n\n```js\nexport const AuthProvider = ({ children }) => {\n  const [user, setUser] = useState(null);\n\n  return (\n    <AuthContext.Provider\n      value={{\n        user,\n        setUser,\n        login: async (email, password) => {\n          try {\n            await auth().signInWithEmailAndPassword(email, password);\n          } catch (e) {\n            console.log(e);\n          }\n        },\n        register: async (email, password) => {\n          try {\n            await auth().createUserWithEmailAndPassword(email, password);\n          } catch (e) {\n            console.log(e);\n          }\n        },\n        logout: async () => {\n          try {\n            await auth().signOut();\n          } catch (e) {\n            console.error(e);\n          }\n        }\n      }}\n    >\n      {children}\n    </AuthContext.Provider>\n  );\n};\n```\n\nIn the `value` prop above, also define some functions. These functions are now available to be used anywhere in the screens component tree using React Context.\n\nEach of the functions is consuming Firebase methods to interact with real-time Firebase backend service. Both the login and register functions require the user's `email` and `password` to verify/save credentials. The logout method invokes a simple `signOut()` method. All these Firebase methods are available from the `@react-native-firebase/auth` package. Do note that, all these functions are asynchronous actions and thus, using `async await` syntax helps.\n\n## Wrapping routes with auth provider\n\nNow, that the provider is created, but how to use for a set of components in the current app tree? Well, you have to wrap this provider around the `Routes` such as to use the helper functions as well as the value of current `user` (as described above) in the screen components.\n\nOpen `navigation/index.js` file and modify it as follows.\n\n```js\nimport React from 'react';\nimport { Provider as PaperProvider } from 'react-native-paper';\nimport { AuthProvider } from './AuthProvider';\nimport Routes from './Routes';\n\n/**\n * Wrap all providers here\n */\n\nexport default function Providers() {\n  return (\n    <PaperProvider>\n      <AuthProvider>\n        <Routes />\n      </AuthProvider>\n    </PaperProvider>\n  );\n}\n```\n\nRemember, from the previous post, we added that comment that to wrap all components using all providers in this file? Well, that's what this file is for.\n\n## Check if the user is logged in or not\n\nTo check if the user is logged or not, let us modify the `navigation/Routes.js` file. Using the value of the `user` from the auth provider, you are going to switch between the stack navigators. To start, make sure you imported the following statements.\n\n```js\nimport React, { useContext, useState, useEffect } from 'react';\nimport { NavigationContainer } from '@react-navigation/native';\nimport auth from '@react-native-firebase/auth';\nimport AuthStack from './AuthStack';\nimport HomeStack from './HomeStack';\nimport { AuthContext } from './AuthProvider';\nimport Loading from '../components/Loading';\n```\n\nFrom the above snippet, ignore the `Loading` component for now. You are going to create it at the end of this section.\n\nNow, inside the `Routes` function, you are two define two state variables `initializing` and `loading` to check whether the user's state is logged in or not. Also, from the context value, fetch `user` and `setUser`.\n\nThen, define a function called `onAuthStateChanged` which is going to handle user state changes. Using `useEffect` hook, you can subscribe to this state change function and make sure you unsubscribe it when the component unmounts. This method allows you to subscribe to real-time events when the user performs an action. The action here can be, logging in, signing out, and so on.\n\n```js\nexport default function Routes() {\n  const { user, setUser } = useContext(AuthContext);\n  const [loading, setLoading] = useState(true);\n  const [initializing, setInitializing] = useState(true);\n\n  // Handle user state changes\n  function onAuthStateChanged(user) {\n    setUser(user);\n    if (initializing) setInitializing(false);\n    setLoading(false);\n  }\n\n  useEffect(() => {\n    const subscriber = auth().onAuthStateChanged(onAuthStateChanged);\n    return subscriber; // unsubscribe on unmount\n  }, []);\n\n  if (loading) {\n    return <Loading />;\n  }\n\n  return (\n    <NavigationContainer>\n      {user ? <HomeStack /> : <AuthStack />}\n    </NavigationContainer>\n  );\n}\n```\n\nLastly, create a new component file called `Loading.js` inside `src/components/` directory. This component is going to be responsible to display a loading spinner.\n\n```js\nimport React from 'react';\nimport { View, ActivityIndicator, StyleSheet } from 'react-native';\n\nexport default function Loading() {\n  return (\n    <View style={styles.loadingContainer}>\n      <ActivityIndicator size=\"large\" color=\"#6646ee\" />\n    </View>\n  );\n}\n\nconst styles = StyleSheet.create({\n  loadingContainer: {\n    flex: 1,\n    alignItems: 'center',\n    justifyContent: 'center'\n  }\n});\n```\n\n## Completing the app\n\nIn order for the user to perform auth actions in the app, you have to use the context in each of the screen components for different actions.\n\nStart by opening `LoginScreen.js`. Import `useContext` from react and `AuthContext` from `AuthProvider`.\n\n```js\nimport React, { useState, useContext } from 'react';\n// rest of the import statements remain same\nimport { AuthContext } from '../navigation/AuthProvider';\n\nexport default function LoginScreen({ navigation }) {\n  const { login } = useContext(AuthContext);\n\n  // rest remains statements\n}\n```\n\nInside the `LoginScreen` function, make sure to add an `onPress` prop as shown below.\n\n```js\n<FormButton\n  title=\"Login\"\n  modeValue=\"contained\"\n  labelStyle={styles.loginButtonLabel}\n  onPress={() => login(email, password)}\n/>\n```\n\nSimilarly, you have to modify the `SignupScreen.js` file.\n\n```js\nimport React, { useState, useContext } from 'react';\n// rest of the import statements remain same\nimport { AuthContext } from '../navigation/AuthProvider';\n\nexport default function SignupScreen({ navigation }) {\n  const { register } = useContext(AuthContext);\n  // rest remains statements\n}\n\n// Add the onPress prop to <FormButton />\n\n<FormButton\n  title=\"Signup\"\n  modeValue=\"contained\"\n  labelStyle={styles.loginButtonLabel}\n  onPress={() => register(email, password)}\n/>;\n```\n\nLastly, modify the `HomeScreen` to add a sign out button and when the user is in the logged-in state, display their user `uid` (_the unique identifier in Firebase to differentiate and store different users_).\n\n```js\nimport React, { useContext } from 'react';\nimport { View, StyleSheet } from 'react-native';\nimport { Title } from 'react-native-paper';\nimport { AuthContext } from '../navigation/AuthProvider';\nimport FormButton from '../components/FormButton';\n\nexport default function HomeScreen() {\n  const { user, logout } = useContext(AuthContext);\n\n  return (\n    <View style={styles.container}>\n      <Title>Home Screen</Title>\n      <Title>All chat rooms will be listed here</Title>\n      <Title>{user.uid}</Title>\n      <FormButton\n        modeValue=\"contained\"\n        title=\"Logout\"\n        onPress={() => logout()}\n      />\n    </View>\n  );\n}\n\nconst styles = StyleSheet.create({\n  container: {\n    backgroundColor: '#f5f5f5',\n    flex: 1,\n    justifyContent: 'center',\n    alignItems: 'center'\n  }\n});\n```\n\nGo to the simulator, and you are going to get similar results as shown below. Perform these steps. Try creating a new user from the sign-up screen, and you are going to get their `uid` on the home screen.\n\n<img src='https://miro.medium.com/max/684/1*2HWlA1jyqJzAIhxgHDB0sg.gif' />\n\nYou can verify the `uid` of the current user by going to the dashboard screen from Firebase console.\n\n<img src='https://miro.medium.com/max/1400/1*NVUhPQOP2YjgYF_qmCdXBQ.png' />\n\n## Conclusion\n\n_Congratulations!_ You've completed this tutorial and successfully added an authentication flow between the two stack navigators. In the next part of this series, we'll explore more features such as creating and storing chat rooms in a collection in Firestore, as well as displaying all chat rooms on the home screen. To create a new chat room, we'll create a new modal screen and make changes to the current home stack accordingly.\n\n---\n\n## What's Next?\n\nIn the [next post](https://amanhimself.dev/blog/chat-app-with-react-native-part-3) of this series, we are going to explore how to create a modal screen using `react-navigation` stack navigator. This modal screen is going to have separate navigator as well as to be used to create a new chat room.\n\nThen, we are going to add Firebase NoSQL database Firestore and add a query to store the name of a chat room in a collection.\n\nYou can find the complete source code for this project at [this Github repo](https://github.com/amandeepmittal/react-native-examples/tree/master/ChatApp).\n\n---\n\n👉 Here is a list of resources used in this tutorial:\n\n- Reactjs [Context API](https://reactjs.org/docs/context.html#reactcreatecontext)\n- [Firebase Authentication reference](https://invertase.io/oss/react-native-firebase/v6/auth/quick-start) from `react-native-firebase`\n- Getting started with stack navigator using `react-navigation` v5 [here](https://heartbeat.fritz.ai/getting-started-with-stack-navigator-using-react-navigation-5-in-react-native-and-expo-apps-4c516becaee1)\n\nOriginally published at [Heartbeat.Fritz.Ai](https://heartbeat.fritz.ai/chat-app-with-react-native-part-2-firebase-user-authentication-with-react-native-firebase-533352870497).\n",
+            "url": "https://amanhimself.dev//blog/chat-app-with-react-native-part-2",
+            "title": "Chat app with React Native (part 2) - Firebase Email Authentication with react-native-firebase",
+            "summary": "Chat app with React Native (part 2) - Firebase Email Authentication with react-native-firebase",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -662,7 +662,7 @@
             "url": "https://amanhimself.dev//blog/blogging-tips-after-3-years",
             "title": "Blogging tips after 3 years and a 100+ posts",
             "summary": "Blogging tips after 3 years and a 100+ posts",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -674,7 +674,7 @@
             "url": "https://amanhimself.dev//blog/chat-app-with-react-native-part-1",
             "title": "Chat app with React Native (part 1) - Build reusable UI form elements using react-native-paper",
             "summary": "Chat app with React Native (part 1) - Build reusable UI form elements using react-native-paper",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -686,7 +686,7 @@
             "url": "https://amanhimself.dev//blog/create-custom-status-bar-hook-react-navigation",
             "title": "How to create a custom hook to change status bar styles for every screen using React Navigation",
             "summary": "How to create a custom hook to change status bar styles for every screen using React Navigation",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -698,7 +698,7 @@
             "url": "https://amanhimself.dev//blog/react-app-with-localstorage-api-and-hooks",
             "title": "Build an Expense Tracker app with React Hooks and LocalStorage API",
             "summary": "Build an Expense Tracker app with React Hooks and LocalStorage API",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -710,7 +710,7 @@
             "url": "https://amanhimself.dev//blog/nested-navigators-in-react-native",
             "title": "Nesting Tab and Stack navigators in React Native and Expo apps",
             "summary": "Nesting Tab and Stack navigators in React Native and Expo apps",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -722,7 +722,7 @@
             "url": "https://amanhimself.dev//blog/stack-navigator-with-react-navigation-v5",
             "title": "Getting Started with Stack Navigator using react-navigation 5 in React Native and Expo apps",
             "summary": "Getting Started with Stack Navigator using react-navigation 5 in React Native and Expo apps",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -734,7 +734,7 @@
             "url": "https://amanhimself.dev//blog/handle-navigation-in-webviews-react-native",
             "title": "How to handle navigation in WebViews in a React Native app",
             "summary": "How to handle navigation in WebViews in a React Native app",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -746,7 +746,7 @@
             "url": "https://amanhimself.dev//blog/getting-started-with-react-native-expo-hooks-2020",
             "title": "Getting Started with React Native and Expo using Hooks in 2020",
             "summary": "Getting Started with React Native and Expo using Hooks in 2020",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -758,7 +758,7 @@
             "url": "https://amanhimself.dev//blog/dark-mode-with-react-hooks",
             "title": "How to add Dark mode functionality with React Hooks",
             "summary": "How to add Dark mode functionality with React Hooks",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -770,7 +770,7 @@
             "url": "https://amanhimself.dev//blog/handle-deep-linking-react-native",
             "title": "How to handle Deep Links in a React Native app",
             "summary": "How to handle Deep Links in a React Native app",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -782,7 +782,7 @@
             "url": "https://amanhimself.dev//blog/how-to-use-react-native-localize",
             "title": "How to use React Native Localize in React Native apps",
             "summary": "How to use React Native Localize in React Native apps",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -794,7 +794,7 @@
             "url": "https://amanhimself.dev//blog/push-notifications-android-apps-react-native",
             "title": "Implement Push notifications for Android apps with React Native",
             "summary": "Implement Push notifications for Android apps with React Native",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -806,7 +806,7 @@
             "url": "https://amanhimself.dev//blog/handle-different-field-types-in-react-native-forms",
             "title": "Handle different field types in React Native forms with formik and yup",
             "summary": "Handle different field types in React Native forms with formik and yup",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -818,7 +818,7 @@
             "url": "https://amanhimself.dev//blog/implement-forgot-password-firebase-react-native",
             "title": "How to implement Forgot Password feature in React Native with Firebase",
             "summary": "How to implement Forgot Password feature in React Native with Firebase",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -830,7 +830,7 @@
             "url": "https://amanhimself.dev//blog/tensorflow-image-classification-expo",
             "title": "Image Classification on React Native with TensorFlow.js and MobileNet",
             "summary": "Image Classification on React Native with TensorFlow.js and MobileNet",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -842,7 +842,7 @@
             "url": "https://amanhimself.dev//blog/build-validate-forms-with-react-native-formik-yup",
             "title": "Build and validate forms in React Native using Formik and Yup",
             "summary": "Build and validate forms in React Native using Formik and Yup",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -854,7 +854,7 @@
             "url": "https://amanhimself.dev//blog/create-app-themes-styled-components-redux",
             "title": "Changing app themes using React Native, Styled Components and Redux",
             "summary": "Changing app themes using React Native, Styled Components and Redux",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -866,7 +866,7 @@
             "url": "https://amanhimself.dev//blog/context-api-react-native-firebase",
             "title": "Using Context API with React Native",
             "summary": "Using Context API with React Native",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -878,7 +878,7 @@
             "url": "https://amanhimself.dev//blog/authentication-navigation-flow-in-react-native-apps",
             "title": "How Authentication Flow works in React Native apps using React Navigation 4.x",
             "summary": "How Authentication Flow works in React Native apps using React Navigation 4.x",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -890,7 +890,7 @@
             "url": "https://amanhimself.dev//blog/build-an-audio-player-in-react-native",
             "title": "How to Build an Audio Player in React Native",
             "summary": "How to Build an Audio Player in React Native",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -902,7 +902,7 @@
             "url": "https://amanhimself.dev//blog/not-hotdog-clone-react-native",
             "title": "Build a Not Hotdog clone with React Native",
             "summary": "Build a Not Hotdog clone with React Native",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -914,7 +914,7 @@
             "url": "https://amanhimself.dev//blog/building-offline-react-native-apps-with-asyncstorage",
             "title": "Building offline React Native apps with AsyncStorage",
             "summary": "Building offline React Native apps with AsyncStorage",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -926,7 +926,7 @@
             "url": "https://amanhimself.dev//blog/how-to-use-the-geolocation-api-in-a-react-native-app",
             "title": "How to use the Geolocation API in a React Native app",
             "summary": "How to use the Geolocation API in a React Native app",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -938,7 +938,7 @@
             "url": "https://amanhimself.dev//blog/how-to-build-xylophone-app-with-expo",
             "title": "How to build a xylophone app with Audio API, React Native, and Expo",
             "summary": "How to build a xylophone app with Audio API, React Native, and Expo",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -950,7 +950,7 @@
             "url": "https://amanhimself.dev//blog/build-chatbot-dialogflow-nodejs-webhooks",
             "title": "How to Create a Chatbot with Dialogflow, NodeJS, and Webhooks",
             "summary": "How to Create a Chatbot with Dialogflow, NodeJS, and Webhooks",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -962,7 +962,7 @@
             "url": "https://amanhimself.dev//blog/introduction-to-react-router-v4-with-reactjs",
             "title": "Using React Router to Optimize Single Page Applications (SPAs)",
             "summary": "Using React Router to Optimize Single Page Applications (SPAs)",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -974,7 +974,7 @@
             "url": "https://amanhimself.dev//blog/to-travel-a-tech-conference-and-one-million-views-a-recap",
             "title": "To Travel, A Tech Conference and One Million views - a Recap",
             "summary": "To Travel, A Tech Conference and One Million views - a Recap",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -986,7 +986,7 @@
             "url": "https://amanhimself.dev//blog/how-to-integrate-firebase-firestore-react-and-crowdbotics-platform",
             "title": "How to integrate Firebase and Firestore cloud database with a React application",
             "summary": "How to integrate Firebase and Firestore cloud database with a React application",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -998,7 +998,7 @@
             "url": "https://amanhimself.dev//blog/setup-a-react-app-with-typescript-storybook",
             "title": "How to Setup a React App with TypeScript, Storybook",
             "summary": "How to Setup a React App with TypeScript, Storybook",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1010,7 +1010,7 @@
             "url": "https://amanhimself.dev//blog/build-a-custom-modal-with-the-animated-api-in-react-native",
             "title": "Build a Custom Modal with the Animated API in React Native",
             "summary": "Build a Custom Modal with the Animated API in React Native",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1022,7 +1022,7 @@
             "url": "https://amanhimself.dev//blog/build-a-twitter-clone-server-with-apollo-graphql-nodejs",
             "title": "Build a Twitter Clone Server with Apollo, GraphQL, Nodejs, and Crowdbotics",
             "summary": "Build a Twitter Clone Server with Apollo, GraphQL, Nodejs, and Crowdbotics",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1030,11 +1030,11 @@
         },
         {
             "id": "https://amanhimself.dev//blog/use-emotion-js-with-react-native",
-            "content_html": "---\ntitle: 'Building Stylistic UIs with Emotion-JS for React Native'\ndate: '2019-06-04'\nslug: 'use-emotion-js-with-react-native'\nthumbnail: '/thumbnails/expo.png'\ntemplate: post\ntag: 'expo'\ncanonicalUrl: 'https://heartbeat.fritz.ai/how-to-use-emotion-js-with-react-native-fccac9c78779'\n---\n\nStyling is an important aspect of any mobile application. You cannot put enough emphasis on how important it is for a mobile app to have a pleasing design and good use of colors for the app users to use it in the long term.\n\nIf you are into React Native development, by now, you may know that there are different ways to style a React Native application. Methods such as by using `StyleSheet` object to create to styles for each component screen, or [encapsulating all of your styles](https://hackernoon.com/styling-the-react-native-way-3cc6d3ef52d0) in one file for the whole application.\n\nUsing third-party libraries for styling is another way that can save you a lot of time to develop your React Native application. Some CSS-in-JS libraries such as styled components and emotion-js are already a common practice among web developers. This tutorial is going to discuss and showcase how you can use [Emotion-JS](https://github.com/emotion-js/emotion) in a React Native application.\n\n## What is Emotion-JS 👩‍🎤?\n\nEmotion is a flexible _CSS-in-JS_ library that somehow enforces developers to write each component with their own styles and has both of them in one place. This enforcement has lead to some happy times for some happy developers resulting in optimizing their experience and output. It has predictable composition to avoid specificity issues with CSS.\n\nReact Native tends to follow a certain convention when it comes to styling your app. Such as all CSS property names should be in camelCase such as for background-color in React Native is:\n\n```css\nbackground-color: 'papayawhip';\n```\n\nDevelopers coming from a web background, do get uncomfortable by these conventions. Using a third party library like emotion-js can give help you. You do not have to switch between the context of conventions, apart from the properties and React Native’s own `flexbox` rules.\n\n## Installing Emotion\n\nTo get started, you need a new React Native project. To quickly scaffold one, let us use the power of Expo. Run the following command to install expo cli and create a new React Native project using the same cli.\n\n```shell\n# To install expo-cli\n\nnpm install -S expo-cli\n\n# Generate a project\n\nexpo init rn-emotion-demo\n```\n\nWhen running the last command, the command line prompt will you a few questions. First one is, Choose a template, where I chose `expo-template-blank`, then enter display name of your app and then either use `npm` or `yarn` to install dependencies. I am going with `yarn`.\n\nOnce all the dependencies installed, you can open this project in your favorite code editor. Next step is to install the latest version of emotion library.\n\n```shell\nyarn add prop-types @emotion/core @emotion/native\n```\n\nGuidelines in [emotion](https://www.npmjs.com/package/@emotion/native) package instructs that you need `prop-types` as the package installed with your project since Emotion as the package itself depends on it. Next two packages in the above command are necessary to use the library itself. Also, make sure, when you install these dependencies, you are inside the React Native project directory.\n\n## Writing your first Emotion Style\n\nTo start the application in a simulator, run `expo start`. On successfully starting the application, you will be prompted with the default Expo app. Modify the `App.js` file like below to get started. Make changes to the component’s render function like below. Replace both `View` and `Text` with `Container` and `Title`. These new elements are going to be custom using semantics from emotion.\n\n```js\nexport default class App extends React.Component {\n  render() {\n    return (\n      <Container>\n        <Title>React Native with 👩‍🎤 Emotion</Title>\n      </Container>\n    );\n  }\n}\n```\n\nEmotion-JS utilizes tagged template literals to style your components using back-ticks. When creating a component in React or React Native using this styling library, each component is going to have styles attached to it. Define the below styles in the same file after the `App` component.\n\n```js\nconst Container = styled.View`\n  flex: 1;\n  background-color: papayawhip;\n  justify-content: center;\n  align-items: center;\n`;\n\nconst Title = styled.Text`\n  font-size: 20px;\n  font-weight: 500;\n  color: palevioletred;\n`;\n```\n\nNotice the `Container` is a React Native `View` and has styling attached to it. Similarly, `Title` is utilizing `Text` component from React Native. You will get the following result.\n\n<img src='https://cdn-images-1.medium.com/max/800/1*f74HA6IWnJM-cE_BNE9CTQ.png' />\n\nHere is the complete code for `App.js` file.\n\n```js\nimport React from 'react';\nimport { StyleSheet, Text, View } from 'react-native';\nimport styled, { css } from '@emotion/native';\n\nexport default class App extends React.Component {\n  render() {\n    return (\n      <Container>\n        <Title>React Native with 👩‍🎤 Emotion</Title>\n      </Container>\n    );\n  }\n}\n\nconst Container = styled.View`\n  flex: 1;\n  background-color: papayawhip;\n  justify-content: center;\n  align-items: center;\n`;\n\nconst Title = styled.Text`\n  font-size: 24px;\n  font-weight: 500;\n  color: palevioletred;\n`;\n```\n\nIn the above snippet, do take a note that we are not importing a React Native core components such as `View`, `Text` or `StyleSheet` object. It is that simple. It uses the same `flexbox` model that React Native Layouts use. The advantage here is that you get to apply almost similar context and understandable syntax that you have been using in Web Development to style a React Native application.\n\n## Using Props in Emotion-JS\n\nOften you will find yourself creating custom components for your apps. This does give you the advantage to stay DRY. Leveraging emotion-js is no different. You can use this programming pattern by building custom components that require their parent components. `props` are commonly known as additional properties to a specific component. To demonstrate this, create a new file called `CustomButton.js`.\n\nInside this file, we are going to create a custom button that requires props such as `backgroundColor`, `textColor` and the `text` itself for the title of the button. You are going to use `TouchableOpacity` and `Text` to create this custom button but without importing `react-native` library and create a functional component `CustomButton`.\n\n```js\nimport React from 'react';\nimport styled, { css } from '@emotion/native';\n\nconst CustomButton = props => (\n  <ButtonContainer\n    onPress={() => alert('You are using Emotion-JS!')}\n    backgroundColor={props.backgroundColor}\n  >\n    <ButtonText textColor={props.textColor}>{props.text}</ButtonText>\n  </ButtonContainer>\n);\n\nexport default CustomButton;\n\nconst ButtonContainer = styled.TouchableOpacity`\n  margin: 15px;\n    width: 100px;\n    height: 40px\n    padding: 12px;\n    border-radius: 10px;    \n    background-color: ${props => props.backgroundColor};\n`;\n\nconst ButtonText = styled.Text`\n  font-size: 15px;\n  color: ${props => props.textColor};\n  text-align: center;\n`;\n```\n\nThe important thing to notice in the above snippet is you can pass an interpolated function `${props => props...}` to an emotion-js template literal to extend it the component's style and keep the component re-usable.\n\nTo see this custom button in action, import it to the `App.js` file as below.\n\n```js\n// ... other imports\nimport CustomButton from './components/CustomButton';\n\n// ...\n\nexport default class App extends React.Component {\n  render() {\n    return (\n      <Container>\n        <Title>React Native with 👩‍🎤 Emotion</Title>\n        <CustomButton\n          text=\"Click Me\"\n          textColor=\"#01d1e5\"\n          backgroundColor=\"lavenderblush\"\n        />\n      </Container>\n    );\n  }\n}\n```\n\nOn running the simulator, you will get the following result.\n\n<img src='https://cdn-images-1.medium.com/max/800/1*Cy1MdQqq5Uw4i6uNtXFTbQ.png' />\n\n## Inline Styling\n\nAs React Native developer, you have used inline styling and you know how beneficial they can be, especially in the prototypal stage of an application.\n\nTo leverage this technique using Emotion-js, open `CustomButton.js` file and add an inline style like below. Do note that, we are not modifying the existing styles defined previously.\n\n```js\nconst CustomButton = props => (\n    <ButtonContainer\n        onPress={() => alert(\"You are using Emotion-JS!\")}\n        backgroundColor={props.backgroundColor}\n        style={css`\n            border-width: 1px;\n        `}\n    >\n        <ButtonText textColor={props.textColor}>{props.text}</ButtonText>\n    </ButtonContainer>\n```\n\nThe `style` tag in the above snippet uses `css` prop from `@emotion/native` library to allow us to add inline styles.\n\n<img src='https://cdn-images-1.medium.com/max/800/1*WYeeuL0Xoq6gHDWOnW0P7w.png' />\n\n## Building the Grocery UI\n\nOnwards this section, you are going to use what you have just learned about Emotion-js by building a better UI in terms of complexity than a simple test and a button.\n\nOpen up App.js. Declare a new `ContainerView` using styled prop from emotion-js. Inside the backticks, you can put pure CSS code there with the exact same syntax. The View element is like a div in HTML or web programming in general. Also, create another view called `Titlebar` inside `Container`.\n\nInside `Titlebar`, it will contain three new elements. One is going to be an image `Avatar` and the other two are text: `Title` and `Name`.\n\n```js\nimport React from 'react';\nimport styled, { css } from '@emotion/native';\n\nexport default class App extends React.Component {\n  render() {\n    return (\n      <Container>\n        <Titlebar>\n          <Avatar />\n          <Title>Welcome back,</Title>\n          <Name>Aman</Name>\n        </Titlebar>\n      </Container>\n    );\n  }\n}\n\nconst Container = styled.View`\n  flex: 1;\n  background-color: white;\n  justify-content: center;\n  align-items: center;\n`;\n\nconst Titlebar = styled.View`\n  width: 100%;\n  margin-top: 50px;\n  padding-left: 80px;\n`;\n\nconst Avatar = styled.Image``;\n\nconst Title = styled.Text`\n  font-size: 20px;\n  font-weight: 500;\n  color: #b8bece;\n`;\n\nconst Name = styled.Text`\n  font-size: 20px;\n  color: #333333;\n  font-weight: bold;\n`;\n```\n\nYou will get the following result in the simulator.\n\n<img src='https://cdn-images-1.medium.com/max/800/1*NOix_tBDR5Ya7U9vxKBWkA.png' />\n\nRight now, everything is how in the middle of the screen. We need the `Titlebar` and its contents at the top of the mobile screen. So styles for `Container` can be modified as below.\n\n```js\nconst Container = styled.View`\n  flex: 1;\n  background-color: white;\n`;\n```\n\nYou will get the following result.\n\n<img src='https://cdn-images-1.medium.com/max/800/1*_y_4hWxNgScpmXjtJQngXQ.png' />\n\n## Adding the user avatar image\n\nI am going to use an image that is stored in the assets folder in the root of our project. If are free to use your own image but you can also download the assets for this project below.\n\n- [rn-emotion-demo](https://github.com/amandeepmittal/rn-emotion-demo/tree/master/assets)\n\nTo create an image even with emotion-js, you need the `Image` component from React Native core. You can use the source props to reference the image based on where it is located.\n\n```js\n<Titlebar>\n  <Avatar source={require('./assets/avatar.jpg')} />\n  <Title>Welcome back,</Title>\n  <Name>Aman</Name>\n</Titlebar>\n```\n\nThe styling for Avatar will begin with a width and a height each of `44` pixels.\n\n```js\nconst Avatar = styled.Image`\n  width: 44px;\n  height: 44px;\n`;\n```\n\nYou will get the following result.\n\n<img src='https://cdn-images-1.medium.com/max/800/1*86D8gQeBHwo42NwJ2bKbkA.png' />\n\n## Absolute Positioning in React Native\n\nNow notice that the avatar image and the text are piling up. They are taking the same space on the screen. To avoid this, you are going to use `position: absolute` CSS property.\n\nCSS properties such as `padding` and `margin` are used to add space between UI elements in relation to one another. This is the default layout position. However, you are currently in a scenario where it will be beneficial to use absolute positioning of UI elements and place the desired UI element at the exact position you want.\n\nIn React Native and CSS in general, if `position` property is set to `absolute`, then the element is laid out relative to its parent. CSS has other values for `position` but React Native only supports `absolute`.\n\nModify `Avatar` styles as below.\n\n```js\nconst Avatar = styled.Image`\n  width: 44px;\n  height: 44px;\n  margin-left: 20px;\n  position: absolute;\n  top: 0;\n  left: 0;\n`;\n```\n\nUsually, with position absolute property, you are going to use a combination of the following properties:\n\n- top\n- left\n- right\n- bottom\n\nIn the case above, we use `top` and `left` and both are set to `0` pixels. You will get the following output.\n\n<img src='https://cdn-images-1.medium.com/max/800/1*VyDbIWkN4io9aMFw9-Jucg.png' />\n\n## Mapping through a list of categories\n\nInside `components/` folder create a new file called `Categories.js`. This file is going to render a list of category items for the Grocery UI app.\n\n```js\nimport React from 'react';\nimport styled, { css } from '@emotion/native';\n\nconst Categories = props => (\n  <Container>\n    <Name>Fruits</Name>\n    <Name>Bread</Name>\n    <Name>Drinks</Name>\n    <Name>Veggies</Name>\n  </Container>\n);\n\nexport default Categories;\n\nconst Container = styled.View``;\n\nconst Name = styled.Text`\n  font-size: 28px;\n  font-weight: 600;\n  margin-left: 15px;\n  color: #bcbece;\n`;\n```\n\nAll the data is static right now. Import this component in `App.js` and place it after `Titlebar`.\n\n```js\n<Container>\n  <Titlebar>\n    <Avatar source={require('./assets/avatar.jpg')} />\n    <Title>Welcome back,</Title>\n    <Name>Aman</Name>\n  </Titlebar>\n  <Categories />\n</Container>\n```\n\nYou will get the following result.\n\n<img src='https://cdn-images-1.medium.com/max/800/1*UzOFxbJegk5DgdnWIIDFAA.png' />\n\nThere can be a number of categories. To make the names of categories dynamic, we can send it through `App.js` file.\n\n```js\nconst items = [\n  { text: 'Fruits' },\n  { text: 'Bread' },\n  { text: 'Drinks' },\n  { text: 'Veggies' },\n  { text: 'Meat' },\n  { text: 'Paper Goods' }\n];\n\n// ...\n\n// Inside the render function replace <Categories /> with\n\n{\n  items.map((category, index) => (\n    <Categories name={category.text} key={index} />\n  ));\n}\n```\n\nIn the above snippet, you are using `map` function from JavaScript to iterate through an array render a list of items, in this category names. Adding a `key` prop is required. To make this work, also modify `Categories.js`.\n\n```js\nimport React from 'react';\nimport styled, { css } from '@emotion/native';\n\nconst Categories = props => <Name>{props.name}</Name>;\n\nexport default Categories;\n\nconst Name = styled.Text`\n  font-size: 28px;\n  font-weight: 600;\n  margin-left: 15px;\n  color: #bcbece;\n`;\n```\n\nThere is no change in the UI.\n\n<img src='https://cdn-images-1.medium.com/max/800/1*97cGkaf4B-iuoBqtaU_82g.png' />\n\n## Adding Horizontal ScrollView\n\nThis list is right now not scrollable. To make it scrollable, let us place it inside a `ScrollView`. Open up `App.js` file place the categories inside a `ScrollView`, but first, import it from React Native core.\n\n```js\nimport { ScrollView } from 'react-native';\n\n//...\n<ScrollView>\n  {items.map((category, index) => (\n    <Categories name={category.text} key={index} />\n  ))}\n</ScrollView>;\n```\n\nYou will notice not a single change in the UI. By default, scrollable lists in React Native using `ScrollView` are `vertical`. Make this horizontal by adding the prop `horizontal`.\n\n```js\n<ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>\n  {items.map((category, index) => (\n    <Categories name={category.text} key={index} />\n  ))}\n</ScrollView>\n```\n\nIt works.\n\n<img src='https://cdn-images-1.medium.com/max/800/1*Ca8deMUYzKMefqll-U8d2w.gif' />\n\nTo make it appear better, add some inline styling using `css` prop.\n\n```js\n<ScrollView\n    horizontal={true}\n    showsHorizontalScrollIndicator={false}\n    style={css`\n    margin: 20px;\n    margin-left: 12px;\n    `}\n>\n```\n\nNow it looks better.\n\n<img src='https://cdn-images-1.medium.com/max/800/1*Wv5LHX6N-LNKYFBLnzZZjw.gif' />\n\n## Adding a vertical ScrollView\n\nNext step is to add a `ScrollView` that acts as a wrapper inside the `Container` view such that the whole area becomes scrollable vertically. There is a reason to do this. You are now going to add items separated into two columns as images with texts related to a particular category.\n\nModify `App.js` file.\n\n```js\nreturn (\n  <Container>\n    <ScrollView>\n      <Titlebar>{/* and its contents */}</Titlebar>\n      <ScrollView horizontal={true}>\n        {/* Categories being rendered */}\n      </ScrollView>\n      <Subtitle>Items</Subtitle>\n    </ScrollView>\n  </Container>\n);\n```\n\nNotice that we are adding another emotion component called `Subtitle` which is nothing but a text.\n\nIt renders like below.\n\n<img src='https://cdn-images-1.medium.com/max/800/1*pm3WO-qUP4JhE3yagUo93A.png' />\n\n## Building a card component\n\nIn this section, we are going to create a card component that will hold an item’s image, the name of the item and the price as text. Each card component is going to have curved borders and box shadow. This is how it is going to look like.\n\n<img src='https://cdn-images-1.medium.com/max/800/1*LACepyEU54zhnt028sfh5g.png' />\n\nCreate a new component file called `Card.js` inside the `components` directory. The structure of the Card component is going to be.\n\n```js\nimport React from 'react';\nimport styled, { css } from '@emotion/native';\n\nconst Card = props => (\n  <Container>\n    <Cover>\n      <Image source={require('../assets/pepper.jpg')} />\n    </Cover>\n    <Content>\n      <Title>Pepper</Title>\n      <PriceCaption>$ 2.99 each</PriceCaption>\n    </Content>\n  </Container>\n);\n\nexport default Card;\n```\n\nCurrently, it has static data, such as the image, title, and content. Let us add the styles for each styled UI elements in this file.\n\n```js\nconst Container = styled.View`\n  background: #fff;\n  height: 200px;\n  width: 150px;\n  border-radius: 14px;\n  margin: 18px;\n  margin-top: 20px;\n  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);\n`;\n\nconst Cover = styled.View`\n  width: 100%;\n  height: 120px;\n  border-top-left-radius: 14px;\n  border-top-right-radius: 14px;\n  overflow: hidden;\n`;\n\nconst Image = styled.Image`\n  width: 100%;\n  height: 100%;\n`;\n\nconst Content = styled.View`\n  padding-top: 10px;\n  flex-direction: column;\n  align-items: center;\n  height: 60px;\n`;\n\nconst Title = styled.Text`\n  color: #3c4560;\n  font-size: 20px;\n  font-weight: 600;\n`;\n\nconst PriceCaption = styled.Text`\n  color: #b8b3c3;\n  font-size: 15px;\n  font-weight: 600;\n  margin-top: 4px;\n`;\n```\n\nThe `Container` view has a default background of white color. This is useful in scenarios where you are fetching images from a third party APIs. Also, it provides a background to the text area below the image.\n\nInside the `Container` view, add an `Image` and wrap it inside a `Cover` view. In React Native there two ways you can fetch an image.\n\nIf you are getting an image from the static resource as in our case, you use `source` prop with the keyword `require` that contains the relative path to the image asset stored in the project folder. In case of networking images or getting an image from an API, you use the same prop with a different keyword called `uri`. Here is an example of an image being fetched from an API.\n\n```js\n<Image\n  source={{\n    uri: 'https://facebook.github.io/react-native/docs/assets/favicon.png'\n  }}\n/>\n```\n\nThe `Cover` view uses rounded corners with `overflow` property. This is done to reflect the rounded corners. iOS clips the images if coming from a child component. In our case, the image is coming from a `Card` component which is a child to the `App` component.\n\nThe `Image` component takes the width and height of the entire `Cover` view.\n\nNow let us import this component inside App.js file, after the `Subtitle` and let us see what results do we get.\n\n```js\nrender() {\n    return (\n    <Container>\n        <ScrollView>\n        {/* ... */}\n        <Subtitle>Items</Subtitle>\n            <ItemsLayout>\n                <ColumnOne>\n                    <Card />\n                </ColumnOne>\n                <ColumnTwo>\n                    <Card />\n                </ColumnTwo>\n            </ItemsLayout>\n        </ScrollView>\n    </Container>\n    )\n}\n\n// ...\n\nconst ItemsLayout = styled.View`\n    flex-direction: row;\n    flex: 1;\n`;\n\nconst ColumnOne = styled.View``;\n\nconst ColumnTwo = styled.View``;\n```\n\nAfter `Subtitle` adds a new view called `ItemsLayout`. This is going to be a layout that allows different cards to be divided between two columns in each row. This can be done by giving this view a `flex-direction` property of value `row`. `ColumnOne` and `ColumnTwo` are two empty views.\n\nOn rendering the final result, it looks like below.\n\n<img src='https://cdn-images-1.medium.com/max/800/1*1buKFeJ-C7yzw41ezKTv6g.png' />\n\n## Conclusion\n\nYou have completed the tutorial for creating UIs with Emotion-JS and integrate it into a React Native and Expo application. Now go ahead and create those beautiful UIs for your applications.\n\n[Originally published at Heartbeat](https://heartbeat.fritz.ai/how-to-use-emotion-js-with-react-native-fccac9c78779)\n",
+            "content_html": "---\ntitle: 'Building Stylistic UIs with Emotion-JS for React Native'\ndate: '2019-06-04'\nslug: 'use-emotion-js-with-react-native'\nthumbnail: '/thumbnails/expo.png'\ntag: 'expo'\ncanonicalUrl: 'https://heartbeat.fritz.ai/how-to-use-emotion-js-with-react-native-fccac9c78779'\n---\n\nStyling is an important aspect of any mobile application. You cannot put enough emphasis on how important it is for a mobile app to have a pleasing design and good use of colors for the app users to use it in the long term.\n\nIf you are into React Native development, by now, you may know that there are different ways to style a React Native application. Methods such as by using `StyleSheet` object to create to styles for each component screen, or [encapsulating all of your styles](https://hackernoon.com/styling-the-react-native-way-3cc6d3ef52d0) in one file for the whole application.\n\nUsing third-party libraries for styling is another way that can save you a lot of time to develop your React Native application. Some CSS-in-JS libraries such as styled components and emotion-js are already a common practice among web developers. This tutorial is going to discuss and showcase how you can use [Emotion-JS](https://github.com/emotion-js/emotion) in a React Native application.\n\n## What is Emotion-JS 👩‍🎤?\n\nEmotion is a flexible _CSS-in-JS_ library that somehow enforces developers to write each component with their own styles and has both of them in one place. This enforcement has lead to some happy times for some happy developers resulting in optimizing their experience and output. It has predictable composition to avoid specificity issues with CSS.\n\nReact Native tends to follow a certain convention when it comes to styling your app. Such as all CSS property names should be in camelCase such as for background-color in React Native is:\n\n```css\nbackground-color: 'papayawhip';\n```\n\nDevelopers coming from a web background, do get uncomfortable by these conventions. Using a third party library like emotion-js can give help you. You do not have to switch between the context of conventions, apart from the properties and React Native’s own `flexbox` rules.\n\n## Installing Emotion\n\nTo get started, you need a new React Native project. To quickly scaffold one, let us use the power of Expo. Run the following command to install expo cli and create a new React Native project using the same cli.\n\n```shell\n# To install expo-cli\n\nnpm install -S expo-cli\n\n# Generate a project\n\nexpo init rn-emotion-demo\n```\n\nWhen running the last command, the command line prompt will you a few questions. First one is, Choose a template, where I chose `expo-template-blank`, then enter display name of your app and then either use `npm` or `yarn` to install dependencies. I am going with `yarn`.\n\nOnce all the dependencies installed, you can open this project in your favorite code editor. Next step is to install the latest version of emotion library.\n\n```shell\nyarn add prop-types @emotion/core @emotion/native\n```\n\nGuidelines in [emotion](https://www.npmjs.com/package/@emotion/native) package instructs that you need `prop-types` as the package installed with your project since Emotion as the package itself depends on it. Next two packages in the above command are necessary to use the library itself. Also, make sure, when you install these dependencies, you are inside the React Native project directory.\n\n## Writing your first Emotion Style\n\nTo start the application in a simulator, run `expo start`. On successfully starting the application, you will be prompted with the default Expo app. Modify the `App.js` file like below to get started. Make changes to the component’s render function like below. Replace both `View` and `Text` with `Container` and `Title`. These new elements are going to be custom using semantics from emotion.\n\n```js\nexport default class App extends React.Component {\n  render() {\n    return (\n      <Container>\n        <Title>React Native with 👩‍🎤 Emotion</Title>\n      </Container>\n    );\n  }\n}\n```\n\nEmotion-JS utilizes tagged template literals to style your components using back-ticks. When creating a component in React or React Native using this styling library, each component is going to have styles attached to it. Define the below styles in the same file after the `App` component.\n\n```js\nconst Container = styled.View`\n  flex: 1;\n  background-color: papayawhip;\n  justify-content: center;\n  align-items: center;\n`;\n\nconst Title = styled.Text`\n  font-size: 20px;\n  font-weight: 500;\n  color: palevioletred;\n`;\n```\n\nNotice the `Container` is a React Native `View` and has styling attached to it. Similarly, `Title` is utilizing `Text` component from React Native. You will get the following result.\n\n<img src='https://cdn-images-1.medium.com/max/800/1*f74HA6IWnJM-cE_BNE9CTQ.png' />\n\nHere is the complete code for `App.js` file.\n\n```js\nimport React from 'react';\nimport { StyleSheet, Text, View } from 'react-native';\nimport styled, { css } from '@emotion/native';\n\nexport default class App extends React.Component {\n  render() {\n    return (\n      <Container>\n        <Title>React Native with 👩‍🎤 Emotion</Title>\n      </Container>\n    );\n  }\n}\n\nconst Container = styled.View`\n  flex: 1;\n  background-color: papayawhip;\n  justify-content: center;\n  align-items: center;\n`;\n\nconst Title = styled.Text`\n  font-size: 24px;\n  font-weight: 500;\n  color: palevioletred;\n`;\n```\n\nIn the above snippet, do take a note that we are not importing a React Native core components such as `View`, `Text` or `StyleSheet` object. It is that simple. It uses the same `flexbox` model that React Native Layouts use. The advantage here is that you get to apply almost similar context and understandable syntax that you have been using in Web Development to style a React Native application.\n\n## Using Props in Emotion-JS\n\nOften you will find yourself creating custom components for your apps. This does give you the advantage to stay DRY. Leveraging emotion-js is no different. You can use this programming pattern by building custom components that require their parent components. `props` are commonly known as additional properties to a specific component. To demonstrate this, create a new file called `CustomButton.js`.\n\nInside this file, we are going to create a custom button that requires props such as `backgroundColor`, `textColor` and the `text` itself for the title of the button. You are going to use `TouchableOpacity` and `Text` to create this custom button but without importing `react-native` library and create a functional component `CustomButton`.\n\n```js\nimport React from 'react';\nimport styled, { css } from '@emotion/native';\n\nconst CustomButton = props => (\n  <ButtonContainer\n    onPress={() => alert('You are using Emotion-JS!')}\n    backgroundColor={props.backgroundColor}\n  >\n    <ButtonText textColor={props.textColor}>{props.text}</ButtonText>\n  </ButtonContainer>\n);\n\nexport default CustomButton;\n\nconst ButtonContainer = styled.TouchableOpacity`\n  margin: 15px;\n    width: 100px;\n    height: 40px\n    padding: 12px;\n    border-radius: 10px;    \n    background-color: ${props => props.backgroundColor};\n`;\n\nconst ButtonText = styled.Text`\n  font-size: 15px;\n  color: ${props => props.textColor};\n  text-align: center;\n`;\n```\n\nThe important thing to notice in the above snippet is you can pass an interpolated function `${props => props...}` to an emotion-js template literal to extend it the component's style and keep the component re-usable.\n\nTo see this custom button in action, import it to the `App.js` file as below.\n\n```js\n// ... other imports\nimport CustomButton from './components/CustomButton';\n\n// ...\n\nexport default class App extends React.Component {\n  render() {\n    return (\n      <Container>\n        <Title>React Native with 👩‍🎤 Emotion</Title>\n        <CustomButton\n          text=\"Click Me\"\n          textColor=\"#01d1e5\"\n          backgroundColor=\"lavenderblush\"\n        />\n      </Container>\n    );\n  }\n}\n```\n\nOn running the simulator, you will get the following result.\n\n<img src='https://cdn-images-1.medium.com/max/800/1*Cy1MdQqq5Uw4i6uNtXFTbQ.png' />\n\n## Inline Styling\n\nAs React Native developer, you have used inline styling and you know how beneficial they can be, especially in the prototypal stage of an application.\n\nTo leverage this technique using Emotion-js, open `CustomButton.js` file and add an inline style like below. Do note that, we are not modifying the existing styles defined previously.\n\n```js\nconst CustomButton = props => (\n    <ButtonContainer\n        onPress={() => alert(\"You are using Emotion-JS!\")}\n        backgroundColor={props.backgroundColor}\n        style={css`\n            border-width: 1px;\n        `}\n    >\n        <ButtonText textColor={props.textColor}>{props.text}</ButtonText>\n    </ButtonContainer>\n```\n\nThe `style` tag in the above snippet uses `css` prop from `@emotion/native` library to allow us to add inline styles.\n\n<img src='https://cdn-images-1.medium.com/max/800/1*WYeeuL0Xoq6gHDWOnW0P7w.png' />\n\n## Building the Grocery UI\n\nOnwards this section, you are going to use what you have just learned about Emotion-js by building a better UI in terms of complexity than a simple test and a button.\n\nOpen up App.js. Declare a new `ContainerView` using styled prop from emotion-js. Inside the backticks, you can put pure CSS code there with the exact same syntax. The View element is like a div in HTML or web programming in general. Also, create another view called `Titlebar` inside `Container`.\n\nInside `Titlebar`, it will contain three new elements. One is going to be an image `Avatar` and the other two are text: `Title` and `Name`.\n\n```js\nimport React from 'react';\nimport styled, { css } from '@emotion/native';\n\nexport default class App extends React.Component {\n  render() {\n    return (\n      <Container>\n        <Titlebar>\n          <Avatar />\n          <Title>Welcome back,</Title>\n          <Name>Aman</Name>\n        </Titlebar>\n      </Container>\n    );\n  }\n}\n\nconst Container = styled.View`\n  flex: 1;\n  background-color: white;\n  justify-content: center;\n  align-items: center;\n`;\n\nconst Titlebar = styled.View`\n  width: 100%;\n  margin-top: 50px;\n  padding-left: 80px;\n`;\n\nconst Avatar = styled.Image``;\n\nconst Title = styled.Text`\n  font-size: 20px;\n  font-weight: 500;\n  color: #b8bece;\n`;\n\nconst Name = styled.Text`\n  font-size: 20px;\n  color: #333333;\n  font-weight: bold;\n`;\n```\n\nYou will get the following result in the simulator.\n\n<img src='https://cdn-images-1.medium.com/max/800/1*NOix_tBDR5Ya7U9vxKBWkA.png' />\n\nRight now, everything is how in the middle of the screen. We need the `Titlebar` and its contents at the top of the mobile screen. So styles for `Container` can be modified as below.\n\n```js\nconst Container = styled.View`\n  flex: 1;\n  background-color: white;\n`;\n```\n\nYou will get the following result.\n\n<img src='https://cdn-images-1.medium.com/max/800/1*_y_4hWxNgScpmXjtJQngXQ.png' />\n\n## Adding the user avatar image\n\nI am going to use an image that is stored in the assets folder in the root of our project. If are free to use your own image but you can also download the assets for this project below.\n\n- [rn-emotion-demo](https://github.com/amandeepmittal/rn-emotion-demo/tree/master/assets)\n\nTo create an image even with emotion-js, you need the `Image` component from React Native core. You can use the source props to reference the image based on where it is located.\n\n```js\n<Titlebar>\n  <Avatar source={require('./assets/avatar.jpg')} />\n  <Title>Welcome back,</Title>\n  <Name>Aman</Name>\n</Titlebar>\n```\n\nThe styling for Avatar will begin with a width and a height each of `44` pixels.\n\n```js\nconst Avatar = styled.Image`\n  width: 44px;\n  height: 44px;\n`;\n```\n\nYou will get the following result.\n\n<img src='https://cdn-images-1.medium.com/max/800/1*86D8gQeBHwo42NwJ2bKbkA.png' />\n\n## Absolute Positioning in React Native\n\nNow notice that the avatar image and the text are piling up. They are taking the same space on the screen. To avoid this, you are going to use `position: absolute` CSS property.\n\nCSS properties such as `padding` and `margin` are used to add space between UI elements in relation to one another. This is the default layout position. However, you are currently in a scenario where it will be beneficial to use absolute positioning of UI elements and place the desired UI element at the exact position you want.\n\nIn React Native and CSS in general, if `position` property is set to `absolute`, then the element is laid out relative to its parent. CSS has other values for `position` but React Native only supports `absolute`.\n\nModify `Avatar` styles as below.\n\n```js\nconst Avatar = styled.Image`\n  width: 44px;\n  height: 44px;\n  margin-left: 20px;\n  position: absolute;\n  top: 0;\n  left: 0;\n`;\n```\n\nUsually, with position absolute property, you are going to use a combination of the following properties:\n\n- top\n- left\n- right\n- bottom\n\nIn the case above, we use `top` and `left` and both are set to `0` pixels. You will get the following output.\n\n<img src='https://cdn-images-1.medium.com/max/800/1*VyDbIWkN4io9aMFw9-Jucg.png' />\n\n## Mapping through a list of categories\n\nInside `components/` folder create a new file called `Categories.js`. This file is going to render a list of category items for the Grocery UI app.\n\n```js\nimport React from 'react';\nimport styled, { css } from '@emotion/native';\n\nconst Categories = props => (\n  <Container>\n    <Name>Fruits</Name>\n    <Name>Bread</Name>\n    <Name>Drinks</Name>\n    <Name>Veggies</Name>\n  </Container>\n);\n\nexport default Categories;\n\nconst Container = styled.View``;\n\nconst Name = styled.Text`\n  font-size: 28px;\n  font-weight: 600;\n  margin-left: 15px;\n  color: #bcbece;\n`;\n```\n\nAll the data is static right now. Import this component in `App.js` and place it after `Titlebar`.\n\n```js\n<Container>\n  <Titlebar>\n    <Avatar source={require('./assets/avatar.jpg')} />\n    <Title>Welcome back,</Title>\n    <Name>Aman</Name>\n  </Titlebar>\n  <Categories />\n</Container>\n```\n\nYou will get the following result.\n\n<img src='https://cdn-images-1.medium.com/max/800/1*UzOFxbJegk5DgdnWIIDFAA.png' />\n\nThere can be a number of categories. To make the names of categories dynamic, we can send it through `App.js` file.\n\n```js\nconst items = [\n  { text: 'Fruits' },\n  { text: 'Bread' },\n  { text: 'Drinks' },\n  { text: 'Veggies' },\n  { text: 'Meat' },\n  { text: 'Paper Goods' }\n];\n\n// ...\n\n// Inside the render function replace <Categories /> with\n\n{\n  items.map((category, index) => (\n    <Categories name={category.text} key={index} />\n  ));\n}\n```\n\nIn the above snippet, you are using `map` function from JavaScript to iterate through an array render a list of items, in this category names. Adding a `key` prop is required. To make this work, also modify `Categories.js`.\n\n```js\nimport React from 'react';\nimport styled, { css } from '@emotion/native';\n\nconst Categories = props => <Name>{props.name}</Name>;\n\nexport default Categories;\n\nconst Name = styled.Text`\n  font-size: 28px;\n  font-weight: 600;\n  margin-left: 15px;\n  color: #bcbece;\n`;\n```\n\nThere is no change in the UI.\n\n<img src='https://cdn-images-1.medium.com/max/800/1*97cGkaf4B-iuoBqtaU_82g.png' />\n\n## Adding Horizontal ScrollView\n\nThis list is right now not scrollable. To make it scrollable, let us place it inside a `ScrollView`. Open up `App.js` file place the categories inside a `ScrollView`, but first, import it from React Native core.\n\n```js\nimport { ScrollView } from 'react-native';\n\n//...\n<ScrollView>\n  {items.map((category, index) => (\n    <Categories name={category.text} key={index} />\n  ))}\n</ScrollView>;\n```\n\nYou will notice not a single change in the UI. By default, scrollable lists in React Native using `ScrollView` are `vertical`. Make this horizontal by adding the prop `horizontal`.\n\n```js\n<ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>\n  {items.map((category, index) => (\n    <Categories name={category.text} key={index} />\n  ))}\n</ScrollView>\n```\n\nIt works.\n\n<img src='https://cdn-images-1.medium.com/max/800/1*Ca8deMUYzKMefqll-U8d2w.gif' />\n\nTo make it appear better, add some inline styling using `css` prop.\n\n```js\n<ScrollView\n    horizontal={true}\n    showsHorizontalScrollIndicator={false}\n    style={css`\n    margin: 20px;\n    margin-left: 12px;\n    `}\n>\n```\n\nNow it looks better.\n\n<img src='https://cdn-images-1.medium.com/max/800/1*Wv5LHX6N-LNKYFBLnzZZjw.gif' />\n\n## Adding a vertical ScrollView\n\nNext step is to add a `ScrollView` that acts as a wrapper inside the `Container` view such that the whole area becomes scrollable vertically. There is a reason to do this. You are now going to add items separated into two columns as images with texts related to a particular category.\n\nModify `App.js` file.\n\n```js\nreturn (\n  <Container>\n    <ScrollView>\n      <Titlebar>{/* and its contents */}</Titlebar>\n      <ScrollView horizontal={true}>\n        {/* Categories being rendered */}\n      </ScrollView>\n      <Subtitle>Items</Subtitle>\n    </ScrollView>\n  </Container>\n);\n```\n\nNotice that we are adding another emotion component called `Subtitle` which is nothing but a text.\n\nIt renders like below.\n\n<img src='https://cdn-images-1.medium.com/max/800/1*pm3WO-qUP4JhE3yagUo93A.png' />\n\n## Building a card component\n\nIn this section, we are going to create a card component that will hold an item’s image, the name of the item and the price as text. Each card component is going to have curved borders and box shadow. This is how it is going to look like.\n\n<img src='https://cdn-images-1.medium.com/max/800/1*LACepyEU54zhnt028sfh5g.png' />\n\nCreate a new component file called `Card.js` inside the `components` directory. The structure of the Card component is going to be.\n\n```js\nimport React from 'react';\nimport styled, { css } from '@emotion/native';\n\nconst Card = props => (\n  <Container>\n    <Cover>\n      <Image source={require('../assets/pepper.jpg')} />\n    </Cover>\n    <Content>\n      <Title>Pepper</Title>\n      <PriceCaption>$ 2.99 each</PriceCaption>\n    </Content>\n  </Container>\n);\n\nexport default Card;\n```\n\nCurrently, it has static data, such as the image, title, and content. Let us add the styles for each styled UI elements in this file.\n\n```js\nconst Container = styled.View`\n  background: #fff;\n  height: 200px;\n  width: 150px;\n  border-radius: 14px;\n  margin: 18px;\n  margin-top: 20px;\n  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);\n`;\n\nconst Cover = styled.View`\n  width: 100%;\n  height: 120px;\n  border-top-left-radius: 14px;\n  border-top-right-radius: 14px;\n  overflow: hidden;\n`;\n\nconst Image = styled.Image`\n  width: 100%;\n  height: 100%;\n`;\n\nconst Content = styled.View`\n  padding-top: 10px;\n  flex-direction: column;\n  align-items: center;\n  height: 60px;\n`;\n\nconst Title = styled.Text`\n  color: #3c4560;\n  font-size: 20px;\n  font-weight: 600;\n`;\n\nconst PriceCaption = styled.Text`\n  color: #b8b3c3;\n  font-size: 15px;\n  font-weight: 600;\n  margin-top: 4px;\n`;\n```\n\nThe `Container` view has a default background of white color. This is useful in scenarios where you are fetching images from a third party APIs. Also, it provides a background to the text area below the image.\n\nInside the `Container` view, add an `Image` and wrap it inside a `Cover` view. In React Native there two ways you can fetch an image.\n\nIf you are getting an image from the static resource as in our case, you use `source` prop with the keyword `require` that contains the relative path to the image asset stored in the project folder. In case of networking images or getting an image from an API, you use the same prop with a different keyword called `uri`. Here is an example of an image being fetched from an API.\n\n```js\n<Image\n  source={{\n    uri: 'https://facebook.github.io/react-native/docs/assets/favicon.png'\n  }}\n/>\n```\n\nThe `Cover` view uses rounded corners with `overflow` property. This is done to reflect the rounded corners. iOS clips the images if coming from a child component. In our case, the image is coming from a `Card` component which is a child to the `App` component.\n\nThe `Image` component takes the width and height of the entire `Cover` view.\n\nNow let us import this component inside App.js file, after the `Subtitle` and let us see what results do we get.\n\n```js\nrender() {\n    return (\n    <Container>\n        <ScrollView>\n        {/* ... */}\n        <Subtitle>Items</Subtitle>\n            <ItemsLayout>\n                <ColumnOne>\n                    <Card />\n                </ColumnOne>\n                <ColumnTwo>\n                    <Card />\n                </ColumnTwo>\n            </ItemsLayout>\n        </ScrollView>\n    </Container>\n    )\n}\n\n// ...\n\nconst ItemsLayout = styled.View`\n    flex-direction: row;\n    flex: 1;\n`;\n\nconst ColumnOne = styled.View``;\n\nconst ColumnTwo = styled.View``;\n```\n\nAfter `Subtitle` adds a new view called `ItemsLayout`. This is going to be a layout that allows different cards to be divided between two columns in each row. This can be done by giving this view a `flex-direction` property of value `row`. `ColumnOne` and `ColumnTwo` are two empty views.\n\nOn rendering the final result, it looks like below.\n\n<img src='https://cdn-images-1.medium.com/max/800/1*1buKFeJ-C7yzw41ezKTv6g.png' />\n\n## Conclusion\n\nYou have completed the tutorial for creating UIs with Emotion-JS and integrate it into a React Native and Expo application. Now go ahead and create those beautiful UIs for your applications.\n\n[Originally published at Heartbeat](https://heartbeat.fritz.ai/how-to-use-emotion-js-with-react-native-fccac9c78779)\n",
             "url": "https://amanhimself.dev//blog/use-emotion-js-with-react-native",
             "title": "Building Stylistic UIs with Emotion-JS for React Native",
             "summary": "Building Stylistic UIs with Emotion-JS for React Native",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1046,7 +1046,7 @@
             "url": "https://amanhimself.dev//blog/user-authentication-with-amplify-in-a-react-native-and-expo-app",
             "title": "User Authentication with Amplify in a React Native and Expo app",
             "summary": "User Authentication with Amplify in a React Native and Expo app",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1058,7 +1058,7 @@
             "url": "https://amanhimself.dev//blog/building-a-react-native-mobile-app-with-aws-amplify-and-expo",
             "title": "Building a React Native Mobile App with AWS Amplify and Expo",
             "summary": "Building a React Native Mobile App with AWS Amplify and Expo",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1070,7 +1070,7 @@
             "url": "https://amanhimself.dev//blog/how-i-configure-vscode-for-everything",
             "title": "How I Configure VSCode for Everything",
             "summary": "How I Configure VSCode for Everything",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1082,7 +1082,7 @@
             "url": "https://amanhimself.dev//blog/build-a-react-native-app-with-react-hooks",
             "title": "React Hooks Basics — Building a React Native App with React Hooks",
             "summary": "React Hooks Basics — Building a React Native App with React Hooks",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1094,7 +1094,7 @@
             "url": "https://amanhimself.dev//blog/how-to-build-your-first-vr-app-with-viroreact-react-native-and-crowdbotics",
             "title": "How To Build Your First VR App with ViroReact, React Native, and Crowdbotics",
             "summary": "How To Build Your First VR App with ViroReact, React Native, and Crowdbotics",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1106,7 +1106,7 @@
             "url": "https://amanhimself.dev//blog/build-a-chatbot-with-dialogflow-and-react-native",
             "title": "Build a Chatbot with Dialogflow and React Native",
             "summary": "Build a Chatbot with Dialogflow and React Native",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1118,7 +1118,7 @@
             "url": "https://amanhimself.dev//blog/how-to-build-a-real-time-logo-detection-app-with-react-native-google-vision-api-and-crowdbotics",
             "title": "How to Build a Real Time Logo Detection App with React Native & Google Vision API",
             "summary": "How to Build a Real Time Logo Detection App with React Native & Google Vision API",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1130,7 +1130,7 @@
             "url": "https://amanhimself.dev//blog/using-styled-components-with-react-native",
             "title": "Using Styled Components with React Native",
             "summary": "Using Styled Components with React Native",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1142,7 +1142,7 @@
             "url": "https://amanhimself.dev//blog/google-vision-api-firebase-react-native",
             "title": "Create a React Native Image Recognition App with Google Vision API",
             "summary": "Create a React Native Image Recognition App with Google Vision API",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1154,7 +1154,7 @@
             "url": "https://amanhimself.dev//blog/how-to-build-a-news-reader-app-with-react-native-and-newsapi",
             "title": "How To Build a News Reader App with React Native and NewsAPI",
             "summary": "How To Build a News Reader App with React Native and NewsAPI",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1166,7 +1166,7 @@
             "url": "https://amanhimself.dev//blog/29-useful-open-source-libraries-for-nodejs",
             "title": "Top open source libraries for Node.js",
             "summary": "Top open source libraries for Node.js",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1178,7 +1178,7 @@
             "url": "https://amanhimself.dev//blog/21-useful-open-source-packages-for-react-native",
             "title": "21 Useful Open Source Packages for React Native",
             "summary": "21 Useful Open Source Packages for React Native",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1190,7 +1190,7 @@
             "url": "https://amanhimself.dev//blog/3-steps-to-learn-react-native-in-2019",
             "title": "3 Steps to learn React Native in 2019",
             "summary": "3 Steps to learn React Native in 2019",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1202,7 +1202,7 @@
             "url": "https://amanhimself.dev//blog/getting-started-with-react-native-in-2019-build-your-first-app",
             "title": "Getting Started with React Native in 2019 - Build Your First App",
             "summary": "Getting Started with React Native in 2019 - Build Your First App",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1214,7 +1214,7 @@
             "url": "https://amanhimself.dev//blog/my-top-tutorials-in-web-development-and-react-native-in-2018",
             "title": "My Top Tutorials in Web Development and React Native in 2018",
             "summary": "My Top Tutorials in Web Development and React Native in 2018",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1226,7 +1226,7 @@
             "url": "https://amanhimself.dev//blog/top-nodejs-libraries-and-tools-for-machine-learning",
             "title": "Top Node.js Libraries and Tools For Machine Learning",
             "summary": "Top Node.js Libraries and Tools For Machine Learning",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1238,7 +1238,7 @@
             "url": "https://amanhimself.dev//blog/how-to-build-a-rest-api-with-nodejs-and-postgresql",
             "title": "How To Build a REST API With Nodejs and PostgreSQL",
             "summary": "How To Build a REST API With Nodejs and PostgreSQL",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1250,7 +1250,7 @@
             "url": "https://amanhimself.dev//blog/integrating-firebase-with-react-native",
             "title": "Integrating Firebase with React Native",
             "summary": "Integrating Firebase with React Native",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1262,7 +1262,7 @@
             "url": "https://amanhimself.dev//blog/how-to-build-your-own-blog-from-scratch-with-gatsbyjs-graphql-react-and-markdown",
             "title": "How To Build A Blog From Scratch With React, Markdown, GraphQL and Gatsbyjs",
             "summary": "How To Build A Blog From Scratch With React, Markdown, GraphQL and Gatsbyjs",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1274,7 +1274,7 @@
             "url": "https://amanhimself.dev//blog/building-a-mern-stack-app-with-material-ui",
             "title": "Building an authenticated MERN Stack App Using Material UI",
             "summary": "Building an authenticated MERN Stack App Using Material UI",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1286,7 +1286,7 @@
             "url": "https://amanhimself.dev//blog/how-to-build-a-serverless-backend-with-aws-lambda-and-nodejs",
             "title": "How to Build a Serverless Backend with AWS Lambda and Nodejs",
             "summary": "How to Build a Serverless Backend with AWS Lambda and Nodejs",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1298,7 +1298,7 @@
             "url": "https://amanhimself.dev//blog/creating-a-graphql-server-with-nodejs-in-2018",
             "title": "Creating a GraphQL server with Nodejs",
             "summary": "Creating a GraphQL server with Nodejs",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1310,7 +1310,7 @@
             "url": "https://amanhimself.dev//blog/how-to-use-import-statements-in-nodejs",
             "title": "How to use Import statements in Nodejs",
             "summary": "How to use Import statements in Nodejs",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1322,7 +1322,7 @@
             "url": "https://amanhimself.dev//blog/setting-up-nodejs-backend-for-a-react-app",
             "title": "Setting up Nodejs Backend for a React App",
             "summary": "Setting up Nodejs Backend for a React App",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1334,7 +1334,7 @@
             "url": "https://amanhimself.dev//blog/building-a-rest-api-with-koajs",
             "title": "Building a REST API with Koajs",
             "summary": "Building a REST API with Koajs",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1346,7 +1346,7 @@
             "url": "https://amanhimself.dev//blog/deploy-a-mern-stack-app-on-heroku",
             "title": "Deploy a MERN stack app on Heroku",
             "summary": "Deploy a MERN stack app on Heroku",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1358,7 +1358,7 @@
             "url": "https://amanhimself.dev//blog/navigation-in-a-react-native-app",
             "title": "How to use React Navigation in a React Native App",
             "summary": "How to use React Navigation in a React Native App",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1370,7 +1370,7 @@
             "url": "https://amanhimself.dev//blog/accessing-geo-location-and-app-permissions-in-react-native-and-expo",
             "title": "Accessing Geo-location and App Permissions in React Native and Expo",
             "summary": "Accessing Geo-location and App Permissions in React Native and Expo",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1382,7 +1382,7 @@
             "url": "https://amanhimself.dev//blog/simple-recipe-to-build-a-theme-app-in-react-native",
             "title": "Simple Recipe to Build a Theme App in React Native",
             "summary": "Simple Recipe to Build a Theme App in React Native",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1394,7 +1394,7 @@
             "url": "https://amanhimself.dev//blog/how-to-integrate-redux-into-your-application-with-react-native-and-expo",
             "title": "How to integrate Redux into your application with React Native and Expo",
             "summary": "How to integrate Redux into your application with React Native and Expo",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1406,7 +1406,7 @@
             "url": "https://amanhimself.dev//blog/week-3-with-react-native",
             "title": "Week 3 with React Native - Why use Expo?",
             "summary": "Week 3 with React Native - Why use Expo?",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1418,7 +1418,7 @@
             "url": "https://amanhimself.dev//blog/week-2-with-react-native-building-a-weather-app",
             "title": "Week 2 With React Native - Building a Weather App",
             "summary": "Week 2 With React Native - Building a Weather App",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1430,7 +1430,7 @@
             "url": "https://amanhimself.dev//blog/react-native-how-to-setup-your-first-app",
             "title": "React Native - How to Setup Your First App",
             "summary": "React Native - How to Setup Your First App",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1442,7 +1442,7 @@
             "url": "https://amanhimself.dev//blog/starting-over-with-react-native",
             "title": "Starting Over with React Native",
             "summary": "Starting Over with React Native",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1454,7 +1454,7 @@
             "url": "https://amanhimself.dev//blog/connecting-a-node-js-and-reactjs-example",
             "title": "How to Upload a File with Reactjs and Nodejs",
             "summary": "How to Upload a File with Reactjs and Nodejs",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1466,7 +1466,7 @@
             "url": "https://amanhimself.dev//blog/react-native-building-a-minimalist-weather-app-using-expo-xde",
             "title": "React Native - Building a Minimalist Weather App using Expo XDE",
             "summary": "React Native - Building a Minimalist Weather App using Expo XDE",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1478,7 +1478,7 @@
             "url": "https://amanhimself.dev//blog/react-native-getting-started-with-lottie-and-expo",
             "title": "React Native - Getting Started with Lottie and Expo",
             "summary": "React Native - Getting Started with Lottie and Expo",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1490,7 +1490,7 @@
             "url": "https://amanhimself.dev//blog/build-a-progressive-web-app-using-react",
             "title": "Build a Progressive Web App using React",
             "summary": "Build a Progressive Web App using React",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1502,7 +1502,7 @@
             "url": "https://amanhimself.dev//blog/designing-a-rest-api-with-node-js-and-mongodb-atlas",
             "title": "Designing a REST API with Node.js and MongoDB Atlas",
             "summary": "Designing a REST API with Node.js and MongoDB Atlas",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1514,7 +1514,7 @@
             "url": "https://amanhimself.dev//blog/setting-up-and-getting-used-to-gatsby",
             "title": "Gatsby.js - How to set up and use the React Static Site Generator",
             "summary": "Gatsby.js - How to set up and use the React Static Site Generator",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1526,7 +1526,7 @@
             "url": "https://amanhimself.dev//blog/ionic-2-3-cli-reference",
             "title": "Ionic 2/3 CLI Reference",
             "summary": "Ionic 2/3 CLI Reference",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1538,7 +1538,7 @@
             "url": "https://amanhimself.dev//blog/passing-data-between-pages-in-an-ionic-application",
             "title": "Passing Data Between Pages in an Ionic Application",
             "summary": "Passing Data Between Pages in an Ionic Application",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1550,7 +1550,7 @@
             "url": "https://amanhimself.dev//blog/tips-for-creating-node-js-rest-apis",
             "title": "Tips for Creating Nodejs REST APIs",
             "summary": "Tips for Creating Nodejs REST APIs",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1562,7 +1562,7 @@
             "url": "https://amanhimself.dev//blog/multi-page-navigation-in-an-ionic-app",
             "title": "Multi Page Navigation in an Ionic App",
             "summary": "Multi Page Navigation in an Ionic App",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1574,7 +1574,7 @@
             "url": "https://amanhimself.dev//blog/using-google-fonts-in-an-ionic-application",
             "title": "Using Google Fonts in an Ionic Application",
             "summary": "Using Google Fonts in an Ionic Application",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1586,7 +1586,7 @@
             "url": "https://amanhimself.dev//blog/basic-navigation-in-ionic-applications",
             "title": "Basic Navigation in Ionic Applications",
             "summary": "Basic Navigation in Ionic Applications",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1598,7 +1598,7 @@
             "url": "https://amanhimself.dev//blog/how-to-use-font-awesome-in-an-ionic-application",
             "title": "How to use Font Awesome in an Ionic Application",
             "summary": "How to use Font Awesome in an Ionic Application",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1610,7 +1610,7 @@
             "url": "https://amanhimself.dev//blog/what-is-ionic",
             "title": "What is Ionic?",
             "summary": "What is Ionic?",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1622,7 +1622,7 @@
             "url": "https://amanhimself.dev//blog/introduction-to-hybrid-mobile-apps",
             "title": "Introduction to Hybrid Mobile Apps",
             "summary": "Introduction to Hybrid Mobile Apps",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1634,7 +1634,7 @@
             "url": "https://amanhimself.dev//blog/remove-node-modules-recursively",
             "title": "Remove node_modules Recursively",
             "summary": "Remove node_modules Recursively",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1646,7 +1646,7 @@
             "url": "https://amanhimself.dev//blog/setup-nodemon-to-auto-restart-nodejs-application-server",
             "title": "Setup Nodemon to auto restart Nodejs application server",
             "summary": "Setup Nodemon to auto restart Nodejs application server",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1658,7 +1658,7 @@
             "url": "https://amanhimself.dev//blog/whats-new-in-npm-5",
             "title": "What’s New in npm 5?",
             "summary": "What’s New in npm 5?",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1670,7 +1670,7 @@
             "url": "https://amanhimself.dev//blog/converting-a-buffer-to-json-and-utf8-strings-in-nodejs",
             "title": "Converting a Buffer to JSON and Utf8 Strings in Nodejs",
             "summary": "Converting a Buffer to JSON and Utf8 Strings in Nodejs",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1682,7 +1682,7 @@
             "url": "https://amanhimself.dev//blog/setting-up-mean-stack-with-webstorm",
             "title": "Setting up MEAN Stack with Webstorm",
             "summary": "Setting up MEAN Stack with Webstorm",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1694,7 +1694,7 @@
             "url": "https://amanhimself.dev//blog/paginate-records-in-mysql-using-sequelize-and-nodejs",
             "title": "How to paginate records in MySQL using Sequelize and Nodejs",
             "summary": "How to paginate records in MySQL using Sequelize and Nodejs",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1706,7 +1706,7 @@
             "url": "https://amanhimself.dev//blog/getting-started-with-sequelize-for-nodejs",
             "title": "Getting Started with Sequelize for Nodejs Applications",
             "summary": "Getting Started with Sequelize for Nodejs Applications",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1718,7 +1718,7 @@
             "url": "https://amanhimself.dev//blog/how-to-use-eslint-in-node-js-applications",
             "title": "How to use ESLint in Node.js Applications",
             "summary": "How to use ESLint in Node.js Applications",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1730,7 +1730,7 @@
             "url": "https://amanhimself.dev//blog/how-to-mock-data-for-nodejs-applications-using-fakerjs",
             "title": "How to Mock Data for Node.js Applications using faker.js",
             "summary": "How to Mock Data for Node.js Applications using faker.js",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1742,7 +1742,7 @@
             "url": "https://amanhimself.dev//blog/getting-started-with-ionic-framework",
             "title": "Getting Started with Ionic Framework",
             "summary": "Getting Started with Ionic Framework",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1754,7 +1754,7 @@
             "url": "https://amanhimself.dev//blog/migrating-from-expressjs-4-to-5",
             "title": "Migrating from Expressjs 4 to 5",
             "summary": "Migrating from Expressjs 4 to 5",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1766,7 +1766,7 @@
             "url": "https://amanhimself.dev//blog/using-bower-with-heroku",
             "title": "Using Bower With Heroku",
             "summary": "Using Bower With Heroku",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1778,7 +1778,7 @@
             "url": "https://amanhimself.dev//blog/node-js-twitter-bot-tutorial",
             "title": "Writing a Node.js Twitter Bot Part 1",
             "summary": "Writing a Node.js Twitter Bot Part 1",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1790,7 +1790,7 @@
             "url": "https://amanhimself.dev//blog/node-js-twitter-bot-tutorial-part-2",
             "title": "Writing a Node.js Twitter Bot Part 2",
             "summary": "Writing a Node.js Twitter Bot Part 2",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1802,7 +1802,7 @@
             "url": "https://amanhimself.dev//blog/create-a-simple-twitter-bot-with-node-js",
             "title": "Create a Simple Twitter Bot with Node.js",
             "summary": "Create a Simple Twitter Bot with Node.js",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1814,7 +1814,7 @@
             "url": "https://amanhimself.dev//blog/atom-an-editor-of-21st-century",
             "title": "ATOM- An Editor of 21st Century",
             "summary": "ATOM- An Editor of 21st Century",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1826,7 +1826,7 @@
             "url": "https://amanhimself.dev//blog/how-process-nexttick-works-in-node-js",
             "title": "How process.nextTick() works in Node.js?",
             "summary": "How process.nextTick() works in Node.js?",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1838,7 +1838,7 @@
             "url": "https://amanhimself.dev//blog/nodejs-system",
             "title": "The Node.js system",
             "summary": "The Node.js system",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1850,7 +1850,7 @@
             "url": "https://amanhimself.dev//blog/the-node-way",
             "title": "The Node way - Philosophy of a Platform",
             "summary": "The Node way - Philosophy of a Platform",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1862,7 +1862,7 @@
             "url": "https://amanhimself.dev//blog/javascript-code-convetions",
             "title": "JavaScript Code Conventions",
             "summary": "JavaScript Code Conventions",
-            "date_modified": "2022-03-27T16:35:10.858Z",
+            "date_modified": "2022-03-27T16:37:20.238Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"

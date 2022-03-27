@@ -3,7 +3,6 @@ title: 'Building Stylistic UIs with Emotion-JS for React Native'
 date: '2019-06-04'
 slug: 'use-emotion-js-with-react-native'
 thumbnail: '/thumbnails/expo.png'
-template: post
 tag: 'expo'
 canonicalUrl: 'https://heartbeat.fritz.ai/how-to-use-emotion-js-with-react-native-fccac9c78779'
 ---
