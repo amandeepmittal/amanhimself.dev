@@ -201,7 +201,7 @@ const SponsorshipPage = () => {
         </Text>
         <Divider />
         <Heading size="lg" as="h2" pt={4}>
-          Special shoutout to amanhimself.dev&apos;s sponsors
+          Special shoutout to sponsors
         </Heading>
         <Text lineHeight="175%" as="h2" fontSize="lg">
           I am truly grateful to all the people and companies that decided to
