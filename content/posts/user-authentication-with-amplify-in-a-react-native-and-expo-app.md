@@ -1,6 +1,6 @@
 ---
 title: 'User Authentication with Amplify in a React Native and Expo app'
-slug: 'blog/user-authentication-with-amplify-in-a-react-native-and-expo-app'
+slug: 'user-authentication-with-amplify-in-a-react-native-and-expo-app'
 date: '2019-05-22'
 thumbnail: '/thumbnails/expo.png'
 tag: 'expo'

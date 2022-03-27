@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://amanhimself.dev/</id>
     <title>Aman Mittal' blog</title>
-    <updated>2022-03-27T16:33:29.209Z</updated>
+    <updated>2022-03-27T16:35:10.858Z</updated>
     <generator>Feed for Node.js</generator>
     <author>
         <name>Aman Mittal</name>
@@ -14,13 +14,13 @@
     <icon>https://amanhimself.dev//favicon.jpg</icon>
     <rights>2019 - 2022, Aman Mittal · All Rights Reserved.</rights>
     <entry>
-        <title type="html"><![CDATA[When to use keyExtractor in React Native's FlatList]]></title>
+        <title type="html"><![CDATA[When to use keyExtractor prop in React Native's FlatList]]></title>
         <id>https://amanhimself.dev//blog/use-key-extractor-in-react-native-flatlist</id>
         <link href="https://amanhimself.dev//blog/use-key-extractor-in-react-native-flatlist"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
-        <summary type="html"><![CDATA[When to use keyExtractor in React Native's FlatList]]></summary>
+        <updated>2022-03-27T16:35:10.858Z</updated>
+        <summary type="html"><![CDATA[When to use keyExtractor prop in React Native's FlatList]]></summary>
         <content type="html"><![CDATA[---
-title: "When to use keyExtractor in React Native's FlatList"
+title: "When to use keyExtractor prop in React Native's FlatList"
 slug: 'use-key-extractor-in-react-native-flatlist'
 date: '2022-03-27'
 thumbnail: '/thumbnails/react.png'
@@ -28,7 +28,7 @@ tag: 'react-native'
 canonicalUrl: 'https://heartbeat.fritz.ai/user-authentication-with-amplify-in-a-react-native-and-expo-app-d00cdaf1ac28'
 ---
 
-![cover_image]
+![cover_image](https://i.imgur.com/sRxXsyt.png)
 
 # When to use keyExtractor in React Native's FlatList
 
@@ -202,7 +202,7 @@ If you like to learn more about React Native, check out the [React Native catego
         <title type="html"><![CDATA[Set up a Next.js project with ESLint, Prettier, Husky, and Lint Staged]]></title>
         <id>https://amanhimself.dev//blog/setup-nextjs-project-with-eslint-prettier-husky-lint-staged</id>
         <link href="https://amanhimself.dev//blog/setup-nextjs-project-with-eslint-prettier-husky-lint-staged"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[Set up a Next.js project with ESLint, Prettier, Husky, and Lint Staged]]></summary>
         <content type="html"><![CDATA[---
 title: 'Set up a Next.js project with ESLint, Prettier, Husky, and Lint Staged'
@@ -412,7 +412,7 @@ That's all for setting up ESLint, Prettier, Husky, and Lint Staged with a minima
         <title type="html"><![CDATA[How to install Node.js using NVM on macOS M1]]></title>
         <id>https://amanhimself.dev//blog/install-nodejs-using-nvm-on-macos-m1</id>
         <link href="https://amanhimself.dev//blog/install-nodejs-using-nvm-on-macos-m1"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[How to install Node.js using NVM on macOS M1]]></summary>
         <content type="html"><![CDATA[---
 title: 'How to install Node.js using NVM on macOS M1'
@@ -535,7 +535,7 @@ nvm uninstall 14
         <title type="html"><![CDATA[Implementing Infinite Scroll with React Query and FlatList in React Native]]></title>
         <id>https://amanhimself.dev//blog/infinite-scroll-with-react-query-and-flatlist-in-react-native</id>
         <link href="https://amanhimself.dev//blog/infinite-scroll-with-react-query-and-flatlist-in-react-native"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[Implementing Infinite Scroll with React Query and FlatList in React Native]]></summary>
         <content type="html"><![CDATA[---
 title: 'Implementing Infinite Scroll with React Query and FlatList in React Native'
@@ -946,7 +946,7 @@ You can also check the [complete source code for this example is at this GitHub 
         <title type="html"><![CDATA[How to rename default branch in Git and GitHub]]></title>
         <id>https://amanhimself.dev//blog/how-to-rename-default-branch-name-in-git-and-github</id>
         <link href="https://amanhimself.dev//blog/how-to-rename-default-branch-name-in-git-and-github"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[How to rename default branch in Git and GitHub]]></summary>
         <content type="html"><![CDATA[---
 title: 'How to rename default branch in Git and GitHub'
@@ -1011,7 +1011,7 @@ That's it!
         <title type="html"><![CDATA[Tamagui for React Native: Create faster design systems]]></title>
         <id>https://amanhimself.dev//blog/tamagui-for-react-native</id>
         <link href="https://amanhimself.dev//blog/tamagui-for-react-native"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[Tamagui for React Native: Create faster design systems]]></summary>
         <content type="html"><![CDATA[---
 title: 'Tamagui for React Native: Create faster design systems'
@@ -1404,7 +1404,7 @@ As a developer, I'll be keeping a close eye on Tamagui’s development and growt
         <title type="html"><![CDATA[2021 - A year in review]]></title>
         <id>https://amanhimself.dev//blog/year-in-review-2021</id>
         <link href="https://amanhimself.dev//blog/year-in-review-2021"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[2021 - A year in review]]></summary>
         <content type="html"><![CDATA[---
 title: '2021 - A year in review'
@@ -1517,7 +1517,7 @@ Have a great 2022!
         <title type="html"><![CDATA[Create a custom hook to Show/Hide Password Visibility in React Native]]></title>
         <id>https://amanhimself.dev//blog/show-hide-password-in-react-native-using-custom-hook</id>
         <link href="https://amanhimself.dev//blog/show-hide-password-in-react-native-using-custom-hook"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[Create a custom hook to Show/Hide Password Visibility in React Native]]></summary>
         <content type="html"><![CDATA[---
 title: 'Create a custom hook to Show/Hide Password Visibility in React Native'
@@ -1765,7 +1765,7 @@ const styles = StyleSheet.create({
         <title type="html"><![CDATA[How to avoid notches with Safe Area Context in React Native apps]]></title>
         <id>https://amanhimself.dev//blog/safe-area-context-in-react-native-apps</id>
         <link href="https://amanhimself.dev//blog/safe-area-context-in-react-native-apps"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[How to avoid notches with Safe Area Context in React Native apps]]></summary>
         <content type="html"><![CDATA[---
 date: '2021-10-14'
@@ -1972,7 +1972,7 @@ _This post was also published at [freeCodeCamp](https://www.freecodecamp.org/new
         <title type="html"><![CDATA[How to configure VSCode Bracket Pair Colors Natively]]></title>
         <id>https://amanhimself.dev//blog/how-to-configure-vscode-bracket-colors-natively</id>
         <link href="https://amanhimself.dev//blog/how-to-configure-vscode-bracket-colors-natively"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[How to configure VSCode Bracket Pair Colors Natively]]></summary>
         <content type="html"><![CDATA[---
 title: 'How to configure VSCode Bracket Pair Colors Natively'
@@ -2027,7 +2027,7 @@ By the way, the above colors are from [Dracula theme's 🧛‍♂️ color palet
         <title type="html"><![CDATA[How to add Splash Screen and an App Icon in React Native]]></title>
         <id>https://amanhimself.dev//blog/how-to-add-a-splash-screen-and-app-icon-in-react-native-with-react-native-bootsplash</id>
         <link href="https://amanhimself.dev//blog/how-to-add-a-splash-screen-and-app-icon-in-react-native-with-react-native-bootsplash"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[How to add Splash Screen and an App Icon in React Native]]></summary>
         <content type="html"><![CDATA[---
 title: 'How to add Splash Screen and an App Icon in React Native'
@@ -2539,7 +2539,7 @@ For more advanced usage of `react-native-bootsplash` please check its [official 
         <title type="html"><![CDATA[How to use iOS simulator in full-screen]]></title>
         <id>https://amanhimself.dev//blog/how-to-use-ios-simulator-in-full-screen</id>
         <link href="https://amanhimself.dev//blog/how-to-use-ios-simulator-in-full-screen"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[How to use iOS simulator in full-screen]]></summary>
         <content type="html"><![CDATA[---
 title: 'How to use iOS simulator in full-screen'
@@ -2584,7 +2584,7 @@ It's already challenging to keep distractions at bay. But, sometimes, a little b
         <title type="html"><![CDATA[How to solve RCTBridge required dispatch_sync to load warning on iOS for React Native]]></title>
         <id>https://amanhimself.dev//blog/rctbridge-required-dispatch-sync-to-load-warning</id>
         <link href="https://amanhimself.dev//blog/rctbridge-required-dispatch-sync-to-load-warning"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[How to solve RCTBridge required dispatch_sync to load warning on iOS for React Native]]></summary>
         <content type="html"><![CDATA[---
 title: 'How to solve RCTBridge required dispatch_sync to load warning on iOS for React Native'
@@ -2650,7 +2650,7 @@ The warning will be gone now.
         <title type="html"><![CDATA[How to Offer Multi-language Support in a React Native App]]></title>
         <id>https://amanhimself.dev//blog/multi-language-support-in-react-native-with-react-i18next</id>
         <link href="https://amanhimself.dev//blog/multi-language-support-in-react-native-with-react-i18next"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[How to Offer Multi-language Support in a React Native App]]></summary>
         <content type="html"><![CDATA[---
 title: 'How to Offer Multi-language Support in a React Native App'
@@ -3196,7 +3196,7 @@ Please don't mind my translation for French text corresponding to English text. 
         <title type="html"><![CDATA[GET Request params with Axios]]></title>
         <id>https://amanhimself.dev//blog/get-request-with-axios</id>
         <link href="https://amanhimself.dev//blog/get-request-with-axios"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[GET Request params with Axios]]></summary>
         <content type="html"><![CDATA[---
 title: 'GET Request params with Axios'
@@ -3271,7 +3271,7 @@ axios.get(`${BASE_URL}/movie/popular`, {
         <title type="html"><![CDATA[Environment Variables in Expo and TypeScript]]></title>
         <id>https://amanhimself.dev//blog/environment-variables-in-expo-managed-workflow</id>
         <link href="https://amanhimself.dev//blog/environment-variables-in-expo-managed-workflow"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[Environment Variables in Expo and TypeScript]]></summary>
         <content type="html"><![CDATA[---
 title: 'Environment Variables in Expo and TypeScript'
@@ -3332,7 +3332,7 @@ const API_KEY = Constants?.manifest?.extra?.apiKey;
         <title type="html"><![CDATA[The No-Code Way of Payments with Stripe: A Brief Guide]]></title>
         <id>https://amanhimself.dev//blog/no-code-way-of-payments-with-stripe-a-brief-guide</id>
         <link href="https://amanhimself.dev//blog/no-code-way-of-payments-with-stripe-a-brief-guide"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[The No-Code Way of Payments with Stripe: A Brief Guide]]></summary>
         <content type="html"><![CDATA[---
 title: 'The No-Code Way of Payments with Stripe: A Brief Guide'
@@ -3398,7 +3398,7 @@ I also wrote a post on how to use Stripe Payment Links when creating a mobile ap
         <title type="html"><![CDATA[How To Integrate Firebase Authentication With an Expo App]]></title>
         <id>https://amanhimself.dev//blog/firebase-authentication-with-expo</id>
         <link href="https://amanhimself.dev//blog/firebase-authentication-with-expo"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[How To Integrate Firebase Authentication With an Expo App]]></summary>
         <content type="html"><![CDATA[---
 title: 'How To Integrate Firebase Authentication With an Expo App'
@@ -4357,7 +4357,7 @@ If you need to take a look at the code for this tutorial, you can refer to this 
         <title type="html"><![CDATA[Common Prop Types in TypeScript and React]]></title>
         <id>https://amanhimself.dev//blog/common-proptypes-in-react-and-typescript</id>
         <link href="https://amanhimself.dev//blog/common-proptypes-in-react-and-typescript"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[Common Prop Types in TypeScript and React]]></summary>
         <content type="html"><![CDATA[---
 title: 'Common Prop Types in TypeScript and React'
@@ -4463,7 +4463,7 @@ function add(x: number, y: number): number {
         <title type="html"><![CDATA[Prop types in React and TypeScript]]></title>
         <id>https://amanhimself.dev//blog/prop-types-in-react-and-typescript</id>
         <link href="https://amanhimself.dev//blog/prop-types-in-react-and-typescript"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[Prop types in React and TypeScript]]></summary>
         <content type="html"><![CDATA[---
 title: 'Prop types in React and TypeScript'
@@ -4599,7 +4599,7 @@ type Props = {
         <title type="html"><![CDATA[🌱 Life at Draftbit - First 3 Months as a Developer Advocate]]></title>
         <id>https://amanhimself.dev//blog/first-three-months-as-developer-advocate</id>
         <link href="https://amanhimself.dev//blog/first-three-months-as-developer-advocate"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[🌱 Life at Draftbit - First 3 Months as a Developer Advocate]]></summary>
         <content type="html"><![CDATA[---
 title: '🌱 Life at Draftbit - First 3 Months as a Developer Advocate'
@@ -4692,7 +4692,7 @@ If you want to talk about Draftbit, have questions, or React Native, or DevRel, 
         <title type="html"><![CDATA[How to Create a Custom Image Gallery in React Native]]></title>
         <id>https://amanhimself.dev//blog/custom-preview-image-gallery-in-react-native</id>
         <link href="https://amanhimself.dev//blog/custom-preview-image-gallery-in-react-native"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[How to Create a Custom Image Gallery in React Native]]></summary>
         <content type="html"><![CDATA[---
 title: 'How to Create a Custom Image Gallery in React Native'
@@ -5100,7 +5100,7 @@ Originally Published at **[Crowdbotics's Blog](https://blog.crowdbotics.com/how-
         <title type="html"><![CDATA[How to Create a Custom Tab Bar in React Native]]></title>
         <id>https://amanhimself.dev//blog/create-custom-tab-bar-in-react-native</id>
         <link href="https://amanhimself.dev//blog/create-custom-tab-bar-in-react-native"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[How to Create a Custom Tab Bar in React Native]]></summary>
         <content type="html"><![CDATA[---
 title: 'How to Create a Custom Tab Bar in React Native'
@@ -5681,7 +5681,7 @@ Originally Published at **[Crowdbotics's Blog](https://blog.crowdbotics.com/how-
         <title type="html"><![CDATA[How to use ES6 import syntax in Node.js]]></title>
         <id>https://amanhimself.dev//blog/how-to-use-es6-import-in-nodejs</id>
         <link href="https://amanhimself.dev//blog/how-to-use-es6-import-in-nodejs"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[How to use ES6 import syntax in Node.js]]></summary>
         <content type="html"><![CDATA[---
 title: 'How to use ES6 import syntax in Node.js'
@@ -5780,7 +5780,7 @@ An example of running Node server using `npm run dev` script:
         <title type="html"><![CDATA[How to upload an image using Expo Camera to Cloudinary]]></title>
         <id>https://amanhimself.dev//blog/upload-image-to-cloudinary-using-expo-camera</id>
         <link href="https://amanhimself.dev//blog/upload-image-to-cloudinary-using-expo-camera"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[How to upload an image using Expo Camera to Cloudinary]]></summary>
         <content type="html"><![CDATA[---
 title: 'How to upload an image using Expo Camera to Cloudinary'
@@ -6295,7 +6295,7 @@ _Originally Published at **[Jscrambler's Blog](https://blog.jscrambler.com/how-t
         <title type="html"><![CDATA[Setup Macbook M1 for Web and React Native development]]></title>
         <id>https://amanhimself.dev//blog/setup-macbook-m1</id>
         <link href="https://amanhimself.dev//blog/setup-macbook-m1"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[Setup Macbook M1 for Web and React Native development]]></summary>
         <content type="html"><![CDATA[---
 title: 'Setup Macbook M1 for Web and React Native development'
@@ -6825,7 +6825,7 @@ That’s the setup I now use for my JavaScript, Node.js, React and React Native.
         <title type="html"><![CDATA[How to use React Native Geolocation to get Postal Address]]></title>
         <id>https://amanhimself.dev//blog/react-native-geolocation-to-get-postal-address</id>
         <link href="https://amanhimself.dev//blog/react-native-geolocation-to-get-postal-address"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[How to use React Native Geolocation to get Postal Address]]></summary>
         <content type="html"><![CDATA[---
 title: 'How to use React Native Geolocation to get Postal Address'
@@ -7219,7 +7219,7 @@ _Originally Published at [Jscrambler's Blog](https://blog.jscrambler.com/how-to-
         <title type="html"><![CDATA[React Native Performance Do and Dont]]></title>
         <id>https://amanhimself.dev//blog/react-native-performance-do-and-dont</id>
         <link href="https://amanhimself.dev//blog/react-native-performance-do-and-dont"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[React Native Performance Do and Dont]]></summary>
         <content type="html"><![CDATA[---
 title: 'React Native Performance Do and Dont'
@@ -7395,7 +7395,7 @@ _[Originally Published at Crowdbotics](https://medium.com/crowdbotics/react-nati
         <title type="html"><![CDATA[How to use shared element transitions in React Native]]></title>
         <id>https://amanhimself.dev//blog/shared-element-transitions</id>
         <link href="https://amanhimself.dev//blog/shared-element-transitions"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[How to use shared element transitions in React Native]]></summary>
         <content type="html"><![CDATA[---
 title: 'How to use shared element transitions in React Native'
@@ -8054,7 +8054,7 @@ Source code is available at this [GitHub repo.](https://github.com/amandeepmitta
         <title type="html"><![CDATA[How to remove bottom tab bar border in React Navigation]]></title>
         <id>https://amanhimself.dev//blog/react-navigation-remove-tab-bar-border</id>
         <link href="https://amanhimself.dev//blog/react-navigation-remove-tab-bar-border"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[How to remove bottom tab bar border in React Navigation]]></summary>
         <content type="html"><![CDATA[---
 title: 'How to remove bottom tab bar border in React Navigation'
@@ -8135,7 +8135,7 @@ style: {
         <title type="html"><![CDATA[How to use redux-persist in React Native with Asyncstorage]]></title>
         <id>https://amanhimself.dev//blog/redux-persist-in-react-native-with-async-storage</id>
         <link href="https://amanhimself.dev//blog/redux-persist-in-react-native-with-async-storage"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[How to use redux-persist in React Native with Asyncstorage]]></summary>
         <content type="html"><![CDATA[---
 title: 'How to use redux-persist in React Native with Asyncstorage'
@@ -8964,7 +8964,7 @@ _Originally published at [Jscrambler.com](https://blog.jscrambler.com/how-to-use
         <title type="html"><![CDATA[How to add an app icon in a React Native Android app]]></title>
         <id>https://amanhimself.dev//blog/app-icon-react-native-android</id>
         <link href="https://amanhimself.dev//blog/app-icon-react-native-android"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[How to add an app icon in a React Native Android app]]></summary>
         <content type="html"><![CDATA[---
 title: 'How to add an app icon in a React Native Android app'
@@ -9057,7 +9057,7 @@ That's it to generate and a new icon for your Android app. Please find the [link
         <title type="html"><![CDATA[Year Rewind: 2020]]></title>
         <id>https://amanhimself.dev//blog/year-rewind-2020</id>
         <link href="https://amanhimself.dev//blog/year-rewind-2020"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[Year Rewind: 2020]]></summary>
         <content type="html"><![CDATA[---
 title: 'Year Rewind: 2020'
@@ -9246,7 +9246,7 @@ Have a great 2021!
         <title type="html"><![CDATA[How to create a custom scrollbar with React Native Animated API]]></title>
         <id>https://amanhimself.dev//blog/custom-scroll-bar-indicator-with-react-native-animated-api</id>
         <link href="https://amanhimself.dev//blog/custom-scroll-bar-indicator-with-react-native-animated-api"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[How to create a custom scrollbar with React Native Animated API]]></summary>
         <content type="html"><![CDATA[---
 title: 'How to create a custom scrollbar with React Native Animated API'
@@ -9647,7 +9647,7 @@ I hope you had fun reading this tutorial. If you are trying the Animated library
         <title type="html"><![CDATA[How to manage state in React apps with useReducer and useContext hooks]]></title>
         <id>https://amanhimself.dev//blog/manage-state-with-usecontext-usereducer-in-react-apps</id>
         <link href="https://amanhimself.dev//blog/manage-state-with-usecontext-usereducer-in-react-apps"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[How to manage state in React apps with useReducer and useContext hooks]]></summary>
         <content type="html"><![CDATA[---
 title: 'How to manage state in React apps with useReducer and useContext hooks'
@@ -9998,7 +9998,7 @@ Using `useReducer` in conjunction with React's Context API is a great way to qui
         <title type="html"><![CDATA[Creating and Validating React Native Forms with Formik]]></title>
         <id>https://amanhimself.dev//blog/creating-and-validating-react-native-form-with-formik</id>
         <link href="https://amanhimself.dev//blog/creating-and-validating-react-native-form-with-formik"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[Creating and Validating React Native Forms with Formik]]></summary>
         <content type="html"><![CDATA[---
 title: 'Creating and Validating React Native Forms with Formik'
@@ -10460,7 +10460,7 @@ The last section where we used `ref` to change the focus from one input field to
         <title type="html"><![CDATA[How to use HarperDB instance with React Hooks]]></title>
         <id>https://amanhimself.dev//blog/harperdb-with-react-hooks</id>
         <link href="https://amanhimself.dev//blog/harperdb-with-react-hooks"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[How to use HarperDB instance with React Hooks]]></summary>
         <content type="html"><![CDATA[---
 title: 'How to use HarperDB instance with React Hooks'
@@ -10746,7 +10746,7 @@ Hooks are a great addition in the React world and they certainly help us write l
         <title type="html"><![CDATA[How to Animate a Header View on Scroll With React Native Animated]]></title>
         <id>https://amanhimself.dev//blog/animate-header-view-on-scroll-with-react-native-animated-api</id>
         <link href="https://amanhimself.dev//blog/animate-header-view-on-scroll-with-react-native-animated-api"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[How to Animate a Header View on Scroll With React Native Animated]]></summary>
         <content type="html"><![CDATA[---
 title: 'How to Animate a Header View on Scroll With React Native Animated'
@@ -11135,7 +11135,7 @@ Originally published at [Jscrambler](https://blog.jscrambler.com/how-to-animate-
         <title type="html"><![CDATA[Add Environment Variables in a Netlify Deployment]]></title>
         <id>https://amanhimself.dev//blog/add-environment-variables-in-netlify-deployment</id>
         <link href="https://amanhimself.dev//blog/add-environment-variables-in-netlify-deployment"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[Add Environment Variables in a Netlify Deployment]]></summary>
         <content type="html"><![CDATA[---
 title: 'Add Environment Variables in a Netlify Deployment'
@@ -11204,7 +11204,7 @@ Here is a list of all the links I came across when resolving this issue. Might b
         <title type="html"><![CDATA[How to use React Router and real time user monitoring in React apps]]></title>
         <id>https://amanhimself.dev//blog/react-router-real-time-user-monitoring-react-apps</id>
         <link href="https://amanhimself.dev//blog/react-router-real-time-user-monitoring-react-apps"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[How to use React Router and real time user monitoring in React apps]]></summary>
         <content type="html"><![CDATA[---
 title: 'How to use React Router and real time user monitoring in React apps'
@@ -11679,7 +11679,7 @@ Monitoring user experience in Real-time brings an advantage to single-page appli
         <title type="html"><![CDATA[Build a REST API with Node.js and HarperDB]]></title>
         <id>https://amanhimself.dev//blog/build-rest-api-with-nodejs-harperdb</id>
         <link href="https://amanhimself.dev//blog/build-rest-api-with-nodejs-harperdb"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[Build a REST API with Node.js and HarperDB]]></summary>
         <content type="html"><![CDATA[---
 title: 'Build a REST API with Node.js and HarperDB'
@@ -12098,7 +12098,7 @@ I hope this post does convey you to try the capabilities of HarperDB. I personal
         <title type="html"><![CDATA[How to setup a React App with a Firebase project]]></title>
         <id>https://amanhimself.dev//blog/firebase-config-in-a-react-app</id>
         <link href="https://amanhimself.dev//blog/firebase-config-in-a-react-app"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[How to setup a React App with a Firebase project]]></summary>
         <content type="html"><![CDATA[---
 title: 'How to setup a React App with a Firebase project'
@@ -12393,7 +12393,7 @@ Here is a summary of what has been done in this tutorial so far.
         <title type="html"><![CDATA[Styling The React Native Way]]></title>
         <id>https://amanhimself.dev//blog/styling-the-react-native-way</id>
         <link href="https://amanhimself.dev//blog/styling-the-react-native-way"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[Styling The React Native Way]]></summary>
         <content type="html"><![CDATA[---
 title: 'Styling The React Native Way'
@@ -12685,7 +12685,7 @@ You can see this in action below.
         <title type="html"><![CDATA[How to create custom wavy headers with react-native-svg]]></title>
         <id>https://amanhimself.dev//blog/create-custom-headers-with-react-native-svg</id>
         <link href="https://amanhimself.dev//blog/create-custom-headers-with-react-native-svg"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[How to create custom wavy headers with react-native-svg]]></summary>
         <content type="html"><![CDATA[---
 title: 'How to create custom wavy headers with react-native-svg'
@@ -12994,7 +12994,7 @@ Here is the list of resources used in order to create this post:
         <title type="html"><![CDATA[How to integrate Material UI library in React apps]]></title>
         <id>https://amanhimself.dev//blog/material-ui-integration-with-react</id>
         <link href="https://amanhimself.dev//blog/material-ui-integration-with-react"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[How to integrate Material UI library in React apps]]></summary>
         <content type="html"><![CDATA[---
 title: 'How to integrate Material UI library in React apps'
@@ -13326,7 +13326,7 @@ References:
         <title type="html"><![CDATA[Chat app with React Native (Part 6) - Create a custom hook to change status bar styles]]></title>
         <id>https://amanhimself.dev//blog/chat-app-with-react-native-part-6</id>
         <link href="https://amanhimself.dev//blog/chat-app-with-react-native-part-6"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[Chat app with React Native (Part 6) - Create a custom hook to change status bar styles]]></summary>
         <content type="html"><![CDATA[---
 title: 'Chat app with React Native (Part 6) - Create a custom hook to change status bar styles'
@@ -13490,7 +13490,7 @@ Otherwise, you can find the complete code at this [GitHub repo](https://github.c
         <title type="html"><![CDATA[Creating "Quarantine Pro" — A Fun Learning Experiment in React Native]]></title>
         <id>https://amanhimself.dev//blog/quarantine-pro-app</id>
         <link href="https://amanhimself.dev//blog/quarantine-pro-app"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[Creating "Quarantine Pro" — A Fun Learning Experiment in React Native]]></summary>
         <content type="html"><![CDATA[---
 title: 'Creating "Quarantine Pro" — A Fun Learning Experiment in React Native'
@@ -14099,7 +14099,7 @@ Originally published at [Jscrambler's blog](https://blog.jscrambler.com/creating
         <title type="html"><![CDATA[Chat app with React Native (Part 5) - Create and Fetch Real-Time Messages with Firestore]]></title>
         <id>https://amanhimself.dev//blog/chat-app-with-react-native-part-5</id>
         <link href="https://amanhimself.dev//blog/chat-app-with-react-native-part-5"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[Chat app with React Native (Part 5) - Create and Fetch Real-Time Messages with Firestore]]></summary>
         <content type="html"><![CDATA[---
 title: 'Chat app with React Native (Part 5) - Create and Fetch Real-Time Messages with Firestore'
@@ -14569,7 +14569,7 @@ In the [next part](https://amanhimself.dev/blog/chat-app-with-react-native-part-
         <title type="html"><![CDATA[How to integrate GraphQL and Apollo Client in React Native app]]></title>
         <id>https://amanhimself.dev//blog/integrate-apollo-client-in-react-native</id>
         <link href="https://amanhimself.dev//blog/integrate-apollo-client-in-react-native"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[How to integrate GraphQL and Apollo Client in React Native app]]></summary>
         <content type="html"><![CDATA[---
 title: 'How to integrate GraphQL and Apollo Client in React Native app'
@@ -15253,7 +15253,7 @@ Originally published at [Crowdbotics' blog](https://crowdbotics.ghost.io/integra
         <title type="html"><![CDATA[Chat app with React Native (part 4) - A guide to create Chat UI Screens with react-native-gifted-chat]]></title>
         <id>https://amanhimself.dev//blog/chat-app-with-react-native-part-4</id>
         <link href="https://amanhimself.dev//blog/chat-app-with-react-native-part-4"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[Chat app with React Native (part 4) - A guide to create Chat UI Screens with react-native-gifted-chat]]></summary>
         <content type="html"><![CDATA[---
 title: 'Chat app with React Native (part 4) - A guide to create Chat UI Screens with react-native-gifted-chat'
@@ -15858,7 +15858,7 @@ You can find the complete source code for this project at [this Github repo](htt
         <title type="html"><![CDATA[An in-depth guide on how to use React Native Image Picker]]></title>
         <id>https://amanhimself.dev//blog/how-to-use-react-native-image-picker</id>
         <link href="https://amanhimself.dev//blog/how-to-use-react-native-image-picker"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[An in-depth guide on how to use React Native Image Picker]]></summary>
         <content type="html"><![CDATA[---
 title: 'An in-depth guide on how to use React Native Image Picker'
@@ -16470,7 +16470,7 @@ The complete code for this tutorial is available at this GitHub repo [here](http
         <title type="html"><![CDATA[Chat app with React Native (part 3) - Create Firestore collections to store chat rooms]]></title>
         <id>https://amanhimself.dev//blog/chat-app-with-react-native-part-3</id>
         <link href="https://amanhimself.dev//blog/chat-app-with-react-native-part-3"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[Chat app with React Native (part 3) - Create Firestore collections to store chat rooms]]></summary>
         <content type="html"><![CDATA[---
 title: 'Chat app with React Native (part 3) - Create Firestore collections to store chat rooms'
@@ -16978,10 +16978,465 @@ You can find the complete source code for this project at [this Github repo](htt
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[Chat app with React Native (part 2) - Firebase Email Authentication with react-native-firebase]]></title>
+        <id>https://amanhimself.dev//blog/chat-app-with-react-native-part-2</id>
+        <link href="https://amanhimself.dev//blog/chat-app-with-react-native-part-2"/>
+        <updated>2022-03-27T16:35:10.858Z</updated>
+        <summary type="html"><![CDATA[Chat app with React Native (part 2) - Firebase Email Authentication with react-native-firebase]]></summary>
+        <content type="html"><![CDATA[---
+title: 'Chat app with React Native (part 2) - Firebase Email Authentication with react-native-firebase'
+date: '2020-04-16'
+slug: 'chat-app-with-react-native-part-2'
+thumbnail: '/thumbnails/react.png'
+tag: 'react-native'
+canonicalUrl: 'https://heartbeat.fritz.ai/chat-app-with-react-native-part-2-firebase-user-authentication-with-react-native-firebase-533352870497'
+---
+
+![cover](https://i.imgur.com/ROYjoYo.jpg)
+
+In [the first part of this tutorial series](https://amanhimself.dev/blog/chat-app-with-react-native-part-1) to build a chat-based app in React Native, we learned how to create reusable form elements using the react-native-paper UI library. Along with that, we learned how to install the navigation library react-navigation and configure a basic authentication stack navigator using two routes.
+
+In this tutorial, let us start using a backend service to add real-time features to the Chat app. For backend services, I am going to use Firebase. You are going to learn how to install and configure Firebase SDK in a react native app with the help of [`react-native-firebase`](https://rnfirebase.io/) module as well as set up and configure Email authentication. In order to follow this tutorial and future posts, you are required to use a Firebase project.
+
+## Create a new Firebase project from console
+
+To access the Firebase credentials for each mobile OS platform and configure them to use Firebase SDK, create a new Firebase project or use one if you have access already from [Firebase console](http://console.firebase.google.com/), you can skip this step.
+
+Create a new project as shown below.
+
+<img src='https://miro.medium.com/max/1400/1*wYi5SITEofv4nuIAPnQglg.png' />
+
+Complete the details of your Firebase project:
+
+<img src='https://miro.medium.com/max/1090/1*UDDFg0ZBF7w1jwRRIqxcwA.png' />
+
+Click the button **Create project** and you are going to be redirected to the dashboard screen. That's it. You have successfully created a new Firebase project.
+
+Now make sure that the **Email** **Sign-in method** is enabled. From the Firebase console and navigate to **Authentication** section from the side menu.
+
+<img src='https://miro.medium.com/max/257/1*mGwJz9i3SAzboUgZhs21Ng.png' />
+
+Go to the second tab **Sign-in method** and make sure to enable the **Email** sign-in provider.
+
+<img src='https://miro.medium.com/max/1400/1*lYvrmJXPQBRrs8Xpvqn05w.png' />
+
+## Add Firebase SDK to React Native app
+
+If you have used `react-native-firebase` version 5 or below, you must have noticed that it was a monorepo that used to manage all Firebase dependencies from one module.
+
+Version 6 of this library wants you to only install those dependencies based on Firebase features that you want to use. For example, in the current app, to support the email authentication feature you are going to install the auth and core app package.
+
+From the terminal window execute the following command.
+
+```shell
+yarn add @react-native-firebase/app @react-native-firebase/auth
+```
+
+## Add Firebase credentials to your iOS app
+
+Firebase provides a file called `GoogleService-Info.plist` that contains all the API keys as well as other credentials for iOS devices to authenticate the correct Firebase project.
+
+To get these credentials, go to back to the [Firebase console](http://console.firebase.google.com/) in a browser window. From the dashboard screen of your Firebase project, open **Project settings** from the side menu.
+
+<img src='https://miro.medium.com/max/241/1*Vh9zbrjZEGjKJl0XDCfFQQ.png' />
+
+Go to **Your apps** section and click on the icon iOS to select the platform.
+
+<img src='https://miro.medium.com/max/1396/1*nYRgVjO8DFSOdOJhPU-1DA.png' />
+
+Enter the application details and click on **Register app**.
+
+<img src='https://miro.medium.com/max/1270/1*Z1v4E3vhPGXmwfwrFtaxsA.png' />
+
+Then download the `GoogleService-Info.plist` file as shown below.
+
+<img src='https://miro.medium.com/max/1400/1*mKKqIHaDcv2UQsG-3idn7Q.png' />
+
+Open Xcode, then open the file `/ios/ChatApp.xcodeproj` file. Right-click on the project name and **Add Files** option, then select the file to add to this project.
+
+<img src='https://miro.medium.com/max/273/1*800RInfgPmKJXt_k58xQ4w.png' />
+
+Then open `ios/ChatApp/AppDelegate.m` and add the following header.
+
+```c
+#import <Firebase.h>
+```
+
+In the same file, within the `didFinishLaunchingWithOptions` method, add the following configure method.
+
+```c
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    if ([FIRApp defaultApp] == nil) {
+      [FIRApp configure];
+    }
+```
+
+Lastly, go back to the terminal window to install pods.
+
+```js
+cd ios/ && pod install
+# after pods are installed
+cd ..
+```
+
+Make sure you build the iOS app.
+
+```js
+npx react-native run-ios
+```
+
+That's it. The configuration to set up a Firebase SDK and credentials in a React Native app is complete.
+
+## Create a home screen
+
+In the previous post, you have successfully configured an Auth stack that displays those screens when the end-user is not authorized or logged in inside the app. There are a set of screens that are only going to be accessible to the user when they are logged in. Let us call the group of screens that are visible after login, home stack.
+
+One such screen is going to be a home screen where all the chat rooms are going to be listed. In this section, let us start by creating a basic home screen such that you can complete navigational flow between the home stack and the auth stack.
+
+Create a new screen component called `HomeScreen.js` inside `src/screens/` directory with the following code snippet.
+
+```js
+import React from 'react';
+import { View, StyleSheet } from 'react-native';
+import { Title } from 'react-native-paper';
+
+export default function HomeScreen() {
+  return (
+    <View style={styles.container}>
+      <Title>Home Screen</Title>
+      <Title>All chat rooms will be listed here</Title>
+      <FormButton modeValue="contained" title="Logout" />
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    backgroundColor: '#f5f5f5',
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center'
+  }
+});
+```
+
+## Create home stack navigator
+
+Create a new stack navigator file called `HomeStack.js` inside `src/navigation.js` that is going to have those routes which are only available after logging in. You can think of these routes as protected routes.
+
+Open this file and add the following code snippet. Nothing new is going in terms of creating a stack navigator as shown below.
+
+```js
+import React from 'react';
+import { createStackNavigator } from '@react-navigation/stack';
+import HomeScreen from '../screens/HomeScreen';
+
+const Stack = createStackNavigator();
+
+export default function HomeStack() {
+  return (
+    <Stack.Navigator>
+      <Stack.Screen name="Home" component={HomeScreen} />
+    </Stack.Navigator>
+  );
+}
+```
+
+## Create an auth provider
+
+In this section, you are going to create an authentication provider to check whether the user is logged in or not and access them if they are logged in.
+
+Create a new file called `AuthProvider.js` inside `src/navigation/`. Start by importing the following statements.
+
+```js
+import React, { createContext, useState } from 'react';
+import auth from '@react-native-firebase/auth';
+```
+
+Then create an `AuthContext` and make sure to export it since you are going to use it on several different screens.
+
+```js
+export const AuthContext = createContext({});
+```
+
+In Reactjs, the [Context API](https://reactjs.org/docs/context.html#reactcreatecontext) is designed to share data that is considered global for a tree of React components. When you are creating a context (like above), there is a requirement to pass a default value. This value is used when a component does not have a matching Provider.
+
+The Provider allows the React components to subscribe to the context changes. To create an auth provider, export a function called `AuthProvider`. This provider is going to allow the screen components to access the current user in the application. Define a state variable called `user`.
+
+```js
+export const AuthProvider = ({ children }) => {
+  const [user, setUser] = useState(null);
+
+  return (
+    <AuthContext.Provider
+      value={{
+        user,
+        setUser,
+        login: async (email, password) => {
+          try {
+            await auth().signInWithEmailAndPassword(email, password);
+          } catch (e) {
+            console.log(e);
+          }
+        },
+        register: async (email, password) => {
+          try {
+            await auth().createUserWithEmailAndPassword(email, password);
+          } catch (e) {
+            console.log(e);
+          }
+        },
+        logout: async () => {
+          try {
+            await auth().signOut();
+          } catch (e) {
+            console.error(e);
+          }
+        }
+      }}
+    >
+      {children}
+    </AuthContext.Provider>
+  );
+};
+```
+
+In the `value` prop above, also define some functions. These functions are now available to be used anywhere in the screens component tree using React Context.
+
+Each of the functions is consuming Firebase methods to interact with real-time Firebase backend service. Both the login and register functions require the user's `email` and `password` to verify/save credentials. The logout method invokes a simple `signOut()` method. All these Firebase methods are available from the `@react-native-firebase/auth` package. Do note that, all these functions are asynchronous actions and thus, using `async await` syntax helps.
+
+## Wrapping routes with auth provider
+
+Now, that the provider is created, but how to use for a set of components in the current app tree? Well, you have to wrap this provider around the `Routes` such as to use the helper functions as well as the value of current `user` (as described above) in the screen components.
+
+Open `navigation/index.js` file and modify it as follows.
+
+```js
+import React from 'react';
+import { Provider as PaperProvider } from 'react-native-paper';
+import { AuthProvider } from './AuthProvider';
+import Routes from './Routes';
+
+/**
+ * Wrap all providers here
+ */
+
+export default function Providers() {
+  return (
+    <PaperProvider>
+      <AuthProvider>
+        <Routes />
+      </AuthProvider>
+    </PaperProvider>
+  );
+}
+```
+
+Remember, from the previous post, we added that comment that to wrap all components using all providers in this file? Well, that's what this file is for.
+
+## Check if the user is logged in or not
+
+To check if the user is logged or not, let us modify the `navigation/Routes.js` file. Using the value of the `user` from the auth provider, you are going to switch between the stack navigators. To start, make sure you imported the following statements.
+
+```js
+import React, { useContext, useState, useEffect } from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import auth from '@react-native-firebase/auth';
+import AuthStack from './AuthStack';
+import HomeStack from './HomeStack';
+import { AuthContext } from './AuthProvider';
+import Loading from '../components/Loading';
+```
+
+From the above snippet, ignore the `Loading` component for now. You are going to create it at the end of this section.
+
+Now, inside the `Routes` function, you are two define two state variables `initializing` and `loading` to check whether the user's state is logged in or not. Also, from the context value, fetch `user` and `setUser`.
+
+Then, define a function called `onAuthStateChanged` which is going to handle user state changes. Using `useEffect` hook, you can subscribe to this state change function and make sure you unsubscribe it when the component unmounts. This method allows you to subscribe to real-time events when the user performs an action. The action here can be, logging in, signing out, and so on.
+
+```js
+export default function Routes() {
+  const { user, setUser } = useContext(AuthContext);
+  const [loading, setLoading] = useState(true);
+  const [initializing, setInitializing] = useState(true);
+
+  // Handle user state changes
+  function onAuthStateChanged(user) {
+    setUser(user);
+    if (initializing) setInitializing(false);
+    setLoading(false);
+  }
+
+  useEffect(() => {
+    const subscriber = auth().onAuthStateChanged(onAuthStateChanged);
+    return subscriber; // unsubscribe on unmount
+  }, []);
+
+  if (loading) {
+    return <Loading />;
+  }
+
+  return (
+    <NavigationContainer>
+      {user ? <HomeStack /> : <AuthStack />}
+    </NavigationContainer>
+  );
+}
+```
+
+Lastly, create a new component file called `Loading.js` inside `src/components/` directory. This component is going to be responsible to display a loading spinner.
+
+```js
+import React from 'react';
+import { View, ActivityIndicator, StyleSheet } from 'react-native';
+
+export default function Loading() {
+  return (
+    <View style={styles.loadingContainer}>
+      <ActivityIndicator size="large" color="#6646ee" />
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  loadingContainer: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center'
+  }
+});
+```
+
+## Completing the app
+
+In order for the user to perform auth actions in the app, you have to use the context in each of the screen components for different actions.
+
+Start by opening `LoginScreen.js`. Import `useContext` from react and `AuthContext` from `AuthProvider`.
+
+```js
+import React, { useState, useContext } from 'react';
+// rest of the import statements remain same
+import { AuthContext } from '../navigation/AuthProvider';
+
+export default function LoginScreen({ navigation }) {
+  const { login } = useContext(AuthContext);
+
+  // rest remains statements
+}
+```
+
+Inside the `LoginScreen` function, make sure to add an `onPress` prop as shown below.
+
+```js
+<FormButton
+  title="Login"
+  modeValue="contained"
+  labelStyle={styles.loginButtonLabel}
+  onPress={() => login(email, password)}
+/>
+```
+
+Similarly, you have to modify the `SignupScreen.js` file.
+
+```js
+import React, { useState, useContext } from 'react';
+// rest of the import statements remain same
+import { AuthContext } from '../navigation/AuthProvider';
+
+export default function SignupScreen({ navigation }) {
+  const { register } = useContext(AuthContext);
+  // rest remains statements
+}
+
+// Add the onPress prop to <FormButton />
+
+<FormButton
+  title="Signup"
+  modeValue="contained"
+  labelStyle={styles.loginButtonLabel}
+  onPress={() => register(email, password)}
+/>;
+```
+
+Lastly, modify the `HomeScreen` to add a sign out button and when the user is in the logged-in state, display their user `uid` (_the unique identifier in Firebase to differentiate and store different users_).
+
+```js
+import React, { useContext } from 'react';
+import { View, StyleSheet } from 'react-native';
+import { Title } from 'react-native-paper';
+import { AuthContext } from '../navigation/AuthProvider';
+import FormButton from '../components/FormButton';
+
+export default function HomeScreen() {
+  const { user, logout } = useContext(AuthContext);
+
+  return (
+    <View style={styles.container}>
+      <Title>Home Screen</Title>
+      <Title>All chat rooms will be listed here</Title>
+      <Title>{user.uid}</Title>
+      <FormButton
+        modeValue="contained"
+        title="Logout"
+        onPress={() => logout()}
+      />
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    backgroundColor: '#f5f5f5',
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center'
+  }
+});
+```
+
+Go to the simulator, and you are going to get similar results as shown below. Perform these steps. Try creating a new user from the sign-up screen, and you are going to get their `uid` on the home screen.
+
+<img src='https://miro.medium.com/max/684/1*2HWlA1jyqJzAIhxgHDB0sg.gif' />
+
+You can verify the `uid` of the current user by going to the dashboard screen from Firebase console.
+
+<img src='https://miro.medium.com/max/1400/1*NVUhPQOP2YjgYF_qmCdXBQ.png' />
+
+## Conclusion
+
+_Congratulations!_ You've completed this tutorial and successfully added an authentication flow between the two stack navigators. In the next part of this series, we'll explore more features such as creating and storing chat rooms in a collection in Firestore, as well as displaying all chat rooms on the home screen. To create a new chat room, we'll create a new modal screen and make changes to the current home stack accordingly.
+
+---
+
+## What's Next?
+
+In the [next post](https://amanhimself.dev/blog/chat-app-with-react-native-part-3) of this series, we are going to explore how to create a modal screen using `react-navigation` stack navigator. This modal screen is going to have separate navigator as well as to be used to create a new chat room.
+
+Then, we are going to add Firebase NoSQL database Firestore and add a query to store the name of a chat room in a collection.
+
+You can find the complete source code for this project at [this Github repo](https://github.com/amandeepmittal/react-native-examples/tree/master/ChatApp).
+
+---
+
+👉 Here is a list of resources used in this tutorial:
+
+- Reactjs [Context API](https://reactjs.org/docs/context.html#reactcreatecontext)
+- [Firebase Authentication reference](https://invertase.io/oss/react-native-firebase/v6/auth/quick-start) from `react-native-firebase`
+- Getting started with stack navigator using `react-navigation` v5 [here](https://heartbeat.fritz.ai/getting-started-with-stack-navigator-using-react-navigation-5-in-react-native-and-expo-apps-4c516becaee1)
+
+Originally published at [Heartbeat.Fritz.Ai](https://heartbeat.fritz.ai/chat-app-with-react-native-part-2-firebase-user-authentication-with-react-native-firebase-533352870497).
+]]></content>
+        <author>
+            <name>Aman Mittal</name>
+            <email>amanmittal.work@gmail.com</email>
+            <uri>https://twitter.com/amanhimself</uri>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[How to add a Search bar in a FlatList in React Native apps]]></title>
         <id>https://amanhimself.dev//blog/add-search-bar-to-a-flatlist-in-react-native</id>
         <link href="https://amanhimself.dev//blog/add-search-bar-to-a-flatlist-in-react-native"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[How to add a Search bar in a FlatList in React Native apps]]></summary>
         <content type="html"><![CDATA[---
 title: 'How to add a Search bar in a FlatList in React Native apps'
@@ -17438,465 +17893,10 @@ You can also find the source code from this tutorial at this [Github repo](https
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Chat app with React Native (part 2) - Firebase Email Authentication with react-native-firebase]]></title>
-        <id>https://amanhimself.dev//blog/chat-app-with-react-native-part-2</id>
-        <link href="https://amanhimself.dev//blog/chat-app-with-react-native-part-2"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
-        <summary type="html"><![CDATA[Chat app with React Native (part 2) - Firebase Email Authentication with react-native-firebase]]></summary>
-        <content type="html"><![CDATA[---
-title: 'Chat app with React Native (part 2) - Firebase Email Authentication with react-native-firebase'
-date: '2020-04-16'
-slug: 'chat-app-with-react-native-part-2'
-thumbnail: '/thumbnails/react.png'
-tag: 'react-native'
-canonicalUrl: 'https://heartbeat.fritz.ai/chat-app-with-react-native-part-2-firebase-user-authentication-with-react-native-firebase-533352870497'
----
-
-![cover](https://i.imgur.com/ROYjoYo.jpg)
-
-In [the first part of this tutorial series](https://amanhimself.dev/blog/chat-app-with-react-native-part-1) to build a chat-based app in React Native, we learned how to create reusable form elements using the react-native-paper UI library. Along with that, we learned how to install the navigation library react-navigation and configure a basic authentication stack navigator using two routes.
-
-In this tutorial, let us start using a backend service to add real-time features to the Chat app. For backend services, I am going to use Firebase. You are going to learn how to install and configure Firebase SDK in a react native app with the help of [`react-native-firebase`](https://rnfirebase.io/) module as well as set up and configure Email authentication. In order to follow this tutorial and future posts, you are required to use a Firebase project.
-
-## Create a new Firebase project from console
-
-To access the Firebase credentials for each mobile OS platform and configure them to use Firebase SDK, create a new Firebase project or use one if you have access already from [Firebase console](http://console.firebase.google.com/), you can skip this step.
-
-Create a new project as shown below.
-
-<img src='https://miro.medium.com/max/1400/1*wYi5SITEofv4nuIAPnQglg.png' />
-
-Complete the details of your Firebase project:
-
-<img src='https://miro.medium.com/max/1090/1*UDDFg0ZBF7w1jwRRIqxcwA.png' />
-
-Click the button **Create project** and you are going to be redirected to the dashboard screen. That's it. You have successfully created a new Firebase project.
-
-Now make sure that the **Email** **Sign-in method** is enabled. From the Firebase console and navigate to **Authentication** section from the side menu.
-
-<img src='https://miro.medium.com/max/257/1*mGwJz9i3SAzboUgZhs21Ng.png' />
-
-Go to the second tab **Sign-in method** and make sure to enable the **Email** sign-in provider.
-
-<img src='https://miro.medium.com/max/1400/1*lYvrmJXPQBRrs8Xpvqn05w.png' />
-
-## Add Firebase SDK to React Native app
-
-If you have used `react-native-firebase` version 5 or below, you must have noticed that it was a monorepo that used to manage all Firebase dependencies from one module.
-
-Version 6 of this library wants you to only install those dependencies based on Firebase features that you want to use. For example, in the current app, to support the email authentication feature you are going to install the auth and core app package.
-
-From the terminal window execute the following command.
-
-```shell
-yarn add @react-native-firebase/app @react-native-firebase/auth
-```
-
-## Add Firebase credentials to your iOS app
-
-Firebase provides a file called `GoogleService-Info.plist` that contains all the API keys as well as other credentials for iOS devices to authenticate the correct Firebase project.
-
-To get these credentials, go to back to the [Firebase console](http://console.firebase.google.com/) in a browser window. From the dashboard screen of your Firebase project, open **Project settings** from the side menu.
-
-<img src='https://miro.medium.com/max/241/1*Vh9zbrjZEGjKJl0XDCfFQQ.png' />
-
-Go to **Your apps** section and click on the icon iOS to select the platform.
-
-<img src='https://miro.medium.com/max/1396/1*nYRgVjO8DFSOdOJhPU-1DA.png' />
-
-Enter the application details and click on **Register app**.
-
-<img src='https://miro.medium.com/max/1270/1*Z1v4E3vhPGXmwfwrFtaxsA.png' />
-
-Then download the `GoogleService-Info.plist` file as shown below.
-
-<img src='https://miro.medium.com/max/1400/1*mKKqIHaDcv2UQsG-3idn7Q.png' />
-
-Open Xcode, then open the file `/ios/ChatApp.xcodeproj` file. Right-click on the project name and **Add Files** option, then select the file to add to this project.
-
-<img src='https://miro.medium.com/max/273/1*800RInfgPmKJXt_k58xQ4w.png' />
-
-Then open `ios/ChatApp/AppDelegate.m` and add the following header.
-
-```c
-#import <Firebase.h>
-```
-
-In the same file, within the `didFinishLaunchingWithOptions` method, add the following configure method.
-
-```c
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    if ([FIRApp defaultApp] == nil) {
-      [FIRApp configure];
-    }
-```
-
-Lastly, go back to the terminal window to install pods.
-
-```js
-cd ios/ && pod install
-# after pods are installed
-cd ..
-```
-
-Make sure you build the iOS app.
-
-```js
-npx react-native run-ios
-```
-
-That's it. The configuration to set up a Firebase SDK and credentials in a React Native app is complete.
-
-## Create a home screen
-
-In the previous post, you have successfully configured an Auth stack that displays those screens when the end-user is not authorized or logged in inside the app. There are a set of screens that are only going to be accessible to the user when they are logged in. Let us call the group of screens that are visible after login, home stack.
-
-One such screen is going to be a home screen where all the chat rooms are going to be listed. In this section, let us start by creating a basic home screen such that you can complete navigational flow between the home stack and the auth stack.
-
-Create a new screen component called `HomeScreen.js` inside `src/screens/` directory with the following code snippet.
-
-```js
-import React from 'react';
-import { View, StyleSheet } from 'react-native';
-import { Title } from 'react-native-paper';
-
-export default function HomeScreen() {
-  return (
-    <View style={styles.container}>
-      <Title>Home Screen</Title>
-      <Title>All chat rooms will be listed here</Title>
-      <FormButton modeValue="contained" title="Logout" />
-    </View>
-  );
-}
-
-const styles = StyleSheet.create({
-  container: {
-    backgroundColor: '#f5f5f5',
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center'
-  }
-});
-```
-
-## Create home stack navigator
-
-Create a new stack navigator file called `HomeStack.js` inside `src/navigation.js` that is going to have those routes which are only available after logging in. You can think of these routes as protected routes.
-
-Open this file and add the following code snippet. Nothing new is going in terms of creating a stack navigator as shown below.
-
-```js
-import React from 'react';
-import { createStackNavigator } from '@react-navigation/stack';
-import HomeScreen from '../screens/HomeScreen';
-
-const Stack = createStackNavigator();
-
-export default function HomeStack() {
-  return (
-    <Stack.Navigator>
-      <Stack.Screen name="Home" component={HomeScreen} />
-    </Stack.Navigator>
-  );
-}
-```
-
-## Create an auth provider
-
-In this section, you are going to create an authentication provider to check whether the user is logged in or not and access them if they are logged in.
-
-Create a new file called `AuthProvider.js` inside `src/navigation/`. Start by importing the following statements.
-
-```js
-import React, { createContext, useState } from 'react';
-import auth from '@react-native-firebase/auth';
-```
-
-Then create an `AuthContext` and make sure to export it since you are going to use it on several different screens.
-
-```js
-export const AuthContext = createContext({});
-```
-
-In Reactjs, the [Context API](https://reactjs.org/docs/context.html#reactcreatecontext) is designed to share data that is considered global for a tree of React components. When you are creating a context (like above), there is a requirement to pass a default value. This value is used when a component does not have a matching Provider.
-
-The Provider allows the React components to subscribe to the context changes. To create an auth provider, export a function called `AuthProvider`. This provider is going to allow the screen components to access the current user in the application. Define a state variable called `user`.
-
-```js
-export const AuthProvider = ({ children }) => {
-  const [user, setUser] = useState(null);
-
-  return (
-    <AuthContext.Provider
-      value={{
-        user,
-        setUser,
-        login: async (email, password) => {
-          try {
-            await auth().signInWithEmailAndPassword(email, password);
-          } catch (e) {
-            console.log(e);
-          }
-        },
-        register: async (email, password) => {
-          try {
-            await auth().createUserWithEmailAndPassword(email, password);
-          } catch (e) {
-            console.log(e);
-          }
-        },
-        logout: async () => {
-          try {
-            await auth().signOut();
-          } catch (e) {
-            console.error(e);
-          }
-        }
-      }}
-    >
-      {children}
-    </AuthContext.Provider>
-  );
-};
-```
-
-In the `value` prop above, also define some functions. These functions are now available to be used anywhere in the screens component tree using React Context.
-
-Each of the functions is consuming Firebase methods to interact with real-time Firebase backend service. Both the login and register functions require the user's `email` and `password` to verify/save credentials. The logout method invokes a simple `signOut()` method. All these Firebase methods are available from the `@react-native-firebase/auth` package. Do note that, all these functions are asynchronous actions and thus, using `async await` syntax helps.
-
-## Wrapping routes with auth provider
-
-Now, that the provider is created, but how to use for a set of components in the current app tree? Well, you have to wrap this provider around the `Routes` such as to use the helper functions as well as the value of current `user` (as described above) in the screen components.
-
-Open `navigation/index.js` file and modify it as follows.
-
-```js
-import React from 'react';
-import { Provider as PaperProvider } from 'react-native-paper';
-import { AuthProvider } from './AuthProvider';
-import Routes from './Routes';
-
-/**
- * Wrap all providers here
- */
-
-export default function Providers() {
-  return (
-    <PaperProvider>
-      <AuthProvider>
-        <Routes />
-      </AuthProvider>
-    </PaperProvider>
-  );
-}
-```
-
-Remember, from the previous post, we added that comment that to wrap all components using all providers in this file? Well, that's what this file is for.
-
-## Check if the user is logged in or not
-
-To check if the user is logged or not, let us modify the `navigation/Routes.js` file. Using the value of the `user` from the auth provider, you are going to switch between the stack navigators. To start, make sure you imported the following statements.
-
-```js
-import React, { useContext, useState, useEffect } from 'react';
-import { NavigationContainer } from '@react-navigation/native';
-import auth from '@react-native-firebase/auth';
-import AuthStack from './AuthStack';
-import HomeStack from './HomeStack';
-import { AuthContext } from './AuthProvider';
-import Loading from '../components/Loading';
-```
-
-From the above snippet, ignore the `Loading` component for now. You are going to create it at the end of this section.
-
-Now, inside the `Routes` function, you are two define two state variables `initializing` and `loading` to check whether the user's state is logged in or not. Also, from the context value, fetch `user` and `setUser`.
-
-Then, define a function called `onAuthStateChanged` which is going to handle user state changes. Using `useEffect` hook, you can subscribe to this state change function and make sure you unsubscribe it when the component unmounts. This method allows you to subscribe to real-time events when the user performs an action. The action here can be, logging in, signing out, and so on.
-
-```js
-export default function Routes() {
-  const { user, setUser } = useContext(AuthContext);
-  const [loading, setLoading] = useState(true);
-  const [initializing, setInitializing] = useState(true);
-
-  // Handle user state changes
-  function onAuthStateChanged(user) {
-    setUser(user);
-    if (initializing) setInitializing(false);
-    setLoading(false);
-  }
-
-  useEffect(() => {
-    const subscriber = auth().onAuthStateChanged(onAuthStateChanged);
-    return subscriber; // unsubscribe on unmount
-  }, []);
-
-  if (loading) {
-    return <Loading />;
-  }
-
-  return (
-    <NavigationContainer>
-      {user ? <HomeStack /> : <AuthStack />}
-    </NavigationContainer>
-  );
-}
-```
-
-Lastly, create a new component file called `Loading.js` inside `src/components/` directory. This component is going to be responsible to display a loading spinner.
-
-```js
-import React from 'react';
-import { View, ActivityIndicator, StyleSheet } from 'react-native';
-
-export default function Loading() {
-  return (
-    <View style={styles.loadingContainer}>
-      <ActivityIndicator size="large" color="#6646ee" />
-    </View>
-  );
-}
-
-const styles = StyleSheet.create({
-  loadingContainer: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center'
-  }
-});
-```
-
-## Completing the app
-
-In order for the user to perform auth actions in the app, you have to use the context in each of the screen components for different actions.
-
-Start by opening `LoginScreen.js`. Import `useContext` from react and `AuthContext` from `AuthProvider`.
-
-```js
-import React, { useState, useContext } from 'react';
-// rest of the import statements remain same
-import { AuthContext } from '../navigation/AuthProvider';
-
-export default function LoginScreen({ navigation }) {
-  const { login } = useContext(AuthContext);
-
-  // rest remains statements
-}
-```
-
-Inside the `LoginScreen` function, make sure to add an `onPress` prop as shown below.
-
-```js
-<FormButton
-  title="Login"
-  modeValue="contained"
-  labelStyle={styles.loginButtonLabel}
-  onPress={() => login(email, password)}
-/>
-```
-
-Similarly, you have to modify the `SignupScreen.js` file.
-
-```js
-import React, { useState, useContext } from 'react';
-// rest of the import statements remain same
-import { AuthContext } from '../navigation/AuthProvider';
-
-export default function SignupScreen({ navigation }) {
-  const { register } = useContext(AuthContext);
-  // rest remains statements
-}
-
-// Add the onPress prop to <FormButton />
-
-<FormButton
-  title="Signup"
-  modeValue="contained"
-  labelStyle={styles.loginButtonLabel}
-  onPress={() => register(email, password)}
-/>;
-```
-
-Lastly, modify the `HomeScreen` to add a sign out button and when the user is in the logged-in state, display their user `uid` (_the unique identifier in Firebase to differentiate and store different users_).
-
-```js
-import React, { useContext } from 'react';
-import { View, StyleSheet } from 'react-native';
-import { Title } from 'react-native-paper';
-import { AuthContext } from '../navigation/AuthProvider';
-import FormButton from '../components/FormButton';
-
-export default function HomeScreen() {
-  const { user, logout } = useContext(AuthContext);
-
-  return (
-    <View style={styles.container}>
-      <Title>Home Screen</Title>
-      <Title>All chat rooms will be listed here</Title>
-      <Title>{user.uid}</Title>
-      <FormButton
-        modeValue="contained"
-        title="Logout"
-        onPress={() => logout()}
-      />
-    </View>
-  );
-}
-
-const styles = StyleSheet.create({
-  container: {
-    backgroundColor: '#f5f5f5',
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center'
-  }
-});
-```
-
-Go to the simulator, and you are going to get similar results as shown below. Perform these steps. Try creating a new user from the sign-up screen, and you are going to get their `uid` on the home screen.
-
-<img src='https://miro.medium.com/max/684/1*2HWlA1jyqJzAIhxgHDB0sg.gif' />
-
-You can verify the `uid` of the current user by going to the dashboard screen from Firebase console.
-
-<img src='https://miro.medium.com/max/1400/1*NVUhPQOP2YjgYF_qmCdXBQ.png' />
-
-## Conclusion
-
-_Congratulations!_ You've completed this tutorial and successfully added an authentication flow between the two stack navigators. In the next part of this series, we'll explore more features such as creating and storing chat rooms in a collection in Firestore, as well as displaying all chat rooms on the home screen. To create a new chat room, we'll create a new modal screen and make changes to the current home stack accordingly.
-
----
-
-## What's Next?
-
-In the [next post](https://amanhimself.dev/blog/chat-app-with-react-native-part-3) of this series, we are going to explore how to create a modal screen using `react-navigation` stack navigator. This modal screen is going to have separate navigator as well as to be used to create a new chat room.
-
-Then, we are going to add Firebase NoSQL database Firestore and add a query to store the name of a chat room in a collection.
-
-You can find the complete source code for this project at [this Github repo](https://github.com/amandeepmittal/react-native-examples/tree/master/ChatApp).
-
----
-
-👉 Here is a list of resources used in this tutorial:
-
-- Reactjs [Context API](https://reactjs.org/docs/context.html#reactcreatecontext)
-- [Firebase Authentication reference](https://invertase.io/oss/react-native-firebase/v6/auth/quick-start) from `react-native-firebase`
-- Getting started with stack navigator using `react-navigation` v5 [here](https://heartbeat.fritz.ai/getting-started-with-stack-navigator-using-react-navigation-5-in-react-native-and-expo-apps-4c516becaee1)
-
-Originally published at [Heartbeat.Fritz.Ai](https://heartbeat.fritz.ai/chat-app-with-react-native-part-2-firebase-user-authentication-with-react-native-firebase-533352870497).
-]]></content>
-        <author>
-            <name>Aman Mittal</name>
-            <email>amanmittal.work@gmail.com</email>
-            <uri>https://twitter.com/amanhimself</uri>
-        </author>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[Blogging tips after 3 years and a 100+ posts]]></title>
         <id>https://amanhimself.dev//blog/blogging-tips-after-3-years</id>
         <link href="https://amanhimself.dev//blog/blogging-tips-after-3-years"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[Blogging tips after 3 years and a 100+ posts]]></summary>
         <content type="html"><![CDATA[---
 title: 'Blogging tips after 3 years and a 100+ posts'
@@ -18006,7 +18006,7 @@ Happy Writing!
         <title type="html"><![CDATA[Chat app with React Native (part 1) - Build reusable UI form elements using react-native-paper]]></title>
         <id>https://amanhimself.dev//blog/chat-app-with-react-native-part-1</id>
         <link href="https://amanhimself.dev//blog/chat-app-with-react-native-part-1"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[Chat app with React Native (part 1) - Build reusable UI form elements using react-native-paper]]></summary>
         <content type="html"><![CDATA[---
 title: 'Chat app with React Native (part 1) - Build reusable UI form elements using react-native-paper'
@@ -18540,7 +18540,7 @@ Originally published at [Heartbeat.Fritz.Ai](https://heartbeat.fritz.ai/chat-app
         <title type="html"><![CDATA[How to create a custom hook to change status bar styles for every screen using React Navigation]]></title>
         <id>https://amanhimself.dev//blog/create-custom-status-bar-hook-react-navigation</id>
         <link href="https://amanhimself.dev//blog/create-custom-status-bar-hook-react-navigation"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[How to create a custom hook to change status bar styles for every screen using React Navigation]]></summary>
         <content type="html"><![CDATA[---
 title: 'How to create a custom hook to change status bar styles for every screen using React Navigation'
@@ -18761,7 +18761,7 @@ I hope this short tutorial was useful to you. Thanks for reading it!
         <title type="html"><![CDATA[Build an Expense Tracker app with React Hooks and LocalStorage API]]></title>
         <id>https://amanhimself.dev//blog/react-app-with-localstorage-api-and-hooks</id>
         <link href="https://amanhimself.dev//blog/react-app-with-localstorage-api-and-hooks"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[Build an Expense Tracker app with React Hooks and LocalStorage API]]></summary>
         <content type="html"><![CDATA[---
 title: 'Build an Expense Tracker app with React Hooks and LocalStorage API'
@@ -19438,7 +19438,7 @@ _Originally published at [Crowdbotics' Blog](https://crowdbotics.ghost.io/build-
         <title type="html"><![CDATA[Nesting Tab and Stack navigators in React Native and Expo apps]]></title>
         <id>https://amanhimself.dev//blog/nested-navigators-in-react-native</id>
         <link href="https://amanhimself.dev//blog/nested-navigators-in-react-native"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[Nesting Tab and Stack navigators in React Native and Expo apps]]></summary>
         <content type="html"><![CDATA[---
 title: 'Nesting Tab and Stack navigators in React Native and Expo apps'
@@ -19769,7 +19769,7 @@ Originally published at [Heartbeat.fritz.ai](https://heartbeat.fritz.ai/nesting-
         <title type="html"><![CDATA[Getting Started with Stack Navigator using react-navigation 5 in React Native and Expo apps]]></title>
         <id>https://amanhimself.dev//blog/stack-navigator-with-react-navigation-v5</id>
         <link href="https://amanhimself.dev//blog/stack-navigator-with-react-navigation-v5"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[Getting Started with Stack Navigator using react-navigation 5 in React Native and Expo apps]]></summary>
         <content type="html"><![CDATA[---
 title: 'Getting Started with Stack Navigator using react-navigation 5 in React Native and Expo apps'
@@ -20505,7 +20505,7 @@ Originally published at [Heartbeat.fritz.ai](https://heartbeat.fritz.ai/getting-
         <title type="html"><![CDATA[How to handle navigation in WebViews in a React Native app]]></title>
         <id>https://amanhimself.dev//blog/handle-navigation-in-webviews-react-native</id>
         <link href="https://amanhimself.dev//blog/handle-navigation-in-webviews-react-native"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[How to handle navigation in WebViews in a React Native app]]></summary>
         <content type="html"><![CDATA[---
 title: 'How to handle navigation in WebViews in a React Native app'
@@ -20811,7 +20811,7 @@ Originally published at [Heartbeat.fritz.ai](https://heartbeat.fritz.ai/how-to-h
         <title type="html"><![CDATA[Getting Started with React Native and Expo using Hooks in 2020]]></title>
         <id>https://amanhimself.dev//blog/getting-started-with-react-native-expo-hooks-2020</id>
         <link href="https://amanhimself.dev//blog/getting-started-with-react-native-expo-hooks-2020"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[Getting Started with React Native and Expo using Hooks in 2020]]></summary>
         <content type="html"><![CDATA[---
 title: 'Getting Started with React Native and Expo using Hooks in 2020'
@@ -21496,7 +21496,7 @@ Originally published at [Heartbeat.fritz.ai](https://heartbeat.fritz.ai/getting-
         <title type="html"><![CDATA[How to add Dark mode functionality with React Hooks]]></title>
         <id>https://amanhimself.dev//blog/dark-mode-with-react-hooks</id>
         <link href="https://amanhimself.dev//blog/dark-mode-with-react-hooks"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[How to add Dark mode functionality with React Hooks]]></summary>
         <content type="html"><![CDATA[---
 title: 'How to add Dark mode functionality with React Hooks'
@@ -21780,7 +21780,7 @@ Originally published at [Crowdbotics.com](https://crowdbotics.ghost.io/how-to-ad
         <title type="html"><![CDATA[How to handle Deep Links in a React Native app]]></title>
         <id>https://amanhimself.dev//blog/handle-deep-linking-react-native</id>
         <link href="https://amanhimself.dev//blog/handle-deep-linking-react-native"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[How to handle Deep Links in a React Native app]]></summary>
         <content type="html"><![CDATA[---
 title: 'How to handle Deep Links in a React Native app'
@@ -22173,7 +22173,7 @@ That's it. You have now a complete demo of a React Native app that handles deep 
         <title type="html"><![CDATA[How to use React Native Localize in React Native apps]]></title>
         <id>https://amanhimself.dev//blog/how-to-use-react-native-localize</id>
         <link href="https://amanhimself.dev//blog/how-to-use-react-native-localize"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[How to use React Native Localize in React Native apps]]></summary>
         <content type="html"><![CDATA[---
 title: 'How to use React Native Localize in React Native apps'
@@ -22403,7 +22403,7 @@ Originally published at [Heartbeat.fritz.ai](https://heartbeat.fritz.ai/how-to-u
         <title type="html"><![CDATA[Implement Push notifications for Android apps with React Native]]></title>
         <id>https://amanhimself.dev//blog/push-notifications-android-apps-react-native</id>
         <link href="https://amanhimself.dev//blog/push-notifications-android-apps-react-native"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[Implement Push notifications for Android apps with React Native]]></summary>
         <content type="html"><![CDATA[---
 title: 'Implement Push notifications for Android apps with React Native'
@@ -22753,7 +22753,7 @@ Originally published at [Jscrambler](https://blog.jscrambler.com/implementing-re
         <title type="html"><![CDATA[Handle different field types in React Native forms with formik and yup]]></title>
         <id>https://amanhimself.dev//blog/handle-different-field-types-in-react-native-forms</id>
         <link href="https://amanhimself.dev//blog/handle-different-field-types-in-react-native-forms"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[Handle different field types in React Native forms with formik and yup]]></summary>
         <content type="html"><![CDATA[---
 title: 'Handle different field types in React Native forms with formik and yup'
@@ -23004,7 +23004,7 @@ You can go ahead and add the toggle password visibility to the `Signup` form scr
         <title type="html"><![CDATA[How to implement Forgot Password feature in React Native with Firebase]]></title>
         <id>https://amanhimself.dev//blog/implement-forgot-password-firebase-react-native</id>
         <link href="https://amanhimself.dev//blog/implement-forgot-password-firebase-react-native"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[How to implement Forgot Password feature in React Native with Firebase]]></summary>
         <content type="html"><![CDATA[---
 title: 'How to implement Forgot Password feature in React Native with Firebase'
@@ -23312,7 +23312,7 @@ I hope any of the codebase used in this tutorial helps you. To find the complete
         <title type="html"><![CDATA[Image Classification on React Native with TensorFlow.js and MobileNet]]></title>
         <id>https://amanhimself.dev//blog/tensorflow-image-classification-expo</id>
         <link href="https://amanhimself.dev//blog/tensorflow-image-classification-expo"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[Image Classification on React Native with TensorFlow.js and MobileNet]]></summary>
         <content type="html"><![CDATA[---
 title: 'Image Classification on React Native with TensorFlow.js and MobileNet'
@@ -23777,7 +23777,7 @@ Originally published at [Heartbeat.Fritz.ai](https://heartbeat.fritz.ai/image-cl
         <title type="html"><![CDATA[Build and validate forms in React Native using Formik and Yup]]></title>
         <id>https://amanhimself.dev//blog/build-validate-forms-with-react-native-formik-yup</id>
         <link href="https://amanhimself.dev//blog/build-validate-forms-with-react-native-formik-yup"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[Build and validate forms in React Native using Formik and Yup]]></summary>
         <content type="html"><![CDATA[---
 title: 'Build and validate forms in React Native using Formik and Yup'
@@ -24485,7 +24485,7 @@ You just learned how to create, handle, and validate forms in React Native using
         <title type="html"><![CDATA[Changing app themes using React Native, Styled Components and Redux]]></title>
         <id>https://amanhimself.dev//blog/create-app-themes-styled-components-redux</id>
         <link href="https://amanhimself.dev//blog/create-app-themes-styled-components-redux"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[Changing app themes using React Native, Styled Components and Redux]]></summary>
         <content type="html"><![CDATA[---
 title: 'Changing app themes using React Native, Styled Components and Redux'
@@ -24852,7 +24852,7 @@ To dwell more into styled-components, please refer to the official documentation
         <title type="html"><![CDATA[Using Context API with React Native]]></title>
         <id>https://amanhimself.dev//blog/context-api-react-native-firebase</id>
         <link href="https://amanhimself.dev//blog/context-api-react-native-firebase"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[Using Context API with React Native]]></summary>
         <content type="html"><![CDATA[---
 title: 'Using Context API with React Native'
@@ -25509,7 +25509,7 @@ To find the complete code, you will have to visit [this Github repo release](htt
         <title type="html"><![CDATA[How Authentication Flow works in React Native apps using React Navigation 4.x]]></title>
         <id>https://amanhimself.dev//blog/authentication-navigation-flow-in-react-native-apps</id>
         <link href="https://amanhimself.dev//blog/authentication-navigation-flow-in-react-native-apps"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[How Authentication Flow works in React Native apps using React Navigation 4.x]]></summary>
         <content type="html"><![CDATA[---
 title: 'How Authentication Flow works in React Native apps using React Navigation 4.x'
@@ -25969,7 +25969,7 @@ _You can find the complete code used in this tutorial at the Github repo [here](
         <title type="html"><![CDATA[How to Build an Audio Player in React Native]]></title>
         <id>https://amanhimself.dev//blog/build-an-audio-player-in-react-native</id>
         <link href="https://amanhimself.dev//blog/build-an-audio-player-in-react-native"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[How to Build an Audio Player in React Native]]></summary>
         <content type="html"><![CDATA[---
 title: 'How to Build an Audio Player in React Native'
@@ -26469,7 +26469,7 @@ The resources used in order to create this tutorial can be found below:
         <title type="html"><![CDATA[Build a Not Hotdog clone with React Native]]></title>
         <id>https://amanhimself.dev//blog/not-hotdog-clone-react-native</id>
         <link href="https://amanhimself.dev//blog/not-hotdog-clone-react-native"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[Build a Not Hotdog clone with React Native]]></summary>
         <content type="html"><![CDATA[---
 title: 'Build a Not Hotdog clone with React Native'
@@ -27177,7 +27177,7 @@ By integrating Firebase storage and using Google's Vision API with React Native,
         <title type="html"><![CDATA[Building offline React Native apps with AsyncStorage]]></title>
         <id>https://amanhimself.dev//blog/building-offline-react-native-apps-with-asyncstorage</id>
         <link href="https://amanhimself.dev//blog/building-offline-react-native-apps-with-asyncstorage"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[Building offline React Native apps with AsyncStorage]]></summary>
         <content type="html"><![CDATA[---
 title: 'Building offline React Native apps with AsyncStorage'
@@ -28280,7 +28280,7 @@ _Congratulations!_ You have just learned how to build an offline mobile applicat
         <title type="html"><![CDATA[How to use the Geolocation API in a React Native app]]></title>
         <id>https://amanhimself.dev//blog/how-to-use-the-geolocation-api-in-a-react-native-app</id>
         <link href="https://amanhimself.dev//blog/how-to-use-the-geolocation-api-in-a-react-native-app"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[How to use the Geolocation API in a React Native app]]></summary>
         <content type="html"><![CDATA[---
 title: 'How to use the Geolocation API in a React Native app'
@@ -28909,7 +28909,7 @@ You’ve successfully used the knowledge of geolocation data and setting up perm
         <title type="html"><![CDATA[How to build a xylophone app with Audio API, React Native, and Expo]]></title>
         <id>https://amanhimself.dev//blog/how-to-build-xylophone-app-with-expo</id>
         <link href="https://amanhimself.dev//blog/how-to-build-xylophone-app-with-expo"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[How to build a xylophone app with Audio API, React Native, and Expo]]></summary>
         <content type="html"><![CDATA[---
 title: 'How to build a xylophone app with Audio API, React Native, and Expo'
@@ -29252,7 +29252,7 @@ You have reached the end of this tutorial. I hope you have learned how to integr
         <title type="html"><![CDATA[How to Create a Chatbot with Dialogflow, NodeJS, and Webhooks]]></title>
         <id>https://amanhimself.dev//blog/build-chatbot-dialogflow-nodejs-webhooks</id>
         <link href="https://amanhimself.dev//blog/build-chatbot-dialogflow-nodejs-webhooks"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[How to Create a Chatbot with Dialogflow, NodeJS, and Webhooks]]></summary>
         <content type="html"><![CDATA[---
 title: 'How to Create a Chatbot with Dialogflow, NodeJS, and Webhooks'
@@ -29582,7 +29582,7 @@ You have successfully created, deployed, and tested a Nodejs Webhook for Dialogf
         <title type="html"><![CDATA[Using React Router to Optimize Single Page Applications (SPAs)]]></title>
         <id>https://amanhimself.dev//blog/introduction-to-react-router-v4-with-reactjs</id>
         <link href="https://amanhimself.dev//blog/introduction-to-react-router-v4-with-reactjs"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[Using React Router to Optimize Single Page Applications (SPAs)]]></summary>
         <content type="html"><![CDATA[---
 title: 'Using React Router to Optimize Single Page Applications (SPAs)'
@@ -30059,7 +30059,7 @@ Hopefully, by now, you are familiar with the basic concepts of how React Router 
         <title type="html"><![CDATA[To Travel, A Tech Conference and One Million views - a Recap]]></title>
         <id>https://amanhimself.dev//blog/to-travel-a-tech-conference-and-one-million-views-a-recap</id>
         <link href="https://amanhimself.dev//blog/to-travel-a-tech-conference-and-one-million-views-a-recap"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[To Travel, A Tech Conference and One Million views - a Recap]]></summary>
         <content type="html"><![CDATA[---
 title: 'To Travel, A Tech Conference and One Million views - a Recap'
@@ -30162,7 +30162,7 @@ I do have some future plans for traveling. I want to experiment with it this tim
         <title type="html"><![CDATA[How to integrate Firebase and Firestore cloud database with a React application]]></title>
         <id>https://amanhimself.dev//blog/how-to-integrate-firebase-firestore-react-and-crowdbotics-platform</id>
         <link href="https://amanhimself.dev//blog/how-to-integrate-firebase-firestore-react-and-crowdbotics-platform"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[How to integrate Firebase and Firestore cloud database with a React application]]></summary>
         <content type="html"><![CDATA[---
 title: 'How to integrate Firebase and Firestore cloud database with a React application'
@@ -30454,7 +30454,7 @@ You have now successfully integrated and added data to the Firebase store. The m
         <title type="html"><![CDATA[How to Setup a React App with TypeScript, Storybook]]></title>
         <id>https://amanhimself.dev//blog/setup-a-react-app-with-typescript-storybook</id>
         <link href="https://amanhimself.dev//blog/setup-a-react-app-with-typescript-storybook"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[How to Setup a React App with TypeScript, Storybook]]></summary>
         <content type="html"><![CDATA[---
 title: 'How to Setup a React App with TypeScript, Storybook'
@@ -30700,7 +30700,7 @@ Kudos to you if have reached so far. You have configured Storybook work with Typ
         <title type="html"><![CDATA[Build a Custom Modal with the Animated API in React Native]]></title>
         <id>https://amanhimself.dev//blog/build-a-custom-modal-with-the-animated-api-in-react-native</id>
         <link href="https://amanhimself.dev//blog/build-a-custom-modal-with-the-animated-api-in-react-native"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[Build a Custom Modal with the Animated API in React Native]]></summary>
         <content type="html"><![CDATA[---
 title: 'Build a Custom Modal with the Animated API in React Native'
@@ -31475,7 +31475,7 @@ This completes this tutorial about creating animated custom modal to provide a p
         <title type="html"><![CDATA[Build a Twitter Clone Server with Apollo, GraphQL, Nodejs, and Crowdbotics]]></title>
         <id>https://amanhimself.dev//blog/build-a-twitter-clone-server-with-apollo-graphql-nodejs</id>
         <link href="https://amanhimself.dev//blog/build-a-twitter-clone-server-with-apollo-graphql-nodejs"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[Build a Twitter Clone Server with Apollo, GraphQL, Nodejs, and Crowdbotics]]></summary>
         <content type="html"><![CDATA[---
 title: 'Build a Twitter Clone Server with Apollo, GraphQL, Nodejs, and Crowdbotics'
@@ -31922,7 +31922,7 @@ You can find the complete code for the tutorial in this **[Github repository](ht
         <title type="html"><![CDATA[Building Stylistic UIs with Emotion-JS for React Native]]></title>
         <id>https://amanhimself.dev//blog/use-emotion-js-with-react-native</id>
         <link href="https://amanhimself.dev//blog/use-emotion-js-with-react-native"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[Building Stylistic UIs with Emotion-JS for React Native]]></summary>
         <content type="html"><![CDATA[---
 title: 'Building Stylistic UIs with Emotion-JS for React Native'
@@ -32579,11 +32579,11 @@ You have completed the tutorial for creating UIs with Emotion-JS and integrate i
         <title type="html"><![CDATA[User Authentication with Amplify in a React Native and Expo app]]></title>
         <id>https://amanhimself.dev//blog/user-authentication-with-amplify-in-a-react-native-and-expo-app</id>
         <link href="https://amanhimself.dev//blog/user-authentication-with-amplify-in-a-react-native-and-expo-app"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[User Authentication with Amplify in a React Native and Expo app]]></summary>
         <content type="html"><![CDATA[---
 title: 'User Authentication with Amplify in a React Native and Expo app'
-slug: 'blog/user-authentication-with-amplify-in-a-react-native-and-expo-app'
+slug: 'user-authentication-with-amplify-in-a-react-native-and-expo-app'
 date: '2019-05-22'
 thumbnail: '/thumbnails/expo.png'
 tag: 'expo'
@@ -32871,7 +32871,7 @@ You can find the complete code for this post in this [Github repository](https:/
         <title type="html"><![CDATA[Building a React Native Mobile App with AWS Amplify and Expo]]></title>
         <id>https://amanhimself.dev//blog/building-a-react-native-mobile-app-with-aws-amplify-and-expo</id>
         <link href="https://amanhimself.dev//blog/building-a-react-native-mobile-app-with-aws-amplify-and-expo"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[Building a React Native Mobile App with AWS Amplify and Expo]]></summary>
         <content type="html"><![CDATA[---
 title: 'Building a React Native Mobile App with AWS Amplify and Expo'
@@ -33357,7 +33357,7 @@ You can find the complete code for this post in this [Github repository](https:/
         <title type="html"><![CDATA[How I Configure VSCode for Everything]]></title>
         <id>https://amanhimself.dev//blog/how-i-configure-vscode-for-everything</id>
         <link href="https://amanhimself.dev//blog/how-i-configure-vscode-for-everything"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[How I Configure VSCode for Everything]]></summary>
         <content type="html"><![CDATA[---
 title: 'How I Configure VSCode for Everything'
@@ -33463,7 +33463,7 @@ Happy Coding!
         <title type="html"><![CDATA[React Hooks Basics — Building a React Native App with React Hooks]]></title>
         <id>https://amanhimself.dev//blog/build-a-react-native-app-with-react-hooks</id>
         <link href="https://amanhimself.dev//blog/build-a-react-native-app-with-react-hooks"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[React Hooks Basics — Building a React Native App with React Hooks]]></summary>
         <content type="html"><![CDATA[---
 title: 'React Hooks Basics — Building a React Native App with React Hooks'
@@ -34088,7 +34088,7 @@ _The complete code for this tutorial is available in the Github repository below
         <title type="html"><![CDATA[How To Build Your First VR App with ViroReact, React Native, and Crowdbotics]]></title>
         <id>https://amanhimself.dev//blog/how-to-build-your-first-vr-app-with-viroreact-react-native-and-crowdbotics</id>
         <link href="https://amanhimself.dev//blog/how-to-build-your-first-vr-app-with-viroreact-react-native-and-crowdbotics"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[How To Build Your First VR App with ViroReact, React Native, and Crowdbotics]]></summary>
         <content type="html"><![CDATA[---
 title: 'How To Build Your First VR App with ViroReact, React Native, and Crowdbotics'
@@ -34355,7 +34355,7 @@ The complete code for this tutorial is available in the Github repository below.
         <title type="html"><![CDATA[Build a Chatbot with Dialogflow and React Native]]></title>
         <id>https://amanhimself.dev//blog/build-a-chatbot-with-dialogflow-and-react-native</id>
         <link href="https://amanhimself.dev//blog/build-a-chatbot-with-dialogflow-and-react-native"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[Build a Chatbot with Dialogflow and React Native]]></summary>
         <content type="html"><![CDATA[---
 title: 'Build a Chatbot with Dialogflow and React Native'
@@ -34778,7 +34778,7 @@ The possibilities of using a powerful API such as Dialogflow are endless. In no 
         <title type="html"><![CDATA[How to Build a Real Time Logo Detection App with React Native & Google Vision API]]></title>
         <id>https://amanhimself.dev//blog/how-to-build-a-real-time-logo-detection-app-with-react-native-google-vision-api-and-crowdbotics</id>
         <link href="https://amanhimself.dev//blog/how-to-build-a-real-time-logo-detection-app-with-react-native-google-vision-api-and-crowdbotics"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[How to Build a Real Time Logo Detection App with React Native & Google Vision API]]></summary>
         <content type="html"><![CDATA[---
 title: 'How to Build a Real Time Logo Detection App with React Native & Google Vision API'
@@ -35262,7 +35262,7 @@ You can find the complete code in the **Github repository** below.
         <title type="html"><![CDATA[Using Styled Components with React Native]]></title>
         <id>https://amanhimself.dev//blog/using-styled-components-with-react-native</id>
         <link href="https://amanhimself.dev//blog/using-styled-components-with-react-native"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[Using Styled Components with React Native]]></summary>
         <content type="html"><![CDATA[---
 title: 'Using Styled Components with React Native'
@@ -35988,7 +35988,7 @@ You can find the complete code for this article in the Github repo 👇
         <title type="html"><![CDATA[Create a React Native Image Recognition App with Google Vision API]]></title>
         <id>https://amanhimself.dev//blog/google-vision-api-firebase-react-native</id>
         <link href="https://amanhimself.dev//blog/google-vision-api-firebase-react-native"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[Create a React Native Image Recognition App with Google Vision API]]></summary>
         <content type="html"><![CDATA[---
 title: 'Create a React Native Image Recognition App with Google Vision API'
@@ -36639,7 +36639,7 @@ You can find the complete code inside [this Github repo](https://github.com/aman
         <title type="html"><![CDATA[How To Build a News Reader App with React Native and NewsAPI]]></title>
         <id>https://amanhimself.dev//blog/how-to-build-a-news-reader-app-with-react-native-and-newsapi</id>
         <link href="https://amanhimself.dev//blog/how-to-build-a-news-reader-app-with-react-native-and-newsapi"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[How To Build a News Reader App with React Native and NewsAPI]]></summary>
         <content type="html"><![CDATA[---
 title: 'How To Build a News Reader App with React Native and NewsAPI'
@@ -37077,7 +37077,7 @@ If you have any questions, you can reach out to me on [**Twitter**](https://www.
         <title type="html"><![CDATA[Top open source libraries for Node.js]]></title>
         <id>https://amanhimself.dev//blog/29-useful-open-source-libraries-for-nodejs</id>
         <link href="https://amanhimself.dev//blog/29-useful-open-source-libraries-for-nodejs"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[Top open source libraries for Node.js]]></summary>
         <content type="html"><![CDATA[---
 title: 'Top open source libraries for Node.js'
@@ -37505,7 +37505,7 @@ _I hope this list gets you started to with most commonly used open source packag
         <title type="html"><![CDATA[21 Useful Open Source Packages for React Native]]></title>
         <id>https://amanhimself.dev//blog/21-useful-open-source-packages-for-react-native</id>
         <link href="https://amanhimself.dev//blog/21-useful-open-source-packages-for-react-native"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[21 Useful Open Source Packages for React Native]]></summary>
         <content type="html"><![CDATA[---
 title: '21 Useful Open Source Packages for React Native'
@@ -37768,7 +37768,7 @@ There are other libraries that modules available for React Native for different 
         <title type="html"><![CDATA[3 Steps to learn React Native in 2019]]></title>
         <id>https://amanhimself.dev//blog/3-steps-to-learn-react-native-in-2019</id>
         <link href="https://amanhimself.dev//blog/3-steps-to-learn-react-native-in-2019"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[3 Steps to learn React Native in 2019]]></summary>
         <content type="html"><![CDATA[---
 title: '3 Steps to learn React Native in 2019'
@@ -37849,7 +37849,7 @@ In simple words, React Native brings the React to mobile app development. Its go
         <title type="html"><![CDATA[Getting Started with React Native in 2019 - Build Your First App]]></title>
         <id>https://amanhimself.dev//blog/getting-started-with-react-native-in-2019-build-your-first-app</id>
         <link href="https://amanhimself.dev//blog/getting-started-with-react-native-in-2019-build-your-first-app"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[Getting Started with React Native in 2019 - Build Your First App]]></summary>
         <content type="html"><![CDATA[---
 title: 'Getting Started with React Native in 2019 - Build Your First App'
@@ -38253,7 +38253,7 @@ Do not get overwhelmed by the number of mistakes you do or the errors you get. G
         <title type="html"><![CDATA[My Top Tutorials in Web Development and React Native in 2018]]></title>
         <id>https://amanhimself.dev//blog/my-top-tutorials-in-web-development-and-react-native-in-2018</id>
         <link href="https://amanhimself.dev//blog/my-top-tutorials-in-web-development-and-react-native-in-2018"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[My Top Tutorials in Web Development and React Native in 2018]]></summary>
         <content type="html"><![CDATA[---
 title: 'My Top Tutorials in Web Development and React Native in 2018'
@@ -38335,7 +38335,7 @@ In 2019, I look forward to add more value to the tech community and help fellow 
         <title type="html"><![CDATA[Top Node.js Libraries and Tools For Machine Learning]]></title>
         <id>https://amanhimself.dev//blog/top-nodejs-libraries-and-tools-for-machine-learning</id>
         <link href="https://amanhimself.dev//blog/top-nodejs-libraries-and-tools-for-machine-learning"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[Top Node.js Libraries and Tools For Machine Learning]]></summary>
         <content type="html"><![CDATA[---
 title: 'Top Node.js Libraries and Tools For Machine Learning'
@@ -38633,7 +38633,7 @@ I hope, this post prove useful to you as well for learning and using different l
         <title type="html"><![CDATA[How To Build a REST API With Nodejs and PostgreSQL]]></title>
         <id>https://amanhimself.dev//blog/how-to-build-a-rest-api-with-nodejs-and-postgresql</id>
         <link href="https://amanhimself.dev//blog/how-to-build-a-rest-api-with-nodejs-and-postgresql"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[How To Build a REST API With Nodejs and PostgreSQL]]></summary>
         <content type="html"><![CDATA[---
 title: 'How To Build a REST API With Nodejs and PostgreSQL'
@@ -39297,7 +39297,7 @@ That’s it! In this article, you learned about using PostgreSQL as a database a
         <title type="html"><![CDATA[Integrating Firebase with React Native]]></title>
         <id>https://amanhimself.dev//blog/integrating-firebase-with-react-native</id>
         <link href="https://amanhimself.dev//blog/integrating-firebase-with-react-native"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[Integrating Firebase with React Native]]></summary>
         <content type="html"><![CDATA[---
 title: 'Integrating Firebase with React Native'
@@ -39774,7 +39774,7 @@ You can find the complete code inside [this Github repo](https://github.com/aman
         <title type="html"><![CDATA[How To Build A Blog From Scratch With React, Markdown, GraphQL and Gatsbyjs]]></title>
         <id>https://amanhimself.dev//blog/how-to-build-your-own-blog-from-scratch-with-gatsbyjs-graphql-react-and-markdown</id>
         <link href="https://amanhimself.dev//blog/how-to-build-your-own-blog-from-scratch-with-gatsbyjs-graphql-react-and-markdown"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[How To Build A Blog From Scratch With React, Markdown, GraphQL and Gatsbyjs]]></summary>
         <content type="html"><![CDATA[---
 title: 'How To Build A Blog From Scratch With React, Markdown, GraphQL and Gatsbyjs'
@@ -40218,7 +40218,7 @@ I challenge you to expand your own blog further by adding comments or tags funct
         <title type="html"><![CDATA[Building an authenticated MERN Stack App Using Material UI]]></title>
         <id>https://amanhimself.dev//blog/building-a-mern-stack-app-with-material-ui</id>
         <link href="https://amanhimself.dev//blog/building-a-mern-stack-app-with-material-ui"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[Building an authenticated MERN Stack App Using Material UI]]></summary>
         <content type="html"><![CDATA[---
 title: 'Building an authenticated MERN Stack App Using Material UI'
@@ -41731,7 +41731,7 @@ If you want to learn **how to deploy this application, you can continue to read*
         <title type="html"><![CDATA[How to Build a Serverless Backend with AWS Lambda and Nodejs]]></title>
         <id>https://amanhimself.dev//blog/how-to-build-a-serverless-backend-with-aws-lambda-and-nodejs</id>
         <link href="https://amanhimself.dev//blog/how-to-build-a-serverless-backend-with-aws-lambda-and-nodejs"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[How to Build a Serverless Backend with AWS Lambda and Nodejs]]></summary>
         <content type="html"><![CDATA[---
 title: 'How to Build a Serverless Backend with AWS Lambda and Nodejs'
@@ -42346,7 +42346,7 @@ Note", "description": "This is a note."}'
         <title type="html"><![CDATA[Creating a GraphQL server with Nodejs]]></title>
         <id>https://amanhimself.dev//blog/creating-a-graphql-server-with-nodejs-in-2018</id>
         <link href="https://amanhimself.dev//blog/creating-a-graphql-server-with-nodejs-in-2018"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[Creating a GraphQL server with Nodejs]]></summary>
         <content type="html"><![CDATA[---
 title: 'Creating a GraphQL server with Nodejs'
@@ -42896,7 +42896,7 @@ You have learned how to configure an Express server with Apollo library to setup
         <title type="html"><![CDATA[How to use Import statements in Nodejs]]></title>
         <id>https://amanhimself.dev//blog/how-to-use-import-statements-in-nodejs</id>
         <link href="https://amanhimself.dev//blog/how-to-use-import-statements-in-nodejs"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[How to use Import statements in Nodejs]]></summary>
         <content type="html"><![CDATA[---
 title: 'How to use Import statements in Nodejs'
@@ -43064,7 +43064,7 @@ _You can find the complete source code for the above article at_ [**_Github Repo
         <title type="html"><![CDATA[Setting up Nodejs Backend for a React App]]></title>
         <id>https://amanhimself.dev//blog/setting-up-nodejs-backend-for-a-react-app</id>
         <link href="https://amanhimself.dev//blog/setting-up-nodejs-backend-for-a-react-app"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[Setting up Nodejs Backend for a React App]]></summary>
         <content type="html"><![CDATA[---
 title: 'Setting up Nodejs Backend for a React App'
@@ -43292,7 +43292,7 @@ _[Originally published at Crowdbotics](https://medium.com/crowdbotics/setting-up
         <title type="html"><![CDATA[Building a REST API with Koajs]]></title>
         <id>https://amanhimself.dev//blog/building-a-rest-api-with-koajs</id>
         <link href="https://amanhimself.dev//blog/building-a-rest-api-with-koajs"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[Building a REST API with Koajs]]></summary>
         <content type="html"><![CDATA[---
 title: 'Building a REST API with Koajs'
@@ -43711,7 +43711,7 @@ This completes the basics of building a REST API using Koa as a Node.js framewor
         <title type="html"><![CDATA[Deploy a MERN stack app on Heroku]]></title>
         <id>https://amanhimself.dev//blog/deploy-a-mern-stack-app-on-heroku</id>
         <link href="https://amanhimself.dev//blog/deploy-a-mern-stack-app-on-heroku"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[Deploy a MERN stack app on Heroku]]></summary>
         <content type="html"><![CDATA[---
 title: 'Deploy a MERN stack app on Heroku'
@@ -44441,7 +44441,7 @@ There are many deployment techniques that you can try on Heroku. The technique d
         <title type="html"><![CDATA[How to use React Navigation in a React Native App]]></title>
         <id>https://amanhimself.dev//blog/navigation-in-a-react-native-app</id>
         <link href="https://amanhimself.dev//blog/navigation-in-a-react-native-app"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[How to use React Navigation in a React Native App]]></summary>
         <content type="html"><![CDATA[---
 title: 'How to use React Navigation in a React Native App'
@@ -44749,7 +44749,7 @@ It might take a while to grasp them and use them for your application but once y
         <title type="html"><![CDATA[Accessing Geo-location and App Permissions in React Native and Expo]]></title>
         <id>https://amanhimself.dev//blog/accessing-geo-location-and-app-permissions-in-react-native-and-expo</id>
         <link href="https://amanhimself.dev//blog/accessing-geo-location-and-app-permissions-in-react-native-and-expo"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[Accessing Geo-location and App Permissions in React Native and Expo]]></summary>
         <content type="html"><![CDATA[---
 title: 'Accessing Geo-location and App Permissions in React Native and Expo'
@@ -44911,7 +44911,7 @@ If you want to learn more about working with Geolocation API in a React Native a
         <title type="html"><![CDATA[Simple Recipe to Build a Theme App in React Native]]></title>
         <id>https://amanhimself.dev//blog/simple-recipe-to-build-a-theme-app-in-react-native</id>
         <link href="https://amanhimself.dev//blog/simple-recipe-to-build-a-theme-app-in-react-native"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[Simple Recipe to Build a Theme App in React Native]]></summary>
         <content type="html"><![CDATA[---
 title: 'Simple Recipe to Build a Theme App in React Native'
@@ -45008,7 +45008,7 @@ In above, `handleThemeChange` handles the dispatching of the only action we defi
         <title type="html"><![CDATA[How to integrate Redux into your application with React Native and Expo]]></title>
         <id>https://amanhimself.dev//blog/how-to-integrate-redux-into-your-application-with-react-native-and-expo</id>
         <link href="https://amanhimself.dev//blog/how-to-integrate-redux-into-your-application-with-react-native-and-expo"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[How to integrate Redux into your application with React Native and Expo]]></summary>
         <content type="html"><![CDATA[---
 title: 'How to integrate Redux into your application with React Native and Expo'
@@ -45211,7 +45211,7 @@ _Do you remember me telling you about a particular file structure I followed in 
         <title type="html"><![CDATA[Week 3 with React Native - Why use Expo?]]></title>
         <id>https://amanhimself.dev//blog/week-3-with-react-native</id>
         <link href="https://amanhimself.dev//blog/week-3-with-react-native"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[Week 3 with React Native - Why use Expo?]]></summary>
         <content type="html"><![CDATA[---
 title: 'Week 3 with React Native - Why use Expo?'
@@ -45271,7 +45271,7 @@ There are shortcomings using Expo. I am not going to list them here but the team
         <title type="html"><![CDATA[Week 2 With React Native - Building a Weather App]]></title>
         <id>https://amanhimself.dev//blog/week-2-with-react-native-building-a-weather-app</id>
         <link href="https://amanhimself.dev//blog/week-2-with-react-native-building-a-weather-app"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[Week 2 With React Native - Building a Weather App]]></summary>
         <content type="html"><![CDATA[---
 title: 'Week 2 With React Native - Building a Weather App'
@@ -45348,7 +45348,7 @@ I also published another article this week on React Native:
         <title type="html"><![CDATA[React Native - How to Setup Your First App]]></title>
         <id>https://amanhimself.dev//blog/react-native-how-to-setup-your-first-app</id>
         <link href="https://amanhimself.dev//blog/react-native-how-to-setup-your-first-app"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[React Native - How to Setup Your First App]]></summary>
         <content type="html"><![CDATA[---
 title: 'React Native - How to Setup Your First App'
@@ -45478,7 +45478,7 @@ It is more in-depth, and covers almost every basic aspect about React Native eco
         <title type="html"><![CDATA[Starting Over with React Native]]></title>
         <id>https://amanhimself.dev//blog/starting-over-with-react-native</id>
         <link href="https://amanhimself.dev//blog/starting-over-with-react-native"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[Starting Over with React Native]]></summary>
         <content type="html"><![CDATA[---
 title: 'Starting Over with React Native'
@@ -45537,7 +45537,7 @@ _Thank you reading this post. I know I haven’t shared much about React Native 
         <title type="html"><![CDATA[How to Upload a File with Reactjs and Nodejs]]></title>
         <id>https://amanhimself.dev//blog/connecting-a-node-js-and-reactjs-example</id>
         <link href="https://amanhimself.dev//blog/connecting-a-node-js-and-reactjs-example"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[How to Upload a File with Reactjs and Nodejs]]></summary>
         <content type="html"><![CDATA[---
 title: 'How to Upload a File with Reactjs and Nodejs'
@@ -45865,7 +45865,7 @@ You can find the complete code for this example at [**FileUpload-Example**](http
         <title type="html"><![CDATA[React Native - Building a Minimalist Weather App using Expo XDE]]></title>
         <id>https://amanhimself.dev//blog/react-native-building-a-minimalist-weather-app-using-expo-xde</id>
         <link href="https://amanhimself.dev//blog/react-native-building-a-minimalist-weather-app-using-expo-xde"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[React Native - Building a Minimalist Weather App using Expo XDE]]></summary>
         <content type="html"><![CDATA[---
 title: 'React Native - Building a Minimalist Weather App using Expo XDE'
@@ -46401,7 +46401,7 @@ The whole code for this application is available at this [Github Repo](https://g
         <title type="html"><![CDATA[React Native - Getting Started with Lottie and Expo]]></title>
         <id>https://amanhimself.dev//blog/react-native-getting-started-with-lottie-and-expo</id>
         <link href="https://amanhimself.dev//blog/react-native-getting-started-with-lottie-and-expo"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[React Native - Getting Started with Lottie and Expo]]></summary>
         <content type="html"><![CDATA[---
 title: 'React Native - Getting Started with Lottie and Expo'
@@ -46632,7 +46632,7 @@ _[Originally this article was published on Hackernoon.com](https://medium.com/ha
         <title type="html"><![CDATA[Build a Progressive Web App using React]]></title>
         <id>https://amanhimself.dev//blog/build-a-progressive-web-app-using-react</id>
         <link href="https://amanhimself.dev//blog/build-a-progressive-web-app-using-react"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[Build a Progressive Web App using React]]></summary>
         <content type="html"><![CDATA[---
 title: 'Build a Progressive Web App using React'
@@ -47081,7 +47081,7 @@ You can find the complete code at [this Github repository](https://github.com/am
         <title type="html"><![CDATA[Designing a REST API with Node.js and MongoDB Atlas]]></title>
         <id>https://amanhimself.dev//blog/designing-a-rest-api-with-node-js-and-mongodb-atlas</id>
         <link href="https://amanhimself.dev//blog/designing-a-rest-api-with-node-js-and-mongodb-atlas"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[Designing a REST API with Node.js and MongoDB Atlas]]></summary>
         <content type="html"><![CDATA[---
 title: 'Designing a REST API with Node.js and MongoDB Atlas'
@@ -47502,7 +47502,7 @@ You can find the complete code at this [Github repository](https://github.com/am
         <title type="html"><![CDATA[Gatsby.js - How to set up and use the React Static Site Generator]]></title>
         <id>https://amanhimself.dev//blog/setting-up-and-getting-used-to-gatsby</id>
         <link href="https://amanhimself.dev//blog/setting-up-and-getting-used-to-gatsby"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[Gatsby.js - How to set up and use the React Static Site Generator]]></summary>
         <content type="html"><![CDATA[---
 title: 'Gatsby.js - How to set up and use the React Static Site Generator'
@@ -47866,7 +47866,7 @@ You can find the complete code of this project at this [GitHub Repo](https://git
         <title type="html"><![CDATA[Ionic 2/3 CLI Reference]]></title>
         <id>https://amanhimself.dev//blog/ionic-2-3-cli-reference</id>
         <link href="https://amanhimself.dev//blog/ionic-2-3-cli-reference"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[Ionic 2/3 CLI Reference]]></summary>
         <content type="html"><![CDATA[---
 title: 'Ionic 2/3 CLI Reference'
@@ -48085,7 +48085,7 @@ $ git log --oneline --graph --decorate --color
         <title type="html"><![CDATA[Passing Data Between Pages in an Ionic Application]]></title>
         <id>https://amanhimself.dev//blog/passing-data-between-pages-in-an-ionic-application</id>
         <link href="https://amanhimself.dev//blog/passing-data-between-pages-in-an-ionic-application"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[Passing Data Between Pages in an Ionic Application]]></summary>
         <content type="html"><![CDATA[---
 date: '2017-12-03'
@@ -48273,7 +48273,7 @@ _To get the full code of this demo app, you can visit_ [**this Github Repository
         <title type="html"><![CDATA[Tips for Creating Nodejs REST APIs]]></title>
         <id>https://amanhimself.dev//blog/tips-for-creating-node-js-rest-apis</id>
         <link href="https://amanhimself.dev//blog/tips-for-creating-node-js-rest-apis"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[Tips for Creating Nodejs REST APIs]]></summary>
         <content type="html"><![CDATA[---
 title: 'Tips for Creating Nodejs REST APIs'
@@ -48351,7 +48351,7 @@ Express, Koa, Hapi all can be used for creating browser based applications but R
         <title type="html"><![CDATA[Multi Page Navigation in an Ionic App]]></title>
         <id>https://amanhimself.dev//blog/multi-page-navigation-in-an-ionic-app</id>
         <link href="https://amanhimself.dev//blog/multi-page-navigation-in-an-ionic-app"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[Multi Page Navigation in an Ionic App]]></summary>
         <content type="html"><![CDATA[---
 date: '2017-11-19'
@@ -48618,7 +48618,7 @@ _To get the full code, you can visit_ [**this Github Repository**](https://githu
         <title type="html"><![CDATA[Using Google Fonts in an Ionic Application]]></title>
         <id>https://amanhimself.dev//blog/using-google-fonts-in-an-ionic-application</id>
         <link href="https://amanhimself.dev//blog/using-google-fonts-in-an-ionic-application"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[Using Google Fonts in an Ionic Application]]></summary>
         <content type="html"><![CDATA[---
 date: '2017-11-09'
@@ -48690,7 +48690,7 @@ To get the full code, you can visit [**this Github Repository**](https://github.
         <title type="html"><![CDATA[Basic Navigation in Ionic Applications]]></title>
         <id>https://amanhimself.dev//blog/basic-navigation-in-ionic-applications</id>
         <link href="https://amanhimself.dev//blog/basic-navigation-in-ionic-applications"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[Basic Navigation in Ionic Applications]]></summary>
         <content type="html"><![CDATA[---
 title: 'Basic Navigation in Ionic Applications'
@@ -48746,7 +48746,7 @@ Note: _Deeplinking is available in Ionic with URLs but that is altogether a diff
         <title type="html"><![CDATA[How to use Font Awesome in an Ionic Application]]></title>
         <id>https://amanhimself.dev//blog/how-to-use-font-awesome-in-an-ionic-application</id>
         <link href="https://amanhimself.dev//blog/how-to-use-font-awesome-in-an-ionic-application"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[How to use Font Awesome in an Ionic Application]]></summary>
         <content type="html"><![CDATA[---
 date: '2017-10-18'
@@ -48862,7 +48862,7 @@ There are more than 675 icons available in FontAwesome and I think a combination
         <title type="html"><![CDATA[What is Ionic?]]></title>
         <id>https://amanhimself.dev//blog/what-is-ionic</id>
         <link href="https://amanhimself.dev//blog/what-is-ionic"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[What is Ionic?]]></summary>
         <content type="html"><![CDATA[---
 date: '2017-10-12'
@@ -48955,7 +48955,7 @@ To install platform such as iOS and espcially android, I will want you to refer 
         <title type="html"><![CDATA[Introduction to Hybrid Mobile Apps]]></title>
         <id>https://amanhimself.dev//blog/introduction-to-hybrid-mobile-apps</id>
         <link href="https://amanhimself.dev//blog/introduction-to-hybrid-mobile-apps"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[Introduction to Hybrid Mobile Apps]]></summary>
         <content type="html"><![CDATA[---
 date: '2017-10-05'
@@ -49018,7 +49018,7 @@ Other options which I haven’t tried yet but think are worth mentioning include
         <title type="html"><![CDATA[Remove node_modules Recursively]]></title>
         <id>https://amanhimself.dev//blog/remove-node-modules-recursively</id>
         <link href="https://amanhimself.dev//blog/remove-node-modules-recursively"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[Remove node_modules Recursively]]></summary>
         <content type="html"><![CDATA[---
 date: '2017-09-10'
@@ -49071,7 +49071,7 @@ find . -name "bower_components" -exec rm -rf '{}' +
         <title type="html"><![CDATA[Setup Nodemon to auto restart Nodejs application server]]></title>
         <id>https://amanhimself.dev//blog/setup-nodemon-to-auto-restart-nodejs-application-server</id>
         <link href="https://amanhimself.dev//blog/setup-nodemon-to-auto-restart-nodejs-application-server"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[Setup Nodemon to auto restart Nodejs application server]]></summary>
         <content type="html"><![CDATA[---
 date: '2017-09-10'
@@ -49245,7 +49245,7 @@ Full Source at [this Github Repository](https://github.com/amandeepmittal/nodemo
         <title type="html"><![CDATA[What’s New in npm 5?]]></title>
         <id>https://amanhimself.dev//blog/whats-new-in-npm-5</id>
         <link href="https://amanhimself.dev//blog/whats-new-in-npm-5"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[What’s New in npm 5?]]></summary>
         <content type="html"><![CDATA[---
 title: 'What’s New in npm 5?'
@@ -49294,7 +49294,7 @@ npm install -g npm@latest
         <title type="html"><![CDATA[Converting a Buffer to JSON and Utf8 Strings in Nodejs]]></title>
         <id>https://amanhimself.dev//blog/converting-a-buffer-to-json-and-utf8-strings-in-nodejs</id>
         <link href="https://amanhimself.dev//blog/converting-a-buffer-to-json-and-utf8-strings-in-nodejs"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[Converting a Buffer to JSON and Utf8 Strings in Nodejs]]></summary>
         <content type="html"><![CDATA[---
 title: 'Converting a Buffer to JSON and Utf8 Strings in Nodejs'
@@ -49376,7 +49376,7 @@ The other way to convert a buffer to a string is using `StringDecoder` core modu
         <title type="html"><![CDATA[Setting up MEAN Stack with Webstorm]]></title>
         <id>https://amanhimself.dev//blog/setting-up-mean-stack-with-webstorm</id>
         <link href="https://amanhimself.dev//blog/setting-up-mean-stack-with-webstorm"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[Setting up MEAN Stack with Webstorm]]></summary>
         <content type="html"><![CDATA[---
 date: '2017-07-02'
@@ -49414,7 +49414,7 @@ I am sharing a video here which shows on how to get started with MEAN using JetB
         <title type="html"><![CDATA[How to paginate records in MySQL using Sequelize and Nodejs]]></title>
         <id>https://amanhimself.dev//blog/paginate-records-in-mysql-using-sequelize-and-nodejs</id>
         <link href="https://amanhimself.dev//blog/paginate-records-in-mysql-using-sequelize-and-nodejs"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[How to paginate records in MySQL using Sequelize and Nodejs]]></summary>
         <content type="html"><![CDATA[---
 date: '2017-06-20'
@@ -49509,7 +49509,7 @@ router.get('/:page', (req, res) => {
         <title type="html"><![CDATA[Getting Started with Sequelize for Nodejs Applications]]></title>
         <id>https://amanhimself.dev//blog/getting-started-with-sequelize-for-nodejs</id>
         <link href="https://amanhimself.dev//blog/getting-started-with-sequelize-for-nodejs"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[Getting Started with Sequelize for Nodejs Applications]]></summary>
         <content type="html"><![CDATA[---
 title: 'Getting Started with Sequelize for Nodejs Applications'
@@ -49679,7 +49679,7 @@ Sequelize is feature rich ORM for Node.js. It has a documentation that at times 
         <title type="html"><![CDATA[How to use ESLint in Node.js Applications]]></title>
         <id>https://amanhimself.dev//blog/how-to-use-eslint-in-node-js-applications</id>
         <link href="https://amanhimself.dev//blog/how-to-use-eslint-in-node-js-applications"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[How to use ESLint in Node.js Applications]]></summary>
         <content type="html"><![CDATA[---
 title: 'How to use ESLint in Node.js Applications'
@@ -49827,7 +49827,7 @@ Another plugin, I find very useful is [one variable per var](https://www.npmjs.c
         <title type="html"><![CDATA[How to Mock Data for Node.js Applications using faker.js]]></title>
         <id>https://amanhimself.dev//blog/how-to-mock-data-for-nodejs-applications-using-fakerjs</id>
         <link href="https://amanhimself.dev//blog/how-to-mock-data-for-nodejs-applications-using-fakerjs"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[How to Mock Data for Node.js Applications using faker.js]]></summary>
         <content type="html"><![CDATA[---
 title: 'How to Mock Data for Node.js Applications using faker.js'
@@ -49931,7 +49931,7 @@ For full source code at [this Github Repository](https://github.com/amandeepmitt
         <title type="html"><![CDATA[Getting Started with Ionic Framework]]></title>
         <id>https://amanhimself.dev//blog/getting-started-with-ionic-framework</id>
         <link href="https://amanhimself.dev//blog/getting-started-with-ionic-framework"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[Getting Started with Ionic Framework]]></summary>
         <content type="html"><![CDATA[---
 title: 'Getting Started with Ionic Framework'
@@ -50106,7 +50106,7 @@ _I guess, you now have the idea of how an Hybrid application using Ionic Framewo
         <title type="html"><![CDATA[Migrating from Expressjs 4 to 5]]></title>
         <id>https://amanhimself.dev//blog/migrating-from-expressjs-4-to-5</id>
         <link href="https://amanhimself.dev//blog/migrating-from-expressjs-4-to-5"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[Migrating from Expressjs 4 to 5]]></summary>
         <content type="html"><![CDATA[---
 date: '2017-01-11'
@@ -50154,7 +50154,7 @@ _The full list of changes or the official Express Migration Guide is to be found
         <title type="html"><![CDATA[Using Bower With Heroku]]></title>
         <id>https://amanhimself.dev//blog/using-bower-with-heroku</id>
         <link href="https://amanhimself.dev//blog/using-bower-with-heroku"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[Using Bower With Heroku]]></summary>
         <content type="html"><![CDATA[---
 title: 'Using Bower With Heroku'
@@ -50201,7 +50201,7 @@ You can read more about customizing [**Heroku Build Process here**](https://devc
         <title type="html"><![CDATA[Writing a Node.js Twitter Bot Part 1]]></title>
         <id>https://amanhimself.dev//blog/node-js-twitter-bot-tutorial</id>
         <link href="https://amanhimself.dev//blog/node-js-twitter-bot-tutorial"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[Writing a Node.js Twitter Bot Part 1]]></summary>
         <content type="html"><![CDATA[---
 date: '2016-12-25'
@@ -50575,7 +50575,7 @@ Update: the second part of this tutorial is available [here!](https://community.
         <title type="html"><![CDATA[Writing a Node.js Twitter Bot Part 2]]></title>
         <id>https://amanhimself.dev//blog/node-js-twitter-bot-tutorial-part-2</id>
         <link href="https://amanhimself.dev//blog/node-js-twitter-bot-tutorial-part-2"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[Writing a Node.js Twitter Bot Part 2]]></summary>
         <content type="html"><![CDATA[---
 date: '2016-12-25'
@@ -50770,7 +50770,7 @@ You can do a lot of things with a Twitter Bot, whether for your own sole purpose
         <title type="html"><![CDATA[Create a Simple Twitter Bot with Node.js]]></title>
         <id>https://amanhimself.dev//blog/create-a-simple-twitter-bot-with-node-js</id>
         <link href="https://amanhimself.dev//blog/create-a-simple-twitter-bot-with-node-js"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[Create a Simple Twitter Bot with Node.js]]></summary>
         <content type="html"><![CDATA[---
 title: 'Create a Simple Twitter Bot with Node.js'
@@ -51146,7 +51146,7 @@ For further reading check out [Botwiki.org](https://botwiki.org/bots/twitterbots
         <title type="html"><![CDATA[ATOM- An Editor of 21st Century]]></title>
         <id>https://amanhimself.dev//blog/atom-an-editor-of-21st-century</id>
         <link href="https://amanhimself.dev//blog/atom-an-editor-of-21st-century"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[ATOM- An Editor of 21st Century]]></summary>
         <content type="html"><![CDATA[---
 title: 'ATOM- An Editor of 21st Century'
@@ -51233,7 +51233,7 @@ _Note: At the time of writing this post, Webstorm IDE did not have support for f
         <title type="html"><![CDATA[How process.nextTick() works in Node.js?]]></title>
         <id>https://amanhimself.dev//blog/how-process-nexttick-works-in-node-js</id>
         <link href="https://amanhimself.dev//blog/how-process-nexttick-works-in-node-js"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[How process.nextTick() works in Node.js?]]></summary>
         <content type="html"><![CDATA[---
 title: 'How process.nextTick() works in Node.js?'
@@ -51291,7 +51291,7 @@ Processed in next iteration
         <title type="html"><![CDATA[The Node.js system]]></title>
         <id>https://amanhimself.dev//blog/nodejs-system</id>
         <link href="https://amanhimself.dev//blog/nodejs-system"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[The Node.js system]]></summary>
         <content type="html"><![CDATA[---
 title: 'The Node.js system'
@@ -51366,7 +51366,7 @@ The image borrowed above clarifies and represents a complete Node.js System. I h
         <title type="html"><![CDATA[The Node way - Philosophy of a Platform]]></title>
         <id>https://amanhimself.dev//blog/the-node-way</id>
         <link href="https://amanhimself.dev//blog/the-node-way"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[The Node way - Philosophy of a Platform]]></summary>
         <content type="html"><![CDATA[---
 title: 'The Node way - Philosophy of a Platform'
@@ -51410,7 +51410,7 @@ Another important aspect in the Node Philosophy is the dependency of each packag
         <title type="html"><![CDATA[JavaScript Code Conventions]]></title>
         <id>https://amanhimself.dev//blog/javascript-code-convetions</id>
         <link href="https://amanhimself.dev//blog/javascript-code-convetions"/>
-        <updated>2022-03-27T16:33:29.209Z</updated>
+        <updated>2022-03-27T16:35:10.858Z</updated>
         <summary type="html"><![CDATA[JavaScript Code Conventions]]></summary>
         <content type="html"><![CDATA[---
 date: '2016-01-08'

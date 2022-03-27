@@ -10,11 +10,11 @@
     "items": [
         {
             "id": "https://amanhimself.dev//blog/use-key-extractor-in-react-native-flatlist",
-            "content_html": "---\ntitle: \"When to use keyExtractor in React Native's FlatList\"\nslug: 'use-key-extractor-in-react-native-flatlist'\ndate: '2022-03-27'\nthumbnail: '/thumbnails/react.png'\ntag: 'react-native'\ncanonicalUrl: 'https://heartbeat.fritz.ai/user-authentication-with-amplify-in-a-react-native-and-expo-app-d00cdaf1ac28'\n---\n\n![cover_image]\n\n# When to use keyExtractor in React Native's FlatList\n\nIn React Native, the [FlatList component](https://reactnative.dev/docs/flatlist) works well to render a long list of data. It renders only the items are shown on the screen in a scrolling list and not all the data items at once.\n\nTo render a scrollable list of items using `FlatList`, you need to pass the required `data` prop to the component. The `data` prop accepts an array of items. Each item in the array represents a single item in the list. Another required prop is `renderItem`, which takes an item from the `data` and renders it on the list. This prop accepts a function that returns the JSX to be rendered.\n\nTo display an item in the scrollable list, the `FlatList` component requires that each item has a unique key such as an `id`. This key is what allows the `FlatList` component (since it uses [VirtualizedList](https://reactnative.dev/docs/virtualizedlist) under the hood) to track the order of items in the list. The key from the data array is extracted using the `keyExtractor` prop on the `FlatList` component.\n\nIn this post, let's talk about where you might need to use `keyExtractor` and what scenarios it is not required.\n\n## Display a list of items using FlatList\n\nConsider the following structure of data. There are ten items in the array, and each item has two properties, `id` and `title`. The `id` is the unique key for each item.\n\n```js\nconst DATA_WITH_ID = [\n  {\n    id: 1,\n    title: 'quidem molestiae enim'\n  },\n  {\n    id: 2,\n    title: 'sunt qui excepturi placeat culpa'\n  },\n  {\n    id: 3,\n    title: 'omnis laborum odio'\n  },\n  {\n    id: 4,\n    title: 'non esse culpa molestiae omnis sed optio'\n  },\n  {\n    id: 5,\n    title: 'eaque aut omnis a'\n  },\n  {\n    id: 6,\n    title: 'natus impedit quibusdam illo est'\n  },\n  {\n    id: 7,\n    title: 'quibusdam autem aliquid et et quia'\n  },\n  {\n    id: 8,\n    title: 'qui fuga est a eum'\n  },\n  {\n    id: 9,\n    title: 'saepe unde necessitatibus rem'\n  },\n  {\n    id: 10,\n    title: 'distinctio laborum qui'\n  }\n];\n```\n\nUsing the `FlatList` component, you want to render the `title` of each item as shown below:\n\n```js\nexport default function App() {\n  const renderList = ({ item }) => {\n    return (\n      <View style={styles.listItem}>\n        <Text style={styles.listItemText}>{item.title}</Text>\n      </View>\n    );\n  };\n\n  return (\n    <View style={styles.container}>\n      <FlatList data={DATA_WITH_ID} renderItem={renderList} />\n    </View>\n  );\n}\n```\n\nThe result of the above component will display a list of items without any errors or warnings. In addition, the `FlatList` component doesn't require a unique key to identify each item since the original data structure already contains a key called `id`.\n\nHere is the output on a device's screen from the above snippet:\n\n![ss2](https://i.imgur.com/ShoysNV.png)\n\n## Using the keyExtractor prop\n\nBy default, the `keyExtractor` prop checks for properties like `key` and `id` (in that order). If any of the two is present in the original data structure, it will be considered a the unique key by the `FlatList` component. In this case(as in the previous example), you do not have to explicitly use the `keyExtractor` prop.\n\nIf none of them are provided, the `FlatList` component will throw a warning \"VirtualizedList: missing keys for items ...\":\n\n![ss1](https://i.imgur.com/0zN4FXy.png)\n\nNow, let's consider a scenario where array of data contains a unique key with each list item but the name of the unique key is neither `key` nor `id`. It contains a unique key property with the name of `userId`.\n\n```js\nconst DATA_WITH_USER_ID = [\n  {\n    userId: 1,\n    title: 'quidem molestiae enim'\n  },\n  {\n    userId: 2,\n    title: 'sunt qui excepturi placeat culpa'\n  },\n  {\n    userId: 3,\n    title: 'omnis laborum odio'\n  },\n  {\n    userId: 4,\n    title: 'non esse culpa molestiae omnis sed optio'\n  },\n  {\n    userId: 5,\n    title: 'eaque aut omnis a'\n  },\n  {\n    userId: 6,\n    title: 'natus impedit quibusdam illo est'\n  },\n  {\n    userId: 7,\n    title: 'quibusdam autem aliquid et et quia'\n  },\n  {\n    userId: 8,\n    title: 'qui fuga est a eum'\n  },\n  {\n    userId: 9,\n    title: 'saepe unde necessitatibus rem'\n  },\n  {\n    userId: 10,\n    title: 'distinctio laborum qui'\n  }\n];\n```\n\nWhen rendering the list, you will see the warning in this case because the `FlatList` component doesn't recognize the `userId` as the `key` or `id` name in the original data structure.\n\nFor custom key names such as `userId` in the example above, the `keyExtractor` prop is used. It extracts the unique key name and its value and tells the `FlatList` component to track the items based on that value.\n\nFor the above array of data, modify the `FlatList` component and use the `keyExtractor` prop to extract the key:\n\n```js\n<FlatList\n  data={DATA_WITH_ID}\n  renderItem={renderList}\n  keyExtractor={item => item.userId}\n/>\n```\n\nThe warning will also disappear after this step.\n\n## Conclusion\n\nWhen using a `FlatList` component, if the data array has a unique `id` or a `key` property, you do not need to use the `keyExtractor` prop explicitly. However, for custom id names, use the `keyExtractor` prop to explicitly tell the component which unique key to extract.\n\nIf you like to learn more about React Native, check out the [React Native category](https://amanhimself.dev/tags/react-native/) and [Expo category](https://amanhimself.dev/tags/expo/) pages on my blog. You can also subscribe my [newsletter](https://www.getrevue.co/profile/amanhimself) or follow on [Twitter](https://twitter.com/amanhimself) to get updates on whenever I publish a new article or tutorial.\n",
+            "content_html": "---\ntitle: \"When to use keyExtractor prop in React Native's FlatList\"\nslug: 'use-key-extractor-in-react-native-flatlist'\ndate: '2022-03-27'\nthumbnail: '/thumbnails/react.png'\ntag: 'react-native'\ncanonicalUrl: 'https://heartbeat.fritz.ai/user-authentication-with-amplify-in-a-react-native-and-expo-app-d00cdaf1ac28'\n---\n\n![cover_image](https://i.imgur.com/sRxXsyt.png)\n\n# When to use keyExtractor in React Native's FlatList\n\nIn React Native, the [FlatList component](https://reactnative.dev/docs/flatlist) works well to render a long list of data. It renders only the items are shown on the screen in a scrolling list and not all the data items at once.\n\nTo render a scrollable list of items using `FlatList`, you need to pass the required `data` prop to the component. The `data` prop accepts an array of items. Each item in the array represents a single item in the list. Another required prop is `renderItem`, which takes an item from the `data` and renders it on the list. This prop accepts a function that returns the JSX to be rendered.\n\nTo display an item in the scrollable list, the `FlatList` component requires that each item has a unique key such as an `id`. This key is what allows the `FlatList` component (since it uses [VirtualizedList](https://reactnative.dev/docs/virtualizedlist) under the hood) to track the order of items in the list. The key from the data array is extracted using the `keyExtractor` prop on the `FlatList` component.\n\nIn this post, let's talk about where you might need to use `keyExtractor` and what scenarios it is not required.\n\n## Display a list of items using FlatList\n\nConsider the following structure of data. There are ten items in the array, and each item has two properties, `id` and `title`. The `id` is the unique key for each item.\n\n```js\nconst DATA_WITH_ID = [\n  {\n    id: 1,\n    title: 'quidem molestiae enim'\n  },\n  {\n    id: 2,\n    title: 'sunt qui excepturi placeat culpa'\n  },\n  {\n    id: 3,\n    title: 'omnis laborum odio'\n  },\n  {\n    id: 4,\n    title: 'non esse culpa molestiae omnis sed optio'\n  },\n  {\n    id: 5,\n    title: 'eaque aut omnis a'\n  },\n  {\n    id: 6,\n    title: 'natus impedit quibusdam illo est'\n  },\n  {\n    id: 7,\n    title: 'quibusdam autem aliquid et et quia'\n  },\n  {\n    id: 8,\n    title: 'qui fuga est a eum'\n  },\n  {\n    id: 9,\n    title: 'saepe unde necessitatibus rem'\n  },\n  {\n    id: 10,\n    title: 'distinctio laborum qui'\n  }\n];\n```\n\nUsing the `FlatList` component, you want to render the `title` of each item as shown below:\n\n```js\nexport default function App() {\n  const renderList = ({ item }) => {\n    return (\n      <View style={styles.listItem}>\n        <Text style={styles.listItemText}>{item.title}</Text>\n      </View>\n    );\n  };\n\n  return (\n    <View style={styles.container}>\n      <FlatList data={DATA_WITH_ID} renderItem={renderList} />\n    </View>\n  );\n}\n```\n\nThe result of the above component will display a list of items without any errors or warnings. In addition, the `FlatList` component doesn't require a unique key to identify each item since the original data structure already contains a key called `id`.\n\nHere is the output on a device's screen from the above snippet:\n\n![ss2](https://i.imgur.com/ShoysNV.png)\n\n## Using the keyExtractor prop\n\nBy default, the `keyExtractor` prop checks for properties like `key` and `id` (in that order). If any of the two is present in the original data structure, it will be considered a the unique key by the `FlatList` component. In this case(as in the previous example), you do not have to explicitly use the `keyExtractor` prop.\n\nIf none of them are provided, the `FlatList` component will throw a warning \"VirtualizedList: missing keys for items ...\":\n\n![ss1](https://i.imgur.com/0zN4FXy.png)\n\nNow, let's consider a scenario where array of data contains a unique key with each list item but the name of the unique key is neither `key` nor `id`. It contains a unique key property with the name of `userId`.\n\n```js\nconst DATA_WITH_USER_ID = [\n  {\n    userId: 1,\n    title: 'quidem molestiae enim'\n  },\n  {\n    userId: 2,\n    title: 'sunt qui excepturi placeat culpa'\n  },\n  {\n    userId: 3,\n    title: 'omnis laborum odio'\n  },\n  {\n    userId: 4,\n    title: 'non esse culpa molestiae omnis sed optio'\n  },\n  {\n    userId: 5,\n    title: 'eaque aut omnis a'\n  },\n  {\n    userId: 6,\n    title: 'natus impedit quibusdam illo est'\n  },\n  {\n    userId: 7,\n    title: 'quibusdam autem aliquid et et quia'\n  },\n  {\n    userId: 8,\n    title: 'qui fuga est a eum'\n  },\n  {\n    userId: 9,\n    title: 'saepe unde necessitatibus rem'\n  },\n  {\n    userId: 10,\n    title: 'distinctio laborum qui'\n  }\n];\n```\n\nWhen rendering the list, you will see the warning in this case because the `FlatList` component doesn't recognize the `userId` as the `key` or `id` name in the original data structure.\n\nFor custom key names such as `userId` in the example above, the `keyExtractor` prop is used. It extracts the unique key name and its value and tells the `FlatList` component to track the items based on that value.\n\nFor the above array of data, modify the `FlatList` component and use the `keyExtractor` prop to extract the key:\n\n```js\n<FlatList\n  data={DATA_WITH_ID}\n  renderItem={renderList}\n  keyExtractor={item => item.userId}\n/>\n```\n\nThe warning will also disappear after this step.\n\n## Conclusion\n\nWhen using a `FlatList` component, if the data array has a unique `id` or a `key` property, you do not need to use the `keyExtractor` prop explicitly. However, for custom id names, use the `keyExtractor` prop to explicitly tell the component which unique key to extract.\n\nIf you like to learn more about React Native, check out the [React Native category](https://amanhimself.dev/tags/react-native/) and [Expo category](https://amanhimself.dev/tags/expo/) pages on my blog. You can also subscribe my [newsletter](https://www.getrevue.co/profile/amanhimself) or follow on [Twitter](https://twitter.com/amanhimself) to get updates on whenever I publish a new article or tutorial.\n",
             "url": "https://amanhimself.dev//blog/use-key-extractor-in-react-native-flatlist",
-            "title": "When to use keyExtractor in React Native's FlatList",
-            "summary": "When to use keyExtractor in React Native's FlatList",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "title": "When to use keyExtractor prop in React Native's FlatList",
+            "summary": "When to use keyExtractor prop in React Native's FlatList",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -26,7 +26,7 @@
             "url": "https://amanhimself.dev//blog/setup-nextjs-project-with-eslint-prettier-husky-lint-staged",
             "title": "Set up a Next.js project with ESLint, Prettier, Husky, and Lint Staged",
             "summary": "Set up a Next.js project with ESLint, Prettier, Husky, and Lint Staged",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -38,7 +38,7 @@
             "url": "https://amanhimself.dev//blog/install-nodejs-using-nvm-on-macos-m1",
             "title": "How to install Node.js using NVM on macOS M1",
             "summary": "How to install Node.js using NVM on macOS M1",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -50,7 +50,7 @@
             "url": "https://amanhimself.dev//blog/infinite-scroll-with-react-query-and-flatlist-in-react-native",
             "title": "Implementing Infinite Scroll with React Query and FlatList in React Native",
             "summary": "Implementing Infinite Scroll with React Query and FlatList in React Native",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -62,7 +62,7 @@
             "url": "https://amanhimself.dev//blog/how-to-rename-default-branch-name-in-git-and-github",
             "title": "How to rename default branch in Git and GitHub",
             "summary": "How to rename default branch in Git and GitHub",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -74,7 +74,7 @@
             "url": "https://amanhimself.dev//blog/tamagui-for-react-native",
             "title": "Tamagui for React Native: Create faster design systems",
             "summary": "Tamagui for React Native: Create faster design systems",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -86,7 +86,7 @@
             "url": "https://amanhimself.dev//blog/year-in-review-2021",
             "title": "2021 - A year in review",
             "summary": "2021 - A year in review",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -98,7 +98,7 @@
             "url": "https://amanhimself.dev//blog/show-hide-password-in-react-native-using-custom-hook",
             "title": "Create a custom hook to Show/Hide Password Visibility in React Native",
             "summary": "Create a custom hook to Show/Hide Password Visibility in React Native",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -110,7 +110,7 @@
             "url": "https://amanhimself.dev//blog/safe-area-context-in-react-native-apps",
             "title": "How to avoid notches with Safe Area Context in React Native apps",
             "summary": "How to avoid notches with Safe Area Context in React Native apps",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -122,7 +122,7 @@
             "url": "https://amanhimself.dev//blog/how-to-configure-vscode-bracket-colors-natively",
             "title": "How to configure VSCode Bracket Pair Colors Natively",
             "summary": "How to configure VSCode Bracket Pair Colors Natively",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -134,7 +134,7 @@
             "url": "https://amanhimself.dev//blog/how-to-add-a-splash-screen-and-app-icon-in-react-native-with-react-native-bootsplash",
             "title": "How to add Splash Screen and an App Icon in React Native",
             "summary": "How to add Splash Screen and an App Icon in React Native",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -146,7 +146,7 @@
             "url": "https://amanhimself.dev//blog/how-to-use-ios-simulator-in-full-screen",
             "title": "How to use iOS simulator in full-screen",
             "summary": "How to use iOS simulator in full-screen",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -158,7 +158,7 @@
             "url": "https://amanhimself.dev//blog/rctbridge-required-dispatch-sync-to-load-warning",
             "title": "How to solve RCTBridge required dispatch_sync to load warning on iOS for React Native",
             "summary": "How to solve RCTBridge required dispatch_sync to load warning on iOS for React Native",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -170,7 +170,7 @@
             "url": "https://amanhimself.dev//blog/multi-language-support-in-react-native-with-react-i18next",
             "title": "How to Offer Multi-language Support in a React Native App",
             "summary": "How to Offer Multi-language Support in a React Native App",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -182,7 +182,7 @@
             "url": "https://amanhimself.dev//blog/get-request-with-axios",
             "title": "GET Request params with Axios",
             "summary": "GET Request params with Axios",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -194,7 +194,7 @@
             "url": "https://amanhimself.dev//blog/environment-variables-in-expo-managed-workflow",
             "title": "Environment Variables in Expo and TypeScript",
             "summary": "Environment Variables in Expo and TypeScript",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -206,7 +206,7 @@
             "url": "https://amanhimself.dev//blog/no-code-way-of-payments-with-stripe-a-brief-guide",
             "title": "The No-Code Way of Payments with Stripe: A Brief Guide",
             "summary": "The No-Code Way of Payments with Stripe: A Brief Guide",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -218,7 +218,7 @@
             "url": "https://amanhimself.dev//blog/firebase-authentication-with-expo",
             "title": "How To Integrate Firebase Authentication With an Expo App",
             "summary": "How To Integrate Firebase Authentication With an Expo App",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -230,7 +230,7 @@
             "url": "https://amanhimself.dev//blog/common-proptypes-in-react-and-typescript",
             "title": "Common Prop Types in TypeScript and React",
             "summary": "Common Prop Types in TypeScript and React",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -242,7 +242,7 @@
             "url": "https://amanhimself.dev//blog/prop-types-in-react-and-typescript",
             "title": "Prop types in React and TypeScript",
             "summary": "Prop types in React and TypeScript",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -254,7 +254,7 @@
             "url": "https://amanhimself.dev//blog/first-three-months-as-developer-advocate",
             "title": "🌱 Life at Draftbit - First 3 Months as a Developer Advocate",
             "summary": "🌱 Life at Draftbit - First 3 Months as a Developer Advocate",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -266,7 +266,7 @@
             "url": "https://amanhimself.dev//blog/custom-preview-image-gallery-in-react-native",
             "title": "How to Create a Custom Image Gallery in React Native",
             "summary": "How to Create a Custom Image Gallery in React Native",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -278,7 +278,7 @@
             "url": "https://amanhimself.dev//blog/create-custom-tab-bar-in-react-native",
             "title": "How to Create a Custom Tab Bar in React Native",
             "summary": "How to Create a Custom Tab Bar in React Native",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -290,7 +290,7 @@
             "url": "https://amanhimself.dev//blog/how-to-use-es6-import-in-nodejs",
             "title": "How to use ES6 import syntax in Node.js",
             "summary": "How to use ES6 import syntax in Node.js",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -302,7 +302,7 @@
             "url": "https://amanhimself.dev//blog/upload-image-to-cloudinary-using-expo-camera",
             "title": "How to upload an image using Expo Camera to Cloudinary",
             "summary": "How to upload an image using Expo Camera to Cloudinary",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -314,7 +314,7 @@
             "url": "https://amanhimself.dev//blog/setup-macbook-m1",
             "title": "Setup Macbook M1 for Web and React Native development",
             "summary": "Setup Macbook M1 for Web and React Native development",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -326,7 +326,7 @@
             "url": "https://amanhimself.dev//blog/react-native-geolocation-to-get-postal-address",
             "title": "How to use React Native Geolocation to get Postal Address",
             "summary": "How to use React Native Geolocation to get Postal Address",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -338,7 +338,7 @@
             "url": "https://amanhimself.dev//blog/react-native-performance-do-and-dont",
             "title": "React Native Performance Do and Dont",
             "summary": "React Native Performance Do and Dont",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -350,7 +350,7 @@
             "url": "https://amanhimself.dev//blog/shared-element-transitions",
             "title": "How to use shared element transitions in React Native",
             "summary": "How to use shared element transitions in React Native",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -362,7 +362,7 @@
             "url": "https://amanhimself.dev//blog/react-navigation-remove-tab-bar-border",
             "title": "How to remove bottom tab bar border in React Navigation",
             "summary": "How to remove bottom tab bar border in React Navigation",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -374,7 +374,7 @@
             "url": "https://amanhimself.dev//blog/redux-persist-in-react-native-with-async-storage",
             "title": "How to use redux-persist in React Native with Asyncstorage",
             "summary": "How to use redux-persist in React Native with Asyncstorage",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -386,7 +386,7 @@
             "url": "https://amanhimself.dev//blog/app-icon-react-native-android",
             "title": "How to add an app icon in a React Native Android app",
             "summary": "How to add an app icon in a React Native Android app",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -398,7 +398,7 @@
             "url": "https://amanhimself.dev//blog/year-rewind-2020",
             "title": "Year Rewind: 2020",
             "summary": "Year Rewind: 2020",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -410,7 +410,7 @@
             "url": "https://amanhimself.dev//blog/custom-scroll-bar-indicator-with-react-native-animated-api",
             "title": "How to create a custom scrollbar with React Native Animated API",
             "summary": "How to create a custom scrollbar with React Native Animated API",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -422,7 +422,7 @@
             "url": "https://amanhimself.dev//blog/manage-state-with-usecontext-usereducer-in-react-apps",
             "title": "How to manage state in React apps with useReducer and useContext hooks",
             "summary": "How to manage state in React apps with useReducer and useContext hooks",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -434,7 +434,7 @@
             "url": "https://amanhimself.dev//blog/creating-and-validating-react-native-form-with-formik",
             "title": "Creating and Validating React Native Forms with Formik",
             "summary": "Creating and Validating React Native Forms with Formik",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -446,7 +446,7 @@
             "url": "https://amanhimself.dev//blog/harperdb-with-react-hooks",
             "title": "How to use HarperDB instance with React Hooks",
             "summary": "How to use HarperDB instance with React Hooks",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -458,7 +458,7 @@
             "url": "https://amanhimself.dev//blog/animate-header-view-on-scroll-with-react-native-animated-api",
             "title": "How to Animate a Header View on Scroll With React Native Animated",
             "summary": "How to Animate a Header View on Scroll With React Native Animated",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -470,7 +470,7 @@
             "url": "https://amanhimself.dev//blog/add-environment-variables-in-netlify-deployment",
             "title": "Add Environment Variables in a Netlify Deployment",
             "summary": "Add Environment Variables in a Netlify Deployment",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -482,7 +482,7 @@
             "url": "https://amanhimself.dev//blog/react-router-real-time-user-monitoring-react-apps",
             "title": "How to use React Router and real time user monitoring in React apps",
             "summary": "How to use React Router and real time user monitoring in React apps",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -494,7 +494,7 @@
             "url": "https://amanhimself.dev//blog/build-rest-api-with-nodejs-harperdb",
             "title": "Build a REST API with Node.js and HarperDB",
             "summary": "Build a REST API with Node.js and HarperDB",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -506,7 +506,7 @@
             "url": "https://amanhimself.dev//blog/firebase-config-in-a-react-app",
             "title": "How to setup a React App with a Firebase project",
             "summary": "How to setup a React App with a Firebase project",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -518,7 +518,7 @@
             "url": "https://amanhimself.dev//blog/styling-the-react-native-way",
             "title": "Styling The React Native Way",
             "summary": "Styling The React Native Way",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -530,7 +530,7 @@
             "url": "https://amanhimself.dev//blog/create-custom-headers-with-react-native-svg",
             "title": "How to create custom wavy headers with react-native-svg",
             "summary": "How to create custom wavy headers with react-native-svg",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -542,7 +542,7 @@
             "url": "https://amanhimself.dev//blog/material-ui-integration-with-react",
             "title": "How to integrate Material UI library in React apps",
             "summary": "How to integrate Material UI library in React apps",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -554,7 +554,7 @@
             "url": "https://amanhimself.dev//blog/chat-app-with-react-native-part-6",
             "title": "Chat app with React Native (Part 6) - Create a custom hook to change status bar styles",
             "summary": "Chat app with React Native (Part 6) - Create a custom hook to change status bar styles",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -566,7 +566,7 @@
             "url": "https://amanhimself.dev//blog/quarantine-pro-app",
             "title": "Creating \"Quarantine Pro\" — A Fun Learning Experiment in React Native",
             "summary": "Creating \"Quarantine Pro\" — A Fun Learning Experiment in React Native",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -578,7 +578,7 @@
             "url": "https://amanhimself.dev//blog/chat-app-with-react-native-part-5",
             "title": "Chat app with React Native (Part 5) - Create and Fetch Real-Time Messages with Firestore",
             "summary": "Chat app with React Native (Part 5) - Create and Fetch Real-Time Messages with Firestore",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -590,7 +590,7 @@
             "url": "https://amanhimself.dev//blog/integrate-apollo-client-in-react-native",
             "title": "How to integrate GraphQL and Apollo Client in React Native app",
             "summary": "How to integrate GraphQL and Apollo Client in React Native app",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -602,7 +602,7 @@
             "url": "https://amanhimself.dev//blog/chat-app-with-react-native-part-4",
             "title": "Chat app with React Native (part 4) - A guide to create Chat UI Screens with react-native-gifted-chat",
             "summary": "Chat app with React Native (part 4) - A guide to create Chat UI Screens with react-native-gifted-chat",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -614,7 +614,7 @@
             "url": "https://amanhimself.dev//blog/how-to-use-react-native-image-picker",
             "title": "An in-depth guide on how to use React Native Image Picker",
             "summary": "An in-depth guide on how to use React Native Image Picker",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -626,19 +626,7 @@
             "url": "https://amanhimself.dev//blog/chat-app-with-react-native-part-3",
             "title": "Chat app with React Native (part 3) - Create Firestore collections to store chat rooms",
             "summary": "Chat app with React Native (part 3) - Create Firestore collections to store chat rooms",
-            "date_modified": "2022-03-27T16:33:29.209Z",
-            "author": {
-                "name": "Aman Mittal",
-                "url": "https://twitter.com/amanhimself"
-            }
-        },
-        {
-            "id": "https://amanhimself.dev//blog/add-search-bar-to-a-flatlist-in-react-native",
-            "content_html": "---\ntitle: 'How to add a Search bar in a FlatList in React Native apps'\ndate: '2020-04-16'\nslug: 'add-search-bar-to-a-flatlist-in-react-native'\nthumbnail: '/thumbnails/expo.png'\ntag: 'expo'\ncanonicalUrl: 'https://blog.crowdbotics.com/add-search-bar-flatlist-react-native-apps/'\n---\n\n![cover_image](https://i.imgur.com/zeVnUHd.png)\n\n> Originally published at [Crowdbotics.com](https://blog.crowdbotics.com/add-search-bar-flatlist-react-native-apps)\n\nThere are few ways to create scrollable lists in React Native. Two of the common ways available in React Native core are `ScrollView` and `FlatList` components. Each has its strength and in this tutorial, let us dive deep to create a search bar with `FlatList` component.\n\nThe final result you are going to achieve at the end of this tutorial is shown below.\n\n![ss8](https://i.imgur.com/a5FpiUm.gif)\n\n## Table of contents\n\n- Getting started\n- What is FlatList?\n- Basic usage of a FlatList component\n- Fetching data from Remote API in a FlatList\n- Adding a custom Separator to FlatList component\n- Adding a Search bar\n- Run the app\n- Add clear button to input text field\n- Conclusion\n\n## Getting started\n\nFor the demo we are going to create in this tutorial, I am going to use [Expo](https://expo.io/). You are free to choose and use anything between an Expo CLI or a `react-native-cli`.\n\nTo start, let us generate a React Native app using Expo CLI and then install the required dependency to have a charming UI for the app. Open up a terminal window and run the following commands in the order they are mentioned.\n\n```shell\nexpo init searchbarFlatList\n\ncd searchbarFlatList\n\nyarn install @ui-kitten/components @eva-design/eva lodash.filter\n\nexpo install react-native-svg\n```\n\n_Note_: The dependency `react-native-svg` is required as a peer dependency for the UI kitten library.\n\nUI Kitten is ready to use now. To check, everything has installed correctly, let us modify `App.js` file as the following snippet:\n\n```js\nimport React from 'react';\nimport { ApplicationProvider, Layout, Text } from '@ui-kitten/components';\nimport { mapping, light as lightTheme } from '@eva-design/eva';\n\nconst HomeScreen = () => (\n  <Layout style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>\n    <Text category=\"h1\">HOME</Text>\n  </Layout>\n);\n\nconst App = () => (\n  <ApplicationProvider mapping={mapping} theme={lightTheme}>\n    <HomeScreen />\n  </ApplicationProvider>\n);\n\nexport default App;\n```\n\nThe `ApplicationProvider` accepts two props, `mapping` and `theme`.\n\nTo run this demo, open up the terminal window and execute the following command.\n\n```shell\nexpo start\n```\n\nI am using an iOS simulator for the demo. Here is the output of the above code snippet.\n\n![ss1](https://i.imgur.com/TZ173Uv.png)\n\n## What is FlatList?\n\nThe component `FlatList` is an efficient way to create scrolling data lists in a React Native app. It has a simple API to work with and is more efficient and preferment with a large amount of information to display in comparison to its alternate.\n\nBy default, you can just pass in an array of data and this component will do its work. You do not have to take care of formatting the data too often.\n\n## Basic usage of a FlatList component\n\nThere are three primary props that a FlatList component requires to display a list of data:\n\n- `data`: an array of data that is used to create a list. Generally, this array is built of multiple objects.\n- `renderItem`: is a function that takes an individual element from the `data` array and renders it on the UI.\n- `keyExtractor`: it tells the list of data to use the unique identifiers or `id` for an individual element.\n\nTo get understand this pragmatically, let us build a mock an array of data and using `FlatList`, let us display it on our demo app. To start, import the following statements in `App.js` file.\n\n```js\nimport React from 'react';\nimport { FlatList, View, Text } from 'react-native';\n```\n\nThen, create an array of mock data.\n\n```js\nconst mockData = [\n  { id: '1', text: 'Expo 💙' },\n  { id: '2', text: 'is' },\n  { id: '3', text: 'Awesome!' }\n];\n```\n\nNow, modify the `HomeScreen` component with the following snippet:\n\n```js\nconst HomeScreen = () => (\n  <View\n    style={{\n      flex: 1,\n      paddingHorizontal: 20,\n      paddingVertical: 20,\n      marginTop: 40\n    }}\n  >\n    <FlatList\n      data={mockData}\n      keyExtractor={item => item.id}\n      renderItem={({ item }) => (\n        <Text style={{ fontSize: 22 }}>\n          {item.id} - {item.text}\n        </Text>\n      )}\n    />\n  </View>\n);\n```\n\nIf the Expo cli command to run the development server is still running, you are going to get the following result.\n\n![ss2](https://i.imgur.com/penUpT7.png)\n\n## Fetching data from Remote API in a FlatList\n\nYou can even play around with it. Try to fetch data from a real-time remote API and display them in the list instead of mock data. For a start, you can use a public API URL such as [Randomuser.me API](https://randomuser.me/api/). The result to obtain at the end of this section is displayed below.\n\n![ss3](https://i.imgur.com/cAwKEaD.png)\n\nOpen, `App.js` file and a state object with some properties to keep track of data from the Random User API. Also, do not forget to modify the import statements.\n\n```js\n// modify the import statements as below\nimport React from 'react';\nimport {\n  FlatList,\n  View,\n  ActivityIndicator,\n  TouchableOpacity\n} from 'react-native';\nimport { ApplicationProvider, Text, Avatar } from '@ui-kitten/components';\nimport { mapping, light as lightTheme } from '@eva-design/eva';\n\n// add a state object to the HomeScreen component\nclass HomeScreen extends React.Component {\n  state = {\n    loading: false,\n    data: [],\n    page: 1,\n    seed: 1,\n    error: null\n  };\n\n  // ... rest of the code\n}\n```\n\nWith the HTTP request to the API URL, let us fetch the first 20 results for now. Create a handler method called `makeRemoteRequest` that uses JavaScript's `fetch(url)` where `url` is the API request. It will fetch the results in JSON format. In case of a successful response from the API, the loading indicator (_which is going to add later_) will be false.\n\nAlso, using the lifecycle method `componentDidMount`, you can render the list of random users at the initial render of the `HomeScreen` component.\n\n```js\n componentDidMount() {\n this.makeRemoteRequest()\n }\n\n makeRemoteRequest = () => {\n const { page, seed } = this.state\n const url = `https://randomuser.me/api/?seed=${seed}&page=${page}&results=20`\n this.setState({ loading: true })\n\n fetch(url)\n .then(res => res.json())\n .then(res => {\n this.setState({\n data: page === 1 ? res.results : [...this.state.data, ...res.results],\n error: res.error || null,\n loading: false\n })\n })\n .catch(error => {\n this.setState({ error, loading: false })\n })\n }\n```\n\nNext, add a `renderFooter` handler method that is going to display a loading indicator based on the value from the state object. This indicator is shown when the list of data in still being fetched. When the value of `this.state.loading` is true, using the `ActivityIndicator` from react-native components, a loading indicator on the UI screen is shown.\n\n```js\nrenderFooter = () => {\n  if (!this.state.loading) return null;\n\n  return (\n    <View\n      style={{\n        paddingVertical: 20,\n        borderTopWidth: 1,\n        borderColor: '#CED0CE'\n      }}\n    >\n      <ActivityIndicator animating size=\"large\" />\n    </View>\n  );\n};\n```\n\nHere is the output you are going to get when the loading indicator is shown.\n\n![ss5](https://i.imgur.com/FYDMKsp.png)\n\n## Adding a custom Separator to FlatList component\n\nPreviously, you learned about the three most important props in the FlatList component. It is so flexible that it comes with extra props to render different components to make UI as pleasing to the user. One such prop is called `ItemSeparatorComponent`. You can add your own styling with custom JSX.\n\nTo do so, add another handler method called `renderSeparator`. It consists of rendering a `View` with some styling.\n\n```js\nrenderSeparator = () => {\n  return (\n    <View\n      style={{\n        height: 1,\n        width: '86%',\n        backgroundColor: '#CED0CE',\n        marginLeft: '5%'\n      }}\n    />\n  );\n};\n```\n\nThis completes all of the handler method currently required. Now, let us replace the previous `FlatList` component in `App.js` file with the following snippet.\n\nA list of user names is going to be rendered with an individual item as the user. When pressed it shows an alert message for now but in real-time app, it will go on to display the complete user profile or user's contact.\n\nThe individual items in the list are going to be separated by the `renderSeparator` method as well as each item is going to display a user image which is composed of `Avatar` component from `react-native-ui-kitten`. The data is coming from the state object.\n\n```js\n<FlatList\n  data={this.state.data}\n  renderItem={({ item }) => (\n    <TouchableOpacity onPress={() => alert('Item pressed!')}>\n      <View\n        style={{\n          flexDirection: 'row',\n          padding: 16,\n          alignItems: 'center'\n        }}\n      >\n        <Avatar\n          source={{ uri: item.picture.thumbnail }}\n          size=\"giant\"\n          style={{ marginRight: 16 }}\n        />\n        <Text\n          category=\"s1\"\n          style={{\n            color: '#000'\n          }}\n        >{`${item.name.first} ${item.name.last}`}</Text>\n      </View>\n    </TouchableOpacity>\n  )}\n  keyExtractor={item => item.email}\n  ItemSeparatorComponent={this.renderSeparator}\n  ListFooterComponent={this.renderFooter}\n/>\n```\n\nFrom the above snippet, you can also notice that the loading indicator handler method `renderFooter()` is also used as the value of a prop called `ListFooterComponent`.\n\nYou can also use this prop to render other information at the bottom of all the items in the list. One example is to fetch more items in the list and show the loading indicator when the request is made.\n\nHere is the output so far.\n\n![ss4](https://i.imgur.com/eszTsxG.gif)\n\n## Adding a Search bar\n\nTo create a search bar on top of the FlatList, you need a component that scrolls away when the list is scrolled. One possible solution is to create a custom Search bar component and render it as the value of `ListHeaderComponent` prop in a FlatList.\n\nOpen `App.js` file and add the following prop to the list.\n\n```js\n<FlatList\n  // rest of the props remain same\n  ListHeaderComponent={this.renderHeader}\n/>\n```\n\nThe search bar component is going to be an input field that can take the user's name from the end-user. To build one, let us start by modifying the import statements as below.\n\n```js\nimport filter from 'lodash.filter';\nimport {\n  ApplicationProvider,\n  Text,\n  Avatar,\n  Input\n} from '@ui-kitten/components';\n```\n\nNext, modify the `state` object and the following variables to it. The `query` is going to hold the search term when the input is provided. The `fullData` is a temporary array that a handler method is going to filter the user's name on the basis of a query.\n\n```js\nstate = {\n  // add the following\n  query: '',\n  fullData: []\n};\n```\n\nSince you are already storing the `results` fetched from the remote API, state variable `data`, let us do the same for `fullData` as well. Add the following inside the handler method `makeRemoteRequest()`.\n\n```js\nmakeRemoteRequest = () => {\n  const { page, seed } = this.state;\n  const url = `https://randomuser.me/api/?seed=${seed}&page=${page}&results=20`;\n  this.setState({ loading: true });\n\n  fetch(url)\n    .then(res => res.json())\n    .then(res => {\n      this.setState({\n        data: page === 1 ? res.results : [...this.state.data, ...res.results],\n        error: res.error || null,\n        loading: false,\n\n        // ---- ADD THIS ----\n        fullData: res.results\n      });\n    })\n    .catch(error => {\n      this.setState({ error, loading: false });\n    });\n};\n```\n\nNext, add the handler method that is going to handle the search bar. By default, it is going to format the search term provided as a query to lowercase. The user's name is filtered from the state variable `fullData` while the state variable `data` stores the final results after the search to render the correct user.\n\n```js\nhandleSearch = text => {\n  const formattedQuery = text.toLowerCase();\n  const data = filter(this.state.fullData, user => {\n    return this.contains(user, formattedQuery);\n  });\n  this.setState({ data, query: text });\n};\n```\n\nThe `contains` handler method is going to look for the query. It accepts two parameters, the first and last name of the user and the formatted query to lowercase from `handleSearch()`.\n\n```js\ncontains = ({ name, email }, query) => {\n  const { first, last } = name;\n  if (first.includes(query) || last.includes(query) || email.includes(query)) {\n    return true;\n  }\n  return false;\n};\n```\n\nLastly, add `renderHeader` to render the search bar on the UI.\n\n```js\nrenderHeader = () => (\n  <View\n    style={{\n      backgroundColor: '#fff',\n      padding: 10,\n      alignItems: 'center',\n      justifyContent: 'center'\n    }}\n  >\n    <Input\n      autoCapitalize=\"none\"\n      autoCorrect={false}\n      onChangeText={this.handleSearch}\n      status=\"info\"\n      placeholder=\"Search\"\n      style={{\n        borderRadius: 25,\n        borderColor: '#333',\n        backgroundColor: '#fff'\n      }}\n      textStyle={{ color: '#000' }}\n    />\n  </View>\n);\n```\n\nThat's it to add a search bar to the FlatList component.\n\n## Run the app\n\nTo run the app, make sure the `expo start` command is running. Next, go to Expo client and you are going to be prompted by the following screen:\n\n![ss6](https://i.imgur.com/nUcoa0G.png)\n\nNext, try to add a user name from the list being rendered.\n\n![ss7](https://i.imgur.com/KCL5zYz.gif)\n\n## Add clear button to input text field\n\nThe last thing I want to emphasize is that using a custom UI component from a UI library such as UI Kitten, you can use general `TextInputProps` from React Native core as well. A few examples are props such as `autoCapitalize`, and `autoCorrect`.\n\nLet us add another prop called `clearButtonMode` that allows the input field to have a clear button appear on the right side. Add the prop to the `Input` inside `renderHeader()`.\n\n```js\n<Input\n  // rest of the props remain same\n  clearButtonMode=\"always\"\n/>\n```\n\nNow go back to the Expo client and see it in action\n\n![ss8](https://i.imgur.com/fQvxr4j.gif)\n\n## Conclusion\n\nThis brings an end to this current tutorial. The screen implemented in this demo is from one of the templates from **Crowdbotics' react-native collection**.\n\nWe use UI Kitten for our latest template libraries. Find more about how to create custom screens like this from our open source project [here](https://github.com/crowdbotics/blueprint-react-native-contacts-screen).\n\nYou can also find the source code from this tutorial at this [Github repo](https://github.com/amandeepmittal/searchableFlatListDemo).\n",
-            "url": "https://amanhimself.dev//blog/add-search-bar-to-a-flatlist-in-react-native",
-            "title": "How to add a Search bar in a FlatList in React Native apps",
-            "summary": "How to add a Search bar in a FlatList in React Native apps",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -650,7 +638,19 @@
             "url": "https://amanhimself.dev//blog/chat-app-with-react-native-part-2",
             "title": "Chat app with React Native (part 2) - Firebase Email Authentication with react-native-firebase",
             "summary": "Chat app with React Native (part 2) - Firebase Email Authentication with react-native-firebase",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
+            "author": {
+                "name": "Aman Mittal",
+                "url": "https://twitter.com/amanhimself"
+            }
+        },
+        {
+            "id": "https://amanhimself.dev//blog/add-search-bar-to-a-flatlist-in-react-native",
+            "content_html": "---\ntitle: 'How to add a Search bar in a FlatList in React Native apps'\ndate: '2020-04-16'\nslug: 'add-search-bar-to-a-flatlist-in-react-native'\nthumbnail: '/thumbnails/expo.png'\ntag: 'expo'\ncanonicalUrl: 'https://blog.crowdbotics.com/add-search-bar-flatlist-react-native-apps/'\n---\n\n![cover_image](https://i.imgur.com/zeVnUHd.png)\n\n> Originally published at [Crowdbotics.com](https://blog.crowdbotics.com/add-search-bar-flatlist-react-native-apps)\n\nThere are few ways to create scrollable lists in React Native. Two of the common ways available in React Native core are `ScrollView` and `FlatList` components. Each has its strength and in this tutorial, let us dive deep to create a search bar with `FlatList` component.\n\nThe final result you are going to achieve at the end of this tutorial is shown below.\n\n![ss8](https://i.imgur.com/a5FpiUm.gif)\n\n## Table of contents\n\n- Getting started\n- What is FlatList?\n- Basic usage of a FlatList component\n- Fetching data from Remote API in a FlatList\n- Adding a custom Separator to FlatList component\n- Adding a Search bar\n- Run the app\n- Add clear button to input text field\n- Conclusion\n\n## Getting started\n\nFor the demo we are going to create in this tutorial, I am going to use [Expo](https://expo.io/). You are free to choose and use anything between an Expo CLI or a `react-native-cli`.\n\nTo start, let us generate a React Native app using Expo CLI and then install the required dependency to have a charming UI for the app. Open up a terminal window and run the following commands in the order they are mentioned.\n\n```shell\nexpo init searchbarFlatList\n\ncd searchbarFlatList\n\nyarn install @ui-kitten/components @eva-design/eva lodash.filter\n\nexpo install react-native-svg\n```\n\n_Note_: The dependency `react-native-svg` is required as a peer dependency for the UI kitten library.\n\nUI Kitten is ready to use now. To check, everything has installed correctly, let us modify `App.js` file as the following snippet:\n\n```js\nimport React from 'react';\nimport { ApplicationProvider, Layout, Text } from '@ui-kitten/components';\nimport { mapping, light as lightTheme } from '@eva-design/eva';\n\nconst HomeScreen = () => (\n  <Layout style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>\n    <Text category=\"h1\">HOME</Text>\n  </Layout>\n);\n\nconst App = () => (\n  <ApplicationProvider mapping={mapping} theme={lightTheme}>\n    <HomeScreen />\n  </ApplicationProvider>\n);\n\nexport default App;\n```\n\nThe `ApplicationProvider` accepts two props, `mapping` and `theme`.\n\nTo run this demo, open up the terminal window and execute the following command.\n\n```shell\nexpo start\n```\n\nI am using an iOS simulator for the demo. Here is the output of the above code snippet.\n\n![ss1](https://i.imgur.com/TZ173Uv.png)\n\n## What is FlatList?\n\nThe component `FlatList` is an efficient way to create scrolling data lists in a React Native app. It has a simple API to work with and is more efficient and preferment with a large amount of information to display in comparison to its alternate.\n\nBy default, you can just pass in an array of data and this component will do its work. You do not have to take care of formatting the data too often.\n\n## Basic usage of a FlatList component\n\nThere are three primary props that a FlatList component requires to display a list of data:\n\n- `data`: an array of data that is used to create a list. Generally, this array is built of multiple objects.\n- `renderItem`: is a function that takes an individual element from the `data` array and renders it on the UI.\n- `keyExtractor`: it tells the list of data to use the unique identifiers or `id` for an individual element.\n\nTo get understand this pragmatically, let us build a mock an array of data and using `FlatList`, let us display it on our demo app. To start, import the following statements in `App.js` file.\n\n```js\nimport React from 'react';\nimport { FlatList, View, Text } from 'react-native';\n```\n\nThen, create an array of mock data.\n\n```js\nconst mockData = [\n  { id: '1', text: 'Expo 💙' },\n  { id: '2', text: 'is' },\n  { id: '3', text: 'Awesome!' }\n];\n```\n\nNow, modify the `HomeScreen` component with the following snippet:\n\n```js\nconst HomeScreen = () => (\n  <View\n    style={{\n      flex: 1,\n      paddingHorizontal: 20,\n      paddingVertical: 20,\n      marginTop: 40\n    }}\n  >\n    <FlatList\n      data={mockData}\n      keyExtractor={item => item.id}\n      renderItem={({ item }) => (\n        <Text style={{ fontSize: 22 }}>\n          {item.id} - {item.text}\n        </Text>\n      )}\n    />\n  </View>\n);\n```\n\nIf the Expo cli command to run the development server is still running, you are going to get the following result.\n\n![ss2](https://i.imgur.com/penUpT7.png)\n\n## Fetching data from Remote API in a FlatList\n\nYou can even play around with it. Try to fetch data from a real-time remote API and display them in the list instead of mock data. For a start, you can use a public API URL such as [Randomuser.me API](https://randomuser.me/api/). The result to obtain at the end of this section is displayed below.\n\n![ss3](https://i.imgur.com/cAwKEaD.png)\n\nOpen, `App.js` file and a state object with some properties to keep track of data from the Random User API. Also, do not forget to modify the import statements.\n\n```js\n// modify the import statements as below\nimport React from 'react';\nimport {\n  FlatList,\n  View,\n  ActivityIndicator,\n  TouchableOpacity\n} from 'react-native';\nimport { ApplicationProvider, Text, Avatar } from '@ui-kitten/components';\nimport { mapping, light as lightTheme } from '@eva-design/eva';\n\n// add a state object to the HomeScreen component\nclass HomeScreen extends React.Component {\n  state = {\n    loading: false,\n    data: [],\n    page: 1,\n    seed: 1,\n    error: null\n  };\n\n  // ... rest of the code\n}\n```\n\nWith the HTTP request to the API URL, let us fetch the first 20 results for now. Create a handler method called `makeRemoteRequest` that uses JavaScript's `fetch(url)` where `url` is the API request. It will fetch the results in JSON format. In case of a successful response from the API, the loading indicator (_which is going to add later_) will be false.\n\nAlso, using the lifecycle method `componentDidMount`, you can render the list of random users at the initial render of the `HomeScreen` component.\n\n```js\n componentDidMount() {\n this.makeRemoteRequest()\n }\n\n makeRemoteRequest = () => {\n const { page, seed } = this.state\n const url = `https://randomuser.me/api/?seed=${seed}&page=${page}&results=20`\n this.setState({ loading: true })\n\n fetch(url)\n .then(res => res.json())\n .then(res => {\n this.setState({\n data: page === 1 ? res.results : [...this.state.data, ...res.results],\n error: res.error || null,\n loading: false\n })\n })\n .catch(error => {\n this.setState({ error, loading: false })\n })\n }\n```\n\nNext, add a `renderFooter` handler method that is going to display a loading indicator based on the value from the state object. This indicator is shown when the list of data in still being fetched. When the value of `this.state.loading` is true, using the `ActivityIndicator` from react-native components, a loading indicator on the UI screen is shown.\n\n```js\nrenderFooter = () => {\n  if (!this.state.loading) return null;\n\n  return (\n    <View\n      style={{\n        paddingVertical: 20,\n        borderTopWidth: 1,\n        borderColor: '#CED0CE'\n      }}\n    >\n      <ActivityIndicator animating size=\"large\" />\n    </View>\n  );\n};\n```\n\nHere is the output you are going to get when the loading indicator is shown.\n\n![ss5](https://i.imgur.com/FYDMKsp.png)\n\n## Adding a custom Separator to FlatList component\n\nPreviously, you learned about the three most important props in the FlatList component. It is so flexible that it comes with extra props to render different components to make UI as pleasing to the user. One such prop is called `ItemSeparatorComponent`. You can add your own styling with custom JSX.\n\nTo do so, add another handler method called `renderSeparator`. It consists of rendering a `View` with some styling.\n\n```js\nrenderSeparator = () => {\n  return (\n    <View\n      style={{\n        height: 1,\n        width: '86%',\n        backgroundColor: '#CED0CE',\n        marginLeft: '5%'\n      }}\n    />\n  );\n};\n```\n\nThis completes all of the handler method currently required. Now, let us replace the previous `FlatList` component in `App.js` file with the following snippet.\n\nA list of user names is going to be rendered with an individual item as the user. When pressed it shows an alert message for now but in real-time app, it will go on to display the complete user profile or user's contact.\n\nThe individual items in the list are going to be separated by the `renderSeparator` method as well as each item is going to display a user image which is composed of `Avatar` component from `react-native-ui-kitten`. The data is coming from the state object.\n\n```js\n<FlatList\n  data={this.state.data}\n  renderItem={({ item }) => (\n    <TouchableOpacity onPress={() => alert('Item pressed!')}>\n      <View\n        style={{\n          flexDirection: 'row',\n          padding: 16,\n          alignItems: 'center'\n        }}\n      >\n        <Avatar\n          source={{ uri: item.picture.thumbnail }}\n          size=\"giant\"\n          style={{ marginRight: 16 }}\n        />\n        <Text\n          category=\"s1\"\n          style={{\n            color: '#000'\n          }}\n        >{`${item.name.first} ${item.name.last}`}</Text>\n      </View>\n    </TouchableOpacity>\n  )}\n  keyExtractor={item => item.email}\n  ItemSeparatorComponent={this.renderSeparator}\n  ListFooterComponent={this.renderFooter}\n/>\n```\n\nFrom the above snippet, you can also notice that the loading indicator handler method `renderFooter()` is also used as the value of a prop called `ListFooterComponent`.\n\nYou can also use this prop to render other information at the bottom of all the items in the list. One example is to fetch more items in the list and show the loading indicator when the request is made.\n\nHere is the output so far.\n\n![ss4](https://i.imgur.com/eszTsxG.gif)\n\n## Adding a Search bar\n\nTo create a search bar on top of the FlatList, you need a component that scrolls away when the list is scrolled. One possible solution is to create a custom Search bar component and render it as the value of `ListHeaderComponent` prop in a FlatList.\n\nOpen `App.js` file and add the following prop to the list.\n\n```js\n<FlatList\n  // rest of the props remain same\n  ListHeaderComponent={this.renderHeader}\n/>\n```\n\nThe search bar component is going to be an input field that can take the user's name from the end-user. To build one, let us start by modifying the import statements as below.\n\n```js\nimport filter from 'lodash.filter';\nimport {\n  ApplicationProvider,\n  Text,\n  Avatar,\n  Input\n} from '@ui-kitten/components';\n```\n\nNext, modify the `state` object and the following variables to it. The `query` is going to hold the search term when the input is provided. The `fullData` is a temporary array that a handler method is going to filter the user's name on the basis of a query.\n\n```js\nstate = {\n  // add the following\n  query: '',\n  fullData: []\n};\n```\n\nSince you are already storing the `results` fetched from the remote API, state variable `data`, let us do the same for `fullData` as well. Add the following inside the handler method `makeRemoteRequest()`.\n\n```js\nmakeRemoteRequest = () => {\n  const { page, seed } = this.state;\n  const url = `https://randomuser.me/api/?seed=${seed}&page=${page}&results=20`;\n  this.setState({ loading: true });\n\n  fetch(url)\n    .then(res => res.json())\n    .then(res => {\n      this.setState({\n        data: page === 1 ? res.results : [...this.state.data, ...res.results],\n        error: res.error || null,\n        loading: false,\n\n        // ---- ADD THIS ----\n        fullData: res.results\n      });\n    })\n    .catch(error => {\n      this.setState({ error, loading: false });\n    });\n};\n```\n\nNext, add the handler method that is going to handle the search bar. By default, it is going to format the search term provided as a query to lowercase. The user's name is filtered from the state variable `fullData` while the state variable `data` stores the final results after the search to render the correct user.\n\n```js\nhandleSearch = text => {\n  const formattedQuery = text.toLowerCase();\n  const data = filter(this.state.fullData, user => {\n    return this.contains(user, formattedQuery);\n  });\n  this.setState({ data, query: text });\n};\n```\n\nThe `contains` handler method is going to look for the query. It accepts two parameters, the first and last name of the user and the formatted query to lowercase from `handleSearch()`.\n\n```js\ncontains = ({ name, email }, query) => {\n  const { first, last } = name;\n  if (first.includes(query) || last.includes(query) || email.includes(query)) {\n    return true;\n  }\n  return false;\n};\n```\n\nLastly, add `renderHeader` to render the search bar on the UI.\n\n```js\nrenderHeader = () => (\n  <View\n    style={{\n      backgroundColor: '#fff',\n      padding: 10,\n      alignItems: 'center',\n      justifyContent: 'center'\n    }}\n  >\n    <Input\n      autoCapitalize=\"none\"\n      autoCorrect={false}\n      onChangeText={this.handleSearch}\n      status=\"info\"\n      placeholder=\"Search\"\n      style={{\n        borderRadius: 25,\n        borderColor: '#333',\n        backgroundColor: '#fff'\n      }}\n      textStyle={{ color: '#000' }}\n    />\n  </View>\n);\n```\n\nThat's it to add a search bar to the FlatList component.\n\n## Run the app\n\nTo run the app, make sure the `expo start` command is running. Next, go to Expo client and you are going to be prompted by the following screen:\n\n![ss6](https://i.imgur.com/nUcoa0G.png)\n\nNext, try to add a user name from the list being rendered.\n\n![ss7](https://i.imgur.com/KCL5zYz.gif)\n\n## Add clear button to input text field\n\nThe last thing I want to emphasize is that using a custom UI component from a UI library such as UI Kitten, you can use general `TextInputProps` from React Native core as well. A few examples are props such as `autoCapitalize`, and `autoCorrect`.\n\nLet us add another prop called `clearButtonMode` that allows the input field to have a clear button appear on the right side. Add the prop to the `Input` inside `renderHeader()`.\n\n```js\n<Input\n  // rest of the props remain same\n  clearButtonMode=\"always\"\n/>\n```\n\nNow go back to the Expo client and see it in action\n\n![ss8](https://i.imgur.com/fQvxr4j.gif)\n\n## Conclusion\n\nThis brings an end to this current tutorial. The screen implemented in this demo is from one of the templates from **Crowdbotics' react-native collection**.\n\nWe use UI Kitten for our latest template libraries. Find more about how to create custom screens like this from our open source project [here](https://github.com/crowdbotics/blueprint-react-native-contacts-screen).\n\nYou can also find the source code from this tutorial at this [Github repo](https://github.com/amandeepmittal/searchableFlatListDemo).\n",
+            "url": "https://amanhimself.dev//blog/add-search-bar-to-a-flatlist-in-react-native",
+            "title": "How to add a Search bar in a FlatList in React Native apps",
+            "summary": "How to add a Search bar in a FlatList in React Native apps",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -662,7 +662,7 @@
             "url": "https://amanhimself.dev//blog/blogging-tips-after-3-years",
             "title": "Blogging tips after 3 years and a 100+ posts",
             "summary": "Blogging tips after 3 years and a 100+ posts",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -674,7 +674,7 @@
             "url": "https://amanhimself.dev//blog/chat-app-with-react-native-part-1",
             "title": "Chat app with React Native (part 1) - Build reusable UI form elements using react-native-paper",
             "summary": "Chat app with React Native (part 1) - Build reusable UI form elements using react-native-paper",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -686,7 +686,7 @@
             "url": "https://amanhimself.dev//blog/create-custom-status-bar-hook-react-navigation",
             "title": "How to create a custom hook to change status bar styles for every screen using React Navigation",
             "summary": "How to create a custom hook to change status bar styles for every screen using React Navigation",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -698,7 +698,7 @@
             "url": "https://amanhimself.dev//blog/react-app-with-localstorage-api-and-hooks",
             "title": "Build an Expense Tracker app with React Hooks and LocalStorage API",
             "summary": "Build an Expense Tracker app with React Hooks and LocalStorage API",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -710,7 +710,7 @@
             "url": "https://amanhimself.dev//blog/nested-navigators-in-react-native",
             "title": "Nesting Tab and Stack navigators in React Native and Expo apps",
             "summary": "Nesting Tab and Stack navigators in React Native and Expo apps",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -722,7 +722,7 @@
             "url": "https://amanhimself.dev//blog/stack-navigator-with-react-navigation-v5",
             "title": "Getting Started with Stack Navigator using react-navigation 5 in React Native and Expo apps",
             "summary": "Getting Started with Stack Navigator using react-navigation 5 in React Native and Expo apps",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -734,7 +734,7 @@
             "url": "https://amanhimself.dev//blog/handle-navigation-in-webviews-react-native",
             "title": "How to handle navigation in WebViews in a React Native app",
             "summary": "How to handle navigation in WebViews in a React Native app",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -746,7 +746,7 @@
             "url": "https://amanhimself.dev//blog/getting-started-with-react-native-expo-hooks-2020",
             "title": "Getting Started with React Native and Expo using Hooks in 2020",
             "summary": "Getting Started with React Native and Expo using Hooks in 2020",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -758,7 +758,7 @@
             "url": "https://amanhimself.dev//blog/dark-mode-with-react-hooks",
             "title": "How to add Dark mode functionality with React Hooks",
             "summary": "How to add Dark mode functionality with React Hooks",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -770,7 +770,7 @@
             "url": "https://amanhimself.dev//blog/handle-deep-linking-react-native",
             "title": "How to handle Deep Links in a React Native app",
             "summary": "How to handle Deep Links in a React Native app",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -782,7 +782,7 @@
             "url": "https://amanhimself.dev//blog/how-to-use-react-native-localize",
             "title": "How to use React Native Localize in React Native apps",
             "summary": "How to use React Native Localize in React Native apps",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -794,7 +794,7 @@
             "url": "https://amanhimself.dev//blog/push-notifications-android-apps-react-native",
             "title": "Implement Push notifications for Android apps with React Native",
             "summary": "Implement Push notifications for Android apps with React Native",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -806,7 +806,7 @@
             "url": "https://amanhimself.dev//blog/handle-different-field-types-in-react-native-forms",
             "title": "Handle different field types in React Native forms with formik and yup",
             "summary": "Handle different field types in React Native forms with formik and yup",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -818,7 +818,7 @@
             "url": "https://amanhimself.dev//blog/implement-forgot-password-firebase-react-native",
             "title": "How to implement Forgot Password feature in React Native with Firebase",
             "summary": "How to implement Forgot Password feature in React Native with Firebase",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -830,7 +830,7 @@
             "url": "https://amanhimself.dev//blog/tensorflow-image-classification-expo",
             "title": "Image Classification on React Native with TensorFlow.js and MobileNet",
             "summary": "Image Classification on React Native with TensorFlow.js and MobileNet",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -842,7 +842,7 @@
             "url": "https://amanhimself.dev//blog/build-validate-forms-with-react-native-formik-yup",
             "title": "Build and validate forms in React Native using Formik and Yup",
             "summary": "Build and validate forms in React Native using Formik and Yup",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -854,7 +854,7 @@
             "url": "https://amanhimself.dev//blog/create-app-themes-styled-components-redux",
             "title": "Changing app themes using React Native, Styled Components and Redux",
             "summary": "Changing app themes using React Native, Styled Components and Redux",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -866,7 +866,7 @@
             "url": "https://amanhimself.dev//blog/context-api-react-native-firebase",
             "title": "Using Context API with React Native",
             "summary": "Using Context API with React Native",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -878,7 +878,7 @@
             "url": "https://amanhimself.dev//blog/authentication-navigation-flow-in-react-native-apps",
             "title": "How Authentication Flow works in React Native apps using React Navigation 4.x",
             "summary": "How Authentication Flow works in React Native apps using React Navigation 4.x",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -890,7 +890,7 @@
             "url": "https://amanhimself.dev//blog/build-an-audio-player-in-react-native",
             "title": "How to Build an Audio Player in React Native",
             "summary": "How to Build an Audio Player in React Native",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -902,7 +902,7 @@
             "url": "https://amanhimself.dev//blog/not-hotdog-clone-react-native",
             "title": "Build a Not Hotdog clone with React Native",
             "summary": "Build a Not Hotdog clone with React Native",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -914,7 +914,7 @@
             "url": "https://amanhimself.dev//blog/building-offline-react-native-apps-with-asyncstorage",
             "title": "Building offline React Native apps with AsyncStorage",
             "summary": "Building offline React Native apps with AsyncStorage",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -926,7 +926,7 @@
             "url": "https://amanhimself.dev//blog/how-to-use-the-geolocation-api-in-a-react-native-app",
             "title": "How to use the Geolocation API in a React Native app",
             "summary": "How to use the Geolocation API in a React Native app",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -938,7 +938,7 @@
             "url": "https://amanhimself.dev//blog/how-to-build-xylophone-app-with-expo",
             "title": "How to build a xylophone app with Audio API, React Native, and Expo",
             "summary": "How to build a xylophone app with Audio API, React Native, and Expo",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -950,7 +950,7 @@
             "url": "https://amanhimself.dev//blog/build-chatbot-dialogflow-nodejs-webhooks",
             "title": "How to Create a Chatbot with Dialogflow, NodeJS, and Webhooks",
             "summary": "How to Create a Chatbot with Dialogflow, NodeJS, and Webhooks",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -962,7 +962,7 @@
             "url": "https://amanhimself.dev//blog/introduction-to-react-router-v4-with-reactjs",
             "title": "Using React Router to Optimize Single Page Applications (SPAs)",
             "summary": "Using React Router to Optimize Single Page Applications (SPAs)",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -974,7 +974,7 @@
             "url": "https://amanhimself.dev//blog/to-travel-a-tech-conference-and-one-million-views-a-recap",
             "title": "To Travel, A Tech Conference and One Million views - a Recap",
             "summary": "To Travel, A Tech Conference and One Million views - a Recap",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -986,7 +986,7 @@
             "url": "https://amanhimself.dev//blog/how-to-integrate-firebase-firestore-react-and-crowdbotics-platform",
             "title": "How to integrate Firebase and Firestore cloud database with a React application",
             "summary": "How to integrate Firebase and Firestore cloud database with a React application",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -998,7 +998,7 @@
             "url": "https://amanhimself.dev//blog/setup-a-react-app-with-typescript-storybook",
             "title": "How to Setup a React App with TypeScript, Storybook",
             "summary": "How to Setup a React App with TypeScript, Storybook",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1010,7 +1010,7 @@
             "url": "https://amanhimself.dev//blog/build-a-custom-modal-with-the-animated-api-in-react-native",
             "title": "Build a Custom Modal with the Animated API in React Native",
             "summary": "Build a Custom Modal with the Animated API in React Native",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1022,7 +1022,7 @@
             "url": "https://amanhimself.dev//blog/build-a-twitter-clone-server-with-apollo-graphql-nodejs",
             "title": "Build a Twitter Clone Server with Apollo, GraphQL, Nodejs, and Crowdbotics",
             "summary": "Build a Twitter Clone Server with Apollo, GraphQL, Nodejs, and Crowdbotics",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1034,7 +1034,7 @@
             "url": "https://amanhimself.dev//blog/use-emotion-js-with-react-native",
             "title": "Building Stylistic UIs with Emotion-JS for React Native",
             "summary": "Building Stylistic UIs with Emotion-JS for React Native",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1042,11 +1042,11 @@
         },
         {
             "id": "https://amanhimself.dev//blog/user-authentication-with-amplify-in-a-react-native-and-expo-app",
-            "content_html": "---\ntitle: 'User Authentication with Amplify in a React Native and Expo app'\nslug: 'blog/user-authentication-with-amplify-in-a-react-native-and-expo-app'\ndate: '2019-05-22'\nthumbnail: '/thumbnails/expo.png'\ntag: 'expo'\ncanonicalUrl: 'https://heartbeat.fritz.ai/user-authentication-with-amplify-in-a-react-native-and-expo-app-d00cdaf1ac28'\n---\n\nAWS Amplify is a fantastic framework that helps you develop your web or mobile applications quickly. Not only it enhances your current tech stack but actually has many features in-built that you don't have to worry about especially when your app is in the development process.\n\nFeatures such as:\n\n- authentication\n- GraphQL and REST API support\n- storage\n- S3 uploads\n- a way to manage user pool\n- hosting\n- notifications\n- interactions\n- analytics\n- compatibility to work with AWS Lambda functions\n\nNot only that. Amplify can be integrated with most popular frontend frameworks like React, Vue, Angular, Ionic, React Native or just go vanilla JavaScript if you want to.\n\nIn this tutorial, we are going to take a look at one of the most important feature of an application and that is **authentication**. You know the scenarios where you need store some amount of user information (credentials) for them to get back and re-use the application rather creating a new account.\n\nAmplify helps us integrate its authentication component _out of the box_. Do not hate me for saying this. Now, if you have developed an application with a proper authentication flow, you know what pain it gives when it comes to writing that amount of code. With Amplify you will see how easy it is to integrate things like new user's email verification.\n\nEnough with the introduction, let us start. However, if this is your first time reading about Amplify framework and want to learn more about what it is or how to integrate it with a React Native or Expo application, [read my previous post](https://heartbeat.fritz.ai/building-a-react-native-mobile-app-with-aws-amplify-and-expo-fcab6ee0555e).\n\nIt will walk you through from basics such as [What is Amplify?](https://heartbeat.fritz.ai/building-a-react-native-mobile-app-with-aws-amplify-and-expo-fcab6ee0555e#a083), [How to create a new AWS IAM user](https://heartbeat.fritz.ai/building-a-react-native-mobile-app-with-aws-amplify-and-expo-fcab6ee0555e#b8c6), and [creating a GraphQL API](https://heartbeat.fritz.ai/building-a-react-native-mobile-app-with-aws-amplify-and-expo-fcab6ee0555e#cfaa) and so on.\n\n### Table of Contents\n\n- Requirements\n- Creating a new React Native App\n- Create a new AWS IAM user\n- Initializing & Integrating Amplify SDK\n- Enable Amplify Auth Resource\n- `withAuthenticator`: Adding a High Order Component\n- Testing the default Amplify auth flow\n\n## Requirements\n\nHere is a complete list of plugins, packages, and services you’re going to need in order to gain something from this tutorial:\n\n- Nodejs `v8.x.x` or higher installed along with npm/yarn\n- `watchman`: The file change watcher for React Native projects\n- AWS account\n- [Amplify CLI](https://aws-amplify.github.io/docs/cli/)\n- [Expo CLI](https://www.npmjs.com/package/expo-cli) (_previously known as create-react-native-app_)\n\n_Note:_ To use any Amplify service and to follow the rest of this tutorial, you need an AWS account (which is free). If you don’t have one, please consider signing up for one here for the free tier.\n\n## Creating a new React Native App\n\nTo get started, make sure you have already installed [`expo-cli`](https://www.npmjs.com/package/expo-cli). Now, open up a terminal window at a desired directory or location where you keep your demo projects and type the following and then press enter to execute.\n\n```shell\nexpo init customize-amplify-auth-ui\n```\n\nThis command will create a new directory called `customize-amplify-auth-ui`. You can name it whatever you want. Inside this directory you will find a complete react native + expo SDK generated.\n\nOn running the above command, you will be asked by the CLI to make some choices by prompting some questions. I will be leaving the them default.\n\nExpo CLI is a command line utility to create React Native apps with no build configuration. The reason we are relying on it, is that, first it is awesome tool for such use cases. Next, it will help us build this React Native app/project much faster for any of the mobile platform (_iOS_ or _android_) than a traditional React Native project generated with `react-native-cli`. This will save us time for now but you can go ahead with `react-native-cli` if you want to but remember to run `react native link` when integrating Amplify with React Native app.\n\n## Create a new AWS IAM user\n\nOnce you are signed-in to AWS console (_remember_, I told you to create a free AWS account and sign-in. If you haven't done so already, go ahead do it. Otherwise, you might not enjoy and at the same time, be able to follow the rest of the tutorial).\n\nNow, from your terminal window, execute the following command.\n\n```shell\namplify configure\n```\n\nThis will open up the AWS console dashboard. Go back to terminal and press enter to continue. This will lead you through a bunch of questions in order to configure a user account to use Amplify with the React Native application. Lastly, it will provide you with a **secret** key and an **access** key. Go back to terminal and enter those keys.\n\nHere is a summary of questions prompted by AWS Amplify CLI.\n\n<img src='https://cdn-images-1.medium.com/max/800/1*amSKLCe6467xU_wJ5Kgr0g.png' />\n\nThis process is easy, but if you are going through it for the first time, I'd recommend you to give the below link a visit and only in few minutes you will realise how easy it is to setup a new IAM user for AWS services.\n\nhttps://heartbeat.fritz.ai/building-a-react-native-mobile-app-with-aws-amplify-and-expo-fcab6ee0555e#b8c6\n\n## Initializing & Integrating Amplify SDK\n\nTo integrate AWS Amplify with the React Native app run the following command that in return prompts you for some more questions. Later, in this section, we will install dependencies in the React Native app to complete this process.\n\n_Note:_ For a complete step by step process, please refer to [**this link here**](https://heartbeat.fritz.ai/building-a-react-native-mobile-app-with-aws-amplify-and-expo-fcab6ee0555e#d79c). Do not worry, most of these configuration settings are going to be default at the moment. I am only going to walk you through essentials here.\n\nTo start, execute the following command. Make sure you are inside your React Native project directory and that too at the root of your project. This is required as this command will add some configuration files.\n\n```shell\namplify init\n```\n\nOnce you run this command, you will be prompted for the following questions.\n\n<img src='https://cdn-images-1.medium.com/max/800/1*d1aVKZuIFzZN1Mgo86cAfQ.png' />\n\nAfter the Amplify SDK initialization process is complete, notice there are some new file changes inside the project directory. A new directory `amplify/` which stores any local or cloud changes are made to configuration files. Also, a new file called `aws-exports.js` appears at the root that doesn't require to be committed over your Github account (_always remember_).\n\nMake sure that `.gitignore` file is up to date. Amplify CLI is so good that it will update this file for you and take care of what to commit or not from the configuration part.\n\nThis is just the initialization part. We need to integrate amplify SDK now to tell our React Native app that we are going to use Amplify configuration and components in the app. To make this happen, install the following dependencies.\n\n```shell\nyarn add aws-amplify aws-amplify-react-native\n```\n\nBoth of these packages are required. The package `aws-amplify` allows you to make requests to the auth and API services provided by AWS. The other one is framework specific which contains ready-to-use UI components. After these dependencies are installed, open `App.js` file and add the following.\n\n```js\nimport React from 'react';\nimport { StyleSheet, Text, View } from 'react-native';\n\n// --- This is the part to add\n\nimport Amplify from 'aws-amplify';\nimport config from './aws-exports';\n\nAmplify.configure(config);\n\n// ---\n\nexport default class App extends React.Component {\n  render() {\n    return (\n      <View style={styles.container}>\n        <Text>React Native + Amplify = 💛</Text>\n      </View>\n    );\n  }\n}\n\nconst styles = StyleSheet.create({\n  container: {\n    flex: 1,\n    backgroundColor: '#fff',\n    alignItems: 'center',\n    justifyContent: 'center'\n  }\n});\n```\n\nTo verify that everything is on order and the app works fine, you can go ahead and run `npm start` command. Then select which mobile platform you want to run. If there no errors, you will get to see the following result.\n\n<img src='https://cdn-images-1.medium.com/max/800/1*3CQuczlaCMHVnFBojLqhVQ.png' />\n\n## Enable Amplify Auth Resource\n\nTo include authentication experiences in your React Native app, amplify uses Amazon Cognito that is a fully featured user directory to handle user registration, login, and account recovery. Amplify interfaces with Cognito User Pools to store the user information, including social providers like Facebook, Google and so on.\n\nAmplify gives you the superpower to generate an authentication flow by executing a command from the terminal window.\n\n```shell\namplify add auth\n```\n\nOn running the above command, you will be prompted with the first question like below.\n\n<img src='https://cdn-images-1.medium.com/max/800/1*br7DyESd83gE1fz2gWV5Lg.png' />\n\nThis option is to choose the default authentication and security configuration. The second option to include a social provider like Facebook. Another option to look out for is Manual configuration about which you can read more at the [official amplify docs](https://aws-amplify.github.io/docs/js/react).\n\n<img src='https://cdn-images-1.medium.com/max/800/1*w9im1GzV1CjKGdPpVR-DLg.png' />\n\nNext, it will prompt you to choose the default sign in method. Choose `Username`.\n\nAmplify’s command line interface is so interactive and in detail that it prompts you to provide input fields and select them from your terminal. Look at below.\n\n<img src='https://cdn-images-1.medium.com/max/800/1*IIw8O4dwLrkyGoi9x5Y4iA.png' />\n\nChoose `Email`. Now run the following command to publish all the local changes to the AWS in order to create a user pool.\n\n```shell\namplify push\n```\n\nYou will get the following screen after you execute the above command.\n\n<img src='https://cdn-images-1.medium.com/max/800/1*14ONUYoXLzlwlVcSKLzWtQ.png' />\n\nThis shows the details of the current working environment (_which we manually entered at the time of configuring AWS IAM user_) and displays the status of the resource we are currently using ,that is `Auth`.\n\nExecuting this command will take some time to update the resources in order to enable and create a user pool for your React Native app. So go ahead, pause here, drink a cup of coffee. The user authentication setup is complete for now.\n\n## withAuthenticator: Adding a High Order Component\n\nEnough with the configuration part. Let us work with some app code. For React Native apps, the simplest way to add authentication flow into the app is to use `withAuthenticator` [High Order Component](https://reactjs.org/docs/higher-order-components.html).\n\nOpen up the file `App.js` and the following.\n\n```js\nimport React from 'react';\nimport { StyleSheet, Text, View } from 'react-native';\nimport Amplify from 'aws-amplify';\nimport config from './aws-exports';\n\n// New ----\nimport { withAuthenticator } from 'aws-amplify-react-native';\n\nAmplify.configure(config);\n\nclass App extends React.Component {\n  render() {\n    return (\n      <View style={styles.container}>\n        <Text>React Native + Amplify = 💛</Text>\n      </View>\n    );\n  }\n}\n\nconst styles = StyleSheet.create({\n  container: {\n    flex: 1,\n    backgroundColor: '#fff',\n    alignItems: 'center',\n    justifyContent: 'center'\n  }\n});\n\n// New ----\nexport default withAuthenticator(App, true);\n```\n\nThis HOC wraps the `App` component. It automatically detects the authentication state and updates to the UI.\n`withAuthenticator` component renders the `App` component after a successful user signed in, and it prevents non-sign-in users to interact with your app. The second argument passed in this HOC is a boolean value that tells whether to enable the Sign Out button (once the user is successfully logged-in) or not. You will see this in action later once we have created the user.\n\nBy default, on running `npm` start, you will get the Sign In screen like below.\n\n<img src='https://cdn-images-1.medium.com/max/800/1*cNDW73k-43-FiHndSZ8YKw.png)' />\n\nDo notice that right now in the above screen, the Sign In button is disabled since there the input fields are empty. This a too good to for the default flow. If you enter a username followed by a password, it even throws an error like below.\n\n<img src='https://cdn-images-1.medium.com/max/800/1*33BkYtrQA_9NfumRr6ebWA.png' />\n\nBy clicking on Sign up button, you will go to the registration screen.\n\n<img src='https://cdn-images-1.medium.com/max/800/1*jw2fK8IJ0xjL1MR4iBK2QA.png' />\n\nOn clicking Forgot Password, will take you to another screen where it will ask you for the registered username.\n\n<img src='https://cdn-images-1.medium.com/max/800/1*mccJmsNibLlxIKtJ11USjw.png' />\n\nIf the user is signed in, the underlying component (_in current scenario, the `App` component_) is displayed otherwise signin/signup controls are displayed. Also, did you notice that just by adding two lines of code you have authentication flow that looks pretty decent? In the next section, let us see if it works or not.\n\n_Bonus:_ If you love design, UI, UX, or want your apps to look good, at this link you can view the color palettes Amplify uses.\n\nhttps://aws-amplify.github.io/media/ui_library\n\n## Testing the default Amplify auth flow\n\nCurrently, there no user’s registered to our app. So let us register one. Create the button `Sign Up` and enter the details asked. Do note that, enter a valid email address for the AWS cloud service will send you an email to verify your account.\n\nOnce you are done, click the `SIGN UP` button at the end of the registration form. You will get the following screen asking for the confirmation/verification code.\n\n<img src='https://cdn-images-1.medium.com/max/800/1*fY2whWIX4Unwhrekjqleiw.png' />\n\nEnter the verification code and click the confirm button. If it is confirmed, you will be directed back to the Sign in screen. Enter the credentials to login inside the app. You will be successfully logged in if you enter the correct credentials.\n\n<img src='https://cdn-images-1.medium.com/max/800/1*8Xa9uKiLOikHO-A786fpJw.png' />\n\nNotice how the sign-out button is appearing at top right corner next to the username. Yes, amplify greets the user and has the code for it integrated already at `withAuthenticator` HOC. Do take note in the above screen that the `App` component is getting rendered now.\n\n## Conclusion\n\nYou have now successfully to add an authentication flow with Amplify and use it in a React Native app. Try using the federation or social login flow and gather the similarities or differences between the two.\n\nYou can find the complete code for this post in this [Github repository](https://github.com/amandeepmittal/expo-amplify-demo).\n\n[Originally published at Heartbeat](https://heartbeat.fritz.ai/user-authentication-with-amplify-in-a-react-native-and-expo-app-d00cdaf1ac28)\n",
+            "content_html": "---\ntitle: 'User Authentication with Amplify in a React Native and Expo app'\nslug: 'user-authentication-with-amplify-in-a-react-native-and-expo-app'\ndate: '2019-05-22'\nthumbnail: '/thumbnails/expo.png'\ntag: 'expo'\ncanonicalUrl: 'https://heartbeat.fritz.ai/user-authentication-with-amplify-in-a-react-native-and-expo-app-d00cdaf1ac28'\n---\n\nAWS Amplify is a fantastic framework that helps you develop your web or mobile applications quickly. Not only it enhances your current tech stack but actually has many features in-built that you don't have to worry about especially when your app is in the development process.\n\nFeatures such as:\n\n- authentication\n- GraphQL and REST API support\n- storage\n- S3 uploads\n- a way to manage user pool\n- hosting\n- notifications\n- interactions\n- analytics\n- compatibility to work with AWS Lambda functions\n\nNot only that. Amplify can be integrated with most popular frontend frameworks like React, Vue, Angular, Ionic, React Native or just go vanilla JavaScript if you want to.\n\nIn this tutorial, we are going to take a look at one of the most important feature of an application and that is **authentication**. You know the scenarios where you need store some amount of user information (credentials) for them to get back and re-use the application rather creating a new account.\n\nAmplify helps us integrate its authentication component _out of the box_. Do not hate me for saying this. Now, if you have developed an application with a proper authentication flow, you know what pain it gives when it comes to writing that amount of code. With Amplify you will see how easy it is to integrate things like new user's email verification.\n\nEnough with the introduction, let us start. However, if this is your first time reading about Amplify framework and want to learn more about what it is or how to integrate it with a React Native or Expo application, [read my previous post](https://heartbeat.fritz.ai/building-a-react-native-mobile-app-with-aws-amplify-and-expo-fcab6ee0555e).\n\nIt will walk you through from basics such as [What is Amplify?](https://heartbeat.fritz.ai/building-a-react-native-mobile-app-with-aws-amplify-and-expo-fcab6ee0555e#a083), [How to create a new AWS IAM user](https://heartbeat.fritz.ai/building-a-react-native-mobile-app-with-aws-amplify-and-expo-fcab6ee0555e#b8c6), and [creating a GraphQL API](https://heartbeat.fritz.ai/building-a-react-native-mobile-app-with-aws-amplify-and-expo-fcab6ee0555e#cfaa) and so on.\n\n### Table of Contents\n\n- Requirements\n- Creating a new React Native App\n- Create a new AWS IAM user\n- Initializing & Integrating Amplify SDK\n- Enable Amplify Auth Resource\n- `withAuthenticator`: Adding a High Order Component\n- Testing the default Amplify auth flow\n\n## Requirements\n\nHere is a complete list of plugins, packages, and services you’re going to need in order to gain something from this tutorial:\n\n- Nodejs `v8.x.x` or higher installed along with npm/yarn\n- `watchman`: The file change watcher for React Native projects\n- AWS account\n- [Amplify CLI](https://aws-amplify.github.io/docs/cli/)\n- [Expo CLI](https://www.npmjs.com/package/expo-cli) (_previously known as create-react-native-app_)\n\n_Note:_ To use any Amplify service and to follow the rest of this tutorial, you need an AWS account (which is free). If you don’t have one, please consider signing up for one here for the free tier.\n\n## Creating a new React Native App\n\nTo get started, make sure you have already installed [`expo-cli`](https://www.npmjs.com/package/expo-cli). Now, open up a terminal window at a desired directory or location where you keep your demo projects and type the following and then press enter to execute.\n\n```shell\nexpo init customize-amplify-auth-ui\n```\n\nThis command will create a new directory called `customize-amplify-auth-ui`. You can name it whatever you want. Inside this directory you will find a complete react native + expo SDK generated.\n\nOn running the above command, you will be asked by the CLI to make some choices by prompting some questions. I will be leaving the them default.\n\nExpo CLI is a command line utility to create React Native apps with no build configuration. The reason we are relying on it, is that, first it is awesome tool for such use cases. Next, it will help us build this React Native app/project much faster for any of the mobile platform (_iOS_ or _android_) than a traditional React Native project generated with `react-native-cli`. This will save us time for now but you can go ahead with `react-native-cli` if you want to but remember to run `react native link` when integrating Amplify with React Native app.\n\n## Create a new AWS IAM user\n\nOnce you are signed-in to AWS console (_remember_, I told you to create a free AWS account and sign-in. If you haven't done so already, go ahead do it. Otherwise, you might not enjoy and at the same time, be able to follow the rest of the tutorial).\n\nNow, from your terminal window, execute the following command.\n\n```shell\namplify configure\n```\n\nThis will open up the AWS console dashboard. Go back to terminal and press enter to continue. This will lead you through a bunch of questions in order to configure a user account to use Amplify with the React Native application. Lastly, it will provide you with a **secret** key and an **access** key. Go back to terminal and enter those keys.\n\nHere is a summary of questions prompted by AWS Amplify CLI.\n\n<img src='https://cdn-images-1.medium.com/max/800/1*amSKLCe6467xU_wJ5Kgr0g.png' />\n\nThis process is easy, but if you are going through it for the first time, I'd recommend you to give the below link a visit and only in few minutes you will realise how easy it is to setup a new IAM user for AWS services.\n\nhttps://heartbeat.fritz.ai/building-a-react-native-mobile-app-with-aws-amplify-and-expo-fcab6ee0555e#b8c6\n\n## Initializing & Integrating Amplify SDK\n\nTo integrate AWS Amplify with the React Native app run the following command that in return prompts you for some more questions. Later, in this section, we will install dependencies in the React Native app to complete this process.\n\n_Note:_ For a complete step by step process, please refer to [**this link here**](https://heartbeat.fritz.ai/building-a-react-native-mobile-app-with-aws-amplify-and-expo-fcab6ee0555e#d79c). Do not worry, most of these configuration settings are going to be default at the moment. I am only going to walk you through essentials here.\n\nTo start, execute the following command. Make sure you are inside your React Native project directory and that too at the root of your project. This is required as this command will add some configuration files.\n\n```shell\namplify init\n```\n\nOnce you run this command, you will be prompted for the following questions.\n\n<img src='https://cdn-images-1.medium.com/max/800/1*d1aVKZuIFzZN1Mgo86cAfQ.png' />\n\nAfter the Amplify SDK initialization process is complete, notice there are some new file changes inside the project directory. A new directory `amplify/` which stores any local or cloud changes are made to configuration files. Also, a new file called `aws-exports.js` appears at the root that doesn't require to be committed over your Github account (_always remember_).\n\nMake sure that `.gitignore` file is up to date. Amplify CLI is so good that it will update this file for you and take care of what to commit or not from the configuration part.\n\nThis is just the initialization part. We need to integrate amplify SDK now to tell our React Native app that we are going to use Amplify configuration and components in the app. To make this happen, install the following dependencies.\n\n```shell\nyarn add aws-amplify aws-amplify-react-native\n```\n\nBoth of these packages are required. The package `aws-amplify` allows you to make requests to the auth and API services provided by AWS. The other one is framework specific which contains ready-to-use UI components. After these dependencies are installed, open `App.js` file and add the following.\n\n```js\nimport React from 'react';\nimport { StyleSheet, Text, View } from 'react-native';\n\n// --- This is the part to add\n\nimport Amplify from 'aws-amplify';\nimport config from './aws-exports';\n\nAmplify.configure(config);\n\n// ---\n\nexport default class App extends React.Component {\n  render() {\n    return (\n      <View style={styles.container}>\n        <Text>React Native + Amplify = 💛</Text>\n      </View>\n    );\n  }\n}\n\nconst styles = StyleSheet.create({\n  container: {\n    flex: 1,\n    backgroundColor: '#fff',\n    alignItems: 'center',\n    justifyContent: 'center'\n  }\n});\n```\n\nTo verify that everything is on order and the app works fine, you can go ahead and run `npm start` command. Then select which mobile platform you want to run. If there no errors, you will get to see the following result.\n\n<img src='https://cdn-images-1.medium.com/max/800/1*3CQuczlaCMHVnFBojLqhVQ.png' />\n\n## Enable Amplify Auth Resource\n\nTo include authentication experiences in your React Native app, amplify uses Amazon Cognito that is a fully featured user directory to handle user registration, login, and account recovery. Amplify interfaces with Cognito User Pools to store the user information, including social providers like Facebook, Google and so on.\n\nAmplify gives you the superpower to generate an authentication flow by executing a command from the terminal window.\n\n```shell\namplify add auth\n```\n\nOn running the above command, you will be prompted with the first question like below.\n\n<img src='https://cdn-images-1.medium.com/max/800/1*br7DyESd83gE1fz2gWV5Lg.png' />\n\nThis option is to choose the default authentication and security configuration. The second option to include a social provider like Facebook. Another option to look out for is Manual configuration about which you can read more at the [official amplify docs](https://aws-amplify.github.io/docs/js/react).\n\n<img src='https://cdn-images-1.medium.com/max/800/1*w9im1GzV1CjKGdPpVR-DLg.png' />\n\nNext, it will prompt you to choose the default sign in method. Choose `Username`.\n\nAmplify’s command line interface is so interactive and in detail that it prompts you to provide input fields and select them from your terminal. Look at below.\n\n<img src='https://cdn-images-1.medium.com/max/800/1*IIw8O4dwLrkyGoi9x5Y4iA.png' />\n\nChoose `Email`. Now run the following command to publish all the local changes to the AWS in order to create a user pool.\n\n```shell\namplify push\n```\n\nYou will get the following screen after you execute the above command.\n\n<img src='https://cdn-images-1.medium.com/max/800/1*14ONUYoXLzlwlVcSKLzWtQ.png' />\n\nThis shows the details of the current working environment (_which we manually entered at the time of configuring AWS IAM user_) and displays the status of the resource we are currently using ,that is `Auth`.\n\nExecuting this command will take some time to update the resources in order to enable and create a user pool for your React Native app. So go ahead, pause here, drink a cup of coffee. The user authentication setup is complete for now.\n\n## withAuthenticator: Adding a High Order Component\n\nEnough with the configuration part. Let us work with some app code. For React Native apps, the simplest way to add authentication flow into the app is to use `withAuthenticator` [High Order Component](https://reactjs.org/docs/higher-order-components.html).\n\nOpen up the file `App.js` and the following.\n\n```js\nimport React from 'react';\nimport { StyleSheet, Text, View } from 'react-native';\nimport Amplify from 'aws-amplify';\nimport config from './aws-exports';\n\n// New ----\nimport { withAuthenticator } from 'aws-amplify-react-native';\n\nAmplify.configure(config);\n\nclass App extends React.Component {\n  render() {\n    return (\n      <View style={styles.container}>\n        <Text>React Native + Amplify = 💛</Text>\n      </View>\n    );\n  }\n}\n\nconst styles = StyleSheet.create({\n  container: {\n    flex: 1,\n    backgroundColor: '#fff',\n    alignItems: 'center',\n    justifyContent: 'center'\n  }\n});\n\n// New ----\nexport default withAuthenticator(App, true);\n```\n\nThis HOC wraps the `App` component. It automatically detects the authentication state and updates to the UI.\n`withAuthenticator` component renders the `App` component after a successful user signed in, and it prevents non-sign-in users to interact with your app. The second argument passed in this HOC is a boolean value that tells whether to enable the Sign Out button (once the user is successfully logged-in) or not. You will see this in action later once we have created the user.\n\nBy default, on running `npm` start, you will get the Sign In screen like below.\n\n<img src='https://cdn-images-1.medium.com/max/800/1*cNDW73k-43-FiHndSZ8YKw.png)' />\n\nDo notice that right now in the above screen, the Sign In button is disabled since there the input fields are empty. This a too good to for the default flow. If you enter a username followed by a password, it even throws an error like below.\n\n<img src='https://cdn-images-1.medium.com/max/800/1*33BkYtrQA_9NfumRr6ebWA.png' />\n\nBy clicking on Sign up button, you will go to the registration screen.\n\n<img src='https://cdn-images-1.medium.com/max/800/1*jw2fK8IJ0xjL1MR4iBK2QA.png' />\n\nOn clicking Forgot Password, will take you to another screen where it will ask you for the registered username.\n\n<img src='https://cdn-images-1.medium.com/max/800/1*mccJmsNibLlxIKtJ11USjw.png' />\n\nIf the user is signed in, the underlying component (_in current scenario, the `App` component_) is displayed otherwise signin/signup controls are displayed. Also, did you notice that just by adding two lines of code you have authentication flow that looks pretty decent? In the next section, let us see if it works or not.\n\n_Bonus:_ If you love design, UI, UX, or want your apps to look good, at this link you can view the color palettes Amplify uses.\n\nhttps://aws-amplify.github.io/media/ui_library\n\n## Testing the default Amplify auth flow\n\nCurrently, there no user’s registered to our app. So let us register one. Create the button `Sign Up` and enter the details asked. Do note that, enter a valid email address for the AWS cloud service will send you an email to verify your account.\n\nOnce you are done, click the `SIGN UP` button at the end of the registration form. You will get the following screen asking for the confirmation/verification code.\n\n<img src='https://cdn-images-1.medium.com/max/800/1*fY2whWIX4Unwhrekjqleiw.png' />\n\nEnter the verification code and click the confirm button. If it is confirmed, you will be directed back to the Sign in screen. Enter the credentials to login inside the app. You will be successfully logged in if you enter the correct credentials.\n\n<img src='https://cdn-images-1.medium.com/max/800/1*8Xa9uKiLOikHO-A786fpJw.png' />\n\nNotice how the sign-out button is appearing at top right corner next to the username. Yes, amplify greets the user and has the code for it integrated already at `withAuthenticator` HOC. Do take note in the above screen that the `App` component is getting rendered now.\n\n## Conclusion\n\nYou have now successfully to add an authentication flow with Amplify and use it in a React Native app. Try using the federation or social login flow and gather the similarities or differences between the two.\n\nYou can find the complete code for this post in this [Github repository](https://github.com/amandeepmittal/expo-amplify-demo).\n\n[Originally published at Heartbeat](https://heartbeat.fritz.ai/user-authentication-with-amplify-in-a-react-native-and-expo-app-d00cdaf1ac28)\n",
             "url": "https://amanhimself.dev//blog/user-authentication-with-amplify-in-a-react-native-and-expo-app",
             "title": "User Authentication with Amplify in a React Native and Expo app",
             "summary": "User Authentication with Amplify in a React Native and Expo app",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1058,7 +1058,7 @@
             "url": "https://amanhimself.dev//blog/building-a-react-native-mobile-app-with-aws-amplify-and-expo",
             "title": "Building a React Native Mobile App with AWS Amplify and Expo",
             "summary": "Building a React Native Mobile App with AWS Amplify and Expo",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1070,7 +1070,7 @@
             "url": "https://amanhimself.dev//blog/how-i-configure-vscode-for-everything",
             "title": "How I Configure VSCode for Everything",
             "summary": "How I Configure VSCode for Everything",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1082,7 +1082,7 @@
             "url": "https://amanhimself.dev//blog/build-a-react-native-app-with-react-hooks",
             "title": "React Hooks Basics — Building a React Native App with React Hooks",
             "summary": "React Hooks Basics — Building a React Native App with React Hooks",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1094,7 +1094,7 @@
             "url": "https://amanhimself.dev//blog/how-to-build-your-first-vr-app-with-viroreact-react-native-and-crowdbotics",
             "title": "How To Build Your First VR App with ViroReact, React Native, and Crowdbotics",
             "summary": "How To Build Your First VR App with ViroReact, React Native, and Crowdbotics",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1106,7 +1106,7 @@
             "url": "https://amanhimself.dev//blog/build-a-chatbot-with-dialogflow-and-react-native",
             "title": "Build a Chatbot with Dialogflow and React Native",
             "summary": "Build a Chatbot with Dialogflow and React Native",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1118,7 +1118,7 @@
             "url": "https://amanhimself.dev//blog/how-to-build-a-real-time-logo-detection-app-with-react-native-google-vision-api-and-crowdbotics",
             "title": "How to Build a Real Time Logo Detection App with React Native & Google Vision API",
             "summary": "How to Build a Real Time Logo Detection App with React Native & Google Vision API",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1130,7 +1130,7 @@
             "url": "https://amanhimself.dev//blog/using-styled-components-with-react-native",
             "title": "Using Styled Components with React Native",
             "summary": "Using Styled Components with React Native",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1142,7 +1142,7 @@
             "url": "https://amanhimself.dev//blog/google-vision-api-firebase-react-native",
             "title": "Create a React Native Image Recognition App with Google Vision API",
             "summary": "Create a React Native Image Recognition App with Google Vision API",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1154,7 +1154,7 @@
             "url": "https://amanhimself.dev//blog/how-to-build-a-news-reader-app-with-react-native-and-newsapi",
             "title": "How To Build a News Reader App with React Native and NewsAPI",
             "summary": "How To Build a News Reader App with React Native and NewsAPI",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1166,7 +1166,7 @@
             "url": "https://amanhimself.dev//blog/29-useful-open-source-libraries-for-nodejs",
             "title": "Top open source libraries for Node.js",
             "summary": "Top open source libraries for Node.js",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1178,7 +1178,7 @@
             "url": "https://amanhimself.dev//blog/21-useful-open-source-packages-for-react-native",
             "title": "21 Useful Open Source Packages for React Native",
             "summary": "21 Useful Open Source Packages for React Native",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1190,7 +1190,7 @@
             "url": "https://amanhimself.dev//blog/3-steps-to-learn-react-native-in-2019",
             "title": "3 Steps to learn React Native in 2019",
             "summary": "3 Steps to learn React Native in 2019",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1202,7 +1202,7 @@
             "url": "https://amanhimself.dev//blog/getting-started-with-react-native-in-2019-build-your-first-app",
             "title": "Getting Started with React Native in 2019 - Build Your First App",
             "summary": "Getting Started with React Native in 2019 - Build Your First App",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1214,7 +1214,7 @@
             "url": "https://amanhimself.dev//blog/my-top-tutorials-in-web-development-and-react-native-in-2018",
             "title": "My Top Tutorials in Web Development and React Native in 2018",
             "summary": "My Top Tutorials in Web Development and React Native in 2018",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1226,7 +1226,7 @@
             "url": "https://amanhimself.dev//blog/top-nodejs-libraries-and-tools-for-machine-learning",
             "title": "Top Node.js Libraries and Tools For Machine Learning",
             "summary": "Top Node.js Libraries and Tools For Machine Learning",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1238,7 +1238,7 @@
             "url": "https://amanhimself.dev//blog/how-to-build-a-rest-api-with-nodejs-and-postgresql",
             "title": "How To Build a REST API With Nodejs and PostgreSQL",
             "summary": "How To Build a REST API With Nodejs and PostgreSQL",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1250,7 +1250,7 @@
             "url": "https://amanhimself.dev//blog/integrating-firebase-with-react-native",
             "title": "Integrating Firebase with React Native",
             "summary": "Integrating Firebase with React Native",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1262,7 +1262,7 @@
             "url": "https://amanhimself.dev//blog/how-to-build-your-own-blog-from-scratch-with-gatsbyjs-graphql-react-and-markdown",
             "title": "How To Build A Blog From Scratch With React, Markdown, GraphQL and Gatsbyjs",
             "summary": "How To Build A Blog From Scratch With React, Markdown, GraphQL and Gatsbyjs",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1274,7 +1274,7 @@
             "url": "https://amanhimself.dev//blog/building-a-mern-stack-app-with-material-ui",
             "title": "Building an authenticated MERN Stack App Using Material UI",
             "summary": "Building an authenticated MERN Stack App Using Material UI",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1286,7 +1286,7 @@
             "url": "https://amanhimself.dev//blog/how-to-build-a-serverless-backend-with-aws-lambda-and-nodejs",
             "title": "How to Build a Serverless Backend with AWS Lambda and Nodejs",
             "summary": "How to Build a Serverless Backend with AWS Lambda and Nodejs",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1298,7 +1298,7 @@
             "url": "https://amanhimself.dev//blog/creating-a-graphql-server-with-nodejs-in-2018",
             "title": "Creating a GraphQL server with Nodejs",
             "summary": "Creating a GraphQL server with Nodejs",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1310,7 +1310,7 @@
             "url": "https://amanhimself.dev//blog/how-to-use-import-statements-in-nodejs",
             "title": "How to use Import statements in Nodejs",
             "summary": "How to use Import statements in Nodejs",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1322,7 +1322,7 @@
             "url": "https://amanhimself.dev//blog/setting-up-nodejs-backend-for-a-react-app",
             "title": "Setting up Nodejs Backend for a React App",
             "summary": "Setting up Nodejs Backend for a React App",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1334,7 +1334,7 @@
             "url": "https://amanhimself.dev//blog/building-a-rest-api-with-koajs",
             "title": "Building a REST API with Koajs",
             "summary": "Building a REST API with Koajs",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1346,7 +1346,7 @@
             "url": "https://amanhimself.dev//blog/deploy-a-mern-stack-app-on-heroku",
             "title": "Deploy a MERN stack app on Heroku",
             "summary": "Deploy a MERN stack app on Heroku",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1358,7 +1358,7 @@
             "url": "https://amanhimself.dev//blog/navigation-in-a-react-native-app",
             "title": "How to use React Navigation in a React Native App",
             "summary": "How to use React Navigation in a React Native App",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1370,7 +1370,7 @@
             "url": "https://amanhimself.dev//blog/accessing-geo-location-and-app-permissions-in-react-native-and-expo",
             "title": "Accessing Geo-location and App Permissions in React Native and Expo",
             "summary": "Accessing Geo-location and App Permissions in React Native and Expo",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1382,7 +1382,7 @@
             "url": "https://amanhimself.dev//blog/simple-recipe-to-build-a-theme-app-in-react-native",
             "title": "Simple Recipe to Build a Theme App in React Native",
             "summary": "Simple Recipe to Build a Theme App in React Native",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1394,7 +1394,7 @@
             "url": "https://amanhimself.dev//blog/how-to-integrate-redux-into-your-application-with-react-native-and-expo",
             "title": "How to integrate Redux into your application with React Native and Expo",
             "summary": "How to integrate Redux into your application with React Native and Expo",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1406,7 +1406,7 @@
             "url": "https://amanhimself.dev//blog/week-3-with-react-native",
             "title": "Week 3 with React Native - Why use Expo?",
             "summary": "Week 3 with React Native - Why use Expo?",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1418,7 +1418,7 @@
             "url": "https://amanhimself.dev//blog/week-2-with-react-native-building-a-weather-app",
             "title": "Week 2 With React Native - Building a Weather App",
             "summary": "Week 2 With React Native - Building a Weather App",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1430,7 +1430,7 @@
             "url": "https://amanhimself.dev//blog/react-native-how-to-setup-your-first-app",
             "title": "React Native - How to Setup Your First App",
             "summary": "React Native - How to Setup Your First App",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1442,7 +1442,7 @@
             "url": "https://amanhimself.dev//blog/starting-over-with-react-native",
             "title": "Starting Over with React Native",
             "summary": "Starting Over with React Native",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1454,7 +1454,7 @@
             "url": "https://amanhimself.dev//blog/connecting-a-node-js-and-reactjs-example",
             "title": "How to Upload a File with Reactjs and Nodejs",
             "summary": "How to Upload a File with Reactjs and Nodejs",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1466,7 +1466,7 @@
             "url": "https://amanhimself.dev//blog/react-native-building-a-minimalist-weather-app-using-expo-xde",
             "title": "React Native - Building a Minimalist Weather App using Expo XDE",
             "summary": "React Native - Building a Minimalist Weather App using Expo XDE",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1478,7 +1478,7 @@
             "url": "https://amanhimself.dev//blog/react-native-getting-started-with-lottie-and-expo",
             "title": "React Native - Getting Started with Lottie and Expo",
             "summary": "React Native - Getting Started with Lottie and Expo",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1490,7 +1490,7 @@
             "url": "https://amanhimself.dev//blog/build-a-progressive-web-app-using-react",
             "title": "Build a Progressive Web App using React",
             "summary": "Build a Progressive Web App using React",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1502,7 +1502,7 @@
             "url": "https://amanhimself.dev//blog/designing-a-rest-api-with-node-js-and-mongodb-atlas",
             "title": "Designing a REST API with Node.js and MongoDB Atlas",
             "summary": "Designing a REST API with Node.js and MongoDB Atlas",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1514,7 +1514,7 @@
             "url": "https://amanhimself.dev//blog/setting-up-and-getting-used-to-gatsby",
             "title": "Gatsby.js - How to set up and use the React Static Site Generator",
             "summary": "Gatsby.js - How to set up and use the React Static Site Generator",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1526,7 +1526,7 @@
             "url": "https://amanhimself.dev//blog/ionic-2-3-cli-reference",
             "title": "Ionic 2/3 CLI Reference",
             "summary": "Ionic 2/3 CLI Reference",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1538,7 +1538,7 @@
             "url": "https://amanhimself.dev//blog/passing-data-between-pages-in-an-ionic-application",
             "title": "Passing Data Between Pages in an Ionic Application",
             "summary": "Passing Data Between Pages in an Ionic Application",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1550,7 +1550,7 @@
             "url": "https://amanhimself.dev//blog/tips-for-creating-node-js-rest-apis",
             "title": "Tips for Creating Nodejs REST APIs",
             "summary": "Tips for Creating Nodejs REST APIs",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1562,7 +1562,7 @@
             "url": "https://amanhimself.dev//blog/multi-page-navigation-in-an-ionic-app",
             "title": "Multi Page Navigation in an Ionic App",
             "summary": "Multi Page Navigation in an Ionic App",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1574,7 +1574,7 @@
             "url": "https://amanhimself.dev//blog/using-google-fonts-in-an-ionic-application",
             "title": "Using Google Fonts in an Ionic Application",
             "summary": "Using Google Fonts in an Ionic Application",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1586,7 +1586,7 @@
             "url": "https://amanhimself.dev//blog/basic-navigation-in-ionic-applications",
             "title": "Basic Navigation in Ionic Applications",
             "summary": "Basic Navigation in Ionic Applications",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1598,7 +1598,7 @@
             "url": "https://amanhimself.dev//blog/how-to-use-font-awesome-in-an-ionic-application",
             "title": "How to use Font Awesome in an Ionic Application",
             "summary": "How to use Font Awesome in an Ionic Application",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1610,7 +1610,7 @@
             "url": "https://amanhimself.dev//blog/what-is-ionic",
             "title": "What is Ionic?",
             "summary": "What is Ionic?",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1622,7 +1622,7 @@
             "url": "https://amanhimself.dev//blog/introduction-to-hybrid-mobile-apps",
             "title": "Introduction to Hybrid Mobile Apps",
             "summary": "Introduction to Hybrid Mobile Apps",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1634,7 +1634,7 @@
             "url": "https://amanhimself.dev//blog/remove-node-modules-recursively",
             "title": "Remove node_modules Recursively",
             "summary": "Remove node_modules Recursively",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1646,7 +1646,7 @@
             "url": "https://amanhimself.dev//blog/setup-nodemon-to-auto-restart-nodejs-application-server",
             "title": "Setup Nodemon to auto restart Nodejs application server",
             "summary": "Setup Nodemon to auto restart Nodejs application server",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1658,7 +1658,7 @@
             "url": "https://amanhimself.dev//blog/whats-new-in-npm-5",
             "title": "What’s New in npm 5?",
             "summary": "What’s New in npm 5?",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1670,7 +1670,7 @@
             "url": "https://amanhimself.dev//blog/converting-a-buffer-to-json-and-utf8-strings-in-nodejs",
             "title": "Converting a Buffer to JSON and Utf8 Strings in Nodejs",
             "summary": "Converting a Buffer to JSON and Utf8 Strings in Nodejs",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1682,7 +1682,7 @@
             "url": "https://amanhimself.dev//blog/setting-up-mean-stack-with-webstorm",
             "title": "Setting up MEAN Stack with Webstorm",
             "summary": "Setting up MEAN Stack with Webstorm",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1694,7 +1694,7 @@
             "url": "https://amanhimself.dev//blog/paginate-records-in-mysql-using-sequelize-and-nodejs",
             "title": "How to paginate records in MySQL using Sequelize and Nodejs",
             "summary": "How to paginate records in MySQL using Sequelize and Nodejs",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1706,7 +1706,7 @@
             "url": "https://amanhimself.dev//blog/getting-started-with-sequelize-for-nodejs",
             "title": "Getting Started with Sequelize for Nodejs Applications",
             "summary": "Getting Started with Sequelize for Nodejs Applications",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1718,7 +1718,7 @@
             "url": "https://amanhimself.dev//blog/how-to-use-eslint-in-node-js-applications",
             "title": "How to use ESLint in Node.js Applications",
             "summary": "How to use ESLint in Node.js Applications",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1730,7 +1730,7 @@
             "url": "https://amanhimself.dev//blog/how-to-mock-data-for-nodejs-applications-using-fakerjs",
             "title": "How to Mock Data for Node.js Applications using faker.js",
             "summary": "How to Mock Data for Node.js Applications using faker.js",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1742,7 +1742,7 @@
             "url": "https://amanhimself.dev//blog/getting-started-with-ionic-framework",
             "title": "Getting Started with Ionic Framework",
             "summary": "Getting Started with Ionic Framework",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1754,7 +1754,7 @@
             "url": "https://amanhimself.dev//blog/migrating-from-expressjs-4-to-5",
             "title": "Migrating from Expressjs 4 to 5",
             "summary": "Migrating from Expressjs 4 to 5",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1766,7 +1766,7 @@
             "url": "https://amanhimself.dev//blog/using-bower-with-heroku",
             "title": "Using Bower With Heroku",
             "summary": "Using Bower With Heroku",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1778,7 +1778,7 @@
             "url": "https://amanhimself.dev//blog/node-js-twitter-bot-tutorial",
             "title": "Writing a Node.js Twitter Bot Part 1",
             "summary": "Writing a Node.js Twitter Bot Part 1",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1790,7 +1790,7 @@
             "url": "https://amanhimself.dev//blog/node-js-twitter-bot-tutorial-part-2",
             "title": "Writing a Node.js Twitter Bot Part 2",
             "summary": "Writing a Node.js Twitter Bot Part 2",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1802,7 +1802,7 @@
             "url": "https://amanhimself.dev//blog/create-a-simple-twitter-bot-with-node-js",
             "title": "Create a Simple Twitter Bot with Node.js",
             "summary": "Create a Simple Twitter Bot with Node.js",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1814,7 +1814,7 @@
             "url": "https://amanhimself.dev//blog/atom-an-editor-of-21st-century",
             "title": "ATOM- An Editor of 21st Century",
             "summary": "ATOM- An Editor of 21st Century",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1826,7 +1826,7 @@
             "url": "https://amanhimself.dev//blog/how-process-nexttick-works-in-node-js",
             "title": "How process.nextTick() works in Node.js?",
             "summary": "How process.nextTick() works in Node.js?",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1838,7 +1838,7 @@
             "url": "https://amanhimself.dev//blog/nodejs-system",
             "title": "The Node.js system",
             "summary": "The Node.js system",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1850,7 +1850,7 @@
             "url": "https://amanhimself.dev//blog/the-node-way",
             "title": "The Node way - Philosophy of a Platform",
             "summary": "The Node way - Philosophy of a Platform",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1862,7 +1862,7 @@
             "url": "https://amanhimself.dev//blog/javascript-code-convetions",
             "title": "JavaScript Code Conventions",
             "summary": "JavaScript Code Conventions",
-            "date_modified": "2022-03-27T16:33:29.209Z",
+            "date_modified": "2022-03-27T16:35:10.858Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
