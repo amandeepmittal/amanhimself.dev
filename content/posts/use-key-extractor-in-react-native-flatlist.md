@@ -9,8 +9,6 @@ canonicalUrl: 'https://amanhimself.dev/blog/use-key-extractor-in-react-native-fl
 
 ![cover_image](https://i.imgur.com/sRxXsyt.png)
 
-# When to use keyExtractor in React Native's FlatList
-
 In React Native, the [FlatList component](https://reactnative.dev/docs/flatlist) works well to render a long list of data. It renders only the items are shown on the screen in a scrolling list and not all the data items at once.
 
 To render a scrollable list of items using `FlatList`, you need to pass the required `data` prop to the component. The `data` prop accepts an array of items. Each item in the array represents a single item in the list. Another required prop is `renderItem`, which takes an item from the `data` and renders it on the list. This prop accepts a function that returns the JSX to be rendered.
