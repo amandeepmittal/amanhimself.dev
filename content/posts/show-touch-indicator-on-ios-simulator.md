@@ -4,7 +4,7 @@ date: '2022-04-03'
 slug: 'show-touch-indicator-on-ios-simulator'
 thumbnail: '/thumbnails/xcode.png'
 tag: 'tools'
-canonicalUrl: 'https://amanhimself.dev/show-touch-indicator-on-ios-simulator/'
+canonicalUrl: 'https://amanhimself.dev/blog/show-touch-indicator-on-ios-simulator/'
 ---
 
 Sometimes it is necessary to highlight a single touch event on the iOS simulator's screen and show the tap that registers it. For example, this is useful when recording a video or a [gif](https://en.wikipedia.org/wiki/GIF) using the simulator.
