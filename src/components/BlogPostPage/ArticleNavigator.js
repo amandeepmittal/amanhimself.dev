@@ -8,12 +8,12 @@ const ArticleNavigator = ({ previousArticle, nextArticle }) => {
     <>
       <HStack justifyContent="space-between">
         <Text as="h2" fontSize="2xl" fontWeight="600" color={textMode}>
-          More Articles
+          More Posts
         </Text>
         <NextLink href="/blog">
           <Link>
             <Text fontWeight="600" color="purple.500">
-              Browse all articles
+              Browse all posts
             </Text>
           </Link>
         </NextLink>
