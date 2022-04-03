@@ -9,12 +9,24 @@
     },
     "items": [
         {
+            "id": "https://amanhimself.dev//blog/patterns-and-anti-patterns-in-nodejs",
+            "content_html": "---\ntitle: 'Patterns and Anti-patterns in Node.js'\ndate: '2022-04-03'\nslug: 'patterns-and-anti-patterns-in-nodejs'\nthumbnail: '/thumbnails/node.png'\ntag: 'nodejs'\ncanonicalUrl: 'https://blog.appsignal.com/2022/02/23/patterns-and-anti-patterns-in-nodejs.html/'\n---\n\n![cover_image](https://i.imgur.com/yqs2pJ0.png)\n\n> Originally posted at [AppSignal Blog](https://blog.appsignal.com/2022/02/23/patterns-and-anti-patterns-in-nodejs.html)\n\nNode.js is a back-end JavaScript runtime built on Chrome's V8 engine that's asynchronous and event-driven by nature. It's relatively simple to create a REST API with Node.js and use frameworks like [Express.js](https://expressjs.com/). With this simplicity comes a lot of flexibility. However, you can get side-tracked on what patterns to follow when building scalable network-driven applications.\n\nThis article focuses on some of the patterns and practices to follow when building Node.js applications. You will learn about coding style, error handling, loggers, and testing.\n\nLet's dive in!\n\n## Node.js Coding Style and Best Practices\n\n### `const` and `let` Keywords to Declare Variables\n\nThere are different ways to declare variables in JavaScript: the old school `var` and the more recent `let` and `const`.\n\n`var` declares a function-scoped (when declared within a function) or globally-scoped variable (when declared outside a function).\n\n`let` and `const` declare block-scoped variables.\n\n`let` allows you to create variables whose value can change. When pointing to an object, it can be assigned to another object.\n\n```js\nlet myInt = 3;\nmyInt = 6;\nconsole.log(myInt); // 6\nlet myArray = [0, 1, 2, 3];\nconsole.log(myArray); // [ 0, 1, 2, 3 ]\nlet myOtherArray = ['one', 'two', 'three'];\nmyArray = myOtherArray;\nconsole.log(myArray); // [ 'one', 'two', 'three' ]\n```\n\nThe `const` keyword can be a little confusing. It doesn't necessarily define a constant value, it defines a constant reference to a value. It creates a read-only reference to a value, but this doesn't mean the value it holds is immutable, just that it cannot be reassigned.\n\n```js\nconst myInt = 3;\nmyInt = 6; // TypeError: Assignment to constant variable.\nconst myArray = [0, 1, 2, 3];\nconsole.log(myArray); // [ 0, 1, 2, 3 ]\nmyArray[0] = 'eleven';\nconsole.log(myArray); // [ 'eleven', 1, 2, 3 ]\n\nlet myOtherArray = ['one', 'two', 'three'];\nmyArray = myOtherArray; // TypeError: Assignment to constant variable\n```\n\nAs shown above, if it holds a primitive, you cannot assign it another value. When it holds an object/array, you can alter the value of that object (its properties/elements), but you cannot assign it another object.\n\nWith the definitions down, let's look at why you should consider using `let` and `const` over `var`.\n\n1. Duplicate variable declarations using `var` will not trigger an error.\n\nWith `var` you can declare a variable in the same scope as a similarly named variable. Because of this, you can unknowingly overwrite another variable's value.\n\n```js\nfunction thisFunction() {\n  var x = 1;\n\n  // In another part of the code, declare another variable x\n  var x = 2;\n\n  console.log(x); // 2\n}\n\nthisFunction();\n```\n\nBoth `const` and `let` cannot be re-declared, so you cannot accidentally create a duplicate variable in the same scope.\n\n```js\nfunction thisFunction() {\n  let x = 1;\n\n  // In another part of the code, declare another variable x\n  let x = 2;\n\n  console.log(x);\n}\n\nthisFunction();\n```\n\nIf you try to run the above code, you will get the following error:\n\n```shell\nSyntaxError: Identifier 'x' has already been declared\n```\n\n2. `var` allows you to read a variable that has not been declared.\n\nWhen you try to access a `var` before it is declared, it will return `undefined`. This might cause bugs when you try to use a variable in your code that has not been declared. Tracking down the bug might be difficult since the code might cause no errors that will cause it to crash, but it might cause unexpected results when you use the `undefined`.\n\nThe following code will run just fine.\n\n```js\nconsole.log(bar); // undefined\nvar bar = 1;\n```\n\nWith `let` and `const`, you won't be able to use a variable that has not been declared.\n\n```js\nconsole.log(foo); // ReferenceError\nlet foo = 2;\n```\n\nTrying to run the above will give the below error:\n\n```shell\nReferenceError: Cannot access 'foo' before initialization\n```\n\n3. Because they are block-scoped, `let` and `const` make for more readable and straightforward code, that is less error-prone.\n   With block-scoped variables, it is easier to read through code and track down the scope in which a variable operates. You just have to look at the inner-most block in which it has been declared to know its scope.\n\nLook at the following code.\n\n```js\nlet x = 5;\n\nfunction thisFunction() {\n  let x = 1;\n\n  if (true) {\n    let x = 2;\n  }\n\n  console.log(x); // 1\n}\n\nthisFunction();\n\nconsole.log(x); // 5\n```\n\nSince `let x = 2;` is declared inside the block of the `if` statement, you know it only operates inside that block. As you can see, it doesn't affect similarly named variables outside the block. You can declare variables inside blocks without worrying that you might be re-declaring them.\n\nWhen using `var`, it's not so straightforward.\n\n```js\nvar x = 5;\n\nfunction thisFunction() {\n  var x = 1;\n\n  if (true) {\n    var x = 2;\n  }\n\n  console.log(x); // 2\n}\n\nthisFunction();\n\nconsole.log(x); // 5\n```\n\nWith `var`, you have to be more careful with variables.\n\nIn the above, we declare a variable `var x = 2;` inside the `if` statement. The scope of `x` is the entire function `thisFunction()`. Since there is a similarly named variable in the function, we re-declared `x`, and when we later use the function's `x`, it has the value `2`. So you need to be aware of the variables in scope, so as not to accidentally overwrite them.\n\n### Proper Naming Conventions\n\nIt's important to follow a naming convention when naming constants, variables, classes, and functions in an app. This helps you visually differentiate between local variables, global variables, functions, classes, etc., and maintain a consistent style throughout your codebase.\n\nFor naming local variables and functions, use lowerCamelCase.\n\n```js\nconst myFunction() {\n  let someVariable;\n}\n```\n\nEven if you define variables using the `const` keyword within the scope of a function, lowerCamelCase is preferred.\n\n```js\nconst myFunction() {\n  const someVariable = \"That holds a string value\";\n}\n```\n\nVariables can also be defined by a `const` keyword in a specific use case. If you intend to declare a variable whose value (or nested values, in the case of declaring an object) is not going to change throughout the lifecycle of a codebase, use UPPER_SNAKE_CASE with the `const` keyword.\n\n```js\nconst ANOTHER_VAR = 3;\n```\n\nDefine classes in Node.js applications with UpperCamelCase:\n\n```js\nclass MyClass() {\n  // ...\n}\n```\n\nFollowing these naming conventions will help you write more readable code. Naming your functions is vital, especially when you are about to profile a Node.js project. Profiling makes it simpler to understand what function to look for when checking a memory snapshot. However, if you use anonymous functions, profiling can make it challenging to debug production issues.\n\n### ESLint and Style Guides\n\nInstead of overthinking a project's coding style, use a linting tool like [ESLint](https://eslint.org/). Over the years, it has become the JavaScript ecosystem's standard for fixing code styles automatically. ESLint checks for possible code errors, fixes code styles such as spacing issues, avoids anti-patterns and small errors, and keeps project code uniform. Using ESLint with a tool like [Prettier](https://prettier.io/) can help you fix formatting issues as well.\n\nBy default, ESLint contains standard rules for vanilla JavaScript. It has a plugin system specific to the framework. For Node.js, you can use plugins like eslint-plugin-node and eslint-plugin-node-security.\n\nIt is much easier to understand a large project when its code is written in a consistent style. This is where style guides come in handy. Using a style guide enhances a team's productivity and avoids arguments about the best style guide for Node.js projects. In addition, you can opt-in to already existing style guides created at companies like [Google](https://github.com/google/eslint-config-google) and [Airbnb](https://github.com/airbnb/javascript) that have been tested with time.\n\n## Error Handling in Node.js\n\nYou can handle errors using `async/await` syntax and the built-in error object in Node.js. Let's take a look at both.\n\n### `async/await` Syntax to Catch Errors\n\nWhen Node.js first came out, handling asynchronous code meant using callbacks. From my experience, it doesn't take too long for nested callbacks to get out of hand. This is known as 'callback hell', and here is a typical example:\n\n```js\nfunction getData(err, function(err, res) {\n  if(err !== null) {\n    function(valueA, function(err, res) {\n      if(err !== null) {\n        function(valueB, function(err, res) {\n          // it continues\n        }\n      }\n    })\n  }\n})\n```\n\nThe example above is quite ergonomic. In a real scenario, there will be many more lines of code in each function's scope. This is considered an anti-pattern: handling the callback style of errors gets more awkward and only gets more un-maintainable with more nested functions.\n\nYou can avoid nested callbacks or callback hell by using ES6 `async/await` syntax (completely supported by Node.js version 8 and onwards). `async/await` is a way to deal with asynchronous code. It provides a much more compact way of writing code and familiar code syntax. To handle errors, you can use `try/catch` blocks along with `async/await` syntax.\n\nIf we use `async/await`, we can rewrite the previous example like this:\n\n```js\nasync function getData(err, res) {\n  try {\n    let resA = await functionA(res);\n    let resB = await functionB(resA);\n\n    return resB;\n  } catch (err) {\n    logger.error(err);\n  }\n}\n```\n\n### Built-in Node.js Error Object\n\nErrors are impossible to avoid. However, in many cases you'll want to handle errors such as rejected promises and thrown exceptions.\n\nTo avoid complications in error-handling, use the built-in error object in Node.js. It helps you maintain uniformity and prevent loss of information. You can also reap the advantages of finding information with StackTrace.\n\nAs an example, throw a string as shown below:\n\n```js\nif (!data) {\n  throw 'There is no data';\n}\n```\n\nThis lacks any stack trace information and is an anti-pattern.\n\nInstead, use the built-in Error object:\n\n```js\nif (!data) {\n  throw new Error('There is no data');\n}\n```\n\n## Loggers for Your Node.js Project\n\nThere's no denying it - we've all used `console` statements at times. They can be good for quickly debugging something or printing a standard output. But the console lacks proper configuration options for production-grade applications.\n\nIt is also crucial for a logger to be high-performant in identifying errors and possible issues. A slow logging library might harm your application's runtime performance.\n\nA typical logger lets you use correct log levels such as fatal, warn, info, error, debug, and trace. These levels help to identify and distinguish between different critical events. A logger will also help provide contextual information in a JSON object, with timestamped log lines for you to determine when the log entry occurred. The logging format should be readable by human beings.\n\nA good logging library provides features that make it easier to centralize and format logs. In the Node.js ecosystem, the following are some of the options available:\n\n- [Winston](https://github.com/winstonjs/winston): A popular logging library that is easily configurable.\n- [Bunyan](https://github.com/trentm/node-bunyan): Another popular logging library that outputs in JSON by default.\n- [Log4js](https://github.com/log4js-node/log4js-node): A logger for the Express framework that supports colored console logging out of the box.\n- [Pino](https://github.com/pinojs/pino): A logger that is focused on performance. It is considered to be faster than its alternatives.\n\nAn example of configuring Pino:\n\n```js\nconst app = require('express')();\nconst pino = require('pino-http')();\n\napp.use(pino);\n\napp.get('/', function (req, res) {\n  req.log.info('something');\n  res.send('hello world');\n});\n\napp.listen(3000);\n```\n\nPino also supports [various Web frameworks in the Node.js ecosystem](https://github.com/pinojs/pino/blob/HEAD/docs/web.md#express), such as Fastify, Express, Hapi, Koa, and Nest.\n\n## Writing Tests in Node.js\n\nIf you work on a big application, you'll make continuous changes to the app's source code. By writing tests, you can avoid breaking existing features when pushing a new change. Failing tests will also help you determine where to make changes in specific sections of your code.\n\n### Write API Tests\n\nIn a Node.js application, writing API tests is a good start. They provide more coverage than unit testing. You can use frameworks like [Supertest](https://github.com/visionmedia/supertest), [Jest](https://jestjs.io/), or any other library that provides a high-level abstraction for testing APIs.\n\nConsider the example below. It is a simple Express app that serves one route:\n\n```js\nconst express = require('express');\nconst bodyParser = require('body-parser');\n\nconst app = express();\n\napp.use(bodyParser.json());\napp.use(bodyParser.urlencoded({ extended: true }));\n\n// Other middlewares...\n\napp.get('/', (req, res, next) => {\n  res.json({ hello: 'Hello World' });\n});\n\nmodule.exports = app;\n```\n\nHere's appropriate way to write this using Supertest:\n\n```js\nconst request = require('supertest');\nconst app = require('./index');\n\ndescribe('hello test', () => {\n  it('/ should return a response', async () => {\n    const res = await request(app).get('/');\n    expect(res.statusCode).toEqual(200);\n    expect(res.body).toEqual({ hello: 'Hello World' });\n  });\n});\n```\n\n### Write Clear Test Names\n\nA test name should be descriptive and self-explanatory for other people working on your team and include what is being tested, the scenario, and expected result.\n\n### Inspect Outdated Packages\n\nYou can check for outdated packages with commands like `npm outdated` or use a package like `npm-check`. This will prevent build fails related to outdated packages.\n\n### Inspect for Vulnerable Dependencies\n\nA package can have vulnerabilities. Use community-based tools such as [npm audit](https://docs.npmjs.com/cli/audit) or commercial tools like [snyk](https://snyk.io/) to discover vulnerabilities. If you don't use these tools, your only alternative is to keep up with tech communities online.\n\n## Wrap Up: Write Better Code for Your Node.js Apps\n\nIn this article, we covered practices and patterns to help you avoid anti-patterns and write better code for your Node.js applications.\n\nWe looked at some key principles around coding style, error handling, loggers, and testing. Some of the practices we discussed are more general - like checking for outdated packages or vulnerable dependencies. Others - such as using a performant logging library using ESLint and style guides - will help you maintain a consistent way of writing code, especially when working on large projects.\n\nHappy coding!\n",
+            "url": "https://amanhimself.dev//blog/patterns-and-anti-patterns-in-nodejs",
+            "title": "Patterns and Anti-patterns in Node.js",
+            "summary": "Patterns and Anti-patterns in Node.js",
+            "date_modified": "2022-04-03T05:44:21.960Z",
+            "author": {
+                "name": "Aman Mittal",
+                "url": "https://twitter.com/amanhimself"
+            }
+        },
+        {
             "id": "https://amanhimself.dev//blog/show-touch-indicator-on-ios-simulator",
             "content_html": "---\ntitle: 'How to show Touch indicator on iOS simulator'\ndate: '2022-04-03'\nslug: 'show-touch-indicator-on-ios-simulator'\nthumbnail: '/thumbnails/xcode.png'\ntag: 'tools'\ncanonicalUrl: 'https://amanhimself.dev/show-touch-indicator-on-ios-simulator/'\n---\n\nSometimes it is necessary to highlight a single touch event on the iOS simulator's screen and show the tap that registers it. For example, this is useful when recording a video or a [gif](https://en.wikipedia.org/wiki/GIF) using the simulator.\n\nThe iOS simulator comes with a pre-configured list of settings, including to display the touch indicator. However, sometimes, it is hard to find them.\n\n## Enable Touch Indicator on iOS simulator\n\nTo enable the touch indicator, open the terminal window and run the following command:\n\n```shell\ndefaults write com.apple.iphonesimulator ShowSingleTouches 1\n```\n\nIt accepts a boolean value of `1`.\n\nAfter running the command, if the iOS simulator is already running, close and restart it.\n\nTo test it out, open the simulator and tap on the screen.\n\n![ss1](https://i.imgur.com/h31kDO1.gif)\n\n## Disable Touch Indicator on iOS simulator\n\nTo disable the touch indicator from the terminal window, run the following command to change the boolean value to `0`:\n\n```shell\ndefaults write com.apple.iphonesimulator ShowSingleTouches 0\n```\n",
             "url": "https://amanhimself.dev//blog/show-touch-indicator-on-ios-simulator",
             "title": "How to show Touch indicator on iOS simulator",
             "summary": "How to show Touch indicator on iOS simulator",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -26,7 +38,7 @@
             "url": "https://amanhimself.dev//blog/handle-deep-linking-react-native",
             "title": "How to handle Deep Linking in a React Native app",
             "summary": "How to handle Deep Linking in a React Native app",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -38,7 +50,7 @@
             "url": "https://amanhimself.dev//blog/use-key-extractor-in-react-native-flatlist",
             "title": "When to use keyExtractor prop in React Native's FlatList",
             "summary": "When to use keyExtractor prop in React Native's FlatList",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -50,7 +62,7 @@
             "url": "https://amanhimself.dev//blog/setup-nextjs-project-with-eslint-prettier-husky-lint-staged",
             "title": "Set up a Next.js project with ESLint, Prettier, Husky, and Lint Staged",
             "summary": "Set up a Next.js project with ESLint, Prettier, Husky, and Lint Staged",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -62,7 +74,7 @@
             "url": "https://amanhimself.dev//blog/install-nodejs-using-nvm-on-macos-m1",
             "title": "How to install Node.js using NVM on macOS M1",
             "summary": "How to install Node.js using NVM on macOS M1",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -74,7 +86,7 @@
             "url": "https://amanhimself.dev//blog/infinite-scroll-with-react-query-and-flatlist-in-react-native",
             "title": "Implementing Infinite Scroll with React Query and FlatList in React Native",
             "summary": "Implementing Infinite Scroll with React Query and FlatList in React Native",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -86,7 +98,7 @@
             "url": "https://amanhimself.dev//blog/how-to-rename-default-branch-name-in-git-and-github",
             "title": "How to rename default branch in Git and GitHub",
             "summary": "How to rename default branch in Git and GitHub",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -98,7 +110,7 @@
             "url": "https://amanhimself.dev//blog/tamagui-for-react-native",
             "title": "Tamagui for React Native: Create faster design systems",
             "summary": "Tamagui for React Native: Create faster design systems",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -110,7 +122,7 @@
             "url": "https://amanhimself.dev//blog/year-in-review-2021",
             "title": "2021 - A year in review",
             "summary": "2021 - A year in review",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -122,7 +134,7 @@
             "url": "https://amanhimself.dev//blog/show-hide-password-in-react-native-using-custom-hook",
             "title": "Create a custom hook to Show/Hide Password Visibility in React Native",
             "summary": "Create a custom hook to Show/Hide Password Visibility in React Native",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -134,7 +146,7 @@
             "url": "https://amanhimself.dev//blog/safe-area-context-in-react-native-apps",
             "title": "How to avoid notches with Safe Area Context in React Native apps",
             "summary": "How to avoid notches with Safe Area Context in React Native apps",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -146,7 +158,7 @@
             "url": "https://amanhimself.dev//blog/how-to-configure-vscode-bracket-colors-natively",
             "title": "How to configure VSCode Bracket Pair Colors Natively",
             "summary": "How to configure VSCode Bracket Pair Colors Natively",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -158,7 +170,7 @@
             "url": "https://amanhimself.dev//blog/how-to-add-a-splash-screen-and-app-icon-in-react-native-with-react-native-bootsplash",
             "title": "How to add Splash Screen and an App Icon in React Native",
             "summary": "How to add Splash Screen and an App Icon in React Native",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -170,7 +182,7 @@
             "url": "https://amanhimself.dev//blog/how-to-use-ios-simulator-in-full-screen",
             "title": "How to use iOS simulator in full-screen",
             "summary": "How to use iOS simulator in full-screen",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -182,7 +194,7 @@
             "url": "https://amanhimself.dev//blog/rctbridge-required-dispatch-sync-to-load-warning",
             "title": "How to solve RCTBridge required dispatch_sync to load warning on iOS for React Native",
             "summary": "How to solve RCTBridge required dispatch_sync to load warning on iOS for React Native",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -194,7 +206,7 @@
             "url": "https://amanhimself.dev//blog/multi-language-support-in-react-native-with-react-i18next",
             "title": "How to Offer Multi-language Support in a React Native App",
             "summary": "How to Offer Multi-language Support in a React Native App",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -206,7 +218,7 @@
             "url": "https://amanhimself.dev//blog/get-request-with-axios",
             "title": "GET Request params with Axios",
             "summary": "GET Request params with Axios",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -218,7 +230,7 @@
             "url": "https://amanhimself.dev//blog/environment-variables-in-expo-managed-workflow",
             "title": "Environment Variables in Expo and TypeScript",
             "summary": "Environment Variables in Expo and TypeScript",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -230,7 +242,7 @@
             "url": "https://amanhimself.dev//blog/no-code-way-of-payments-with-stripe-a-brief-guide",
             "title": "The No-Code Way of Payments with Stripe: A Brief Guide",
             "summary": "The No-Code Way of Payments with Stripe: A Brief Guide",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -242,7 +254,7 @@
             "url": "https://amanhimself.dev//blog/firebase-authentication-with-expo",
             "title": "How To Integrate Firebase Authentication With an Expo App",
             "summary": "How To Integrate Firebase Authentication With an Expo App",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -254,7 +266,7 @@
             "url": "https://amanhimself.dev//blog/common-proptypes-in-react-and-typescript",
             "title": "Common Prop Types in TypeScript and React",
             "summary": "Common Prop Types in TypeScript and React",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -266,7 +278,7 @@
             "url": "https://amanhimself.dev//blog/prop-types-in-react-and-typescript",
             "title": "Prop types in React and TypeScript",
             "summary": "Prop types in React and TypeScript",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -278,7 +290,7 @@
             "url": "https://amanhimself.dev//blog/first-three-months-as-developer-advocate",
             "title": "🌱 Life at Draftbit - First 3 Months as a Developer Advocate",
             "summary": "🌱 Life at Draftbit - First 3 Months as a Developer Advocate",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -290,7 +302,7 @@
             "url": "https://amanhimself.dev//blog/custom-preview-image-gallery-in-react-native",
             "title": "How to Create a Custom Image Gallery in React Native",
             "summary": "How to Create a Custom Image Gallery in React Native",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -302,7 +314,7 @@
             "url": "https://amanhimself.dev//blog/create-custom-tab-bar-in-react-native",
             "title": "How to Create a Custom Tab Bar in React Native",
             "summary": "How to Create a Custom Tab Bar in React Native",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -314,7 +326,7 @@
             "url": "https://amanhimself.dev//blog/how-to-use-es6-import-in-nodejs",
             "title": "How to use ES6 import syntax in Node.js",
             "summary": "How to use ES6 import syntax in Node.js",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -326,7 +338,7 @@
             "url": "https://amanhimself.dev//blog/upload-image-to-cloudinary-using-expo-camera",
             "title": "How to upload an image using Expo Camera to Cloudinary",
             "summary": "How to upload an image using Expo Camera to Cloudinary",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -338,7 +350,7 @@
             "url": "https://amanhimself.dev//blog/setup-macbook-m1",
             "title": "Setup Macbook M1 for Web and React Native development",
             "summary": "Setup Macbook M1 for Web and React Native development",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -350,7 +362,7 @@
             "url": "https://amanhimself.dev//blog/react-native-geolocation-to-get-postal-address",
             "title": "How to use React Native Geolocation to get Postal Address",
             "summary": "How to use React Native Geolocation to get Postal Address",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -362,7 +374,7 @@
             "url": "https://amanhimself.dev//blog/react-native-performance-do-and-dont",
             "title": "React Native Performance Do and Dont",
             "summary": "React Native Performance Do and Dont",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -374,7 +386,7 @@
             "url": "https://amanhimself.dev//blog/shared-element-transitions",
             "title": "How to use shared element transitions in React Native",
             "summary": "How to use shared element transitions in React Native",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -386,7 +398,7 @@
             "url": "https://amanhimself.dev//blog/react-navigation-remove-tab-bar-border",
             "title": "How to remove bottom tab bar border in React Navigation",
             "summary": "How to remove bottom tab bar border in React Navigation",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -398,7 +410,7 @@
             "url": "https://amanhimself.dev//blog/redux-persist-in-react-native-with-async-storage",
             "title": "How to use redux-persist in React Native with Asyncstorage",
             "summary": "How to use redux-persist in React Native with Asyncstorage",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -410,7 +422,7 @@
             "url": "https://amanhimself.dev//blog/app-icon-react-native-android",
             "title": "How to add an app icon in a React Native Android app",
             "summary": "How to add an app icon in a React Native Android app",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -422,7 +434,7 @@
             "url": "https://amanhimself.dev//blog/year-rewind-2020",
             "title": "Year Rewind: 2020",
             "summary": "Year Rewind: 2020",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -434,7 +446,7 @@
             "url": "https://amanhimself.dev//blog/custom-scroll-bar-indicator-with-react-native-animated-api",
             "title": "How to create a custom scrollbar with React Native Animated API",
             "summary": "How to create a custom scrollbar with React Native Animated API",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -446,7 +458,7 @@
             "url": "https://amanhimself.dev//blog/manage-state-with-usecontext-usereducer-in-react-apps",
             "title": "How to manage state in React apps with useReducer and useContext hooks",
             "summary": "How to manage state in React apps with useReducer and useContext hooks",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -458,7 +470,7 @@
             "url": "https://amanhimself.dev//blog/creating-and-validating-react-native-form-with-formik",
             "title": "Creating and Validating React Native Forms with Formik",
             "summary": "Creating and Validating React Native Forms with Formik",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -470,7 +482,7 @@
             "url": "https://amanhimself.dev//blog/harperdb-with-react-hooks",
             "title": "How to use HarperDB instance with React Hooks",
             "summary": "How to use HarperDB instance with React Hooks",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -482,7 +494,7 @@
             "url": "https://amanhimself.dev//blog/animate-header-view-on-scroll-with-react-native-animated-api",
             "title": "How to Animate a Header View on Scroll With React Native Animated",
             "summary": "How to Animate a Header View on Scroll With React Native Animated",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -494,7 +506,7 @@
             "url": "https://amanhimself.dev//blog/add-environment-variables-in-netlify-deployment",
             "title": "Add Environment Variables in a Netlify Deployment",
             "summary": "Add Environment Variables in a Netlify Deployment",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -506,7 +518,7 @@
             "url": "https://amanhimself.dev//blog/react-router-real-time-user-monitoring-react-apps",
             "title": "How to use React Router and real time user monitoring in React apps",
             "summary": "How to use React Router and real time user monitoring in React apps",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -518,7 +530,7 @@
             "url": "https://amanhimself.dev//blog/build-rest-api-with-nodejs-harperdb",
             "title": "Build a REST API with Node.js and HarperDB",
             "summary": "Build a REST API with Node.js and HarperDB",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -530,7 +542,7 @@
             "url": "https://amanhimself.dev//blog/firebase-config-in-a-react-app",
             "title": "How to setup a React App with a Firebase project",
             "summary": "How to setup a React App with a Firebase project",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -542,7 +554,7 @@
             "url": "https://amanhimself.dev//blog/styling-the-react-native-way",
             "title": "Styling The React Native Way",
             "summary": "Styling The React Native Way",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -554,7 +566,7 @@
             "url": "https://amanhimself.dev//blog/create-custom-headers-with-react-native-svg",
             "title": "How to create custom wavy headers with react-native-svg",
             "summary": "How to create custom wavy headers with react-native-svg",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -566,7 +578,7 @@
             "url": "https://amanhimself.dev//blog/material-ui-integration-with-react",
             "title": "How to integrate Material UI library in React apps",
             "summary": "How to integrate Material UI library in React apps",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -578,7 +590,7 @@
             "url": "https://amanhimself.dev//blog/chat-app-with-react-native-part-6",
             "title": "Chat app with React Native (Part 6) - Create a custom hook to change status bar styles",
             "summary": "Chat app with React Native (Part 6) - Create a custom hook to change status bar styles",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -590,7 +602,7 @@
             "url": "https://amanhimself.dev//blog/quarantine-pro-app",
             "title": "Creating \"Quarantine Pro\" — A Fun Learning Experiment in React Native",
             "summary": "Creating \"Quarantine Pro\" — A Fun Learning Experiment in React Native",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -602,7 +614,7 @@
             "url": "https://amanhimself.dev//blog/chat-app-with-react-native-part-5",
             "title": "Chat app with React Native (Part 5) - Create and Fetch Real-Time Messages with Firestore",
             "summary": "Chat app with React Native (Part 5) - Create and Fetch Real-Time Messages with Firestore",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -614,7 +626,7 @@
             "url": "https://amanhimself.dev//blog/integrate-apollo-client-in-react-native",
             "title": "How to integrate GraphQL and Apollo Client in React Native app",
             "summary": "How to integrate GraphQL and Apollo Client in React Native app",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -626,7 +638,7 @@
             "url": "https://amanhimself.dev//blog/chat-app-with-react-native-part-4",
             "title": "Chat app with React Native (part 4) - A guide to create Chat UI Screens with react-native-gifted-chat",
             "summary": "Chat app with React Native (part 4) - A guide to create Chat UI Screens with react-native-gifted-chat",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -638,7 +650,7 @@
             "url": "https://amanhimself.dev//blog/how-to-use-react-native-image-picker",
             "title": "An in-depth guide on how to use React Native Image Picker",
             "summary": "An in-depth guide on how to use React Native Image Picker",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -650,7 +662,7 @@
             "url": "https://amanhimself.dev//blog/chat-app-with-react-native-part-3",
             "title": "Chat app with React Native (part 3) - Create Firestore collections to store chat rooms",
             "summary": "Chat app with React Native (part 3) - Create Firestore collections to store chat rooms",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -662,7 +674,7 @@
             "url": "https://amanhimself.dev//blog/add-search-bar-to-a-flatlist-in-react-native",
             "title": "How to add a Search bar in a FlatList in React Native apps",
             "summary": "How to add a Search bar in a FlatList in React Native apps",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -674,7 +686,7 @@
             "url": "https://amanhimself.dev//blog/chat-app-with-react-native-part-2",
             "title": "Chat app with React Native (part 2) - Firebase Email Authentication with react-native-firebase",
             "summary": "Chat app with React Native (part 2) - Firebase Email Authentication with react-native-firebase",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -686,7 +698,7 @@
             "url": "https://amanhimself.dev//blog/blogging-tips-after-3-years",
             "title": "Blogging tips after 3 years and a 100+ posts",
             "summary": "Blogging tips after 3 years and a 100+ posts",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -698,7 +710,7 @@
             "url": "https://amanhimself.dev//blog/chat-app-with-react-native-part-1",
             "title": "Chat app with React Native (part 1) - Build reusable UI form elements using react-native-paper",
             "summary": "Chat app with React Native (part 1) - Build reusable UI form elements using react-native-paper",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -710,7 +722,7 @@
             "url": "https://amanhimself.dev//blog/create-custom-status-bar-hook-react-navigation",
             "title": "How to create a custom hook to change status bar styles for every screen using React Navigation",
             "summary": "How to create a custom hook to change status bar styles for every screen using React Navigation",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -722,7 +734,7 @@
             "url": "https://amanhimself.dev//blog/react-app-with-localstorage-api-and-hooks",
             "title": "Build an Expense Tracker app with React Hooks and LocalStorage API",
             "summary": "Build an Expense Tracker app with React Hooks and LocalStorage API",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -734,7 +746,7 @@
             "url": "https://amanhimself.dev//blog/nested-navigators-in-react-native",
             "title": "Nesting Tab and Stack navigators in React Native and Expo apps",
             "summary": "Nesting Tab and Stack navigators in React Native and Expo apps",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -746,7 +758,7 @@
             "url": "https://amanhimself.dev//blog/stack-navigator-with-react-navigation-v5",
             "title": "Getting Started with Stack Navigator using react-navigation 5 in React Native and Expo apps",
             "summary": "Getting Started with Stack Navigator using react-navigation 5 in React Native and Expo apps",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -758,7 +770,7 @@
             "url": "https://amanhimself.dev//blog/handle-navigation-in-webviews-react-native",
             "title": "How to handle navigation in WebViews in a React Native app",
             "summary": "How to handle navigation in WebViews in a React Native app",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -770,7 +782,7 @@
             "url": "https://amanhimself.dev//blog/getting-started-with-react-native-expo-hooks-2020",
             "title": "Getting Started with React Native and Expo using Hooks in 2020",
             "summary": "Getting Started with React Native and Expo using Hooks in 2020",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -782,7 +794,7 @@
             "url": "https://amanhimself.dev//blog/dark-mode-with-react-hooks",
             "title": "How to add Dark mode functionality with React Hooks",
             "summary": "How to add Dark mode functionality with React Hooks",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -794,7 +806,7 @@
             "url": "https://amanhimself.dev//blog/how-to-use-react-native-localize",
             "title": "How to use React Native Localize in React Native apps",
             "summary": "How to use React Native Localize in React Native apps",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -806,7 +818,7 @@
             "url": "https://amanhimself.dev//blog/push-notifications-android-apps-react-native",
             "title": "Implement Push notifications for Android apps with React Native",
             "summary": "Implement Push notifications for Android apps with React Native",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -818,7 +830,7 @@
             "url": "https://amanhimself.dev//blog/handle-different-field-types-in-react-native-forms",
             "title": "Handle different field types in React Native forms with formik and yup",
             "summary": "Handle different field types in React Native forms with formik and yup",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -830,7 +842,7 @@
             "url": "https://amanhimself.dev//blog/implement-forgot-password-firebase-react-native",
             "title": "How to implement Forgot Password feature in React Native with Firebase",
             "summary": "How to implement Forgot Password feature in React Native with Firebase",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -842,7 +854,7 @@
             "url": "https://amanhimself.dev//blog/tensorflow-image-classification-expo",
             "title": "Image Classification on React Native with TensorFlow.js and MobileNet",
             "summary": "Image Classification on React Native with TensorFlow.js and MobileNet",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -854,7 +866,7 @@
             "url": "https://amanhimself.dev//blog/build-validate-forms-with-react-native-formik-yup",
             "title": "Build and validate forms in React Native using Formik and Yup",
             "summary": "Build and validate forms in React Native using Formik and Yup",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -866,7 +878,7 @@
             "url": "https://amanhimself.dev//blog/create-app-themes-styled-components-redux",
             "title": "Changing app themes using React Native, Styled Components and Redux",
             "summary": "Changing app themes using React Native, Styled Components and Redux",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -878,7 +890,7 @@
             "url": "https://amanhimself.dev//blog/context-api-react-native-firebase",
             "title": "Using Context API with React Native",
             "summary": "Using Context API with React Native",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -890,7 +902,7 @@
             "url": "https://amanhimself.dev//blog/authentication-navigation-flow-in-react-native-apps",
             "title": "How Authentication Flow works in React Native apps using React Navigation 4.x",
             "summary": "How Authentication Flow works in React Native apps using React Navigation 4.x",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -902,7 +914,7 @@
             "url": "https://amanhimself.dev//blog/build-an-audio-player-in-react-native",
             "title": "How to Build an Audio Player in React Native",
             "summary": "How to Build an Audio Player in React Native",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -914,7 +926,7 @@
             "url": "https://amanhimself.dev//blog/not-hotdog-clone-react-native",
             "title": "Build a Not Hotdog clone with React Native",
             "summary": "Build a Not Hotdog clone with React Native",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -926,7 +938,7 @@
             "url": "https://amanhimself.dev//blog/building-offline-react-native-apps-with-asyncstorage",
             "title": "Building offline React Native apps with AsyncStorage",
             "summary": "Building offline React Native apps with AsyncStorage",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -938,7 +950,7 @@
             "url": "https://amanhimself.dev//blog/how-to-use-the-geolocation-api-in-a-react-native-app",
             "title": "How to use the Geolocation API in a React Native app",
             "summary": "How to use the Geolocation API in a React Native app",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -950,7 +962,7 @@
             "url": "https://amanhimself.dev//blog/how-to-build-xylophone-app-with-expo",
             "title": "How to build a xylophone app with Audio API, React Native, and Expo",
             "summary": "How to build a xylophone app with Audio API, React Native, and Expo",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -962,7 +974,7 @@
             "url": "https://amanhimself.dev//blog/build-chatbot-dialogflow-nodejs-webhooks",
             "title": "How to Create a Chatbot with Dialogflow, NodeJS, and Webhooks",
             "summary": "How to Create a Chatbot with Dialogflow, NodeJS, and Webhooks",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -974,7 +986,7 @@
             "url": "https://amanhimself.dev//blog/introduction-to-react-router-v4-with-reactjs",
             "title": "Using React Router to Optimize Single Page Applications (SPAs)",
             "summary": "Using React Router to Optimize Single Page Applications (SPAs)",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -986,7 +998,7 @@
             "url": "https://amanhimself.dev//blog/to-travel-a-tech-conference-and-one-million-views-a-recap",
             "title": "To Travel, A Tech Conference and One Million views - a Recap",
             "summary": "To Travel, A Tech Conference and One Million views - a Recap",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -998,7 +1010,7 @@
             "url": "https://amanhimself.dev//blog/how-to-integrate-firebase-firestore-react-and-crowdbotics-platform",
             "title": "How to integrate Firebase and Firestore cloud database with a React application",
             "summary": "How to integrate Firebase and Firestore cloud database with a React application",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1010,19 +1022,7 @@
             "url": "https://amanhimself.dev//blog/setup-a-react-app-with-typescript-storybook",
             "title": "How to Setup a React App with TypeScript, Storybook",
             "summary": "How to Setup a React App with TypeScript, Storybook",
-            "date_modified": "2022-04-03T05:35:01.443Z",
-            "author": {
-                "name": "Aman Mittal",
-                "url": "https://twitter.com/amanhimself"
-            }
-        },
-        {
-            "id": "https://amanhimself.dev//blog/build-a-twitter-clone-server-with-apollo-graphql-nodejs",
-            "content_html": "---\ntitle: 'Build a Twitter Clone Server with Apollo, GraphQL, Nodejs, and Crowdbotics'\ndate: '2019-06-13'\nslug: 'build-a-twitter-clone-server-with-apollo-graphql-nodejs'\nthumbnail: '/thumbnails/node.png'\ntag: 'nodejs'\ncanonicalUrl: 'https://crowdbotics.ghost.io/build-a-twitter-clone-server-with-apollo-graphql-nodejs-and-crowdbotics/'\n---\n\n![cover_image](https://i.imgur.com/Cg4Xsqq.jpg)\n\n> [Originally published at Crowdbotics](https://crowdbotics.ghost.io/build-a-twitter-clone-server-with-apollo-graphql-nodejs-and-crowdbotics/)\n\nIn the last few years, GraphQL becomes a popular choice to build an API. It serves a great alternative to the REST APIs approach. Not only it is an open source application-layer query language, in comparison to REST, GraphQL fulfills the approach that a client request's only the desired set of information from the server in a single request.\n\nIn this tutorial, you will be building a server using Node.js, Express and Apollo server library. You will learn how to efficiently build a server from scratch that implements GraphQL as the query language to create the API. We will be using MongoDB to create a local instance of the database and store the application data.\n\nTo learn more about the basics of GraphQL, how it differs from REST, its building blocks like schema, resolvers, queries, and mutations, please refer to the previous post **[Creating a GraphQL Server with Nodejs](https://medium.com/crowdbotics/creating-a-graphql-server-with-nodejs-ef9814a7e0e6)**. If you have an idea of what they are, you can continue to read this tutorial.\n\nTLDR;\n\n- Requirements\n- Getting Started\n- Running your first GraphQL server\n- Adding a Mongoose Schema\n- How to define GraphQL Types, Queries and Mutations\n- Real-time Database Updates with GraphQL API\n- Conclusion\n\n## Requirements\n\nIn order to follow this tutorial, you are required to have installed the following on your local machine:\n\n- Nodejs `v8.x.x` or higher installed along with `npm/yarn` as the package manager\n\n## Getting Started\n\nCreate a new empty directory and initialize it with a `package.json` file by running the following commands from a terminal window.\n\n```shell\n# create new directory\nmkdir twitter-clone-apollo-server\n\n# traverse inside the directory\ncd twitter-clone-apollo-server\n\n# initialize the package.json file\nnpm init  --yes\n```\n\nThe last command will create a `package.json` file. We are going to build an integrated server using [Expressjs](https://expressjs.com/) and Apollo server.\n\n> **Wait, what is an Apollo Server?**\n\nThe Apollo Server is the server part of GraphQL where you manage and define a GraphQL API and handle responses that are sent back to the client in response to a network request.\n\nWhen it comes to building a GraphQL API using Apollo on the server, there are two ways you can do that. One is called _standalone_ which is irrespective of the server-side web framework (_such as Express, Koa, Hapi and so on_) using the `apollo-server` library. This package is kept library-agnostic, so it is possible to connect it with a lot of third-party libraries in client and server applications.\n\nAnother way is to use the community maintained packages such as `apollo-server-express`. Most popular HTTP Node.js frameworks are having their own community packages that you can check [here](https://github.com/apollographql/apollo-server/tree/master/packages). We are going to leverage this approach.\n\nRun the following command to install the dependencies.\n\n```shell\nnpm install --save express apollo-server-express graphql\n```\n\nTo verify if these dependencies are installed, open `package.json` file in your favorite code editor and you will get a similar result like below.\n\n```json\n{\n  \"name\": \"twitter-clone-apollo-server\",\n  \"version\": \"0.0.1\",\n  \"description\": \"\",\n  \"main\": \"index.js\",\n  \"scripts\": {\n    \"test\": \"echo \\\"Error: no test specified\\\" && exit 1\"\n  },\n  \"keywords\": [],\n  \"author\": \"Aman Mittal <amandeepmittal@live.com> (www.amanhimself.dev)\",\n  \"license\": \"MIT\",\n  \"dependencies\": {\n    \"apollo-server-express\": \"^2.5.0\",\n    \"express\": \"^4.17.0\",\n    \"graphql\": \"^14.3.0\"\n  }\n}\n```\n\n## Running your first GraphQL server\n\nTo understand how Apollo Server works, let us create a small bare minimum GraphQL server with the Express framework. Please note that, if you already know how to integrate Apollo server with express and create a hello world example, you are free to skip this section and move on to the next one.\n\nAt the root of your project, create a new file: `index.js` with the following code. We start by requiring the required dependencies in order to create this server and make it work.\n\n```js\nconst express = require('express');\nconst { ApolloServer, gql } = require('apollo-server-express');\n```\n\nThen define some constants such as for an instance of the Express application, `app` and a port number where the local instance of the server is going to run. Note that, the `port` is currently using an environment value plus the default value of `5000` as the local port number if there is not environment value provided via `process.env.PORT`.\n\n```js\nconst app = express();\nconst port = process.env.PORT || 5000;\n```\n\nThe `process.env`global variable is injected by the Node at runtime for your application to use and it represents the state of the system environment your application is in when it starts.\n\nNext, we define a basic schema. A **schema** in GraphQL is defined at the server in the form of objects. Each object corresponds to data types such that they can be queried upon. This object type has a name and fields. Like the below snippet, there is `Query` called `hello` which is of type string.\n\n```js\nconst typeDefs = gql`\n  type Query {\n    hello: String\n  }\n`;\n```\n\nThere are pre-defined scalar types in GraphQL like the string in the above snippet. Visit this **[link](https://graphql.org/learn/schema/)** to read more about them. **Queries** are what you use to make a request to a GraphQL API.\n\nIn order to execute this query, you need a resolver. Resolvers are the link between the schema and the data. They are the functions that contain the logic behind a query or mutation. They are used to retrieve data and return it on the relevant client request.\n\n```js\nconst resolvers = {\n  Query: {\n    hello: () => 'Hello world!'\n  }\n};\n```\n\nIn the above snippet, we are defining a resolver that will return the string `Hello World` on querying the server. If you have built servers before using Express, you can think of a resolver as a controller where each controller is built for a specific route.\n\nLastly, we need to use a middleware function from the Apollo Server Express library to instantiate the GraphQL API.\n\n```js\nconst server = new ApolloServer({ typeDefs, resolvers });\n\nserver.applyMiddleware({ app });\n```\n\nHere is the complete code for `index.js` file.\n\n```js\nconst express = require('express');\nconst { ApolloServer, gql } = require('apollo-server-express');\n\nconst app = express();\nconst port = process.env.PORT || 5000;\n\nconst typeDefs = gql`\n  type Query {\n    hello: String\n  }\n`;\n\nconst resolvers = {\n  Query: {\n    hello: () => 'Hello world!'\n  }\n};\n\nconst server = new ApolloServer({ typeDefs, resolvers });\n\nserver.applyMiddleware({ app });\n\napp.listen(port, () =>\n  console.log(\n    `🚀 Server ready at http://localhost:${port}${server.graphqlPath}`\n  )\n);\n```\n\nNow, go back to the terminal window and run `node index.js` command to trigger the server up and running. Visit `http://localhost:5000/graphql` in a browser window to see that API endpoint in action. Apollo comes with a default playground in order to test the API.\n\n<img src='https://crowdbotics.ghost.io/content/images/2019/05/ss1-4.png' />\n\n## Adding a Mongoose Schema\n\nLet us mongoose to create a MongoDB based database model inside the Express server app. To proceed, you will have to install the dependency first. Go to your terminal window, terminate the `node index.js` command first and then run the following.\n\n```shell\nnpm install -S mongoose\n```\n\nOnce this dependency is installed, create a new folder called `models`. Inside it, create a new file called `TweetModel.js`. This will be responsible for holding the mongoose schema. For those of who do not know what mongoose, well, it is an ORM (object relation mapper) that helps the server app written in Node.js/Expressjs to communicate with the MongoDB database.\n\nMongoose allows you to define objects with a strongly typed schema that is mapped as a MongoDB collection. This schema architecture allows us to provide an organized shape to the document inside the MongoDB collection where the data is stored.\n\nStart by importing the dependency at the top of the file and then connect the ORM to a local instance of the MongoDB database in the form of a URI: `mongodb://localhost:27017/twitter`. The port `27017` is the default port number where MongoDB runs on your local dev machine irrespective of the operating system you are using. The `/twitter` in the end is just the name of the database instance. You can name it anything. `mongoose.connect()` the function takes this URI as the first argument.\n\n_To learn more about how to create and use MongoDB in the cloud using MongoDB atlas, read our earlier post [here](https://medium.com/crowdbotics/how-to-build-a-serverless-backend-with-aws-lambda-and-nodejs-e0d1257086b4)._\n\nOpen `TweetModel.js` file and add the following.\n\n```js\nconst mongoose = require('mongoose');\n\nmongoose.Promise = global.Promise;\nmongoose.connect('mongodb://localhost:27017/twitter', {\n  useNewUrlParser: true\n});\n\nconst Schema = mongoose.Schema;\n\nconst tweetSchema = new Schema({\n  tweet: String,\n  author: String\n});\n\nconst TweetModel = mongoose.model('Tweet', tweetSchema);\n```\n\nNotice the `tweetSchema` object. It only contains three fields at the moment. The whole `tweet` as a string, and the name of the author who tweets. It is important to take notice of this schema, later, when you are going to create GraphQL queries, this is the same schema pattern you will have to follow.\n\nNow, let us define the CRUD operations that this current Tweet model is going to perform on the MongoDB instance. Add the below snippet of code to `TweetModel.js` after you have defined the `TweetModel` itself.\n\n```js\nexport default {\n  getTweets: () => TweetModel.find().sort({ _id: -1 }),\n  getTweet: _id => TweetModel.findOne({ _id }),\n  createTweet: args => TweetModel(args).save(),\n  deleteTweet: args => {\n    const { _id } = args;\n\n    TweetModel.remove({ _id }, error => {\n      if (error) {\n        console.log('Error Removing: ', error);\n      }\n    });\n\n    return args;\n  },\n  updateTweet: args => {\n    const { _id, tweet } = args;\n\n    TweetModel.update(\n      { _id },\n      {\n        $set: { tweet }\n      },\n      { upsert: true },\n      error => {\n        if (error) {\n          console.log('Error Updating: ', error);\n        }\n      }\n    );\n\n    args.author = 'User123'; // temporary user\n\n    return args;\n  }\n};\n```\n\nUsing these functions that are defined in the above code snippet, it will be possible to perform CRUD operations with the MongoDB database. These functions perform all sort of functions like getting a tweet by its `id`, getting all tweets, creating a new tweet, and updating and deleting a specific tweet. The `id` to each tweet document is going to be generated automatically by the MongoDB database. Each of these function is taking an argument by default and that is the name of the author of the tweet. To keep this demo approachable and bare minimum, the author name right now is hard coded.\n\n## How to define GraphQL Types, Queries and Mutations\n\nTo define queries, mutations, and resolvers, create a new folder called `api`. Inside this folder create two new files: `Types.js` and `Resolvers.js`.\n\nOpen `Types.js` file and add the following snippet to add the type of the individual tweet based on the mongoose schema and our first mutation to create a new tweet.\n\n```js\nconst { gql } = require('apollo-server-express');\n\nconst typeDefs = gql`\n  # Type(s)\n\n  type Tweet {\n    _id: String\n    tweet: String\n    author: String\n  }\n\n  # Query(ies)\n  type Query {\n    getTweet(_id: String): Tweet\n    getTweets: [Tweet]\n  }\n\n  # Mutation(s)\n\n  type Mutation {\n    createTweet(tweet: String, author: String): Tweet\n\n    deleteTweet(_id: String): Tweet\n\n    updateTweet(_id: String!, tweet: String!): Tweet\n  }\n`;\n\nmodule.exports = typeDefs;\n```\n\nIn the above snippet, we define the type of the `Tweet` that will be used in every query and mutation. We are using `gql` for the graphql template literal. You can comment inside the GraphQL template literal using a hash `#`. Now open up the `Resolvers.js` file and add the following.\n\n```js\nconst TweetModel = require('../models/TweetModel');\n\nconst resolvers = {\n  Query: {\n    getTweet: _id => TweetModel.getTweet(_id),\n\n    getTweets: () => TweetModel.getTweets()\n  },\n\n  Mutation: {\n    createTweet: (_, args) => TweetModel.createTweet(args),\n\n    deleteTweet: (_, args) => TweetModel.deleteTweet(args),\n\n    updateTweet: (_, args) => TweetModel.updateTweet(args)\n  }\n};\n\nmodule.exports = resolvers;\n```\n\nIn the above file, start by importing the `TweetModel` since it will be used to extend GraphQL queries and mutations (_defined above_) to communicate with the MongoDB database in real time.\n\nCurrently, the `index.js` file contains the `typeDefs` and resolver from the previous hello world example. Let us import these two files from the `api/` directory to replace them.\n\n```js\nconst express = require('express');\nconst { ApolloServer } = require('apollo-server-express');\n\nconst typeDefs = require('./api/Types');\nconst resolvers = require('./api/Resolvers');\n\nconst app = express();\nconst port = process.env.PORT || 5000;\n\nconst server = new ApolloServer({\n  typeDefs,\n  resolvers\n});\n\nserver.applyMiddleware({ app });\n\napp.listen(port, () =>\n  console.log(\n    `🚀 Server ready at http://localhost:${port}${server.graphqlPath}`\n  )\n);\n```\n\nNow, go to the terminal window and run `node index.js` command. If you get zero errors, that means your server is running successfully. Also, make sure if you are using the local instance of MongoDB database, make sure to run the command `mongod` to kickstart the MongoDB service.\n\n## Real-time Database Updates with GraphQL API\n\nOnce the server is running, visit the Apollo playground URL `http://localhost:5000/graphql` and run the following mutation.\n\n```graphql\nmutation {\n  createTweet(tweet: \"👋 Hello\", author: \"User12\") {\n    _id\n    tweet\n    author\n  }\n}\n```\n\nOn running this mutation you will get the following result.\n\n<img src='https://crowdbotics.ghost.io/content/images/2019/05/ss2-3.png' />\n\nAdd a bunch of more tweets by running the above mutation again. Now, let us run a query to fetch all the tweets from the database.\n\n```graphql\nquery {\n  getTweets {\n    _id\n    tweet\n    author\n  }\n}\n```\n\nWriting the keyword `query` is an option only in the case of running a query. This is not possible in the case of running a mutation operation. You have to specify the keyword `mutation`. The above query fetches the unique identifier of each tweet in the database as well as the tweet and the name of the author itself. See the result below.\n\n<img src='https://crowdbotics.ghost.io/content/images/2019/05/ss3-4.png' />\n\nTo delete a tweet from the database, all you have to provide is the `_id` of the tweet and provide sub-fields. Providing at least sub-field is necessary for the delete mutation to run, otherwise, it will throw an error.\n\n```graphql\nmutation {\n  deleteTweet(_id: \"5ce1a2f4f1ef7153d0fc7776\") {\n    tweet\n    author\n  }\n}\n```\n\nYou will get the following result.\n\n<img src='https://crowdbotics.ghost.io/content/images/2019/05/ss4-3.png' />\n\nRun the query to fetch all the tweets to see how many tweets are left.\n\n<img src='https://crowdbotics.ghost.io/content/images/2019/05/ss5-4.png' />\n\nThe last operation is to update a tweet. Again, it is a mutation. All you to provide is the updated tweet in the form of a string and `_id` of the tweet you want to update.\n\n```graphql\nmutation {\n  updateTweet(\n    _id: \"5cd7cb5f19c9b4673f860600\"\n    tweet: \"This could be my last tweet...\"\n  ) {\n    _id\n    tweet\n    author\n  }\n}\n```\n\nThe output you get:\n\n<img src='https://crowdbotics.ghost.io/content/images/2019/05/ss6-1.png' />\n\nBy fetching all the tweets you can verify that the updating mutation worked!\n\n<img src='https://crowdbotics.ghost.io/content/images/2019/05/ss7-2.png' />\n\n## Conclusion\n\nIf you completed this tutorial, **Congratulations!🎉**\n\nNot only did you learn how to configure and integrate an Express web server with the Apollo server library and MongoDB database. You ended up building complete CRUD functionality.\n\nApollo Server is an open source project and is one the most stable solution to create GraphQL APIs for full-stack applications. It also supports client-side out of the box for React, Vue, Angular, Meteor, and Ember as well as Native mobile development with Swift and Java.\n\nYou can find the complete code for the tutorial in this **[Github repository](https://github.com/amandeepmittal/twitter-clone-apollo-server)**.\n",
-            "url": "https://amanhimself.dev//blog/build-a-twitter-clone-server-with-apollo-graphql-nodejs",
-            "title": "Build a Twitter Clone Server with Apollo, GraphQL, Nodejs, and Crowdbotics",
-            "summary": "Build a Twitter Clone Server with Apollo, GraphQL, Nodejs, and Crowdbotics",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1034,7 +1034,19 @@
             "url": "https://amanhimself.dev//blog/build-a-custom-modal-with-the-animated-api-in-react-native",
             "title": "Build a Custom Modal with the Animated API in React Native",
             "summary": "Build a Custom Modal with the Animated API in React Native",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
+            "author": {
+                "name": "Aman Mittal",
+                "url": "https://twitter.com/amanhimself"
+            }
+        },
+        {
+            "id": "https://amanhimself.dev//blog/build-a-twitter-clone-server-with-apollo-graphql-nodejs",
+            "content_html": "---\ntitle: 'Build a Twitter Clone Server with Apollo, GraphQL, Nodejs, and Crowdbotics'\ndate: '2019-06-13'\nslug: 'build-a-twitter-clone-server-with-apollo-graphql-nodejs'\nthumbnail: '/thumbnails/node.png'\ntag: 'nodejs'\ncanonicalUrl: 'https://crowdbotics.ghost.io/build-a-twitter-clone-server-with-apollo-graphql-nodejs-and-crowdbotics/'\n---\n\n![cover_image](https://i.imgur.com/Cg4Xsqq.jpg)\n\n> [Originally published at Crowdbotics](https://crowdbotics.ghost.io/build-a-twitter-clone-server-with-apollo-graphql-nodejs-and-crowdbotics/)\n\nIn the last few years, GraphQL becomes a popular choice to build an API. It serves a great alternative to the REST APIs approach. Not only it is an open source application-layer query language, in comparison to REST, GraphQL fulfills the approach that a client request's only the desired set of information from the server in a single request.\n\nIn this tutorial, you will be building a server using Node.js, Express and Apollo server library. You will learn how to efficiently build a server from scratch that implements GraphQL as the query language to create the API. We will be using MongoDB to create a local instance of the database and store the application data.\n\nTo learn more about the basics of GraphQL, how it differs from REST, its building blocks like schema, resolvers, queries, and mutations, please refer to the previous post **[Creating a GraphQL Server with Nodejs](https://medium.com/crowdbotics/creating-a-graphql-server-with-nodejs-ef9814a7e0e6)**. If you have an idea of what they are, you can continue to read this tutorial.\n\nTLDR;\n\n- Requirements\n- Getting Started\n- Running your first GraphQL server\n- Adding a Mongoose Schema\n- How to define GraphQL Types, Queries and Mutations\n- Real-time Database Updates with GraphQL API\n- Conclusion\n\n## Requirements\n\nIn order to follow this tutorial, you are required to have installed the following on your local machine:\n\n- Nodejs `v8.x.x` or higher installed along with `npm/yarn` as the package manager\n\n## Getting Started\n\nCreate a new empty directory and initialize it with a `package.json` file by running the following commands from a terminal window.\n\n```shell\n# create new directory\nmkdir twitter-clone-apollo-server\n\n# traverse inside the directory\ncd twitter-clone-apollo-server\n\n# initialize the package.json file\nnpm init  --yes\n```\n\nThe last command will create a `package.json` file. We are going to build an integrated server using [Expressjs](https://expressjs.com/) and Apollo server.\n\n> **Wait, what is an Apollo Server?**\n\nThe Apollo Server is the server part of GraphQL where you manage and define a GraphQL API and handle responses that are sent back to the client in response to a network request.\n\nWhen it comes to building a GraphQL API using Apollo on the server, there are two ways you can do that. One is called _standalone_ which is irrespective of the server-side web framework (_such as Express, Koa, Hapi and so on_) using the `apollo-server` library. This package is kept library-agnostic, so it is possible to connect it with a lot of third-party libraries in client and server applications.\n\nAnother way is to use the community maintained packages such as `apollo-server-express`. Most popular HTTP Node.js frameworks are having their own community packages that you can check [here](https://github.com/apollographql/apollo-server/tree/master/packages). We are going to leverage this approach.\n\nRun the following command to install the dependencies.\n\n```shell\nnpm install --save express apollo-server-express graphql\n```\n\nTo verify if these dependencies are installed, open `package.json` file in your favorite code editor and you will get a similar result like below.\n\n```json\n{\n  \"name\": \"twitter-clone-apollo-server\",\n  \"version\": \"0.0.1\",\n  \"description\": \"\",\n  \"main\": \"index.js\",\n  \"scripts\": {\n    \"test\": \"echo \\\"Error: no test specified\\\" && exit 1\"\n  },\n  \"keywords\": [],\n  \"author\": \"Aman Mittal <amandeepmittal@live.com> (www.amanhimself.dev)\",\n  \"license\": \"MIT\",\n  \"dependencies\": {\n    \"apollo-server-express\": \"^2.5.0\",\n    \"express\": \"^4.17.0\",\n    \"graphql\": \"^14.3.0\"\n  }\n}\n```\n\n## Running your first GraphQL server\n\nTo understand how Apollo Server works, let us create a small bare minimum GraphQL server with the Express framework. Please note that, if you already know how to integrate Apollo server with express and create a hello world example, you are free to skip this section and move on to the next one.\n\nAt the root of your project, create a new file: `index.js` with the following code. We start by requiring the required dependencies in order to create this server and make it work.\n\n```js\nconst express = require('express');\nconst { ApolloServer, gql } = require('apollo-server-express');\n```\n\nThen define some constants such as for an instance of the Express application, `app` and a port number where the local instance of the server is going to run. Note that, the `port` is currently using an environment value plus the default value of `5000` as the local port number if there is not environment value provided via `process.env.PORT`.\n\n```js\nconst app = express();\nconst port = process.env.PORT || 5000;\n```\n\nThe `process.env`global variable is injected by the Node at runtime for your application to use and it represents the state of the system environment your application is in when it starts.\n\nNext, we define a basic schema. A **schema** in GraphQL is defined at the server in the form of objects. Each object corresponds to data types such that they can be queried upon. This object type has a name and fields. Like the below snippet, there is `Query` called `hello` which is of type string.\n\n```js\nconst typeDefs = gql`\n  type Query {\n    hello: String\n  }\n`;\n```\n\nThere are pre-defined scalar types in GraphQL like the string in the above snippet. Visit this **[link](https://graphql.org/learn/schema/)** to read more about them. **Queries** are what you use to make a request to a GraphQL API.\n\nIn order to execute this query, you need a resolver. Resolvers are the link between the schema and the data. They are the functions that contain the logic behind a query or mutation. They are used to retrieve data and return it on the relevant client request.\n\n```js\nconst resolvers = {\n  Query: {\n    hello: () => 'Hello world!'\n  }\n};\n```\n\nIn the above snippet, we are defining a resolver that will return the string `Hello World` on querying the server. If you have built servers before using Express, you can think of a resolver as a controller where each controller is built for a specific route.\n\nLastly, we need to use a middleware function from the Apollo Server Express library to instantiate the GraphQL API.\n\n```js\nconst server = new ApolloServer({ typeDefs, resolvers });\n\nserver.applyMiddleware({ app });\n```\n\nHere is the complete code for `index.js` file.\n\n```js\nconst express = require('express');\nconst { ApolloServer, gql } = require('apollo-server-express');\n\nconst app = express();\nconst port = process.env.PORT || 5000;\n\nconst typeDefs = gql`\n  type Query {\n    hello: String\n  }\n`;\n\nconst resolvers = {\n  Query: {\n    hello: () => 'Hello world!'\n  }\n};\n\nconst server = new ApolloServer({ typeDefs, resolvers });\n\nserver.applyMiddleware({ app });\n\napp.listen(port, () =>\n  console.log(\n    `🚀 Server ready at http://localhost:${port}${server.graphqlPath}`\n  )\n);\n```\n\nNow, go back to the terminal window and run `node index.js` command to trigger the server up and running. Visit `http://localhost:5000/graphql` in a browser window to see that API endpoint in action. Apollo comes with a default playground in order to test the API.\n\n<img src='https://crowdbotics.ghost.io/content/images/2019/05/ss1-4.png' />\n\n## Adding a Mongoose Schema\n\nLet us mongoose to create a MongoDB based database model inside the Express server app. To proceed, you will have to install the dependency first. Go to your terminal window, terminate the `node index.js` command first and then run the following.\n\n```shell\nnpm install -S mongoose\n```\n\nOnce this dependency is installed, create a new folder called `models`. Inside it, create a new file called `TweetModel.js`. This will be responsible for holding the mongoose schema. For those of who do not know what mongoose, well, it is an ORM (object relation mapper) that helps the server app written in Node.js/Expressjs to communicate with the MongoDB database.\n\nMongoose allows you to define objects with a strongly typed schema that is mapped as a MongoDB collection. This schema architecture allows us to provide an organized shape to the document inside the MongoDB collection where the data is stored.\n\nStart by importing the dependency at the top of the file and then connect the ORM to a local instance of the MongoDB database in the form of a URI: `mongodb://localhost:27017/twitter`. The port `27017` is the default port number where MongoDB runs on your local dev machine irrespective of the operating system you are using. The `/twitter` in the end is just the name of the database instance. You can name it anything. `mongoose.connect()` the function takes this URI as the first argument.\n\n_To learn more about how to create and use MongoDB in the cloud using MongoDB atlas, read our earlier post [here](https://medium.com/crowdbotics/how-to-build-a-serverless-backend-with-aws-lambda-and-nodejs-e0d1257086b4)._\n\nOpen `TweetModel.js` file and add the following.\n\n```js\nconst mongoose = require('mongoose');\n\nmongoose.Promise = global.Promise;\nmongoose.connect('mongodb://localhost:27017/twitter', {\n  useNewUrlParser: true\n});\n\nconst Schema = mongoose.Schema;\n\nconst tweetSchema = new Schema({\n  tweet: String,\n  author: String\n});\n\nconst TweetModel = mongoose.model('Tweet', tweetSchema);\n```\n\nNotice the `tweetSchema` object. It only contains three fields at the moment. The whole `tweet` as a string, and the name of the author who tweets. It is important to take notice of this schema, later, when you are going to create GraphQL queries, this is the same schema pattern you will have to follow.\n\nNow, let us define the CRUD operations that this current Tweet model is going to perform on the MongoDB instance. Add the below snippet of code to `TweetModel.js` after you have defined the `TweetModel` itself.\n\n```js\nexport default {\n  getTweets: () => TweetModel.find().sort({ _id: -1 }),\n  getTweet: _id => TweetModel.findOne({ _id }),\n  createTweet: args => TweetModel(args).save(),\n  deleteTweet: args => {\n    const { _id } = args;\n\n    TweetModel.remove({ _id }, error => {\n      if (error) {\n        console.log('Error Removing: ', error);\n      }\n    });\n\n    return args;\n  },\n  updateTweet: args => {\n    const { _id, tweet } = args;\n\n    TweetModel.update(\n      { _id },\n      {\n        $set: { tweet }\n      },\n      { upsert: true },\n      error => {\n        if (error) {\n          console.log('Error Updating: ', error);\n        }\n      }\n    );\n\n    args.author = 'User123'; // temporary user\n\n    return args;\n  }\n};\n```\n\nUsing these functions that are defined in the above code snippet, it will be possible to perform CRUD operations with the MongoDB database. These functions perform all sort of functions like getting a tweet by its `id`, getting all tweets, creating a new tweet, and updating and deleting a specific tweet. The `id` to each tweet document is going to be generated automatically by the MongoDB database. Each of these function is taking an argument by default and that is the name of the author of the tweet. To keep this demo approachable and bare minimum, the author name right now is hard coded.\n\n## How to define GraphQL Types, Queries and Mutations\n\nTo define queries, mutations, and resolvers, create a new folder called `api`. Inside this folder create two new files: `Types.js` and `Resolvers.js`.\n\nOpen `Types.js` file and add the following snippet to add the type of the individual tweet based on the mongoose schema and our first mutation to create a new tweet.\n\n```js\nconst { gql } = require('apollo-server-express');\n\nconst typeDefs = gql`\n  # Type(s)\n\n  type Tweet {\n    _id: String\n    tweet: String\n    author: String\n  }\n\n  # Query(ies)\n  type Query {\n    getTweet(_id: String): Tweet\n    getTweets: [Tweet]\n  }\n\n  # Mutation(s)\n\n  type Mutation {\n    createTweet(tweet: String, author: String): Tweet\n\n    deleteTweet(_id: String): Tweet\n\n    updateTweet(_id: String!, tweet: String!): Tweet\n  }\n`;\n\nmodule.exports = typeDefs;\n```\n\nIn the above snippet, we define the type of the `Tweet` that will be used in every query and mutation. We are using `gql` for the graphql template literal. You can comment inside the GraphQL template literal using a hash `#`. Now open up the `Resolvers.js` file and add the following.\n\n```js\nconst TweetModel = require('../models/TweetModel');\n\nconst resolvers = {\n  Query: {\n    getTweet: _id => TweetModel.getTweet(_id),\n\n    getTweets: () => TweetModel.getTweets()\n  },\n\n  Mutation: {\n    createTweet: (_, args) => TweetModel.createTweet(args),\n\n    deleteTweet: (_, args) => TweetModel.deleteTweet(args),\n\n    updateTweet: (_, args) => TweetModel.updateTweet(args)\n  }\n};\n\nmodule.exports = resolvers;\n```\n\nIn the above file, start by importing the `TweetModel` since it will be used to extend GraphQL queries and mutations (_defined above_) to communicate with the MongoDB database in real time.\n\nCurrently, the `index.js` file contains the `typeDefs` and resolver from the previous hello world example. Let us import these two files from the `api/` directory to replace them.\n\n```js\nconst express = require('express');\nconst { ApolloServer } = require('apollo-server-express');\n\nconst typeDefs = require('./api/Types');\nconst resolvers = require('./api/Resolvers');\n\nconst app = express();\nconst port = process.env.PORT || 5000;\n\nconst server = new ApolloServer({\n  typeDefs,\n  resolvers\n});\n\nserver.applyMiddleware({ app });\n\napp.listen(port, () =>\n  console.log(\n    `🚀 Server ready at http://localhost:${port}${server.graphqlPath}`\n  )\n);\n```\n\nNow, go to the terminal window and run `node index.js` command. If you get zero errors, that means your server is running successfully. Also, make sure if you are using the local instance of MongoDB database, make sure to run the command `mongod` to kickstart the MongoDB service.\n\n## Real-time Database Updates with GraphQL API\n\nOnce the server is running, visit the Apollo playground URL `http://localhost:5000/graphql` and run the following mutation.\n\n```graphql\nmutation {\n  createTweet(tweet: \"👋 Hello\", author: \"User12\") {\n    _id\n    tweet\n    author\n  }\n}\n```\n\nOn running this mutation you will get the following result.\n\n<img src='https://crowdbotics.ghost.io/content/images/2019/05/ss2-3.png' />\n\nAdd a bunch of more tweets by running the above mutation again. Now, let us run a query to fetch all the tweets from the database.\n\n```graphql\nquery {\n  getTweets {\n    _id\n    tweet\n    author\n  }\n}\n```\n\nWriting the keyword `query` is an option only in the case of running a query. This is not possible in the case of running a mutation operation. You have to specify the keyword `mutation`. The above query fetches the unique identifier of each tweet in the database as well as the tweet and the name of the author itself. See the result below.\n\n<img src='https://crowdbotics.ghost.io/content/images/2019/05/ss3-4.png' />\n\nTo delete a tweet from the database, all you have to provide is the `_id` of the tweet and provide sub-fields. Providing at least sub-field is necessary for the delete mutation to run, otherwise, it will throw an error.\n\n```graphql\nmutation {\n  deleteTweet(_id: \"5ce1a2f4f1ef7153d0fc7776\") {\n    tweet\n    author\n  }\n}\n```\n\nYou will get the following result.\n\n<img src='https://crowdbotics.ghost.io/content/images/2019/05/ss4-3.png' />\n\nRun the query to fetch all the tweets to see how many tweets are left.\n\n<img src='https://crowdbotics.ghost.io/content/images/2019/05/ss5-4.png' />\n\nThe last operation is to update a tweet. Again, it is a mutation. All you to provide is the updated tweet in the form of a string and `_id` of the tweet you want to update.\n\n```graphql\nmutation {\n  updateTweet(\n    _id: \"5cd7cb5f19c9b4673f860600\"\n    tweet: \"This could be my last tweet...\"\n  ) {\n    _id\n    tweet\n    author\n  }\n}\n```\n\nThe output you get:\n\n<img src='https://crowdbotics.ghost.io/content/images/2019/05/ss6-1.png' />\n\nBy fetching all the tweets you can verify that the updating mutation worked!\n\n<img src='https://crowdbotics.ghost.io/content/images/2019/05/ss7-2.png' />\n\n## Conclusion\n\nIf you completed this tutorial, **Congratulations!🎉**\n\nNot only did you learn how to configure and integrate an Express web server with the Apollo server library and MongoDB database. You ended up building complete CRUD functionality.\n\nApollo Server is an open source project and is one the most stable solution to create GraphQL APIs for full-stack applications. It also supports client-side out of the box for React, Vue, Angular, Meteor, and Ember as well as Native mobile development with Swift and Java.\n\nYou can find the complete code for the tutorial in this **[Github repository](https://github.com/amandeepmittal/twitter-clone-apollo-server)**.\n",
+            "url": "https://amanhimself.dev//blog/build-a-twitter-clone-server-with-apollo-graphql-nodejs",
+            "title": "Build a Twitter Clone Server with Apollo, GraphQL, Nodejs, and Crowdbotics",
+            "summary": "Build a Twitter Clone Server with Apollo, GraphQL, Nodejs, and Crowdbotics",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1046,7 +1058,7 @@
             "url": "https://amanhimself.dev//blog/use-emotion-js-with-react-native",
             "title": "Building Stylistic UIs with Emotion-JS for React Native",
             "summary": "Building Stylistic UIs with Emotion-JS for React Native",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1058,7 +1070,7 @@
             "url": "https://amanhimself.dev//blog/user-authentication-with-amplify-in-a-react-native-and-expo-app",
             "title": "User Authentication with Amplify in a React Native and Expo app",
             "summary": "User Authentication with Amplify in a React Native and Expo app",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1070,7 +1082,7 @@
             "url": "https://amanhimself.dev//blog/building-a-react-native-mobile-app-with-aws-amplify-and-expo",
             "title": "Building a React Native Mobile App with AWS Amplify and Expo",
             "summary": "Building a React Native Mobile App with AWS Amplify and Expo",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1082,7 +1094,7 @@
             "url": "https://amanhimself.dev//blog/how-i-configure-vscode-for-everything",
             "title": "How I Configure VSCode for Everything",
             "summary": "How I Configure VSCode for Everything",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1094,7 +1106,7 @@
             "url": "https://amanhimself.dev//blog/build-a-react-native-app-with-react-hooks",
             "title": "React Hooks Basics — Building a React Native App with React Hooks",
             "summary": "React Hooks Basics — Building a React Native App with React Hooks",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1106,7 +1118,7 @@
             "url": "https://amanhimself.dev//blog/how-to-build-your-first-vr-app-with-viroreact-react-native-and-crowdbotics",
             "title": "How To Build Your First VR App with ViroReact, React Native, and Crowdbotics",
             "summary": "How To Build Your First VR App with ViroReact, React Native, and Crowdbotics",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1118,7 +1130,7 @@
             "url": "https://amanhimself.dev//blog/build-a-chatbot-with-dialogflow-and-react-native",
             "title": "Build a Chatbot with Dialogflow and React Native",
             "summary": "Build a Chatbot with Dialogflow and React Native",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1130,7 +1142,7 @@
             "url": "https://amanhimself.dev//blog/how-to-build-a-real-time-logo-detection-app-with-react-native-google-vision-api-and-crowdbotics",
             "title": "How to Build a Real Time Logo Detection App with React Native & Google Vision API",
             "summary": "How to Build a Real Time Logo Detection App with React Native & Google Vision API",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1142,7 +1154,7 @@
             "url": "https://amanhimself.dev//blog/using-styled-components-with-react-native",
             "title": "Using Styled Components with React Native",
             "summary": "Using Styled Components with React Native",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1154,7 +1166,7 @@
             "url": "https://amanhimself.dev//blog/google-vision-api-firebase-react-native",
             "title": "Create a React Native Image Recognition App with Google Vision API",
             "summary": "Create a React Native Image Recognition App with Google Vision API",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1166,7 +1178,7 @@
             "url": "https://amanhimself.dev//blog/how-to-build-a-news-reader-app-with-react-native-and-newsapi",
             "title": "How To Build a News Reader App with React Native and NewsAPI",
             "summary": "How To Build a News Reader App with React Native and NewsAPI",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1178,7 +1190,7 @@
             "url": "https://amanhimself.dev//blog/29-useful-open-source-libraries-for-nodejs",
             "title": "Top open source libraries for Node.js",
             "summary": "Top open source libraries for Node.js",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1190,7 +1202,7 @@
             "url": "https://amanhimself.dev//blog/21-useful-open-source-packages-for-react-native",
             "title": "21 Useful Open Source Packages for React Native",
             "summary": "21 Useful Open Source Packages for React Native",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1202,7 +1214,7 @@
             "url": "https://amanhimself.dev//blog/3-steps-to-learn-react-native-in-2019",
             "title": "3 Steps to learn React Native in 2019",
             "summary": "3 Steps to learn React Native in 2019",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1214,7 +1226,7 @@
             "url": "https://amanhimself.dev//blog/getting-started-with-react-native-in-2019-build-your-first-app",
             "title": "Getting Started with React Native in 2019 - Build Your First App",
             "summary": "Getting Started with React Native in 2019 - Build Your First App",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1226,7 +1238,7 @@
             "url": "https://amanhimself.dev//blog/my-top-tutorials-in-web-development-and-react-native-in-2018",
             "title": "My Top Tutorials in Web Development and React Native in 2018",
             "summary": "My Top Tutorials in Web Development and React Native in 2018",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1238,7 +1250,7 @@
             "url": "https://amanhimself.dev//blog/top-nodejs-libraries-and-tools-for-machine-learning",
             "title": "Top Node.js Libraries and Tools For Machine Learning",
             "summary": "Top Node.js Libraries and Tools For Machine Learning",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1250,7 +1262,7 @@
             "url": "https://amanhimself.dev//blog/how-to-build-a-rest-api-with-nodejs-and-postgresql",
             "title": "How To Build a REST API With Nodejs and PostgreSQL",
             "summary": "How To Build a REST API With Nodejs and PostgreSQL",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1262,7 +1274,7 @@
             "url": "https://amanhimself.dev//blog/integrating-firebase-with-react-native",
             "title": "Integrating Firebase with React Native",
             "summary": "Integrating Firebase with React Native",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1274,7 +1286,7 @@
             "url": "https://amanhimself.dev//blog/how-to-build-your-own-blog-from-scratch-with-gatsbyjs-graphql-react-and-markdown",
             "title": "How To Build A Blog From Scratch With React, Markdown, GraphQL and Gatsbyjs",
             "summary": "How To Build A Blog From Scratch With React, Markdown, GraphQL and Gatsbyjs",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1286,7 +1298,7 @@
             "url": "https://amanhimself.dev//blog/building-a-mern-stack-app-with-material-ui",
             "title": "Building an authenticated MERN Stack App Using Material UI",
             "summary": "Building an authenticated MERN Stack App Using Material UI",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1298,7 +1310,7 @@
             "url": "https://amanhimself.dev//blog/how-to-build-a-serverless-backend-with-aws-lambda-and-nodejs",
             "title": "How to Build a Serverless Backend with AWS Lambda and Nodejs",
             "summary": "How to Build a Serverless Backend with AWS Lambda and Nodejs",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1310,7 +1322,7 @@
             "url": "https://amanhimself.dev//blog/creating-a-graphql-server-with-nodejs-in-2018",
             "title": "Creating a GraphQL server with Nodejs",
             "summary": "Creating a GraphQL server with Nodejs",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1322,7 +1334,7 @@
             "url": "https://amanhimself.dev//blog/how-to-use-import-statements-in-nodejs",
             "title": "How to use Import statements in Nodejs",
             "summary": "How to use Import statements in Nodejs",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1334,7 +1346,7 @@
             "url": "https://amanhimself.dev//blog/setting-up-nodejs-backend-for-a-react-app",
             "title": "Setting up Nodejs Backend for a React App",
             "summary": "Setting up Nodejs Backend for a React App",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1346,7 +1358,7 @@
             "url": "https://amanhimself.dev//blog/building-a-rest-api-with-koajs",
             "title": "Building a REST API with Koajs",
             "summary": "Building a REST API with Koajs",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1358,7 +1370,7 @@
             "url": "https://amanhimself.dev//blog/deploy-a-mern-stack-app-on-heroku",
             "title": "Deploy a MERN stack app on Heroku",
             "summary": "Deploy a MERN stack app on Heroku",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1370,7 +1382,7 @@
             "url": "https://amanhimself.dev//blog/navigation-in-a-react-native-app",
             "title": "How to use React Navigation in a React Native App",
             "summary": "How to use React Navigation in a React Native App",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1382,7 +1394,7 @@
             "url": "https://amanhimself.dev//blog/accessing-geo-location-and-app-permissions-in-react-native-and-expo",
             "title": "Accessing Geo-location and App Permissions in React Native and Expo",
             "summary": "Accessing Geo-location and App Permissions in React Native and Expo",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1394,7 +1406,7 @@
             "url": "https://amanhimself.dev//blog/simple-recipe-to-build-a-theme-app-in-react-native",
             "title": "Simple Recipe to Build a Theme App in React Native",
             "summary": "Simple Recipe to Build a Theme App in React Native",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1406,7 +1418,7 @@
             "url": "https://amanhimself.dev//blog/how-to-integrate-redux-into-your-application-with-react-native-and-expo",
             "title": "How to integrate Redux into your application with React Native and Expo",
             "summary": "How to integrate Redux into your application with React Native and Expo",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1418,7 +1430,7 @@
             "url": "https://amanhimself.dev//blog/week-3-with-react-native",
             "title": "Week 3 with React Native - Why use Expo?",
             "summary": "Week 3 with React Native - Why use Expo?",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1430,7 +1442,7 @@
             "url": "https://amanhimself.dev//blog/week-2-with-react-native-building-a-weather-app",
             "title": "Week 2 With React Native - Building a Weather App",
             "summary": "Week 2 With React Native - Building a Weather App",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1442,7 +1454,7 @@
             "url": "https://amanhimself.dev//blog/react-native-how-to-setup-your-first-app",
             "title": "React Native - How to Setup Your First App",
             "summary": "React Native - How to Setup Your First App",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1454,7 +1466,7 @@
             "url": "https://amanhimself.dev//blog/starting-over-with-react-native",
             "title": "Starting Over with React Native",
             "summary": "Starting Over with React Native",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1466,7 +1478,7 @@
             "url": "https://amanhimself.dev//blog/connecting-a-node-js-and-reactjs-example",
             "title": "How to Upload a File with Reactjs and Nodejs",
             "summary": "How to Upload a File with Reactjs and Nodejs",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1478,7 +1490,7 @@
             "url": "https://amanhimself.dev//blog/react-native-building-a-minimalist-weather-app-using-expo-xde",
             "title": "React Native - Building a Minimalist Weather App using Expo XDE",
             "summary": "React Native - Building a Minimalist Weather App using Expo XDE",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1490,7 +1502,7 @@
             "url": "https://amanhimself.dev//blog/react-native-getting-started-with-lottie-and-expo",
             "title": "React Native - Getting Started with Lottie and Expo",
             "summary": "React Native - Getting Started with Lottie and Expo",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1502,7 +1514,7 @@
             "url": "https://amanhimself.dev//blog/build-a-progressive-web-app-using-react",
             "title": "Build a Progressive Web App using React",
             "summary": "Build a Progressive Web App using React",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1514,7 +1526,7 @@
             "url": "https://amanhimself.dev//blog/designing-a-rest-api-with-node-js-and-mongodb-atlas",
             "title": "Designing a REST API with Node.js and MongoDB Atlas",
             "summary": "Designing a REST API with Node.js and MongoDB Atlas",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1526,7 +1538,7 @@
             "url": "https://amanhimself.dev//blog/setting-up-and-getting-used-to-gatsby",
             "title": "Gatsby.js - How to set up and use the React Static Site Generator",
             "summary": "Gatsby.js - How to set up and use the React Static Site Generator",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1538,7 +1550,7 @@
             "url": "https://amanhimself.dev//blog/ionic-2-3-cli-reference",
             "title": "Ionic 2/3 CLI Reference",
             "summary": "Ionic 2/3 CLI Reference",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1550,7 +1562,7 @@
             "url": "https://amanhimself.dev//blog/passing-data-between-pages-in-an-ionic-application",
             "title": "Passing Data Between Pages in an Ionic Application",
             "summary": "Passing Data Between Pages in an Ionic Application",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1562,7 +1574,7 @@
             "url": "https://amanhimself.dev//blog/tips-for-creating-node-js-rest-apis",
             "title": "Tips for Creating Nodejs REST APIs",
             "summary": "Tips for Creating Nodejs REST APIs",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1574,7 +1586,7 @@
             "url": "https://amanhimself.dev//blog/multi-page-navigation-in-an-ionic-app",
             "title": "Multi Page Navigation in an Ionic App",
             "summary": "Multi Page Navigation in an Ionic App",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1586,7 +1598,7 @@
             "url": "https://amanhimself.dev//blog/using-google-fonts-in-an-ionic-application",
             "title": "Using Google Fonts in an Ionic Application",
             "summary": "Using Google Fonts in an Ionic Application",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1598,7 +1610,7 @@
             "url": "https://amanhimself.dev//blog/basic-navigation-in-ionic-applications",
             "title": "Basic Navigation in Ionic Applications",
             "summary": "Basic Navigation in Ionic Applications",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1610,7 +1622,7 @@
             "url": "https://amanhimself.dev//blog/how-to-use-font-awesome-in-an-ionic-application",
             "title": "How to use Font Awesome in an Ionic Application",
             "summary": "How to use Font Awesome in an Ionic Application",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1622,7 +1634,7 @@
             "url": "https://amanhimself.dev//blog/what-is-ionic",
             "title": "What is Ionic?",
             "summary": "What is Ionic?",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1634,7 +1646,7 @@
             "url": "https://amanhimself.dev//blog/introduction-to-hybrid-mobile-apps",
             "title": "Introduction to Hybrid Mobile Apps",
             "summary": "Introduction to Hybrid Mobile Apps",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1646,7 +1658,7 @@
             "url": "https://amanhimself.dev//blog/remove-node-modules-recursively",
             "title": "Remove node_modules Recursively",
             "summary": "Remove node_modules Recursively",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1658,7 +1670,7 @@
             "url": "https://amanhimself.dev//blog/setup-nodemon-to-auto-restart-nodejs-application-server",
             "title": "Setup Nodemon to auto restart Nodejs application server",
             "summary": "Setup Nodemon to auto restart Nodejs application server",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1670,7 +1682,7 @@
             "url": "https://amanhimself.dev//blog/whats-new-in-npm-5",
             "title": "What’s New in npm 5?",
             "summary": "What’s New in npm 5?",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1682,7 +1694,7 @@
             "url": "https://amanhimself.dev//blog/converting-a-buffer-to-json-and-utf8-strings-in-nodejs",
             "title": "Converting a Buffer to JSON and Utf8 Strings in Nodejs",
             "summary": "Converting a Buffer to JSON and Utf8 Strings in Nodejs",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1694,7 +1706,7 @@
             "url": "https://amanhimself.dev//blog/setting-up-mean-stack-with-webstorm",
             "title": "Setting up MEAN Stack with Webstorm",
             "summary": "Setting up MEAN Stack with Webstorm",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1706,7 +1718,7 @@
             "url": "https://amanhimself.dev//blog/paginate-records-in-mysql-using-sequelize-and-nodejs",
             "title": "How to paginate records in MySQL using Sequelize and Nodejs",
             "summary": "How to paginate records in MySQL using Sequelize and Nodejs",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1718,7 +1730,7 @@
             "url": "https://amanhimself.dev//blog/getting-started-with-sequelize-for-nodejs",
             "title": "Getting Started with Sequelize for Nodejs Applications",
             "summary": "Getting Started with Sequelize for Nodejs Applications",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1730,7 +1742,7 @@
             "url": "https://amanhimself.dev//blog/how-to-use-eslint-in-node-js-applications",
             "title": "How to use ESLint in Node.js Applications",
             "summary": "How to use ESLint in Node.js Applications",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1742,7 +1754,7 @@
             "url": "https://amanhimself.dev//blog/how-to-mock-data-for-nodejs-applications-using-fakerjs",
             "title": "How to Mock Data for Node.js Applications using faker.js",
             "summary": "How to Mock Data for Node.js Applications using faker.js",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1754,7 +1766,7 @@
             "url": "https://amanhimself.dev//blog/getting-started-with-ionic-framework",
             "title": "Getting Started with Ionic Framework",
             "summary": "Getting Started with Ionic Framework",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1766,7 +1778,7 @@
             "url": "https://amanhimself.dev//blog/migrating-from-expressjs-4-to-5",
             "title": "Migrating from Expressjs 4 to 5",
             "summary": "Migrating from Expressjs 4 to 5",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1778,7 +1790,7 @@
             "url": "https://amanhimself.dev//blog/using-bower-with-heroku",
             "title": "Using Bower With Heroku",
             "summary": "Using Bower With Heroku",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1790,7 +1802,7 @@
             "url": "https://amanhimself.dev//blog/node-js-twitter-bot-tutorial-part-2",
             "title": "Writing a Node.js Twitter Bot Part 2",
             "summary": "Writing a Node.js Twitter Bot Part 2",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1802,7 +1814,7 @@
             "url": "https://amanhimself.dev//blog/node-js-twitter-bot-tutorial",
             "title": "Writing a Node.js Twitter Bot Part 1",
             "summary": "Writing a Node.js Twitter Bot Part 1",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1814,7 +1826,7 @@
             "url": "https://amanhimself.dev//blog/create-a-simple-twitter-bot-with-node-js",
             "title": "Create a Simple Twitter Bot with Node.js",
             "summary": "Create a Simple Twitter Bot with Node.js",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1826,7 +1838,7 @@
             "url": "https://amanhimself.dev//blog/atom-an-editor-of-21st-century",
             "title": "ATOM- An Editor of 21st Century",
             "summary": "ATOM- An Editor of 21st Century",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1838,7 +1850,7 @@
             "url": "https://amanhimself.dev//blog/how-process-nexttick-works-in-node-js",
             "title": "How process.nextTick() works in Node.js?",
             "summary": "How process.nextTick() works in Node.js?",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1850,7 +1862,7 @@
             "url": "https://amanhimself.dev//blog/nodejs-system",
             "title": "The Node.js system",
             "summary": "The Node.js system",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1862,7 +1874,7 @@
             "url": "https://amanhimself.dev//blog/the-node-way",
             "title": "The Node way - Philosophy of a Platform",
             "summary": "The Node way - Philosophy of a Platform",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1874,7 +1886,7 @@
             "url": "https://amanhimself.dev//blog/javascript-code-convetions",
             "title": "JavaScript Code Conventions",
             "summary": "JavaScript Code Conventions",
-            "date_modified": "2022-04-03T05:35:01.443Z",
+            "date_modified": "2022-04-03T05:44:21.960Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
