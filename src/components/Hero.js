@@ -44,26 +44,24 @@ const Hero = () => {
           </Stack>
 
           <Text lineHeight="175%" as="h2" fontSize="lg">
-            I&apos;m a software developer and a technical writer. Currently
-            working as a Senior Content Developer at <strong>Vercel</strong>.
+            I&apos;m a software developer and a technical writer. I love working
+            with open source technologies and writing about what I learn.
+          </Text>
+          <Text lineHeight="175%" as="h2" fontSize="lg">
+            I&apos;ve been writing online since 2017, mostly on web and mobile
+            development. I&apos;ve written over 150 articles for more than 25
+            publications and organizations across the internet. Hence, I started
+            this blog to share my software development journey.
           </Text>
           <Text lineHeight="175%" as="h2" fontSize="lg">
             Previously, I&apos;ve worked as{' '}
             <ExternalLink href="https://amanhimself.dev/blog/first-three-months-as-developer-advocate/">
               Developer Advocate
             </ExternalLink>
-            , independent consultant, and technical writer for many online
-            publications.
+            , independent consultant, and technical writer. Currently working as
+            a Senior Content Developer at Vercel.
           </Text>
-          <Text lineHeight="175%" as="h2" fontSize="lg">
-            I started this blog to share my software development learning,
-            including Node.js, React, React Native, and Expo.
-          </Text>
-          <Text lineHeight="175%" as="h2" fontSize="lg">
-            I&apos;ve been writing online since 2017, mostly on web and mobile
-            development. I&apos;ve written over 150 articles for more than 25
-            publications and organizations across the internet.
-          </Text>
+
           <ExternalLinksCloud />
         </VStack>
         <HeroImage />

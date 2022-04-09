@@ -91,6 +91,14 @@ const AboutPage = () => {
           </ListItem>
           <ListItem fontSize="lg">
             <ListIcon as={MdCheckCircle} color="green.500" />
+            In 2019, became an{' '}
+            <ExternalLink href="https://amplify.aws/community/contributors">
+              AWS Amplify Community contributor
+            </ExternalLink>{' '}
+            after creating tutorials for AWS Amplify community.
+          </ListItem>
+          <ListItem fontSize="lg">
+            <ListIcon as={MdCheckCircle} color="green.500" />
             <ExternalLink href="https://twitter.com/amanhimself/status/1285554115464982528">
               On July 21, 2020
             </ExternalLink>{' '}
@@ -164,6 +172,11 @@ const AboutPage = () => {
           <ListItem>
             <ExternalLink href="https://blog.crowdbotics.com/author/amanhimself/">
               Crowdbotics
+            </ExternalLink>
+          </ListItem>
+          <ListItem>
+            <ExternalLink href="https://www.educative.io/profile/view/4727790119157760">
+              Educative Edpresso
             </ExternalLink>
           </ListItem>
           <ListItem>
