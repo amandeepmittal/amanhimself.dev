@@ -175,6 +175,11 @@ const AboutPage = () => {
             </ExternalLink>
           </ListItem>
           <ListItem>
+            <ExternalLink href="https://www.educative.io/profile/view/4727790119157760">
+              Educative Edpresso
+            </ExternalLink>
+          </ListItem>
+          <ListItem>
             <ExternalLink href="https://heartbeat.fritz.ai/@amanhimself">
               Heartbeat.fritz.ai
             </ExternalLink>
