@@ -49,7 +49,7 @@ const Hero = () => {
           </Text>
           <Text lineHeight="175%" as="h2" fontSize="lg">
             I&apos;ve been writing online since 2017, mostly on web and mobile
-            development. I&apos;ve written over 150 articles for more than 25
+            development. I&apos;ve written over 150 articles for more than 30
             publications and organizations across the internet. Hence, I started
             this blog to share my software development journey.
           </Text>
