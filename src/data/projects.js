@@ -16,7 +16,7 @@ export const ProjectsList = [
   {
     id: '3',
     title: 'Quarantine Pro app',
-    description: `Built using React Native and Expo, it's a small game that displays a func message on how long you have been quarantining.`,
+    description: `Built using React Native and Expo, it's a small game that displays a fun message on how long you have been quarantining.`,
     href: 'https://expo.io/@amanhimself/quarantinepro',
     expoIcon: true
   },
