@@ -3,7 +3,7 @@ title: 'How I Configure VSCode for Everything'
 slug: 'how-i-configure-vscode-for-everything'
 date: '2019-04-22'
 thumbnail: '/thumbnails/vscode.png'
-tag: 'tools'
+tag: 'vscode'
 canonicalUrl: 'https://medium.com/better-programming/how-i-configure-vscode-for-everything-7df65a316a52'
 ---
 

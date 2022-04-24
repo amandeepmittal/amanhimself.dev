@@ -3,7 +3,7 @@ title: 'How to show Touch indicator on iOS simulator'
 date: '2022-04-03'
 slug: 'show-touch-indicator-on-ios-simulator'
 thumbnail: '/thumbnails/xcode.png'
-tag: 'tools'
+tag: 'xcode'
 canonicalUrl: 'https://amanhimself.dev/blog/show-touch-indicator-on-ios-simulator/'
 ---
 

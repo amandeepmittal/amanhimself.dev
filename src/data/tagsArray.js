@@ -49,6 +49,14 @@ const TAGS_ARRAY = [
     color: '#8c8c8c'
   },
   {
+    name: 'xcode',
+    color: '#4D77FF'
+  },
+  {
+    name: 'vscode',
+    color: '#000D6B'
+  },
+  {
     name: 'tools',
     color: '#9778d1'
   }
