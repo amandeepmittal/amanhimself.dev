@@ -14,7 +14,7 @@
             "url": "https://amanhimself.dev//blog/patterns-and-anti-patterns-in-nodejs",
             "title": "Patterns and Anti-patterns in Node.js",
             "summary": "Patterns and Anti-patterns in Node.js",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -26,7 +26,7 @@
             "url": "https://amanhimself.dev//blog/show-touch-indicator-on-ios-simulator",
             "title": "How to show Touch indicator on iOS simulator",
             "summary": "How to show Touch indicator on iOS simulator",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -38,7 +38,7 @@
             "url": "https://amanhimself.dev//blog/handle-deep-linking-react-native",
             "title": "How to handle Deep Linking in a React Native app",
             "summary": "How to handle Deep Linking in a React Native app",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -50,7 +50,7 @@
             "url": "https://amanhimself.dev//blog/use-key-extractor-in-react-native-flatlist",
             "title": "When to use keyExtractor prop in React Native's FlatList",
             "summary": "When to use keyExtractor prop in React Native's FlatList",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -62,7 +62,7 @@
             "url": "https://amanhimself.dev//blog/setup-nextjs-project-with-eslint-prettier-husky-lint-staged",
             "title": "Set up a Next.js project with ESLint, Prettier, Husky, and Lint Staged",
             "summary": "Set up a Next.js project with ESLint, Prettier, Husky, and Lint Staged",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -70,11 +70,11 @@
         },
         {
             "id": "https://amanhimself.dev//blog/install-nodejs-using-nvm-on-macos-m1",
-            "content_html": "---\ntitle: 'How to install Node.js using NVM on macOS M1'\ndate: '2022-02-06'\nslug: 'install-nodejs-using-nvm-on-macos-m1'\nthumbnail: '/thumbnails/node.png'\ntag: 'nodejs'\ncanonicalUrl: 'https://amanhimself.dev/blog/install-nodejs-using-nvm-on-macos-m1/'\n---\n\nNode.js can be installed in different ways. I recently started working on an organization repository that requires using different Node.js versions. Using [Node Version Manager (NVM)](https://github.com/nvm-sh/nvm) it is possible to switch between different Node.js versions on the fly. It also allows testing code with older Node.js versions.\n\nNVM is a shell script used for installing and managing Node.js on a Unix based system. It allows switching between different versions of Node.js via the command line quickly. It also works with any [POSIX](https://en.wikipedia.org/wiki/POSIX) shell such as `zsh`.\n\n## Prerequisites\n\nMake sure you have installed the following before proceeding:\n\n- [Command line tools](https://amanhimself.dev/blog/setup-macbook-m1/#xcode)\n- [Homebrew](https://amanhimself.dev/blog/setup-macbook-m1/#homebrew)\n- [Git](https://amanhimself.dev/blog/setup-macbook-m1/#git)\n- [zsh](https://amanhimself.dev/blog/setup-macbook-m1/#zsh-and-oh-my-zsh)\n\n## Remove existing installed Node.js version\n\n> This step is optional. If you haven't installed Node.js previously using Homebrew, skip this.\n\nIf you have an existing Node.js version installed, please remove it before installing NVM. For example, my machine already has a node version installed via Homebrew.\n\nOpen the terminal window and run:\n\n```shell\nbrew uninstall --ignore-dependencies node\nbrew uninstall --force node\n```\n\n## Install NVM via Homebrew\n\nInstall NVM using Homebrew:\n\n```shell\nbrew install nvm\n```\n\nAfter the above command runs, create a directory for NVM at the home working directory:\n\n```shell\nmkdir ~/.nvm\n```\n\nWhen using the `zsh` shell, add the following config inside `~/.zshrc`:\n\n```shell\nexport NVM_DIR=\"$HOME/.nvm\"\n[ -s \"/opt/homebrew/opt/nvm/nvm.sh\" ] && \\. \"/opt/homebrew/opt/nvm/nvm.sh\"  # This loads nvm\n[ -s \"/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm\" ] && \\. \"/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm\"  # This loads nvm bash_completion\n```\n\nNow, either restart the terminal app or execute `source ~/.zshrc` to re-load the latest config for the `zsh` shell from the file.\n\nRun the command `nvm --version` to verify. For example, if the config has loaded, this command would display a version.\n\n## Install Node.js via NVM\n\nNode.js is available in two different versions:\n\n- Long Term Support (LTS)\n- Current with latest features\n\nAlthough I used to love using the Current version with the latest features on my personal machine, I use the LTS version for work. At the time of writing this post, the current LTS version is `16`.\n\nRunning the command `nvm install node` would install the current version with the latest features.\n\nTo install the current LTS Node.js version, execute:\n\n```shell\nnvm install --lts\n```\n\nThen, verify the version by running:\n\n```shell\nnode --version\n\n# Output: v16.13.2\n```\n\n## Multiple Node.js versions\n\nTo install different versions of Node.js, you can run:\n\n```shell\n# nvm install Version-Number\nnvm install 14\n```\n\n## Use a specific Node.js version\n\nAfter installing multiple versions, use the command below to set a specific version as the default version and use it:\n\n```shell\nnvm use 16\n```\n\n## Uninstall a Node.js version\n\nBefore uninstalling a Node.js version, make sure it is not the active version or currently used version on the machine. Switch to a different version and then run the command:\n\n```shell\nnvm uninstall 14\n```\n",
+            "content_html": "---\ntitle: 'How to install Node.js using NVM on macOS M1'\ndate: '2022-02-06'\nslug: 'install-nodejs-using-nvm-on-macos-m1'\nthumbnail: '/thumbnails/node.png'\ntag: 'nodejs'\ncanonicalUrl: 'https://amanhimself.dev/blog/install-nodejs-using-nvm-on-macos-m1/'\n---\n\n> Updated on April 28, 2022\n\nNode.js can be installed in different ways. I recently started working on an organization repository that requires using different Node.js versions. Using [Node Version Manager (NVM)](https://github.com/nvm-sh/nvm) it is possible to switch between different Node.js versions on the fly. It also allows testing code with older Node.js versions.\n\nNVM is a shell script used for installing and managing Node.js on a Unix based system. It allows switching between different versions of Node.js via the command line quickly. It also works with any [POSIX](https://en.wikipedia.org/wiki/POSIX) shell such as `zsh`.\n\n## Prerequisites\n\nMake sure you have installed the following before proceeding:\n\n- [Command line tools](https://amanhimself.dev/blog/setup-macbook-m1/#xcode)\n- [Homebrew](https://amanhimself.dev/blog/setup-macbook-m1/#homebrew)\n- [Git](https://amanhimself.dev/blog/setup-macbook-m1/#git)\n- [zsh](https://amanhimself.dev/blog/setup-macbook-m1/#zsh-and-oh-my-zsh)\n\n## Remove existing installed Node.js version\n\n> This step is optional. If you haven't installed Node.js previously using Homebrew, skip this.\n\nIf you have an existing Node.js version installed, please remove it before installing NVM. For example, my machine already has a node version installed via Homebrew.\n\nOpen the terminal window and run:\n\n```shell\nbrew uninstall --ignore-dependencies node\nbrew uninstall --force node\n```\n\n## Install NVM via Homebrew\n\nInstall NVM using Homebrew:\n\n```shell\nbrew install nvm\n```\n\nAfter the above command runs, create a directory for NVM at the home working directory:\n\n```shell\nmkdir ~/.nvm\n```\n\nWhen using the `zsh` shell, add the following config inside `~/.zshrc`:\n\n```shell\nexport NVM_DIR=\"$HOME/.nvm\"\n[ -s \"/opt/homebrew/opt/nvm/nvm.sh\" ] && \\. \"/opt/homebrew/opt/nvm/nvm.sh\"  # This loads nvm\n[ -s \"/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm\" ] && \\. \"/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm\"  # This loads nvm bash_completion\n```\n\nNow, either restart the terminal app or execute `source ~/.zshrc` to re-load the latest config for the `zsh` shell from the file.\n\nRun the command `nvm --version` to verify. For example, if the config has loaded, this command would display a version.\n\n## Install Node.js via NVM\n\nNode.js is available in two different versions:\n\n- Long Term Support (LTS)\n- Current with latest features\n\nAlthough I used to love using the Current version with the latest features on my personal machine, I use the LTS version for work. At the time of writing this post, the current LTS version is `16`.\n\nRunning the command `nvm install node` would install the current version with the latest features.\n\nTo install the current LTS Node.js version, execute:\n\n```shell\nnvm install --lts\n```\n\nThen, verify the version by running:\n\n```shell\nnode --version\n\n# Output: v16.13.2\n```\n\n## Multiple Node.js versions\n\nTo install different versions of Node.js, you can run:\n\n```shell\n# nvm install Version-Number\nnvm install 14\n```\n\n## Use a specific Node.js version\n\nAfter installing multiple versions, use the command below to set a specific version as the default version and use it:\n\n```shell\nnvm use 16\n```\n\n## Uninstall a Node.js version\n\nBefore uninstalling a Node.js version, make sure it is not the active version or currently used version on the machine. Switch to a different version and then run the command:\n\n```shell\nnvm uninstall 14\n```\n\n## List all installed Node.js versions\n\nTo check for all the installed Node.js versions via nvm, run:\n\n```shell\nnvm ls\n```\n\n## Set the latest Node.js version as the default\n\nTo always set the latest Node.js version as the default in the shell, run:\n\n```shell\nnvm alias default node\n```\n",
             "url": "https://amanhimself.dev//blog/install-nodejs-using-nvm-on-macos-m1",
             "title": "How to install Node.js using NVM on macOS M1",
             "summary": "How to install Node.js using NVM on macOS M1",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -86,7 +86,7 @@
             "url": "https://amanhimself.dev//blog/infinite-scroll-with-react-query-and-flatlist-in-react-native",
             "title": "Implementing Infinite Scroll with React Query and FlatList in React Native",
             "summary": "Implementing Infinite Scroll with React Query and FlatList in React Native",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -98,7 +98,7 @@
             "url": "https://amanhimself.dev//blog/how-to-rename-default-branch-name-in-git-and-github",
             "title": "How to rename default branch in Git and GitHub",
             "summary": "How to rename default branch in Git and GitHub",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -110,7 +110,7 @@
             "url": "https://amanhimself.dev//blog/tamagui-for-react-native",
             "title": "Tamagui for React Native: Create faster design systems",
             "summary": "Tamagui for React Native: Create faster design systems",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -122,7 +122,7 @@
             "url": "https://amanhimself.dev//blog/year-in-review-2021",
             "title": "2021 - A year in review",
             "summary": "2021 - A year in review",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -134,7 +134,7 @@
             "url": "https://amanhimself.dev//blog/show-hide-password-in-react-native-using-custom-hook",
             "title": "Create a custom hook to Show/Hide Password Visibility in React Native",
             "summary": "Create a custom hook to Show/Hide Password Visibility in React Native",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -146,7 +146,7 @@
             "url": "https://amanhimself.dev//blog/safe-area-context-in-react-native-apps",
             "title": "How to avoid notches with Safe Area Context in React Native apps",
             "summary": "How to avoid notches with Safe Area Context in React Native apps",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -158,7 +158,7 @@
             "url": "https://amanhimself.dev//blog/how-to-configure-vscode-bracket-colors-natively",
             "title": "How to configure VSCode Bracket Pair Colors Natively",
             "summary": "How to configure VSCode Bracket Pair Colors Natively",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -170,7 +170,7 @@
             "url": "https://amanhimself.dev//blog/how-to-add-a-splash-screen-and-app-icon-in-react-native-with-react-native-bootsplash",
             "title": "How to add Splash Screen and an App Icon in React Native",
             "summary": "How to add Splash Screen and an App Icon in React Native",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -182,7 +182,7 @@
             "url": "https://amanhimself.dev//blog/how-to-use-ios-simulator-in-full-screen",
             "title": "How to use iOS simulator in full-screen",
             "summary": "How to use iOS simulator in full-screen",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -194,7 +194,7 @@
             "url": "https://amanhimself.dev//blog/rctbridge-required-dispatch-sync-to-load-warning",
             "title": "How to solve RCTBridge required dispatch_sync to load warning on iOS for React Native",
             "summary": "How to solve RCTBridge required dispatch_sync to load warning on iOS for React Native",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -206,7 +206,7 @@
             "url": "https://amanhimself.dev//blog/multi-language-support-in-react-native-with-react-i18next",
             "title": "How to Offer Multi-language Support in a React Native App",
             "summary": "How to Offer Multi-language Support in a React Native App",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -218,7 +218,7 @@
             "url": "https://amanhimself.dev//blog/get-request-with-axios",
             "title": "GET Request params with Axios",
             "summary": "GET Request params with Axios",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -230,7 +230,7 @@
             "url": "https://amanhimself.dev//blog/environment-variables-in-expo-managed-workflow",
             "title": "Environment Variables in Expo and TypeScript",
             "summary": "Environment Variables in Expo and TypeScript",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -242,7 +242,7 @@
             "url": "https://amanhimself.dev//blog/no-code-way-of-payments-with-stripe-a-brief-guide",
             "title": "The No-Code Way of Payments with Stripe: A Brief Guide",
             "summary": "The No-Code Way of Payments with Stripe: A Brief Guide",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -254,7 +254,7 @@
             "url": "https://amanhimself.dev//blog/firebase-authentication-with-expo",
             "title": "How To Integrate Firebase Authentication With an Expo App",
             "summary": "How To Integrate Firebase Authentication With an Expo App",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -266,7 +266,7 @@
             "url": "https://amanhimself.dev//blog/common-proptypes-in-react-and-typescript",
             "title": "Common Prop Types in TypeScript and React",
             "summary": "Common Prop Types in TypeScript and React",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -278,7 +278,7 @@
             "url": "https://amanhimself.dev//blog/prop-types-in-react-and-typescript",
             "title": "Prop types in React and TypeScript",
             "summary": "Prop types in React and TypeScript",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -290,7 +290,7 @@
             "url": "https://amanhimself.dev//blog/first-three-months-as-developer-advocate",
             "title": "🌱 Life at Draftbit - First 3 Months as a Developer Advocate",
             "summary": "🌱 Life at Draftbit - First 3 Months as a Developer Advocate",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -302,7 +302,7 @@
             "url": "https://amanhimself.dev//blog/custom-preview-image-gallery-in-react-native",
             "title": "How to Create a Custom Image Gallery in React Native",
             "summary": "How to Create a Custom Image Gallery in React Native",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -314,7 +314,7 @@
             "url": "https://amanhimself.dev//blog/create-custom-tab-bar-in-react-native",
             "title": "How to Create a Custom Tab Bar in React Native",
             "summary": "How to Create a Custom Tab Bar in React Native",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -326,7 +326,7 @@
             "url": "https://amanhimself.dev//blog/how-to-use-es6-import-in-nodejs",
             "title": "How to use ES6 import syntax in Node.js",
             "summary": "How to use ES6 import syntax in Node.js",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -338,7 +338,7 @@
             "url": "https://amanhimself.dev//blog/upload-image-to-cloudinary-using-expo-camera",
             "title": "How to upload an image using Expo Camera to Cloudinary",
             "summary": "How to upload an image using Expo Camera to Cloudinary",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -346,11 +346,11 @@
         },
         {
             "id": "https://amanhimself.dev//blog/setup-macbook-m1",
-            "content_html": "---\ntitle: 'Setup Macbook M1 for Web and React Native development'\nslug: 'setup-macbook-m1'\ndate: '2021-03-14'\nthumbnail: '/thumbnails/vscode.png'\ntag: 'tools'\ncanonicalUrl: 'https://amanhimself.dev/blog/setup-macbook-m1/'\n---\n\n> 🕑 Updated on: March 14, 2022\n\n![cover_image](https://i.imgur.com/tAJjTOU.png)\n\n_Note:_ Most of this article was updated in August 2021. The Macbook Pro M1 I was using crashed and stopped working without any reason on [August 25, 2021](https://twitter.com/amanhimself/status/1430788513226702849). In just seven months of use.\n\nIt took time to get it repaired. That forced me to buy another laptop. While setting up the new laptop, I thought it is an excellent time to update this post.\n\nI recently upgraded from [Macbook Air 2017](https://www.instagram.com/p/B6lInd3AhsN/) to Macbook Pro with an M1 chip. My four-year-old Macbook Air was giving up. The performance to run heavy tasks like using the iOS simulator when developing and working on React Native apps was declining. I had long given up using the Android emulator and used an actual Android device for testing. December 2020 was the time I decided its time to upgrade.\n\nI had a long internal discussion with myself for almost a month about whether I should upgrade to M1 or stick with Intel-based chips and spend them bucks. Don't get me wrong here, M1 is not cheap either as I did go for a RAM upgrade to max limits, which is currently 16GB in the base model.\n\nAfter going through some online reviews and research, the kind of performance I was expecting has been worth it so far (it is fast, no doubt). I received it two weeks back when writing this post, and since then, I have installed all the necessary tools and utilities that help me work on [Web development](https://learnersbucket.com/) and React Native apps.\n\n**My local environment currently includes:**\n\n- Homebrew ([supports Apple Silicon machines](https://brew.sh/2020/12/01/homebrew-2.6.0/) since `2.6.0`)\n- Git\n- Node.js\n- npm\n- Zsh\n- Oh My Zsh\n- iTerm\n- Xcode\n- yarn\n- VSCode\n- Rosetta 2\n\n**OS apps**:\n\n- Brave\n- Android Studio\n- [Insomnia](https://insomnia.rest/) as REST API client\n- Xcode\n- Slack or Discord (for work and community)\n- There (to track team mate's timezone)\n- LICEcap (for gifs)\n- Zoom (for work)\n- GitHub Desktop App\n- [Cleanshot](https://cleanshot.com/) (for screenshots)\n- Google Chrome\n  - set to default\n    - First things to do:\n      - **Log in to:** Gmail, Twitter, GitHub, Outlook\n      - **Developer mode on**\n    - Extensions:\n      - [Detailed SEO extension](https://chrome.google.com/webstore/detail/detailed-seo-extension/pfjdepjjfjjahkjfpkcgfmfhmnakjfba?hl=en)\n      - [Redefined GitHub](https://chrome.google.com/webstore/detail/refined-github/hlepfoohegkhhmjieoechaddaejaokhf)\n      - [Octolinker](https://chrome.google.com/webstore/detail/octolinker/jlmafbaeoofdegohdhinkhilhclaklkp/related?hl=en)\n      - [Twemex: Sidebar for Twitter](https://chrome.google.com/webstore/detail/twemex-sidebar-for-twitte/amoldiondpmjdnllknhklocndiibkcoe?hl=en)\n      - [Minimal Twitter](https://chrome.google.com/webstore/detail/minimal-twitter/pobhoodpcipjmedfenaigbeloiidbflp?hl=en)\n      - [Medium Enhanced Stats](https://chrome.google.com/webstore/detail/medium-enhanced-stats/jnomnfoenpdinfkpaaigokicgcfkomjo?hl=en)\n      - [JSON Viewer](https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh)\n      - Grammarly\n      - [Toby](https://www.gettoby.com/) to organize tabs\n\n**System Settings**:\n\n- Disable Ask Siri\n- Disable Spotlight search except Applications, Calculator, Conversion, Definition, and System Preferences.\n- Trackpad:\n  - Fix direction: Scroll & Zoom > Natural off\n  - Right click: Point & Click > Secondary Click\n  - Disable dictionary lookup: Point & Click > Look up & data detectors off\n  - More gestures > Swipe between pages off & App Exposé off\n- Finder settings:\n  - Preferences > Advanced > Show filename extensions\n  - Enable show path bar: View > Show Path Bar\n- Dock:\n  - Turn auto hiding on\n\n> Copy [dotfiles](https://github.com/amandeepmittal/dotfiles).\n\n## System Preferences\n\nOverride default system preferences with from a terminal window:\n\n```shell\n# show hidden files\ndefaults write com.apple.finder AppleShowAllFiles YES\n\n# show status bar\ndefaults write com.apple.finder ShowStatusBar -bool true\n\nkillall Finder;\n```\n\n## iTerm\n\nMy favorite terminal app that I have been using for years is [iTerm](https://iterm2.com/downloads.html). I am currently using two versions of iTerm on my setup. One with Rosetta 2 enabled and the default one. This way, I can only use the Rosetta 2 emulator when required. There are no performance issues I have found with using iTerm with Rosetta 2 for ARM-based applications.\n\n![ss0](https://i.imgur.com/yOAV1or.png)\n\nIf you'd like a similar setup, go to the `Applications` folder in your Macbook and duplicate the `iTerm` application.\n\n![ss1](https://i.imgur.com/2C5jrsb.png)\n\nYou can rename the duplicated iTerm app. I have renamed it to `iTerm_rosetta` to differentiate between the two. Right-click the duplicated app and click **Get Info**. In the **General**, check the box where it says **Open using Rosetta**.\n\n![ss2](https://i.imgur.com/7ipJmzM.png)\n\nNow, if you open the second terminal, it will be using Rosetta 2 emulator by default.\n\n**Other iTerm profile settings that I use:**\n\nRecently I started using [Jetbrains Mono font](https://www.jetbrains.com/lp/mono/).\n\n![ss6](https://i.imgur.com/8Gwhdq4.png)\n\nFor the overall looks and appearance, I use [Dracula Pro Color Presets created by Zen Rocha](https://draculatheme.com/pro).\n\n![ss7](https://i.imgur.com/5VSskf7.gif)\n\nAnd my last favorite thing is to split the working directory into two more different tabs using `Command + D` for horizontal panes.\n\nMake sure to have the following setting configured from\n\n**General > Working Directory > select Advanced Configuration > click button Edit... > select Reuse previous session's directory under Working Directory for New Split Panes.**\n\n![ss8](https://i.imgur.com/NDdHDch.png)\n\nFor terminal prompt, I use [Spaceship ZSH](https://github.com/denysdovhan/spaceship-prompt).\n\n## Homebrew\n\nOn December 1, 2020, the Homebrew team announced on their [website](https://brew.sh/2020/12/01/homebrew-2.6.0/) about the version release `2.6.0`. The most significant changes among others they listed were the support for macOS Big Sur, using `brew` commands instead of `brew cask` and beginning to support macOS M1 and Apple Silicon or ARM-based chips.\n\nUsing the terminal, you can install the Homebrew by executing the default command:\n\n```shell\n/bin/bash -c \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)\"\n```\n\n**brew installs**:\n\n- Node.js and npm via Node Version Manager (NVM). [Read the complete blog post on how to install Node.js using NVM](https://amanhimself.dev/blog/install-nodejs-using-nvm-on-macos-m1/).\n- [scrcpy](https://github.com/Genymobile/scrcpy) (control Android devices connect via USB on mac)\n- JDK (required for React Native)\n- Karabiner-Elements (remapping function keys for Macbook Air or with Macbooks without touchbar)\n- watchman (required for React Native)\n\n### After installing Node.js\n\nNode.js comes with default package manager `npm`. Set defaults for it:\n\n```shell\nnpm set init.author.name \"your name\"\nnpm set init.author.email \"you@example.com\"\nnpm set init.author.url \"example.com\"\n```\n\n## Xcode\n\nAfter installing Git, for me, the next step is to install [Xcode app](https://apps.apple.com/us/app/xcode/id497799835?mt=12) from Apple's App Store.\n\nThen, install \"command line tools\". It is required by many of the formulae in Homebrew.\n\n```shell\nxcode-select --install\n```\n\nAfter installing it, make sure to open it for the first time, from the menu bar, open **Xcode > Preferences > Locations** and make sure that **Command Line Tools** point towards the current Xcode app.\n\n![ss3](https://i.imgur.com/ZXS88QM.png)\n\n### What is Karabiner-Elements?\n\nWhen I bought Macbook Air M1, it had function keys (that got me excited), but I don't understand why Apple decided to replace function keys that would allow me to control Keyboard Brightness?! And moreover, replace it with \"Do Not Disturb\".\n\nWhy? That got me confused 🤷\n\nI found this tool called [karabiner Elements](https://karabiner-elements.pqrs.org/) that can be installed as a brew formula:\n\n```shell\nbrew install karabiner-elements\n```\n\n![screenshot-of-function-keys-on-macbbok-air-m1-2020](https://i.imgur.com/n1jGglG.jpg)\n\nHere are the key mappings I am using now:\n\n![key-mappings-with karabiner-elements](https://i.imgur.com/uoqR0Ht.png)\n\n## Git\n\nI did install Git using brew command:\n\n```shell\nbrew install git\n```\n\nTo authenticate GitHub to be used from the terminal environment, I'd recommend you to check out the [official document](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token) on creating and accessing personal tokens.\n\n> _🔥 Tip:_ As of Git version `2.28` there is a new config option to set the default branch to `main`. Set it globally and forget about it.\n\n```shell\ngit config --global init.defaultBranch main\n```\n\n## ZSH and Oh My Zsh\n\n[ZSH](https://github.com/zsh-users/zsh) is the default shell in macOS Big Sur. However, I like to use [Oh My Zsh](https://ohmyz.sh/) to manage the ZSH configuration, plugins, and a theme to prettify the terminal.\n\nTo install, run the command below:\n\n```shell\nsh -c \"$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)\"\n```\n\nAfter installation, make sure that the file `.zshrc` is exporting the below path at the top:\n\n```shell\n# Path to your oh-my-zsh installation\nexport ZSH=\"/Users/<USERNAME>/.oh-my-zsh\"\n```\n\nThe first I like to do after setting up the bare minimum ZSH configuration is to install a plugin called [\nzsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md). It provides syntax highlighting for the ZSH shell. Execute the series below commands in the terminal window:\n\n```shell\n# depending on the /plugins folder in your local setup\ncd $HOME/.oh-my-zsh/plugins\n\n# then clone the git repository\ngit clone https://github.com/zsh-users/zsh-syntax-highlighting.git\n\necho \"source ${(q-)PWD}/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh\" >> ${ZDOTDIR:-$HOME}/.zshrc\n```\n\nThis is [my final ZSH configuration](https://github.com/amandeepmittal/dotfiles/blob/master/.zshrc) in the file `~/.zshrc` file:\n\n```shell\n# Path to your oh-my-zsh installation\nexport ZSH=\"/Users/amanhimself/.oh-my-zsh\"\n\nexport PATH=/opt/homebrew/bin:$PATH\n\nexport ANDROID_HOME=$HOME/Library/Android/sdk\nexport PATH=$PATH:$ANDROID_HOME/emulator\nexport PATH=$PATH:$ANDROID_HOME/tools\nexport PATH=$PATH:$ANDROID_HOME/tools/bin\nexport PATH=$PATH:$ANDROID_HOME/platform-tools\n\nZSH_THEME=\"spaceship\"\n\n# Uncomment the following line to disable bi-weekly auto-update checks.\nDISABLE_AUTO_UPDATE=\"true\"\n\nplugins=(\n  git\n  node\n  vscode\n  zsh-syntax-highlighting\n)\n\nsource $ZSH/oh-my-zsh.sh\nsource /Users/amanhimself/.oh-my-zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh\n```\n\nAfter installing the syntax highlight plugin, it starts to recognize the commands:\n\n![ss4](https://i.imgur.com/UxRzm98.png)\n\n## VSCode\n\nVSCode and VS Code Insiders are currently supported on ARM chips (as of March 13, 2021). Download the installer for Insiders edition from [here](https://code.visualstudio.com/insiders/) and for VSCode [here](https://code.visualstudio.com/download).\n\n![ss5](https://i.imgur.com/Yd4wQ10.png)\n\nI am still using the same VSCode configuration from my previous setup:\n\n```json\n{\n  // VSCODE EDITOR\n  \"workbench.colorTheme\": \"fairyfloss\",\n  \"workbench.startupEditor\": \"welcomePage\",\n  \"workbench.iconTheme\": \"material-icon-theme\",\n  \"workbench.editor.tabSizing\": \"shrink\",\n  \"security.workspace.trust.untrustedFiles\": \"open\",\n  \"explorer.confirmDelete\": false,\n  \"explorer.confirmDragAndDrop\": false,\n  \"workbench.editor.enablePreview\": false,\n  \"window.restoreFullscreen\": true,\n  \"editor.tabSize\": 2,\n  \"editor.fontSize\": 14,\n  \"editor.minimap.enabled\": false,\n  \"editor.cursorBlinking\": \"phase\",\n  \"editor.fontLigatures\": false,\n  \"editor.wordWrap\": \"on\",\n  \"editor.cursorSmoothCaretAnimation\": true,\n  \"editor.tabCompletion\": \"on\",\n  \"editor.formatOnPaste\": true,\n  \"editor.formatOnSave\": true,\n  \"editor.semanticHighlighting.enabled\": true,\n  \"editor.guides.bracketPairs\": true,\n  \"breadcrumbs.enabled\": false,\n  \"explorer.openEditors.visible\": 0,\n  \"search.exclude\": {\n    \"**/node_modules\": true,\n    \"**/*.code-search\": true,\n    \"ios/\": true,\n    \"android/\": true,\n    \"dist/\": true,\n    \"yarn.lock\": true,\n    \"package-lock.json\": true,\n    \".gitignore\": true,\n    \".expo\": true,\n    \".vscode\": true\n  },\n  \"extensions.autoUpdate\": false,\n  // --------------------------------------\n  // EXPO TOOLS\n  \"json.schemas\": [\n    {\n      \"name\": \"vscode-expo-manifest\",\n      \"url\": \"file:///Users/amanhimself/Library/Application%20Support/Code/User/globalStorage/bycedric.vscode-expo/manifest-42.0.0.json\",\n      \"fileMatch\": [\"app.json\", \"app.config.json\"]\n    }\n  ],\n  // --------------------------------------\n  // CODE::STATS EXTENSION\n  \"codestats.apikey\": \"api-key\",\n  // --------------------------------------\n  // READ TIME EXTENSION\n  \"readTime.enabled\": true,\n  // --------------------------------------\n  // HIGHLIGHT MATCHING TAG EXTENSION\n  \"highlight-matching-tag.styles\": {\n    \"opening\": {\n      \"name\": {\n        // surround is border\n        \"surround\": \"yellow\"\n      }\n    }\n  },\n  // --------------------------------------\n  // INTEGRATED TERMINAL\n  // \"terminal.integrated.defaultProfile.osx\": \"zsh\",\n  \"terminal.external.osxExec\": \"iTerm.app\",\n  \"terminal.integrated.fontSize\": 12,\n  // --------------------------------------\n  // NPM\n  \"npm-intellisense.importES6\": true,\n  // --------------------------------------\n  // TS IMPORT SUGGESTION\n  \"typescript.suggest.paths\": false,\n  // --------------------------------------\n  // NATIVE BRACKER PAIR COLOR SETTINGS\n  \"editor.bracketPairColorization.enabled\": true,\n  \"workbench.colorCustomizations\": {\n    \"editorBracketHighlight.foreground1\": \"#ffb86c\",\n    \"editorBracketHighlight.foreground2\": \"#8be9fd\",\n    \"editorBracketHighlight.foreground3\": \"#bd93f9\",\n    \"editorBracketHighlight.foreground4\": \"#50fa7b\",\n    \"editorBracketHighlight.foreground5\": \"#f1fa8c\",\n    \"editorBracketHighlight.foreground6\": \"#abb2c0\",\n    \"editorBracketHighlight.unexpectedBracket.foreground\": \"#ff5555\"\n  },\n  // --------------------------------------\n  // PRETTIER ----------------------------------\n  \"prettier.singleQuote\": true,\n  \"prettier.jsxSingleQuote\": true,\n  \"prettier.trailingComma\": \"none\",\n  \"prettier.arrowParens\": \"avoid\",\n  \"prettier.proseWrap\": \"preserve\",\n  \"prettier.quoteProps\": \"as-needed\",\n  \"prettier.jsxBracketSameLine\": false,\n  \"prettier.bracketSpacing\": true,\n  \"prettier.tabWidth\": 2,\n  \"editor.defaultFormatter\": \"esbenp.prettier-vscode\",\n  // Markdown\n  \"[markdown]\": {\n    \"editor.quickSuggestions\": true\n  },\n  // JSON\n  \"[json]\": {\n    \"editor.defaultFormatter\": \"esbenp.prettier-vscode\"\n  },\n  // JavaScript\n  \"[javascript]\": {\n    \"editor.defaultFormatter\": \"esbenp.prettier-vscode\"\n  },\n  // JavaScript + React\n  \"[javascriptreact]\": {\n    \"editor.defaultFormatter\": \"esbenp.prettier-vscode\"\n  },\n  // TypeScript\n  \"[typescript]\": {\n    \"editor.defaultFormatter\": \"esbenp.prettier-vscode\"\n  },\n  // TypeScript + React\n  \"[typescriptreact]\": {\n    \"editor.defaultFormatter\": \"esbenp.prettier-vscode\"\n  },\n  // JSON with Comments\n  \"[jsonc]\": {\n    \"editor.defaultFormatter\": \"esbenp.prettier-vscode\"\n  },\n  // HTML\n  \"[html]\": {\n    \"editor.defaultFormatter\": \"esbenp.prettier-vscode\"\n  },\n  // ----------------------------------\n  // ESLINT\n  \"eslint.validate\": [\n    \"javascript\",\n    \"javascriptreact\",\n    \"typescript\",\n    \"typescriptreact\"\n  ],\n  // --------------------------------------\n  // LANGUAGES SPECIFIC\n  \"javascript.updateImportsOnFileMove.enabled\": \"always\",\n  \"security.workspace.trust.banner\": \"never\",\n  \"emmet.includeLanguages\": {\n    \"typescript\": \"typescriptreact\",\n    \"javascript\": \"javascriptreact\"\n  }\n}\n```\n\n### Themes\n\nI usually like to switch between a dark and a light theme.\n\n- For the dark theme where I spent most of my time, I am was previously using [morgan.codes-theme](https://marketplace.visualstudio.com/items?itemName=morgan-codes.morgan-codes-vscode-theme), but now I am using [fairyFloss](https://marketplace.visualstudio.com/items?itemName=nopjmp.fairyfloss).\n  - Other themes I switch between:\n    - Quiet Light\n    - [Cyberpunk](https://marketplace.visualstudio.com/items?itemName=max-SS.cyberpunk)\n- For file icons, I love [Material-Icon-Theme](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme).\n- For terminal prompt, I use [Spaceship ZSH](https://github.com/denysdovhan/spaceship-prompt).\n- Font: [Jetbrains Mono font](https://www.jetbrains.com/lp/mono/).\n\n### Extensions\n\nI use VSCode editor for both writing code and writing blog posts. Thus, the list of extensions below is the combination of extensions that fulfills both of my purposes.\n\n- [Auto Close tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag)\n- [Auto Complete Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-complete-tag)\n- [Auto Rename Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag)\n- [Babel JavaScript](https://marketplace.visualstudio.com/items?itemName=mgmcdermott.vscode-language-babel)\n- ~~Bracket Pair Colorizer 2~~ - VSCode now supports this natively. Check out my post 👉 [How to configure VSCode Bracket Pair Colors Natively](https://amanhimself.dev/blog/how-to-configure-vscode-bracket-colors-natively/)\n- [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)\n- [Code::Stats](https://codestats.net/)\n- [Color Highlight](https://marketplace.visualstudio.com/items?itemName=naumovs.color-highlight)\n- [DotENV](https://marketplace.visualstudio.com/items?itemName=mikestead.dotenv)\n- [ESLint](https://eslint.org/)\n- [Expo Tools](https://marketplace.visualstudio.com/items?itemName=byCedric.vscode-expo)\n- [Flow Language Support](https://marketplace.visualstudio.com/items?itemName=flowtype.flow-for-vscode)\n- [Git Lens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)\n- [Highlight Matching Tag](https://marketplace.visualstudio.com/items?itemName=vincaslt.highlight-matching-tag)\n- [Indent rainbow](https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow)\n- [iOS common files](https://marketplace.visualstudio.com/items?itemName=Orta.vscode-ios-common-files)\n- [Material Icon Theme](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme)\n- [MDX](https://marketplace.visualstudio.com/items?itemName=silvenon.mdx) - For syntax highlighting of `.mdx` files\n- [npm](https://marketplace.visualstudio.com/items?itemName=eg2.vscode-npm-script)\n- [npm intellisense](https://marketplace.visualstudio.com/items?itemName=christian-kohler.npm-intellisense)\n- [Path intellisense](https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense)\n- [Prettier](https://prettier.io/)\n- [React Native Tools](https://marketplace.visualstudio.com/items?itemName=msjsdiag.vscode-react-native)\n- [Read Time](https://marketplace.visualstudio.com/items?itemName=johnpapa.read-time)\n- [SVG Viewer](https://marketplace.visualstudio.com/items?itemName=cssho.vscode-svgviewer)\n- [TODO Highlight](https://marketplace.visualstudio.com/items?itemName=wayou.vscode-todo-highlight)\n- [Version Lens](https://marketplace.visualstudio.com/items?itemName=pflannery.vscode-versionlens)\n- [vscode-styled-components](https://marketplace.visualstudio.com/items?itemName=jpoissonnier.vscode-styled-components)\n- [Word Count](https://marketplace.visualstudio.com/items?itemName=ms-vscode.wordcount)\n- [GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot)\n\n## Global NPM Packages I use\n\n- ~~[gatsby-cli](https://www.npmjs.com/package/gatsby-cli) To build and test out [my personal blog built with Gatsby](https://amanhimself.dev/).~~\n- [expo-cli](https://docs.expo.io/workflow/expo-cli/)\n- [npm-check](https://www.npmjs.com/package/npm-check) to check for outdated, incorrect, and unused dependencies.\n- [git-watch-log](https://github.com/sukima/git-watch-log) to watch a git repo and recent changes.\n\n## For React Native Development\n\n- [install Node.js](http://localhost:3000/blog/install-nodejs-using-nvm-on-macos-m1/)\n- install [Watchman](https://facebook.github.io/watchman/) to watch changes in the filesystem using the command: `brew install watchman`\n- install following [cocoapods](https://formulae.brew.sh/formula/cocoapods): `brew install cocoapods`\n- According to [a post by React Native guru Jamon Holmgren](https://shift.infinite.red/dont-use-the-wrong-jdk-for-react-native-if-you-re-using-an-m1-mac-252533dd47a2) that all this time I've been using installing JDK wrong on my m1 machine 😱. To learn more how to install \"the m1 way\", go to his post and give it a read (and leave an appreciation clap 😄)\n- Versions later than Arctic Fox Canary now supports [Apple's Silicon based machines](https://androidstudio.googleblog.com/2021/04/android-studio-arctic-fox-canary-15.html) for Android Studio. You can also check out the [archive](https://developer.android.com/studio/archive) to see what beta/canary version supports Silicon machines\n- Then install Android SDK (I do not prefer AVD and use an actual device for testing)\n- [scrcpy](https://github.com/Genymobile/scrcpy) to display and control Android devices connect via USB on Mac\n\n<br />\n\n> ⚛️ For more instructions on how to set up a development environment for React Native, please follow the [official documentation here](https://reactnative.dev/docs/environment-setup).\n\n## Rosetta 2\n\n> Update: I am not using the Rosetta environment to install anything on the secondary machine since August 2021. That is the reason I've mentioned it at the end of the post.\n\n[Rosetta 2](https://developer.apple.com/documentation/apple_silicon/about_the_rosetta_translation_environment) is the lifeline that allows you to run apps designed for Intel-based chips that use `x86` architecture on ARM-based chips (in this case M1). This solution is provided by Apple in the form of an emulator and doesn't come pre-installed. You have to install it manually. Fire up the Terminal application that comes pre-installed on the Big Sur and let your first command to execute be:\n\n```shell\n/usr/sbin/softwareupdate --install-rosetta --agree-to-license\n```\n\nIf you decide not to put the flag ` --agree-to-license`, you will be prompted by Apple's interactive install, and you will have to agree to their terms and license conditions to use it.\n\n## Conclusion\n\nThat’s the setup I now use for my JavaScript, Node.js, React and React Native. I think it's a good machine. Hopefully, M1 is just the beginning of a new era of powerful computers for daily work use 🤞\n\n🤔 The only thing left for me is to find a way to transfer all laptop swag/stickers from my Macbook Air 2017 to Pro. I miss having them on this one.\n\n[**isapplesiliconready.com**](https://isapplesiliconready.com/for/developer) is another helpful link I found to check what is compatible to work on Apple Silicon chips natively or using Rosetta or not optimized at all.\n",
+            "content_html": "---\ntitle: 'Setup Macbook M1 for Web and React Native development'\nslug: 'setup-macbook-m1'\ndate: '2021-03-14'\nthumbnail: '/thumbnails/vscode.png'\ntag: 'vscode'\ncanonicalUrl: 'https://amanhimself.dev/blog/setup-macbook-m1/'\n---\n\n> 🕑 Updated on: March 14, 2022\n\n![cover_image](https://i.imgur.com/tAJjTOU.png)\n\n_Note:_ Most of this article was updated in August 2021. The Macbook Pro M1 I was using crashed and stopped working without any reason on [August 25, 2021](https://twitter.com/amanhimself/status/1430788513226702849). In just seven months of use.\n\nIt took time to get it repaired. That forced me to buy another laptop. While setting up the new laptop, I thought it is an excellent time to update this post.\n\nI recently upgraded from [Macbook Air 2017](https://www.instagram.com/p/B6lInd3AhsN/) to Macbook Pro with an M1 chip. My four-year-old Macbook Air was giving up. The performance to run heavy tasks like using the iOS simulator when developing and working on React Native apps was declining. I had long given up using the Android emulator and used an actual Android device for testing. December 2020 was the time I decided its time to upgrade.\n\nI had a long internal discussion with myself for almost a month about whether I should upgrade to M1 or stick with Intel-based chips and spend them bucks. Don't get me wrong here, M1 is not cheap either as I did go for a RAM upgrade to max limits, which is currently 16GB in the base model.\n\nAfter going through some online reviews and research, the kind of performance I was expecting has been worth it so far (it is fast, no doubt). I received it two weeks back when writing this post, and since then, I have installed all the necessary tools and utilities that help me work on [Web development](https://learnersbucket.com/) and React Native apps.\n\n**My local environment currently includes:**\n\n- Homebrew ([supports Apple Silicon machines](https://brew.sh/2020/12/01/homebrew-2.6.0/) since `2.6.0`)\n- Git\n- Node.js\n- npm\n- Zsh\n- Oh My Zsh\n- iTerm\n- Xcode\n- yarn\n- VSCode\n- Rosetta 2\n\n**OS apps**:\n\n- Brave\n- Android Studio\n- [Insomnia](https://insomnia.rest/) as REST API client\n- Xcode\n- Slack or Discord (for work and community)\n- There (to track team mate's timezone)\n- LICEcap (for gifs)\n- Zoom (for work)\n- GitHub Desktop App\n- [Cleanshot](https://cleanshot.com/) (for screenshots)\n- Google Chrome\n  - set to default\n    - First things to do:\n      - **Log in to:** Gmail, Twitter, GitHub, Outlook\n      - **Developer mode on**\n    - Extensions:\n      - [Detailed SEO extension](https://chrome.google.com/webstore/detail/detailed-seo-extension/pfjdepjjfjjahkjfpkcgfmfhmnakjfba?hl=en)\n      - [Redefined GitHub](https://chrome.google.com/webstore/detail/refined-github/hlepfoohegkhhmjieoechaddaejaokhf)\n      - [Octolinker](https://chrome.google.com/webstore/detail/octolinker/jlmafbaeoofdegohdhinkhilhclaklkp/related?hl=en)\n      - [Twemex: Sidebar for Twitter](https://chrome.google.com/webstore/detail/twemex-sidebar-for-twitte/amoldiondpmjdnllknhklocndiibkcoe?hl=en)\n      - [Minimal Twitter](https://chrome.google.com/webstore/detail/minimal-twitter/pobhoodpcipjmedfenaigbeloiidbflp?hl=en)\n      - [Medium Enhanced Stats](https://chrome.google.com/webstore/detail/medium-enhanced-stats/jnomnfoenpdinfkpaaigokicgcfkomjo?hl=en)\n      - [JSON Viewer](https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh)\n      - Grammarly\n      - [Toby](https://www.gettoby.com/) to organize tabs\n\n**System Settings**:\n\n- Disable Ask Siri\n- Disable Spotlight search except Applications, Calculator, Conversion, Definition, and System Preferences.\n- Trackpad:\n  - Fix direction: Scroll & Zoom > Natural off\n  - Right click: Point & Click > Secondary Click\n  - Disable dictionary lookup: Point & Click > Look up & data detectors off\n  - More gestures > Swipe between pages off & App Exposé off\n- Finder settings:\n  - Preferences > Advanced > Show filename extensions\n  - Enable show path bar: View > Show Path Bar\n- Dock:\n  - Turn auto hiding on\n\n> Copy [dotfiles](https://github.com/amandeepmittal/dotfiles).\n\n## System Preferences\n\nOverride default system preferences with from a terminal window:\n\n```shell\n# show hidden files\ndefaults write com.apple.finder AppleShowAllFiles YES\n\n# show status bar\ndefaults write com.apple.finder ShowStatusBar -bool true\n\nkillall Finder;\n```\n\n## iTerm\n\nMy favorite terminal app that I have been using for years is [iTerm](https://iterm2.com/downloads.html). I am currently using two versions of iTerm on my setup. One with Rosetta 2 enabled and the default one. This way, I can only use the Rosetta 2 emulator when required. There are no performance issues I have found with using iTerm with Rosetta 2 for ARM-based applications.\n\n![ss0](https://i.imgur.com/yOAV1or.png)\n\nIf you'd like a similar setup, go to the `Applications` folder in your Macbook and duplicate the `iTerm` application.\n\n![ss1](https://i.imgur.com/2C5jrsb.png)\n\nYou can rename the duplicated iTerm app. I have renamed it to `iTerm_rosetta` to differentiate between the two. Right-click the duplicated app and click **Get Info**. In the **General**, check the box where it says **Open using Rosetta**.\n\n![ss2](https://i.imgur.com/7ipJmzM.png)\n\nNow, if you open the second terminal, it will be using Rosetta 2 emulator by default.\n\n**Other iTerm profile settings that I use:**\n\nRecently I started using [Jetbrains Mono font](https://www.jetbrains.com/lp/mono/).\n\n![ss6](https://i.imgur.com/8Gwhdq4.png)\n\nFor the overall looks and appearance, I use [Dracula Pro Color Presets created by Zen Rocha](https://draculatheme.com/pro).\n\n![ss7](https://i.imgur.com/5VSskf7.gif)\n\nAnd my last favorite thing is to split the working directory into two more different tabs using `Command + D` for horizontal panes.\n\nMake sure to have the following setting configured from\n\n**General > Working Directory > select Advanced Configuration > click button Edit... > select Reuse previous session's directory under Working Directory for New Split Panes.**\n\n![ss8](https://i.imgur.com/NDdHDch.png)\n\nFor terminal prompt, I use [Spaceship ZSH](https://github.com/denysdovhan/spaceship-prompt).\n\n## Homebrew\n\nOn December 1, 2020, the Homebrew team announced on their [website](https://brew.sh/2020/12/01/homebrew-2.6.0/) about the version release `2.6.0`. The most significant changes among others they listed were the support for macOS Big Sur, using `brew` commands instead of `brew cask` and beginning to support macOS M1 and Apple Silicon or ARM-based chips.\n\nUsing the terminal, you can install the Homebrew by executing the default command:\n\n```shell\n/bin/bash -c \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)\"\n```\n\n**brew installs**:\n\n- Node.js and npm via Node Version Manager (NVM). [Read the complete blog post on how to install Node.js using NVM](https://amanhimself.dev/blog/install-nodejs-using-nvm-on-macos-m1/).\n- [scrcpy](https://github.com/Genymobile/scrcpy) (control Android devices connect via USB on mac)\n- JDK (required for React Native)\n- Karabiner-Elements (remapping function keys for Macbook Air or with Macbooks without touchbar)\n- watchman (required for React Native)\n\n### After installing Node.js\n\nNode.js comes with default package manager `npm`. Set defaults for it:\n\n```shell\nnpm set init.author.name \"your name\"\nnpm set init.author.email \"you@example.com\"\nnpm set init.author.url \"example.com\"\n```\n\n## Xcode\n\nAfter installing Git, for me, the next step is to install [Xcode app](https://apps.apple.com/us/app/xcode/id497799835?mt=12) from Apple's App Store.\n\nThen, install \"command line tools\". It is required by many of the formulae in Homebrew.\n\n```shell\nxcode-select --install\n```\n\nAfter installing it, make sure to open it for the first time, from the menu bar, open **Xcode > Preferences > Locations** and make sure that **Command Line Tools** point towards the current Xcode app.\n\n![ss3](https://i.imgur.com/ZXS88QM.png)\n\n### What is Karabiner-Elements?\n\nWhen I bought Macbook Air M1, it had function keys (that got me excited), but I don't understand why Apple decided to replace function keys that would allow me to control Keyboard Brightness?! And moreover, replace it with \"Do Not Disturb\".\n\nWhy? That got me confused 🤷\n\nI found this tool called [karabiner Elements](https://karabiner-elements.pqrs.org/) that can be installed as a brew formula:\n\n```shell\nbrew install karabiner-elements\n```\n\n![screenshot-of-function-keys-on-macbbok-air-m1-2020](https://i.imgur.com/n1jGglG.jpg)\n\nHere are the key mappings I am using now:\n\n![key-mappings-with karabiner-elements](https://i.imgur.com/uoqR0Ht.png)\n\n## Git\n\nI did install Git using brew command:\n\n```shell\nbrew install git\n```\n\nTo authenticate GitHub to be used from the terminal environment, I'd recommend you to check out the [official document](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token) on creating and accessing personal tokens.\n\n> _🔥 Tip:_ As of Git version `2.28` there is a new config option to set the default branch to `main`. Set it globally and forget about it.\n\n```shell\ngit config --global init.defaultBranch main\n```\n\n## ZSH and Oh My Zsh\n\n[ZSH](https://github.com/zsh-users/zsh) is the default shell in macOS Big Sur. However, I like to use [Oh My Zsh](https://ohmyz.sh/) to manage the ZSH configuration, plugins, and a theme to prettify the terminal.\n\nTo install, run the command below:\n\n```shell\nsh -c \"$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)\"\n```\n\nAfter installation, make sure that the file `.zshrc` is exporting the below path at the top:\n\n```shell\n# Path to your oh-my-zsh installation\nexport ZSH=\"/Users/<USERNAME>/.oh-my-zsh\"\n```\n\nThe first I like to do after setting up the bare minimum ZSH configuration is to install a plugin called [\nzsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md). It provides syntax highlighting for the ZSH shell. Execute the series below commands in the terminal window:\n\n```shell\n# depending on the /plugins folder in your local setup\ncd $HOME/.oh-my-zsh/plugins\n\n# then clone the git repository\ngit clone https://github.com/zsh-users/zsh-syntax-highlighting.git\n\necho \"source ${(q-)PWD}/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh\" >> ${ZDOTDIR:-$HOME}/.zshrc\n```\n\nThis is [my final ZSH configuration](https://github.com/amandeepmittal/dotfiles/blob/master/.zshrc) in the file `~/.zshrc` file:\n\n```shell\n# Path to your oh-my-zsh installation\nexport ZSH=\"/Users/amanhimself/.oh-my-zsh\"\n\nexport PATH=/opt/homebrew/bin:$PATH\n\nexport ANDROID_HOME=$HOME/Library/Android/sdk\nexport PATH=$PATH:$ANDROID_HOME/emulator\nexport PATH=$PATH:$ANDROID_HOME/tools\nexport PATH=$PATH:$ANDROID_HOME/tools/bin\nexport PATH=$PATH:$ANDROID_HOME/platform-tools\n\nZSH_THEME=\"spaceship\"\n\n# Uncomment the following line to disable bi-weekly auto-update checks.\nDISABLE_AUTO_UPDATE=\"true\"\n\nplugins=(\n  git\n  node\n  vscode\n  zsh-syntax-highlighting\n)\n\nsource $ZSH/oh-my-zsh.sh\nsource /Users/amanhimself/.oh-my-zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh\n```\n\nAfter installing the syntax highlight plugin, it starts to recognize the commands:\n\n![ss4](https://i.imgur.com/UxRzm98.png)\n\n## VSCode\n\nVSCode and VS Code Insiders are currently supported on ARM chips (as of March 13, 2021). Download the installer for Insiders edition from [here](https://code.visualstudio.com/insiders/) and for VSCode [here](https://code.visualstudio.com/download).\n\n![ss5](https://i.imgur.com/Yd4wQ10.png)\n\nI am still using the same VSCode configuration from my previous setup:\n\n```json\n{\n  // VSCODE EDITOR\n  \"workbench.colorTheme\": \"fairyfloss\",\n  \"workbench.startupEditor\": \"welcomePage\",\n  \"workbench.iconTheme\": \"material-icon-theme\",\n  \"workbench.editor.tabSizing\": \"shrink\",\n  \"security.workspace.trust.untrustedFiles\": \"open\",\n  \"explorer.confirmDelete\": false,\n  \"explorer.confirmDragAndDrop\": false,\n  \"workbench.editor.enablePreview\": false,\n  \"window.restoreFullscreen\": true,\n  \"editor.tabSize\": 2,\n  \"editor.fontSize\": 14,\n  \"editor.minimap.enabled\": false,\n  \"editor.cursorBlinking\": \"phase\",\n  \"editor.fontLigatures\": false,\n  \"editor.wordWrap\": \"on\",\n  \"editor.cursorSmoothCaretAnimation\": true,\n  \"editor.tabCompletion\": \"on\",\n  \"editor.formatOnPaste\": true,\n  \"editor.formatOnSave\": true,\n  \"editor.semanticHighlighting.enabled\": true,\n  \"editor.guides.bracketPairs\": true,\n  \"breadcrumbs.enabled\": false,\n  \"explorer.openEditors.visible\": 0,\n  \"search.exclude\": {\n    \"**/node_modules\": true,\n    \"**/*.code-search\": true,\n    \"ios/\": true,\n    \"android/\": true,\n    \"dist/\": true,\n    \"yarn.lock\": true,\n    \"package-lock.json\": true,\n    \".gitignore\": true,\n    \".expo\": true,\n    \".vscode\": true\n  },\n  \"extensions.autoUpdate\": false,\n  // --------------------------------------\n  // EXPO TOOLS\n  \"json.schemas\": [\n    {\n      \"name\": \"vscode-expo-manifest\",\n      \"url\": \"file:///Users/amanhimself/Library/Application%20Support/Code/User/globalStorage/bycedric.vscode-expo/manifest-42.0.0.json\",\n      \"fileMatch\": [\"app.json\", \"app.config.json\"]\n    }\n  ],\n  // --------------------------------------\n  // CODE::STATS EXTENSION\n  \"codestats.apikey\": \"api-key\",\n  // --------------------------------------\n  // READ TIME EXTENSION\n  \"readTime.enabled\": true,\n  // --------------------------------------\n  // HIGHLIGHT MATCHING TAG EXTENSION\n  \"highlight-matching-tag.styles\": {\n    \"opening\": {\n      \"name\": {\n        // surround is border\n        \"surround\": \"yellow\"\n      }\n    }\n  },\n  // --------------------------------------\n  // INTEGRATED TERMINAL\n  // \"terminal.integrated.defaultProfile.osx\": \"zsh\",\n  \"terminal.external.osxExec\": \"iTerm.app\",\n  \"terminal.integrated.fontSize\": 12,\n  // --------------------------------------\n  // NPM\n  \"npm-intellisense.importES6\": true,\n  // --------------------------------------\n  // TS IMPORT SUGGESTION\n  \"typescript.suggest.paths\": false,\n  // --------------------------------------\n  // NATIVE BRACKER PAIR COLOR SETTINGS\n  \"editor.bracketPairColorization.enabled\": true,\n  \"workbench.colorCustomizations\": {\n    \"editorBracketHighlight.foreground1\": \"#ffb86c\",\n    \"editorBracketHighlight.foreground2\": \"#8be9fd\",\n    \"editorBracketHighlight.foreground3\": \"#bd93f9\",\n    \"editorBracketHighlight.foreground4\": \"#50fa7b\",\n    \"editorBracketHighlight.foreground5\": \"#f1fa8c\",\n    \"editorBracketHighlight.foreground6\": \"#abb2c0\",\n    \"editorBracketHighlight.unexpectedBracket.foreground\": \"#ff5555\"\n  },\n  // --------------------------------------\n  // PRETTIER ----------------------------------\n  \"prettier.singleQuote\": true,\n  \"prettier.jsxSingleQuote\": true,\n  \"prettier.trailingComma\": \"none\",\n  \"prettier.arrowParens\": \"avoid\",\n  \"prettier.proseWrap\": \"preserve\",\n  \"prettier.quoteProps\": \"as-needed\",\n  \"prettier.jsxBracketSameLine\": false,\n  \"prettier.bracketSpacing\": true,\n  \"prettier.tabWidth\": 2,\n  \"editor.defaultFormatter\": \"esbenp.prettier-vscode\",\n  // Markdown\n  \"[markdown]\": {\n    \"editor.quickSuggestions\": true\n  },\n  // JSON\n  \"[json]\": {\n    \"editor.defaultFormatter\": \"esbenp.prettier-vscode\"\n  },\n  // JavaScript\n  \"[javascript]\": {\n    \"editor.defaultFormatter\": \"esbenp.prettier-vscode\"\n  },\n  // JavaScript + React\n  \"[javascriptreact]\": {\n    \"editor.defaultFormatter\": \"esbenp.prettier-vscode\"\n  },\n  // TypeScript\n  \"[typescript]\": {\n    \"editor.defaultFormatter\": \"esbenp.prettier-vscode\"\n  },\n  // TypeScript + React\n  \"[typescriptreact]\": {\n    \"editor.defaultFormatter\": \"esbenp.prettier-vscode\"\n  },\n  // JSON with Comments\n  \"[jsonc]\": {\n    \"editor.defaultFormatter\": \"esbenp.prettier-vscode\"\n  },\n  // HTML\n  \"[html]\": {\n    \"editor.defaultFormatter\": \"esbenp.prettier-vscode\"\n  },\n  // ----------------------------------\n  // ESLINT\n  \"eslint.validate\": [\n    \"javascript\",\n    \"javascriptreact\",\n    \"typescript\",\n    \"typescriptreact\"\n  ],\n  // --------------------------------------\n  // LANGUAGES SPECIFIC\n  \"javascript.updateImportsOnFileMove.enabled\": \"always\",\n  \"security.workspace.trust.banner\": \"never\",\n  \"emmet.includeLanguages\": {\n    \"typescript\": \"typescriptreact\",\n    \"javascript\": \"javascriptreact\"\n  }\n}\n```\n\n### Themes\n\nI usually like to switch between a dark and a light theme.\n\n- For the dark theme where I spent most of my time, I am was previously using [morgan.codes-theme](https://marketplace.visualstudio.com/items?itemName=morgan-codes.morgan-codes-vscode-theme), but now I am using [fairyFloss](https://marketplace.visualstudio.com/items?itemName=nopjmp.fairyfloss).\n  - Other themes I switch between:\n    - Quiet Light\n    - [Cyberpunk](https://marketplace.visualstudio.com/items?itemName=max-SS.cyberpunk)\n- For file icons, I love [Material-Icon-Theme](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme).\n- For terminal prompt, I use [Spaceship ZSH](https://github.com/denysdovhan/spaceship-prompt).\n- Font: [Jetbrains Mono font](https://www.jetbrains.com/lp/mono/).\n\n### Extensions\n\nI use VSCode editor for both writing code and writing blog posts. Thus, the list of extensions below is the combination of extensions that fulfills both of my purposes.\n\n- [Auto Close tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag)\n- [Auto Complete Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-complete-tag)\n- [Auto Rename Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag)\n- [Babel JavaScript](https://marketplace.visualstudio.com/items?itemName=mgmcdermott.vscode-language-babel)\n- ~~Bracket Pair Colorizer 2~~ - VSCode now supports this natively. Check out my post 👉 [How to configure VSCode Bracket Pair Colors Natively](https://amanhimself.dev/blog/how-to-configure-vscode-bracket-colors-natively/)\n- [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)\n- [Code::Stats](https://codestats.net/)\n- [Color Highlight](https://marketplace.visualstudio.com/items?itemName=naumovs.color-highlight)\n- [DotENV](https://marketplace.visualstudio.com/items?itemName=mikestead.dotenv)\n- [ESLint](https://eslint.org/)\n- [Expo Tools](https://marketplace.visualstudio.com/items?itemName=byCedric.vscode-expo)\n- [Flow Language Support](https://marketplace.visualstudio.com/items?itemName=flowtype.flow-for-vscode)\n- [Git Lens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)\n- [Highlight Matching Tag](https://marketplace.visualstudio.com/items?itemName=vincaslt.highlight-matching-tag)\n- [Indent rainbow](https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow)\n- [iOS common files](https://marketplace.visualstudio.com/items?itemName=Orta.vscode-ios-common-files)\n- [Material Icon Theme](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme)\n- [MDX](https://marketplace.visualstudio.com/items?itemName=silvenon.mdx) - For syntax highlighting of `.mdx` files\n- [npm](https://marketplace.visualstudio.com/items?itemName=eg2.vscode-npm-script)\n- [npm intellisense](https://marketplace.visualstudio.com/items?itemName=christian-kohler.npm-intellisense)\n- [Path intellisense](https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense)\n- [Prettier](https://prettier.io/)\n- [React Native Tools](https://marketplace.visualstudio.com/items?itemName=msjsdiag.vscode-react-native)\n- [Read Time](https://marketplace.visualstudio.com/items?itemName=johnpapa.read-time)\n- [SVG Viewer](https://marketplace.visualstudio.com/items?itemName=cssho.vscode-svgviewer)\n- [TODO Highlight](https://marketplace.visualstudio.com/items?itemName=wayou.vscode-todo-highlight)\n- [Version Lens](https://marketplace.visualstudio.com/items?itemName=pflannery.vscode-versionlens)\n- [vscode-styled-components](https://marketplace.visualstudio.com/items?itemName=jpoissonnier.vscode-styled-components)\n- [Word Count](https://marketplace.visualstudio.com/items?itemName=ms-vscode.wordcount)\n- [GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot)\n\n## Global NPM Packages I use\n\n- ~~[gatsby-cli](https://www.npmjs.com/package/gatsby-cli) To build and test out [my personal blog built with Gatsby](https://amanhimself.dev/).~~\n- [expo-cli](https://docs.expo.io/workflow/expo-cli/)\n- [npm-check](https://www.npmjs.com/package/npm-check) to check for outdated, incorrect, and unused dependencies.\n- [git-watch-log](https://github.com/sukima/git-watch-log) to watch a git repo and recent changes.\n\n## For React Native Development\n\n- [install Node.js](http://localhost:3000/blog/install-nodejs-using-nvm-on-macos-m1/)\n- install [Watchman](https://facebook.github.io/watchman/) to watch changes in the filesystem using the command: `brew install watchman`\n- install following [cocoapods](https://formulae.brew.sh/formula/cocoapods): `brew install cocoapods`\n- According to [a post by React Native guru Jamon Holmgren](https://shift.infinite.red/dont-use-the-wrong-jdk-for-react-native-if-you-re-using-an-m1-mac-252533dd47a2) that all this time I've been using installing JDK wrong on my m1 machine 😱. To learn more how to install \"the m1 way\", go to his post and give it a read (and leave an appreciation clap 😄)\n- Versions later than Arctic Fox Canary now supports [Apple's Silicon based machines](https://androidstudio.googleblog.com/2021/04/android-studio-arctic-fox-canary-15.html) for Android Studio. You can also check out the [archive](https://developer.android.com/studio/archive) to see what beta/canary version supports Silicon machines\n- Then install Android SDK (I do not prefer AVD and use an actual device for testing)\n- [scrcpy](https://github.com/Genymobile/scrcpy) to display and control Android devices connect via USB on Mac\n\n<br />\n\n> ⚛️ For more instructions on how to set up a development environment for React Native, please follow the [official documentation here](https://reactnative.dev/docs/environment-setup).\n\n## Rosetta 2\n\n> Update: I am not using the Rosetta environment to install anything on the secondary machine since August 2021. That is the reason I've mentioned it at the end of the post.\n\n[Rosetta 2](https://developer.apple.com/documentation/apple_silicon/about_the_rosetta_translation_environment) is the lifeline that allows you to run apps designed for Intel-based chips that use `x86` architecture on ARM-based chips (in this case M1). This solution is provided by Apple in the form of an emulator and doesn't come pre-installed. You have to install it manually. Fire up the Terminal application that comes pre-installed on the Big Sur and let your first command to execute be:\n\n```shell\n/usr/sbin/softwareupdate --install-rosetta --agree-to-license\n```\n\nIf you decide not to put the flag ` --agree-to-license`, you will be prompted by Apple's interactive install, and you will have to agree to their terms and license conditions to use it.\n\n## Conclusion\n\nThat’s the setup I now use for my JavaScript, Node.js, React and React Native. I think it's a good machine. Hopefully, M1 is just the beginning of a new era of powerful computers for daily work use 🤞\n\n🤔 The only thing left for me is to find a way to transfer all laptop swag/stickers from my Macbook Air 2017 to Pro. I miss having them on this one.\n\n[**isapplesiliconready.com**](https://isapplesiliconready.com/for/developer) is another helpful link I found to check what is compatible to work on Apple Silicon chips natively or using Rosetta or not optimized at all.\n",
             "url": "https://amanhimself.dev//blog/setup-macbook-m1",
             "title": "Setup Macbook M1 for Web and React Native development",
             "summary": "Setup Macbook M1 for Web and React Native development",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -362,7 +362,7 @@
             "url": "https://amanhimself.dev//blog/react-native-geolocation-to-get-postal-address",
             "title": "How to use React Native Geolocation to get Postal Address",
             "summary": "How to use React Native Geolocation to get Postal Address",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -374,7 +374,7 @@
             "url": "https://amanhimself.dev//blog/react-native-performance-do-and-dont",
             "title": "React Native Performance Do and Dont",
             "summary": "React Native Performance Do and Dont",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -386,7 +386,7 @@
             "url": "https://amanhimself.dev//blog/shared-element-transitions",
             "title": "How to use shared element transitions in React Native",
             "summary": "How to use shared element transitions in React Native",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -398,7 +398,7 @@
             "url": "https://amanhimself.dev//blog/react-navigation-remove-tab-bar-border",
             "title": "How to remove bottom tab bar border in React Navigation",
             "summary": "How to remove bottom tab bar border in React Navigation",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -410,7 +410,7 @@
             "url": "https://amanhimself.dev//blog/redux-persist-in-react-native-with-async-storage",
             "title": "How to use redux-persist in React Native with Asyncstorage",
             "summary": "How to use redux-persist in React Native with Asyncstorage",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -422,7 +422,7 @@
             "url": "https://amanhimself.dev//blog/app-icon-react-native-android",
             "title": "How to add an app icon in a React Native Android app",
             "summary": "How to add an app icon in a React Native Android app",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -434,7 +434,7 @@
             "url": "https://amanhimself.dev//blog/year-rewind-2020",
             "title": "Year Rewind: 2020",
             "summary": "Year Rewind: 2020",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -446,7 +446,7 @@
             "url": "https://amanhimself.dev//blog/custom-scroll-bar-indicator-with-react-native-animated-api",
             "title": "How to create a custom scrollbar with React Native Animated API",
             "summary": "How to create a custom scrollbar with React Native Animated API",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -458,7 +458,7 @@
             "url": "https://amanhimself.dev//blog/manage-state-with-usecontext-usereducer-in-react-apps",
             "title": "How to manage state in React apps with useReducer and useContext hooks",
             "summary": "How to manage state in React apps with useReducer and useContext hooks",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -470,7 +470,7 @@
             "url": "https://amanhimself.dev//blog/creating-and-validating-react-native-form-with-formik",
             "title": "Creating and Validating React Native Forms with Formik",
             "summary": "Creating and Validating React Native Forms with Formik",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -482,7 +482,7 @@
             "url": "https://amanhimself.dev//blog/harperdb-with-react-hooks",
             "title": "How to use HarperDB instance with React Hooks",
             "summary": "How to use HarperDB instance with React Hooks",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -494,7 +494,7 @@
             "url": "https://amanhimself.dev//blog/animate-header-view-on-scroll-with-react-native-animated-api",
             "title": "How to Animate a Header View on Scroll With React Native Animated",
             "summary": "How to Animate a Header View on Scroll With React Native Animated",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -506,7 +506,7 @@
             "url": "https://amanhimself.dev//blog/add-environment-variables-in-netlify-deployment",
             "title": "Add Environment Variables in a Netlify Deployment",
             "summary": "Add Environment Variables in a Netlify Deployment",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -518,7 +518,7 @@
             "url": "https://amanhimself.dev//blog/react-router-real-time-user-monitoring-react-apps",
             "title": "How to use React Router and real time user monitoring in React apps",
             "summary": "How to use React Router and real time user monitoring in React apps",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -530,7 +530,7 @@
             "url": "https://amanhimself.dev//blog/build-rest-api-with-nodejs-harperdb",
             "title": "Build a REST API with Node.js and HarperDB",
             "summary": "Build a REST API with Node.js and HarperDB",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -542,7 +542,7 @@
             "url": "https://amanhimself.dev//blog/firebase-config-in-a-react-app",
             "title": "How to setup a React App with a Firebase project",
             "summary": "How to setup a React App with a Firebase project",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -554,7 +554,7 @@
             "url": "https://amanhimself.dev//blog/styling-the-react-native-way",
             "title": "Styling The React Native Way",
             "summary": "Styling The React Native Way",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -566,7 +566,7 @@
             "url": "https://amanhimself.dev//blog/create-custom-headers-with-react-native-svg",
             "title": "How to create custom wavy headers with react-native-svg",
             "summary": "How to create custom wavy headers with react-native-svg",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -578,7 +578,7 @@
             "url": "https://amanhimself.dev//blog/material-ui-integration-with-react",
             "title": "How to integrate Material UI library in React apps",
             "summary": "How to integrate Material UI library in React apps",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -590,7 +590,7 @@
             "url": "https://amanhimself.dev//blog/chat-app-with-react-native-part-6",
             "title": "Chat app with React Native (Part 6) - Create a custom hook to change status bar styles",
             "summary": "Chat app with React Native (Part 6) - Create a custom hook to change status bar styles",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -602,7 +602,7 @@
             "url": "https://amanhimself.dev//blog/quarantine-pro-app",
             "title": "Creating \"Quarantine Pro\" — A Fun Learning Experiment in React Native",
             "summary": "Creating \"Quarantine Pro\" — A Fun Learning Experiment in React Native",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -614,7 +614,7 @@
             "url": "https://amanhimself.dev//blog/chat-app-with-react-native-part-5",
             "title": "Chat app with React Native (Part 5) - Create and Fetch Real-Time Messages with Firestore",
             "summary": "Chat app with React Native (Part 5) - Create and Fetch Real-Time Messages with Firestore",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -626,7 +626,7 @@
             "url": "https://amanhimself.dev//blog/integrate-apollo-client-in-react-native",
             "title": "How to integrate GraphQL and Apollo Client in React Native app",
             "summary": "How to integrate GraphQL and Apollo Client in React Native app",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -638,7 +638,7 @@
             "url": "https://amanhimself.dev//blog/chat-app-with-react-native-part-4",
             "title": "Chat app with React Native (part 4) - A guide to create Chat UI Screens with react-native-gifted-chat",
             "summary": "Chat app with React Native (part 4) - A guide to create Chat UI Screens with react-native-gifted-chat",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -650,7 +650,7 @@
             "url": "https://amanhimself.dev//blog/how-to-use-react-native-image-picker",
             "title": "An in-depth guide on how to use React Native Image Picker",
             "summary": "An in-depth guide on how to use React Native Image Picker",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -662,7 +662,7 @@
             "url": "https://amanhimself.dev//blog/chat-app-with-react-native-part-3",
             "title": "Chat app with React Native (part 3) - Create Firestore collections to store chat rooms",
             "summary": "Chat app with React Native (part 3) - Create Firestore collections to store chat rooms",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -674,7 +674,7 @@
             "url": "https://amanhimself.dev//blog/add-search-bar-to-a-flatlist-in-react-native",
             "title": "How to add a Search bar in a FlatList in React Native apps",
             "summary": "How to add a Search bar in a FlatList in React Native apps",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -686,7 +686,7 @@
             "url": "https://amanhimself.dev//blog/chat-app-with-react-native-part-2",
             "title": "Chat app with React Native (part 2) - Firebase Email Authentication with react-native-firebase",
             "summary": "Chat app with React Native (part 2) - Firebase Email Authentication with react-native-firebase",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -698,7 +698,7 @@
             "url": "https://amanhimself.dev//blog/blogging-tips-after-3-years",
             "title": "Blogging tips after 3 years and a 100+ posts",
             "summary": "Blogging tips after 3 years and a 100+ posts",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -710,7 +710,7 @@
             "url": "https://amanhimself.dev//blog/chat-app-with-react-native-part-1",
             "title": "Chat app with React Native (part 1) - Build reusable UI form elements using react-native-paper",
             "summary": "Chat app with React Native (part 1) - Build reusable UI form elements using react-native-paper",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -722,7 +722,7 @@
             "url": "https://amanhimself.dev//blog/create-custom-status-bar-hook-react-navigation",
             "title": "How to create a custom hook to change status bar styles for every screen using React Navigation",
             "summary": "How to create a custom hook to change status bar styles for every screen using React Navigation",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -734,7 +734,7 @@
             "url": "https://amanhimself.dev//blog/react-app-with-localstorage-api-and-hooks",
             "title": "Build an Expense Tracker app with React Hooks and LocalStorage API",
             "summary": "Build an Expense Tracker app with React Hooks and LocalStorage API",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -746,7 +746,7 @@
             "url": "https://amanhimself.dev//blog/nested-navigators-in-react-native",
             "title": "Nesting Tab and Stack navigators in React Native and Expo apps",
             "summary": "Nesting Tab and Stack navigators in React Native and Expo apps",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -758,7 +758,7 @@
             "url": "https://amanhimself.dev//blog/stack-navigator-with-react-navigation-v5",
             "title": "Getting Started with Stack Navigator using react-navigation 5 in React Native and Expo apps",
             "summary": "Getting Started with Stack Navigator using react-navigation 5 in React Native and Expo apps",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -770,7 +770,7 @@
             "url": "https://amanhimself.dev//blog/handle-navigation-in-webviews-react-native",
             "title": "How to handle navigation in WebViews in a React Native app",
             "summary": "How to handle navigation in WebViews in a React Native app",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -782,7 +782,7 @@
             "url": "https://amanhimself.dev//blog/getting-started-with-react-native-expo-hooks-2020",
             "title": "Getting Started with React Native and Expo using Hooks in 2020",
             "summary": "Getting Started with React Native and Expo using Hooks in 2020",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -794,7 +794,7 @@
             "url": "https://amanhimself.dev//blog/dark-mode-with-react-hooks",
             "title": "How to add Dark mode functionality with React Hooks",
             "summary": "How to add Dark mode functionality with React Hooks",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -806,7 +806,7 @@
             "url": "https://amanhimself.dev//blog/how-to-use-react-native-localize",
             "title": "How to use React Native Localize in React Native apps",
             "summary": "How to use React Native Localize in React Native apps",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -818,7 +818,7 @@
             "url": "https://amanhimself.dev//blog/push-notifications-android-apps-react-native",
             "title": "Implement Push notifications for Android apps with React Native",
             "summary": "Implement Push notifications for Android apps with React Native",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -830,7 +830,7 @@
             "url": "https://amanhimself.dev//blog/handle-different-field-types-in-react-native-forms",
             "title": "Handle different field types in React Native forms with formik and yup",
             "summary": "Handle different field types in React Native forms with formik and yup",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -842,7 +842,7 @@
             "url": "https://amanhimself.dev//blog/implement-forgot-password-firebase-react-native",
             "title": "How to implement Forgot Password feature in React Native with Firebase",
             "summary": "How to implement Forgot Password feature in React Native with Firebase",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -854,7 +854,7 @@
             "url": "https://amanhimself.dev//blog/tensorflow-image-classification-expo",
             "title": "Image Classification on React Native with TensorFlow.js and MobileNet",
             "summary": "Image Classification on React Native with TensorFlow.js and MobileNet",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -866,7 +866,7 @@
             "url": "https://amanhimself.dev//blog/build-validate-forms-with-react-native-formik-yup",
             "title": "Build and validate forms in React Native using Formik and Yup",
             "summary": "Build and validate forms in React Native using Formik and Yup",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -878,7 +878,7 @@
             "url": "https://amanhimself.dev//blog/create-app-themes-styled-components-redux",
             "title": "Changing app themes using React Native, Styled Components and Redux",
             "summary": "Changing app themes using React Native, Styled Components and Redux",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -890,7 +890,7 @@
             "url": "https://amanhimself.dev//blog/context-api-react-native-firebase",
             "title": "Using Context API with React Native",
             "summary": "Using Context API with React Native",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -902,7 +902,7 @@
             "url": "https://amanhimself.dev//blog/authentication-navigation-flow-in-react-native-apps",
             "title": "How Authentication Flow works in React Native apps using React Navigation 4.x",
             "summary": "How Authentication Flow works in React Native apps using React Navigation 4.x",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -914,7 +914,7 @@
             "url": "https://amanhimself.dev//blog/build-an-audio-player-in-react-native",
             "title": "How to Build an Audio Player in React Native",
             "summary": "How to Build an Audio Player in React Native",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -926,7 +926,7 @@
             "url": "https://amanhimself.dev//blog/not-hotdog-clone-react-native",
             "title": "Build a Not Hotdog clone with React Native",
             "summary": "Build a Not Hotdog clone with React Native",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -938,7 +938,7 @@
             "url": "https://amanhimself.dev//blog/building-offline-react-native-apps-with-asyncstorage",
             "title": "Building offline React Native apps with AsyncStorage",
             "summary": "Building offline React Native apps with AsyncStorage",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -950,7 +950,7 @@
             "url": "https://amanhimself.dev//blog/how-to-use-the-geolocation-api-in-a-react-native-app",
             "title": "How to use the Geolocation API in a React Native app",
             "summary": "How to use the Geolocation API in a React Native app",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -962,7 +962,7 @@
             "url": "https://amanhimself.dev//blog/how-to-build-xylophone-app-with-expo",
             "title": "How to build a xylophone app with Audio API, React Native, and Expo",
             "summary": "How to build a xylophone app with Audio API, React Native, and Expo",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -974,7 +974,7 @@
             "url": "https://amanhimself.dev//blog/build-chatbot-dialogflow-nodejs-webhooks",
             "title": "How to Create a Chatbot with Dialogflow, NodeJS, and Webhooks",
             "summary": "How to Create a Chatbot with Dialogflow, NodeJS, and Webhooks",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -986,7 +986,7 @@
             "url": "https://amanhimself.dev//blog/introduction-to-react-router-v4-with-reactjs",
             "title": "Using React Router to Optimize Single Page Applications (SPAs)",
             "summary": "Using React Router to Optimize Single Page Applications (SPAs)",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -998,7 +998,7 @@
             "url": "https://amanhimself.dev//blog/to-travel-a-tech-conference-and-one-million-views-a-recap",
             "title": "To Travel, A Tech Conference and One Million views - a Recap",
             "summary": "To Travel, A Tech Conference and One Million views - a Recap",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1010,7 +1010,7 @@
             "url": "https://amanhimself.dev//blog/how-to-integrate-firebase-firestore-react-and-crowdbotics-platform",
             "title": "How to integrate Firebase and Firestore cloud database with a React application",
             "summary": "How to integrate Firebase and Firestore cloud database with a React application",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1022,7 +1022,7 @@
             "url": "https://amanhimself.dev//blog/setup-a-react-app-with-typescript-storybook",
             "title": "How to Setup a React App with TypeScript, Storybook",
             "summary": "How to Setup a React App with TypeScript, Storybook",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1034,7 +1034,7 @@
             "url": "https://amanhimself.dev//blog/build-a-custom-modal-with-the-animated-api-in-react-native",
             "title": "Build a Custom Modal with the Animated API in React Native",
             "summary": "Build a Custom Modal with the Animated API in React Native",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1046,7 +1046,7 @@
             "url": "https://amanhimself.dev//blog/build-a-twitter-clone-server-with-apollo-graphql-nodejs",
             "title": "Build a Twitter Clone Server with Apollo, GraphQL, Nodejs, and Crowdbotics",
             "summary": "Build a Twitter Clone Server with Apollo, GraphQL, Nodejs, and Crowdbotics",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1058,7 +1058,7 @@
             "url": "https://amanhimself.dev//blog/use-emotion-js-with-react-native",
             "title": "Building Stylistic UIs with Emotion-JS for React Native",
             "summary": "Building Stylistic UIs with Emotion-JS for React Native",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1070,7 +1070,7 @@
             "url": "https://amanhimself.dev//blog/user-authentication-with-amplify-in-a-react-native-and-expo-app",
             "title": "User Authentication with Amplify in a React Native and Expo app",
             "summary": "User Authentication with Amplify in a React Native and Expo app",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1082,7 +1082,7 @@
             "url": "https://amanhimself.dev//blog/building-a-react-native-mobile-app-with-aws-amplify-and-expo",
             "title": "Building a React Native Mobile App with AWS Amplify and Expo",
             "summary": "Building a React Native Mobile App with AWS Amplify and Expo",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1090,11 +1090,11 @@
         },
         {
             "id": "https://amanhimself.dev//blog/how-i-configure-vscode-for-everything",
-            "content_html": "---\ntitle: 'How I Configure VSCode for Everything'\nslug: 'how-i-configure-vscode-for-everything'\ndate: '2019-04-22'\nthumbnail: '/thumbnails/vscode.png'\ntag: 'tools'\ncanonicalUrl: 'https://medium.com/better-programming/how-i-configure-vscode-for-everything-7df65a316a52'\n---\n\n![cover](https://i.imgur.com/hJ7W51N.jpg)\n\n[**I made updates to this post here**](https://amanhimself.dev/blog/setup-macbook-m1/) **with additions to setup a new Macbook Pro based on M1 chip in 2021!**\n\nRecently, I was at the Boryspil Airport in Ukraine, working on a blog article, when suddenly my VS Code stopped working. It actually crashed! Not once, but twice in less than 30 minutes. Some of the content was autosaved, but some of it was gone forever.\n\nI was frustrated at first as to why it had to crash at that moment. After re-opening the editor, I was angry with myself because I had to write some of the stuff that didn’t get saved again.\n\nBefore this experience, it did at times feel that I had too many extensions that I wasn’t using, as I stopped working with some of the frameworks in recent months (Angular, for example).\n\nWhat did I do? The emotions weren’t helping; I had to find a better way. So, I re-installed [VS Code](https://code.visualstudio.com/).\n\nVS Code uses [Electron](https://electronjs.org/) as its base which enables it to be cross-platform and work on macOS, Windows, and Linux. It is built using [Node.js](https://nodejs.org/) and has complete support for any JavaScript developer.\n\nNow, that’s what I call win-win. It’s fast compared to the previous editors ([Atom](https://atom.io/)) and IDE’s ([Webstorm](https://www.jetbrains.com/webstorm/)) I have used.\n\n## Themes\n\nThe first thing I did was install themes that I see all day. I like my editor to be charming and appealing. Thus, I used the following themes for different purposes.\n\n- fairyFloss (most of the time, because I love purple backgrounds).\n- Dracula Official (I used this with my [iTerm](https://www.iterm2.com/) setup and switch between it and fairyFloss).\n- Night Owl (just to try something new).\n- Material-Icon-Theme (for file icons).\n\n<img src='https://cdn-images-1.medium.com/max/800/1*7utI1vJayaK97t7lYhrv_A.jpeg' />\n\n## Configuring VS Code\n\nNext, I changed a few things that I remembered from my previous settings.\n\n- Set `Tab` size to two spaces.\n- Enabled [Emmet](https://emmet.io/) for HTML and JavaScript.\n- Enabled `autoSave` with a delay of 5 seconds.\n- Used OS’s terminal setup and shell ([Zsh](https://ohmyz.sh/)).\n- Enabled formatting of files on save and pasting snippets from elsewhere.\n- Disabled Minimap as I like to save space and we write modular functions modules these days.\n- Also, enabled `wordwrap`.\n\n### Extensions\n\nNext step for me is to make this editor work like a charm with the help of some well maintained and free extensions.\n\n- [emojisense](https://marketplace.visualstudio.com/items?itemName=bierner.emojisense):\n- [Bracket Pair Colorizer](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer)\n- [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker) (I write a lot of blog posts in VS Code.)\n- [Code::Stats](https://codestats.net/) (a small stats tool, for fun.)\n- [ESLint](https://eslint.org/)\n- [Indent 4-to-2](https://marketplace.visualstudio.com/items?itemName=Compulim.indent4to2) (converts tab indentation from four spaces to two.)\n- [Express.js](https://expressjs.com/) (a snippets package written by me.)\n- [markdownlint](https://github.com/markdownlint/markdownlint) (I sometimes write more Markdown in a day than JavaScript code.)\n- [GitHub pull requests](https://help.github.com/en/articles/about-pull-requests).\n- [GraphQL](https://graphql.org/) (published by Prisma.)\n- [Import Cost](https://marketplace.visualstudio.com/items?itemName=wix.vscode-import-cost)\n- [npm Intellisense](https://marketplace.visualstudio.com/items?itemName=christian-kohler.npm-intellisense)\n- [Path Intellisense](https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense)\n- [Pug](https://marketplace.visualstudio.com/items?itemName=amandeepmittal.pug) (another snippet by me for Jade and Pug template languages, for some old projects.)\n- [IntelliSense for CSS class names](https://marketplace.visualstudio.com/items?itemName=Zignd.html-css-class-completion)\n- [React Native Tools](https://marketplace.visualstudio.com/items?itemName=msjsdiag.vscode-react-native)\n- [Todo Tree](https://marketplace.visualstudio.com/items?itemName=Gruntfuggly.todo-tree)\n- [Version Lens](https://marketplace.visualstudio.com/items?itemName=pflannery.vscode-versionlens)\n- [Settings Sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync) (one of the most important extensions I have mentioned here)\n- [Word Count](https://marketplace.visualstudio.com/items?itemName=ms-vscode.wordcount)\n- [Prettier](https://prettier.io/) (Code formatter I can’t live without.)\n\nWith Prettier, I like to use my own set of configurations, as described below.\n\n```json\n{\n  \"prettier.jsxSingleQuote\": true,\n  \"prettier.printWidth\": 100,\n  \"prettier.semi\": false,\n  \"prettier.useTabs\": true,\n  \"prettier.tabWidth\": 2\n}\n```\n\n## Conclusion\n\nThat’s the setup I now use for my JavaScript, Node.js, [React](https://reactjs.org/) and React Native work. What type of VS Code configuration do you use? What does it look like? I hope you enjoyed reading this post.\n\nHappy Coding!\n\n[Originally published at Better Programming](https://medium.com/better-programming/how-i-configure-vscode-for-everything-7df65a316a52)\n",
+            "content_html": "---\ntitle: 'How I Configure VSCode for Everything'\nslug: 'how-i-configure-vscode-for-everything'\ndate: '2019-04-22'\nthumbnail: '/thumbnails/vscode.png'\ntag: 'vscode'\ncanonicalUrl: 'https://medium.com/better-programming/how-i-configure-vscode-for-everything-7df65a316a52'\n---\n\n![cover](https://i.imgur.com/hJ7W51N.jpg)\n\n[**I made updates to this post here**](https://amanhimself.dev/blog/setup-macbook-m1/) **with additions to setup a new Macbook Pro based on M1 chip in 2021!**\n\nRecently, I was at the Boryspil Airport in Ukraine, working on a blog article, when suddenly my VS Code stopped working. It actually crashed! Not once, but twice in less than 30 minutes. Some of the content was autosaved, but some of it was gone forever.\n\nI was frustrated at first as to why it had to crash at that moment. After re-opening the editor, I was angry with myself because I had to write some of the stuff that didn’t get saved again.\n\nBefore this experience, it did at times feel that I had too many extensions that I wasn’t using, as I stopped working with some of the frameworks in recent months (Angular, for example).\n\nWhat did I do? The emotions weren’t helping; I had to find a better way. So, I re-installed [VS Code](https://code.visualstudio.com/).\n\nVS Code uses [Electron](https://electronjs.org/) as its base which enables it to be cross-platform and work on macOS, Windows, and Linux. It is built using [Node.js](https://nodejs.org/) and has complete support for any JavaScript developer.\n\nNow, that’s what I call win-win. It’s fast compared to the previous editors ([Atom](https://atom.io/)) and IDE’s ([Webstorm](https://www.jetbrains.com/webstorm/)) I have used.\n\n## Themes\n\nThe first thing I did was install themes that I see all day. I like my editor to be charming and appealing. Thus, I used the following themes for different purposes.\n\n- fairyFloss (most of the time, because I love purple backgrounds).\n- Dracula Official (I used this with my [iTerm](https://www.iterm2.com/) setup and switch between it and fairyFloss).\n- Night Owl (just to try something new).\n- Material-Icon-Theme (for file icons).\n\n<img src='https://cdn-images-1.medium.com/max/800/1*7utI1vJayaK97t7lYhrv_A.jpeg' />\n\n## Configuring VS Code\n\nNext, I changed a few things that I remembered from my previous settings.\n\n- Set `Tab` size to two spaces.\n- Enabled [Emmet](https://emmet.io/) for HTML and JavaScript.\n- Enabled `autoSave` with a delay of 5 seconds.\n- Used OS’s terminal setup and shell ([Zsh](https://ohmyz.sh/)).\n- Enabled formatting of files on save and pasting snippets from elsewhere.\n- Disabled Minimap as I like to save space and we write modular functions modules these days.\n- Also, enabled `wordwrap`.\n\n### Extensions\n\nNext step for me is to make this editor work like a charm with the help of some well maintained and free extensions.\n\n- [emojisense](https://marketplace.visualstudio.com/items?itemName=bierner.emojisense):\n- [Bracket Pair Colorizer](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer)\n- [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker) (I write a lot of blog posts in VS Code.)\n- [Code::Stats](https://codestats.net/) (a small stats tool, for fun.)\n- [ESLint](https://eslint.org/)\n- [Indent 4-to-2](https://marketplace.visualstudio.com/items?itemName=Compulim.indent4to2) (converts tab indentation from four spaces to two.)\n- [Express.js](https://expressjs.com/) (a snippets package written by me.)\n- [markdownlint](https://github.com/markdownlint/markdownlint) (I sometimes write more Markdown in a day than JavaScript code.)\n- [GitHub pull requests](https://help.github.com/en/articles/about-pull-requests).\n- [GraphQL](https://graphql.org/) (published by Prisma.)\n- [Import Cost](https://marketplace.visualstudio.com/items?itemName=wix.vscode-import-cost)\n- [npm Intellisense](https://marketplace.visualstudio.com/items?itemName=christian-kohler.npm-intellisense)\n- [Path Intellisense](https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense)\n- [Pug](https://marketplace.visualstudio.com/items?itemName=amandeepmittal.pug) (another snippet by me for Jade and Pug template languages, for some old projects.)\n- [IntelliSense for CSS class names](https://marketplace.visualstudio.com/items?itemName=Zignd.html-css-class-completion)\n- [React Native Tools](https://marketplace.visualstudio.com/items?itemName=msjsdiag.vscode-react-native)\n- [Todo Tree](https://marketplace.visualstudio.com/items?itemName=Gruntfuggly.todo-tree)\n- [Version Lens](https://marketplace.visualstudio.com/items?itemName=pflannery.vscode-versionlens)\n- [Settings Sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync) (one of the most important extensions I have mentioned here)\n- [Word Count](https://marketplace.visualstudio.com/items?itemName=ms-vscode.wordcount)\n- [Prettier](https://prettier.io/) (Code formatter I can’t live without.)\n\nWith Prettier, I like to use my own set of configurations, as described below.\n\n```json\n{\n  \"prettier.jsxSingleQuote\": true,\n  \"prettier.printWidth\": 100,\n  \"prettier.semi\": false,\n  \"prettier.useTabs\": true,\n  \"prettier.tabWidth\": 2\n}\n```\n\n## Conclusion\n\nThat’s the setup I now use for my JavaScript, Node.js, [React](https://reactjs.org/) and React Native work. What type of VS Code configuration do you use? What does it look like? I hope you enjoyed reading this post.\n\nHappy Coding!\n\n[Originally published at Better Programming](https://medium.com/better-programming/how-i-configure-vscode-for-everything-7df65a316a52)\n",
             "url": "https://amanhimself.dev//blog/how-i-configure-vscode-for-everything",
             "title": "How I Configure VSCode for Everything",
             "summary": "How I Configure VSCode for Everything",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1106,7 +1106,7 @@
             "url": "https://amanhimself.dev//blog/build-a-react-native-app-with-react-hooks",
             "title": "React Hooks Basics — Building a React Native App with React Hooks",
             "summary": "React Hooks Basics — Building a React Native App with React Hooks",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1118,7 +1118,7 @@
             "url": "https://amanhimself.dev//blog/how-to-build-your-first-vr-app-with-viroreact-react-native-and-crowdbotics",
             "title": "How To Build Your First VR App with ViroReact, React Native, and Crowdbotics",
             "summary": "How To Build Your First VR App with ViroReact, React Native, and Crowdbotics",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1130,7 +1130,7 @@
             "url": "https://amanhimself.dev//blog/build-a-chatbot-with-dialogflow-and-react-native",
             "title": "Build a Chatbot with Dialogflow and React Native",
             "summary": "Build a Chatbot with Dialogflow and React Native",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1142,7 +1142,7 @@
             "url": "https://amanhimself.dev//blog/how-to-build-a-real-time-logo-detection-app-with-react-native-google-vision-api-and-crowdbotics",
             "title": "How to Build a Real Time Logo Detection App with React Native & Google Vision API",
             "summary": "How to Build a Real Time Logo Detection App with React Native & Google Vision API",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1154,7 +1154,7 @@
             "url": "https://amanhimself.dev//blog/using-styled-components-with-react-native",
             "title": "Using Styled Components with React Native",
             "summary": "Using Styled Components with React Native",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1166,7 +1166,7 @@
             "url": "https://amanhimself.dev//blog/google-vision-api-firebase-react-native",
             "title": "Create a React Native Image Recognition App with Google Vision API",
             "summary": "Create a React Native Image Recognition App with Google Vision API",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1178,7 +1178,7 @@
             "url": "https://amanhimself.dev//blog/how-to-build-a-news-reader-app-with-react-native-and-newsapi",
             "title": "How To Build a News Reader App with React Native and NewsAPI",
             "summary": "How To Build a News Reader App with React Native and NewsAPI",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1190,7 +1190,7 @@
             "url": "https://amanhimself.dev//blog/29-useful-open-source-libraries-for-nodejs",
             "title": "Top open source libraries for Node.js",
             "summary": "Top open source libraries for Node.js",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1202,7 +1202,7 @@
             "url": "https://amanhimself.dev//blog/21-useful-open-source-packages-for-react-native",
             "title": "21 Useful Open Source Packages for React Native",
             "summary": "21 Useful Open Source Packages for React Native",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1214,7 +1214,7 @@
             "url": "https://amanhimself.dev//blog/3-steps-to-learn-react-native-in-2019",
             "title": "3 Steps to learn React Native in 2019",
             "summary": "3 Steps to learn React Native in 2019",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1226,7 +1226,7 @@
             "url": "https://amanhimself.dev//blog/getting-started-with-react-native-in-2019-build-your-first-app",
             "title": "Getting Started with React Native in 2019 - Build Your First App",
             "summary": "Getting Started with React Native in 2019 - Build Your First App",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1238,7 +1238,7 @@
             "url": "https://amanhimself.dev//blog/my-top-tutorials-in-web-development-and-react-native-in-2018",
             "title": "My Top Tutorials in Web Development and React Native in 2018",
             "summary": "My Top Tutorials in Web Development and React Native in 2018",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1250,7 +1250,7 @@
             "url": "https://amanhimself.dev//blog/top-nodejs-libraries-and-tools-for-machine-learning",
             "title": "Top Node.js Libraries and Tools For Machine Learning",
             "summary": "Top Node.js Libraries and Tools For Machine Learning",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1262,7 +1262,7 @@
             "url": "https://amanhimself.dev//blog/how-to-build-a-rest-api-with-nodejs-and-postgresql",
             "title": "How To Build a REST API With Nodejs and PostgreSQL",
             "summary": "How To Build a REST API With Nodejs and PostgreSQL",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1274,7 +1274,7 @@
             "url": "https://amanhimself.dev//blog/integrating-firebase-with-react-native",
             "title": "Integrating Firebase with React Native",
             "summary": "Integrating Firebase with React Native",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1286,7 +1286,7 @@
             "url": "https://amanhimself.dev//blog/how-to-build-your-own-blog-from-scratch-with-gatsbyjs-graphql-react-and-markdown",
             "title": "How To Build A Blog From Scratch With React, Markdown, GraphQL and Gatsbyjs",
             "summary": "How To Build A Blog From Scratch With React, Markdown, GraphQL and Gatsbyjs",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1298,7 +1298,7 @@
             "url": "https://amanhimself.dev//blog/building-a-mern-stack-app-with-material-ui",
             "title": "Building an authenticated MERN Stack App Using Material UI",
             "summary": "Building an authenticated MERN Stack App Using Material UI",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1310,7 +1310,7 @@
             "url": "https://amanhimself.dev//blog/how-to-build-a-serverless-backend-with-aws-lambda-and-nodejs",
             "title": "How to Build a Serverless Backend with AWS Lambda and Nodejs",
             "summary": "How to Build a Serverless Backend with AWS Lambda and Nodejs",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1322,7 +1322,7 @@
             "url": "https://amanhimself.dev//blog/creating-a-graphql-server-with-nodejs-in-2018",
             "title": "Creating a GraphQL server with Nodejs",
             "summary": "Creating a GraphQL server with Nodejs",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1334,7 +1334,7 @@
             "url": "https://amanhimself.dev//blog/how-to-use-import-statements-in-nodejs",
             "title": "How to use Import statements in Nodejs",
             "summary": "How to use Import statements in Nodejs",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1346,7 +1346,7 @@
             "url": "https://amanhimself.dev//blog/setting-up-nodejs-backend-for-a-react-app",
             "title": "Setting up Nodejs Backend for a React App",
             "summary": "Setting up Nodejs Backend for a React App",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1358,7 +1358,7 @@
             "url": "https://amanhimself.dev//blog/building-a-rest-api-with-koajs",
             "title": "Building a REST API with Koajs",
             "summary": "Building a REST API with Koajs",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1370,7 +1370,7 @@
             "url": "https://amanhimself.dev//blog/deploy-a-mern-stack-app-on-heroku",
             "title": "Deploy a MERN stack app on Heroku",
             "summary": "Deploy a MERN stack app on Heroku",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1382,7 +1382,7 @@
             "url": "https://amanhimself.dev//blog/navigation-in-a-react-native-app",
             "title": "How to use React Navigation in a React Native App",
             "summary": "How to use React Navigation in a React Native App",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1394,7 +1394,7 @@
             "url": "https://amanhimself.dev//blog/accessing-geo-location-and-app-permissions-in-react-native-and-expo",
             "title": "Accessing Geo-location and App Permissions in React Native and Expo",
             "summary": "Accessing Geo-location and App Permissions in React Native and Expo",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1406,7 +1406,7 @@
             "url": "https://amanhimself.dev//blog/simple-recipe-to-build-a-theme-app-in-react-native",
             "title": "Simple Recipe to Build a Theme App in React Native",
             "summary": "Simple Recipe to Build a Theme App in React Native",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1418,7 +1418,7 @@
             "url": "https://amanhimself.dev//blog/how-to-integrate-redux-into-your-application-with-react-native-and-expo",
             "title": "How to integrate Redux into your application with React Native and Expo",
             "summary": "How to integrate Redux into your application with React Native and Expo",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1430,7 +1430,7 @@
             "url": "https://amanhimself.dev//blog/week-3-with-react-native",
             "title": "Week 3 with React Native - Why use Expo?",
             "summary": "Week 3 with React Native - Why use Expo?",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1442,7 +1442,7 @@
             "url": "https://amanhimself.dev//blog/week-2-with-react-native-building-a-weather-app",
             "title": "Week 2 With React Native - Building a Weather App",
             "summary": "Week 2 With React Native - Building a Weather App",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1454,7 +1454,7 @@
             "url": "https://amanhimself.dev//blog/react-native-how-to-setup-your-first-app",
             "title": "React Native - How to Setup Your First App",
             "summary": "React Native - How to Setup Your First App",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1466,7 +1466,7 @@
             "url": "https://amanhimself.dev//blog/starting-over-with-react-native",
             "title": "Starting Over with React Native",
             "summary": "Starting Over with React Native",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1478,7 +1478,7 @@
             "url": "https://amanhimself.dev//blog/connecting-a-node-js-and-reactjs-example",
             "title": "How to Upload a File with Reactjs and Nodejs",
             "summary": "How to Upload a File with Reactjs and Nodejs",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1490,7 +1490,7 @@
             "url": "https://amanhimself.dev//blog/react-native-building-a-minimalist-weather-app-using-expo-xde",
             "title": "React Native - Building a Minimalist Weather App using Expo XDE",
             "summary": "React Native - Building a Minimalist Weather App using Expo XDE",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1502,7 +1502,7 @@
             "url": "https://amanhimself.dev//blog/react-native-getting-started-with-lottie-and-expo",
             "title": "React Native - Getting Started with Lottie and Expo",
             "summary": "React Native - Getting Started with Lottie and Expo",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1514,7 +1514,7 @@
             "url": "https://amanhimself.dev//blog/build-a-progressive-web-app-using-react",
             "title": "Build a Progressive Web App using React",
             "summary": "Build a Progressive Web App using React",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1526,7 +1526,7 @@
             "url": "https://amanhimself.dev//blog/designing-a-rest-api-with-node-js-and-mongodb-atlas",
             "title": "Designing a REST API with Node.js and MongoDB Atlas",
             "summary": "Designing a REST API with Node.js and MongoDB Atlas",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1538,7 +1538,7 @@
             "url": "https://amanhimself.dev//blog/setting-up-and-getting-used-to-gatsby",
             "title": "Gatsby.js - How to set up and use the React Static Site Generator",
             "summary": "Gatsby.js - How to set up and use the React Static Site Generator",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1550,7 +1550,7 @@
             "url": "https://amanhimself.dev//blog/ionic-2-3-cli-reference",
             "title": "Ionic 2/3 CLI Reference",
             "summary": "Ionic 2/3 CLI Reference",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1562,7 +1562,7 @@
             "url": "https://amanhimself.dev//blog/passing-data-between-pages-in-an-ionic-application",
             "title": "Passing Data Between Pages in an Ionic Application",
             "summary": "Passing Data Between Pages in an Ionic Application",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1574,7 +1574,7 @@
             "url": "https://amanhimself.dev//blog/tips-for-creating-node-js-rest-apis",
             "title": "Tips for Creating Nodejs REST APIs",
             "summary": "Tips for Creating Nodejs REST APIs",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1586,7 +1586,7 @@
             "url": "https://amanhimself.dev//blog/multi-page-navigation-in-an-ionic-app",
             "title": "Multi Page Navigation in an Ionic App",
             "summary": "Multi Page Navigation in an Ionic App",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1598,7 +1598,7 @@
             "url": "https://amanhimself.dev//blog/using-google-fonts-in-an-ionic-application",
             "title": "Using Google Fonts in an Ionic Application",
             "summary": "Using Google Fonts in an Ionic Application",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1610,7 +1610,7 @@
             "url": "https://amanhimself.dev//blog/basic-navigation-in-ionic-applications",
             "title": "Basic Navigation in Ionic Applications",
             "summary": "Basic Navigation in Ionic Applications",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1622,7 +1622,7 @@
             "url": "https://amanhimself.dev//blog/how-to-use-font-awesome-in-an-ionic-application",
             "title": "How to use Font Awesome in an Ionic Application",
             "summary": "How to use Font Awesome in an Ionic Application",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1634,7 +1634,7 @@
             "url": "https://amanhimself.dev//blog/what-is-ionic",
             "title": "What is Ionic?",
             "summary": "What is Ionic?",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1646,7 +1646,7 @@
             "url": "https://amanhimself.dev//blog/introduction-to-hybrid-mobile-apps",
             "title": "Introduction to Hybrid Mobile Apps",
             "summary": "Introduction to Hybrid Mobile Apps",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1658,7 +1658,7 @@
             "url": "https://amanhimself.dev//blog/remove-node-modules-recursively",
             "title": "Remove node_modules Recursively",
             "summary": "Remove node_modules Recursively",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1670,7 +1670,7 @@
             "url": "https://amanhimself.dev//blog/setup-nodemon-to-auto-restart-nodejs-application-server",
             "title": "Setup Nodemon to auto restart Nodejs application server",
             "summary": "Setup Nodemon to auto restart Nodejs application server",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1682,7 +1682,7 @@
             "url": "https://amanhimself.dev//blog/whats-new-in-npm-5",
             "title": "What’s New in npm 5?",
             "summary": "What’s New in npm 5?",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1694,7 +1694,7 @@
             "url": "https://amanhimself.dev//blog/converting-a-buffer-to-json-and-utf8-strings-in-nodejs",
             "title": "Converting a Buffer to JSON and Utf8 Strings in Nodejs",
             "summary": "Converting a Buffer to JSON and Utf8 Strings in Nodejs",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1706,7 +1706,7 @@
             "url": "https://amanhimself.dev//blog/setting-up-mean-stack-with-webstorm",
             "title": "Setting up MEAN Stack with Webstorm",
             "summary": "Setting up MEAN Stack with Webstorm",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1718,7 +1718,7 @@
             "url": "https://amanhimself.dev//blog/paginate-records-in-mysql-using-sequelize-and-nodejs",
             "title": "How to paginate records in MySQL using Sequelize and Nodejs",
             "summary": "How to paginate records in MySQL using Sequelize and Nodejs",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1730,7 +1730,7 @@
             "url": "https://amanhimself.dev//blog/getting-started-with-sequelize-for-nodejs",
             "title": "Getting Started with Sequelize for Nodejs Applications",
             "summary": "Getting Started with Sequelize for Nodejs Applications",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1742,7 +1742,7 @@
             "url": "https://amanhimself.dev//blog/how-to-use-eslint-in-node-js-applications",
             "title": "How to use ESLint in Node.js Applications",
             "summary": "How to use ESLint in Node.js Applications",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1754,7 +1754,7 @@
             "url": "https://amanhimself.dev//blog/how-to-mock-data-for-nodejs-applications-using-fakerjs",
             "title": "How to Mock Data for Node.js Applications using faker.js",
             "summary": "How to Mock Data for Node.js Applications using faker.js",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1766,7 +1766,7 @@
             "url": "https://amanhimself.dev//blog/getting-started-with-ionic-framework",
             "title": "Getting Started with Ionic Framework",
             "summary": "Getting Started with Ionic Framework",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1778,7 +1778,7 @@
             "url": "https://amanhimself.dev//blog/migrating-from-expressjs-4-to-5",
             "title": "Migrating from Expressjs 4 to 5",
             "summary": "Migrating from Expressjs 4 to 5",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1790,7 +1790,7 @@
             "url": "https://amanhimself.dev//blog/using-bower-with-heroku",
             "title": "Using Bower With Heroku",
             "summary": "Using Bower With Heroku",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1802,7 +1802,7 @@
             "url": "https://amanhimself.dev//blog/node-js-twitter-bot-tutorial-part-2",
             "title": "Writing a Node.js Twitter Bot Part 2",
             "summary": "Writing a Node.js Twitter Bot Part 2",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1814,7 +1814,7 @@
             "url": "https://amanhimself.dev//blog/node-js-twitter-bot-tutorial",
             "title": "Writing a Node.js Twitter Bot Part 1",
             "summary": "Writing a Node.js Twitter Bot Part 1",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1826,7 +1826,7 @@
             "url": "https://amanhimself.dev//blog/create-a-simple-twitter-bot-with-node-js",
             "title": "Create a Simple Twitter Bot with Node.js",
             "summary": "Create a Simple Twitter Bot with Node.js",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1838,7 +1838,7 @@
             "url": "https://amanhimself.dev//blog/atom-an-editor-of-21st-century",
             "title": "ATOM- An Editor of 21st Century",
             "summary": "ATOM- An Editor of 21st Century",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1850,7 +1850,7 @@
             "url": "https://amanhimself.dev//blog/how-process-nexttick-works-in-node-js",
             "title": "How process.nextTick() works in Node.js?",
             "summary": "How process.nextTick() works in Node.js?",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1862,7 +1862,7 @@
             "url": "https://amanhimself.dev//blog/nodejs-system",
             "title": "The Node.js system",
             "summary": "The Node.js system",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1874,7 +1874,7 @@
             "url": "https://amanhimself.dev//blog/the-node-way",
             "title": "The Node way - Philosophy of a Platform",
             "summary": "The Node way - Philosophy of a Platform",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1886,7 +1886,7 @@
             "url": "https://amanhimself.dev//blog/javascript-code-convetions",
             "title": "JavaScript Code Conventions",
             "summary": "JavaScript Code Conventions",
-            "date_modified": "2022-04-24T03:54:31.233Z",
+            "date_modified": "2022-04-28T10:50:46.590Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
