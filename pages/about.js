@@ -20,11 +20,9 @@ const AboutPage = () => {
         </Heading>
         <small>Last Update: March 13, 2022</small>
         <Text lineHeight="175%" as="h2" fontSize="lg" pt={2}>
-          Hi! My name is Aman Mittal. Currently working as a Senior Content
-          Developer at{' '}
-          <ExternalLink href="https://vercel.com/">Vercel</ExternalLink>. Before
-          that, I&#39;ve worked as a Developer Advocate, independent consultant
-          and a technical writer.
+          Hi! My name is Aman Mittal. I&#39;ve worked as a Developer Advocate,
+          independent consultant and a technical writer with companies like
+          Draftbit, Vercel and Crowdbotics.
         </Text>
         <Text lineHeight="175%" as="h2" fontSize="lg">
           I write a{' '}
@@ -270,6 +268,7 @@ const AboutPage = () => {
           Work History
         </Heading>
         <List spacing={4}>
+          <ListItem> 📝 Senior Content Developer at Vercel (2022)</ListItem>
           <ListItem>🥑 Developer Advocate at Draftbit (2021 - 2022)</ListItem>
           <ListItem>
             💻 📝 Contract Developer & Tech Writer

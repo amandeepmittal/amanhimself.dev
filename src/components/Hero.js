@@ -58,10 +58,9 @@ const Hero = () => {
             <ExternalLink href="https://amanhimself.dev/blog/first-three-months-as-developer-advocate/">
               Developer Advocate
             </ExternalLink>
-            , independent consultant, and technical writer. Currently working as
-            a Senior Content Developer at Vercel.
+            , independent consultant, and technical writer with companies like
+            Draftbit, Vercel and Crowdbotics.
           </Text>
-
           <ExternalLinksCloud />
         </VStack>
         <HeroImage />
