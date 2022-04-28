@@ -56,11 +56,11 @@ const Hero = () => {
           <Text lineHeight="175%" as="h2" fontSize="lg">
             Previously, I&apos;ve worked as{' '}
             <ExternalLink href="https://amanhimself.dev/blog/first-three-months-as-developer-advocate/">
-              Developer Advocate at Draftbit
+              Developer Advocate
             </ExternalLink>
-            , independent consultant, and technical writer.
+            , independent consultant, and technical writer with companies like
+            Draftbit, Vercel and Crowdbotics.
           </Text>
-
           <ExternalLinksCloud />
         </VStack>
         <HeroImage />
