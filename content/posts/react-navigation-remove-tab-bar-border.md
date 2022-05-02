@@ -7,6 +7,8 @@ tag: 'expo'
 canonicalUrl: 'https://amanhimself.dev/blog/react-navigation-remove-tab-bar-border/'
 ---
 
+> Updated: May 2, 2022
+
 ![cover_image](https://i.imgur.com/Tu5dv1l.png)
 
 Navigation plays an important role in mobile applications and the React Navigation library does an awesome job in providing a completely customizable interface for utilizing different navigation patterns to React Native apps.
@@ -30,16 +32,18 @@ This expo project comes with a default bottom tab navigator whose configuration 
 
 ## Customize the TabBar
 
-The Bottom Tab Bar React Navigation library gives an object called `tabBarOptions` to customize a tab bar. This object contains props that can be used to apply custom styles and one of the generic property it has is called `style`. This property is commonly used to change the styles of the tab bar, for example, by applying the `backgroundColor` styles' property.
+The Bottom Tab Bar React Navigation library gives an object called `screenOptions` to customize a tab bar. This object contains props that can be used to apply custom styles and one of the generic property it has is called `tabBarStyle`. This property is commonly used to change the styles of the tab bar, for example, by applying the `backgroundColor` styles' property.
 
-To remove the border, add the `tabBarOptions` prop and inside it, add a style property called `borderTopWidth` with a value `0`.
+To remove the border, add the `screenOptions` prop and inside it, add a `tabBarStyle` property called `borderTopWidth` with a value `0`.
 
 ```js
 <BottomTab.Navigator
   initialRouteName='TabOne'
-  tabBarOptions={{
+  screenOptions={{
     // ...
-    style: { borderTopWidth: 0 }
+    tabBarStyle: {
+       borderTopWidth: 0
+    }
   }}
 >
 ```
@@ -52,17 +56,19 @@ Do note that this property can also be used to increase the width of the top bor
 
 ## Removing shadow on Android Device
 
-After applying this `style` property, the width of the top border is removed from an Android device. However, there is a shadow at the top border of the tab bar that remains.
+After applying this `tabBarStyle` property, the width of the top border is removed from an Android device. However, there is a shadow at the top border of the tab bar that remains.
 
 ![ss3](https://i.imgur.com/ofnBBis.jpg)
 
 To remove this shadow, set the `elevation` to `0`:
 
 ```js
-style: {
+tabBarStyle: {
   borderTopWidth: 0,
   elevation: 0
 }
 ```
 
 ![ss4](https://i.imgur.com/3TEx5ib.jpg)
+
+[Source code available at GitHub](https://github.com/amandeepmittal/react-native-examples/tree/main/remove-tabbar-border)
