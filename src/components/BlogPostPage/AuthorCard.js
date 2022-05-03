@@ -54,8 +54,8 @@ const AuthorCard = () => {
           </HStack>
           <Text fontSize="md" color={textMode}>
             Software Developer and Technical Writer since 2017. Loves learning
-            and writing about Node.js, React, React Native & Expo. Occasional
-            speaker. Previously, a Developer Advocate at Draftbit.
+            and writing about Node.js, React, React Native & Expo. Previously, a
+            Developer Advocate at Draftbit.
           </Text>
         </VStack>
       </HStack>
