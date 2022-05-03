@@ -25,11 +25,11 @@ export default function App() {
       <View style={styles.inputContainer}>
         <TextInput
           style={styles.inputField}
-          name='password'
-          placeholder='Enter password'
-          autoCapitalize='none'
+          name="password"
+          placeholder="Enter password"
+          autoCapitalize="none"
           autoCorrect={false}
-          textContentType='newPassword'
+          textContentType="newPassword"
           secureTextEntry
           value={password}
           enablesReturnKeyAutomatically
@@ -58,10 +58,9 @@ const styles = StyleSheet.create({
     borderColor: '#d7d7d7'
   },
   inputField: {
-     padding: 14,
+    padding: 14,
     fontSize: 22,
     width: '90%'
-  }
   }
 });
 ```
