@@ -39,7 +39,7 @@ const generateRssFeed = async () => {
     logo: `${siteURL}/favicon.jpg`,
     favicon: `${siteURL}/favicon.jpg`,
     copyright: `2019 - ${date.getFullYear()}, Aman Mittal · All Rights Reserved.`,
-    updated: date,
+    // updated: date,
     generator: 'Feed for Node.js',
     feedLinks: {
       rss2: `${siteURL}/rss.xml`,

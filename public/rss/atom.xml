@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://amanhimself.dev/</id>
     <title>Aman Mittal' blog</title>
-    <updated>2022-05-04T11:12:09.705Z</updated>
+    <updated>2022-05-04T11:19:11.084Z</updated>
     <generator>Feed for Node.js</generator>
     <author>
         <name>Aman Mittal</name>
@@ -17,7 +17,7 @@
         <title type="html"><![CDATA[Remove bottom border or shadow on header in React Navigation]]></title>
         <id>https://amanhimself.dev//blog/remove-bottom-border-shadow-on-header-in-react-navigation</id>
         <link href="https://amanhimself.dev//blog/remove-bottom-border-shadow-on-header-in-react-navigation"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[Remove bottom border or shadow on header in React Navigation]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -29,7 +29,7 @@
         <title type="html"><![CDATA[Patterns and Anti-patterns in Node.js]]></title>
         <id>https://amanhimself.dev//blog/patterns-and-anti-patterns-in-nodejs</id>
         <link href="https://amanhimself.dev//blog/patterns-and-anti-patterns-in-nodejs"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[Patterns and Anti-patterns in Node.js]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -41,7 +41,7 @@
         <title type="html"><![CDATA[How to show Touch indicator on iOS simulator]]></title>
         <id>https://amanhimself.dev//blog/show-touch-indicator-on-ios-simulator</id>
         <link href="https://amanhimself.dev//blog/show-touch-indicator-on-ios-simulator"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[How to show Touch indicator on iOS simulator]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -53,7 +53,7 @@
         <title type="html"><![CDATA[How to handle Deep Linking in a React Native app]]></title>
         <id>https://amanhimself.dev//blog/handle-deep-linking-react-native</id>
         <link href="https://amanhimself.dev//blog/handle-deep-linking-react-native"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[How to handle Deep Linking in a React Native app]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -65,7 +65,7 @@
         <title type="html"><![CDATA[When to use keyExtractor prop in React Native's FlatList]]></title>
         <id>https://amanhimself.dev//blog/use-key-extractor-in-react-native-flatlist</id>
         <link href="https://amanhimself.dev//blog/use-key-extractor-in-react-native-flatlist"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[When to use keyExtractor prop in React Native's FlatList]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -77,7 +77,7 @@
         <title type="html"><![CDATA[Set up a Next.js project with ESLint, Prettier, Husky, and Lint Staged]]></title>
         <id>https://amanhimself.dev//blog/setup-nextjs-project-with-eslint-prettier-husky-lint-staged</id>
         <link href="https://amanhimself.dev//blog/setup-nextjs-project-with-eslint-prettier-husky-lint-staged"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[Set up a Next.js project with ESLint, Prettier, Husky, and Lint Staged]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -89,7 +89,7 @@
         <title type="html"><![CDATA[How to install Node.js using NVM on macOS M1]]></title>
         <id>https://amanhimself.dev//blog/install-nodejs-using-nvm-on-macos-m1</id>
         <link href="https://amanhimself.dev//blog/install-nodejs-using-nvm-on-macos-m1"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[How to install Node.js using NVM on macOS M1]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -101,7 +101,7 @@
         <title type="html"><![CDATA[Implementing Infinite Scroll with React Query and FlatList in React Native]]></title>
         <id>https://amanhimself.dev//blog/infinite-scroll-with-react-query-and-flatlist-in-react-native</id>
         <link href="https://amanhimself.dev//blog/infinite-scroll-with-react-query-and-flatlist-in-react-native"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[Implementing Infinite Scroll with React Query and FlatList in React Native]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -113,7 +113,7 @@
         <title type="html"><![CDATA[How to rename default branch in Git and GitHub]]></title>
         <id>https://amanhimself.dev//blog/how-to-rename-default-branch-name-in-git-and-github</id>
         <link href="https://amanhimself.dev//blog/how-to-rename-default-branch-name-in-git-and-github"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[How to rename default branch in Git and GitHub]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -125,7 +125,7 @@
         <title type="html"><![CDATA[Tamagui for React Native: Create faster design systems]]></title>
         <id>https://amanhimself.dev//blog/tamagui-for-react-native</id>
         <link href="https://amanhimself.dev//blog/tamagui-for-react-native"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[Tamagui for React Native: Create faster design systems]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -137,7 +137,7 @@
         <title type="html"><![CDATA[2021 - A year in review]]></title>
         <id>https://amanhimself.dev//blog/year-in-review-2021</id>
         <link href="https://amanhimself.dev//blog/year-in-review-2021"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[2021 - A year in review]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -149,7 +149,7 @@
         <title type="html"><![CDATA[Create a custom hook to Show/Hide Password Visibility in React Native]]></title>
         <id>https://amanhimself.dev//blog/show-hide-password-in-react-native-using-custom-hook</id>
         <link href="https://amanhimself.dev//blog/show-hide-password-in-react-native-using-custom-hook"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[Create a custom hook to Show/Hide Password Visibility in React Native]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -161,7 +161,7 @@
         <title type="html"><![CDATA[How to avoid notches with Safe Area Context in React Native apps]]></title>
         <id>https://amanhimself.dev//blog/safe-area-context-in-react-native-apps</id>
         <link href="https://amanhimself.dev//blog/safe-area-context-in-react-native-apps"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[How to avoid notches with Safe Area Context in React Native apps]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -173,7 +173,7 @@
         <title type="html"><![CDATA[How to configure VSCode Bracket Pair Colors Natively]]></title>
         <id>https://amanhimself.dev//blog/how-to-configure-vscode-bracket-colors-natively</id>
         <link href="https://amanhimself.dev//blog/how-to-configure-vscode-bracket-colors-natively"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[How to configure VSCode Bracket Pair Colors Natively]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -185,7 +185,7 @@
         <title type="html"><![CDATA[How to add Splash Screen and an App Icon in React Native]]></title>
         <id>https://amanhimself.dev//blog/how-to-add-a-splash-screen-and-app-icon-in-react-native-with-react-native-bootsplash</id>
         <link href="https://amanhimself.dev//blog/how-to-add-a-splash-screen-and-app-icon-in-react-native-with-react-native-bootsplash"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[How to add Splash Screen and an App Icon in React Native]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -197,7 +197,7 @@
         <title type="html"><![CDATA[How to use iOS simulator in full-screen]]></title>
         <id>https://amanhimself.dev//blog/how-to-use-ios-simulator-in-full-screen</id>
         <link href="https://amanhimself.dev//blog/how-to-use-ios-simulator-in-full-screen"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[How to use iOS simulator in full-screen]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -209,7 +209,7 @@
         <title type="html"><![CDATA[How to solve RCTBridge required dispatch_sync to load warning on iOS for React Native]]></title>
         <id>https://amanhimself.dev//blog/rctbridge-required-dispatch-sync-to-load-warning</id>
         <link href="https://amanhimself.dev//blog/rctbridge-required-dispatch-sync-to-load-warning"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[How to solve RCTBridge required dispatch_sync to load warning on iOS for React Native]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -221,7 +221,7 @@
         <title type="html"><![CDATA[How to Offer Multi-language Support in a React Native App]]></title>
         <id>https://amanhimself.dev//blog/multi-language-support-in-react-native-with-react-i18next</id>
         <link href="https://amanhimself.dev//blog/multi-language-support-in-react-native-with-react-i18next"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[How to Offer Multi-language Support in a React Native App]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -233,7 +233,7 @@
         <title type="html"><![CDATA[GET Request params with Axios]]></title>
         <id>https://amanhimself.dev//blog/get-request-with-axios</id>
         <link href="https://amanhimself.dev//blog/get-request-with-axios"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[GET Request params with Axios]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -245,7 +245,7 @@
         <title type="html"><![CDATA[Environment Variables in Expo and TypeScript]]></title>
         <id>https://amanhimself.dev//blog/environment-variables-in-expo-managed-workflow</id>
         <link href="https://amanhimself.dev//blog/environment-variables-in-expo-managed-workflow"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[Environment Variables in Expo and TypeScript]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -257,7 +257,7 @@
         <title type="html"><![CDATA[The No-Code Way of Payments with Stripe: A Brief Guide]]></title>
         <id>https://amanhimself.dev//blog/no-code-way-of-payments-with-stripe-a-brief-guide</id>
         <link href="https://amanhimself.dev//blog/no-code-way-of-payments-with-stripe-a-brief-guide"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[The No-Code Way of Payments with Stripe: A Brief Guide]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -269,7 +269,7 @@
         <title type="html"><![CDATA[How To Integrate Firebase Authentication With an Expo App]]></title>
         <id>https://amanhimself.dev//blog/firebase-authentication-with-expo</id>
         <link href="https://amanhimself.dev//blog/firebase-authentication-with-expo"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[How To Integrate Firebase Authentication With an Expo App]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -281,7 +281,7 @@
         <title type="html"><![CDATA[Common Prop Types in TypeScript and React]]></title>
         <id>https://amanhimself.dev//blog/common-proptypes-in-react-and-typescript</id>
         <link href="https://amanhimself.dev//blog/common-proptypes-in-react-and-typescript"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[Common Prop Types in TypeScript and React]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -293,7 +293,7 @@
         <title type="html"><![CDATA[Prop types in React and TypeScript]]></title>
         <id>https://amanhimself.dev//blog/prop-types-in-react-and-typescript</id>
         <link href="https://amanhimself.dev//blog/prop-types-in-react-and-typescript"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[Prop types in React and TypeScript]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -305,7 +305,7 @@
         <title type="html"><![CDATA[🌱 Life at Draftbit - First 3 Months as a Developer Advocate]]></title>
         <id>https://amanhimself.dev//blog/first-three-months-as-developer-advocate</id>
         <link href="https://amanhimself.dev//blog/first-three-months-as-developer-advocate"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[🌱 Life at Draftbit - First 3 Months as a Developer Advocate]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -317,7 +317,7 @@
         <title type="html"><![CDATA[How to Create a Custom Image Gallery in React Native]]></title>
         <id>https://amanhimself.dev//blog/custom-preview-image-gallery-in-react-native</id>
         <link href="https://amanhimself.dev//blog/custom-preview-image-gallery-in-react-native"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[How to Create a Custom Image Gallery in React Native]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -329,7 +329,7 @@
         <title type="html"><![CDATA[How to Create a Custom Tab Bar in React Native]]></title>
         <id>https://amanhimself.dev//blog/create-custom-tab-bar-in-react-native</id>
         <link href="https://amanhimself.dev//blog/create-custom-tab-bar-in-react-native"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[How to Create a Custom Tab Bar in React Native]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -341,7 +341,7 @@
         <title type="html"><![CDATA[How to use ES6 import syntax in Node.js]]></title>
         <id>https://amanhimself.dev//blog/how-to-use-es6-import-in-nodejs</id>
         <link href="https://amanhimself.dev//blog/how-to-use-es6-import-in-nodejs"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[How to use ES6 import syntax in Node.js]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -353,7 +353,7 @@
         <title type="html"><![CDATA[How to upload an image using Expo Camera to Cloudinary]]></title>
         <id>https://amanhimself.dev//blog/upload-image-to-cloudinary-using-expo-camera</id>
         <link href="https://amanhimself.dev//blog/upload-image-to-cloudinary-using-expo-camera"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[How to upload an image using Expo Camera to Cloudinary]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -365,7 +365,7 @@
         <title type="html"><![CDATA[Setup Macbook M1 for Web and React Native development]]></title>
         <id>https://amanhimself.dev//blog/setup-macbook-m1</id>
         <link href="https://amanhimself.dev//blog/setup-macbook-m1"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[Setup Macbook M1 for Web and React Native development]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -377,7 +377,7 @@
         <title type="html"><![CDATA[How to use React Native Geolocation to get Postal Address]]></title>
         <id>https://amanhimself.dev//blog/react-native-geolocation-to-get-postal-address</id>
         <link href="https://amanhimself.dev//blog/react-native-geolocation-to-get-postal-address"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[How to use React Native Geolocation to get Postal Address]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -389,7 +389,7 @@
         <title type="html"><![CDATA[React Native Performance Do and Dont]]></title>
         <id>https://amanhimself.dev//blog/react-native-performance-do-and-dont</id>
         <link href="https://amanhimself.dev//blog/react-native-performance-do-and-dont"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[React Native Performance Do and Dont]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -401,7 +401,7 @@
         <title type="html"><![CDATA[How to use shared element transitions in React Native]]></title>
         <id>https://amanhimself.dev//blog/shared-element-transitions</id>
         <link href="https://amanhimself.dev//blog/shared-element-transitions"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[How to use shared element transitions in React Native]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -413,7 +413,7 @@
         <title type="html"><![CDATA[How to remove bottom tab bar border in React Navigation]]></title>
         <id>https://amanhimself.dev//blog/react-navigation-remove-tab-bar-border</id>
         <link href="https://amanhimself.dev//blog/react-navigation-remove-tab-bar-border"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[How to remove bottom tab bar border in React Navigation]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -425,7 +425,7 @@
         <title type="html"><![CDATA[How to use redux-persist in React Native with Asyncstorage]]></title>
         <id>https://amanhimself.dev//blog/redux-persist-in-react-native-with-async-storage</id>
         <link href="https://amanhimself.dev//blog/redux-persist-in-react-native-with-async-storage"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[How to use redux-persist in React Native with Asyncstorage]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -437,7 +437,7 @@
         <title type="html"><![CDATA[How to add an app icon in a React Native Android app]]></title>
         <id>https://amanhimself.dev//blog/app-icon-react-native-android</id>
         <link href="https://amanhimself.dev//blog/app-icon-react-native-android"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[How to add an app icon in a React Native Android app]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -449,7 +449,7 @@
         <title type="html"><![CDATA[Year Rewind: 2020]]></title>
         <id>https://amanhimself.dev//blog/year-rewind-2020</id>
         <link href="https://amanhimself.dev//blog/year-rewind-2020"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[Year Rewind: 2020]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -461,7 +461,7 @@
         <title type="html"><![CDATA[How to create a custom scrollbar with React Native Animated API]]></title>
         <id>https://amanhimself.dev//blog/custom-scroll-bar-indicator-with-react-native-animated-api</id>
         <link href="https://amanhimself.dev//blog/custom-scroll-bar-indicator-with-react-native-animated-api"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[How to create a custom scrollbar with React Native Animated API]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -473,7 +473,7 @@
         <title type="html"><![CDATA[How to manage state in React apps with useReducer and useContext hooks]]></title>
         <id>https://amanhimself.dev//blog/manage-state-with-usecontext-usereducer-in-react-apps</id>
         <link href="https://amanhimself.dev//blog/manage-state-with-usecontext-usereducer-in-react-apps"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[How to manage state in React apps with useReducer and useContext hooks]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -485,7 +485,7 @@
         <title type="html"><![CDATA[Creating and Validating React Native Forms with Formik]]></title>
         <id>https://amanhimself.dev//blog/creating-and-validating-react-native-form-with-formik</id>
         <link href="https://amanhimself.dev//blog/creating-and-validating-react-native-form-with-formik"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[Creating and Validating React Native Forms with Formik]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -497,7 +497,7 @@
         <title type="html"><![CDATA[How to use HarperDB instance with React Hooks]]></title>
         <id>https://amanhimself.dev//blog/harperdb-with-react-hooks</id>
         <link href="https://amanhimself.dev//blog/harperdb-with-react-hooks"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[How to use HarperDB instance with React Hooks]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -509,7 +509,7 @@
         <title type="html"><![CDATA[How to Animate a Header View on Scroll With React Native Animated]]></title>
         <id>https://amanhimself.dev//blog/animate-header-view-on-scroll-with-react-native-animated-api</id>
         <link href="https://amanhimself.dev//blog/animate-header-view-on-scroll-with-react-native-animated-api"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[How to Animate a Header View on Scroll With React Native Animated]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -521,7 +521,7 @@
         <title type="html"><![CDATA[Add Environment Variables in a Netlify Deployment]]></title>
         <id>https://amanhimself.dev//blog/add-environment-variables-in-netlify-deployment</id>
         <link href="https://amanhimself.dev//blog/add-environment-variables-in-netlify-deployment"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[Add Environment Variables in a Netlify Deployment]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -533,7 +533,7 @@
         <title type="html"><![CDATA[How to use React Router and real time user monitoring in React apps]]></title>
         <id>https://amanhimself.dev//blog/react-router-real-time-user-monitoring-react-apps</id>
         <link href="https://amanhimself.dev//blog/react-router-real-time-user-monitoring-react-apps"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[How to use React Router and real time user monitoring in React apps]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -545,7 +545,7 @@
         <title type="html"><![CDATA[Build a REST API with Node.js and HarperDB]]></title>
         <id>https://amanhimself.dev//blog/build-rest-api-with-nodejs-harperdb</id>
         <link href="https://amanhimself.dev//blog/build-rest-api-with-nodejs-harperdb"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[Build a REST API with Node.js and HarperDB]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -557,7 +557,7 @@
         <title type="html"><![CDATA[How to setup a React App with a Firebase project]]></title>
         <id>https://amanhimself.dev//blog/firebase-config-in-a-react-app</id>
         <link href="https://amanhimself.dev//blog/firebase-config-in-a-react-app"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[How to setup a React App with a Firebase project]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -569,7 +569,7 @@
         <title type="html"><![CDATA[Styling The React Native Way]]></title>
         <id>https://amanhimself.dev//blog/styling-the-react-native-way</id>
         <link href="https://amanhimself.dev//blog/styling-the-react-native-way"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[Styling The React Native Way]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -581,7 +581,7 @@
         <title type="html"><![CDATA[How to create custom wavy headers with react-native-svg]]></title>
         <id>https://amanhimself.dev//blog/create-custom-headers-with-react-native-svg</id>
         <link href="https://amanhimself.dev//blog/create-custom-headers-with-react-native-svg"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[How to create custom wavy headers with react-native-svg]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -593,7 +593,7 @@
         <title type="html"><![CDATA[How to integrate Material UI library in React apps]]></title>
         <id>https://amanhimself.dev//blog/material-ui-integration-with-react</id>
         <link href="https://amanhimself.dev//blog/material-ui-integration-with-react"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[How to integrate Material UI library in React apps]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -605,7 +605,7 @@
         <title type="html"><![CDATA[Chat app with React Native (Part 6) - Create a custom hook to change status bar styles]]></title>
         <id>https://amanhimself.dev//blog/chat-app-with-react-native-part-6</id>
         <link href="https://amanhimself.dev//blog/chat-app-with-react-native-part-6"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[Chat app with React Native (Part 6) - Create a custom hook to change status bar styles]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -617,7 +617,7 @@
         <title type="html"><![CDATA[Creating "Quarantine Pro" — A Fun Learning Experiment in React Native]]></title>
         <id>https://amanhimself.dev//blog/quarantine-pro-app</id>
         <link href="https://amanhimself.dev//blog/quarantine-pro-app"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[Creating "Quarantine Pro" — A Fun Learning Experiment in React Native]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -629,7 +629,7 @@
         <title type="html"><![CDATA[Chat app with React Native (Part 5) - Create and Fetch Real-Time Messages with Firestore]]></title>
         <id>https://amanhimself.dev//blog/chat-app-with-react-native-part-5</id>
         <link href="https://amanhimself.dev//blog/chat-app-with-react-native-part-5"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[Chat app with React Native (Part 5) - Create and Fetch Real-Time Messages with Firestore]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -641,7 +641,7 @@
         <title type="html"><![CDATA[How to integrate GraphQL and Apollo Client in React Native app]]></title>
         <id>https://amanhimself.dev//blog/integrate-apollo-client-in-react-native</id>
         <link href="https://amanhimself.dev//blog/integrate-apollo-client-in-react-native"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[How to integrate GraphQL and Apollo Client in React Native app]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -653,7 +653,7 @@
         <title type="html"><![CDATA[Chat app with React Native (part 4) - A guide to create Chat UI Screens with react-native-gifted-chat]]></title>
         <id>https://amanhimself.dev//blog/chat-app-with-react-native-part-4</id>
         <link href="https://amanhimself.dev//blog/chat-app-with-react-native-part-4"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[Chat app with React Native (part 4) - A guide to create Chat UI Screens with react-native-gifted-chat]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -665,7 +665,7 @@
         <title type="html"><![CDATA[An in-depth guide on how to use React Native Image Picker]]></title>
         <id>https://amanhimself.dev//blog/how-to-use-react-native-image-picker</id>
         <link href="https://amanhimself.dev//blog/how-to-use-react-native-image-picker"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[An in-depth guide on how to use React Native Image Picker]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -677,7 +677,7 @@
         <title type="html"><![CDATA[Chat app with React Native (part 3) - Create Firestore collections to store chat rooms]]></title>
         <id>https://amanhimself.dev//blog/chat-app-with-react-native-part-3</id>
         <link href="https://amanhimself.dev//blog/chat-app-with-react-native-part-3"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[Chat app with React Native (part 3) - Create Firestore collections to store chat rooms]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -689,7 +689,7 @@
         <title type="html"><![CDATA[How to add a Search bar in a FlatList in React Native apps]]></title>
         <id>https://amanhimself.dev//blog/add-search-bar-to-a-flatlist-in-react-native</id>
         <link href="https://amanhimself.dev//blog/add-search-bar-to-a-flatlist-in-react-native"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[How to add a Search bar in a FlatList in React Native apps]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -701,7 +701,7 @@
         <title type="html"><![CDATA[Chat app with React Native (part 2) - Firebase Email Authentication with react-native-firebase]]></title>
         <id>https://amanhimself.dev//blog/chat-app-with-react-native-part-2</id>
         <link href="https://amanhimself.dev//blog/chat-app-with-react-native-part-2"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[Chat app with React Native (part 2) - Firebase Email Authentication with react-native-firebase]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -713,7 +713,7 @@
         <title type="html"><![CDATA[Blogging tips after 3 years and a 100+ posts]]></title>
         <id>https://amanhimself.dev//blog/blogging-tips-after-3-years</id>
         <link href="https://amanhimself.dev//blog/blogging-tips-after-3-years"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[Blogging tips after 3 years and a 100+ posts]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -725,7 +725,7 @@
         <title type="html"><![CDATA[Chat app with React Native (part 1) - Build reusable UI form elements using react-native-paper]]></title>
         <id>https://amanhimself.dev//blog/chat-app-with-react-native-part-1</id>
         <link href="https://amanhimself.dev//blog/chat-app-with-react-native-part-1"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[Chat app with React Native (part 1) - Build reusable UI form elements using react-native-paper]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -737,7 +737,7 @@
         <title type="html"><![CDATA[How to create a custom hook to change status bar styles for every screen using React Navigation]]></title>
         <id>https://amanhimself.dev//blog/create-custom-status-bar-hook-react-navigation</id>
         <link href="https://amanhimself.dev//blog/create-custom-status-bar-hook-react-navigation"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[How to create a custom hook to change status bar styles for every screen using React Navigation]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -749,7 +749,7 @@
         <title type="html"><![CDATA[Build an Expense Tracker app with React Hooks and LocalStorage API]]></title>
         <id>https://amanhimself.dev//blog/react-app-with-localstorage-api-and-hooks</id>
         <link href="https://amanhimself.dev//blog/react-app-with-localstorage-api-and-hooks"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[Build an Expense Tracker app with React Hooks and LocalStorage API]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -761,7 +761,7 @@
         <title type="html"><![CDATA[Nesting Tab and Stack navigators in React Native and Expo apps]]></title>
         <id>https://amanhimself.dev//blog/nested-navigators-in-react-native</id>
         <link href="https://amanhimself.dev//blog/nested-navigators-in-react-native"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[Nesting Tab and Stack navigators in React Native and Expo apps]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -773,7 +773,7 @@
         <title type="html"><![CDATA[Getting Started with Stack Navigator using react-navigation 5 in React Native and Expo apps]]></title>
         <id>https://amanhimself.dev//blog/stack-navigator-with-react-navigation-v5</id>
         <link href="https://amanhimself.dev//blog/stack-navigator-with-react-navigation-v5"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[Getting Started with Stack Navigator using react-navigation 5 in React Native and Expo apps]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -785,7 +785,7 @@
         <title type="html"><![CDATA[How to handle navigation in WebViews in a React Native app]]></title>
         <id>https://amanhimself.dev//blog/handle-navigation-in-webviews-react-native</id>
         <link href="https://amanhimself.dev//blog/handle-navigation-in-webviews-react-native"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[How to handle navigation in WebViews in a React Native app]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -797,7 +797,7 @@
         <title type="html"><![CDATA[Getting Started with React Native and Expo using Hooks in 2020]]></title>
         <id>https://amanhimself.dev//blog/getting-started-with-react-native-expo-hooks-2020</id>
         <link href="https://amanhimself.dev//blog/getting-started-with-react-native-expo-hooks-2020"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[Getting Started with React Native and Expo using Hooks in 2020]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -809,7 +809,7 @@
         <title type="html"><![CDATA[How to add Dark mode functionality with React Hooks]]></title>
         <id>https://amanhimself.dev//blog/dark-mode-with-react-hooks</id>
         <link href="https://amanhimself.dev//blog/dark-mode-with-react-hooks"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[How to add Dark mode functionality with React Hooks]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -821,7 +821,7 @@
         <title type="html"><![CDATA[How to use React Native Localize in React Native apps]]></title>
         <id>https://amanhimself.dev//blog/how-to-use-react-native-localize</id>
         <link href="https://amanhimself.dev//blog/how-to-use-react-native-localize"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[How to use React Native Localize in React Native apps]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -833,7 +833,7 @@
         <title type="html"><![CDATA[Implement Push notifications for Android apps with React Native]]></title>
         <id>https://amanhimself.dev//blog/push-notifications-android-apps-react-native</id>
         <link href="https://amanhimself.dev//blog/push-notifications-android-apps-react-native"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[Implement Push notifications for Android apps with React Native]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -845,7 +845,7 @@
         <title type="html"><![CDATA[Handle different field types in React Native forms with formik and yup]]></title>
         <id>https://amanhimself.dev//blog/handle-different-field-types-in-react-native-forms</id>
         <link href="https://amanhimself.dev//blog/handle-different-field-types-in-react-native-forms"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[Handle different field types in React Native forms with formik and yup]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -857,7 +857,7 @@
         <title type="html"><![CDATA[How to implement Forgot Password feature in React Native with Firebase]]></title>
         <id>https://amanhimself.dev//blog/implement-forgot-password-firebase-react-native</id>
         <link href="https://amanhimself.dev//blog/implement-forgot-password-firebase-react-native"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[How to implement Forgot Password feature in React Native with Firebase]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -869,7 +869,7 @@
         <title type="html"><![CDATA[Image Classification on React Native with TensorFlow.js and MobileNet]]></title>
         <id>https://amanhimself.dev//blog/tensorflow-image-classification-expo</id>
         <link href="https://amanhimself.dev//blog/tensorflow-image-classification-expo"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[Image Classification on React Native with TensorFlow.js and MobileNet]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -881,7 +881,7 @@
         <title type="html"><![CDATA[Build and validate forms in React Native using Formik and Yup]]></title>
         <id>https://amanhimself.dev//blog/build-validate-forms-with-react-native-formik-yup</id>
         <link href="https://amanhimself.dev//blog/build-validate-forms-with-react-native-formik-yup"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[Build and validate forms in React Native using Formik and Yup]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -893,7 +893,7 @@
         <title type="html"><![CDATA[Changing app themes using React Native, Styled Components and Redux]]></title>
         <id>https://amanhimself.dev//blog/create-app-themes-styled-components-redux</id>
         <link href="https://amanhimself.dev//blog/create-app-themes-styled-components-redux"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[Changing app themes using React Native, Styled Components and Redux]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -905,7 +905,7 @@
         <title type="html"><![CDATA[Using Context API with React Native]]></title>
         <id>https://amanhimself.dev//blog/context-api-react-native-firebase</id>
         <link href="https://amanhimself.dev//blog/context-api-react-native-firebase"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[Using Context API with React Native]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -917,7 +917,7 @@
         <title type="html"><![CDATA[How Authentication Flow works in React Native apps using React Navigation 4.x]]></title>
         <id>https://amanhimself.dev//blog/authentication-navigation-flow-in-react-native-apps</id>
         <link href="https://amanhimself.dev//blog/authentication-navigation-flow-in-react-native-apps"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[How Authentication Flow works in React Native apps using React Navigation 4.x]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -929,7 +929,7 @@
         <title type="html"><![CDATA[How to Build an Audio Player in React Native]]></title>
         <id>https://amanhimself.dev//blog/build-an-audio-player-in-react-native</id>
         <link href="https://amanhimself.dev//blog/build-an-audio-player-in-react-native"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[How to Build an Audio Player in React Native]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -941,7 +941,7 @@
         <title type="html"><![CDATA[Build a Not Hotdog clone with React Native]]></title>
         <id>https://amanhimself.dev//blog/not-hotdog-clone-react-native</id>
         <link href="https://amanhimself.dev//blog/not-hotdog-clone-react-native"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[Build a Not Hotdog clone with React Native]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -953,7 +953,7 @@
         <title type="html"><![CDATA[Building offline React Native apps with AsyncStorage]]></title>
         <id>https://amanhimself.dev//blog/building-offline-react-native-apps-with-asyncstorage</id>
         <link href="https://amanhimself.dev//blog/building-offline-react-native-apps-with-asyncstorage"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[Building offline React Native apps with AsyncStorage]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -965,7 +965,7 @@
         <title type="html"><![CDATA[How to use the Geolocation API in a React Native app]]></title>
         <id>https://amanhimself.dev//blog/how-to-use-the-geolocation-api-in-a-react-native-app</id>
         <link href="https://amanhimself.dev//blog/how-to-use-the-geolocation-api-in-a-react-native-app"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[How to use the Geolocation API in a React Native app]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -977,7 +977,7 @@
         <title type="html"><![CDATA[How to build a xylophone app with Audio API, React Native, and Expo]]></title>
         <id>https://amanhimself.dev//blog/how-to-build-xylophone-app-with-expo</id>
         <link href="https://amanhimself.dev//blog/how-to-build-xylophone-app-with-expo"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[How to build a xylophone app with Audio API, React Native, and Expo]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -989,7 +989,7 @@
         <title type="html"><![CDATA[How to Create a Chatbot with Dialogflow, NodeJS, and Webhooks]]></title>
         <id>https://amanhimself.dev//blog/build-chatbot-dialogflow-nodejs-webhooks</id>
         <link href="https://amanhimself.dev//blog/build-chatbot-dialogflow-nodejs-webhooks"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[How to Create a Chatbot with Dialogflow, NodeJS, and Webhooks]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -1001,7 +1001,7 @@
         <title type="html"><![CDATA[Using React Router to Optimize Single Page Applications (SPAs)]]></title>
         <id>https://amanhimself.dev//blog/introduction-to-react-router-v4-with-reactjs</id>
         <link href="https://amanhimself.dev//blog/introduction-to-react-router-v4-with-reactjs"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[Using React Router to Optimize Single Page Applications (SPAs)]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -1013,7 +1013,7 @@
         <title type="html"><![CDATA[To Travel, A Tech Conference and One Million views - a Recap]]></title>
         <id>https://amanhimself.dev//blog/to-travel-a-tech-conference-and-one-million-views-a-recap</id>
         <link href="https://amanhimself.dev//blog/to-travel-a-tech-conference-and-one-million-views-a-recap"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[To Travel, A Tech Conference and One Million views - a Recap]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -1025,7 +1025,7 @@
         <title type="html"><![CDATA[How to integrate Firebase and Firestore cloud database with a React application]]></title>
         <id>https://amanhimself.dev//blog/how-to-integrate-firebase-firestore-react-and-crowdbotics-platform</id>
         <link href="https://amanhimself.dev//blog/how-to-integrate-firebase-firestore-react-and-crowdbotics-platform"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[How to integrate Firebase and Firestore cloud database with a React application]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -1037,7 +1037,7 @@
         <title type="html"><![CDATA[How to Setup a React App with TypeScript, Storybook]]></title>
         <id>https://amanhimself.dev//blog/setup-a-react-app-with-typescript-storybook</id>
         <link href="https://amanhimself.dev//blog/setup-a-react-app-with-typescript-storybook"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[How to Setup a React App with TypeScript, Storybook]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -1049,7 +1049,7 @@
         <title type="html"><![CDATA[Build a Custom Modal with the Animated API in React Native]]></title>
         <id>https://amanhimself.dev//blog/build-a-custom-modal-with-the-animated-api-in-react-native</id>
         <link href="https://amanhimself.dev//blog/build-a-custom-modal-with-the-animated-api-in-react-native"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[Build a Custom Modal with the Animated API in React Native]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -1061,7 +1061,7 @@
         <title type="html"><![CDATA[Build a Twitter Clone Server with Apollo, GraphQL, Nodejs, and Crowdbotics]]></title>
         <id>https://amanhimself.dev//blog/build-a-twitter-clone-server-with-apollo-graphql-nodejs</id>
         <link href="https://amanhimself.dev//blog/build-a-twitter-clone-server-with-apollo-graphql-nodejs"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[Build a Twitter Clone Server with Apollo, GraphQL, Nodejs, and Crowdbotics]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -1073,7 +1073,7 @@
         <title type="html"><![CDATA[Building Stylistic UIs with Emotion-JS for React Native]]></title>
         <id>https://amanhimself.dev//blog/use-emotion-js-with-react-native</id>
         <link href="https://amanhimself.dev//blog/use-emotion-js-with-react-native"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[Building Stylistic UIs with Emotion-JS for React Native]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -1085,7 +1085,7 @@
         <title type="html"><![CDATA[User Authentication with Amplify in a React Native and Expo app]]></title>
         <id>https://amanhimself.dev//blog/user-authentication-with-amplify-in-a-react-native-and-expo-app</id>
         <link href="https://amanhimself.dev//blog/user-authentication-with-amplify-in-a-react-native-and-expo-app"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[User Authentication with Amplify in a React Native and Expo app]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -1097,7 +1097,7 @@
         <title type="html"><![CDATA[Building a React Native Mobile App with AWS Amplify and Expo]]></title>
         <id>https://amanhimself.dev//blog/building-a-react-native-mobile-app-with-aws-amplify-and-expo</id>
         <link href="https://amanhimself.dev//blog/building-a-react-native-mobile-app-with-aws-amplify-and-expo"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[Building a React Native Mobile App with AWS Amplify and Expo]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -1109,7 +1109,7 @@
         <title type="html"><![CDATA[How I Configure VSCode for Everything]]></title>
         <id>https://amanhimself.dev//blog/how-i-configure-vscode-for-everything</id>
         <link href="https://amanhimself.dev//blog/how-i-configure-vscode-for-everything"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[How I Configure VSCode for Everything]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -1121,7 +1121,7 @@
         <title type="html"><![CDATA[React Hooks Basics — Building a React Native App with React Hooks]]></title>
         <id>https://amanhimself.dev//blog/build-a-react-native-app-with-react-hooks</id>
         <link href="https://amanhimself.dev//blog/build-a-react-native-app-with-react-hooks"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[React Hooks Basics — Building a React Native App with React Hooks]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -1133,7 +1133,7 @@
         <title type="html"><![CDATA[How To Build Your First VR App with ViroReact, React Native, and Crowdbotics]]></title>
         <id>https://amanhimself.dev//blog/how-to-build-your-first-vr-app-with-viroreact-react-native-and-crowdbotics</id>
         <link href="https://amanhimself.dev//blog/how-to-build-your-first-vr-app-with-viroreact-react-native-and-crowdbotics"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[How To Build Your First VR App with ViroReact, React Native, and Crowdbotics]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -1145,7 +1145,7 @@
         <title type="html"><![CDATA[Build a Chatbot with Dialogflow and React Native]]></title>
         <id>https://amanhimself.dev//blog/build-a-chatbot-with-dialogflow-and-react-native</id>
         <link href="https://amanhimself.dev//blog/build-a-chatbot-with-dialogflow-and-react-native"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[Build a Chatbot with Dialogflow and React Native]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -1157,7 +1157,7 @@
         <title type="html"><![CDATA[How to Build a Real Time Logo Detection App with React Native & Google Vision API]]></title>
         <id>https://amanhimself.dev//blog/how-to-build-a-real-time-logo-detection-app-with-react-native-google-vision-api-and-crowdbotics</id>
         <link href="https://amanhimself.dev//blog/how-to-build-a-real-time-logo-detection-app-with-react-native-google-vision-api-and-crowdbotics"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[How to Build a Real Time Logo Detection App with React Native & Google Vision API]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -1169,7 +1169,7 @@
         <title type="html"><![CDATA[Using Styled Components with React Native]]></title>
         <id>https://amanhimself.dev//blog/using-styled-components-with-react-native</id>
         <link href="https://amanhimself.dev//blog/using-styled-components-with-react-native"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[Using Styled Components with React Native]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -1181,7 +1181,7 @@
         <title type="html"><![CDATA[Create a React Native Image Recognition App with Google Vision API]]></title>
         <id>https://amanhimself.dev//blog/google-vision-api-firebase-react-native</id>
         <link href="https://amanhimself.dev//blog/google-vision-api-firebase-react-native"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[Create a React Native Image Recognition App with Google Vision API]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -1193,7 +1193,7 @@
         <title type="html"><![CDATA[How To Build a News Reader App with React Native and NewsAPI]]></title>
         <id>https://amanhimself.dev//blog/how-to-build-a-news-reader-app-with-react-native-and-newsapi</id>
         <link href="https://amanhimself.dev//blog/how-to-build-a-news-reader-app-with-react-native-and-newsapi"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[How To Build a News Reader App with React Native and NewsAPI]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -1205,7 +1205,7 @@
         <title type="html"><![CDATA[Top open source libraries for Node.js]]></title>
         <id>https://amanhimself.dev//blog/29-useful-open-source-libraries-for-nodejs</id>
         <link href="https://amanhimself.dev//blog/29-useful-open-source-libraries-for-nodejs"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[Top open source libraries for Node.js]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -1217,7 +1217,7 @@
         <title type="html"><![CDATA[21 Useful Open Source Packages for React Native]]></title>
         <id>https://amanhimself.dev//blog/21-useful-open-source-packages-for-react-native</id>
         <link href="https://amanhimself.dev//blog/21-useful-open-source-packages-for-react-native"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[21 Useful Open Source Packages for React Native]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -1229,7 +1229,7 @@
         <title type="html"><![CDATA[3 Steps to learn React Native in 2019]]></title>
         <id>https://amanhimself.dev//blog/3-steps-to-learn-react-native-in-2019</id>
         <link href="https://amanhimself.dev//blog/3-steps-to-learn-react-native-in-2019"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[3 Steps to learn React Native in 2019]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -1241,7 +1241,7 @@
         <title type="html"><![CDATA[Getting Started with React Native in 2019 - Build Your First App]]></title>
         <id>https://amanhimself.dev//blog/getting-started-with-react-native-in-2019-build-your-first-app</id>
         <link href="https://amanhimself.dev//blog/getting-started-with-react-native-in-2019-build-your-first-app"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[Getting Started with React Native in 2019 - Build Your First App]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -1253,7 +1253,7 @@
         <title type="html"><![CDATA[My Top Tutorials in Web Development and React Native in 2018]]></title>
         <id>https://amanhimself.dev//blog/my-top-tutorials-in-web-development-and-react-native-in-2018</id>
         <link href="https://amanhimself.dev//blog/my-top-tutorials-in-web-development-and-react-native-in-2018"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[My Top Tutorials in Web Development and React Native in 2018]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -1265,7 +1265,7 @@
         <title type="html"><![CDATA[Top Node.js Libraries and Tools For Machine Learning]]></title>
         <id>https://amanhimself.dev//blog/top-nodejs-libraries-and-tools-for-machine-learning</id>
         <link href="https://amanhimself.dev//blog/top-nodejs-libraries-and-tools-for-machine-learning"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[Top Node.js Libraries and Tools For Machine Learning]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -1277,7 +1277,7 @@
         <title type="html"><![CDATA[How To Build a REST API With Nodejs and PostgreSQL]]></title>
         <id>https://amanhimself.dev//blog/how-to-build-a-rest-api-with-nodejs-and-postgresql</id>
         <link href="https://amanhimself.dev//blog/how-to-build-a-rest-api-with-nodejs-and-postgresql"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[How To Build a REST API With Nodejs and PostgreSQL]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -1289,7 +1289,7 @@
         <title type="html"><![CDATA[Integrating Firebase with React Native]]></title>
         <id>https://amanhimself.dev//blog/integrating-firebase-with-react-native</id>
         <link href="https://amanhimself.dev//blog/integrating-firebase-with-react-native"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[Integrating Firebase with React Native]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -1301,7 +1301,7 @@
         <title type="html"><![CDATA[How To Build A Blog From Scratch With React, Markdown, GraphQL and Gatsbyjs]]></title>
         <id>https://amanhimself.dev//blog/how-to-build-your-own-blog-from-scratch-with-gatsbyjs-graphql-react-and-markdown</id>
         <link href="https://amanhimself.dev//blog/how-to-build-your-own-blog-from-scratch-with-gatsbyjs-graphql-react-and-markdown"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[How To Build A Blog From Scratch With React, Markdown, GraphQL and Gatsbyjs]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -1313,7 +1313,7 @@
         <title type="html"><![CDATA[Building an authenticated MERN Stack App Using Material UI]]></title>
         <id>https://amanhimself.dev//blog/building-a-mern-stack-app-with-material-ui</id>
         <link href="https://amanhimself.dev//blog/building-a-mern-stack-app-with-material-ui"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[Building an authenticated MERN Stack App Using Material UI]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -1325,7 +1325,7 @@
         <title type="html"><![CDATA[How to Build a Serverless Backend with AWS Lambda and Nodejs]]></title>
         <id>https://amanhimself.dev//blog/how-to-build-a-serverless-backend-with-aws-lambda-and-nodejs</id>
         <link href="https://amanhimself.dev//blog/how-to-build-a-serverless-backend-with-aws-lambda-and-nodejs"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[How to Build a Serverless Backend with AWS Lambda and Nodejs]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -1337,7 +1337,7 @@
         <title type="html"><![CDATA[Creating a GraphQL server with Nodejs]]></title>
         <id>https://amanhimself.dev//blog/creating-a-graphql-server-with-nodejs-in-2018</id>
         <link href="https://amanhimself.dev//blog/creating-a-graphql-server-with-nodejs-in-2018"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[Creating a GraphQL server with Nodejs]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -1349,7 +1349,7 @@
         <title type="html"><![CDATA[How to use Import statements in Nodejs]]></title>
         <id>https://amanhimself.dev//blog/how-to-use-import-statements-in-nodejs</id>
         <link href="https://amanhimself.dev//blog/how-to-use-import-statements-in-nodejs"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[How to use Import statements in Nodejs]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -1361,7 +1361,7 @@
         <title type="html"><![CDATA[Setting up Nodejs Backend for a React App]]></title>
         <id>https://amanhimself.dev//blog/setting-up-nodejs-backend-for-a-react-app</id>
         <link href="https://amanhimself.dev//blog/setting-up-nodejs-backend-for-a-react-app"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[Setting up Nodejs Backend for a React App]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -1373,7 +1373,7 @@
         <title type="html"><![CDATA[Building a REST API with Koajs]]></title>
         <id>https://amanhimself.dev//blog/building-a-rest-api-with-koajs</id>
         <link href="https://amanhimself.dev//blog/building-a-rest-api-with-koajs"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[Building a REST API with Koajs]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -1385,7 +1385,7 @@
         <title type="html"><![CDATA[Deploy a MERN stack app on Heroku]]></title>
         <id>https://amanhimself.dev//blog/deploy-a-mern-stack-app-on-heroku</id>
         <link href="https://amanhimself.dev//blog/deploy-a-mern-stack-app-on-heroku"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[Deploy a MERN stack app on Heroku]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -1397,7 +1397,7 @@
         <title type="html"><![CDATA[How to use React Navigation in a React Native App]]></title>
         <id>https://amanhimself.dev//blog/navigation-in-a-react-native-app</id>
         <link href="https://amanhimself.dev//blog/navigation-in-a-react-native-app"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[How to use React Navigation in a React Native App]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -1409,7 +1409,7 @@
         <title type="html"><![CDATA[Accessing Geo-location and App Permissions in React Native and Expo]]></title>
         <id>https://amanhimself.dev//blog/accessing-geo-location-and-app-permissions-in-react-native-and-expo</id>
         <link href="https://amanhimself.dev//blog/accessing-geo-location-and-app-permissions-in-react-native-and-expo"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[Accessing Geo-location and App Permissions in React Native and Expo]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -1421,7 +1421,7 @@
         <title type="html"><![CDATA[Simple Recipe to Build a Theme App in React Native]]></title>
         <id>https://amanhimself.dev//blog/simple-recipe-to-build-a-theme-app-in-react-native</id>
         <link href="https://amanhimself.dev//blog/simple-recipe-to-build-a-theme-app-in-react-native"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[Simple Recipe to Build a Theme App in React Native]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -1433,7 +1433,7 @@
         <title type="html"><![CDATA[How to integrate Redux into your application with React Native and Expo]]></title>
         <id>https://amanhimself.dev//blog/how-to-integrate-redux-into-your-application-with-react-native-and-expo</id>
         <link href="https://amanhimself.dev//blog/how-to-integrate-redux-into-your-application-with-react-native-and-expo"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[How to integrate Redux into your application with React Native and Expo]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -1445,7 +1445,7 @@
         <title type="html"><![CDATA[Week 3 with React Native - Why use Expo?]]></title>
         <id>https://amanhimself.dev//blog/week-3-with-react-native</id>
         <link href="https://amanhimself.dev//blog/week-3-with-react-native"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[Week 3 with React Native - Why use Expo?]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -1457,7 +1457,7 @@
         <title type="html"><![CDATA[Week 2 With React Native - Building a Weather App]]></title>
         <id>https://amanhimself.dev//blog/week-2-with-react-native-building-a-weather-app</id>
         <link href="https://amanhimself.dev//blog/week-2-with-react-native-building-a-weather-app"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[Week 2 With React Native - Building a Weather App]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -1469,7 +1469,7 @@
         <title type="html"><![CDATA[React Native - How to Setup Your First App]]></title>
         <id>https://amanhimself.dev//blog/react-native-how-to-setup-your-first-app</id>
         <link href="https://amanhimself.dev//blog/react-native-how-to-setup-your-first-app"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[React Native - How to Setup Your First App]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -1481,7 +1481,7 @@
         <title type="html"><![CDATA[Starting Over with React Native]]></title>
         <id>https://amanhimself.dev//blog/starting-over-with-react-native</id>
         <link href="https://amanhimself.dev//blog/starting-over-with-react-native"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[Starting Over with React Native]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -1493,7 +1493,7 @@
         <title type="html"><![CDATA[How to Upload a File with Reactjs and Nodejs]]></title>
         <id>https://amanhimself.dev//blog/connecting-a-node-js-and-reactjs-example</id>
         <link href="https://amanhimself.dev//blog/connecting-a-node-js-and-reactjs-example"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[How to Upload a File with Reactjs and Nodejs]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -1505,7 +1505,7 @@
         <title type="html"><![CDATA[React Native - Building a Minimalist Weather App using Expo XDE]]></title>
         <id>https://amanhimself.dev//blog/react-native-building-a-minimalist-weather-app-using-expo-xde</id>
         <link href="https://amanhimself.dev//blog/react-native-building-a-minimalist-weather-app-using-expo-xde"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[React Native - Building a Minimalist Weather App using Expo XDE]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -1517,7 +1517,7 @@
         <title type="html"><![CDATA[React Native - Getting Started with Lottie and Expo]]></title>
         <id>https://amanhimself.dev//blog/react-native-getting-started-with-lottie-and-expo</id>
         <link href="https://amanhimself.dev//blog/react-native-getting-started-with-lottie-and-expo"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[React Native - Getting Started with Lottie and Expo]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -1529,7 +1529,7 @@
         <title type="html"><![CDATA[Build a Progressive Web App using React]]></title>
         <id>https://amanhimself.dev//blog/build-a-progressive-web-app-using-react</id>
         <link href="https://amanhimself.dev//blog/build-a-progressive-web-app-using-react"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[Build a Progressive Web App using React]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -1541,7 +1541,7 @@
         <title type="html"><![CDATA[Designing a REST API with Node.js and MongoDB Atlas]]></title>
         <id>https://amanhimself.dev//blog/designing-a-rest-api-with-node-js-and-mongodb-atlas</id>
         <link href="https://amanhimself.dev//blog/designing-a-rest-api-with-node-js-and-mongodb-atlas"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[Designing a REST API with Node.js and MongoDB Atlas]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -1553,7 +1553,7 @@
         <title type="html"><![CDATA[Gatsby.js - How to set up and use the React Static Site Generator]]></title>
         <id>https://amanhimself.dev//blog/setting-up-and-getting-used-to-gatsby</id>
         <link href="https://amanhimself.dev//blog/setting-up-and-getting-used-to-gatsby"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[Gatsby.js - How to set up and use the React Static Site Generator]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -1565,7 +1565,7 @@
         <title type="html"><![CDATA[Ionic 2/3 CLI Reference]]></title>
         <id>https://amanhimself.dev//blog/ionic-2-3-cli-reference</id>
         <link href="https://amanhimself.dev//blog/ionic-2-3-cli-reference"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[Ionic 2/3 CLI Reference]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -1577,7 +1577,7 @@
         <title type="html"><![CDATA[Passing Data Between Pages in an Ionic Application]]></title>
         <id>https://amanhimself.dev//blog/passing-data-between-pages-in-an-ionic-application</id>
         <link href="https://amanhimself.dev//blog/passing-data-between-pages-in-an-ionic-application"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[Passing Data Between Pages in an Ionic Application]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -1589,7 +1589,7 @@
         <title type="html"><![CDATA[Tips for Creating Nodejs REST APIs]]></title>
         <id>https://amanhimself.dev//blog/tips-for-creating-node-js-rest-apis</id>
         <link href="https://amanhimself.dev//blog/tips-for-creating-node-js-rest-apis"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[Tips for Creating Nodejs REST APIs]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -1601,7 +1601,7 @@
         <title type="html"><![CDATA[Multi Page Navigation in an Ionic App]]></title>
         <id>https://amanhimself.dev//blog/multi-page-navigation-in-an-ionic-app</id>
         <link href="https://amanhimself.dev//blog/multi-page-navigation-in-an-ionic-app"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[Multi Page Navigation in an Ionic App]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -1613,7 +1613,7 @@
         <title type="html"><![CDATA[Using Google Fonts in an Ionic Application]]></title>
         <id>https://amanhimself.dev//blog/using-google-fonts-in-an-ionic-application</id>
         <link href="https://amanhimself.dev//blog/using-google-fonts-in-an-ionic-application"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[Using Google Fonts in an Ionic Application]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -1625,7 +1625,7 @@
         <title type="html"><![CDATA[Basic Navigation in Ionic Applications]]></title>
         <id>https://amanhimself.dev//blog/basic-navigation-in-ionic-applications</id>
         <link href="https://amanhimself.dev//blog/basic-navigation-in-ionic-applications"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[Basic Navigation in Ionic Applications]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -1637,7 +1637,7 @@
         <title type="html"><![CDATA[How to use Font Awesome in an Ionic Application]]></title>
         <id>https://amanhimself.dev//blog/how-to-use-font-awesome-in-an-ionic-application</id>
         <link href="https://amanhimself.dev//blog/how-to-use-font-awesome-in-an-ionic-application"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[How to use Font Awesome in an Ionic Application]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -1649,7 +1649,7 @@
         <title type="html"><![CDATA[What is Ionic?]]></title>
         <id>https://amanhimself.dev//blog/what-is-ionic</id>
         <link href="https://amanhimself.dev//blog/what-is-ionic"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[What is Ionic?]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -1661,7 +1661,7 @@
         <title type="html"><![CDATA[Introduction to Hybrid Mobile Apps]]></title>
         <id>https://amanhimself.dev//blog/introduction-to-hybrid-mobile-apps</id>
         <link href="https://amanhimself.dev//blog/introduction-to-hybrid-mobile-apps"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[Introduction to Hybrid Mobile Apps]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -1673,7 +1673,7 @@
         <title type="html"><![CDATA[Remove node_modules Recursively]]></title>
         <id>https://amanhimself.dev//blog/remove-node-modules-recursively</id>
         <link href="https://amanhimself.dev//blog/remove-node-modules-recursively"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[Remove node_modules Recursively]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -1685,7 +1685,7 @@
         <title type="html"><![CDATA[Setup Nodemon to auto restart Nodejs application server]]></title>
         <id>https://amanhimself.dev//blog/setup-nodemon-to-auto-restart-nodejs-application-server</id>
         <link href="https://amanhimself.dev//blog/setup-nodemon-to-auto-restart-nodejs-application-server"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[Setup Nodemon to auto restart Nodejs application server]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -1697,7 +1697,7 @@
         <title type="html"><![CDATA[What’s New in npm 5?]]></title>
         <id>https://amanhimself.dev//blog/whats-new-in-npm-5</id>
         <link href="https://amanhimself.dev//blog/whats-new-in-npm-5"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[What’s New in npm 5?]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -1709,7 +1709,7 @@
         <title type="html"><![CDATA[Converting a Buffer to JSON and Utf8 Strings in Nodejs]]></title>
         <id>https://amanhimself.dev//blog/converting-a-buffer-to-json-and-utf8-strings-in-nodejs</id>
         <link href="https://amanhimself.dev//blog/converting-a-buffer-to-json-and-utf8-strings-in-nodejs"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[Converting a Buffer to JSON and Utf8 Strings in Nodejs]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -1721,7 +1721,7 @@
         <title type="html"><![CDATA[Setting up MEAN Stack with Webstorm]]></title>
         <id>https://amanhimself.dev//blog/setting-up-mean-stack-with-webstorm</id>
         <link href="https://amanhimself.dev//blog/setting-up-mean-stack-with-webstorm"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[Setting up MEAN Stack with Webstorm]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -1733,7 +1733,7 @@
         <title type="html"><![CDATA[How to paginate records in MySQL using Sequelize and Nodejs]]></title>
         <id>https://amanhimself.dev//blog/paginate-records-in-mysql-using-sequelize-and-nodejs</id>
         <link href="https://amanhimself.dev//blog/paginate-records-in-mysql-using-sequelize-and-nodejs"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[How to paginate records in MySQL using Sequelize and Nodejs]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -1745,7 +1745,7 @@
         <title type="html"><![CDATA[Getting Started with Sequelize for Nodejs Applications]]></title>
         <id>https://amanhimself.dev//blog/getting-started-with-sequelize-for-nodejs</id>
         <link href="https://amanhimself.dev//blog/getting-started-with-sequelize-for-nodejs"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[Getting Started with Sequelize for Nodejs Applications]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -1757,7 +1757,7 @@
         <title type="html"><![CDATA[How to use ESLint in Node.js Applications]]></title>
         <id>https://amanhimself.dev//blog/how-to-use-eslint-in-node-js-applications</id>
         <link href="https://amanhimself.dev//blog/how-to-use-eslint-in-node-js-applications"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[How to use ESLint in Node.js Applications]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -1769,7 +1769,7 @@
         <title type="html"><![CDATA[How to Mock Data for Node.js Applications using faker.js]]></title>
         <id>https://amanhimself.dev//blog/how-to-mock-data-for-nodejs-applications-using-fakerjs</id>
         <link href="https://amanhimself.dev//blog/how-to-mock-data-for-nodejs-applications-using-fakerjs"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[How to Mock Data for Node.js Applications using faker.js]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -1781,7 +1781,7 @@
         <title type="html"><![CDATA[Getting Started with Ionic Framework]]></title>
         <id>https://amanhimself.dev//blog/getting-started-with-ionic-framework</id>
         <link href="https://amanhimself.dev//blog/getting-started-with-ionic-framework"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[Getting Started with Ionic Framework]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -1793,7 +1793,7 @@
         <title type="html"><![CDATA[Migrating from Expressjs 4 to 5]]></title>
         <id>https://amanhimself.dev//blog/migrating-from-expressjs-4-to-5</id>
         <link href="https://amanhimself.dev//blog/migrating-from-expressjs-4-to-5"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[Migrating from Expressjs 4 to 5]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -1805,20 +1805,8 @@
         <title type="html"><![CDATA[Using Bower With Heroku]]></title>
         <id>https://amanhimself.dev//blog/using-bower-with-heroku</id>
         <link href="https://amanhimself.dev//blog/using-bower-with-heroku"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[Using Bower With Heroku]]></summary>
-        <author>
-            <name>Aman Mittal</name>
-            <email>amanmittal.work@gmail.com</email>
-            <uri>https://twitter.com/amanhimself</uri>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Writing a Node.js Twitter Bot Part 2]]></title>
-        <id>https://amanhimself.dev//blog/node-js-twitter-bot-tutorial-part-2</id>
-        <link href="https://amanhimself.dev//blog/node-js-twitter-bot-tutorial-part-2"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
-        <summary type="html"><![CDATA[Writing a Node.js Twitter Bot Part 2]]></summary>
         <author>
             <name>Aman Mittal</name>
             <email>amanmittal.work@gmail.com</email>
@@ -1829,8 +1817,20 @@
         <title type="html"><![CDATA[Writing a Node.js Twitter Bot Part 1]]></title>
         <id>https://amanhimself.dev//blog/node-js-twitter-bot-tutorial</id>
         <link href="https://amanhimself.dev//blog/node-js-twitter-bot-tutorial"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[Writing a Node.js Twitter Bot Part 1]]></summary>
+        <author>
+            <name>Aman Mittal</name>
+            <email>amanmittal.work@gmail.com</email>
+            <uri>https://twitter.com/amanhimself</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Writing a Node.js Twitter Bot Part 2]]></title>
+        <id>https://amanhimself.dev//blog/node-js-twitter-bot-tutorial-part-2</id>
+        <link href="https://amanhimself.dev//blog/node-js-twitter-bot-tutorial-part-2"/>
+        <updated>2022-05-04T11:19:11.084Z</updated>
+        <summary type="html"><![CDATA[Writing a Node.js Twitter Bot Part 2]]></summary>
         <author>
             <name>Aman Mittal</name>
             <email>amanmittal.work@gmail.com</email>
@@ -1841,7 +1841,7 @@
         <title type="html"><![CDATA[Create a Simple Twitter Bot with Node.js]]></title>
         <id>https://amanhimself.dev//blog/create-a-simple-twitter-bot-with-node-js</id>
         <link href="https://amanhimself.dev//blog/create-a-simple-twitter-bot-with-node-js"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[Create a Simple Twitter Bot with Node.js]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -1853,7 +1853,7 @@
         <title type="html"><![CDATA[ATOM- An Editor of 21st Century]]></title>
         <id>https://amanhimself.dev//blog/atom-an-editor-of-21st-century</id>
         <link href="https://amanhimself.dev//blog/atom-an-editor-of-21st-century"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[ATOM- An Editor of 21st Century]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -1865,7 +1865,7 @@
         <title type="html"><![CDATA[How process.nextTick() works in Node.js?]]></title>
         <id>https://amanhimself.dev//blog/how-process-nexttick-works-in-node-js</id>
         <link href="https://amanhimself.dev//blog/how-process-nexttick-works-in-node-js"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[How process.nextTick() works in Node.js?]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -1877,7 +1877,7 @@
         <title type="html"><![CDATA[The Node.js system]]></title>
         <id>https://amanhimself.dev//blog/nodejs-system</id>
         <link href="https://amanhimself.dev//blog/nodejs-system"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[The Node.js system]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -1889,7 +1889,7 @@
         <title type="html"><![CDATA[The Node way - Philosophy of a Platform]]></title>
         <id>https://amanhimself.dev//blog/the-node-way</id>
         <link href="https://amanhimself.dev//blog/the-node-way"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[The Node way - Philosophy of a Platform]]></summary>
         <author>
             <name>Aman Mittal</name>
@@ -1901,7 +1901,7 @@
         <title type="html"><![CDATA[JavaScript Code Conventions]]></title>
         <id>https://amanhimself.dev//blog/javascript-code-convetions</id>
         <link href="https://amanhimself.dev//blog/javascript-code-convetions"/>
-        <updated>2022-05-04T11:12:09.705Z</updated>
+        <updated>2022-05-04T11:19:11.084Z</updated>
         <summary type="html"><![CDATA[JavaScript Code Conventions]]></summary>
         <author>
             <name>Aman Mittal</name>
