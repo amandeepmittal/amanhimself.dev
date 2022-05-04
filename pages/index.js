@@ -57,7 +57,7 @@ const generateRssFeed = async () => {
       id: url,
       link: url,
       description: post.title,
-      content: post.fileContent,
+      // content: post.fileContent,
       author: [author],
       date: date
     });
