@@ -228,11 +228,11 @@ const AboutPage = () => {
             </ExternalLink>
           </ListItem>
           <ListItem>
-            <strong>Other notable publications:</strong> Rising Stack,
-            Codeburst.io, ZeoLearn.com, Art + Marketing, 42hire.com, ITNext,
-            Eduonix, The Startup, JavaBeginnersTutorial.com, LevelUp
-            Gitconnected, Better Programming, React Native Training, Pusher,
-            Instamobile, & Soshace.
+            <strong>Other notable publications and organizations:</strong>{' '}
+            Rising Stack, Codeburst.io, ZeoLearn.com, Art + Marketing,
+            42hire.com, ITNext, Eduonix, The Startup, JavaBeginnersTutorial.com,
+            LevelUp Gitconnected, Better Programming, React Native Training,
+            Pusher, Instamobile, Soshace and Transifex Native.
           </ListItem>
         </List>
         {/* TODO: Add info about posts listed in Newsletters */}
