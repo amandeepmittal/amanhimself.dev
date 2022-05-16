@@ -250,37 +250,37 @@ Import this component in the `App.js` file.
 
 ```js
 // after other imports...
-import Form from './components/Form'
+import Form from './components/Form';
 
 function App() {
-  const [expenses, setExpenses] = useState(ALL_EXPENSES)
+  const [expenses, setExpenses] = useState(ALL_EXPENSES);
 
   return (
     <Container>
       <Jumbotron fluid>
-        <h3 className='display-6 text-center'>
+        <h3 className="display-6 text-center">
           Expense Tracker React App
-          <img src={Logo} style={{ width: 50, height: 50 }} alt='react-logo' />
+          <img src={Logo} style={{ width: 50, height: 50 }} alt="react-logo" />
         </h3>
-        <div className='text-center'>
+        <div className="text-center">
           <p>
             Total Expense:{' '}
-            <span className='text-success'>
+            <span className="text-success">
               ${' '}
               {expenses.reduce((accumulator, currentValue) => {
-                return (accumulator += parseInt(currentValue.amount))
+                return (accumulator += parseInt(currentValue.amount));
               }, 0)}
             </span>
           </p>
         </div>
-        {*/ ADD THE BELOW LINE/*}
+        {/* ADD THE BELOW LINE */}
         <Form />
       </Jumbotron>
     </Container>
-  )
+  );
 }
 
-export default App
+export default App;
 ```
 
 In the browser window, you will get the following result.
