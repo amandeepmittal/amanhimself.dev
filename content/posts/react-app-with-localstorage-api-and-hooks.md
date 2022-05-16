@@ -316,35 +316,35 @@ Import this component in `App.js` file. In the above snippet, you will notice th
 
 ```js
 // after other impors
-import List from './components/List'
+import List from './components/List';
 
 function App() {
-  const [expenses, setExpenses] = useState(ALL_EXPENSES)
+  const [expenses, setExpenses] = useState(ALL_EXPENSES);
 
   return (
     <Container>
       <Jumbotron fluid>
-        <h3 className='display-6' className='text-center'>
+        <h3 className="display-6" className="text-center">
           Expense Tracker React App
-          <img src={Logo} style={{ width: 50, height: 50 }} alt='react-logo' />
+          <img src={Logo} style={{ width: 50, height: 50 }} alt="react-logo" />
         </h3>
-        <div className='text-center'>
+        <div className="text-center">
           <p>
             Total Expense:{' '}
-            <span className='text-success'>
+            <span className="text-success">
               ${' '}
               {expenses.reduce((accumulator, currentValue) => {
-                return (accumulator += parseInt(currentValue.amount))
+                return (accumulator += parseInt(currentValue.amount));
               }, 0)}
             </span>
           </p>
         </div>
         <Form />
-        {*/ ADD THE BELOW LINE/*}
+        {/* ADD THE BELOW LINE */}
         <List expenses={expenses} />
       </Jumbotron>
     </Container>
-  )
+  );
 }
 ```
 
