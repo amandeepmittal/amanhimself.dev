@@ -7,7 +7,7 @@ tag: 'vscode'
 canonicalUrl: 'https://amanhimself.dev/blog/setup-macbook-m1/'
 ---
 
-> 🕑 Updated on: March 14, 2022
+> 🕑 Updated on: May 24, 2022
 
 ![cover_image](https://i.imgur.com/tAJjTOU.png)
 
@@ -487,7 +487,7 @@ I use VSCode editor for both writing code and writing blog posts. Thus, the list
 - [install Node.js](http://localhost:3000/blog/install-nodejs-using-nvm-on-macos-m1/)
 - install [Watchman](https://facebook.github.io/watchman/) to watch changes in the filesystem using the command: `brew install watchman`
 - install following [cocoapods](https://formulae.brew.sh/formula/cocoapods): `brew install cocoapods`
-- According to [a post by React Native guru Jamon Holmgren](https://shift.infinite.red/dont-use-the-wrong-jdk-for-react-native-if-you-re-using-an-m1-mac-252533dd47a2) that all this time I've been using installing JDK wrong on my m1 machine 😱. To learn more how to install "the m1 way", go to his post and give it a read (and leave an appreciation clap 😄)
+- According to [a post by React Native guru Jamon Holmgren](https://shift.infinite.red/dont-use-the-wrong-jdk-for-react-native-if-you-re-using-an-m1-mac-252533dd47a2), I learned that all this time I've been using installing JDK wrong on my m1 machine 😱. To learn more how to install "the m1 way", go to his post and give it a read (and leave an appreciation clap 😄)
 - Versions later than Arctic Fox Canary now supports [Apple's Silicon based machines](https://androidstudio.googleblog.com/2021/04/android-studio-arctic-fox-canary-15.html) for Android Studio. You can also check out the [archive](https://developer.android.com/studio/archive) to see what beta/canary version supports Silicon machines
 - Then install Android SDK (I do not prefer AVD and use an actual device for testing)
 - [scrcpy](https://github.com/Genymobile/scrcpy) to display and control Android devices connect via USB on Mac
