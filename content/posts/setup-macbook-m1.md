@@ -7,7 +7,7 @@ tag: 'vscode'
 canonicalUrl: 'https://amanhimself.dev/blog/setup-macbook-m1/'
 ---
 
-> 🕑 Updated on: May 24, 2022
+> 🕑 Updated on: May 25, 2022
 
 ![cover_image](https://i.imgur.com/tAJjTOU.png)
 
@@ -77,6 +77,9 @@ After going through some online reviews and research, the kind of performance I 
   - Enable show path bar: View > Show Path Bar
 - Dock:
   - Turn auto hiding on
+- Mission Control:
+  - Uncheck "Automatically rearrange Spaces based on most recent use"
+  - Hot Corners: remove everything
 
 > Copy [dotfiles](https://github.com/amandeepmittal/dotfiles).
 
