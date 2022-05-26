@@ -51,7 +51,6 @@ const generateRssFeed = async () => {
 
   posts.forEach(post => {
     const url = `${siteURL}/blog/${post.slug}`;
-    console.log(post.date);
 
     feed.addItem({
       title: post.title,
