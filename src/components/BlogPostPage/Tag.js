@@ -93,6 +93,12 @@ const Tag = ({ tag }) => {
         <TagsSummary tag={tag} />
       </Box>
     );
+  } else if (tag === 'typescript') {
+    return (
+      <Box bg="#408ef5" p={1} borderRadius={4}>
+        <TagsSummary tag={tag} />
+      </Box>
+    );
   }
 
   return (

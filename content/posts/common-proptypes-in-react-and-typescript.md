@@ -3,7 +3,7 @@ title: 'Common Prop Types in TypeScript and React'
 date: '2021-06-29'
 slug: 'common-prop-types-in-typescript-and-react'
 thumbnail: '/thumbnails/typescript.png'
-tag: 'react'
+tag: 'typescript'
 canonicalUrl: 'https://amanhimself.dev/blog/common-prop-types-in-typescript-and-react'
 ---
 

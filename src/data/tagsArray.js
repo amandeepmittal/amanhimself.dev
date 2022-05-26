@@ -59,6 +59,10 @@ const TAGS_ARRAY = [
   {
     name: 'tools',
     color: '#9778d1'
+  },
+  {
+    name: 'typescript',
+    color: '#408ef5'
   }
 ];
 

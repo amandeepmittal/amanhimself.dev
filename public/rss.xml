@@ -4,7 +4,7 @@
         <title>Aman Mittal' blog</title>
         <link>https://amanhimself.dev/</link>
         <description></description>
-        <lastBuildDate>Tue, 24 May 2022 10:53:01 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 26 May 2022 16:54:57 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Feed for Node.js</generator>
         <copyright>2019 - 2022, Aman Mittal · All Rights Reserved.</copyright>
@@ -12,7 +12,7 @@
             <title><![CDATA[How to remove console statements from React Native apps]]></title>
             <link>https://amanhimself.dev//blog/remove-console-from-react-native-apps</link>
             <guid>https://amanhimself.dev//blog/remove-console-from-react-native-apps</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Wed, 08 Jun 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[How to remove console statements from React Native apps]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -20,7 +20,7 @@
             <title><![CDATA[Remove bottom border or shadow on header in React Navigation]]></title>
             <link>https://amanhimself.dev//blog/remove-bottom-border-shadow-on-header-in-react-navigation</link>
             <guid>https://amanhimself.dev//blog/remove-bottom-border-shadow-on-header-in-react-navigation</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Wed, 01 Jun 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[Remove bottom border or shadow on header in React Navigation]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -28,7 +28,7 @@
             <title><![CDATA[Patterns and Anti-patterns in Node.js]]></title>
             <link>https://amanhimself.dev//blog/patterns-and-anti-patterns-in-nodejs</link>
             <guid>https://amanhimself.dev//blog/patterns-and-anti-patterns-in-nodejs</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Sun, 03 Apr 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[Patterns and Anti-patterns in Node.js]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -36,7 +36,7 @@
             <title><![CDATA[How to show Touch indicator on iOS simulator]]></title>
             <link>https://amanhimself.dev//blog/show-touch-indicator-on-ios-simulator</link>
             <guid>https://amanhimself.dev//blog/show-touch-indicator-on-ios-simulator</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Sun, 03 Apr 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[How to show Touch indicator on iOS simulator]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -44,7 +44,7 @@
             <title><![CDATA[How to handle Deep Linking in a React Native app]]></title>
             <link>https://amanhimself.dev//blog/handle-deep-linking-react-native</link>
             <guid>https://amanhimself.dev//blog/handle-deep-linking-react-native</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Tue, 29 Mar 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[How to handle Deep Linking in a React Native app]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -52,7 +52,7 @@
             <title><![CDATA[When to use keyExtractor prop in React Native's FlatList]]></title>
             <link>https://amanhimself.dev//blog/use-key-extractor-in-react-native-flatlist</link>
             <guid>https://amanhimself.dev//blog/use-key-extractor-in-react-native-flatlist</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Sun, 27 Mar 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[When to use keyExtractor prop in React Native's FlatList]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -60,7 +60,7 @@
             <title><![CDATA[Set up a Next.js project with ESLint, Prettier, Husky, and Lint Staged]]></title>
             <link>https://amanhimself.dev//blog/setup-nextjs-project-with-eslint-prettier-husky-lint-staged</link>
             <guid>https://amanhimself.dev//blog/setup-nextjs-project-with-eslint-prettier-husky-lint-staged</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Sun, 13 Feb 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[Set up a Next.js project with ESLint, Prettier, Husky, and Lint Staged]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -68,7 +68,7 @@
             <title><![CDATA[How to install Node.js using NVM on macOS M1]]></title>
             <link>https://amanhimself.dev//blog/install-nodejs-using-nvm-on-macos-m1</link>
             <guid>https://amanhimself.dev//blog/install-nodejs-using-nvm-on-macos-m1</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Sun, 06 Feb 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[How to install Node.js using NVM on macOS M1]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -76,7 +76,7 @@
             <title><![CDATA[Implementing Infinite Scroll with React Query and FlatList in React Native]]></title>
             <link>https://amanhimself.dev//blog/infinite-scroll-with-react-query-and-flatlist-in-react-native</link>
             <guid>https://amanhimself.dev//blog/infinite-scroll-with-react-query-and-flatlist-in-react-native</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Sun, 30 Jan 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[Implementing Infinite Scroll with React Query and FlatList in React Native]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -84,7 +84,7 @@
             <title><![CDATA[How to rename default branch in Git and GitHub]]></title>
             <link>https://amanhimself.dev//blog/how-to-rename-default-branch-name-in-git-and-github</link>
             <guid>https://amanhimself.dev//blog/how-to-rename-default-branch-name-in-git-and-github</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Mon, 10 Jan 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[How to rename default branch in Git and GitHub]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -92,7 +92,7 @@
             <title><![CDATA[Tamagui for React Native: Create faster design systems]]></title>
             <link>https://amanhimself.dev//blog/tamagui-for-react-native</link>
             <guid>https://amanhimself.dev//blog/tamagui-for-react-native</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Sun, 09 Jan 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[Tamagui for React Native: Create faster design systems]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -100,7 +100,7 @@
             <title><![CDATA[2021 - A year in review]]></title>
             <link>https://amanhimself.dev//blog/year-in-review-2021</link>
             <guid>https://amanhimself.dev//blog/year-in-review-2021</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Fri, 31 Dec 2021 00:00:00 GMT</pubDate>
             <description><![CDATA[2021 - A year in review]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -108,7 +108,7 @@
             <title><![CDATA[Create a custom hook to Show/Hide Password Visibility in React Native]]></title>
             <link>https://amanhimself.dev//blog/show-hide-password-in-react-native-using-custom-hook</link>
             <guid>https://amanhimself.dev//blog/show-hide-password-in-react-native-using-custom-hook</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Sat, 11 Dec 2021 00:00:00 GMT</pubDate>
             <description><![CDATA[Create a custom hook to Show/Hide Password Visibility in React Native]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -116,7 +116,7 @@
             <title><![CDATA[How to avoid notches with Safe Area Context in React Native apps]]></title>
             <link>https://amanhimself.dev//blog/safe-area-context-in-react-native-apps</link>
             <guid>https://amanhimself.dev//blog/safe-area-context-in-react-native-apps</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Thu, 14 Oct 2021 00:00:00 GMT</pubDate>
             <description><![CDATA[How to avoid notches with Safe Area Context in React Native apps]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -124,7 +124,7 @@
             <title><![CDATA[How to configure VSCode Bracket Pair Colors Natively]]></title>
             <link>https://amanhimself.dev//blog/how-to-configure-vscode-bracket-colors-natively</link>
             <guid>https://amanhimself.dev//blog/how-to-configure-vscode-bracket-colors-natively</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Tue, 12 Oct 2021 00:00:00 GMT</pubDate>
             <description><![CDATA[How to configure VSCode Bracket Pair Colors Natively]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -132,7 +132,7 @@
             <title><![CDATA[How to add Splash Screen and an App Icon in React Native]]></title>
             <link>https://amanhimself.dev//blog/how-to-add-a-splash-screen-and-app-icon-in-react-native-with-react-native-bootsplash</link>
             <guid>https://amanhimself.dev//blog/how-to-add-a-splash-screen-and-app-icon-in-react-native-with-react-native-bootsplash</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Fri, 01 Oct 2021 00:00:00 GMT</pubDate>
             <description><![CDATA[How to add Splash Screen and an App Icon in React Native]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -140,7 +140,7 @@
             <title><![CDATA[How to use iOS simulator in full-screen]]></title>
             <link>https://amanhimself.dev//blog/how-to-use-ios-simulator-in-full-screen</link>
             <guid>https://amanhimself.dev//blog/how-to-use-ios-simulator-in-full-screen</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Wed, 15 Sep 2021 00:00:00 GMT</pubDate>
             <description><![CDATA[How to use iOS simulator in full-screen]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -148,7 +148,7 @@
             <title><![CDATA[How to solve RCTBridge required dispatch_sync to load warning on iOS for React Native]]></title>
             <link>https://amanhimself.dev//blog/rctbridge-required-dispatch-sync-to-load-warning</link>
             <guid>https://amanhimself.dev//blog/rctbridge-required-dispatch-sync-to-load-warning</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Sat, 04 Sep 2021 00:00:00 GMT</pubDate>
             <description><![CDATA[How to solve RCTBridge required dispatch_sync to load warning on iOS for React Native]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -156,7 +156,7 @@
             <title><![CDATA[How to Offer Multi-language Support in a React Native App]]></title>
             <link>https://amanhimself.dev//blog/multi-language-support-in-react-native-with-react-i18next</link>
             <guid>https://amanhimself.dev//blog/multi-language-support-in-react-native-with-react-i18next</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Mon, 16 Aug 2021 00:00:00 GMT</pubDate>
             <description><![CDATA[How to Offer Multi-language Support in a React Native App]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -164,7 +164,7 @@
             <title><![CDATA[GET Request params with Axios]]></title>
             <link>https://amanhimself.dev//blog/get-request-with-axios</link>
             <guid>https://amanhimself.dev//blog/get-request-with-axios</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Wed, 11 Aug 2021 00:00:00 GMT</pubDate>
             <description><![CDATA[GET Request params with Axios]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -172,7 +172,7 @@
             <title><![CDATA[Environment Variables in Expo and TypeScript]]></title>
             <link>https://amanhimself.dev//blog/environment-variables-in-expo-managed-workflow</link>
             <guid>https://amanhimself.dev//blog/environment-variables-in-expo-managed-workflow</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Wed, 04 Aug 2021 00:00:00 GMT</pubDate>
             <description><![CDATA[Environment Variables in Expo and TypeScript]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -180,7 +180,7 @@
             <title><![CDATA[The No-Code Way of Payments with Stripe: A Brief Guide]]></title>
             <link>https://amanhimself.dev//blog/no-code-way-of-payments-with-stripe-a-brief-guide</link>
             <guid>https://amanhimself.dev//blog/no-code-way-of-payments-with-stripe-a-brief-guide</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Thu, 08 Jul 2021 00:00:00 GMT</pubDate>
             <description><![CDATA[The No-Code Way of Payments with Stripe: A Brief Guide]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -188,7 +188,7 @@
             <title><![CDATA[How To Integrate Firebase Authentication With an Expo App]]></title>
             <link>https://amanhimself.dev//blog/firebase-authentication-with-expo</link>
             <guid>https://amanhimself.dev//blog/firebase-authentication-with-expo</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Sun, 04 Jul 2021 00:00:00 GMT</pubDate>
             <description><![CDATA[How To Integrate Firebase Authentication With an Expo App]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -196,7 +196,7 @@
             <title><![CDATA[Common Prop Types in TypeScript and React]]></title>
             <link>https://amanhimself.dev//blog/common-proptypes-in-react-and-typescript</link>
             <guid>https://amanhimself.dev//blog/common-proptypes-in-react-and-typescript</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Tue, 29 Jun 2021 00:00:00 GMT</pubDate>
             <description><![CDATA[Common Prop Types in TypeScript and React]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -204,7 +204,7 @@
             <title><![CDATA[Prop types in React and TypeScript]]></title>
             <link>https://amanhimself.dev//blog/prop-types-in-react-and-typescript</link>
             <guid>https://amanhimself.dev//blog/prop-types-in-react-and-typescript</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Mon, 28 Jun 2021 00:00:00 GMT</pubDate>
             <description><![CDATA[Prop types in React and TypeScript]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -212,7 +212,7 @@
             <title><![CDATA[🌱 Life at Draftbit - First 3 Months as a Developer Advocate]]></title>
             <link>https://amanhimself.dev//blog/first-three-months-as-developer-advocate</link>
             <guid>https://amanhimself.dev//blog/first-three-months-as-developer-advocate</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Tue, 25 May 2021 00:00:00 GMT</pubDate>
             <description><![CDATA[🌱 Life at Draftbit - First 3 Months as a Developer Advocate]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -220,7 +220,7 @@
             <title><![CDATA[How to Create a Custom Image Gallery in React Native]]></title>
             <link>https://amanhimself.dev//blog/custom-preview-image-gallery-in-react-native</link>
             <guid>https://amanhimself.dev//blog/custom-preview-image-gallery-in-react-native</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Mon, 17 May 2021 00:00:00 GMT</pubDate>
             <description><![CDATA[How to Create a Custom Image Gallery in React Native]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -228,7 +228,7 @@
             <title><![CDATA[How to Create a Custom Tab Bar in React Native]]></title>
             <link>https://amanhimself.dev//blog/create-custom-tab-bar-in-react-native</link>
             <guid>https://amanhimself.dev//blog/create-custom-tab-bar-in-react-native</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Fri, 07 May 2021 00:00:00 GMT</pubDate>
             <description><![CDATA[How to Create a Custom Tab Bar in React Native]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -236,7 +236,7 @@
             <title><![CDATA[How to use ES6 import syntax in Node.js]]></title>
             <link>https://amanhimself.dev//blog/how-to-use-es6-import-in-nodejs</link>
             <guid>https://amanhimself.dev//blog/how-to-use-es6-import-in-nodejs</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Wed, 07 Apr 2021 00:00:00 GMT</pubDate>
             <description><![CDATA[How to use ES6 import syntax in Node.js]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -244,7 +244,7 @@
             <title><![CDATA[How to upload an image using Expo Camera to Cloudinary]]></title>
             <link>https://amanhimself.dev//blog/upload-image-to-cloudinary-using-expo-camera</link>
             <guid>https://amanhimself.dev//blog/upload-image-to-cloudinary-using-expo-camera</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Wed, 31 Mar 2021 00:00:00 GMT</pubDate>
             <description><![CDATA[How to upload an image using Expo Camera to Cloudinary]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -252,7 +252,7 @@
             <title><![CDATA[Setup Macbook M1 for Web and React Native development]]></title>
             <link>https://amanhimself.dev//blog/setup-macbook-m1</link>
             <guid>https://amanhimself.dev//blog/setup-macbook-m1</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Sun, 14 Mar 2021 00:00:00 GMT</pubDate>
             <description><![CDATA[Setup Macbook M1 for Web and React Native development]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -260,7 +260,7 @@
             <title><![CDATA[How to use React Native Geolocation to get Postal Address]]></title>
             <link>https://amanhimself.dev//blog/react-native-geolocation-to-get-postal-address</link>
             <guid>https://amanhimself.dev//blog/react-native-geolocation-to-get-postal-address</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Thu, 25 Feb 2021 00:00:00 GMT</pubDate>
             <description><![CDATA[How to use React Native Geolocation to get Postal Address]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -268,7 +268,7 @@
             <title><![CDATA[React Native Performance Do and Dont]]></title>
             <link>https://amanhimself.dev//blog/react-native-performance-do-and-dont</link>
             <guid>https://amanhimself.dev//blog/react-native-performance-do-and-dont</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Sat, 13 Feb 2021 00:00:00 GMT</pubDate>
             <description><![CDATA[React Native Performance Do and Dont]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -276,7 +276,7 @@
             <title><![CDATA[How to use shared element transitions in React Native]]></title>
             <link>https://amanhimself.dev//blog/shared-element-transitions</link>
             <guid>https://amanhimself.dev//blog/shared-element-transitions</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Tue, 19 Jan 2021 00:00:00 GMT</pubDate>
             <description><![CDATA[How to use shared element transitions in React Native]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -284,7 +284,7 @@
             <title><![CDATA[How to remove bottom tab bar border in React Navigation]]></title>
             <link>https://amanhimself.dev//blog/react-navigation-remove-tab-bar-border</link>
             <guid>https://amanhimself.dev//blog/react-navigation-remove-tab-bar-border</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Sun, 17 Jan 2021 00:00:00 GMT</pubDate>
             <description><![CDATA[How to remove bottom tab bar border in React Navigation]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -292,7 +292,7 @@
             <title><![CDATA[How to use redux-persist in React Native with Asyncstorage]]></title>
             <link>https://amanhimself.dev//blog/redux-persist-in-react-native-with-async-storage</link>
             <guid>https://amanhimself.dev//blog/redux-persist-in-react-native-with-async-storage</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Fri, 08 Jan 2021 00:00:00 GMT</pubDate>
             <description><![CDATA[How to use redux-persist in React Native with Asyncstorage]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -300,7 +300,7 @@
             <title><![CDATA[How to add an app icon in a React Native Android app]]></title>
             <link>https://amanhimself.dev//blog/app-icon-react-native-android</link>
             <guid>https://amanhimself.dev//blog/app-icon-react-native-android</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Wed, 06 Jan 2021 00:00:00 GMT</pubDate>
             <description><![CDATA[How to add an app icon in a React Native Android app]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -308,7 +308,7 @@
             <title><![CDATA[Year Rewind: 2020]]></title>
             <link>https://amanhimself.dev//blog/year-rewind-2020</link>
             <guid>https://amanhimself.dev//blog/year-rewind-2020</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Wed, 23 Dec 2020 00:00:00 GMT</pubDate>
             <description><![CDATA[Year Rewind: 2020]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -316,7 +316,7 @@
             <title><![CDATA[How to create a custom scrollbar with React Native Animated API]]></title>
             <link>https://amanhimself.dev//blog/custom-scroll-bar-indicator-with-react-native-animated-api</link>
             <guid>https://amanhimself.dev//blog/custom-scroll-bar-indicator-with-react-native-animated-api</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Thu, 10 Dec 2020 00:00:00 GMT</pubDate>
             <description><![CDATA[How to create a custom scrollbar with React Native Animated API]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -324,7 +324,7 @@
             <title><![CDATA[How to manage state in React apps with useReducer and useContext hooks]]></title>
             <link>https://amanhimself.dev//blog/manage-state-with-usecontext-usereducer-in-react-apps</link>
             <guid>https://amanhimself.dev//blog/manage-state-with-usecontext-usereducer-in-react-apps</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Fri, 06 Nov 2020 00:00:00 GMT</pubDate>
             <description><![CDATA[How to manage state in React apps with useReducer and useContext hooks]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -332,7 +332,7 @@
             <title><![CDATA[Creating and Validating React Native Forms with Formik]]></title>
             <link>https://amanhimself.dev//blog/creating-and-validating-react-native-form-with-formik</link>
             <guid>https://amanhimself.dev//blog/creating-and-validating-react-native-form-with-formik</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Fri, 16 Oct 2020 00:00:00 GMT</pubDate>
             <description><![CDATA[Creating and Validating React Native Forms with Formik]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -340,7 +340,7 @@
             <title><![CDATA[How to use HarperDB instance with React Hooks]]></title>
             <link>https://amanhimself.dev//blog/harperdb-with-react-hooks</link>
             <guid>https://amanhimself.dev//blog/harperdb-with-react-hooks</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Wed, 07 Oct 2020 00:00:00 GMT</pubDate>
             <description><![CDATA[How to use HarperDB instance with React Hooks]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -348,7 +348,7 @@
             <title><![CDATA[How to Animate a Header View on Scroll With React Native Animated]]></title>
             <link>https://amanhimself.dev//blog/animate-header-view-on-scroll-with-react-native-animated-api</link>
             <guid>https://amanhimself.dev//blog/animate-header-view-on-scroll-with-react-native-animated-api</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Thu, 01 Oct 2020 00:00:00 GMT</pubDate>
             <description><![CDATA[How to Animate a Header View on Scroll With React Native Animated]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -356,7 +356,7 @@
             <title><![CDATA[Add Environment Variables in a Netlify Deployment]]></title>
             <link>https://amanhimself.dev//blog/add-environment-variables-in-netlify-deployment</link>
             <guid>https://amanhimself.dev//blog/add-environment-variables-in-netlify-deployment</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Tue, 01 Sep 2020 00:00:00 GMT</pubDate>
             <description><![CDATA[Add Environment Variables in a Netlify Deployment]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -364,7 +364,7 @@
             <title><![CDATA[How to use React Router and real time user monitoring in React apps]]></title>
             <link>https://amanhimself.dev//blog/react-router-real-time-user-monitoring-react-apps</link>
             <guid>https://amanhimself.dev//blog/react-router-real-time-user-monitoring-react-apps</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Fri, 14 Aug 2020 00:00:00 GMT</pubDate>
             <description><![CDATA[How to use React Router and real time user monitoring in React apps]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -372,7 +372,7 @@
             <title><![CDATA[Build a REST API with Node.js and HarperDB]]></title>
             <link>https://amanhimself.dev//blog/build-rest-api-with-nodejs-harperdb</link>
             <guid>https://amanhimself.dev//blog/build-rest-api-with-nodejs-harperdb</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Thu, 23 Jul 2020 00:00:00 GMT</pubDate>
             <description><![CDATA[Build a REST API with Node.js and HarperDB]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -380,7 +380,7 @@
             <title><![CDATA[How to setup a React App with a Firebase project]]></title>
             <link>https://amanhimself.dev//blog/firebase-config-in-a-react-app</link>
             <guid>https://amanhimself.dev//blog/firebase-config-in-a-react-app</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Fri, 05 Jun 2020 00:00:00 GMT</pubDate>
             <description><![CDATA[How to setup a React App with a Firebase project]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -388,7 +388,7 @@
             <title><![CDATA[Styling The React Native Way]]></title>
             <link>https://amanhimself.dev//blog/styling-the-react-native-way</link>
             <guid>https://amanhimself.dev//blog/styling-the-react-native-way</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Thu, 04 Jun 2020 00:00:00 GMT</pubDate>
             <description><![CDATA[Styling The React Native Way]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -396,7 +396,7 @@
             <title><![CDATA[How to create custom wavy headers with react-native-svg]]></title>
             <link>https://amanhimself.dev//blog/create-custom-headers-with-react-native-svg</link>
             <guid>https://amanhimself.dev//blog/create-custom-headers-with-react-native-svg</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Tue, 26 May 2020 00:00:00 GMT</pubDate>
             <description><![CDATA[How to create custom wavy headers with react-native-svg]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -404,7 +404,7 @@
             <title><![CDATA[How to integrate Material UI library in React apps]]></title>
             <link>https://amanhimself.dev//blog/material-ui-integration-with-react</link>
             <guid>https://amanhimself.dev//blog/material-ui-integration-with-react</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Sun, 24 May 2020 00:00:00 GMT</pubDate>
             <description><![CDATA[How to integrate Material UI library in React apps]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -412,7 +412,7 @@
             <title><![CDATA[Chat app with React Native (Part 6) - Create a custom hook to change status bar styles]]></title>
             <link>https://amanhimself.dev//blog/chat-app-with-react-native-part-6</link>
             <guid>https://amanhimself.dev//blog/chat-app-with-react-native-part-6</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Mon, 18 May 2020 00:00:00 GMT</pubDate>
             <description><![CDATA[Chat app with React Native (Part 6) - Create a custom hook to change status bar styles]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -420,7 +420,7 @@
             <title><![CDATA[Creating "Quarantine Pro" — A Fun Learning Experiment in React Native]]></title>
             <link>https://amanhimself.dev//blog/quarantine-pro-app</link>
             <guid>https://amanhimself.dev//blog/quarantine-pro-app</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Thu, 14 May 2020 00:00:00 GMT</pubDate>
             <description><![CDATA[Creating "Quarantine Pro" — A Fun Learning Experiment in React Native]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -428,7 +428,7 @@
             <title><![CDATA[Chat app with React Native (Part 5) - Create and Fetch Real-Time Messages with Firestore]]></title>
             <link>https://amanhimself.dev//blog/chat-app-with-react-native-part-5</link>
             <guid>https://amanhimself.dev//blog/chat-app-with-react-native-part-5</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Mon, 11 May 2020 00:00:00 GMT</pubDate>
             <description><![CDATA[Chat app with React Native (Part 5) - Create and Fetch Real-Time Messages with Firestore]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -436,7 +436,7 @@
             <title><![CDATA[How to integrate GraphQL and Apollo Client in React Native app]]></title>
             <link>https://amanhimself.dev//blog/integrate-apollo-client-in-react-native</link>
             <guid>https://amanhimself.dev//blog/integrate-apollo-client-in-react-native</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Mon, 11 May 2020 00:00:00 GMT</pubDate>
             <description><![CDATA[How to integrate GraphQL and Apollo Client in React Native app]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -444,7 +444,7 @@
             <title><![CDATA[Chat app with React Native (part 4) - A guide to create Chat UI Screens with react-native-gifted-chat]]></title>
             <link>https://amanhimself.dev//blog/chat-app-with-react-native-part-4</link>
             <guid>https://amanhimself.dev//blog/chat-app-with-react-native-part-4</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Tue, 28 Apr 2020 00:00:00 GMT</pubDate>
             <description><![CDATA[Chat app with React Native (part 4) - A guide to create Chat UI Screens with react-native-gifted-chat]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -452,7 +452,7 @@
             <title><![CDATA[An in-depth guide on how to use React Native Image Picker]]></title>
             <link>https://amanhimself.dev//blog/how-to-use-react-native-image-picker</link>
             <guid>https://amanhimself.dev//blog/how-to-use-react-native-image-picker</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Mon, 27 Apr 2020 00:00:00 GMT</pubDate>
             <description><![CDATA[An in-depth guide on how to use React Native Image Picker]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -460,7 +460,7 @@
             <title><![CDATA[Chat app with React Native (part 3) - Create Firestore collections to store chat rooms]]></title>
             <link>https://amanhimself.dev//blog/chat-app-with-react-native-part-3</link>
             <guid>https://amanhimself.dev//blog/chat-app-with-react-native-part-3</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Tue, 21 Apr 2020 00:00:00 GMT</pubDate>
             <description><![CDATA[Chat app with React Native (part 3) - Create Firestore collections to store chat rooms]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -468,7 +468,7 @@
             <title><![CDATA[How to add a Search bar in a FlatList in React Native apps]]></title>
             <link>https://amanhimself.dev//blog/add-search-bar-to-a-flatlist-in-react-native</link>
             <guid>https://amanhimself.dev//blog/add-search-bar-to-a-flatlist-in-react-native</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Thu, 16 Apr 2020 00:00:00 GMT</pubDate>
             <description><![CDATA[How to add a Search bar in a FlatList in React Native apps]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -476,7 +476,7 @@
             <title><![CDATA[Chat app with React Native (part 2) - Firebase Email Authentication with react-native-firebase]]></title>
             <link>https://amanhimself.dev//blog/chat-app-with-react-native-part-2</link>
             <guid>https://amanhimself.dev//blog/chat-app-with-react-native-part-2</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Thu, 16 Apr 2020 00:00:00 GMT</pubDate>
             <description><![CDATA[Chat app with React Native (part 2) - Firebase Email Authentication with react-native-firebase]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -484,7 +484,7 @@
             <title><![CDATA[Blogging tips after 3 years and a 100+ posts]]></title>
             <link>https://amanhimself.dev//blog/blogging-tips-after-3-years</link>
             <guid>https://amanhimself.dev//blog/blogging-tips-after-3-years</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Mon, 13 Apr 2020 00:00:00 GMT</pubDate>
             <description><![CDATA[Blogging tips after 3 years and a 100+ posts]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -492,7 +492,7 @@
             <title><![CDATA[Chat app with React Native (part 1) - Build reusable UI form elements using react-native-paper]]></title>
             <link>https://amanhimself.dev//blog/chat-app-with-react-native-part-1</link>
             <guid>https://amanhimself.dev//blog/chat-app-with-react-native-part-1</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Mon, 06 Apr 2020 00:00:00 GMT</pubDate>
             <description><![CDATA[Chat app with React Native (part 1) - Build reusable UI form elements using react-native-paper]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -500,7 +500,7 @@
             <title><![CDATA[How to create a custom hook to change status bar styles for every screen using React Navigation]]></title>
             <link>https://amanhimself.dev//blog/create-custom-status-bar-hook-react-navigation</link>
             <guid>https://amanhimself.dev//blog/create-custom-status-bar-hook-react-navigation</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Fri, 13 Mar 2020 00:00:00 GMT</pubDate>
             <description><![CDATA[How to create a custom hook to change status bar styles for every screen using React Navigation]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -508,7 +508,7 @@
             <title><![CDATA[Build an Expense Tracker app with React Hooks and LocalStorage API]]></title>
             <link>https://amanhimself.dev//blog/react-app-with-localstorage-api-and-hooks</link>
             <guid>https://amanhimself.dev//blog/react-app-with-localstorage-api-and-hooks</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Wed, 11 Mar 2020 00:00:00 GMT</pubDate>
             <description><![CDATA[Build an Expense Tracker app with React Hooks and LocalStorage API]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -516,7 +516,7 @@
             <title><![CDATA[Nesting Tab and Stack navigators in React Native and Expo apps]]></title>
             <link>https://amanhimself.dev//blog/nested-navigators-in-react-native</link>
             <guid>https://amanhimself.dev//blog/nested-navigators-in-react-native</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Wed, 26 Feb 2020 00:00:00 GMT</pubDate>
             <description><![CDATA[Nesting Tab and Stack navigators in React Native and Expo apps]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -524,7 +524,7 @@
             <title><![CDATA[Getting Started with Stack Navigator using react-navigation 5 in React Native and Expo apps]]></title>
             <link>https://amanhimself.dev//blog/stack-navigator-with-react-navigation-v5</link>
             <guid>https://amanhimself.dev//blog/stack-navigator-with-react-navigation-v5</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Fri, 21 Feb 2020 00:00:00 GMT</pubDate>
             <description><![CDATA[Getting Started with Stack Navigator using react-navigation 5 in React Native and Expo apps]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -532,7 +532,7 @@
             <title><![CDATA[How to handle navigation in WebViews in a React Native app]]></title>
             <link>https://amanhimself.dev//blog/handle-navigation-in-webviews-react-native</link>
             <guid>https://amanhimself.dev//blog/handle-navigation-in-webviews-react-native</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Fri, 07 Feb 2020 00:00:00 GMT</pubDate>
             <description><![CDATA[How to handle navigation in WebViews in a React Native app]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -540,7 +540,7 @@
             <title><![CDATA[Getting Started with React Native and Expo using Hooks in 2020]]></title>
             <link>https://amanhimself.dev//blog/getting-started-with-react-native-expo-hooks-2020</link>
             <guid>https://amanhimself.dev//blog/getting-started-with-react-native-expo-hooks-2020</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Fri, 17 Jan 2020 00:00:00 GMT</pubDate>
             <description><![CDATA[Getting Started with React Native and Expo using Hooks in 2020]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -548,7 +548,7 @@
             <title><![CDATA[How to add Dark mode functionality with React Hooks]]></title>
             <link>https://amanhimself.dev//blog/dark-mode-with-react-hooks</link>
             <guid>https://amanhimself.dev//blog/dark-mode-with-react-hooks</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Thu, 09 Jan 2020 00:00:00 GMT</pubDate>
             <description><![CDATA[How to add Dark mode functionality with React Hooks]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -556,7 +556,7 @@
             <title><![CDATA[How to use React Native Localize in React Native apps]]></title>
             <link>https://amanhimself.dev//blog/how-to-use-react-native-localize</link>
             <guid>https://amanhimself.dev//blog/how-to-use-react-native-localize</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Wed, 01 Jan 2020 00:00:00 GMT</pubDate>
             <description><![CDATA[How to use React Native Localize in React Native apps]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -564,7 +564,7 @@
             <title><![CDATA[Implement Push notifications for Android apps with React Native]]></title>
             <link>https://amanhimself.dev//blog/push-notifications-android-apps-react-native</link>
             <guid>https://amanhimself.dev//blog/push-notifications-android-apps-react-native</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Tue, 19 Nov 2019 00:00:00 GMT</pubDate>
             <description><![CDATA[Implement Push notifications for Android apps with React Native]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -572,7 +572,7 @@
             <title><![CDATA[Handle different field types in React Native forms with formik and yup]]></title>
             <link>https://amanhimself.dev//blog/handle-different-field-types-in-react-native-forms</link>
             <guid>https://amanhimself.dev//blog/handle-different-field-types-in-react-native-forms</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Sat, 26 Oct 2019 00:00:00 GMT</pubDate>
             <description><![CDATA[Handle different field types in React Native forms with formik and yup]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -580,7 +580,7 @@
             <title><![CDATA[How to implement Forgot Password feature in React Native with Firebase]]></title>
             <link>https://amanhimself.dev//blog/implement-forgot-password-firebase-react-native</link>
             <guid>https://amanhimself.dev//blog/implement-forgot-password-firebase-react-native</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Fri, 25 Oct 2019 00:00:00 GMT</pubDate>
             <description><![CDATA[How to implement Forgot Password feature in React Native with Firebase]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -588,7 +588,7 @@
             <title><![CDATA[Image Classification on React Native with TensorFlow.js and MobileNet]]></title>
             <link>https://amanhimself.dev//blog/tensorflow-image-classification-expo</link>
             <guid>https://amanhimself.dev//blog/tensorflow-image-classification-expo</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Thu, 17 Oct 2019 00:00:00 GMT</pubDate>
             <description><![CDATA[Image Classification on React Native with TensorFlow.js and MobileNet]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -596,7 +596,7 @@
             <title><![CDATA[Build and validate forms in React Native using Formik and Yup]]></title>
             <link>https://amanhimself.dev//blog/build-validate-forms-with-react-native-formik-yup</link>
             <guid>https://amanhimself.dev//blog/build-validate-forms-with-react-native-formik-yup</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Wed, 16 Oct 2019 00:00:00 GMT</pubDate>
             <description><![CDATA[Build and validate forms in React Native using Formik and Yup]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -604,7 +604,7 @@
             <title><![CDATA[Changing app themes using React Native, Styled Components and Redux]]></title>
             <link>https://amanhimself.dev//blog/create-app-themes-styled-components-redux</link>
             <guid>https://amanhimself.dev//blog/create-app-themes-styled-components-redux</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Wed, 02 Oct 2019 00:00:00 GMT</pubDate>
             <description><![CDATA[Changing app themes using React Native, Styled Components and Redux]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -612,7 +612,7 @@
             <title><![CDATA[Using Context API with React Native]]></title>
             <link>https://amanhimself.dev//blog/context-api-react-native-firebase</link>
             <guid>https://amanhimself.dev//blog/context-api-react-native-firebase</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Fri, 27 Sep 2019 00:00:00 GMT</pubDate>
             <description><![CDATA[Using Context API with React Native]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -620,7 +620,7 @@
             <title><![CDATA[How Authentication Flow works in React Native apps using React Navigation 4.x]]></title>
             <link>https://amanhimself.dev//blog/authentication-navigation-flow-in-react-native-apps</link>
             <guid>https://amanhimself.dev//blog/authentication-navigation-flow-in-react-native-apps</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Tue, 10 Sep 2019 00:00:00 GMT</pubDate>
             <description><![CDATA[How Authentication Flow works in React Native apps using React Navigation 4.x]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -628,7 +628,7 @@
             <title><![CDATA[How to Build an Audio Player in React Native]]></title>
             <link>https://amanhimself.dev//blog/build-an-audio-player-in-react-native</link>
             <guid>https://amanhimself.dev//blog/build-an-audio-player-in-react-native</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Wed, 28 Aug 2019 00:00:00 GMT</pubDate>
             <description><![CDATA[How to Build an Audio Player in React Native]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -636,7 +636,7 @@
             <title><![CDATA[Build a Not Hotdog clone with React Native]]></title>
             <link>https://amanhimself.dev//blog/not-hotdog-clone-react-native</link>
             <guid>https://amanhimself.dev//blog/not-hotdog-clone-react-native</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Tue, 27 Aug 2019 00:00:00 GMT</pubDate>
             <description><![CDATA[Build a Not Hotdog clone with React Native]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -644,7 +644,7 @@
             <title><![CDATA[Building offline React Native apps with AsyncStorage]]></title>
             <link>https://amanhimself.dev//blog/building-offline-react-native-apps-with-asyncstorage</link>
             <guid>https://amanhimself.dev//blog/building-offline-react-native-apps-with-asyncstorage</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Sun, 18 Aug 2019 00:00:00 GMT</pubDate>
             <description><![CDATA[Building offline React Native apps with AsyncStorage]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -652,7 +652,7 @@
             <title><![CDATA[How to use the Geolocation API in a React Native app]]></title>
             <link>https://amanhimself.dev//blog/how-to-use-the-geolocation-api-in-a-react-native-app</link>
             <guid>https://amanhimself.dev//blog/how-to-use-the-geolocation-api-in-a-react-native-app</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Fri, 16 Aug 2019 00:00:00 GMT</pubDate>
             <description><![CDATA[How to use the Geolocation API in a React Native app]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -660,7 +660,7 @@
             <title><![CDATA[How to build a xylophone app with Audio API, React Native, and Expo]]></title>
             <link>https://amanhimself.dev//blog/how-to-build-xylophone-app-with-expo</link>
             <guid>https://amanhimself.dev//blog/how-to-build-xylophone-app-with-expo</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Mon, 22 Jul 2019 00:00:00 GMT</pubDate>
             <description><![CDATA[How to build a xylophone app with Audio API, React Native, and Expo]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -668,7 +668,7 @@
             <title><![CDATA[How to Create a Chatbot with Dialogflow, NodeJS, and Webhooks]]></title>
             <link>https://amanhimself.dev//blog/build-chatbot-dialogflow-nodejs-webhooks</link>
             <guid>https://amanhimself.dev//blog/build-chatbot-dialogflow-nodejs-webhooks</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Fri, 19 Jul 2019 00:00:00 GMT</pubDate>
             <description><![CDATA[How to Create a Chatbot with Dialogflow, NodeJS, and Webhooks]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -676,7 +676,7 @@
             <title><![CDATA[Using React Router to Optimize Single Page Applications (SPAs)]]></title>
             <link>https://amanhimself.dev//blog/introduction-to-react-router-v4-with-reactjs</link>
             <guid>https://amanhimself.dev//blog/introduction-to-react-router-v4-with-reactjs</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Thu, 11 Jul 2019 00:00:00 GMT</pubDate>
             <description><![CDATA[Using React Router to Optimize Single Page Applications (SPAs)]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -684,7 +684,7 @@
             <title><![CDATA[To Travel, A Tech Conference and One Million views - a Recap]]></title>
             <link>https://amanhimself.dev//blog/to-travel-a-tech-conference-and-one-million-views-a-recap</link>
             <guid>https://amanhimself.dev//blog/to-travel-a-tech-conference-and-one-million-views-a-recap</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Tue, 02 Jul 2019 00:00:00 GMT</pubDate>
             <description><![CDATA[To Travel, A Tech Conference and One Million views - a Recap]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -692,7 +692,7 @@
             <title><![CDATA[How to integrate Firebase and Firestore cloud database with a React application]]></title>
             <link>https://amanhimself.dev//blog/how-to-integrate-firebase-firestore-react-and-crowdbotics-platform</link>
             <guid>https://amanhimself.dev//blog/how-to-integrate-firebase-firestore-react-and-crowdbotics-platform</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Thu, 20 Jun 2019 00:00:00 GMT</pubDate>
             <description><![CDATA[How to integrate Firebase and Firestore cloud database with a React application]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -700,7 +700,7 @@
             <title><![CDATA[How to Setup a React App with TypeScript, Storybook]]></title>
             <link>https://amanhimself.dev//blog/setup-a-react-app-with-typescript-storybook</link>
             <guid>https://amanhimself.dev//blog/setup-a-react-app-with-typescript-storybook</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Fri, 14 Jun 2019 00:00:00 GMT</pubDate>
             <description><![CDATA[How to Setup a React App with TypeScript, Storybook]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -708,7 +708,7 @@
             <title><![CDATA[Build a Custom Modal with the Animated API in React Native]]></title>
             <link>https://amanhimself.dev//blog/build-a-custom-modal-with-the-animated-api-in-react-native</link>
             <guid>https://amanhimself.dev//blog/build-a-custom-modal-with-the-animated-api-in-react-native</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Thu, 13 Jun 2019 00:00:00 GMT</pubDate>
             <description><![CDATA[Build a Custom Modal with the Animated API in React Native]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -716,7 +716,7 @@
             <title><![CDATA[Build a Twitter Clone Server with Apollo, GraphQL, Nodejs, and Crowdbotics]]></title>
             <link>https://amanhimself.dev//blog/build-a-twitter-clone-server-with-apollo-graphql-nodejs</link>
             <guid>https://amanhimself.dev//blog/build-a-twitter-clone-server-with-apollo-graphql-nodejs</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Thu, 13 Jun 2019 00:00:00 GMT</pubDate>
             <description><![CDATA[Build a Twitter Clone Server with Apollo, GraphQL, Nodejs, and Crowdbotics]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -724,7 +724,7 @@
             <title><![CDATA[Building Stylistic UIs with Emotion-JS for React Native]]></title>
             <link>https://amanhimself.dev//blog/use-emotion-js-with-react-native</link>
             <guid>https://amanhimself.dev//blog/use-emotion-js-with-react-native</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Tue, 04 Jun 2019 00:00:00 GMT</pubDate>
             <description><![CDATA[Building Stylistic UIs with Emotion-JS for React Native]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -732,7 +732,7 @@
             <title><![CDATA[User Authentication with Amplify in a React Native and Expo app]]></title>
             <link>https://amanhimself.dev//blog/user-authentication-with-amplify-in-a-react-native-and-expo-app</link>
             <guid>https://amanhimself.dev//blog/user-authentication-with-amplify-in-a-react-native-and-expo-app</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Wed, 22 May 2019 00:00:00 GMT</pubDate>
             <description><![CDATA[User Authentication with Amplify in a React Native and Expo app]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -740,7 +740,7 @@
             <title><![CDATA[Building a React Native Mobile App with AWS Amplify and Expo]]></title>
             <link>https://amanhimself.dev//blog/building-a-react-native-mobile-app-with-aws-amplify-and-expo</link>
             <guid>https://amanhimself.dev//blog/building-a-react-native-mobile-app-with-aws-amplify-and-expo</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Thu, 09 May 2019 00:00:00 GMT</pubDate>
             <description><![CDATA[Building a React Native Mobile App with AWS Amplify and Expo]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -748,7 +748,7 @@
             <title><![CDATA[How I Configure VSCode for Everything]]></title>
             <link>https://amanhimself.dev//blog/how-i-configure-vscode-for-everything</link>
             <guid>https://amanhimself.dev//blog/how-i-configure-vscode-for-everything</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Mon, 22 Apr 2019 00:00:00 GMT</pubDate>
             <description><![CDATA[How I Configure VSCode for Everything]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -756,7 +756,7 @@
             <title><![CDATA[React Hooks Basics — Building a React Native App with React Hooks]]></title>
             <link>https://amanhimself.dev//blog/build-a-react-native-app-with-react-hooks</link>
             <guid>https://amanhimself.dev//blog/build-a-react-native-app-with-react-hooks</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Fri, 19 Apr 2019 00:00:00 GMT</pubDate>
             <description><![CDATA[React Hooks Basics — Building a React Native App with React Hooks]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -764,7 +764,7 @@
             <title><![CDATA[How To Build Your First VR App with ViroReact, React Native, and Crowdbotics]]></title>
             <link>https://amanhimself.dev//blog/how-to-build-your-first-vr-app-with-viroreact-react-native-and-crowdbotics</link>
             <guid>https://amanhimself.dev//blog/how-to-build-your-first-vr-app-with-viroreact-react-native-and-crowdbotics</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Thu, 28 Mar 2019 00:00:00 GMT</pubDate>
             <description><![CDATA[How To Build Your First VR App with ViroReact, React Native, and Crowdbotics]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -772,7 +772,7 @@
             <title><![CDATA[Build a Chatbot with Dialogflow and React Native]]></title>
             <link>https://amanhimself.dev//blog/build-a-chatbot-with-dialogflow-and-react-native</link>
             <guid>https://amanhimself.dev//blog/build-a-chatbot-with-dialogflow-and-react-native</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Tue, 26 Mar 2019 00:00:00 GMT</pubDate>
             <description><![CDATA[Build a Chatbot with Dialogflow and React Native]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -780,7 +780,7 @@
             <title><![CDATA[How to Build a Real Time Logo Detection App with React Native & Google Vision API]]></title>
             <link>https://amanhimself.dev//blog/how-to-build-a-real-time-logo-detection-app-with-react-native-google-vision-api-and-crowdbotics</link>
             <guid>https://amanhimself.dev//blog/how-to-build-a-real-time-logo-detection-app-with-react-native-google-vision-api-and-crowdbotics</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Wed, 20 Mar 2019 00:00:00 GMT</pubDate>
             <description><![CDATA[How to Build a Real Time Logo Detection App with React Native & Google Vision API]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -788,7 +788,7 @@
             <title><![CDATA[Using Styled Components with React Native]]></title>
             <link>https://amanhimself.dev//blog/using-styled-components-with-react-native</link>
             <guid>https://amanhimself.dev//blog/using-styled-components-with-react-native</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Tue, 19 Mar 2019 00:00:00 GMT</pubDate>
             <description><![CDATA[Using Styled Components with React Native]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -796,7 +796,7 @@
             <title><![CDATA[Create a React Native Image Recognition App with Google Vision API]]></title>
             <link>https://amanhimself.dev//blog/google-vision-api-firebase-react-native</link>
             <guid>https://amanhimself.dev//blog/google-vision-api-firebase-react-native</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Wed, 13 Feb 2019 00:00:00 GMT</pubDate>
             <description><![CDATA[Create a React Native Image Recognition App with Google Vision API]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -804,7 +804,7 @@
             <title><![CDATA[How To Build a News Reader App with React Native and NewsAPI]]></title>
             <link>https://amanhimself.dev//blog/how-to-build-a-news-reader-app-with-react-native-and-newsapi</link>
             <guid>https://amanhimself.dev//blog/how-to-build-a-news-reader-app-with-react-native-and-newsapi</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Tue, 12 Feb 2019 00:00:00 GMT</pubDate>
             <description><![CDATA[How To Build a News Reader App with React Native and NewsAPI]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -812,7 +812,7 @@
             <title><![CDATA[Top open source libraries for Node.js]]></title>
             <link>https://amanhimself.dev//blog/29-useful-open-source-libraries-for-nodejs</link>
             <guid>https://amanhimself.dev//blog/29-useful-open-source-libraries-for-nodejs</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Thu, 31 Jan 2019 00:00:00 GMT</pubDate>
             <description><![CDATA[Top open source libraries for Node.js]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -820,7 +820,7 @@
             <title><![CDATA[21 Useful Open Source Packages for React Native]]></title>
             <link>https://amanhimself.dev//blog/21-useful-open-source-packages-for-react-native</link>
             <guid>https://amanhimself.dev//blog/21-useful-open-source-packages-for-react-native</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Mon, 28 Jan 2019 00:00:00 GMT</pubDate>
             <description><![CDATA[21 Useful Open Source Packages for React Native]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -828,7 +828,7 @@
             <title><![CDATA[3 Steps to learn React Native in 2019]]></title>
             <link>https://amanhimself.dev//blog/3-steps-to-learn-react-native-in-2019</link>
             <guid>https://amanhimself.dev//blog/3-steps-to-learn-react-native-in-2019</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Fri, 04 Jan 2019 00:00:00 GMT</pubDate>
             <description><![CDATA[3 Steps to learn React Native in 2019]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -836,7 +836,7 @@
             <title><![CDATA[Getting Started with React Native in 2019 - Build Your First App]]></title>
             <link>https://amanhimself.dev//blog/getting-started-with-react-native-in-2019-build-your-first-app</link>
             <guid>https://amanhimself.dev//blog/getting-started-with-react-native-in-2019-build-your-first-app</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Fri, 04 Jan 2019 00:00:00 GMT</pubDate>
             <description><![CDATA[Getting Started with React Native in 2019 - Build Your First App]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -844,7 +844,7 @@
             <title><![CDATA[My Top Tutorials in Web Development and React Native in 2018]]></title>
             <link>https://amanhimself.dev//blog/my-top-tutorials-in-web-development-and-react-native-in-2018</link>
             <guid>https://amanhimself.dev//blog/my-top-tutorials-in-web-development-and-react-native-in-2018</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Mon, 31 Dec 2018 00:00:00 GMT</pubDate>
             <description><![CDATA[My Top Tutorials in Web Development and React Native in 2018]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -852,7 +852,7 @@
             <title><![CDATA[Top Node.js Libraries and Tools For Machine Learning]]></title>
             <link>https://amanhimself.dev//blog/top-nodejs-libraries-and-tools-for-machine-learning</link>
             <guid>https://amanhimself.dev//blog/top-nodejs-libraries-and-tools-for-machine-learning</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Wed, 19 Dec 2018 00:00:00 GMT</pubDate>
             <description><![CDATA[Top Node.js Libraries and Tools For Machine Learning]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -860,7 +860,7 @@
             <title><![CDATA[How To Build a REST API With Nodejs and PostgreSQL]]></title>
             <link>https://amanhimself.dev//blog/how-to-build-a-rest-api-with-nodejs-and-postgresql</link>
             <guid>https://amanhimself.dev//blog/how-to-build-a-rest-api-with-nodejs-and-postgresql</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Mon, 10 Dec 2018 00:00:00 GMT</pubDate>
             <description><![CDATA[How To Build a REST API With Nodejs and PostgreSQL]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -868,7 +868,7 @@
             <title><![CDATA[Integrating Firebase with React Native]]></title>
             <link>https://amanhimself.dev//blog/integrating-firebase-with-react-native</link>
             <guid>https://amanhimself.dev//blog/integrating-firebase-with-react-native</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Wed, 05 Dec 2018 00:00:00 GMT</pubDate>
             <description><![CDATA[Integrating Firebase with React Native]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -876,7 +876,7 @@
             <title><![CDATA[How To Build A Blog From Scratch With React, Markdown, GraphQL and Gatsbyjs]]></title>
             <link>https://amanhimself.dev//blog/how-to-build-your-own-blog-from-scratch-with-gatsbyjs-graphql-react-and-markdown</link>
             <guid>https://amanhimself.dev//blog/how-to-build-your-own-blog-from-scratch-with-gatsbyjs-graphql-react-and-markdown</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Wed, 21 Nov 2018 00:00:00 GMT</pubDate>
             <description><![CDATA[How To Build A Blog From Scratch With React, Markdown, GraphQL and Gatsbyjs]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -884,7 +884,7 @@
             <title><![CDATA[Building an authenticated MERN Stack App Using Material UI]]></title>
             <link>https://amanhimself.dev//blog/building-a-mern-stack-app-with-material-ui</link>
             <guid>https://amanhimself.dev//blog/building-a-mern-stack-app-with-material-ui</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Fri, 16 Nov 2018 00:00:00 GMT</pubDate>
             <description><![CDATA[Building an authenticated MERN Stack App Using Material UI]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -892,7 +892,7 @@
             <title><![CDATA[How to Build a Serverless Backend with AWS Lambda and Nodejs]]></title>
             <link>https://amanhimself.dev//blog/how-to-build-a-serverless-backend-with-aws-lambda-and-nodejs</link>
             <guid>https://amanhimself.dev//blog/how-to-build-a-serverless-backend-with-aws-lambda-and-nodejs</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Tue, 13 Nov 2018 00:00:00 GMT</pubDate>
             <description><![CDATA[How to Build a Serverless Backend with AWS Lambda and Nodejs]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -900,7 +900,7 @@
             <title><![CDATA[Creating a GraphQL server with Nodejs]]></title>
             <link>https://amanhimself.dev//blog/creating-a-graphql-server-with-nodejs-in-2018</link>
             <guid>https://amanhimself.dev//blog/creating-a-graphql-server-with-nodejs-in-2018</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Mon, 05 Nov 2018 00:00:00 GMT</pubDate>
             <description><![CDATA[Creating a GraphQL server with Nodejs]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -908,7 +908,7 @@
             <title><![CDATA[How to use Import statements in Nodejs]]></title>
             <link>https://amanhimself.dev//blog/how-to-use-import-statements-in-nodejs</link>
             <guid>https://amanhimself.dev//blog/how-to-use-import-statements-in-nodejs</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Thu, 01 Nov 2018 00:00:00 GMT</pubDate>
             <description><![CDATA[How to use Import statements in Nodejs]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -916,7 +916,7 @@
             <title><![CDATA[Setting up Nodejs Backend for a React App]]></title>
             <link>https://amanhimself.dev//blog/setting-up-nodejs-backend-for-a-react-app</link>
             <guid>https://amanhimself.dev//blog/setting-up-nodejs-backend-for-a-react-app</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Thu, 18 Oct 2018 00:00:00 GMT</pubDate>
             <description><![CDATA[Setting up Nodejs Backend for a React App]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -924,7 +924,7 @@
             <title><![CDATA[Building a REST API with Koajs]]></title>
             <link>https://amanhimself.dev//blog/building-a-rest-api-with-koajs</link>
             <guid>https://amanhimself.dev//blog/building-a-rest-api-with-koajs</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Tue, 16 Oct 2018 00:00:00 GMT</pubDate>
             <description><![CDATA[Building a REST API with Koajs]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -932,7 +932,7 @@
             <title><![CDATA[Deploy a MERN stack app on Heroku]]></title>
             <link>https://amanhimself.dev//blog/deploy-a-mern-stack-app-on-heroku</link>
             <guid>https://amanhimself.dev//blog/deploy-a-mern-stack-app-on-heroku</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Fri, 12 Oct 2018 00:00:00 GMT</pubDate>
             <description><![CDATA[Deploy a MERN stack app on Heroku]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -940,7 +940,7 @@
             <title><![CDATA[How to use React Navigation in a React Native App]]></title>
             <link>https://amanhimself.dev//blog/navigation-in-a-react-native-app</link>
             <guid>https://amanhimself.dev//blog/navigation-in-a-react-native-app</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Fri, 28 Sep 2018 00:00:00 GMT</pubDate>
             <description><![CDATA[How to use React Navigation in a React Native App]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -948,7 +948,7 @@
             <title><![CDATA[Accessing Geo-location and App Permissions in React Native and Expo]]></title>
             <link>https://amanhimself.dev//blog/accessing-geo-location-and-app-permissions-in-react-native-and-expo</link>
             <guid>https://amanhimself.dev//blog/accessing-geo-location-and-app-permissions-in-react-native-and-expo</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Thu, 20 Sep 2018 00:00:00 GMT</pubDate>
             <description><![CDATA[Accessing Geo-location and App Permissions in React Native and Expo]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -956,7 +956,7 @@
             <title><![CDATA[Simple Recipe to Build a Theme App in React Native]]></title>
             <link>https://amanhimself.dev//blog/simple-recipe-to-build-a-theme-app-in-react-native</link>
             <guid>https://amanhimself.dev//blog/simple-recipe-to-build-a-theme-app-in-react-native</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Tue, 11 Sep 2018 00:00:00 GMT</pubDate>
             <description><![CDATA[Simple Recipe to Build a Theme App in React Native]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -964,7 +964,7 @@
             <title><![CDATA[How to integrate Redux into your application with React Native and Expo]]></title>
             <link>https://amanhimself.dev//blog/how-to-integrate-redux-into-your-application-with-react-native-and-expo</link>
             <guid>https://amanhimself.dev//blog/how-to-integrate-redux-into-your-application-with-react-native-and-expo</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Fri, 10 Aug 2018 00:00:00 GMT</pubDate>
             <description><![CDATA[How to integrate Redux into your application with React Native and Expo]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -972,7 +972,7 @@
             <title><![CDATA[Week 3 with React Native - Why use Expo?]]></title>
             <link>https://amanhimself.dev//blog/week-3-with-react-native</link>
             <guid>https://amanhimself.dev//blog/week-3-with-react-native</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Thu, 26 Jul 2018 00:00:00 GMT</pubDate>
             <description><![CDATA[Week 3 with React Native - Why use Expo?]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -980,7 +980,7 @@
             <title><![CDATA[Week 2 With React Native - Building a Weather App]]></title>
             <link>https://amanhimself.dev//blog/week-2-with-react-native-building-a-weather-app</link>
             <guid>https://amanhimself.dev//blog/week-2-with-react-native-building-a-weather-app</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Mon, 16 Jul 2018 00:00:00 GMT</pubDate>
             <description><![CDATA[Week 2 With React Native - Building a Weather App]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -988,7 +988,7 @@
             <title><![CDATA[React Native - How to Setup Your First App]]></title>
             <link>https://amanhimself.dev//blog/react-native-how-to-setup-your-first-app</link>
             <guid>https://amanhimself.dev//blog/react-native-how-to-setup-your-first-app</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Fri, 13 Jul 2018 00:00:00 GMT</pubDate>
             <description><![CDATA[React Native - How to Setup Your First App]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -996,7 +996,7 @@
             <title><![CDATA[Starting Over with React Native]]></title>
             <link>https://amanhimself.dev//blog/starting-over-with-react-native</link>
             <guid>https://amanhimself.dev//blog/starting-over-with-react-native</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Sat, 07 Jul 2018 00:00:00 GMT</pubDate>
             <description><![CDATA[Starting Over with React Native]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -1004,7 +1004,7 @@
             <title><![CDATA[How to Upload a File with Reactjs and Nodejs]]></title>
             <link>https://amanhimself.dev//blog/connecting-a-node-js-and-reactjs-example</link>
             <guid>https://amanhimself.dev//blog/connecting-a-node-js-and-reactjs-example</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Sat, 23 Jun 2018 00:00:00 GMT</pubDate>
             <description><![CDATA[How to Upload a File with Reactjs and Nodejs]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -1012,7 +1012,7 @@
             <title><![CDATA[React Native - Building a Minimalist Weather App using Expo XDE]]></title>
             <link>https://amanhimself.dev//blog/react-native-building-a-minimalist-weather-app-using-expo-xde</link>
             <guid>https://amanhimself.dev//blog/react-native-building-a-minimalist-weather-app-using-expo-xde</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Tue, 27 Mar 2018 00:00:00 GMT</pubDate>
             <description><![CDATA[React Native - Building a Minimalist Weather App using Expo XDE]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -1020,7 +1020,7 @@
             <title><![CDATA[React Native - Getting Started with Lottie and Expo]]></title>
             <link>https://amanhimself.dev//blog/react-native-getting-started-with-lottie-and-expo</link>
             <guid>https://amanhimself.dev//blog/react-native-getting-started-with-lottie-and-expo</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Fri, 09 Mar 2018 00:00:00 GMT</pubDate>
             <description><![CDATA[React Native - Getting Started with Lottie and Expo]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -1028,7 +1028,7 @@
             <title><![CDATA[Build a Progressive Web App using React]]></title>
             <link>https://amanhimself.dev//blog/build-a-progressive-web-app-using-react</link>
             <guid>https://amanhimself.dev//blog/build-a-progressive-web-app-using-react</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Thu, 01 Feb 2018 00:00:00 GMT</pubDate>
             <description><![CDATA[Build a Progressive Web App using React]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -1036,7 +1036,7 @@
             <title><![CDATA[Designing a REST API with Node.js and MongoDB Atlas]]></title>
             <link>https://amanhimself.dev//blog/designing-a-rest-api-with-node-js-and-mongodb-atlas</link>
             <guid>https://amanhimself.dev//blog/designing-a-rest-api-with-node-js-and-mongodb-atlas</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Mon, 22 Jan 2018 00:00:00 GMT</pubDate>
             <description><![CDATA[Designing a REST API with Node.js and MongoDB Atlas]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -1044,7 +1044,7 @@
             <title><![CDATA[Gatsby.js - How to set up and use the React Static Site Generator]]></title>
             <link>https://amanhimself.dev//blog/setting-up-and-getting-used-to-gatsby</link>
             <guid>https://amanhimself.dev//blog/setting-up-and-getting-used-to-gatsby</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Thu, 04 Jan 2018 00:00:00 GMT</pubDate>
             <description><![CDATA[Gatsby.js - How to set up and use the React Static Site Generator]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -1052,7 +1052,7 @@
             <title><![CDATA[Ionic 2/3 CLI Reference]]></title>
             <link>https://amanhimself.dev//blog/ionic-2-3-cli-reference</link>
             <guid>https://amanhimself.dev//blog/ionic-2-3-cli-reference</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Tue, 19 Dec 2017 00:00:00 GMT</pubDate>
             <description><![CDATA[Ionic 2/3 CLI Reference]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -1060,7 +1060,7 @@
             <title><![CDATA[Passing Data Between Pages in an Ionic Application]]></title>
             <link>https://amanhimself.dev//blog/passing-data-between-pages-in-an-ionic-application</link>
             <guid>https://amanhimself.dev//blog/passing-data-between-pages-in-an-ionic-application</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Sun, 03 Dec 2017 00:00:00 GMT</pubDate>
             <description><![CDATA[Passing Data Between Pages in an Ionic Application]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -1068,7 +1068,7 @@
             <title><![CDATA[Tips for Creating Nodejs REST APIs]]></title>
             <link>https://amanhimself.dev//blog/tips-for-creating-node-js-rest-apis</link>
             <guid>https://amanhimself.dev//blog/tips-for-creating-node-js-rest-apis</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Wed, 22 Nov 2017 00:00:00 GMT</pubDate>
             <description><![CDATA[Tips for Creating Nodejs REST APIs]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -1076,7 +1076,7 @@
             <title><![CDATA[Multi Page Navigation in an Ionic App]]></title>
             <link>https://amanhimself.dev//blog/multi-page-navigation-in-an-ionic-app</link>
             <guid>https://amanhimself.dev//blog/multi-page-navigation-in-an-ionic-app</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Sun, 19 Nov 2017 00:00:00 GMT</pubDate>
             <description><![CDATA[Multi Page Navigation in an Ionic App]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -1084,7 +1084,7 @@
             <title><![CDATA[Using Google Fonts in an Ionic Application]]></title>
             <link>https://amanhimself.dev//blog/using-google-fonts-in-an-ionic-application</link>
             <guid>https://amanhimself.dev//blog/using-google-fonts-in-an-ionic-application</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Thu, 09 Nov 2017 00:00:00 GMT</pubDate>
             <description><![CDATA[Using Google Fonts in an Ionic Application]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -1092,7 +1092,7 @@
             <title><![CDATA[Basic Navigation in Ionic Applications]]></title>
             <link>https://amanhimself.dev//blog/basic-navigation-in-ionic-applications</link>
             <guid>https://amanhimself.dev//blog/basic-navigation-in-ionic-applications</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Tue, 31 Oct 2017 00:00:00 GMT</pubDate>
             <description><![CDATA[Basic Navigation in Ionic Applications]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -1100,7 +1100,7 @@
             <title><![CDATA[How to use Font Awesome in an Ionic Application]]></title>
             <link>https://amanhimself.dev//blog/how-to-use-font-awesome-in-an-ionic-application</link>
             <guid>https://amanhimself.dev//blog/how-to-use-font-awesome-in-an-ionic-application</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Wed, 18 Oct 2017 00:00:00 GMT</pubDate>
             <description><![CDATA[How to use Font Awesome in an Ionic Application]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -1108,7 +1108,7 @@
             <title><![CDATA[What is Ionic?]]></title>
             <link>https://amanhimself.dev//blog/what-is-ionic</link>
             <guid>https://amanhimself.dev//blog/what-is-ionic</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Thu, 12 Oct 2017 00:00:00 GMT</pubDate>
             <description><![CDATA[What is Ionic?]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -1116,7 +1116,7 @@
             <title><![CDATA[Introduction to Hybrid Mobile Apps]]></title>
             <link>https://amanhimself.dev//blog/introduction-to-hybrid-mobile-apps</link>
             <guid>https://amanhimself.dev//blog/introduction-to-hybrid-mobile-apps</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Thu, 05 Oct 2017 00:00:00 GMT</pubDate>
             <description><![CDATA[Introduction to Hybrid Mobile Apps]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -1124,7 +1124,7 @@
             <title><![CDATA[Remove node_modules Recursively]]></title>
             <link>https://amanhimself.dev//blog/remove-node-modules-recursively</link>
             <guid>https://amanhimself.dev//blog/remove-node-modules-recursively</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Sun, 10 Sep 2017 00:00:00 GMT</pubDate>
             <description><![CDATA[Remove node_modules Recursively]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -1132,7 +1132,7 @@
             <title><![CDATA[Setup Nodemon to auto restart Nodejs application server]]></title>
             <link>https://amanhimself.dev//blog/setup-nodemon-to-auto-restart-nodejs-application-server</link>
             <guid>https://amanhimself.dev//blog/setup-nodemon-to-auto-restart-nodejs-application-server</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Sun, 10 Sep 2017 00:00:00 GMT</pubDate>
             <description><![CDATA[Setup Nodemon to auto restart Nodejs application server]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -1140,7 +1140,7 @@
             <title><![CDATA[What’s New in npm 5?]]></title>
             <link>https://amanhimself.dev//blog/whats-new-in-npm-5</link>
             <guid>https://amanhimself.dev//blog/whats-new-in-npm-5</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Thu, 24 Aug 2017 00:00:00 GMT</pubDate>
             <description><![CDATA[What’s New in npm 5?]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -1148,7 +1148,7 @@
             <title><![CDATA[Converting a Buffer to JSON and Utf8 Strings in Nodejs]]></title>
             <link>https://amanhimself.dev//blog/converting-a-buffer-to-json-and-utf8-strings-in-nodejs</link>
             <guid>https://amanhimself.dev//blog/converting-a-buffer-to-json-and-utf8-strings-in-nodejs</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Thu, 10 Aug 2017 00:00:00 GMT</pubDate>
             <description><![CDATA[Converting a Buffer to JSON and Utf8 Strings in Nodejs]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -1156,7 +1156,7 @@
             <title><![CDATA[Setting up MEAN Stack with Webstorm]]></title>
             <link>https://amanhimself.dev//blog/setting-up-mean-stack-with-webstorm</link>
             <guid>https://amanhimself.dev//blog/setting-up-mean-stack-with-webstorm</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Sun, 02 Jul 2017 00:00:00 GMT</pubDate>
             <description><![CDATA[Setting up MEAN Stack with Webstorm]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -1164,7 +1164,7 @@
             <title><![CDATA[How to paginate records in MySQL using Sequelize and Nodejs]]></title>
             <link>https://amanhimself.dev//blog/paginate-records-in-mysql-using-sequelize-and-nodejs</link>
             <guid>https://amanhimself.dev//blog/paginate-records-in-mysql-using-sequelize-and-nodejs</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Tue, 20 Jun 2017 00:00:00 GMT</pubDate>
             <description><![CDATA[How to paginate records in MySQL using Sequelize and Nodejs]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -1172,7 +1172,7 @@
             <title><![CDATA[Getting Started with Sequelize for Nodejs Applications]]></title>
             <link>https://amanhimself.dev//blog/getting-started-with-sequelize-for-nodejs</link>
             <guid>https://amanhimself.dev//blog/getting-started-with-sequelize-for-nodejs</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Tue, 30 May 2017 00:00:00 GMT</pubDate>
             <description><![CDATA[Getting Started with Sequelize for Nodejs Applications]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -1180,7 +1180,7 @@
             <title><![CDATA[How to use ESLint in Node.js Applications]]></title>
             <link>https://amanhimself.dev//blog/how-to-use-eslint-in-node-js-applications</link>
             <guid>https://amanhimself.dev//blog/how-to-use-eslint-in-node-js-applications</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Fri, 28 Apr 2017 00:00:00 GMT</pubDate>
             <description><![CDATA[How to use ESLint in Node.js Applications]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -1188,7 +1188,7 @@
             <title><![CDATA[How to Mock Data for Node.js Applications using faker.js]]></title>
             <link>https://amanhimself.dev//blog/how-to-mock-data-for-nodejs-applications-using-fakerjs</link>
             <guid>https://amanhimself.dev//blog/how-to-mock-data-for-nodejs-applications-using-fakerjs</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Sat, 01 Apr 2017 00:00:00 GMT</pubDate>
             <description><![CDATA[How to Mock Data for Node.js Applications using faker.js]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -1196,7 +1196,7 @@
             <title><![CDATA[Getting Started with Ionic Framework]]></title>
             <link>https://amanhimself.dev//blog/getting-started-with-ionic-framework</link>
             <guid>https://amanhimself.dev//blog/getting-started-with-ionic-framework</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Sun, 26 Feb 2017 00:00:00 GMT</pubDate>
             <description><![CDATA[Getting Started with Ionic Framework]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -1204,7 +1204,7 @@
             <title><![CDATA[Migrating from Expressjs 4 to 5]]></title>
             <link>https://amanhimself.dev//blog/migrating-from-expressjs-4-to-5</link>
             <guid>https://amanhimself.dev//blog/migrating-from-expressjs-4-to-5</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Wed, 11 Jan 2017 00:00:00 GMT</pubDate>
             <description><![CDATA[Migrating from Expressjs 4 to 5]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -1212,31 +1212,31 @@
             <title><![CDATA[Using Bower With Heroku]]></title>
             <link>https://amanhimself.dev//blog/using-bower-with-heroku</link>
             <guid>https://amanhimself.dev//blog/using-bower-with-heroku</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Thu, 29 Dec 2016 00:00:00 GMT</pubDate>
             <description><![CDATA[Using Bower With Heroku]]></description>
-            <author>amanmittal.work@gmail.com (Aman Mittal)</author>
-        </item>
-        <item>
-            <title><![CDATA[Writing a Node.js Twitter Bot Part 1]]></title>
-            <link>https://amanhimself.dev//blog/node-js-twitter-bot-tutorial</link>
-            <guid>https://amanhimself.dev//blog/node-js-twitter-bot-tutorial</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
-            <description><![CDATA[Writing a Node.js Twitter Bot Part 1]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
         <item>
             <title><![CDATA[Writing a Node.js Twitter Bot Part 2]]></title>
             <link>https://amanhimself.dev//blog/node-js-twitter-bot-tutorial-part-2</link>
             <guid>https://amanhimself.dev//blog/node-js-twitter-bot-tutorial-part-2</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Sun, 25 Dec 2016 00:00:00 GMT</pubDate>
             <description><![CDATA[Writing a Node.js Twitter Bot Part 2]]></description>
+            <author>amanmittal.work@gmail.com (Aman Mittal)</author>
+        </item>
+        <item>
+            <title><![CDATA[Writing a Node.js Twitter Bot Part 1]]></title>
+            <link>https://amanhimself.dev//blog/node-js-twitter-bot-tutorial</link>
+            <guid>https://amanhimself.dev//blog/node-js-twitter-bot-tutorial</guid>
+            <pubDate>Sun, 25 Dec 2016 00:00:00 GMT</pubDate>
+            <description><![CDATA[Writing a Node.js Twitter Bot Part 1]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
         <item>
             <title><![CDATA[Create a Simple Twitter Bot with Node.js]]></title>
             <link>https://amanhimself.dev//blog/create-a-simple-twitter-bot-with-node-js</link>
             <guid>https://amanhimself.dev//blog/create-a-simple-twitter-bot-with-node-js</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Wed, 23 Nov 2016 00:00:00 GMT</pubDate>
             <description><![CDATA[Create a Simple Twitter Bot with Node.js]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -1244,7 +1244,7 @@
             <title><![CDATA[ATOM- An Editor of 21st Century]]></title>
             <link>https://amanhimself.dev//blog/atom-an-editor-of-21st-century</link>
             <guid>https://amanhimself.dev//blog/atom-an-editor-of-21st-century</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Thu, 14 Jul 2016 00:00:00 GMT</pubDate>
             <description><![CDATA[ATOM- An Editor of 21st Century]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -1252,7 +1252,7 @@
             <title><![CDATA[How process.nextTick() works in Node.js?]]></title>
             <link>https://amanhimself.dev//blog/how-process-nexttick-works-in-node-js</link>
             <guid>https://amanhimself.dev//blog/how-process-nexttick-works-in-node-js</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Sat, 25 Jun 2016 00:00:00 GMT</pubDate>
             <description><![CDATA[How process.nextTick() works in Node.js?]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -1260,7 +1260,7 @@
             <title><![CDATA[The Node.js system]]></title>
             <link>https://amanhimself.dev//blog/nodejs-system</link>
             <guid>https://amanhimself.dev//blog/nodejs-system</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Fri, 22 Apr 2016 00:00:00 GMT</pubDate>
             <description><![CDATA[The Node.js system]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -1268,7 +1268,7 @@
             <title><![CDATA[The Node way - Philosophy of a Platform]]></title>
             <link>https://amanhimself.dev//blog/the-node-way</link>
             <guid>https://amanhimself.dev//blog/the-node-way</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Thu, 10 Mar 2016 00:00:00 GMT</pubDate>
             <description><![CDATA[The Node way - Philosophy of a Platform]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -1276,7 +1276,7 @@
             <title><![CDATA[JavaScript Code Conventions]]></title>
             <link>https://amanhimself.dev//blog/javascript-code-convetions</link>
             <guid>https://amanhimself.dev//blog/javascript-code-convetions</guid>
-            <pubDate>Tue, 24 May 2022 10:53:01 GMT</pubDate>
+            <pubDate>Fri, 08 Jan 2016 00:00:00 GMT</pubDate>
             <description><![CDATA[JavaScript Code Conventions]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>

@@ -3,7 +3,7 @@ title: 'Prop types in React and TypeScript'
 date: '2021-06-28'
 slug: 'prop-types-in-react-and-typescript'
 thumbnail: '/thumbnails/typescript.png'
-tag: 'react'
+tag: 'typescript'
 canonicalUrl: 'https://amanhimself.dev/blog/prop-types-in-react-and-typescript/'
 ---
 
