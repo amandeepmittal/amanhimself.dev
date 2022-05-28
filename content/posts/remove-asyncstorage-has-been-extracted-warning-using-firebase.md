@@ -4,7 +4,7 @@ slug: 'remove-asyncstorage-has-been-extracted-warning-using-firebase'
 date: '2022-05-28'
 thumbnail: '/thumbnails/firebase.png'
 tag: 'firebase'
-canonicalUrl: 'https://amanhimself.dev/blog/remove-console-from-react-native-apps/'
+canonicalUrl: 'https://amanhimself.dev/blog/remove-asyncstorage-has-been-extracted-warning-using-firebase/'
 ---
 
 The [Firebase JS SDK](https://github.com/firebase/firebase-js-sdk) is a library that provides a set of JavaScript APIs for interacting with Firebase services. I use it with some of the production React Native apps built with Expo, mainly for authentication, database, and storage. I also use it for an open-source template that I am currently maintaining called [expo-firebase-stater], which provides a head start when building a React Native app with Firebase.
