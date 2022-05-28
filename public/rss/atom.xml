@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://amanhimself.dev/</id>
     <title>Aman Mittal' blog</title>
-    <updated>2022-05-26T16:54:57.279Z</updated>
+    <updated>2022-05-28T08:05:14.888Z</updated>
     <generator>Feed for Node.js</generator>
     <author>
         <name>Aman Mittal</name>
@@ -13,6 +13,18 @@
     <link rel="self" href="https://amanhimself.dev//rss/atom.xml"/>
     <icon>https://amanhimself.dev//favicon.jpg</icon>
     <rights>2019 - 2022, Aman Mittal · All Rights Reserved.</rights>
+    <entry>
+        <title type="html"><![CDATA[How to push local git tag to remote repository on GitHub]]></title>
+        <id>https://amanhimself.dev//blog/push-local-git-tag-to-remote-repository-on-github</id>
+        <link href="https://amanhimself.dev//blog/push-local-git-tag-to-remote-repository-on-github"/>
+        <updated>2022-06-15T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[How to push local git tag to remote repository on GitHub]]></summary>
+        <author>
+            <name>Aman Mittal</name>
+            <email>amanmittal.work@gmail.com</email>
+            <uri>https://twitter.com/amanhimself</uri>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[How to remove console statements from React Native apps]]></title>
         <id>https://amanhimself.dev//blog/remove-console-from-react-native-apps</id>
@@ -31,6 +43,18 @@
         <link href="https://amanhimself.dev//blog/remove-bottom-border-shadow-on-header-in-react-navigation"/>
         <updated>2022-06-01T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Remove bottom border or shadow on header in React Navigation]]></summary>
+        <author>
+            <name>Aman Mittal</name>
+            <email>amanmittal.work@gmail.com</email>
+            <uri>https://twitter.com/amanhimself</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[How to remove AsyncStorage warning when using Firebase JS SDK with React Native]]></title>
+        <id>https://amanhimself.dev//blog/remove-asyncstorage-has-been-extracted-warning-using-firebase</id>
+        <link href="https://amanhimself.dev//blog/remove-asyncstorage-has-been-extracted-warning-using-firebase"/>
+        <updated>2022-05-28T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[How to remove AsyncStorage warning when using Firebase JS SDK with React Native]]></summary>
         <author>
             <name>Aman Mittal</name>
             <email>amanmittal.work@gmail.com</email>
@@ -1058,11 +1082,11 @@
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Build a Custom Modal with the Animated API in React Native]]></title>
-        <id>https://amanhimself.dev//blog/build-a-custom-modal-with-the-animated-api-in-react-native</id>
-        <link href="https://amanhimself.dev//blog/build-a-custom-modal-with-the-animated-api-in-react-native"/>
+        <title type="html"><![CDATA[Build a Twitter Clone Server with Apollo, GraphQL, Nodejs, and Crowdbotics]]></title>
+        <id>https://amanhimself.dev//blog/build-a-twitter-clone-server-with-apollo-graphql-nodejs</id>
+        <link href="https://amanhimself.dev//blog/build-a-twitter-clone-server-with-apollo-graphql-nodejs"/>
         <updated>2019-06-13T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Build a Custom Modal with the Animated API in React Native]]></summary>
+        <summary type="html"><![CDATA[Build a Twitter Clone Server with Apollo, GraphQL, Nodejs, and Crowdbotics]]></summary>
         <author>
             <name>Aman Mittal</name>
             <email>amanmittal.work@gmail.com</email>
@@ -1070,11 +1094,11 @@
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Build a Twitter Clone Server with Apollo, GraphQL, Nodejs, and Crowdbotics]]></title>
-        <id>https://amanhimself.dev//blog/build-a-twitter-clone-server-with-apollo-graphql-nodejs</id>
-        <link href="https://amanhimself.dev//blog/build-a-twitter-clone-server-with-apollo-graphql-nodejs"/>
+        <title type="html"><![CDATA[Build a Custom Modal with the Animated API in React Native]]></title>
+        <id>https://amanhimself.dev//blog/build-a-custom-modal-with-the-animated-api-in-react-native</id>
+        <link href="https://amanhimself.dev//blog/build-a-custom-modal-with-the-animated-api-in-react-native"/>
         <updated>2019-06-13T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Build a Twitter Clone Server with Apollo, GraphQL, Nodejs, and Crowdbotics]]></summary>
+        <summary type="html"><![CDATA[Build a Custom Modal with the Animated API in React Native]]></summary>
         <author>
             <name>Aman Mittal</name>
             <email>amanmittal.work@gmail.com</email>

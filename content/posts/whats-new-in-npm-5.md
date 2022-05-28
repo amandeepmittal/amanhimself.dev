@@ -3,7 +3,7 @@ title: 'What’s New in npm 5?'
 date: '2017-08-24'
 thumbnail: '/thumbnails/node.png'
 slug: 'whats-new-in-npm-5'
-tag: 'tools'
+tag: 'nodejs'
 canonicalUrl: 'https://amanhimself.dev/blog/whats-new-in-npm-5/'
 ---
 
