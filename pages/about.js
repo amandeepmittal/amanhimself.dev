@@ -163,6 +163,11 @@ const AboutPage = () => {
             </ExternalLink>
           </ListItem>
           <ListItem>
+            <ExternalLink href="https://blog.sentry.io/authors/aman-mittal">
+              Sentry
+            </ExternalLink>
+          </ListItem>
+          <ListItem>
             <ExternalLink href="https://blog.appsignal.com/authors/aman-mittal">
               AppSignal
             </ExternalLink>
