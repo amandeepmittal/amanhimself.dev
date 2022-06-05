@@ -1,7 +1,7 @@
 ---
 title: 'Remove bottom border or shadow on header in React Navigation'
 slug: 'remove-bottom-border-shadow-on-header-in-react-navigation'
-date: '2022-06-01'
+date: '2022-06-05'
 thumbnail: '/thumbnails/react-navigation.png'
 tag: 'react-native'
 canonicalUrl: 'https://amanhimself.dev/blog/remove-bottom-border-shadow-on-header-in-react-navigation/'
