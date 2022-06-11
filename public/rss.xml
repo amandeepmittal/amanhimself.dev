@@ -4,7 +4,7 @@
         <title>Aman Mittal' blog</title>
         <link>https://amanhimself.dev/</link>
         <description></description>
-        <lastBuildDate>Sun, 05 Jun 2022 20:19:37 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 11 Jun 2022 21:07:31 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Feed for Node.js</generator>
         <copyright>2019 - 2022, Aman Mittal · All Rights Reserved.</copyright>
@@ -14,6 +14,14 @@
             <guid>https://amanhimself.dev//blog/push-local-git-tag-to-remote-repository-on-github</guid>
             <pubDate>Wed, 15 Jun 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[How to push local git tag to remote repository on GitHub]]></description>
+            <author>amanmittal.work@gmail.com (Aman Mittal)</author>
+        </item>
+        <item>
+            <title><![CDATA[Getting Started with React Navigation v6 and TypeScript in React Native]]></title>
+            <link>https://amanhimself.dev//blog/react-navigation-v6-and-typescript-in-react-native</link>
+            <guid>https://amanhimself.dev//blog/react-navigation-v6-and-typescript-in-react-native</guid>
+            <pubDate>Sat, 11 Jun 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[Getting Started with React Navigation v6 and TypeScript in React Native]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
         <item>
@@ -28,7 +36,7 @@
             <title><![CDATA[Remove bottom border or shadow on header in React Navigation]]></title>
             <link>https://amanhimself.dev//blog/remove-bottom-border-shadow-on-header-in-react-navigation</link>
             <guid>https://amanhimself.dev//blog/remove-bottom-border-shadow-on-header-in-react-navigation</guid>
-            <pubDate>Wed, 01 Jun 2022 00:00:00 GMT</pubDate>
+            <pubDate>Sun, 05 Jun 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[Remove bottom border or shadow on header in React Navigation]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
@@ -1233,19 +1241,19 @@
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
         <item>
-            <title><![CDATA[Writing a Node.js Twitter Bot Part 2]]></title>
-            <link>https://amanhimself.dev//blog/node-js-twitter-bot-tutorial-part-2</link>
-            <guid>https://amanhimself.dev//blog/node-js-twitter-bot-tutorial-part-2</guid>
-            <pubDate>Sun, 25 Dec 2016 00:00:00 GMT</pubDate>
-            <description><![CDATA[Writing a Node.js Twitter Bot Part 2]]></description>
-            <author>amanmittal.work@gmail.com (Aman Mittal)</author>
-        </item>
-        <item>
             <title><![CDATA[Writing a Node.js Twitter Bot Part 1]]></title>
             <link>https://amanhimself.dev//blog/node-js-twitter-bot-tutorial</link>
             <guid>https://amanhimself.dev//blog/node-js-twitter-bot-tutorial</guid>
             <pubDate>Sun, 25 Dec 2016 00:00:00 GMT</pubDate>
             <description><![CDATA[Writing a Node.js Twitter Bot Part 1]]></description>
+            <author>amanmittal.work@gmail.com (Aman Mittal)</author>
+        </item>
+        <item>
+            <title><![CDATA[Writing a Node.js Twitter Bot Part 2]]></title>
+            <link>https://amanhimself.dev//blog/node-js-twitter-bot-tutorial-part-2</link>
+            <guid>https://amanhimself.dev//blog/node-js-twitter-bot-tutorial-part-2</guid>
+            <pubDate>Sun, 25 Dec 2016 00:00:00 GMT</pubDate>
+            <description><![CDATA[Writing a Node.js Twitter Bot Part 2]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
         <item>

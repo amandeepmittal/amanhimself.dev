@@ -20,6 +20,17 @@
             }
         },
         {
+            "id": "https://amanhimself.dev//blog/react-navigation-v6-and-typescript-in-react-native",
+            "url": "https://amanhimself.dev//blog/react-navigation-v6-and-typescript-in-react-native",
+            "title": "Getting Started with React Navigation v6 and TypeScript in React Native",
+            "summary": "Getting Started with React Navigation v6 and TypeScript in React Native",
+            "date_modified": "2022-06-11T00:00:00.000Z",
+            "author": {
+                "name": "Aman Mittal",
+                "url": "https://twitter.com/amanhimself"
+            }
+        },
+        {
             "id": "https://amanhimself.dev//blog/remove-console-from-react-native-apps",
             "url": "https://amanhimself.dev//blog/remove-console-from-react-native-apps",
             "title": "How to remove console statements from React Native apps",
@@ -35,7 +46,7 @@
             "url": "https://amanhimself.dev//blog/remove-bottom-border-shadow-on-header-in-react-navigation",
             "title": "Remove bottom border or shadow on header in React Navigation",
             "summary": "Remove bottom border or shadow on header in React Navigation",
-            "date_modified": "2022-06-01T00:00:00.000Z",
+            "date_modified": "2022-06-05T00:00:00.000Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -1692,10 +1703,10 @@
             }
         },
         {
-            "id": "https://amanhimself.dev//blog/node-js-twitter-bot-tutorial-part-2",
-            "url": "https://amanhimself.dev//blog/node-js-twitter-bot-tutorial-part-2",
-            "title": "Writing a Node.js Twitter Bot Part 2",
-            "summary": "Writing a Node.js Twitter Bot Part 2",
+            "id": "https://amanhimself.dev//blog/node-js-twitter-bot-tutorial",
+            "url": "https://amanhimself.dev//blog/node-js-twitter-bot-tutorial",
+            "title": "Writing a Node.js Twitter Bot Part 1",
+            "summary": "Writing a Node.js Twitter Bot Part 1",
             "date_modified": "2016-12-25T00:00:00.000Z",
             "author": {
                 "name": "Aman Mittal",
@@ -1703,10 +1714,10 @@
             }
         },
         {
-            "id": "https://amanhimself.dev//blog/node-js-twitter-bot-tutorial",
-            "url": "https://amanhimself.dev//blog/node-js-twitter-bot-tutorial",
-            "title": "Writing a Node.js Twitter Bot Part 1",
-            "summary": "Writing a Node.js Twitter Bot Part 1",
+            "id": "https://amanhimself.dev//blog/node-js-twitter-bot-tutorial-part-2",
+            "url": "https://amanhimself.dev//blog/node-js-twitter-bot-tutorial-part-2",
+            "title": "Writing a Node.js Twitter Bot Part 2",
+            "summary": "Writing a Node.js Twitter Bot Part 2",
             "date_modified": "2016-12-25T00:00:00.000Z",
             "author": {
                 "name": "Aman Mittal",
