@@ -4,10 +4,18 @@
         <title>Aman Mittal' blog</title>
         <link>https://amanhimself.dev/</link>
         <description></description>
-        <lastBuildDate>Sat, 11 Jun 2022 21:07:31 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 19 Jun 2022 06:15:06 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Feed for Node.js</generator>
         <copyright>2019 - 2022, Aman Mittal · All Rights Reserved.</copyright>
+        <item>
+            <title><![CDATA[How to remove console statements from React Native apps]]></title>
+            <link>https://amanhimself.dev//blog/remove-console-from-react-native-apps</link>
+            <guid>https://amanhimself.dev//blog/remove-console-from-react-native-apps</guid>
+            <pubDate>Sun, 19 Jun 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[How to remove console statements from React Native apps]]></description>
+            <author>amanmittal.work@gmail.com (Aman Mittal)</author>
+        </item>
         <item>
             <title><![CDATA[How to push local git tag to remote repository on GitHub]]></title>
             <link>https://amanhimself.dev//blog/push-local-git-tag-to-remote-repository-on-github</link>
@@ -22,14 +30,6 @@
             <guid>https://amanhimself.dev//blog/react-navigation-v6-and-typescript-in-react-native</guid>
             <pubDate>Sat, 11 Jun 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[Getting Started with React Navigation v6 and TypeScript in React Native]]></description>
-            <author>amanmittal.work@gmail.com (Aman Mittal)</author>
-        </item>
-        <item>
-            <title><![CDATA[How to remove console statements from React Native apps]]></title>
-            <link>https://amanhimself.dev//blog/remove-console-from-react-native-apps</link>
-            <guid>https://amanhimself.dev//blog/remove-console-from-react-native-apps</guid>
-            <pubDate>Wed, 08 Jun 2022 00:00:00 GMT</pubDate>
-            <description><![CDATA[How to remove console statements from React Native apps]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
         <item>

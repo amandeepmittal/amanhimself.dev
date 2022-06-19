@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://amanhimself.dev/</id>
     <title>Aman Mittal' blog</title>
-    <updated>2022-06-11T21:07:31.297Z</updated>
+    <updated>2022-06-19T06:15:06.084Z</updated>
     <generator>Feed for Node.js</generator>
     <author>
         <name>Aman Mittal</name>
@@ -13,6 +13,18 @@
     <link rel="self" href="https://amanhimself.dev//rss/atom.xml"/>
     <icon>https://amanhimself.dev//favicon.jpg</icon>
     <rights>2019 - 2022, Aman Mittal · All Rights Reserved.</rights>
+    <entry>
+        <title type="html"><![CDATA[How to remove console statements from React Native apps]]></title>
+        <id>https://amanhimself.dev//blog/remove-console-from-react-native-apps</id>
+        <link href="https://amanhimself.dev//blog/remove-console-from-react-native-apps"/>
+        <updated>2022-06-19T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[How to remove console statements from React Native apps]]></summary>
+        <author>
+            <name>Aman Mittal</name>
+            <email>amanmittal.work@gmail.com</email>
+            <uri>https://twitter.com/amanhimself</uri>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[How to push local git tag to remote repository on GitHub]]></title>
         <id>https://amanhimself.dev//blog/push-local-git-tag-to-remote-repository-on-github</id>
@@ -31,18 +43,6 @@
         <link href="https://amanhimself.dev//blog/react-navigation-v6-and-typescript-in-react-native"/>
         <updated>2022-06-11T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Getting Started with React Navigation v6 and TypeScript in React Native]]></summary>
-        <author>
-            <name>Aman Mittal</name>
-            <email>amanmittal.work@gmail.com</email>
-            <uri>https://twitter.com/amanhimself</uri>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[How to remove console statements from React Native apps]]></title>
-        <id>https://amanhimself.dev//blog/remove-console-from-react-native-apps</id>
-        <link href="https://amanhimself.dev//blog/remove-console-from-react-native-apps"/>
-        <updated>2022-06-08T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[How to remove console statements from React Native apps]]></summary>
         <author>
             <name>Aman Mittal</name>
             <email>amanmittal.work@gmail.com</email>
