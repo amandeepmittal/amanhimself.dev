@@ -173,6 +173,11 @@ const AboutPage = () => {
             </ExternalLink>
           </ListItem>
           <ListItem>
+            <ExternalLink href="https://blog.flycode.com/how-to-use-flycode-to-update-your-react-apps-on-the-fly">
+              FlyCode
+            </ExternalLink>
+          </ListItem>
+          <ListItem>
             <ExternalLink href="https://blog.crowdbotics.com/author/amanhimself/">
               Crowdbotics
             </ExternalLink>
