@@ -9,22 +9,22 @@
     },
     "items": [
         {
-            "id": "https://amanhimself.dev//blog/remove-console-from-react-native-apps",
-            "url": "https://amanhimself.dev//blog/remove-console-from-react-native-apps",
-            "title": "How to remove console statements from React Native apps",
-            "summary": "How to remove console statements from React Native apps",
-            "date_modified": "2022-06-19T00:00:00.000Z",
+            "id": "https://amanhimself.dev//blog/push-local-git-tag-to-remote-repository-on-github",
+            "url": "https://amanhimself.dev//blog/push-local-git-tag-to-remote-repository-on-github",
+            "title": "How to push local git tag to remote repository on GitHub",
+            "summary": "How to push local git tag to remote repository on GitHub",
+            "date_modified": "2022-06-26T00:00:00.000Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
             }
         },
         {
-            "id": "https://amanhimself.dev//blog/push-local-git-tag-to-remote-repository-on-github",
-            "url": "https://amanhimself.dev//blog/push-local-git-tag-to-remote-repository-on-github",
-            "title": "How to push local git tag to remote repository on GitHub",
-            "summary": "How to push local git tag to remote repository on GitHub",
-            "date_modified": "2022-06-15T00:00:00.000Z",
+            "id": "https://amanhimself.dev//blog/remove-console-from-react-native-apps",
+            "url": "https://amanhimself.dev//blog/remove-console-from-react-native-apps",
+            "title": "How to remove console statements from React Native apps",
+            "summary": "How to remove console statements from React Native apps",
+            "date_modified": "2022-06-19T00:00:00.000Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
@@ -999,10 +999,10 @@
             }
         },
         {
-            "id": "https://amanhimself.dev//blog/build-a-twitter-clone-server-with-apollo-graphql-nodejs",
-            "url": "https://amanhimself.dev//blog/build-a-twitter-clone-server-with-apollo-graphql-nodejs",
-            "title": "Build a Twitter Clone Server with Apollo, GraphQL, Nodejs, and Crowdbotics",
-            "summary": "Build a Twitter Clone Server with Apollo, GraphQL, Nodejs, and Crowdbotics",
+            "id": "https://amanhimself.dev//blog/build-a-custom-modal-with-the-animated-api-in-react-native",
+            "url": "https://amanhimself.dev//blog/build-a-custom-modal-with-the-animated-api-in-react-native",
+            "title": "Build a Custom Modal with the Animated API in React Native",
+            "summary": "Build a Custom Modal with the Animated API in React Native",
             "date_modified": "2019-06-13T00:00:00.000Z",
             "author": {
                 "name": "Aman Mittal",
@@ -1010,10 +1010,10 @@
             }
         },
         {
-            "id": "https://amanhimself.dev//blog/build-a-custom-modal-with-the-animated-api-in-react-native",
-            "url": "https://amanhimself.dev//blog/build-a-custom-modal-with-the-animated-api-in-react-native",
-            "title": "Build a Custom Modal with the Animated API in React Native",
-            "summary": "Build a Custom Modal with the Animated API in React Native",
+            "id": "https://amanhimself.dev//blog/build-a-twitter-clone-server-with-apollo-graphql-nodejs",
+            "url": "https://amanhimself.dev//blog/build-a-twitter-clone-server-with-apollo-graphql-nodejs",
+            "title": "Build a Twitter Clone Server with Apollo, GraphQL, Nodejs, and Crowdbotics",
+            "summary": "Build a Twitter Clone Server with Apollo, GraphQL, Nodejs, and Crowdbotics",
             "date_modified": "2019-06-13T00:00:00.000Z",
             "author": {
                 "name": "Aman Mittal",

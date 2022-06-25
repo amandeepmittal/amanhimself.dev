@@ -4,24 +4,24 @@
         <title>Aman Mittal' blog</title>
         <link>https://amanhimself.dev/</link>
         <description></description>
-        <lastBuildDate>Sat, 25 Jun 2022 12:42:17 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 25 Jun 2022 19:26:06 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Feed for Node.js</generator>
         <copyright>2019 - 2022, Aman Mittal · All Rights Reserved.</copyright>
+        <item>
+            <title><![CDATA[How to push local git tag to remote repository on GitHub]]></title>
+            <link>https://amanhimself.dev//blog/push-local-git-tag-to-remote-repository-on-github</link>
+            <guid>https://amanhimself.dev//blog/push-local-git-tag-to-remote-repository-on-github</guid>
+            <pubDate>Sun, 26 Jun 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[How to push local git tag to remote repository on GitHub]]></description>
+            <author>amanmittal.work@gmail.com (Aman Mittal)</author>
+        </item>
         <item>
             <title><![CDATA[How to remove console statements from React Native apps]]></title>
             <link>https://amanhimself.dev//blog/remove-console-from-react-native-apps</link>
             <guid>https://amanhimself.dev//blog/remove-console-from-react-native-apps</guid>
             <pubDate>Sun, 19 Jun 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[How to remove console statements from React Native apps]]></description>
-            <author>amanmittal.work@gmail.com (Aman Mittal)</author>
-        </item>
-        <item>
-            <title><![CDATA[How to push local git tag to remote repository on GitHub]]></title>
-            <link>https://amanhimself.dev//blog/push-local-git-tag-to-remote-repository-on-github</link>
-            <guid>https://amanhimself.dev//blog/push-local-git-tag-to-remote-repository-on-github</guid>
-            <pubDate>Wed, 15 Jun 2022 00:00:00 GMT</pubDate>
-            <description><![CDATA[How to push local git tag to remote repository on GitHub]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
         <item>
@@ -729,19 +729,19 @@
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
         <item>
-            <title><![CDATA[Build a Twitter Clone Server with Apollo, GraphQL, Nodejs, and Crowdbotics]]></title>
-            <link>https://amanhimself.dev//blog/build-a-twitter-clone-server-with-apollo-graphql-nodejs</link>
-            <guid>https://amanhimself.dev//blog/build-a-twitter-clone-server-with-apollo-graphql-nodejs</guid>
-            <pubDate>Thu, 13 Jun 2019 00:00:00 GMT</pubDate>
-            <description><![CDATA[Build a Twitter Clone Server with Apollo, GraphQL, Nodejs, and Crowdbotics]]></description>
-            <author>amanmittal.work@gmail.com (Aman Mittal)</author>
-        </item>
-        <item>
             <title><![CDATA[Build a Custom Modal with the Animated API in React Native]]></title>
             <link>https://amanhimself.dev//blog/build-a-custom-modal-with-the-animated-api-in-react-native</link>
             <guid>https://amanhimself.dev//blog/build-a-custom-modal-with-the-animated-api-in-react-native</guid>
             <pubDate>Thu, 13 Jun 2019 00:00:00 GMT</pubDate>
             <description><![CDATA[Build a Custom Modal with the Animated API in React Native]]></description>
+            <author>amanmittal.work@gmail.com (Aman Mittal)</author>
+        </item>
+        <item>
+            <title><![CDATA[Build a Twitter Clone Server with Apollo, GraphQL, Nodejs, and Crowdbotics]]></title>
+            <link>https://amanhimself.dev//blog/build-a-twitter-clone-server-with-apollo-graphql-nodejs</link>
+            <guid>https://amanhimself.dev//blog/build-a-twitter-clone-server-with-apollo-graphql-nodejs</guid>
+            <pubDate>Thu, 13 Jun 2019 00:00:00 GMT</pubDate>
+            <description><![CDATA[Build a Twitter Clone Server with Apollo, GraphQL, Nodejs, and Crowdbotics]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
         <item>

@@ -37,10 +37,6 @@ const TAGS_ARRAY = [
     color: '#2aabee'
   },
   {
-    name: 'writing',
-    color: '#398366'
-  },
-  {
     name: 'devrel',
     color: 'orange'
   },
@@ -63,6 +59,10 @@ const TAGS_ARRAY = [
   {
     name: 'typescript',
     color: '#408ef5'
+  },
+  {
+    name: 'writing',
+    color: '#F87474'
   }
 ];
 

@@ -59,7 +59,7 @@ const Tag = ({ tag }) => {
     );
   } else if (tag === 'writing') {
     return (
-      <Box bg="#398366" p={1} borderRadius={4}>
+      <Box bg="#F87474" p={1} borderRadius={4}>
         <TagsSummary tag={tag} />
       </Box>
     );
