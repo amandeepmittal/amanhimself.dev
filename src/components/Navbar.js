@@ -100,6 +100,16 @@ const Navbar = props => {
             <LinkItem href="/sponsorship">Sponsorship</LinkItem>
             <LinkItem
               _target="_blank"
+              href="https://amanhimself.dev/rss.xml"
+              display="inline-flex"
+              alignItems="center"
+              style={{ gap: 4 }}
+              pl={2}
+            >
+              RSS
+            </LinkItem>
+            <LinkItem
+              _target="_blank"
               href="https://www.getrevue.co/profile/amanhimself"
               display="inline-flex"
               alignItems="center"
