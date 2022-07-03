@@ -7,7 +7,7 @@ tag: 'vscode'
 canonicalUrl: 'https://amanhimself.dev/blog/setup-macbook-m1/'
 ---
 
-> 🕑 Updated on: May 25, 2022
+> 🕑 Updated on: July 03, 2022
 
 ![cover_image](https://i.imgur.com/tAJjTOU.png)
 
@@ -465,7 +465,7 @@ I use VSCode editor for both writing code and writing blog posts. Thus, the list
 - [iOS common files](https://marketplace.visualstudio.com/items?itemName=Orta.vscode-ios-common-files)
 - [Material Icon Theme](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme)
 - [MDX](https://marketplace.visualstudio.com/items?itemName=silvenon.mdx) - For syntax highlighting of `.mdx` files
-- [npm](https://marketplace.visualstudio.com/items?itemName=eg2.vscode-npm-script)
+- ~~[npm](https://marketplace.visualstudio.com/items?itemName=eg2.vscode-npm-script)~~ Deprecated by VSCode team
 - [npm intellisense](https://marketplace.visualstudio.com/items?itemName=christian-kohler.npm-intellisense)
 - [Path intellisense](https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense)
 - [Prettier](https://prettier.io/)
