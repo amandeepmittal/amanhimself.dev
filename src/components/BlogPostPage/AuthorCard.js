@@ -26,30 +26,31 @@ const AuthorCard = () => {
               </Text>
             </Text>
             <HStack justifyContent="flex-end">
-              <Box
+              {/* <Box
                 borderRadius="md"
                 padding="2px 2px"
                 alignItems="center"
                 border="1px solid #805AD5"
-              >
-                <Link isExternal href="https://ko-fi.com/amanhimself">
-                  <Text fontSize="13px" color="purple.500">
-                    Buy me coffee
-                  </Text>
-                </Link>
-              </Box>
-              <Box
+              > */}
+              <Link isExternal href="https://ko-fi.com/amanhimself">
+                <Text fontSize="13px" color="purple.500">
+                  Buy me coffee
+                </Text>
+              </Link>
+              {/* </Box> */}
+              <Box>&nbsp;</Box>
+              {/* <Box
                 borderRadius="md"
                 padding="2px 2px"
                 alignItems="center"
                 border="1px solid #805AD5"
-              >
-                <Link isExternal href="https://twitter.com/amanhimself">
-                  <Text fontSize="13px" color="purple.500">
-                    Follow
-                  </Text>
-                </Link>
-              </Box>
+              > */}
+              <Link isExternal href="https://twitter.com/amanhimself">
+                <Text fontSize="13px" color="purple.500">
+                  Follow
+                </Text>
+              </Link>
+              {/* </Box> */}
             </HStack>
           </HStack>
           <Text fontSize="md" color={textMode}>
