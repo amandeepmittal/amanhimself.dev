@@ -300,6 +300,67 @@ const AboutPage = () => {
             Node.js Developer (2016 - 2017) at Unique Touch Solution
           </ListItem>
         </List>
+        <Heading size="lg" as="h2" pt={8}>
+          Speaking
+        </Heading>
+        <Text lineHeight="175%" as="h2" fontSize="lg">
+          {`I have spoken at the following events:`}
+        </Text>
+        <Heading size="md" as="h2" pt={8}>
+          2021
+        </Heading>
+
+        <List spacing={4}>
+          <ListItem fontSize="lg">
+            <ExternalLink href="https://www.youtube.com/watch?v=WrhQKt5-QY8">
+              Build Low-Code Apps using Hasura & Draftbit
+            </ExternalLink>
+          </ListItem>
+          <ListItem fontSize="lg">
+            <ExternalLink href="https://www.youtube.com/watch?v=h9kWdOyQrSw">
+              Building Attractive UIs with Draftbit at Explore Hacks
+            </ExternalLink>
+          </ListItem>
+          <ListItem fontSize="lg">
+            <ExternalLink href="https://www.youtube.com/watch?v=bIXQYrBd1DE">
+              Getting Started with Drafitbit- Aman Mittal at Hack The Mountains
+              2.O
+            </ExternalLink>
+          </ListItem>
+          <ListItem fontSize="lg">
+            <ExternalLink href="https://www.youtube.com/watch?v=sSbAuEcjjJA">
+              The Rise of No-Code and a Guide to Using Draftbit
+            </ExternalLink>
+          </ListItem>
+          <ListItem fontSize="lg">
+            <ExternalLink href="https://www.youtube.com/watch?v=_HKzhe8f47Y">
+              React Native Panel Discussion with Sanket Sahu, Aman Mittal, Evan
+              Bacon, Satyajit Sahoo
+            </ExternalLink>
+          </ListItem>
+        </List>
+        <Heading size="md" as="h2" pt={8}>
+          2020
+        </Heading>
+        <List spacing={4}>
+          <ListItem fontSize="lg">
+            <ExternalLink href="https://www.youtube.com/watch?v=YIRxTUCY0NQ">
+              How to write consistently at Hashnode&#39;s Technical Writing
+              Bootcamp
+            </ExternalLink>
+          </ListItem>
+        </List>
+        <Heading size="md" as="h2" pt={8}>
+          2018
+        </Heading>
+        <List spacing={4}>
+          <ListItem fontSize="lg">
+            <ExternalLink href="https://dev.to/reactroundup/rru-006-setting-up-and-getting-used-to-gatsby-with-aman-mittal">
+              Setting Up and Getting Used to Gatsby with Charles Max Wood, Cory
+              House, Tara Manicsic and Kent C. Dodds
+            </ExternalLink>
+          </ListItem>
+        </List>
       </VStack>
     </>
   );
