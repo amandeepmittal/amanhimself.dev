@@ -357,7 +357,7 @@ I am still using the same VSCode configuration from my previous setup:
   // TS IMPORT SUGGESTION
   "typescript.suggest.paths": false,
   // --------------------------------------
-  // NATIVE BRACKER PAIR COLOR SETTINGS
+  // NATIVE BRACKET PAIR COLOR SETTINGS
   "editor.bracketPairColorization.enabled": true,
   "workbench.colorCustomizations": {
     "editorBracketHighlight.foreground1": "#ffb86c",
