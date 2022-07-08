@@ -75,6 +75,7 @@ const UsesPage = () => {
           <ExternalLink href="https://amanhimself.dev/blog/setup-macbook-m1/">
             here
           </ExternalLink>
+          .
         </Text>
         <Heading size="md" as="h2" pt={8}>
           Gear
