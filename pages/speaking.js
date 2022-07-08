@@ -11,8 +11,7 @@ const SpeakingPage = () => {
           Speaking
         </Heading>
         <Text lineHeight="175%" as="h2" fontSize="lg">
-          {`I almost never get asked about what's my setup is or what I use.
-          Nonetheless, here is what I use on daily basis.`}
+          {`I have spoken at the following events:`}
         </Text>
         <Heading size="md" as="h2" pt={8}>
           2021
