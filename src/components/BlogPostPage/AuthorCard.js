@@ -20,7 +20,7 @@ const AuthorCard = () => {
         <VStack alignItems="stretch" as="section" pt={2}>
           <HStack justifyContent="space-between">
             <Text fontSize="md" fontWeight="600" color={textMode}>
-              AMAN MITTAL{' '}
+              <Link href="/about">Aman Mittal</Link>{' '}
               <Text fontSize="sm" color="purple.500" as="i">
                 author
               </Text>
