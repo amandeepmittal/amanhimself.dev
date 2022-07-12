@@ -11,7 +11,7 @@ canonicalUrl: 'https://amanhimself.dev/blog/setup-macbook-m1/'
 
 ![cover_image](https://i.imgur.com/tAJjTOU.png)
 
-It's 2022 and I am still coming back to this article. I wrote this originally in 2021 to keep track of what I need to get started when setting up a new laptop. Since then, I have two different Macbook Pros both using used Apple Silicon processor (M1). I try to keep it up to date.
+It's 2022 and I am still coming back to this article. I wrote this originally in 2021 to keep track of what I need to get started when setting up a new laptop. Since then, I have two Macbook Pros both using Apple Silicon processor (M1). I try to keep this article up to date.
 
 ## First steps
 
@@ -246,11 +246,13 @@ npm set init.author.email "you@example.com"
 npm set init.author.url "example.com"
 ```
 
-### What is Karabiner-Elements?
+### Optional: Karabiner-Elements to remap function keys
 
-When I bought Macbook Air M1, it had function keys (that got me excited), but I don't understand why Apple decided to replace function keys that would allow me to control Keyboard Brightness?! And moreover, replace it with "Do Not Disturb".
+> No longer using Karabiner-Elements as I gave up my Macbook Air
 
-Why? That got me confused 🤷
+When I bought Macbook Air M1, it had function keys (that got me excited), but I don't understand why Apple decided to replace function keys that would allow me to control Keyboard Brightness! And moreover, replace it with "Do Not Disturb".
+
+_Why? That got me confused 🤷_
 
 I found this tool called [karabiner Elements](https://karabiner-elements.pqrs.org/) that can be installed as a brew formula:
 
