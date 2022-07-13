@@ -2,8 +2,8 @@
 title: 'Setup Macbook M1 for Web and React Native development'
 slug: 'setup-macbook-m1'
 date: '2021-03-14'
-thumbnail: '/thumbnails/vscode.png'
-tag: 'vscode'
+thumbnail: '/thumbnails/apple.png'
+tag: 'tools'
 canonicalUrl: 'https://amanhimself.dev/blog/setup-macbook-m1/'
 ---
 
