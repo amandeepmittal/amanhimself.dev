@@ -2,212 +2,104 @@
 title: 'Setup Macbook M1 for Web and React Native development'
 slug: 'setup-macbook-m1'
 date: '2021-03-14'
-thumbnail: '/thumbnails/vscode.png'
-tag: 'vscode'
+thumbnail: '/thumbnails/apple.png'
+tag: 'tools'
 canonicalUrl: 'https://amanhimself.dev/blog/setup-macbook-m1/'
 ---
 
-> 🕑 Updated on: July 03, 2022
+> 🕑 Updated on: July 13, 2022
 
 ![cover_image](https://i.imgur.com/tAJjTOU.png)
 
-_Note:_ Most of this article was updated in August 2021. The Macbook Pro M1 I was using crashed and stopped working without any reason on [August 25, 2021](https://twitter.com/amanhimself/status/1430788513226702849). In just seven months of use.
+It's 2022, and I am still coming back to this article. I wrote this originally in 2021 to keep track of what I need to start when setting up a new laptop. Since then, I have had two Macbook Pros using an Apple Silicon processor (M1). I try to keep this article up to date.
 
-It took time to get it repaired. That forced me to buy another laptop. While setting up the new laptop, I thought it is an excellent time to update this post.
+## First steps
 
-I recently upgraded from [Macbook Air 2017](https://www.instagram.com/p/B6lInd3AhsN/) to Macbook Pro with an M1 chip. My four-year-old Macbook Air was giving up. The performance to run heavy tasks like using the iOS simulator when developing and working on React Native apps was declining. I had long given up using the Android emulator and used an actual Android device for testing. December 2020 was the time I decided its time to upgrade.
+When setting up a new Macbook, here are the initial steps I take:
 
-I had a long internal discussion with myself for almost a month about whether I should upgrade to M1 or stick with Intel-based chips and spend them bucks. Don't get me wrong here, M1 is not cheap either as I did go for a RAM upgrade to max limits, which is currently 16GB in the base model.
+- **Downloads**:
 
-After going through some online reviews and research, the kind of performance I was expecting has been worth it so far (it is fast, no doubt). I received it two weeks back when writing this post, and since then, I have installed all the necessary tools and utilities that help me work on [Web development](https://learnersbucket.com/) and React Native apps.
+  - **Browser**: Download [Brave Browser](https://brave.com/download/), [Google Chrome](https://www.google.com/chrome/?brand=YTUH&gclid=EAIaIQobChMI9vmFxpL0-AIVDJ1LBR11UATAEAAYASAAEgJBQPD_BwE&gclsrc=aw.ds)
+  - **Terminal**: Download iTerm 2 and set it to default
+  - **Editor/IDE**: VSCode
+  - **Other downloads**: CleanMyMac X, Xcode
 
-**My local environment currently includes:**
+- **Log in**
+  - Gmail, GitHub, Outlook
 
-- Homebrew ([supports Apple Silicon machines](https://brew.sh/2020/12/01/homebrew-2.6.0/) since `2.6.0`)
-- Git
-- Node.js
-- npm
-- Zsh
-- Oh My Zsh
-- iTerm
-- Xcode
-- yarn
-- VSCode
-- Rosetta 2
+## macOS Settings and Preferences
 
-**OS apps**:
+System preferences and settings that I prefer. These settings are available in the Systems and Preferences app:
 
-- Brave
-- Android Studio
-- [Insomnia](https://insomnia.rest/) as REST API client
-- Xcode
-- Slack or Discord (for work and community)
-- There (to track team mate's timezone)
-- LICEcap (for gifs)
-- Zoom (for work)
-- GitHub Desktop App
-- [Cleanshot](https://cleanshot.com/) (for screenshots)
-- Google Chrome
-  - set to default
-    - First things to do:
-      - **Log in to:** Gmail, Twitter, GitHub, Outlook
-      - **Developer mode on**
-    - Extensions:
-      - [Detailed SEO extension](https://chrome.google.com/webstore/detail/detailed-seo-extension/pfjdepjjfjjahkjfpkcgfmfhmnakjfba?hl=en)
-      - [Redefined GitHub](https://chrome.google.com/webstore/detail/refined-github/hlepfoohegkhhmjieoechaddaejaokhf)
-      - [Octolinker](https://chrome.google.com/webstore/detail/octolinker/jlmafbaeoofdegohdhinkhilhclaklkp/related?hl=en)
-      - [Twemex: Sidebar for Twitter](https://chrome.google.com/webstore/detail/twemex-sidebar-for-twitte/amoldiondpmjdnllknhklocndiibkcoe?hl=en)
-      - [Minimal Twitter](https://chrome.google.com/webstore/detail/minimal-twitter/pobhoodpcipjmedfenaigbeloiidbflp?hl=en)
-      - [Medium Enhanced Stats](https://chrome.google.com/webstore/detail/medium-enhanced-stats/jnomnfoenpdinfkpaaigokicgcfkomjo?hl=en)
-      - [JSON Viewer](https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh)
-      - Grammarly
-      - [Toby](https://www.gettoby.com/) to organize tabs
+- **Siri**:
 
-**System Settings**:
+  - Disable Ask Siri
 
-- Disable Ask Siri
-- Disable Spotlight search except Applications, Calculator, Conversion, Definition, and System Preferences.
-- Trackpad:
-  - Fix direction: Scroll & Zoom > Natural off
-  - Right click: Point & Click > Secondary Click
-  - Disable dictionary lookup: Point & Click > Look up & data detectors off
-  - More gestures > Swipe between pages off & App Exposé off
-- Finder settings:
-  - Preferences > Advanced > Show filename extensions
-  - Enable show path bar: View > Show Path Bar
-- Dock:
-  - Turn auto hiding on
-- Mission Control:
-  - Uncheck "Automatically rearrange Spaces based on most recent use"
+- **Dock & Menu Bar**:
+
+  - Enable "Automatically hide and show the Dock"
+  - Enable "Automatically hide and show the menu bar in full screen"
+  - Disable Siri
+
+- **Mission Control**:
+
+  - Disable "Automatically rearrange Spaces based on most recent use"
   - Hot Corners: remove everything
 
-> Copy [dotfiles](https://github.com/amandeepmittal/dotfiles).
+- **Trackpad**:
 
-## System Preferences
+  - Point & click
+    - Enable secondary click with bottom right corner
+    - Enable Tap to click with one finger
+  - Scroll & zoom:
+    - Disable Scroll Direction: Natural
+  - More gestures:
+    - Disable Swipe between pages and App Exposé
 
-Override default system preferences with from a terminal window:
+- **Spotlight**:
 
-```shell
-# show hidden files
-defaults write com.apple.finder AppleShowAllFiles YES
+  - Disable search except for Applications, Calculator, Conversion, Definition, and System Preferences.
 
-# show status bar
-defaults write com.apple.finder ShowStatusBar -bool true
+- **Finder settings**:
 
-killall Finder;
-```
+  - Preferences > Advanced > Show filename extensions
+  - Enable showing hidden files (hold Cmd + Shift dot(`.`) in a Finder window)
+  - Enable: View -> Show Path Bar, Show Status Bar
 
-## iTerm
+- **Chrome settings**:
+  - Sync settings and switch **"Developer Mode"** on.
+  - **Extensions** that I use:
+    - [Detailed SEO extension](https://chrome.google.com/webstore/detail/detailed-seo-extension/pfjdepjjfjjahkjfpkcgfmfhmnakjfba?hl=en)
+    - [Redefined GitHub](https://chrome.google.com/webstore/detail/refined-github/hlepfoohegkhhmjieoechaddaejaokhf)
+    - [Twemex: Sidebar for Twitter](https://chrome.google.com/webstore/detail/twemex-sidebar-for-twitte/amoldiondpmjdnllknhklocndiibkcoe?hl=en) - [Minimal Twitter](https://chrome.google.com/webstore/detail/minimal-twitter/pobhoodpcipjmedfenaigbeloiidbflp?hl=en)
+    - [Medium Enhanced Stats](https://chrome.google.com/webstore/detail/medium-enhanced-stats/jnomnfoenpdinfkpaaigokicgcfkomjo?hl=en)
+    - [JSON Viewer](https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh)
+    - Grammarly
+    - [Toby](https://www.gettoby.com/) to organize tabs
+    - [DF Tube (Distraction Free for YouTube™)](https://chrome.google.com/webstore/detail/df-tube-distraction-free/mjdepdfccjgcndkmemponafgioodelna?hl=en)
 
-My favorite terminal app that I have been using for years is [iTerm](https://iterm2.com/downloads.html). I am currently using two versions of iTerm on my setup. One with Rosetta 2 enabled and the default one. This way, I can only use the Rosetta 2 emulator when required. There are no performance issues I have found with using iTerm with Rosetta 2 for ARM-based applications.
+## Setting up the development machine
 
-![ss0](https://i.imgur.com/yOAV1or.png)
-
-If you'd like a similar setup, go to the `Applications` folder in your Macbook and duplicate the `iTerm` application.
-
-![ss1](https://i.imgur.com/2C5jrsb.png)
-
-You can rename the duplicated iTerm app. I have renamed it to `iTerm_rosetta` to differentiate between the two. Right-click the duplicated app and click **Get Info**. In the **General**, check the box where it says **Open using Rosetta**.
-
-![ss2](https://i.imgur.com/7ipJmzM.png)
-
-Now, if you open the second terminal, it will be using Rosetta 2 emulator by default.
-
-**Other iTerm profile settings that I use:**
-
-Recently I started using [Jetbrains Mono font](https://www.jetbrains.com/lp/mono/).
-
-![ss6](https://i.imgur.com/8Gwhdq4.png)
-
-For the overall looks and appearance, I use [Dracula Pro Color Presets created by Zen Rocha](https://draculatheme.com/pro).
-
-![ss7](https://i.imgur.com/5VSskf7.gif)
-
-And my last favorite thing is to split the working directory into two more different tabs using `Command + D` for horizontal panes.
-
-Make sure to have the following setting configured from
-
-**General > Working Directory > select Advanced Configuration > click button Edit... > select Reuse previous session's directory under Working Directory for New Split Panes.**
-
-![ss8](https://i.imgur.com/NDdHDch.png)
-
-For terminal prompt, I use [Spaceship ZSH](https://github.com/denysdovhan/spaceship-prompt).
-
-## Homebrew
-
-On December 1, 2020, the Homebrew team announced on their [website](https://brew.sh/2020/12/01/homebrew-2.6.0/) about the version release `2.6.0`. The most significant changes among others they listed were the support for macOS Big Sur, using `brew` commands instead of `brew cask` and beginning to support macOS M1 and Apple Silicon or ARM-based chips.
-
-Using the terminal, you can install the Homebrew by executing the default command:
-
-```shell
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-```
-
-**brew installs**:
-
-- Node.js and npm via Node Version Manager (NVM). [Read the complete blog post on how to install Node.js using NVM](https://amanhimself.dev/blog/install-nodejs-using-nvm-on-macos-m1/).
-- [scrcpy](https://github.com/Genymobile/scrcpy) (control Android devices connect via USB on mac)
-- JDK (required for React Native)
-- Karabiner-Elements (remapping function keys for Macbook Air or with Macbooks without touchbar)
-- watchman (required for React Native)
-
-### After installing Node.js
-
-Node.js comes with default package manager `npm`. Set defaults for it:
-
-```shell
-npm set init.author.name "your name"
-npm set init.author.email "you@example.com"
-npm set init.author.url "example.com"
-```
-
-## Xcode
-
-After installing Git, for me, the next step is to install [Xcode app](https://apps.apple.com/us/app/xcode/id497799835?mt=12) from Apple's App Store.
-
-Then, install "command line tools". It is required by many of the formulae in Homebrew.
-
-```shell
-xcode-select --install
-```
-
-After installing it, make sure to open it for the first time, from the menu bar, open **Xcode > Preferences > Locations** and make sure that **Command Line Tools** point towards the current Xcode app.
-
-![ss3](https://i.imgur.com/ZXS88QM.png)
-
-### What is Karabiner-Elements?
-
-When I bought Macbook Air M1, it had function keys (that got me excited), but I don't understand why Apple decided to replace function keys that would allow me to control Keyboard Brightness?! And moreover, replace it with "Do Not Disturb".
-
-Why? That got me confused 🤷
-
-I found this tool called [karabiner Elements](https://karabiner-elements.pqrs.org/) that can be installed as a brew formula:
-
-```shell
-brew install karabiner-elements
-```
-
-![screenshot-of-function-keys-on-macbbok-air-m1-2020](https://i.imgur.com/n1jGglG.jpg)
-
-Here are the key mappings I am using now:
-
-![key-mappings-with karabiner-elements](https://i.imgur.com/uoqR0Ht.png)
-
-## Git
-
-I did install Git using brew command:
-
-```shell
-brew install git
-```
-
-To authenticate GitHub to be used from the terminal environment, I'd recommend you to check out the [official document](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token) on creating and accessing personal tokens.
-
-> _🔥 Tip:_ As of Git version `2.28` there is a new config option to set the default branch to `main`. Set it globally and forget about it.
-
-```shell
-git config --global init.defaultBranch main
-```
+- **Other apps on my macOS**:
+  - Brave
+  - Android Studio
+  - [Insomnia](https://insomnia.rest/) as REST API client
+  - Slack or Discord (for work and community)
+  - There (to track team mate's timezones)
+  - LICEcap (for recoding gifs)
+  - Zoom (for work)
+  - GitHub Desktop App
+  - [Cleanshot](https://cleanshot.com/) (for screenshots and recording videos)
+  - Spotify
+  - Bandwidth +
+  - Linear (for work)
+  - Skype
+  - Discord
+  - The Unarchiver
+  - HiddenMe
+  - Numbers
+  - Notion
+  - Telegram
 
 ## ZSH and Oh My Zsh
 
@@ -238,6 +130,8 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
 
 echo "source ${(q-)PWD}/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ${ZDOTDIR:-$HOME}/.zshrc
 ```
+
+Next step is to install [spaceship-prompt](https://github.com/spaceship-prompt/spaceship-prompt) theme. Follow the steps described in [oh-my-sh](https://github.com/spaceship-prompt/spaceship-prompt#oh-my-zsh) section.
 
 This is [my final ZSH configuration](https://github.com/amandeepmittal/dotfiles/blob/master/.zshrc) in the file `~/.zshrc` file:
 
@@ -273,9 +167,116 @@ After installing the syntax highlight plugin, it starts to recognize the command
 
 ![ss4](https://i.imgur.com/UxRzm98.png)
 
+> Copy [dotfiles](https://github.com/amandeepmittal/dotfiles)
+
+## Setting up the terminal: iTerm
+
+My favorite terminal app that I have been using for years is [iTerm](https://iterm2.com/downloads.html).
+
+- Enable Working Directory for New Split Panes: General -> Advanced Configuration
+
+![iterm1](https://i.imgur.com/3aJWgxM.jpg)
+
+- Text:
+
+![iterm2](https://i.imgur.com/O4P9XjN.jpg)
+
+- Colors: For the overall looks and appearance, I use [Dracula Pro Color Presets created by Zen Rocha](https://draculatheme.com/pro).
+
+![iterm3](https://i.imgur.com/lu2R7Mr.jpg)
+
+- Window:
+  - Transparency: 5
+  - Blur: 20
+
+## Installing Homebrew
+
+On December 1, 2020, the Homebrew team announced on their [website](https://brew.sh/2020/12/01/homebrew-2.6.0/) about the version release `2.6.0`. The most significant changes they listed were:
+The support for macOS Big Sur.
+Using `brew` commands instead of `brew cask`.
+Beginning to support macOS M1 and Apple Silicon or ARM-based chips.
+
+Using the terminal, you can install the Homebrew by executing the default command:
+
+```shell
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+**brew installs**:
+
+- Node.js and npm via Node Version Manager (NVM). [Read the entire blog post on how to install Node.js using NVM](https://amanhimself.dev/blog/install-nodejs-using-nvm-on-macos-m1/).
+- [scrcpy](https://github.com/Genymobile/scrcpy) (control Android devices connect via USB on mac)
+- ~~Karabiner-Elements (remapping function keys for Macbook Air or with Macbooks without touchbar)~~
+- install [Watchman](https://facebook.github.io/watchman/) to watch changes in the filesystem using the command: `brew install watchman`
+
+## Install git
+
+I did install Git using the brew command:
+
+```shell
+brew install git
+```
+
+To authenticate GitHub to be used from the terminal environment, I recommend you check out the [official document](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token) on creating and accessing personal tokens.
+
+> _🔥 Tip:_ As of Git version `2.28`, there is a new config option to set the default branch to `main`. Set it globally and forget about it.
+
+```shell
+git config --global init.defaultBranch main
+```
+
+## Xcode
+
+After installing Git, the next step is to install [Xcode app](https://apps.apple.com/us/app/xcode/id497799835?mt=12) from Apple's App Store.
+
+Then, install "command line tools". Many formulae in Homebrew require it.
+
+```shell
+xcode-select --install
+```
+
+After installing it, open it for the first time. Then, from the menu bar, open **Xcode > Preferences > Locations** and make sure that **Command Line Tools** point towards the current Xcode app.
+
+![ss3](https://i.imgur.com/ZXS88QM.png)
+
+## After installing Node.js
+
+Node.js comes with the default package manager `npm`. Set defaults for it:
+
+```shell
+npm config set init-author-name "your name"
+npm config set init-author-url "example.com"
+npm config set init-license MIT
+```
+
+## Global NPM Packages I use
+
+- [expo-cli](https://docs.expo.io/workflow/expo-cli/)
+- [npm-check](https://www.npmjs.com/package/npm-check) to check for outdated, incorrect, and unused dependencies.
+
+## Optional: Karabiner-Elements to remap function keys
+
+> No longer using Karabiner-Elements as I gave up my Macbook Air
+
+When I bought Macbook Air M1, it had function keys (that got me excited), but I don't understand why Apple decided to replace function keys that would allow me to control Keyboard Brightness! Moreover, replace it with "Do Not Disturb".
+
+_Why? That got me confused 🤷_
+
+I found this tool called [karabiner Elements](https://karabiner-elements.pqrs.org/) that is installed as a brew formula:
+
+```shell
+brew install karabiner-elements
+```
+
+![screenshot-of-function-keys-on-macbbok-air-m1-2020](https://i.imgur.com/n1jGglG.jpg)
+
+Here are the key mappings I am using now:
+
+![key-mappings-with karabiner-elements](https://i.imgur.com/uoqR0Ht.png)
+
 ## VSCode
 
-VSCode and VS Code Insiders are currently supported on ARM chips (as of March 13, 2021). Download the installer for Insiders edition from [here](https://code.visualstudio.com/insiders/) and for VSCode [here](https://code.visualstudio.com/download).
+VSCode and VS Code Insiders are currently supported on ARM chips (March 13, 2021). Download the installer for Insiders edition from [here](https://code.visualstudio.com/insiders/) and for VSCode [here](https://code.visualstudio.com/download).
 
 ![ss5](https://i.imgur.com/Yd4wQ10.png)
 
@@ -294,7 +295,7 @@ I am still using the same VSCode configuration from my previous setup:
   "workbench.editor.enablePreview": false,
   "window.restoreFullscreen": true,
   "editor.tabSize": 2,
-  "editor.fontSize": 14,
+  "editor.fontSize": 14.5,
   "editor.minimap.enabled": false,
   "editor.cursorBlinking": "phase",
   "editor.fontLigatures": false,
@@ -305,7 +306,6 @@ I am still using the same VSCode configuration from my previous setup:
   "editor.formatOnSave": true,
   "editor.semanticHighlighting.enabled": true,
   "editor.guides.bracketPairs": true,
-  "breadcrumbs.enabled": false,
   "explorer.openEditors.visible": 0,
   "search.exclude": {
     "**/node_modules": true,
@@ -325,7 +325,7 @@ I am still using the same VSCode configuration from my previous setup:
   "json.schemas": [
     {
       "name": "vscode-expo-manifest",
-      "url": "file:///Users/amanhimself/Library/Application%20Support/Code/User/globalStorage/bycedric.vscode-expo/manifest-42.0.0.json",
+      "url": "file:///Users/amanhimself/Library/Application%20Support/Code/User/globalStorage/bycedric.vscode-expo/manifest-45.0.0.json",
       "fileMatch": ["app.json", "app.config.json"]
     }
   ],
@@ -357,7 +357,7 @@ I am still using the same VSCode configuration from my previous setup:
   // TS IMPORT SUGGESTION
   "typescript.suggest.paths": false,
   // --------------------------------------
-  // NATIVE BRACKER PAIR COLOR SETTINGS
+  // NATIVE BRACKET PAIR COLOR SETTINGS
   "editor.bracketPairColorization.enabled": true,
   "workbench.colorCustomizations": {
     "editorBracketHighlight.foreground1": "#ffb86c",
@@ -382,7 +382,11 @@ I am still using the same VSCode configuration from my previous setup:
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   // Markdown
   "[markdown]": {
-    "editor.quickSuggestions": true
+    "editor.quickSuggestions": {
+      "comments": "on",
+      "strings": "on",
+      "other": "on"
+    }
   },
   // JSON
   "[json]": {
@@ -427,7 +431,9 @@ I am still using the same VSCode configuration from my previous setup:
   "emmet.includeLanguages": {
     "typescript": "typescriptreact",
     "javascript": "javascriptreact"
-  }
+  },
+  "git.autofetch": true,
+  "cSpell.enableFiletypes": ["markdown", "mdx"]
 }
 ```
 
@@ -435,17 +441,15 @@ I am still using the same VSCode configuration from my previous setup:
 
 I usually like to switch between a dark and a light theme.
 
-- For the dark theme where I spent most of my time, I am was previously using [morgan.codes-theme](https://marketplace.visualstudio.com/items?itemName=morgan-codes.morgan-codes-vscode-theme), but now I am using [fairyFloss](https://marketplace.visualstudio.com/items?itemName=nopjmp.fairyfloss).
+- For the dark theme where I spent most of my time, I use [fairyFloss](https://marketplace.visualstudio.com/items?itemName=nopjmp.fairyfloss).
   - Other themes I switch between:
     - Quiet Light
-    - [Cyberpunk](https://marketplace.visualstudio.com/items?itemName=max-SS.cyberpunk)
 - For file icons, I love [Material-Icon-Theme](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme).
-- For terminal prompt, I use [Spaceship ZSH](https://github.com/denysdovhan/spaceship-prompt).
-- Font: [Jetbrains Mono font](https://www.jetbrains.com/lp/mono/).
+- For the terminal prompt, I use [Spaceship ZSH](https://github.com/denysdovhan/spaceship-prompt).
 
 ### Extensions
 
-I use VSCode editor for both writing code and writing blog posts. Thus, the list of extensions below is the combination of extensions that fulfills both of my purposes.
+I use the VSCode editor for both writing code and writing blog posts. Thus, the list of extensions below is the combination that fulfills both of my purposes.
 
 - [Auto Close tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag)
 - [Auto Complete Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-complete-tag)
@@ -465,7 +469,6 @@ I use VSCode editor for both writing code and writing blog posts. Thus, the list
 - [iOS common files](https://marketplace.visualstudio.com/items?itemName=Orta.vscode-ios-common-files)
 - [Material Icon Theme](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme)
 - [MDX](https://marketplace.visualstudio.com/items?itemName=silvenon.mdx) - For syntax highlighting of `.mdx` files
-- ~~[npm](https://marketplace.visualstudio.com/items?itemName=eg2.vscode-npm-script)~~ Deprecated by VSCode team
 - [npm intellisense](https://marketplace.visualstudio.com/items?itemName=christian-kohler.npm-intellisense)
 - [Path intellisense](https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense)
 - [Prettier](https://prettier.io/)
@@ -478,22 +481,13 @@ I use VSCode editor for both writing code and writing blog posts. Thus, the list
 - [Word Count](https://marketplace.visualstudio.com/items?itemName=ms-vscode.wordcount)
 - [GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot)
 
-## Global NPM Packages I use
-
-- ~~[gatsby-cli](https://www.npmjs.com/package/gatsby-cli) To build and test out [my personal blog built with Gatsby](https://amanhimself.dev/).~~
-- [expo-cli](https://docs.expo.io/workflow/expo-cli/)
-- [npm-check](https://www.npmjs.com/package/npm-check) to check for outdated, incorrect, and unused dependencies.
-- [git-watch-log](https://github.com/sukima/git-watch-log) to watch a git repo and recent changes.
-
 ## For React Native Development
 
-- [install Node.js](http://localhost:3000/blog/install-nodejs-using-nvm-on-macos-m1/)
-- install [Watchman](https://facebook.github.io/watchman/) to watch changes in the filesystem using the command: `brew install watchman`
-- install following [cocoapods](https://formulae.brew.sh/formula/cocoapods): `brew install cocoapods`
-- According to [a post by React Native guru Jamon Holmgren](https://shift.infinite.red/dont-use-the-wrong-jdk-for-react-native-if-you-re-using-an-m1-mac-252533dd47a2), I learned that all this time I've been using installing JDK wrong on my m1 machine 😱. To learn more how to install "the m1 way", go to his post and give it a read (and leave an appreciation clap 😄)
-- Versions later than Arctic Fox Canary now supports [Apple's Silicon based machines](https://androidstudio.googleblog.com/2021/04/android-studio-arctic-fox-canary-15.html) for Android Studio. You can also check out the [archive](https://developer.android.com/studio/archive) to see what beta/canary version supports Silicon machines
+- Install following [cocoapods](https://formulae.brew.sh/formula/cocoapods): `brew install cocoapods`
+- According to [a post by React Native guru Jamon Holmgren](https://shift.infinite.red/dont-use-the-wrong-jdk-for-react-native-if-you-re-using-an-m1-mac-252533dd47a2), I learned that all this time I've been using installing JDK wrong on my m1 machine 😱. To learn more about how to install "the m1 way", go to his post and give it a read (and leave an appreciation clap 😄)
+- Versions later than Arctic Fox Canary now supports [Apple's Silicon-based machines](https://developer.android.com/studio) for Android Studio. You can also check out the [archive](https://developer.android.com/studio/archive) to see what beta/canary and stable version supports Silicon machines
 - Then install Android SDK (I do not prefer AVD and use an actual device for testing)
-- [scrcpy](https://github.com/Genymobile/scrcpy) to display and control Android devices connect via USB on Mac
+- [scrcpy](https://github.com/Genymobile/scrcpy) to display and control Android devices connected via USB on Mac: `brew install scrcpy`
 
 <br />
 
@@ -501,9 +495,9 @@ I use VSCode editor for both writing code and writing blog posts. Thus, the list
 
 ## Rosetta 2
 
-> Update: I am not using the Rosetta environment to install anything on the secondary machine since August 2021. That is the reason I've mentioned it at the end of the post.
+> Update: I am not using the Rosetta environment to install anything on the secondary machine since August 2021. That is why I've mentioned it at the end of the post.
 
-[Rosetta 2](https://developer.apple.com/documentation/apple_silicon/about_the_rosetta_translation_environment) is the lifeline that allows you to run apps designed for Intel-based chips that use `x86` architecture on ARM-based chips (in this case M1). This solution is provided by Apple in the form of an emulator and doesn't come pre-installed. You have to install it manually. Fire up the Terminal application that comes pre-installed on the Big Sur and let your first command to execute be:
+[Rosetta 2](https://developer.apple.com/documentation/apple_silicon/about_the_rosetta_translation_environment) is the lifeline that allows you to run apps designed for Intel-based chips that use `x86` architecture on ARM-based chips (in this case M1). This solution is provided by Apple as an emulator and doesn't come pre-installed. You have to install it manually. Fire up the Terminal application that comes pre-installed on the macOS and execute the following command:
 
 ```shell
 /usr/sbin/softwareupdate --install-rosetta --agree-to-license
