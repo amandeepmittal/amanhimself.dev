@@ -179,7 +179,7 @@ My favorite terminal app that I have been using for years is [iTerm](https://ite
 
 - Text:
 
-![iterm2](https://i.imgur.com/O4P9XjN.jpg)
+![iterm2](https://i.imgur.com/VwIK2Be.jpg)
 
 - Colors: For the overall looks and appearance, I use [Dracula Pro Color Presets created by Zen Rocha](https://draculatheme.com/pro).
 
