@@ -7,7 +7,7 @@ tag: 'no-code'
 canonicalUrl: 'https://amanhimself.dev/blog/no-code-way-of-payments-with-stripe-a-brief-guide/'
 ---
 
-![cover_image](https://hackernoon.com/_next/image?url=https%3A%2F%2Fcdn.hackernoon.com%2Fimages%2FoBJp5NI1CqWkTYoCtrcit0KrDza2-lc3035ge.jpeg&w=3840&q=75)
+![cover_image](https://hackernoon.imgix.net/images/oBJp5NI1CqWkTYoCtrcit0KrDza2-lc3035ge.jpeg)
 
 > Cover image credit: [Prayer X](https://unsplash.com/@x_prayer?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/galaxy?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 
@@ -33,14 +33,14 @@ The Payment Links work when you host a product using Stripe. It gives you an int
 
 Go to the Stripe Dashboard screen. From the side menu, go to Products and then click Payment Links. The example below is using Test mode, but the same process is applicable when in live mode.
 
-![ss1](https://hackernoon.com/_next/image?url=https%3A%2F%2Fcdn.hackernoon.com%2Fimages%2FoBJp5NI1CqWkTYoCtrcit0KrDza2-841335vt.jpeg&w=3840&q=75)
+![ss1](https://hackernoon.imgix.net/images/oBJp5NI1CqWkTYoCtrcit0KrDza2-841335vt.jpeg)
 
 - Click the button "New" to add a new product and create a payment link for it.
 - Then, under the Product section, click "+ Add a new product".
 - Enter the details of the product.After adding the product details, click the button Create link.
 - Stripe generates a Payment link for the product added.
 
-![ss2](https://hackernoon.com/_next/image?url=https%3A%2F%2Fcdn.hackernoon.com%2Fimages%2FoBJp5NI1CqWkTYoCtrcit0KrDza2-q01m35p1.gif&w=3840&q=75)
+![ss2](https://hackernoon.imgix.net/images/oBJp5NI1CqWkTYoCtrcit0KrDza2-q01m35p1.gif)
 
 While adding a new product, Stripe allows customizing product details by adding promotional codes, collecting a user's shipping, billing address, adjust quantity, etc. Managing a user's shipping and billing address is essential if the product sold is a physical entity.
 
