@@ -484,7 +484,7 @@ I use the VSCode editor for both writing code and writing blog posts. Thus, the 
 ## For React Native Development
 
 - Install following [cocoapods](https://formulae.brew.sh/formula/cocoapods): `brew install cocoapods`
-- According to [a post by React Native guru Jamon Holmgren](https://shift.infinite.red/dont-use-the-wrong-jdk-for-react-native-if-you-re-using-an-m1-mac-252533dd47a2), I learned that all this time I've been using installing JDK wrong on my m1 machine 😱. To learn more about how to install "the m1 way", go to his post and give it a read (and leave an appreciation clap 😄)
+- According to [a post by React Native guru Jamon Holmgren](https://shift.infinite.red/dont-use-the-wrong-jdk-for-react-native-if-you-re-using-an-m1-mac-252533dd47a2), I learned that all this time I've been installing JDK wrong on my m1 machine 😱. To learn more about how to install "the m1 way", go to his post and give it a read (and leave an appreciation clap 😄)
 - Versions later than Arctic Fox Canary now supports [Apple's Silicon-based machines](https://developer.android.com/studio) for Android Studio. You can also check out the [archive](https://developer.android.com/studio/archive) to see what beta/canary and stable version supports Silicon machines
 - Then install Android SDK (I do not prefer AVD and use an actual device for testing)
 - [scrcpy](https://github.com/Genymobile/scrcpy) to display and control Android devices connected via USB on Mac: `brew install scrcpy`
