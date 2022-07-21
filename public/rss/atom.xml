@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://amanhimself.dev/</id>
     <title>Aman Mittal' blog</title>
-    <updated>2022-07-13T09:24:54.771Z</updated>
+    <updated>2022-07-21T10:46:49.772Z</updated>
     <generator>Feed for Node.js</generator>
     <author>
         <name>Aman Mittal</name>
@@ -13,6 +13,18 @@
     <link rel="self" href="https://amanhimself.dev//rss/atom.xml"/>
     <icon>https://amanhimself.dev//favicon.jpg</icon>
     <rights>2019 - 2022, Aman Mittal · All Rights Reserved.</rights>
+    <entry>
+        <title type="html"><![CDATA[How to open any folder from the Terminal app in a Finder window on macOS]]></title>
+        <id>https://amanhimself.dev//blog/how-to-open-any-folder-from-terminal-in-finder-on-mac</id>
+        <link href="https://amanhimself.dev//blog/how-to-open-any-folder-from-terminal-in-finder-on-mac"/>
+        <updated>2022-07-21T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[How to open any folder from the Terminal app in a Finder window on macOS]]></summary>
+        <author>
+            <name>Aman Mittal</name>
+            <email>amanmittal.work@gmail.com</email>
+            <uri>https://twitter.com/amanhimself</uri>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[How to push local git tag to remote repository on GitHub]]></title>
         <id>https://amanhimself.dev//blog/push-local-git-tag-to-remote-repository-on-github</id>

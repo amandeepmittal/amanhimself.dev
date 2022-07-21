@@ -4,10 +4,18 @@
         <title>Aman Mittal' blog</title>
         <link>https://amanhimself.dev/</link>
         <description></description>
-        <lastBuildDate>Wed, 13 Jul 2022 09:24:54 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 21 Jul 2022 10:46:49 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Feed for Node.js</generator>
         <copyright>2019 - 2022, Aman Mittal · All Rights Reserved.</copyright>
+        <item>
+            <title><![CDATA[How to open any folder from the Terminal app in a Finder window on macOS]]></title>
+            <link>https://amanhimself.dev//blog/how-to-open-any-folder-from-terminal-in-finder-on-mac</link>
+            <guid>https://amanhimself.dev//blog/how-to-open-any-folder-from-terminal-in-finder-on-mac</guid>
+            <pubDate>Thu, 21 Jul 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[How to open any folder from the Terminal app in a Finder window on macOS]]></description>
+            <author>amanmittal.work@gmail.com (Aman Mittal)</author>
+        </item>
         <item>
             <title><![CDATA[How to push local git tag to remote repository on GitHub]]></title>
             <link>https://amanhimself.dev//blog/push-local-git-tag-to-remote-repository-on-github</link>

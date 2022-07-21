@@ -9,6 +9,17 @@
     },
     "items": [
         {
+            "id": "https://amanhimself.dev//blog/how-to-open-any-folder-from-terminal-in-finder-on-mac",
+            "url": "https://amanhimself.dev//blog/how-to-open-any-folder-from-terminal-in-finder-on-mac",
+            "title": "How to open any folder from the Terminal app in a Finder window on macOS",
+            "summary": "How to open any folder from the Terminal app in a Finder window on macOS",
+            "date_modified": "2022-07-21T00:00:00.000Z",
+            "author": {
+                "name": "Aman Mittal",
+                "url": "https://twitter.com/amanhimself"
+            }
+        },
+        {
             "id": "https://amanhimself.dev//blog/push-local-git-tag-to-remote-repository-on-github",
             "url": "https://amanhimself.dev//blog/push-local-git-tag-to-remote-repository-on-github",
             "title": "How to push local git tag to remote repository on GitHub",
