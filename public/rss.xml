@@ -4,16 +4,24 @@
         <title>Aman Mittal' blog</title>
         <link>https://amanhimself.dev/</link>
         <description></description>
-        <lastBuildDate>Thu, 21 Jul 2022 10:46:49 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 04 Aug 2022 07:34:54 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Feed for Node.js</generator>
         <copyright>2019 - 2022, Aman Mittal · All Rights Reserved.</copyright>
         <item>
-            <title><![CDATA[How to open any folder from the Terminal app in a Finder window on macOS]]></title>
+            <title><![CDATA[How to add opacity to a Pressable component in React Native]]></title>
+            <link>https://amanhimself.dev//blog/add-opacity-to-pressable-component-react-native</link>
+            <guid>https://amanhimself.dev//blog/add-opacity-to-pressable-component-react-native</guid>
+            <pubDate>Thu, 04 Aug 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[How to add opacity to a Pressable component in React Native]]></description>
+            <author>amanmittal.work@gmail.com (Aman Mittal)</author>
+        </item>
+        <item>
+            <title><![CDATA[Open any folder from the Terminal app in a Finder on macOS]]></title>
             <link>https://amanhimself.dev//blog/how-to-open-any-folder-from-terminal-in-finder-on-mac</link>
             <guid>https://amanhimself.dev//blog/how-to-open-any-folder-from-terminal-in-finder-on-mac</guid>
             <pubDate>Thu, 21 Jul 2022 00:00:00 GMT</pubDate>
-            <description><![CDATA[How to open any folder from the Terminal app in a Finder window on macOS]]></description>
+            <description><![CDATA[Open any folder from the Terminal app in a Finder on macOS]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
         <item>
@@ -1249,19 +1257,19 @@
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
         <item>
-            <title><![CDATA[Writing a Node.js Twitter Bot Part 2]]></title>
-            <link>https://amanhimself.dev//blog/node-js-twitter-bot-tutorial-part-2</link>
-            <guid>https://amanhimself.dev//blog/node-js-twitter-bot-tutorial-part-2</guid>
-            <pubDate>Sun, 25 Dec 2016 00:00:00 GMT</pubDate>
-            <description><![CDATA[Writing a Node.js Twitter Bot Part 2]]></description>
-            <author>amanmittal.work@gmail.com (Aman Mittal)</author>
-        </item>
-        <item>
             <title><![CDATA[Writing a Node.js Twitter Bot Part 1]]></title>
             <link>https://amanhimself.dev//blog/node-js-twitter-bot-tutorial</link>
             <guid>https://amanhimself.dev//blog/node-js-twitter-bot-tutorial</guid>
             <pubDate>Sun, 25 Dec 2016 00:00:00 GMT</pubDate>
             <description><![CDATA[Writing a Node.js Twitter Bot Part 1]]></description>
+            <author>amanmittal.work@gmail.com (Aman Mittal)</author>
+        </item>
+        <item>
+            <title><![CDATA[Writing a Node.js Twitter Bot Part 2]]></title>
+            <link>https://amanhimself.dev//blog/node-js-twitter-bot-tutorial-part-2</link>
+            <guid>https://amanhimself.dev//blog/node-js-twitter-bot-tutorial-part-2</guid>
+            <pubDate>Sun, 25 Dec 2016 00:00:00 GMT</pubDate>
+            <description><![CDATA[Writing a Node.js Twitter Bot Part 2]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
         <item>

@@ -9,10 +9,21 @@
     },
     "items": [
         {
+            "id": "https://amanhimself.dev//blog/add-opacity-to-pressable-component-react-native",
+            "url": "https://amanhimself.dev//blog/add-opacity-to-pressable-component-react-native",
+            "title": "How to add opacity to a Pressable component in React Native",
+            "summary": "How to add opacity to a Pressable component in React Native",
+            "date_modified": "2022-08-04T00:00:00.000Z",
+            "author": {
+                "name": "Aman Mittal",
+                "url": "https://twitter.com/amanhimself"
+            }
+        },
+        {
             "id": "https://amanhimself.dev//blog/how-to-open-any-folder-from-terminal-in-finder-on-mac",
             "url": "https://amanhimself.dev//blog/how-to-open-any-folder-from-terminal-in-finder-on-mac",
-            "title": "How to open any folder from the Terminal app in a Finder window on macOS",
-            "summary": "How to open any folder from the Terminal app in a Finder window on macOS",
+            "title": "Open any folder from the Terminal app in a Finder on macOS",
+            "summary": "Open any folder from the Terminal app in a Finder on macOS",
             "date_modified": "2022-07-21T00:00:00.000Z",
             "author": {
                 "name": "Aman Mittal",
@@ -1714,10 +1725,10 @@
             }
         },
         {
-            "id": "https://amanhimself.dev//blog/node-js-twitter-bot-tutorial-part-2",
-            "url": "https://amanhimself.dev//blog/node-js-twitter-bot-tutorial-part-2",
-            "title": "Writing a Node.js Twitter Bot Part 2",
-            "summary": "Writing a Node.js Twitter Bot Part 2",
+            "id": "https://amanhimself.dev//blog/node-js-twitter-bot-tutorial",
+            "url": "https://amanhimself.dev//blog/node-js-twitter-bot-tutorial",
+            "title": "Writing a Node.js Twitter Bot Part 1",
+            "summary": "Writing a Node.js Twitter Bot Part 1",
             "date_modified": "2016-12-25T00:00:00.000Z",
             "author": {
                 "name": "Aman Mittal",
@@ -1725,10 +1736,10 @@
             }
         },
         {
-            "id": "https://amanhimself.dev//blog/node-js-twitter-bot-tutorial",
-            "url": "https://amanhimself.dev//blog/node-js-twitter-bot-tutorial",
-            "title": "Writing a Node.js Twitter Bot Part 1",
-            "summary": "Writing a Node.js Twitter Bot Part 1",
+            "id": "https://amanhimself.dev//blog/node-js-twitter-bot-tutorial-part-2",
+            "url": "https://amanhimself.dev//blog/node-js-twitter-bot-tutorial-part-2",
+            "title": "Writing a Node.js Twitter Bot Part 2",
+            "summary": "Writing a Node.js Twitter Bot Part 2",
             "date_modified": "2016-12-25T00:00:00.000Z",
             "author": {
                 "name": "Aman Mittal",
