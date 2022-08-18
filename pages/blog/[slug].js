@@ -114,8 +114,8 @@ const BlogPostPage = ({
         {/* Sponsor - only uncomment when there is an actual sponsor */}
         {/* <SponsorCard /> */}
         {/* Share article on Twitter */}
-        <HStack justifyContent='center'>
-            <ShareArticle title={title} slug={slug} />
+        <HStack justifyContent="center">
+          <ShareArticle title={title} slug={slug} />
         </HStack>
         <Divider />
         {/* Article Navigator */}

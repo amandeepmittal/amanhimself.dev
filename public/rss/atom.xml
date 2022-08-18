@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://amanhimself.dev/</id>
     <title>Aman Mittal' blog</title>
-    <updated>2022-08-18T21:21:29.143Z</updated>
+    <updated>2022-08-18T21:23:43.570Z</updated>
     <generator>Feed for Node.js</generator>
     <author>
         <name>Aman Mittal</name>
@@ -319,6 +319,18 @@
         <link href="https://amanhimself.dev//blog/environment-variables-in-expo-managed-workflow"/>
         <updated>2021-08-04T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Environment Variables in Expo and TypeScript]]></summary>
+        <author>
+            <name>Aman Mittal</name>
+            <email>amanmittal.work@gmail.com</email>
+            <uri>https://twitter.com/amanhimself</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[The No-Code Way of Payments with Stripe: A Brief Guide]]></title>
+        <id>https://amanhimself.dev//blog/no-code-way-of-payments-with-stripe-a-brief-guide</id>
+        <link href="https://amanhimself.dev//blog/no-code-way-of-payments-with-stripe-a-brief-guide"/>
+        <updated>2021-07-08T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[The No-Code Way of Payments with Stripe: A Brief Guide]]></summary>
         <author>
             <name>Aman Mittal</name>
             <email>amanmittal.work@gmail.com</email>
@@ -1106,11 +1118,11 @@
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Build a Twitter Clone Server with Apollo, GraphQL, Nodejs, and Crowdbotics]]></title>
-        <id>https://amanhimself.dev//blog/build-a-twitter-clone-server-with-apollo-graphql-nodejs</id>
-        <link href="https://amanhimself.dev//blog/build-a-twitter-clone-server-with-apollo-graphql-nodejs"/>
+        <title type="html"><![CDATA[Build a Custom Modal with the Animated API in React Native]]></title>
+        <id>https://amanhimself.dev//blog/build-a-custom-modal-with-the-animated-api-in-react-native</id>
+        <link href="https://amanhimself.dev//blog/build-a-custom-modal-with-the-animated-api-in-react-native"/>
         <updated>2019-06-13T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Build a Twitter Clone Server with Apollo, GraphQL, Nodejs, and Crowdbotics]]></summary>
+        <summary type="html"><![CDATA[Build a Custom Modal with the Animated API in React Native]]></summary>
         <author>
             <name>Aman Mittal</name>
             <email>amanmittal.work@gmail.com</email>
@@ -1118,11 +1130,11 @@
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Build a Custom Modal with the Animated API in React Native]]></title>
-        <id>https://amanhimself.dev//blog/build-a-custom-modal-with-the-animated-api-in-react-native</id>
-        <link href="https://amanhimself.dev//blog/build-a-custom-modal-with-the-animated-api-in-react-native"/>
+        <title type="html"><![CDATA[Build a Twitter Clone Server with Apollo, GraphQL, Nodejs, and Crowdbotics]]></title>
+        <id>https://amanhimself.dev//blog/build-a-twitter-clone-server-with-apollo-graphql-nodejs</id>
+        <link href="https://amanhimself.dev//blog/build-a-twitter-clone-server-with-apollo-graphql-nodejs"/>
         <updated>2019-06-13T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Build a Custom Modal with the Animated API in React Native]]></summary>
+        <summary type="html"><![CDATA[Build a Twitter Clone Server with Apollo, GraphQL, Nodejs, and Crowdbotics]]></summary>
         <author>
             <name>Aman Mittal</name>
             <email>amanmittal.work@gmail.com</email>

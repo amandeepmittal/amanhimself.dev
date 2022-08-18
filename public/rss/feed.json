@@ -295,6 +295,17 @@
             }
         },
         {
+            "id": "https://amanhimself.dev//blog/no-code-way-of-payments-with-stripe-a-brief-guide",
+            "url": "https://amanhimself.dev//blog/no-code-way-of-payments-with-stripe-a-brief-guide",
+            "title": "The No-Code Way of Payments with Stripe: A Brief Guide",
+            "summary": "The No-Code Way of Payments with Stripe: A Brief Guide",
+            "date_modified": "2021-07-08T00:00:00.000Z",
+            "author": {
+                "name": "Aman Mittal",
+                "url": "https://twitter.com/amanhimself"
+            }
+        },
+        {
             "id": "https://amanhimself.dev//blog/firebase-authentication-with-expo",
             "url": "https://amanhimself.dev//blog/firebase-authentication-with-expo",
             "title": "How To Integrate Firebase Authentication With an Expo App",
@@ -1010,10 +1021,10 @@
             }
         },
         {
-            "id": "https://amanhimself.dev//blog/build-a-twitter-clone-server-with-apollo-graphql-nodejs",
-            "url": "https://amanhimself.dev//blog/build-a-twitter-clone-server-with-apollo-graphql-nodejs",
-            "title": "Build a Twitter Clone Server with Apollo, GraphQL, Nodejs, and Crowdbotics",
-            "summary": "Build a Twitter Clone Server with Apollo, GraphQL, Nodejs, and Crowdbotics",
+            "id": "https://amanhimself.dev//blog/build-a-custom-modal-with-the-animated-api-in-react-native",
+            "url": "https://amanhimself.dev//blog/build-a-custom-modal-with-the-animated-api-in-react-native",
+            "title": "Build a Custom Modal with the Animated API in React Native",
+            "summary": "Build a Custom Modal with the Animated API in React Native",
             "date_modified": "2019-06-13T00:00:00.000Z",
             "author": {
                 "name": "Aman Mittal",
@@ -1021,10 +1032,10 @@
             }
         },
         {
-            "id": "https://amanhimself.dev//blog/build-a-custom-modal-with-the-animated-api-in-react-native",
-            "url": "https://amanhimself.dev//blog/build-a-custom-modal-with-the-animated-api-in-react-native",
-            "title": "Build a Custom Modal with the Animated API in React Native",
-            "summary": "Build a Custom Modal with the Animated API in React Native",
+            "id": "https://amanhimself.dev//blog/build-a-twitter-clone-server-with-apollo-graphql-nodejs",
+            "url": "https://amanhimself.dev//blog/build-a-twitter-clone-server-with-apollo-graphql-nodejs",
+            "title": "Build a Twitter Clone Server with Apollo, GraphQL, Nodejs, and Crowdbotics",
+            "summary": "Build a Twitter Clone Server with Apollo, GraphQL, Nodejs, and Crowdbotics",
             "date_modified": "2019-06-13T00:00:00.000Z",
             "author": {
                 "name": "Aman Mittal",
