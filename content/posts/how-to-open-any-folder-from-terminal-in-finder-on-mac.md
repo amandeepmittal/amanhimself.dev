@@ -48,7 +48,7 @@ open ./blog/mm-yy/your-file-name.md
 The above command opens the markdown file in the Xcode. You can pass the `-t` option to open in the file in a text editor.
 
 ```shell
-open ./blog/mm-yy/your-file-name.md
+open -t ./blog/mm-yy/your-file-name.md
 ```
 
 ## Opening URLs
