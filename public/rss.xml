@@ -4,10 +4,18 @@
         <title>Aman Mittal' blog</title>
         <link>https://amanhimself.dev/</link>
         <description></description>
-        <lastBuildDate>Thu, 18 Aug 2022 21:23:43 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 04 Sep 2022 08:15:31 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Feed for Node.js</generator>
         <copyright>2019 - 2022, Aman Mittal · All Rights Reserved.</copyright>
+        <item>
+            <title><![CDATA[Change the color of hidden files and folders in VSCode]]></title>
+            <link>https://amanhimself.dev//blog/change-color-of-hidden-files-folders-in-vscode</link>
+            <guid>https://amanhimself.dev//blog/change-color-of-hidden-files-folders-in-vscode</guid>
+            <pubDate>Sun, 04 Sep 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[Change the color of hidden files and folders in VSCode]]></description>
+            <author>amanmittal.work@gmail.com (Aman Mittal)</author>
+        </item>
         <item>
             <title><![CDATA[How to add opacity to a Pressable component in React Native]]></title>
             <link>https://amanhimself.dev//blog/add-opacity-to-pressable-component-react-native</link>
@@ -214,14 +222,6 @@
             <guid>https://amanhimself.dev//blog/environment-variables-in-expo-managed-workflow</guid>
             <pubDate>Wed, 04 Aug 2021 00:00:00 GMT</pubDate>
             <description><![CDATA[Environment Variables in Expo and TypeScript]]></description>
-            <author>amanmittal.work@gmail.com (Aman Mittal)</author>
-        </item>
-        <item>
-            <title><![CDATA[The No-Code Way of Payments with Stripe: A Brief Guide]]></title>
-            <link>https://amanhimself.dev//blog/no-code-way-of-payments-with-stripe-a-brief-guide</link>
-            <guid>https://amanhimself.dev//blog/no-code-way-of-payments-with-stripe-a-brief-guide</guid>
-            <pubDate>Thu, 08 Jul 2021 00:00:00 GMT</pubDate>
-            <description><![CDATA[The No-Code Way of Payments with Stripe: A Brief Guide]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
         <item>

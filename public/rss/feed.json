@@ -9,6 +9,17 @@
     },
     "items": [
         {
+            "id": "https://amanhimself.dev//blog/change-color-of-hidden-files-folders-in-vscode",
+            "url": "https://amanhimself.dev//blog/change-color-of-hidden-files-folders-in-vscode",
+            "title": "Change the color of hidden files and folders in VSCode",
+            "summary": "Change the color of hidden files and folders in VSCode",
+            "date_modified": "2022-09-04T00:00:00.000Z",
+            "author": {
+                "name": "Aman Mittal",
+                "url": "https://twitter.com/amanhimself"
+            }
+        },
+        {
             "id": "https://amanhimself.dev//blog/add-opacity-to-pressable-component-react-native",
             "url": "https://amanhimself.dev//blog/add-opacity-to-pressable-component-react-native",
             "title": "How to add opacity to a Pressable component in React Native",
@@ -289,17 +300,6 @@
             "title": "Environment Variables in Expo and TypeScript",
             "summary": "Environment Variables in Expo and TypeScript",
             "date_modified": "2021-08-04T00:00:00.000Z",
-            "author": {
-                "name": "Aman Mittal",
-                "url": "https://twitter.com/amanhimself"
-            }
-        },
-        {
-            "id": "https://amanhimself.dev//blog/no-code-way-of-payments-with-stripe-a-brief-guide",
-            "url": "https://amanhimself.dev//blog/no-code-way-of-payments-with-stripe-a-brief-guide",
-            "title": "The No-Code Way of Payments with Stripe: A Brief Guide",
-            "summary": "The No-Code Way of Payments with Stripe: A Brief Guide",
-            "date_modified": "2021-07-08T00:00:00.000Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
