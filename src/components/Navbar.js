@@ -55,8 +55,15 @@ const Navbar = props => {
           <Text
             fontSize={{ base: '0px', md: '32px' }}
             fontWeight={{ base: '0', md: '600' }}
+            sx={{
+              background:
+                'linear-gradient(45deg, rgb(124, 58, 237), #da62c4 30%, #ffffff 60%)',
+              '-webkit-background-clip': 'text',
+              '-webkit-text-fill-color': 'transparent',
+              'background-size': '800%'
+            }}
           >
-            Aman Mittal
+            amanhimself.dev
           </Text>
         </Flex>
 
