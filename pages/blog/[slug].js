@@ -123,7 +123,7 @@ const BlogPostPage = ({
         </VStack>
         <Box
           ref={reference}
-          __css={{
+          css={{
             '#carbonads *': {
               margin: 'initial',
               padding: 'initial',
