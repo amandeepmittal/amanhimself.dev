@@ -208,7 +208,7 @@ const BlogPostPage = ({
           nextArticle={nextArticle}
         />
         {/* Subscribe Card */}
-        <SubscribeCard />
+        {/* <SubscribeCard /> */}
         {/* Author Card */}
         <AuthorCard />
       </VStack>
