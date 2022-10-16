@@ -53,7 +53,7 @@ const Navbar = props => {
       >
         <Flex align="center" mr={4}>
           <Text
-            fontSize={{ base: '0px', md: '32px' }}
+            fontSize={{ base: '0px', md: '22px' }}
             fontWeight={{ base: '0', md: '600' }}
             sx={{
               background:
