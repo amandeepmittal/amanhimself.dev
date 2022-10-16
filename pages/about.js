@@ -18,7 +18,7 @@ const AboutPage = () => {
         <Heading size="lg" as="h1">
           About Me
         </Heading>
-        <small>Last Update: March 13, 2022</small>
+        <small>Last Update: October 16, 2022</small>
         <Text lineHeight="175%" as="h2" fontSize="lg" pt={2}>
           Hi! My name is Aman Mittal. I&#39;ve worked as a Developer Advocate,
           independent consultant and a technical writer with companies like
@@ -139,112 +139,91 @@ const AboutPage = () => {
           </ListItem>
         </List>
         <Text lineHeight="175%" as="h2" fontSize="lg" pt={2}>
-          Some of the publications I&#39;ve worked with:
+          Some of the publications I&#39;ve worked with:{' '}
+          <ExternalLink href="https://blog.logrocket.com/author/amanmittal/">
+            LogRocket
+          </ExternalLink>
+          ,{' '}
+          <ExternalLink href="https://blog.jscrambler.com/author/aman-mittal">
+            Jscrambler
+          </ExternalLink>
+          ,{' '}
+          <ExternalLink href="https://www.freecodecamp.org/news/author/amanhimself/">
+            freeCodeCamp
+          </ExternalLink>
+          ,{' '}
+          <ExternalLink href="https://blog.expo.dev/building-a-minimalist-weather-app-with-react-native-and-expo-fe7066e02c09">
+            Expo.io
+          </ExternalLink>
+          ,{' '}
+          <ExternalLink href="https://blog.sentry.io/authors/aman-mittal">
+            Sentry
+          </ExternalLink>
+          ,{' '}
+          <ExternalLink href="https://blog.appsignal.com/authors/aman-mittal">
+            AppSignal
+          </ExternalLink>
+          ,{' '}
+          <ExternalLink href="https://blog.flycode.com/how-to-use-flycode-to-update-your-react-apps-on-the-fly">
+            FlyCode
+          </ExternalLink>
+          ,{' '}
+          <ExternalLink href="https://blog.crowdbotics.com/author/amanhimself/">
+            Crowdbotics
+          </ExternalLink>
+          ,{' '}
+          <ExternalLink href="https://www.educative.io/profile/view/4727790119157760">
+            Educative Edpresso
+          </ExternalLink>
+          ,{' '}
+          <ExternalLink href="https://heartbeat.fritz.ai/@amanhimself">
+            Heartbeat.fritz.ai
+          </ExternalLink>
+          ,{' '}
+          <ExternalLink href="https://community.draftbit.com/u/amanhimself/activity/topics">
+            Draftbit
+          </ExternalLink>
+          ,{' '}
+          <ExternalLink href="https://dzone.com/users/4503532/amanhimself.html">
+            Dzone
+          </ExternalLink>
+          ,{' '}
+          <ExternalLink href="https://blog.openreplay.com/authors/aman-mittal">
+            Open Replay
+          </ExternalLink>
+          ,{' '}
+          <ExternalLink href="https://harperdb.io/product/featured-projects/rest-api-with-node-js/?utm_source=amanmittal">
+            HarperDB
+          </ExternalLink>
+          ,{' '}
+          <ExternalLink href="https://hackernoon.com/u/amanhimself">
+            Hackernoon
+          </ExternalLink>
+          ,{' '}
+          <ExternalLink href="https://www.digitalocean.com/community/tutorials/react-geolocation-react-native">
+            Alligator.io/Digital Ocean
+          </ExternalLink>
+          ,{' '}
+          <ExternalLink href="https://www.newline.co/@amandeepmittal/how-to-build-react-native-apps-with-graphql-and-apollo--d74eb12e">
+            Newline.co
+          </ExternalLink>
+          ,{' '}
+          <ExternalLink href="https://medium.com/geekculture/11-best-no-code-and-low-code-back-ends-for-2021-138066ca81f6">
+            Geek Culture
+          </ExternalLink>
+          ,{' '}
+          <ExternalLink href="https://javascript.plainenglish.io/create-a-custom-hook-for-show-hide-password-visibility-in-react-native-db184a48126e">
+            JavaScript Plain English
+          </ExternalLink>
+          .
         </Text>
-        <List spacing={4}>
-          <ListItem>
-            <ExternalLink href="https://blog.logrocket.com/author/amanmittal/">
-              LogRocket
-            </ExternalLink>
-          </ListItem>
-          <ListItem>
-            <ExternalLink href="https://blog.jscrambler.com/author/aman-mittal">
-              Jscrambler
-            </ExternalLink>
-          </ListItem>
-          <ListItem>
-            <ExternalLink href="https://www.freecodecamp.org/news/author/amanhimself/">
-              freeCodeCamp
-            </ExternalLink>
-          </ListItem>
-          <ListItem>
-            <ExternalLink href="https://blog.expo.dev/building-a-minimalist-weather-app-with-react-native-and-expo-fe7066e02c09">
-              Expo.io
-            </ExternalLink>
-          </ListItem>
-          <ListItem>
-            <ExternalLink href="https://blog.sentry.io/authors/aman-mittal">
-              Sentry
-            </ExternalLink>
-          </ListItem>
-          <ListItem>
-            <ExternalLink href="https://blog.appsignal.com/authors/aman-mittal">
-              AppSignal
-            </ExternalLink>
-          </ListItem>
-          <ListItem>
-            <ExternalLink href="https://blog.flycode.com/how-to-use-flycode-to-update-your-react-apps-on-the-fly">
-              FlyCode
-            </ExternalLink>
-          </ListItem>
-          <ListItem>
-            <ExternalLink href="https://blog.crowdbotics.com/author/amanhimself/">
-              Crowdbotics
-            </ExternalLink>
-          </ListItem>
-          <ListItem>
-            <ExternalLink href="https://www.educative.io/profile/view/4727790119157760">
-              Educative Edpresso
-            </ExternalLink>
-          </ListItem>
-          <ListItem>
-            <ExternalLink href="https://heartbeat.fritz.ai/@amanhimself">
-              Heartbeat.fritz.ai
-            </ExternalLink>
-          </ListItem>
-          <ListItem>
-            <ExternalLink href="https://community.draftbit.com/u/amanhimself/activity/topics">
-              Draftbit
-            </ExternalLink>
-          </ListItem>
-          <ListItem>
-            <ExternalLink href="https://dzone.com/users/4503532/amanhimself.html">
-              Dzone
-            </ExternalLink>
-          </ListItem>
-          <ListItem>
-            <ExternalLink href="https://blog.openreplay.com/authors/aman-mittal">
-              Open Replay
-            </ExternalLink>
-          </ListItem>
-          <ListItem>
-            <ExternalLink href="https://harperdb.io/product/featured-projects/rest-api-with-node-js/?utm_source=amanmittal">
-              HarperDB
-            </ExternalLink>
-          </ListItem>
-          <ListItem>
-            <ExternalLink href="https://hackernoon.com/u/amanhimself">
-              Hackernoon
-            </ExternalLink>
-          </ListItem>
-          <ListItem>
-            <ExternalLink href="https://www.digitalocean.com/community/tutorials/react-geolocation-react-native">
-              Alligator.io/Digital Ocean
-            </ExternalLink>
-          </ListItem>
-          <ListItem>
-            <ExternalLink href="https://www.newline.co/@amandeepmittal/how-to-build-react-native-apps-with-graphql-and-apollo--d74eb12e">
-              Newline.co
-            </ExternalLink>
-          </ListItem>
-          <ListItem>
-            <ExternalLink href="https://medium.com/geekculture/11-best-no-code-and-low-code-back-ends-for-2021-138066ca81f6">
-              Geek Culture
-            </ExternalLink>
-          </ListItem>
-          <ListItem>
-            <ExternalLink href="https://javascript.plainenglish.io/create-a-custom-hook-for-show-hide-password-visibility-in-react-native-db184a48126e">
-              JavaScript Plain English
-            </ExternalLink>
-          </ListItem>
-          <ListItem>
-            <strong>Other notable publications and organizations:</strong>{' '}
-            Rising Stack, Codeburst.io, ZeoLearn.com, Art + Marketing,
-            42hire.com, ITNext, Eduonix, The Startup, JavaBeginnersTutorial.com,
-            LevelUp Gitconnected, Better Programming, React Native Training,
-            Pusher, Instamobile, Soshace and Transifex Native.
-          </ListItem>
-        </List>
+        <Text>
+          <strong>Other notable publications and organizations:</strong> Rising
+          Stack, Codeburst.io, ZeoLearn.com, Art + Marketing, 42hire.com,
+          ITNext, Eduonix, The Startup, JavaBeginnersTutorial.com, LevelUp
+          Gitconnected, Better Programming, React Native Training, Pusher,
+          Instamobile, Soshace and Transifex Native.
+        </Text>
         {/* TODO: Add info about posts listed in Newsletters */}
         <Text lineHeight="175%" as="h2" fontSize="lg" fontWeight="700" pt={2}>
           Some of my blog articles and tutorials have featured in esteemed
@@ -303,9 +282,6 @@ const AboutPage = () => {
         <Heading size="lg" as="h2" pt={8}>
           Speaking
         </Heading>
-        <Text lineHeight="175%" as="h2" fontSize="lg">
-          {`I have spoken at the following events:`}
-        </Text>
         <Heading size="md" as="h2" pt={8}>
           2021
         </Heading>
@@ -356,8 +332,8 @@ const AboutPage = () => {
         <List spacing={4}>
           <ListItem fontSize="lg">
             <ExternalLink href="https://dev.to/reactroundup/rru-006-setting-up-and-getting-used-to-gatsby-with-aman-mittal">
-              Setting Up and Getting Used to Gatsby with Charles Max Wood, Cory
-              House, Tara Manicsic and Kent C. Dodds
+              Podcast: Setting Up and Getting Used to Gatsby with Charles Max
+              Wood, Cory House, Tara Manicsic and Kent C. Dodds
             </ExternalLink>
           </ListItem>
         </List>
