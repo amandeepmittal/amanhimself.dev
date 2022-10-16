@@ -103,7 +103,6 @@ const Navbar = props => {
             <LinkItem href="/blog">Blog</LinkItem>
             <LinkItem href="/about">About</LinkItem>
             <LinkItem href="/uses">Uses</LinkItem>
-            <LinkItem href="/sponsorship">Sponsorship</LinkItem>
             <LinkItem
               _target="_blank"
               href="https://amanhimself.dev/rss.xml"
