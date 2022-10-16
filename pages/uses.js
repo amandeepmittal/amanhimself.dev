@@ -84,7 +84,7 @@ const UsesPage = () => {
         <List spacing={4}>
           <ListItem fontSize="lg">
             <ExternalLink href="https://www.apple.com/in/shop/buy-mac/macbook-pro">
-              Macbook Pro 13&rdquo;
+              Macbook Pro 14&rdquo;
             </ExternalLink>
             - Apple M1 chip
           </ListItem>
