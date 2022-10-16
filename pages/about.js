@@ -59,7 +59,7 @@ const AboutPage = () => {
           <ExternalLink href="https://twitter.com/_100Daysofcode">
             #100DaysOfCode
           </ExternalLink>{' '}
-          campaign which in recent years has gained a lot of attention (150k+
+          campaign which in recent years has gained a lot of attention (200k+
           followers) among people who are getting into web development.
         </Text>
         <Text lineHeight="175%" as="h2" fontSize="lg">
