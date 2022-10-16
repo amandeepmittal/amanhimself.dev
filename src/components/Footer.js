@@ -110,6 +110,11 @@ const Footer = () => {
                 RSS
               </Text>
             </Link>
+            <Link href="/sponsorship">
+              <Text fontSize="sm" color={textMode}>
+                Sponsorship
+              </Text>
+            </Link>
           </HStack>
         )}
       </HStack>
