@@ -224,17 +224,7 @@ const SponsorshipPage = () => {
           .
         </Text>
         <Text lineHeight="175%" as="h2" fontSize="lg">
-          <span style={{ fontWeight: 'bold' }}>
-            Long term Supporters (
-            <Link
-              isExternal
-              href="https://github.com/sponsors/amandeepmittal"
-              textDecoration="underline"
-            >
-              $5/month
-            </Link>
-            ):
-          </span>
+          <span style={{ fontWeight: 'bold' }}>Long term Supporters</span>
           <UnorderedList>
             <ListItem>
               <Link
@@ -252,6 +242,15 @@ const SponsorshipPage = () => {
               >
                 Expo
               </Link>
+            </ListItem>
+            <ListItem>
+              <Link
+                isExternal
+                href="https://twitter.com/ccheever"
+                textDecoration="underline"
+              >
+                Hirbod Mirjavadi
+              </Link>{' '}
             </ListItem>
           </UnorderedList>
         </Text>
