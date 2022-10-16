@@ -54,12 +54,12 @@ const Hero = () => {
             this blog to share my software development journey.
           </Text>
           <Text lineHeight="175%" as="h2" fontSize="lg">
-            Previously, I&apos;ve worked as{' '}
+            Currently, working at Expo. Previously, I&apos;ve worked as{' '}
             <ExternalLink href="https://amanhimself.dev/blog/first-three-months-as-developer-advocate/">
               Developer Advocate
             </ExternalLink>
-            , independent consultant, and technical writer with companies like
-            Draftbit, Vercel and Crowdbotics.
+            , and Senior Content Developer with companies like Draftbit, Vercel
+            and Crowdbotics.
           </Text>
           <ExternalLinksCloud />
         </VStack>
