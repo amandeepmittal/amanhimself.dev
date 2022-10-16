@@ -63,12 +63,6 @@ const AuthorCard = () => {
               {/* </Box> */}
             </HStack>
           </HStack>
-          {/* <Text fontSize="md" color={textMode}>
-            Software Developer and Technical Writer since 2017. Loves learning
-            and writing about Node.js, React, React Native & Expo. Previously,
-            worked as Developer Advocate, independent consultant, and technical
-            writer with companies like Draftbit, Vercel and Crowdbotics.
-          </Text> */}
           <Text fontSize="md" color={textMode}>
             I'm a software developer and a technical writer. In this blog, I
             write about Technical writing, Node.js, React Native and Expo.
