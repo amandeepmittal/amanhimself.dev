@@ -44,6 +44,12 @@ class MyDocument extends NextDocument {
           `
           }}
         />
+        {/* <script
+          async
+          type="text/javascript"
+          src="//cdn.carbonads.com/carbon.js?serve=CVAIKKQM&placement=carbonadsnet"
+          id="_carbonads_js"
+        /> */}
         <body>
           <ColorModeScript initialColorMode={theme.config.initialColorMode} />
           <Main />

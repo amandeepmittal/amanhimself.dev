@@ -84,15 +84,15 @@ const BlogPostPage = ({
   const previousArticle = allPosts[postIndex - 1] || null;
   const nextArticle = allPosts[postIndex + 1] || null;
 
-  const reference = useRef();
+  // const reference = useRef();
 
-  useEffect(() => {
-    reference.current.innerHTML = '';
-    const s = document.createElement('script');
-    s.id = '_carbonads_js';
-    s.src = `"//cdn.carbonads.com/carbon.js?serve=CEAIE2JY&placement=amanhimselfdev`;
-    reference.current.appendChild(s);
-  }, []);
+  // useEffect(() => {
+  //   reference.current.innerHTML = '';
+  //   const s = document.createElement('script');
+  //   s.id = '_carbonads_js';
+  //   s.src = `"//cdn.carbonads.com/carbon.js?serve=CEAIE2JY&placement=amanhimselfdev`;
+  //   reference.current.appendChild(s);
+  // }, []);
 
   return (
     <>
@@ -121,9 +121,9 @@ const BlogPostPage = ({
             <Tag tag={tag} />
           </HStack>
         </VStack>
-        <Box
+        {/* <Box
           ref={reference}
-          css={{
+          sx={{
             '#carbonads *': {
               margin: 'initial',
               padding: 'initial',
@@ -193,7 +193,7 @@ const BlogPostPage = ({
               right: 0
             }
           }}
-        />
+        /> */}
         <MDXRemote {...source} components={MDXComponents} />
         {/* Sponsor - only uncomment when there is an actual sponsor */}
         {/* <SponsorCard /> */}
