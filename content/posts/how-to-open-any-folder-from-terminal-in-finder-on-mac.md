@@ -64,3 +64,9 @@ Use the option `a` to override the default web browser and specify a different o
 ```shell
 open -a Safari https://www.google.com
 ```
+
+It also be used with other flags to override a browser's default behavior. For example, I recently learned that when testing locally, the CORS can be bypassed to fetch files from the localhost.
+
+```shell
+open -a "Google Chrome Canary"  --args --user-data-dir="/tmp/chrome_dev_test" --disable-web-security
+```
