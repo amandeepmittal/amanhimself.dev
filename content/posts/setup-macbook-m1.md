@@ -7,7 +7,7 @@ tag: 'tools'
 canonicalUrl: 'https://amanhimself.dev/blog/setup-macbook-m1/'
 ---
 
-> 🕑 Updated on: July 13, 2022
+> 🕑 Updated on: November 13, 2022
 
 ![cover_image](https://i.imgur.com/tAJjTOU.png)
 
@@ -432,8 +432,25 @@ I am still using the same VSCode configuration from my previous setup:
     "typescript": "typescriptreact",
     "javascript": "javascriptreact"
   },
+  // MISCELLANEOUS
   "git.autofetch": true,
-  "cSpell.enableFiletypes": ["markdown", "mdx"]
+  "cSpell.language": "en,en-US",
+  "cSpell.enableFiletypes": ["markdown", "mdx"],
+  "editor.inlineSuggest.enabled": true,
+  "github.copilot.enable": {
+    "*": true,
+    "yaml": false,
+    "plaintext": true,
+    "markdown": true
+  },
+  "customizeUI.fontSizeMap": {
+    "13px": "12px",
+    "12px": "11px",
+    "window-title": "12px", // Window title font when using custom titlebar
+    "tab-title": "12px", // Used for editor tab titles
+    "monospace": "11px" // Used for monospace fonts in user interface
+  },
+  "errorLens.fontSize": "12"
 }
 ```
 
@@ -460,9 +477,10 @@ I use the VSCode editor for both writing code and writing blog posts. Thus, the 
 - [Code::Stats](https://codestats.net/)
 - [Color Highlight](https://marketplace.visualstudio.com/items?itemName=naumovs.color-highlight)
 - [DotENV](https://marketplace.visualstudio.com/items?itemName=mikestead.dotenv)
+- [Error Lens](https://marketplace.visualstudio.com/items?itemName=usernamehw.errorlens)
 - [ESLint](https://eslint.org/)
 - [Expo Tools](https://marketplace.visualstudio.com/items?itemName=byCedric.vscode-expo)
-- [Flow Language Support](https://marketplace.visualstudio.com/items?itemName=flowtype.flow-for-vscode)
+- [GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot)
 - [Git Lens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
 - [Highlight Matching Tag](https://marketplace.visualstudio.com/items?itemName=vincaslt.highlight-matching-tag)
 - [Indent rainbow](https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow)
@@ -470,16 +488,13 @@ I use the VSCode editor for both writing code and writing blog posts. Thus, the 
 - [Material Icon Theme](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme)
 - [MDX](https://marketplace.visualstudio.com/items?itemName=silvenon.mdx) - For syntax highlighting of `.mdx` files
 - [npm intellisense](https://marketplace.visualstudio.com/items?itemName=christian-kohler.npm-intellisense)
-- [Path intellisense](https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense)
 - [Prettier](https://prettier.io/)
 - [React Native Tools](https://marketplace.visualstudio.com/items?itemName=msjsdiag.vscode-react-native)
 - [Read Time](https://marketplace.visualstudio.com/items?itemName=johnpapa.read-time)
 - [SVG Viewer](https://marketplace.visualstudio.com/items?itemName=cssho.vscode-svgviewer)
 - [TODO Highlight](https://marketplace.visualstudio.com/items?itemName=wayou.vscode-todo-highlight)
 - [Version Lens](https://marketplace.visualstudio.com/items?itemName=pflannery.vscode-versionlens)
-- [vscode-styled-components](https://marketplace.visualstudio.com/items?itemName=jpoissonnier.vscode-styled-components)
 - [Word Count](https://marketplace.visualstudio.com/items?itemName=ms-vscode.wordcount)
-- [GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot)
 
 ## For React Native Development
 
