@@ -7,7 +7,7 @@ tag: 'tools'
 canonicalUrl: 'https://amanhimself.dev/blog/setup-macbook-m1/'
 ---
 
-> 🕑 Updated on: November 13, 2022
+> 🕑 Updated on: November 24, 2022
 
 ![cover_image](https://i.imgur.com/tAJjTOU.png)
 
@@ -450,7 +450,14 @@ I am still using the same VSCode configuration from my previous setup:
     "tab-title": "12px", // Used for editor tab titles
     "monospace": "11px" // Used for monospace fonts in user interface
   },
-  "errorLens.fontSize": "12"
+  "errorLens.fontSize": "12",
+  "grammarly.files.include": [
+    "**/README.md",
+    "**/readme.md",
+    "**/*.txt",
+    "**/*.md",
+    "**/*.mdx"
+  ]
 }
 ```
 
