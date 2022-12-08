@@ -7,12 +7,7 @@ const description =
   "I'm Aman Mittal (@amanhimself). Software Developer and Tech Writer. Welcome to my digital garden!";
 const socialBanner = '/card.png';
 
-const DocumentHead = ({
-  pageTitle,
-
-  postPath,
-  canonicalUrl
-}) => {
+const DocumentHead = ({ pageTitle, postPath, canonicalUrl }) => {
   let postUrl = `${siteURL}`;
 
   if (postPath) {
