@@ -4,7 +4,7 @@ date: '2021-10-12'
 slug: 'how-to-configure-vscode-bracket-colors-natively'
 thumbnail: '/thumbnails/vscode.png'
 tag: 'vscode'
-canonicalUrl: 'https:/amanhimself.dev/blog/how-to-configure-vscode-bracket-colors-natively/'
+canonicalUrl: 'https://amanhimself.dev/blog/how-to-configure-vscode-bracket-colors-natively/'
 ---
 
 ![cover image](https://res.cloudinary.com/practicaldev/image/fetch/s--lgaAXnJK--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/r84rtekdnk3qd4r4v31e.png)

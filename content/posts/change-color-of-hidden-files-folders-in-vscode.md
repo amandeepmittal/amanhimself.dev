@@ -4,7 +4,7 @@ date: '2022-09-04'
 slug: 'change-color-hidden-file-folder-name-in-vscode'
 thumbnail: '/thumbnails/vscode.png'
 tag: 'vscode'
-canonicalUrl: 'https:/amanhimself.dev/blog/change-color-hidden-file-folder-name-in-vscode/'
+canonicalUrl: 'https://amanhimself.dev/blog/change-color-hidden-file-folder-name-in-vscode/'
 ---
 
 Using VSCode, I love switching back and forth between dark and light themes to make things interesting for myself when working. Generally, I prefer a [light-ish dark theme](https://amanhimself.dev/blog/setup-macbook-m1/#themes) such as [fairyFloss](https://marketplace.visualstudio.com/items?itemName=nopjmp.fairyfloss) or Quiet Light that comes pre-installed.
