@@ -31,7 +31,7 @@ const DocumentHead = ({ pageTitle, postPath, canonicalUrl }) => {
       <meta name="publisher" content={author} />
       <meta
         name="keywords"
-        content="Aman Mittal, amanhimself, blog, Node.js, React, React Native Expo"
+        content="Aman Mittal, amanhimself, blog, Node.js, React, React Native, Expo"
       />
 
       <meta name="robots" content="index,follow" />
