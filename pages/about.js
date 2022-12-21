@@ -18,7 +18,7 @@ const AboutPage = () => {
         <Heading size="lg" as="h1">
           About Me
         </Heading>
-        <small>Last Update: October 16, 2022</small>
+        <small>Last Update: December 21, 2022</small>
         <Text lineHeight="175%" as="h2" fontSize="lg" pt={2}>
           Hi! My name is Aman Mittal. I am an independent software developer,
           and a technical writer. I love working with open source technologies
@@ -259,13 +259,16 @@ const AboutPage = () => {
           Work History
         </Heading>
         <List spacing={4}>
+          <ListItem>
+            🚀 Software consultant and docs at Expo (2022 - Present)
+          </ListItem>
           <ListItem> 📝 Senior Content Developer at Vercel (2022)</ListItem>
           <ListItem>🥑 Developer Advocate at Draftbit (2021 - 2022)</ListItem>
           <ListItem>
             💻 📝 Contract Developer & Tech Writer
             <List spacing={2}>
               <ListItem>
-                Crowdbotics (Fullstack Consultant & Technical Writer, 2018 -
+                Crowdbotics (Software Consultant & Technical Writer, 2018 -
                 2021)
               </ListItem>
               <ListItem>Logrocket (Tech Writer, 2020 - Present)</ListItem>
@@ -287,7 +290,6 @@ const AboutPage = () => {
         <Heading size="md" as="h2" pt={8}>
           2021
         </Heading>
-
         <List spacing={4}>
           <ListItem fontSize="lg">
             <ExternalLink href="https://www.youtube.com/watch?v=WrhQKt5-QY8">
@@ -336,6 +338,98 @@ const AboutPage = () => {
             <ExternalLink href="https://dev.to/reactroundup/rru-006-setting-up-and-getting-used-to-gatsby-with-aman-mittal">
               Podcast: Setting Up and Getting Used to Gatsby with Charles Max
               Wood, Cory House, Tara Manicsic and Kent C. Dodds
+            </ExternalLink>
+          </ListItem>
+        </List>
+        <Heading size="lg" as="h1" pt={8}>
+          ⚙️ What I use
+        </Heading>
+        <Text lineHeight="175%" as="h2" fontSize="lg">
+          {`I almost never get asked about what's my setup is or what I use.
+          Nonetheless, here is what I use on daily basis.`}
+        </Text>
+        <Heading size="md" as="h2" pt={8}>
+          Coding Software
+        </Heading>
+
+        <List spacing={4}>
+          <ListItem fontSize="lg">
+            <ExternalLink href="https://code.visualstudio.com/">
+              Visual Studio Code
+            </ExternalLink>
+            - My friend{' '}
+            <ExternalLink href="https://twitter.com/spences10">
+              Scott Spences
+            </ExternalLink>{' '}
+            introduced me to VS Code. At that time, we were both using Atom. I
+            have never looked back
+          </ListItem>
+          <ListItem fontSize="lg">
+            <ExternalLink href="https://brave.com/">Brave</ExternalLink>- as my
+            personal browser. I also use Chrome and sometimes Safari and Firefox
+          </ListItem>
+          <ListItem fontSize="lg">
+            <ExternalLink href="https://marketplace.visualstudio.com/items?itemName=nopjmp.fairyfloss">
+              fairyFloss
+            </ExternalLink>
+            - As much as I love to try new themes in VSCode, I always come back
+            to fairyFloss
+          </ListItem>
+          <ListItem fontSize="lg">
+            <ExternalLink href="https://iterm2.com/">item2</ExternalLink>- My
+            terminal of choice, with ZSH shell
+          </ListItem>
+          <ListItem fontSize="lg">
+            <ExternalLink href="https://cheatsheets.xyz/homebrew/">
+              Homebrew
+            </ExternalLink>
+            - For installing other libs and softwares
+          </ListItem>
+          <ListItem fontSize="lg">
+            <ExternalLink href="https://www.cockos.com/licecap/">
+              LICEcap
+            </ExternalLink>
+            - For creating GIFs
+          </ListItem>
+          <ListItem fontSize="lg">
+            <ExternalLink href="https://www.cockos.com/licecap/">
+              CleanShot X
+            </ExternalLink>
+            - For capturing screenshots on macOS devices
+          </ListItem>
+        </List>
+        <Text>
+          Find out more about what VSCode extensions I regularly use{' '}
+          <ExternalLink href="https://amanhimself.dev/blog/setup-macbook-m1/">
+            here
+          </ExternalLink>
+          .
+        </Text>
+        <Heading size="md" as="h2" pt={8}>
+          Gear
+        </Heading>
+
+        <List spacing={4}>
+          <ListItem fontSize="lg">
+            <ExternalLink href="https://www.apple.com/in/shop/buy-mac/macbook-pro">
+              M1 Macbook Pro 14&rdquo; 2021
+            </ExternalLink>
+          </ListItem>
+          <ListItem fontSize="lg">
+            <ExternalLink href="https://amanhimself.dev/about">
+              Desk & Chair
+            </ExternalLink>
+            - Pretty much, any flat surface
+          </ListItem>
+        </List>
+        <Heading size="lg" as="h1" pt={8}>
+          Awards and recognition
+        </Heading>
+        <List spacing={4}>
+          <ListItem fontSize="lg">
+            <ExternalLink href="https://www.noonies.tech/2022/programming/2022-most-authentic-developer-advocate-of-the-year">
+              Won Most Authentic Developer Advocate of the Year 2022 at
+              #Noonies2022 by Hackernoon
             </ExternalLink>
           </ListItem>
         </List>
