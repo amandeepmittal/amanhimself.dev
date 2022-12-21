@@ -4,7 +4,7 @@ const siteURL = 'https://amanhimself.dev';
 const author = 'Aman Mittal';
 const shortname = 'amanhimself';
 const description =
-  "I'm Aman Mittal (@amanhimself). Software Developer and Tech Writer. Welcome to my digital garden!";
+  "I'm Aman Mittal (@amanhimself). Software Developer and Tech Writer. Welcome to my blog!";
 const socialBanner = '/card.png';
 
 const DocumentHead = ({ pageTitle, postPath, canonicalUrl }) => {
