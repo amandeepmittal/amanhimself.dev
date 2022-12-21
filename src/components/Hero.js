@@ -54,7 +54,8 @@ const Hero = () => {
             this blog to share my software development journey.
           </Text>
           <Text lineHeight="175%" as="h2" fontSize="lg">
-            Currently, working at Expo. Previously, I&apos;ve worked as{' '}
+            Currently on working on documentation at Expo. Previously, I&apos;ve
+            worked as{' '}
             <ExternalLink href="https://amanhimself.dev/blog/first-three-months-as-developer-advocate/">
               Developer Advocate
             </ExternalLink>
