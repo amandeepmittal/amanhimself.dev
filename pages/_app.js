@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { ChakraProvider } from '@chakra-ui/react';
 import * as Fathom from 'fathom-client';
+import '../src/utils/global.styles.css';
 
 import theme from '../src/theme';
 import { Fonts, MainLayout } from '../src/components';

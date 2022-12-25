@@ -3,7 +3,14 @@ import { MDXRemote } from 'next-mdx-remote';
 import { useRouter } from 'next/router';
 import { serialize } from 'next-mdx-remote/serialize';
 import matter from 'gray-matter';
-import { VStack, Heading, HStack, Text, Divider, Box } from '@chakra-ui/react';
+import {
+  VStack,
+  Heading,
+  HStack,
+  Text,
+  Divider,
+  Center
+} from '@chakra-ui/react';
 import { promises as fs } from 'fs';
 import path from 'path';
 
@@ -22,6 +29,7 @@ import {
   Tag,
   SponsorCard
 } from '../../src/components/BlogPostPage';
+import CarbonAds from '../../src/components/Carbon';
 
 export const readBlogPost = async slug => {
   const postPath = path.join(process.cwd(), './content/posts', `${slug}.md`);
@@ -111,6 +119,9 @@ const BlogPostPage = ({
             <Tag tag={tag} />
           </HStack>
         </VStack>
+        <Center>
+          <CarbonAds />
+        </Center>
         <MDXRemote {...source} components={MDXComponents} />
         {/* Sponsor - only uncomment when there is an actual sponsor */}
         {/* <SponsorCard /> */}
