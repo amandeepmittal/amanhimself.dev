@@ -1,19 +1,8 @@
 import React, { useState } from 'react';
-import {
-  Heading,
-  Text,
-  Input,
-  InputGroup,
-  InputLeftElement,
-  VStack,
-  Icon,
-  List,
-  ListItem
-} from '@chakra-ui/react';
+import { Heading, Text, VStack, List, ListItem } from '@chakra-ui/react';
 import { promises as fs } from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
-import { HiOutlineSearch } from 'react-icons/hi';
 import readingTime from 'reading-time';
 
 import { BlogPostCard, DocumentHead } from '../../src/components';
