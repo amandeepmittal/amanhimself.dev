@@ -84,16 +84,6 @@ const BlogPostPage = ({
   const previousArticle = allPosts[postIndex - 1] || null;
   const nextArticle = allPosts[postIndex + 1] || null;
 
-  // const reference = useRef();
-
-  // useEffect(() => {
-  //   reference.current.innerHTML = '';
-  //   const s = document.createElement('script');
-  //   s.id = '_carbonads_js';
-  //   s.src = `"//cdn.carbonads.com/carbon.js?serve=CEAIE2JY&placement=amanhimselfdev`;
-  //   reference.current.appendChild(s);
-  // }, []);
-
   return (
     <>
       <DocumentHead
@@ -121,79 +111,6 @@ const BlogPostPage = ({
             <Tag tag={tag} />
           </HStack>
         </VStack>
-        {/* <Box
-          ref={reference}
-          sx={{
-            '#carbonads *': {
-              margin: 'initial',
-              padding: 'initial',
-              lineHeight: 'initial'
-            },
-            '#carbonads': {
-              '--carbon-font-size': '16px',
-              '--carbon-padding-size': '12px'
-            },
-            '#carbonads': {
-              zIndex: 100,
-              display: 'inline-block',
-              fontFamily:
-                "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', Helvetica, Arial, sans-serif",
-              fontSize: 'var(--carbon-font-size)'
-            },
-            '#carbonads > span': {
-              minWidth: '18.75em',
-              maxWidth: 'calc(130px + 25ch)',
-              minHeight: '100px',
-              backgroundColor: 'hsl(0, 0%, 10%)',
-              boxShadow:
-                '0 0 1px hsl(0deg 0% 0% / 0.085), 0 0 2px hsl(0deg 0% 0% / 0.085),0 0 4px hsl(0deg 0% 0% / 0.085), 0 0 8px hsl(0deg 0% 0% / 0.085)'
-            },
-            '#carbonads a': {
-              textDecoration: 'none',
-              color: '#ddd'
-            },
-            '#carbonads a:hover': {
-              color: '#ddd'
-            },
-            '#carbonads span': {
-              display: 'block',
-              position: 'relative'
-            },
-            '#carbonads .carbon-wrap': {
-              display: 'flex'
-            },
-            '#carbonads .carbon-img': {
-              height: '100px',
-              width: '130px'
-            },
-            '#carbonads .carbon-img img': {
-              display: 'block'
-            },
-            '#carbonads .carbon-text': {
-              padding: '0.625em 1em',
-              fontSize: '0.8125em',
-              marginBottom: '1em',
-              lineHeight: 1.4,
-              textAlign: 'left'
-            },
-            '#carbonads .carbon-poweredby': {
-              display: 'block',
-              padding: '6px 8px',
-              color: '#aaa',
-              background: '#1e2021',
-              textAlign: 'center',
-              textRransform: 'uppercase',
-              letterSpacing: '0.1ch',
-              fontWeight: 600,
-              fontSize: '0.5em',
-              lineHeight: 1,
-              borderRopLeftRadius: '3px',
-              position: 'absolute',
-              bottom: 0,
-              right: 0
-            }
-          }}
-        /> */}
         <MDXRemote {...source} components={MDXComponents} />
         {/* Sponsor - only uncomment when there is an actual sponsor */}
         {/* <SponsorCard /> */}
