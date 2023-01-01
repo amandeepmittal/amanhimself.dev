@@ -4,10 +4,18 @@
         <title>Aman Mittal' blog</title>
         <link>https://amanhimself.dev/</link>
         <description></description>
-        <lastBuildDate>Sun, 01 Jan 2023 06:13:30 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 01 Jan 2023 14:59:50 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Feed for Node.js</generator>
         <copyright>2019 - 2023, Aman Mittal · All Rights Reserved.</copyright>
+        <item>
+            <title><![CDATA[2022 - A year in review]]></title>
+            <link>https://amanhimself.dev//blog/year-in-review-2022</link>
+            <guid>https://amanhimself.dev//blog/year-in-review-2022</guid>
+            <pubDate>Sun, 01 Jan 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[2022 - A year in review]]></description>
+            <author>amanmittal.work@gmail.com (Aman Mittal)</author>
+        </item>
         <item>
             <title><![CDATA[Change the color of hidden files and folders in VSCode]]></title>
             <link>https://amanhimself.dev//blog/change-color-of-hidden-files-folders-in-vscode</link>

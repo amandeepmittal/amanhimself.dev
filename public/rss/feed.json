@@ -9,6 +9,17 @@
     },
     "items": [
         {
+            "id": "https://amanhimself.dev//blog/year-in-review-2022",
+            "url": "https://amanhimself.dev//blog/year-in-review-2022",
+            "title": "2022 - A year in review",
+            "summary": "2022 - A year in review",
+            "date_modified": "2023-01-01T00:00:00.000Z",
+            "author": {
+                "name": "Aman Mittal",
+                "url": "https://twitter.com/amanhimself"
+            }
+        },
+        {
             "id": "https://amanhimself.dev//blog/change-color-of-hidden-files-folders-in-vscode",
             "url": "https://amanhimself.dev//blog/change-color-of-hidden-files-folders-in-vscode",
             "title": "Change the color of hidden files and folders in VSCode",

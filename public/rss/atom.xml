@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://amanhimself.dev/</id>
     <title>Aman Mittal' blog</title>
-    <updated>2023-01-01T06:13:30.524Z</updated>
+    <updated>2023-01-01T14:59:50.229Z</updated>
     <generator>Feed for Node.js</generator>
     <author>
         <name>Aman Mittal</name>
@@ -13,6 +13,18 @@
     <link rel="self" href="https://amanhimself.dev//rss/atom.xml"/>
     <icon>https://amanhimself.dev//favicon.jpg</icon>
     <rights>2019 - 2023, Aman Mittal · All Rights Reserved.</rights>
+    <entry>
+        <title type="html"><![CDATA[2022 - A year in review]]></title>
+        <id>https://amanhimself.dev//blog/year-in-review-2022</id>
+        <link href="https://amanhimself.dev//blog/year-in-review-2022"/>
+        <updated>2023-01-01T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[2022 - A year in review]]></summary>
+        <author>
+            <name>Aman Mittal</name>
+            <email>amanmittal.work@gmail.com</email>
+            <uri>https://twitter.com/amanhimself</uri>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Change the color of hidden files and folders in VSCode]]></title>
         <id>https://amanhimself.dev//blog/change-color-of-hidden-files-folders-in-vscode</id>
