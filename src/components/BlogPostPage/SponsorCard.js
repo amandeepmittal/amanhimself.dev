@@ -28,7 +28,7 @@ const SponsorCard = () => {
         <Text fontSize="md" color={textMode}>
           This blog post is sponsored by amanhimself.
         </Text>
-        <Link isExternal href="https://www.getrevue.co/profile/amanhimself">
+        <Link isExternal href="https://amanhimself.substack.com/">
           <Text fontSize="lg" fontWeight="700" color="purple.500">
             🔗 Have look and try it for free!
           </Text>

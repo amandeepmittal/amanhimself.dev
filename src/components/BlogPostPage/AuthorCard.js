@@ -39,10 +39,7 @@ const AuthorCard = () => {
               </Link>
               {/* </Box> */}
               <Box>&nbsp;</Box>
-              <Link
-                isExternal
-                href="https://www.getrevue.co/profile/amanhimself"
-              >
+              <Link isExternal href="https://amanhimself.substack.com/">
                 <Text fontSize="13px" color="purple.500" fontWeight="bold">
                   Newsletter
                 </Text>

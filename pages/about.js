@@ -31,7 +31,7 @@ const AboutPage = () => {
         </Text>
         <Text lineHeight="175%" as="h2" fontSize="lg">
           I write a{' '}
-          <ExternalLink href="https://www.getrevue.co/profile/amanhimself">
+          <ExternalLink href="https://amanhimself.substack.com/">
             newsletter
           </ExternalLink>{' '}
           in which I share my latest tutorials and articles.

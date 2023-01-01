@@ -33,7 +33,7 @@ Without spreading out my unorganized thoughts around the matter too much, here a
 
 - Sam Julien's book on [Getting Started in Developer Relations](https://learn.samjulien.com/getting-started-in-developer-relations)
 
-A few weeks back I did share my thoughts in the [newsletter](https://www.getrevue.co/profile/amanhimself). I do recommend this book if you are seeking your first role or are curious about getting to know more. This is the best introduction I've found so far. It made me realize that I have been doing some of the stuff in my free time that a Dev Advocate might do.
+A few weeks back I did share my thoughts in the [newsletter](https://amanhimself.substack.com/). I do recommend this book if you are seeking your first role or are curious about getting to know more. This is the best introduction I've found so far. It made me realize that I have been doing some of the stuff in my free time that a Dev Advocate might do.
 
 - Mary Thengvall's [The Business Value of Developer Relations](https://www.persea-consulting.com/book)
 
@@ -77,4 +77,4 @@ If you want to work with me, check out [draftbit.com/jobs](https://draftbit.com/
 
 If you want to talk about Draftbit, have questions, or React Native, or DevRel, please DM me on [Twitter](https://twitter.com/amanhimself).
 
-💌 To get notified about my future articles, subscribe my [personal newsletter here](https://www.getrevue.co/profile/amanhimself).
+💌 To get notified about my future articles, subscribe my [personal newsletter here](https://amanhimself.substack.com/).

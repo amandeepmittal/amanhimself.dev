@@ -73,7 +73,7 @@ const SponsorshipPage = () => {
             start a{' '}
             <Link
               isExternal
-              href="https://www.getrevue.co/profile/amanhimself"
+              href="https://amanhimself.substack.com/"
               textDecoration="underline"
             >
               newsletter

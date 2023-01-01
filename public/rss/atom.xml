@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://amanhimself.dev/</id>
     <title>Aman Mittal' blog</title>
-    <updated>2022-12-25T07:47:06.922Z</updated>
+    <updated>2023-01-01T06:13:30.524Z</updated>
     <generator>Feed for Node.js</generator>
     <author>
         <name>Aman Mittal</name>
@@ -12,7 +12,7 @@
     <link rel="alternate" href="https://amanhimself.dev/"/>
     <link rel="self" href="https://amanhimself.dev//rss/atom.xml"/>
     <icon>https://amanhimself.dev//favicon.jpg</icon>
-    <rights>2019 - 2022, Aman Mittal · All Rights Reserved.</rights>
+    <rights>2019 - 2023, Aman Mittal · All Rights Reserved.</rights>
     <entry>
         <title type="html"><![CDATA[Change the color of hidden files and folders in VSCode]]></title>
         <id>https://amanhimself.dev//blog/change-color-of-hidden-files-folders-in-vscode</id>

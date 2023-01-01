@@ -11,7 +11,7 @@ const ExternalLinksCloud = () => {
         </ExternalLink>
       </Text>
       <Text>
-        <ExternalLink href="https://www.getrevue.co/profile/amanhimself">
+        <ExternalLink href="https://amanhimself.substack.com/">
           📧 Newsletter
         </ExternalLink>
       </Text>

@@ -22,7 +22,7 @@ const SubscribeCard = () => {
         <HStack justifyContent="space-between">
           <Text as="h2" fontSize="lg" fontWeight="600" color={textMode}>
             Join <strong>1300+ devs</strong>{' '}
-            <Link isExternal href="https://www.getrevue.co/profile/amanhimself">
+            <Link isExternal href="https://amanhimself.substack.com/">
               & subscribe to my newsletter!
             </Link>
           </Text>
@@ -36,7 +36,7 @@ const SubscribeCard = () => {
           Subscribe to my newsletter to get the latest content by email.
           Unsubscribe any time.
         </Text> */}
-        <Link isExternal href="https://www.getrevue.co/profile/amanhimself">
+        <Link isExternal href="https://amanhimself.substack.com/">
           <Text fontSize="md" fontWeight="700" color="purple.500">
             🔗 Subscribe on Revue
           </Text>

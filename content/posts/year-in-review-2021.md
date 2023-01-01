@@ -73,7 +73,7 @@ I also got my first [GitHub sponsor](https://twitter.com/amanhimself/status/1454
 
 ## Newsletter saga continues 💌
 
-I failed to run my [weekly newsletter](https://www.getrevue.co/profile/amanhimself). First, it became bi-weekly and then monthly. It's all due to my inconsistency in sending out and not managing my time with publishing posts. However, it did grow to 1319 subscribers from 1201 last year. I appreciate folks who stick around after me being inconsistent enough to deliver.
+I failed to run my [weekly newsletter](https://amanhimself.substack.com/). First, it became bi-weekly and then monthly. It's all due to my inconsistency in sending out and not managing my time with publishing posts. However, it did grow to 1319 subscribers from 1201 last year. I appreciate folks who stick around after me being inconsistent enough to deliver.
 
 I did move it from Substack to Revue after Twitter acquired Revue. With Revue, I like the experience so far. I've been using it for three months and have sent three newsletters. Anyone using Twitter can now easily subscribe from [my Twitter profile](https://twitter.com/amanhimself). Thanks to my buddy [Scott Spence](https://twitter.com/spences10) who showed me how easy it was to migrate to Revue. If you're on Twitter, then give Scott a follow. He's an amazing person, an experienced developer, and he creates awesome content in the Web Dev space.
 

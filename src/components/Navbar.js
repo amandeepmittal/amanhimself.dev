@@ -81,7 +81,7 @@ const Navbar = props => {
             <LinkItem href="/about">About</LinkItem>
             <LinkItem
               _target="_blank"
-              href="https://www.getrevue.co/profile/amanhimself"
+              href="https://amanhimself.substack.com/"
               display="inline-flex"
               alignItems="center"
               style={{ gap: 4 }}
@@ -114,7 +114,7 @@ const Navbar = props => {
             </LinkItem>
             <LinkItem
               _target="_blank"
-              href="https://www.getrevue.co/profile/amanhimself"
+              href="https://amanhimself.substack.com/"
               display="inline-flex"
               alignItems="center"
               style={{ gap: 4 }}
