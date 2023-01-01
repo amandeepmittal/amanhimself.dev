@@ -81,6 +81,14 @@ Dev.to is my primary platform to focus on cross-posting this year. I did manage 
 
 ![Dev.to stats in a nutshell this year](https://res.cloudinary.com/amanmittal/image/upload/v1672562431/CleanShot_2023-01-01_at_14.05.52_2x_z0rws4.png)
 
+## Hackernoon award
+
+Awesome folks at Hackernoon nominated me for two categories in the Noonies 2022 awards. One of the categories was [Most authentic Developer Advocate of the year](https://noonies.hackernoon.com/2022/programming/2022-most-authentic-developer-advocate-of-the-year).
+
+I ended up winning the award (to my surprise). **A huge thanks to anyone who voted for me (and is reading this post 🤗).** I'm humbled by the recognition
+
+![Noonies 2022 award for most authentic developer advocate of the year](https://pbs.twimg.com/media/Fj7zc51acAELXgH?format=jpg&name=medium).
+
 ### Newsletter saga continues
 
 Less writing equals less number of issues. I did manage to send out a newsletter anytime I had something to share. However, this project was also abandoned for the last four or five months.
