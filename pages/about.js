@@ -27,7 +27,7 @@ const AboutPage = () => {
         <Text lineHeight="175%" as="h2" fontSize="lg" pt={2}>
           Currently, I&apos;m working on documentation at Expo. Previously,
           I&apos;ve as a consultant and a technical writer with companies like
-          Draftbit, Vercel and Crowdbotics.
+          Draftbit and Vercel.
         </Text>
         <Text lineHeight="175%" as="h2" fontSize="lg">
           I write a{' '}

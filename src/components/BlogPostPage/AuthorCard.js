@@ -67,7 +67,7 @@ const AuthorCard = () => {
             <br />
             Currently, working at Expo. Previously, I&apos;ve worked as a
             Developer Advocate, and Senior Content Developer with companies like
-            Draftbit, Vercel and Crowdbotics.
+            Draftbit and Vercel.
           </Text>
         </VStack>
       </HStack>

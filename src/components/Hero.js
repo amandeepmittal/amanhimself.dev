@@ -60,8 +60,8 @@ const Hero = () => {
             <ExternalLink href="https://amanhimself.dev/blog/first-three-months-as-developer-advocate/">
               Developer Advocate
             </ExternalLink>
-            , and Senior Content Developer with companies like Draftbit, Vercel
-            and Crowdbotics.
+            , and Senior Content Developer with companies like Draftbit and
+            Vercel.
           </Text>
           <ExternalLinksCloud />
         </VStack>
