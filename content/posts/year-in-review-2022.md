@@ -15,7 +15,7 @@ Right now, I'm still trying to balance my life and work and find a way to fit th
 
 ## Starting the year with a new job
 
-I started the year by switching jobs in a new role as [Senior Content Developer at Vercel](https://twitter.com/amanhimself/status/1488351029708341251).
+I started the year by switching jobs in a new role as a [Senior Content Developer at Vercel](https://twitter.com/amanhimself/status/1488351029708341251).
 
 I was excited to work full-time on the docs team. In the past year, I have often felt like I have been working towards this career path. I started at the end of January and left it at the end of April.
 
@@ -23,13 +23,13 @@ During my time there, I learned a lot about working on a team full of creative a
 
 ## App.js conf 2022
 
-[App.js conference](https://appjs.co/) has been a vital part of my professional career. I forgot what it felt to be in a tech conference (since the last one I attended was in 2019) and in the end it was an amazing experience.
+[App.js conference](https://appjs.co/) has been a vital part of my professional career. I forgot what it felt like to be at a tech conference (since the last one I attended was in 2019) and in the end, it was an amazing experience.
 
 Meeting with beautiful and like-minded people who share their work and interesting ways of solving problems is always fascinating and curiosity-engaging. Not only one gets to see the new and exciting upcoming stuff but also meeting people in person after such a long and limited human exposure felt like it was the first time.
 
-![Me with friends at the App.js conference in June, 2022](https://appjs.co/images/photos/0014.jpg)
+![Me with friends at the App.js conference in June 2022](https://appjs.co/images/photos/0014.jpg)
 
-[It was a wonderful experience to attend it in person](https://twitter.com/amanhimself/status/1535694759653740547), meet old friends, make new ones and tavel once again. Everything from the venue, the beautiful city of Krakow, the quality talks, and the MCs, was a great experience. Kudos to the organizers for hosting it and providing that altogether!
+[It was a wonderful experience to attend it in person](https://twitter.com/amanhimself/status/1535694759653740547), meet old friends, make new ones and travel once again. Everything from the venue, the beautiful city of Krakow, the quality talks, and the MCs, was a great experience. Kudos to the organizers for hosting it and providing that altogether!
 
 ## Joining Expo
 
@@ -47,11 +47,11 @@ It also turns out people like to read them too. Here are some of the most popula
 
 - [Setup Macbook M1 for Web and React Native development](https://amanhimself.dev/blog/setup-macbook-m1/): Even though, this post was Originally published in 2021, I'm actively updating this post and will continue to do so for a while. It's been a popular post once again and I hope it helped folks to get started with their new Macbooks.
 
-- [How to install Node.js using NVM on macOS M1](https://amanhimself.dev/blog/install-nodejs-using-nvm-on-macos-m1/): I had fun collecting this piece of information. For a long time, I have been using NVM to manage Node.js on the fly. I wrote this one to make walkthrough how to set it up, and keep up with the latest Node.js versions.
+- [How to install Node.js using NVM on macOS M1](https://amanhimself.dev/blog/install-nodejs-using-nvm-on-macos-m1/): I had fun collecting this piece of information. For a long time, I have been using NVM to manage Node.js on the fly. I wrote this one to make a walkthrough of how to set it up and keep up with the latest Node.js versions.
 
 - [Getting Started with React Navigation v6 and TypeScript in React Native](https://amanhimself.dev/blog/react-navigation-v6-and-typescript-in-react-native/): A post that was exciting to work on. In this tutorial, I discussed how to add type checks to the app screens and how to add type checks to the React Navigation navigators. Using type checks and annotating navigators is a great way to make your app more robust and maintainable when using TypeScript with React Navigation.
 
-- [Implementing Infinite Scroll with React Query and FlatList in React Native](https://amanhimself.dev/blog/infinite-scroll-with-react-query-and-flatlist-in-react-native/): Another exciting post that I wrote to explore how to implement infinite scrolling in an app using React Query and a real time external API.
+- [Implementing Infinite Scroll with React Query and FlatList in React Native](https://amanhimself.dev/blog/infinite-scroll-with-react-query-and-flatlist-in-react-native/): Another exciting post that I wrote to explore how to implement infinite scrolling in an app using React Query and a real-time external API.
 
 - [Set up a Next.js project with ESLint, Prettier, Husky, and Lint Staged](https://amanhimself.dev/blog/setup-nextjs-project-with-eslint-prettier-husky-lint-staged/): In this post, I shared my personal and minimal configuration that I used in a couple of Next.js projects.
 
@@ -79,7 +79,7 @@ I occasionally cross-posted my articles on [Medium](https://medium.com/@amanhims
 
 Dev.to is my primary platform to focus on cross-posting this year. I did manage to get 45k+ views.
 
-![Dev.to stats in a nutshell this year](https://res.cloudinary.com/amanmittal/image/upload/v1672562431/CleanShot_2023-01-01_at_14.05.52_2x_z0rws4.png)
+![Dev.to stats, in a nutshell, this year](https://res.cloudinary.com/amanmittal/image/upload/v1672562431/CleanShot_2023-01-01_at_14.05.52_2x_z0rws4.png)
 
 ## Hackernoon award
 
