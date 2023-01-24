@@ -27,7 +27,7 @@ During my time there, I learned a lot about working on a team full of creative a
 
 Meeting with beautiful and like-minded people who share their work and interesting ways of solving problems is always fascinating and curiosity-engaging. Not only one gets to see the new and exciting upcoming stuff but also meeting people in person after such a long and limited human exposure felt like it was the first time.
 
-![Me with friends at the App.js conference in June 2022](https://appjs.co/images/photos/0014.jpg)
+![Me with friends at the App.js conference in June 2022](https://2022.appjs.co/images/photos/0014.jpg)
 
 [It was a wonderful experience to attend it in person](https://twitter.com/amanhimself/status/1535694759653740547), meet old friends, make new ones and travel once again. Everything from the venue, the beautiful city of Krakow, the quality talks, and the MCs, was a great experience. Kudos to the organizers for hosting it and providing that altogether!
 
