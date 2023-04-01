@@ -1,16 +1,16 @@
 export const ProjectsList = [
   {
     id: '1',
-    title: 'Expo Firebase Starter',
-    description: `🔥 A quicker way to start with Expo + Firebase JS projects. Based on latest Expo SDK, provides. Part of expo-community.`,
-    href: 'https://github.com/expo-community/expo-firebase-starter',
+    title: 'React Native Examples',
+    description: `📱 A repo that contains React Native examples most related to tutorials I publish. Has over 700+ GitHub stars 🤩`,
+    href: 'https://github.com/amandeepmittal/react-native-examples/',
     expoIcon: true
   },
   {
     id: '2',
-    title: 'React Native Examples',
-    description: `📱 A repo that contains React Native examples most related to tutorials I publish. Has over 700+ GitHub stars 🤩`,
-    href: 'https://github.com/amandeepmittal/react-native-examples/',
+    title: 'Expo Firebase Starter',
+    description: `🔥 A quicker way to start with Expo + Firebase JS projects. Based on latest Expo SDK, provides. Part of expo-community.`,
+    href: 'https://github.com/expo-community/expo-firebase-starter',
     expoIcon: true
   },
   {
