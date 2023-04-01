@@ -7,7 +7,7 @@ tag: 'tools'
 canonicalUrl: 'https://amanhimself.dev/blog/setup-macbook-m1/'
 ---
 
-> 🕑 Updated on: November 24, 2022
+> 🕑 Updated on: April 1, 2023
 
 ![cover_image](https://i.imgur.com/tAJjTOU.png)
 
@@ -19,9 +19,10 @@ When setting up a new Macbook, here are the initial steps I take:
 
 - **Downloads**:
 
-  - **Browser**: Download [Brave Browser](https://brave.com/download/), [Google Chrome](https://www.google.com/chrome/?brand=YTUH&gclid=EAIaIQobChMI9vmFxpL0-AIVDJ1LBR11UATAEAAYASAAEgJBQPD_BwE&gclsrc=aw.ds)
+  - **Browser**: Download [Arc Browser](https://arc.net/), [Brave Browser](https://brave.com/download/), [Google Chrome](https://www.google.com/chrome/?brand=YTUH&gclid=EAIaIQobChMI9vmFxpL0-AIVDJ1LBR11UATAEAAYASAAEgJBQPD_BwE&gclsrc=aw.ds)
   - **Terminal**: Download iTerm 2 and set it to default
   - **Editor/IDE**: VSCode
+  - **Notes**: Obsidian (this is where I keep all my work/personal notes)
   - **Other downloads**: CleanMyMac X, Xcode
 
 - **Log in**
@@ -81,12 +82,10 @@ System preferences and settings that I prefer. These settings are available in t
 ## Setting up the development machine
 
 - **Other apps on my macOS**:
-  - Brave
   - Android Studio
   - [Insomnia](https://insomnia.rest/) as REST API client
   - Slack or Discord (for work and community)
   - There (to track team mate's timezones)
-  - LICEcap (for recoding gifs)
   - Zoom (for work)
   - GitHub Desktop App
   - [Cleanshot](https://cleanshot.com/) (for screenshots and recording videos)
@@ -206,8 +205,7 @@ Using the terminal, you can install the Homebrew by executing the default comman
 
 - Node.js and npm via Node Version Manager (NVM). [Read the entire blog post on how to install Node.js using NVM](https://amanhimself.dev/blog/install-nodejs-using-nvm-on-macos-m1/).
 - [scrcpy](https://github.com/Genymobile/scrcpy) (control Android devices connect via USB on mac)
-- ~~Karabiner-Elements (remapping function keys for Macbook Air or with Macbooks without touchbar)~~
-- install [Watchman](https://facebook.github.io/watchman/) to watch changes in the filesystem using the command: `brew install watchman`
+- install [Watchman](https://facebook.github.io/watchman/) to watch changes in the filesystem using the command: `brew install watchman`.
 
 ## Install git
 
@@ -253,26 +251,6 @@ npm config set init-license MIT
 
 - [expo-cli](https://docs.expo.io/workflow/expo-cli/)
 - [npm-check](https://www.npmjs.com/package/npm-check) to check for outdated, incorrect, and unused dependencies.
-
-## Optional: Karabiner-Elements to remap function keys
-
-> No longer using Karabiner-Elements as I gave up my Macbook Air
-
-When I bought Macbook Air M1, it had function keys (that got me excited), but I don't understand why Apple decided to replace function keys that would allow me to control Keyboard Brightness! Moreover, replace it with "Do Not Disturb".
-
-_Why? That got me confused 🤷_
-
-I found this tool called [karabiner Elements](https://karabiner-elements.pqrs.org/) that is installed as a brew formula:
-
-```shell
-brew install karabiner-elements
-```
-
-![screenshot-of-function-keys-on-macbbok-air-m1-2020](https://i.imgur.com/n1jGglG.jpg)
-
-Here are the key mappings I am using now:
-
-![key-mappings-with karabiner-elements](https://i.imgur.com/uoqR0Ht.png)
 
 ## VSCode
 
@@ -479,7 +457,7 @@ I use the VSCode editor for both writing code and writing blog posts. Thus, the 
 - [Auto Complete Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-complete-tag)
 - [Auto Rename Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag)
 - [Babel JavaScript](https://marketplace.visualstudio.com/items?itemName=mgmcdermott.vscode-language-babel)
-- ~~Bracket Pair Colorizer 2~~ - VSCode now supports this natively. Check out my post 👉 [How to configure VSCode Bracket Pair Colors Natively](https://amanhimself.dev/blog/how-to-configure-vscode-bracket-colors-natively/)
+- ~~Bracket Pair Colorizer 2~~ - VSCode now supports this natively. See [How to configure VSCode Bracket Pair Colors Natively](https://amanhimself.dev/blog/how-to-configure-vscode-bracket-colors-natively/)
 - [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
 - [Code::Stats](https://codestats.net/)
 - [Color Highlight](https://marketplace.visualstudio.com/items?itemName=naumovs.color-highlight)
