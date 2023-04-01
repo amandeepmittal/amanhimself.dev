@@ -99,6 +99,7 @@ System preferences and settings that I prefer. These settings are available in t
   - Numbers
   - Notion
   - Telegram
+  - [ImageOptim](https://imageoptim.com/mac) (for compressing image files)
 
 ## ZSH and Oh My Zsh
 
@@ -504,6 +505,16 @@ I use the VSCode editor for both writing code and writing blog posts. Thus, the 
 ```
 
 If you decide not to put the flag ` --agree-to-license`, you will be prompted by Apple's interactive install, and you will have to agree to their terms and license conditions to use it.
+
+## ImageOptim settings
+
+The custom config I use for ImageOptim app:
+
+![General settings in ImageOptim](https://i.imgur.com/zkKRiyK.png)
+
+![Quality settings in ImageOptim](https://i.imgur.com/2rMbsUW.png)
+
+![Optimization settings in ImageOptim](https://i.imgur.com/CwQtSbL.png)
 
 ## Conclusion
 
