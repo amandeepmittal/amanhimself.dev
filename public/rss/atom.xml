@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://amanhimself.dev/</id>
     <title>Aman Mittal' blog</title>
-    <updated>2023-04-01T10:11:03.266Z</updated>
+    <updated>2023-04-01T10:36:43.307Z</updated>
     <generator>Feed for Node.js</generator>
     <author>
         <name>Aman Mittal</name>
@@ -13,6 +13,30 @@
     <link rel="self" href="https://amanhimself.dev//rss/atom.xml"/>
     <icon>https://amanhimself.dev//favicon.jpg</icon>
     <rights>2019 - 2023, Aman Mittal · All Rights Reserved.</rights>
+    <entry>
+        <title type="html"><![CDATA[Convert png to jpg using ffmpeg]]></title>
+        <id>https://amanhimself.dev//blog/convert-png-to-jpg-using-ffmpeg</id>
+        <link href="https://amanhimself.dev//blog/convert-png-to-jpg-using-ffmpeg"/>
+        <updated>2023-04-01T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Convert png to jpg using ffmpeg]]></summary>
+        <author>
+            <name>Aman Mittal</name>
+            <email>amanmittal.work@gmail.com</email>
+            <uri>https://twitter.com/amanhimself</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Keep homebrew healthier]]></title>
+        <id>https://amanhimself.dev//blog/keep-homebrew-up-to-date</id>
+        <link href="https://amanhimself.dev//blog/keep-homebrew-up-to-date"/>
+        <updated>2023-04-01T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Keep homebrew healthier]]></summary>
+        <author>
+            <name>Aman Mittal</name>
+            <email>amanmittal.work@gmail.com</email>
+            <uri>https://twitter.com/amanhimself</uri>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[2022 - A year in review]]></title>
         <id>https://amanhimself.dev//blog/year-in-review-2022</id>

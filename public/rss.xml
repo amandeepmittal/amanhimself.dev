@@ -4,10 +4,26 @@
         <title>Aman Mittal' blog</title>
         <link>https://amanhimself.dev/</link>
         <description></description>
-        <lastBuildDate>Sat, 01 Apr 2023 10:11:03 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 01 Apr 2023 10:36:43 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Feed for Node.js</generator>
         <copyright>2019 - 2023, Aman Mittal · All Rights Reserved.</copyright>
+        <item>
+            <title><![CDATA[Convert png to jpg using ffmpeg]]></title>
+            <link>https://amanhimself.dev//blog/convert-png-to-jpg-using-ffmpeg</link>
+            <guid>https://amanhimself.dev//blog/convert-png-to-jpg-using-ffmpeg</guid>
+            <pubDate>Sat, 01 Apr 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[Convert png to jpg using ffmpeg]]></description>
+            <author>amanmittal.work@gmail.com (Aman Mittal)</author>
+        </item>
+        <item>
+            <title><![CDATA[Keep homebrew healthier]]></title>
+            <link>https://amanhimself.dev//blog/keep-homebrew-up-to-date</link>
+            <guid>https://amanhimself.dev//blog/keep-homebrew-up-to-date</guid>
+            <pubDate>Sat, 01 Apr 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[Keep homebrew healthier]]></description>
+            <author>amanmittal.work@gmail.com (Aman Mittal)</author>
+        </item>
         <item>
             <title><![CDATA[2022 - A year in review]]></title>
             <link>https://amanhimself.dev//blog/year-in-review-2022</link>

@@ -9,6 +9,28 @@
     },
     "items": [
         {
+            "id": "https://amanhimself.dev//blog/convert-png-to-jpg-using-ffmpeg",
+            "url": "https://amanhimself.dev//blog/convert-png-to-jpg-using-ffmpeg",
+            "title": "Convert png to jpg using ffmpeg",
+            "summary": "Convert png to jpg using ffmpeg",
+            "date_modified": "2023-04-01T00:00:00.000Z",
+            "author": {
+                "name": "Aman Mittal",
+                "url": "https://twitter.com/amanhimself"
+            }
+        },
+        {
+            "id": "https://amanhimself.dev//blog/keep-homebrew-up-to-date",
+            "url": "https://amanhimself.dev//blog/keep-homebrew-up-to-date",
+            "title": "Keep homebrew healthier",
+            "summary": "Keep homebrew healthier",
+            "date_modified": "2023-04-01T00:00:00.000Z",
+            "author": {
+                "name": "Aman Mittal",
+                "url": "https://twitter.com/amanhimself"
+            }
+        },
+        {
             "id": "https://amanhimself.dev//blog/year-in-review-2022",
             "url": "https://amanhimself.dev//blog/year-in-review-2022",
             "title": "2022 - A year in review",
