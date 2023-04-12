@@ -18,7 +18,7 @@ Using Expo, there are different ways you can set up and use environment variable
 To set up environment variables in an Expo app, the initial step is to install the `dotenv` and `expo-constants` packages.
 
 ```bash
-expo init dotenv expo-constants
+npx expo install dotenv expo-constants
 ```
 
 ## Rename app.json
