@@ -7,6 +7,8 @@ tag: 'expo'
 canonicalUrl: 'https://amanhimself.dev/blog/environment-variables-in-expo-managed-workflow/'
 ---
 
+> Updated: Apr 12, 2023
+
 Managing different keys for different environments, such as development or production, is common among JavaScript developers. Therefore, variables defined in this file may change during development and production, but the code remains unchanged. Hence, the mechanism of the `.env` file exists.
 
 Using Expo, there are different ways you can set up and use environment variables. My preferred method is to use the dotenv file. Environment variables defined in this file are loaded using a package called `dotenv`.
@@ -41,8 +43,12 @@ export default {
 
 All the keys inside the extra object are readable app-wide using `expo-constants`. An environment variable is accessible through `Expo.Constants.manifest.apiKey`.
 
-In the case of TypeScript, use optional parameter syntax to avoid squiggly: "Object is possibly 'undefined' or 'null'".
+In the case of TypeScript, use optional parameter syntax to avoid squiggly: `"Object is possibly 'undefined' or 'null'"`.
 
 ```tsx
 const API_KEY = Constants?.manifest?.extra?.apiKey;
 ```
+
+## More
+
+To learn more about how to use Environment variables in an Expo project, refer to Expo's [official documentation](https://docs.expo.dev/guides/environment-variables/).
