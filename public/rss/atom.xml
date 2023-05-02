@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://amanhimself.dev/</id>
     <title>Aman Mittal' blog</title>
-    <updated>2023-04-01T10:36:43.307Z</updated>
+    <updated>2023-05-02T10:38:31.957Z</updated>
     <generator>Feed for Node.js</generator>
     <author>
         <name>Aman Mittal</name>
@@ -13,6 +13,18 @@
     <link rel="self" href="https://amanhimself.dev//rss/atom.xml"/>
     <icon>https://amanhimself.dev//favicon.jpg</icon>
     <rights>2019 - 2023, Aman Mittal · All Rights Reserved.</rights>
+    <entry>
+        <title type="html"><![CDATA[Set default location for images, files and attachments in Obsidian]]></title>
+        <id>https://amanhimself.dev//blog/set-default-folder-for-images-files-and-attachments-in-obsidian</id>
+        <link href="https://amanhimself.dev//blog/set-default-folder-for-images-files-and-attachments-in-obsidian"/>
+        <updated>2023-05-02T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Set default location for images, files and attachments in Obsidian]]></summary>
+        <author>
+            <name>Aman Mittal</name>
+            <email>amanmittal.work@gmail.com</email>
+            <uri>https://twitter.com/amanhimself</uri>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Convert png to jpg using ffmpeg]]></title>
         <id>https://amanhimself.dev//blog/convert-png-to-jpg-using-ffmpeg</id>
@@ -26,11 +38,11 @@
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Keep homebrew healthier]]></title>
+        <title type="html"><![CDATA[Keep homebrew up to date]]></title>
         <id>https://amanhimself.dev//blog/keep-homebrew-up-to-date</id>
         <link href="https://amanhimself.dev//blog/keep-homebrew-up-to-date"/>
         <updated>2023-04-01T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Keep homebrew healthier]]></summary>
+        <summary type="html"><![CDATA[Keep homebrew up to date]]></summary>
         <author>
             <name>Aman Mittal</name>
             <email>amanmittal.work@gmail.com</email>

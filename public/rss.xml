@@ -4,10 +4,18 @@
         <title>Aman Mittal' blog</title>
         <link>https://amanhimself.dev/</link>
         <description></description>
-        <lastBuildDate>Sat, 01 Apr 2023 10:36:43 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 02 May 2023 10:38:31 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Feed for Node.js</generator>
         <copyright>2019 - 2023, Aman Mittal · All Rights Reserved.</copyright>
+        <item>
+            <title><![CDATA[Set default location for images, files and attachments in Obsidian]]></title>
+            <link>https://amanhimself.dev//blog/set-default-folder-for-images-files-and-attachments-in-obsidian</link>
+            <guid>https://amanhimself.dev//blog/set-default-folder-for-images-files-and-attachments-in-obsidian</guid>
+            <pubDate>Tue, 02 May 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[Set default location for images, files and attachments in Obsidian]]></description>
+            <author>amanmittal.work@gmail.com (Aman Mittal)</author>
+        </item>
         <item>
             <title><![CDATA[Convert png to jpg using ffmpeg]]></title>
             <link>https://amanhimself.dev//blog/convert-png-to-jpg-using-ffmpeg</link>
@@ -17,11 +25,11 @@
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
         <item>
-            <title><![CDATA[Keep homebrew healthier]]></title>
+            <title><![CDATA[Keep homebrew up to date]]></title>
             <link>https://amanhimself.dev//blog/keep-homebrew-up-to-date</link>
             <guid>https://amanhimself.dev//blog/keep-homebrew-up-to-date</guid>
             <pubDate>Sat, 01 Apr 2023 00:00:00 GMT</pubDate>
-            <description><![CDATA[Keep homebrew healthier]]></description>
+            <description><![CDATA[Keep homebrew up to date]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
         <item>
