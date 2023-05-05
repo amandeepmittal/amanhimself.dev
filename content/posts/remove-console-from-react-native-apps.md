@@ -38,6 +38,6 @@ module.exports = function () {
 
 This will remove any `console` statements from the code.
 
-## Why does it works
+## Why does it work
 
 React Native uses [Babel](https://babeljs.io/) as a tool to read and parse React and ES6 (or later) syntax into a specific version of JavaScript code that can run in an environment (that doesn't support newer ES6 or React syntax).
