@@ -18,7 +18,7 @@ const AboutPage = () => {
         <Heading size="lg" as="h1">
           About Me
         </Heading>
-        <small>Last Update: December 21, 2022</small>
+        <small>Last Update: May 17, 2023</small>
         <Text lineHeight="175%" as="h2" fontSize="lg" pt={2}>
           Hi! My name is Aman Mittal. I am an independent software developer,
           and a technical writer. I love working with open source technologies
@@ -260,7 +260,7 @@ const AboutPage = () => {
         </Heading>
         <List spacing={4}>
           <ListItem>
-            🚀 Software consultant and docs at Expo (2022 - Present)
+            🚀 Software consultant and documentation maintainer at Expo (2022 - Present)
           </ListItem>
           <ListItem> 📝 Senior Content Developer at Vercel (2022)</ListItem>
           <ListItem>🥑 Developer Advocate at Draftbit (2021 - 2022)</ListItem>
@@ -287,6 +287,16 @@ const AboutPage = () => {
         <Heading size="lg" as="h2" pt={8}>
           Speaking
         </Heading>
+        <Heading size="md" as="h2" pt={8}>
+          2023
+        </Heading>
+        <List spacing={4}>
+          <ListItem fontSize="lg">
+            <ExternalLink href="https://twitter.com/flexbox_/status/1656307285973499906">
+              Developing and deploying React Native apps with Expo and EAS
+            </ExternalLink>
+          </ListItem>
+        </List>
         <Heading size="md" as="h2" pt={8}>
           2021
         </Heading>
