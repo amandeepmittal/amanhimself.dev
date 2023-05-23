@@ -7,11 +7,25 @@ tag: 'tools'
 canonicalUrl: 'https://amanhimself.dev/blog/setup-macbook-m1/'
 ---
 
-> 🕑 Updated on: April 1, 2023
+> 🕑 Updated on: May 23, 2023
 
 ![cover_image](https://i.imgur.com/tAJjTOU.png)
 
-It's 2022, and I am still coming back to this article. I wrote this originally in 2021 to keep track of what I need to start when setting up a new laptop. Since then, I have had two Macbook Pros using an Apple Silicon processor (M1). I try to keep this article up to date.
+It's 2023, and I am still coming back to this article. I wrote this originally in 2021 to keep track of what I need to start when setting up a new laptop. Since then, I have had two Macbook Pros using an Apple Silicon processor (M1). I try to keep this article up to date.
+
+I believe small optimizations help you go faster in the long run. Also, a flavour of personalization makes my developer experience more enjoyable. I like to keep two separate setups, one for work and other for personal use and fun. However, often times I end up switching between both. Having the same set of tools and configurations help me just be me. It also helps me keep my setup portable and up to date (have had those days where I lost everything).
+
+## Step 1: Install Xcode and its command line tools
+
+To get started, open App Store on the Mac and install [Xcode](https://apps.apple.com/in/app/xcode/id497799835?mt=12). It's a large download, so it might take a while.
+
+Once installed, open the Terminal app on the Mac and run:
+
+```shell
+xcode-select --install && sudo xcodebuild -license
+```
+
+## Step 2: Install homebrew as a package manager
 
 ## First steps
 
