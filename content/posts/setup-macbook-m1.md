@@ -279,8 +279,6 @@ I am using the following VSCode configuration:
   },
   "extensions.autoUpdate": false,
   // --------------------------------------
-  // EXPO TOOLS
-  "json.schemas": [],
   // --------------------------------------
   // CODE::STATS EXTENSION
   // --------------------------------------
@@ -518,7 +516,6 @@ For file icons, I love [Material-Icon-Theme](https://marketplace.visualstudio.co
 - [Paste JSON as code](https://marketplace.visualstudio.com/items?itemName=quicktype.quicktype)
 - [React Native Tools](https://marketplace.visualstudio.com/items?itemName=msjsdiag.vscode-react-native)
 - [Read Time](https://marketplace.visualstudio.com/items?itemName=johnpapa.read-time)
-- [SVG Viewer](https://marketplace.visualstudio.com/items?itemName=cssho.vscode-svgviewer)
 - [TODO Highlight](https://marketplace.visualstudio.com/items?itemName=wayou.vscode-todo-highlight)
 - [Version Lens](https://marketplace.visualstudio.com/items?itemName=pflannery.vscode-versionlens)
 - [WakaTime](https://marketplace.visualstudio.com/items?itemName=WakaTime.vscode-wakatime)
