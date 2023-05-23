@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://amanhimself.dev/</id>
     <title>Aman Mittal' blog</title>
-    <updated>2023-05-17T09:12:09.001Z</updated>
+    <updated>2023-05-23T11:35:00.678Z</updated>
     <generator>Feed for Node.js</generator>
     <author>
         <name>Aman Mittal</name>
@@ -1934,11 +1934,11 @@
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Writing a Node.js Twitter Bot Part 1]]></title>
-        <id>https://amanhimself.dev//blog/node-js-twitter-bot-tutorial</id>
-        <link href="https://amanhimself.dev//blog/node-js-twitter-bot-tutorial"/>
+        <title type="html"><![CDATA[Writing a Node.js Twitter Bot Part 2]]></title>
+        <id>https://amanhimself.dev//blog/node-js-twitter-bot-tutorial-part-2</id>
+        <link href="https://amanhimself.dev//blog/node-js-twitter-bot-tutorial-part-2"/>
         <updated>2016-12-25T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Writing a Node.js Twitter Bot Part 1]]></summary>
+        <summary type="html"><![CDATA[Writing a Node.js Twitter Bot Part 2]]></summary>
         <author>
             <name>Aman Mittal</name>
             <email>amanmittal.work@gmail.com</email>
@@ -1946,11 +1946,11 @@
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Writing a Node.js Twitter Bot Part 2]]></title>
-        <id>https://amanhimself.dev//blog/node-js-twitter-bot-tutorial-part-2</id>
-        <link href="https://amanhimself.dev//blog/node-js-twitter-bot-tutorial-part-2"/>
+        <title type="html"><![CDATA[Writing a Node.js Twitter Bot Part 1]]></title>
+        <id>https://amanhimself.dev//blog/node-js-twitter-bot-tutorial</id>
+        <link href="https://amanhimself.dev//blog/node-js-twitter-bot-tutorial"/>
         <updated>2016-12-25T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Writing a Node.js Twitter Bot Part 2]]></summary>
+        <summary type="html"><![CDATA[Writing a Node.js Twitter Bot Part 1]]></summary>
         <author>
             <name>Aman Mittal</name>
             <email>amanmittal.work@gmail.com</email>
