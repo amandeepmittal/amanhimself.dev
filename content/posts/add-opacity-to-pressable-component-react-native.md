@@ -7,7 +7,7 @@ tag: 'react-native'
 canonicalUrl: 'https://amanhimself.dev/blog/add-opacity-to-pressable-component-react-native/'
 ---
 
-Pressable component was introduced in 2020 as a core component wrapper that can be used instead of existing touchable components in React Native. These touchable components are TouchableOpacity, TouchableHighlight, and TouchableWithoutFeedback. These components include styles and effects that sometimes do not meet the desired outcome on individual platforms (iOS and Android).
+Pressable component was introduced in 2020 as a core component wrapper that can be used instead of existing touchable components in React Native. These touchable components are TouchableOpacity, TouchableHighlight, and TouchableWithoutFeedback. These components include styles and effects that sometimes do not meet the desired outcome on individual platforms (Android and iOS).
 
 The way I see using the Pressable component is that it can be customized in terms of style, appearance, and extended functionality by creating a custom wrapper/component around it. It also offers a lot of props such as `onPressIn`, `onPressLong`, `hitSlop`, `delayLongPress` and so on, that can be used to implement these extended functionalities.
 
