@@ -4,10 +4,26 @@
         <title>Aman Mittal' blog</title>
         <link>https://amanhimself.dev/</link>
         <description></description>
-        <lastBuildDate>Tue, 23 May 2023 11:35:00 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 24 May 2023 09:58:24 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Feed for Node.js</generator>
         <copyright>2019 - 2023, Aman Mittal · All Rights Reserved.</copyright>
+        <item>
+            <title><![CDATA[Bypass CORS to fetch files when working with localhost]]></title>
+            <link>https://amanhimself.dev//blog/bypass-cors-when-working-with-localhost</link>
+            <guid>https://amanhimself.dev//blog/bypass-cors-when-working-with-localhost</guid>
+            <pubDate>Wed, 24 May 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[Bypass CORS to fetch files when working with localhost]]></description>
+            <author>amanmittal.work@gmail.com (Aman Mittal)</author>
+        </item>
+        <item>
+            <title><![CDATA[Setup Macbook M1 for Web and React Native development]]></title>
+            <link>https://amanhimself.dev//blog/setup-macbook-m1</link>
+            <guid>https://amanhimself.dev//blog/setup-macbook-m1</guid>
+            <pubDate>Tue, 23 May 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[Setup Macbook M1 for Web and React Native development]]></description>
+            <author>amanmittal.work@gmail.com (Aman Mittal)</author>
+        </item>
         <item>
             <title><![CDATA[Set default location for images, files and attachments in Obsidian]]></title>
             <link>https://amanhimself.dev//blog/set-default-folder-for-images-files-and-attachments-in-obsidian</link>
@@ -318,14 +334,6 @@
             <guid>https://amanhimself.dev//blog/upload-image-to-cloudinary-using-expo-camera</guid>
             <pubDate>Wed, 31 Mar 2021 00:00:00 GMT</pubDate>
             <description><![CDATA[How to upload an image using Expo Camera to Cloudinary]]></description>
-            <author>amanmittal.work@gmail.com (Aman Mittal)</author>
-        </item>
-        <item>
-            <title><![CDATA[Setup Macbook M1 for Web and React Native development]]></title>
-            <link>https://amanhimself.dev//blog/setup-macbook-m1</link>
-            <guid>https://amanhimself.dev//blog/setup-macbook-m1</guid>
-            <pubDate>Sun, 14 Mar 2021 00:00:00 GMT</pubDate>
-            <description><![CDATA[Setup Macbook M1 for Web and React Native development]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
         <item>

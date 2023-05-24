@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://amanhimself.dev/</id>
     <title>Aman Mittal' blog</title>
-    <updated>2023-05-23T11:35:00.678Z</updated>
+    <updated>2023-05-24T09:58:24.586Z</updated>
     <generator>Feed for Node.js</generator>
     <author>
         <name>Aman Mittal</name>
@@ -13,6 +13,30 @@
     <link rel="self" href="https://amanhimself.dev//rss/atom.xml"/>
     <icon>https://amanhimself.dev//favicon.jpg</icon>
     <rights>2019 - 2023, Aman Mittal · All Rights Reserved.</rights>
+    <entry>
+        <title type="html"><![CDATA[Bypass CORS to fetch files when working with localhost]]></title>
+        <id>https://amanhimself.dev//blog/bypass-cors-when-working-with-localhost</id>
+        <link href="https://amanhimself.dev//blog/bypass-cors-when-working-with-localhost"/>
+        <updated>2023-05-24T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Bypass CORS to fetch files when working with localhost]]></summary>
+        <author>
+            <name>Aman Mittal</name>
+            <email>amanmittal.work@gmail.com</email>
+            <uri>https://twitter.com/amanhimself</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Setup Macbook M1 for Web and React Native development]]></title>
+        <id>https://amanhimself.dev//blog/setup-macbook-m1</id>
+        <link href="https://amanhimself.dev//blog/setup-macbook-m1"/>
+        <updated>2023-05-23T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Setup Macbook M1 for Web and React Native development]]></summary>
+        <author>
+            <name>Aman Mittal</name>
+            <email>amanmittal.work@gmail.com</email>
+            <uri>https://twitter.com/amanhimself</uri>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Set default location for images, files and attachments in Obsidian]]></title>
         <id>https://amanhimself.dev//blog/set-default-folder-for-images-files-and-attachments-in-obsidian</id>
@@ -475,18 +499,6 @@
         <link href="https://amanhimself.dev//blog/upload-image-to-cloudinary-using-expo-camera"/>
         <updated>2021-03-31T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[How to upload an image using Expo Camera to Cloudinary]]></summary>
-        <author>
-            <name>Aman Mittal</name>
-            <email>amanmittal.work@gmail.com</email>
-            <uri>https://twitter.com/amanhimself</uri>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Setup Macbook M1 for Web and React Native development]]></title>
-        <id>https://amanhimself.dev//blog/setup-macbook-m1</id>
-        <link href="https://amanhimself.dev//blog/setup-macbook-m1"/>
-        <updated>2021-03-14T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Setup Macbook M1 for Web and React Native development]]></summary>
         <author>
             <name>Aman Mittal</name>
             <email>amanmittal.work@gmail.com</email>

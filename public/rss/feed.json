@@ -9,6 +9,28 @@
     },
     "items": [
         {
+            "id": "https://amanhimself.dev//blog/bypass-cors-when-working-with-localhost",
+            "url": "https://amanhimself.dev//blog/bypass-cors-when-working-with-localhost",
+            "title": "Bypass CORS to fetch files when working with localhost",
+            "summary": "Bypass CORS to fetch files when working with localhost",
+            "date_modified": "2023-05-24T00:00:00.000Z",
+            "author": {
+                "name": "Aman Mittal",
+                "url": "https://twitter.com/amanhimself"
+            }
+        },
+        {
+            "id": "https://amanhimself.dev//blog/setup-macbook-m1",
+            "url": "https://amanhimself.dev//blog/setup-macbook-m1",
+            "title": "Setup Macbook M1 for Web and React Native development",
+            "summary": "Setup Macbook M1 for Web and React Native development",
+            "date_modified": "2023-05-23T00:00:00.000Z",
+            "author": {
+                "name": "Aman Mittal",
+                "url": "https://twitter.com/amanhimself"
+            }
+        },
+        {
             "id": "https://amanhimself.dev//blog/set-default-folder-for-images-files-and-attachments-in-obsidian",
             "url": "https://amanhimself.dev//blog/set-default-folder-for-images-files-and-attachments-in-obsidian",
             "title": "Set default location for images, files and attachments in Obsidian",
@@ -432,17 +454,6 @@
             "title": "How to upload an image using Expo Camera to Cloudinary",
             "summary": "How to upload an image using Expo Camera to Cloudinary",
             "date_modified": "2021-03-31T00:00:00.000Z",
-            "author": {
-                "name": "Aman Mittal",
-                "url": "https://twitter.com/amanhimself"
-            }
-        },
-        {
-            "id": "https://amanhimself.dev//blog/setup-macbook-m1",
-            "url": "https://amanhimself.dev//blog/setup-macbook-m1",
-            "title": "Setup Macbook M1 for Web and React Native development",
-            "summary": "Setup Macbook M1 for Web and React Native development",
-            "date_modified": "2021-03-14T00:00:00.000Z",
             "author": {
                 "name": "Aman Mittal",
                 "url": "https://twitter.com/amanhimself"
