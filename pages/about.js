@@ -260,7 +260,8 @@ const AboutPage = () => {
         </Heading>
         <List spacing={4}>
           <ListItem>
-            🚀 Software consultant and documentation maintainer at Expo (2022 - Present)
+            🚀 Software consultant and documentation maintainer at Expo (2022 -
+            Present)
           </ListItem>
           <ListItem> 📝 Senior Content Developer at Vercel (2022)</ListItem>
           <ListItem>🥑 Developer Advocate at Draftbit (2021 - 2022)</ListItem>
@@ -292,8 +293,9 @@ const AboutPage = () => {
         </Heading>
         <List spacing={4}>
           <ListItem fontSize="lg">
-            <ExternalLink href="https://twitter.com/flexbox_/status/1656307285973499906">
+            <ExternalLink href="https://twitter.com/appjsconf/status/1653746880738742272">
               Developing and deploying React Native apps with Expo and EAS
+              (Workshop at App.js 2023)
             </ExternalLink>
           </ListItem>
         </List>
