@@ -7,14 +7,14 @@ tag: 'expo'
 canonicalUrl: 'https://amanhimself.dev/blog/show-hide-password-in-react-native-using-custom-hook/'
 ---
 
-Building login and signup forms in a React Native app comprise input fields and buttons. One field that you will often find yourself adding to these forms is the password field. This password field is composed of using React Native's `TextInput` component.
+> Updated on May 24, 2023
 
-The common behavior of this field is to hide a user's password behind obscure characters.
+Building log-in and sign-up forms in a React Native app are fundamentally composed of input fields and buttons. One field that you will often find yourself adding to these forms is the password field. This password field is created using React Native's `TextInput` component. The common behavior of this field is to hide a user's password behind obscure characters.
 
 Take a look at an example of the `TextInput` component that is used to create a password field.
 
 ```js
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { StyleSheet, TextInput, View } from 'react-native';
 
 export default function App() {
@@ -65,23 +65,24 @@ const styles = StyleSheet.create({
 });
 ```
 
-It uses the `secureTextEntry` prop such that when a text value is entered in the input field, it is unclear what is being entered in that field.
-
-Here is the output of the above snippet on a device:
+It uses the `secureTextEntry` prop such that when a text value is entered in the input field, it is not visible as to what is being entered in that field. Here is the output of the above snippet on a device:
 
 ![ss1](https://i.imgur.com/kn0yv9z.gif)
 
-However, giving an option to a user to let them see the current value they enter could lead to a good experience and might be necessary in some cases.
+However, giving an option to a user to let them see the current value they enter leads to a good experience and might be necessary in most cases.
 
-## Show or Hide Password Visibility Hook
+> [Source code in this GitHub repo](https://github.com/amandeepmittal/react-native-examples/tree/main/password-visibility-custom-hook-example).
+
+## Show or Hide Password Visibility hook
 
 To add the ability to show or hide the password field's visibility, let's create a custom hook in a new file called `useTogglePasswordVisibility.js`.
 
 Start by importing the `useState` hook from React library. You will need to create two different state variables to toggle between the field's visibility and change the icon.
 
-Then define a function called `useTogglePasswordVisibility`. Inside this function, create two new state variables. The first one is called `passwordVisibility`. Its initial value is set to boolean `true`. The reason is that this variable will be the value of the prop `secureTextEntry` on the `TextInput` component. You would want to hide the password field initially when the user enters the password in the input field.
+Then define a function called `useTogglePasswordVisibility`. Inside this function, create two new state variables:
 
-The second state variable defined is called `rightIcon`. It has a default value of `eye`. This value depends on the Icon Library you're using in your React Native app. For this example, I'm using **MaterialCommunityIcons** from [Expo Vector Icons](https://docs.expo.dev/guides/icons/).
+- `passwordVisibility`: set its initial value to `true`. The reason is that this variable will be the value of the prop `secureTextEntry` on the `TextInput` component. You would want to hide the password field initially when the user enters the password in the input field.
+- `rightIcon`: set its default valye to `eye`. This value depends on the icon library you're using in your React Native app. For this example, I'm using **MaterialCommunityIcons** from [Expo Vector Icons](https://docs.expo.dev//guides/icons/#expovector-icons).
 
 ```js
 export const useTogglePasswordVisibility = () => {
@@ -92,9 +93,7 @@ export const useTogglePasswordVisibility = () => {
 };
 ```
 
-Next, add a method called `handlePasswordVisibility` that will allow the app user to toggle the password field's visibility between shown and hidden state.
-
-Lastly, do not forget to return all the variables and the handler method.
+Next, add a method called `handlePasswordVisibility` that will allow the app user to toggle the password field's visibility between shown and hidden state. Do not forget to return all the variables and the handler method.
 
 ```js
 export const useTogglePasswordVisibility = () => {
@@ -119,16 +118,16 @@ export const useTogglePasswordVisibility = () => {
 };
 ```
 
-## Use the Password Visibility Hook
+## Use the Password Visibility hook
 
 Start by updating import statements in the `App.js` file:
 
 ```js
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { StyleSheet, Pressable, TextInput, View } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
-import { useTogglePasswordVisibility } from './hooks/useTogglePasswordVisibility';
+import { useTogglePasswordVisibility } from './hook/useTogglePasswordVisibility';
 ```
 
 Next, access the required variables and method from the `useTogglePasswordVisibility` hook. Add the following line at the top of the `App` component:
@@ -152,9 +151,7 @@ Modify the `TextInput` component's prop. Make sure to add the `passwordVisibilit
 />
 ```
 
-Inside the `View` component that wraps the `TextInput`, add a button using the `Pressable` component. This button will allow the user to toggle between the hidden and shown state of the password field.
-
-This button wraps the icon component.
+Inside the `View` component that wraps the `TextInput`, add a button using the `Pressable` component. This button will allow the user to toggle between the hidden and shown state of the password field. It also wraps the icon component.
 
 ```js
 <View style={styles.inputContainer}>
@@ -176,7 +173,7 @@ import React, { useState } from 'react';
 import { StyleSheet, Pressable, TextInput, View } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
-import { useTogglePasswordVisibility } from './hooks/useTogglePasswordVisibility';
+import { useTogglePasswordVisibility } from './hook/useTogglePasswordVisibility';
 
 export default function App() {
   const { passwordVisibility, rightIcon, handlePasswordVisibility } =
@@ -230,5 +227,3 @@ const styles = StyleSheet.create({
   }
 });
 ```
-
-[Source code at this GitHub repo](https://github.com/amandeepmittal/react-native-examples/tree/master/custom-hook-password-toggle)
