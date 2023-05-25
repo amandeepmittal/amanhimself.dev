@@ -59,7 +59,7 @@ const Tag = ({ tag }) => {
     );
   } else if (tag === 'writing') {
     return (
-      <Box bg="#F87474" p={1} borderRadius={4}>
+      <Box bg="#526D82" p={1} borderRadius={4}>
         <TagsSummary tag={tag} />
       </Box>
     );
@@ -71,13 +71,13 @@ const Tag = ({ tag }) => {
     );
   } else if (tag === 'year-review') {
     return (
-      <Box bg="#8c8c8c" p={1} borderRadius={4}>
+      <Box bg="#B590CA" p={1} borderRadius={4}>
         <TagsSummary tag={tag} />
       </Box>
     );
   } else if (tag === 'tools') {
     return (
-      <Box bg="#9778d1" p={1} borderRadius={4}>
+      <Box bg="#B799FF" p={1} borderRadius={4}>
         <TagsSummary tag={tag} />
       </Box>
     );

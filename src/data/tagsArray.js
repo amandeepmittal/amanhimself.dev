@@ -42,7 +42,7 @@ const TAGS_ARRAY = [
   },
   {
     name: 'year-review',
-    color: '#8c8c8c'
+    color: '#B590CA'
   },
   {
     name: 'xcode',
@@ -54,7 +54,7 @@ const TAGS_ARRAY = [
   },
   {
     name: 'tools',
-    color: '#9778d1'
+    color: '#B799FF'
   },
   {
     name: 'typescript',
@@ -62,7 +62,7 @@ const TAGS_ARRAY = [
   },
   {
     name: 'writing',
-    color: '#F87474'
+    color: '#526D82'
   }
 ];
 
