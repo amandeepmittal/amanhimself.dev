@@ -3,7 +3,7 @@ date: '2023-05-02'
 title: 'Set default location for images, files and attachments in Obsidian'
 thumbnail: '/thumbnails/ob.png'
 slug: 'set-default-folder-for-images-files-and-attachments-in-obsidian'
-tag: 'writing'
+tag: 'obsidian'
 canonicalUrl: 'https://amanhimself.dev/blog/set-default-folder-for-images-files-and-attachments-in-obsidian/'
 ---
 
@@ -13,6 +13,7 @@ Now, if you have used Obsidian or started using it, all images or attachments ar
 I organize my notes into two top-level folders:
 
 I organize my notes into two top level folders:
+
 - `Areas`: Notes on stuff related to my personal life, books I read, and things I'm learning.
 - `Inbox`: Notes on work, meetings, people, and the articles I'm working on.
 

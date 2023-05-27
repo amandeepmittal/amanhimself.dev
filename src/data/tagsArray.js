@@ -33,6 +33,10 @@ const TAGS_ARRAY = [
     color: '#ee4e3a'
   },
   {
+    name: 'obsidian',
+    color: '#8158FC'
+  },
+  {
     name: 'ionic',
     color: '#2aabee'
   },

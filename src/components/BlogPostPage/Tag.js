@@ -99,6 +99,12 @@ const Tag = ({ tag }) => {
         <TagsSummary tag={tag} />
       </Box>
     );
+  } else if (tag === 'obsidian') {
+    return (
+      <Box bg="#8158FC" p={1} borderRadius={4}>
+        <TagsSummary tag={tag} />
+      </Box>
+    );
   }
 
   return (
