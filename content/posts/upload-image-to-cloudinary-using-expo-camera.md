@@ -28,13 +28,13 @@ To follow this tutorial, please make sure you are familiarized with JavaScript/E
 Start by creating a new Expo app and then install the dependency `expo-camera`. Execute the following commands in a terminal window:
 
 ```shell
-npx expo init project-name
+npx create-expo-app project-name
 
 # select the blank template
 
 cd project-name
 
-expo install expo-camera
+npx expo install expo-camera
 ```
 
 ## Create a custom camera component
@@ -498,5 +498,3 @@ To use the latest package using `expo-camera`, add the following prop with a val
 In this post, we have successfully used Expo Camera to take a picture and then upload it to a real-time service like Cloudinary. To add image saving functionality check out the [expo-media-library](https://docs.expo.io/versions/latest/sdk/media-library/).
 
 The source code is available at this [Github repository](https://github.com/amandeepmittal/react-native-examples/tree/master/camera-upload-to-cloudinary).
-
-_Originally Published at **[Jscrambler's Blog](https://blog.jscrambler.com/how-to-upload-an-image-using-expo-camera-to-cloudinary/)**._

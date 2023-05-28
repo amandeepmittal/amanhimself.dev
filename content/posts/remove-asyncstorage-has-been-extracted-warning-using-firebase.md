@@ -42,8 +42,8 @@ Firebase SDK uses the AsyncStorage module from the `react-native` core. From Rea
 To remove the AsyncStorage warning, start by installing the `@react-native-async-storage/async-storage` package:
 
 ```shell
-# for Expo apps
-expo install @react-native-async-storage/async-storage
+# for Expo projects
+npx expo install @react-native-async-storage/async-storage
 ```
 
 Firebase SDK provides another method in its Auth module called `initializeAuth`. This method allows more control over the Auth instance from the `getAuth` method. In addition, it provides a way to define what persistence layer to use to store the authentication session using the method `getReactNativePersistence` and using which Dependency. Since we are using the Firebase auth service in a React Native app, we can use the React Native Dependency.
