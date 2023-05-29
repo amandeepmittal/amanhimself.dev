@@ -9,6 +9,17 @@
     },
     "items": [
         {
+            "id": "https://amanhimself.dev//blog/clear-global-npx-cache",
+            "url": "https://amanhimself.dev//blog/clear-global-npx-cache",
+            "title": "How to clear global npx cache",
+            "summary": "How to clear global npx cache",
+            "date_modified": "2023-05-30T00:00:00.000Z",
+            "author": {
+                "name": "Aman Mittal",
+                "url": "https://twitter.com/amanhimself"
+            }
+        },
+        {
             "id": "https://amanhimself.dev//blog/bypass-cors-when-working-with-localhost",
             "url": "https://amanhimself.dev//blog/bypass-cors-when-working-with-localhost",
             "title": "Bypass CORS to fetch files when working with localhost",
@@ -746,10 +757,10 @@
             }
         },
         {
-            "id": "https://amanhimself.dev//blog/add-search-bar-to-a-flatlist-in-react-native",
-            "url": "https://amanhimself.dev//blog/add-search-bar-to-a-flatlist-in-react-native",
-            "title": "How to add a Search bar in a FlatList in React Native apps",
-            "summary": "How to add a Search bar in a FlatList in React Native apps",
+            "id": "https://amanhimself.dev//blog/chat-app-with-react-native-part-2",
+            "url": "https://amanhimself.dev//blog/chat-app-with-react-native-part-2",
+            "title": "Chat app with React Native (part 2) - Firebase Email Authentication with react-native-firebase",
+            "summary": "Chat app with React Native (part 2) - Firebase Email Authentication with react-native-firebase",
             "date_modified": "2020-04-16T00:00:00.000Z",
             "author": {
                 "name": "Aman Mittal",
@@ -757,10 +768,10 @@
             }
         },
         {
-            "id": "https://amanhimself.dev//blog/chat-app-with-react-native-part-2",
-            "url": "https://amanhimself.dev//blog/chat-app-with-react-native-part-2",
-            "title": "Chat app with React Native (part 2) - Firebase Email Authentication with react-native-firebase",
-            "summary": "Chat app with React Native (part 2) - Firebase Email Authentication with react-native-firebase",
+            "id": "https://amanhimself.dev//blog/add-search-bar-to-a-flatlist-in-react-native",
+            "url": "https://amanhimself.dev//blog/add-search-bar-to-a-flatlist-in-react-native",
+            "title": "How to add a Search bar in a FlatList in React Native apps",
+            "summary": "How to add a Search bar in a FlatList in React Native apps",
             "date_modified": "2020-04-16T00:00:00.000Z",
             "author": {
                 "name": "Aman Mittal",
@@ -1780,10 +1791,10 @@
             }
         },
         {
-            "id": "https://amanhimself.dev//blog/node-js-twitter-bot-tutorial-part-2",
-            "url": "https://amanhimself.dev//blog/node-js-twitter-bot-tutorial-part-2",
-            "title": "Writing a Node.js Twitter Bot Part 2",
-            "summary": "Writing a Node.js Twitter Bot Part 2",
+            "id": "https://amanhimself.dev//blog/node-js-twitter-bot-tutorial",
+            "url": "https://amanhimself.dev//blog/node-js-twitter-bot-tutorial",
+            "title": "Writing a Node.js Twitter Bot Part 1",
+            "summary": "Writing a Node.js Twitter Bot Part 1",
             "date_modified": "2016-12-25T00:00:00.000Z",
             "author": {
                 "name": "Aman Mittal",
@@ -1791,10 +1802,10 @@
             }
         },
         {
-            "id": "https://amanhimself.dev//blog/node-js-twitter-bot-tutorial",
-            "url": "https://amanhimself.dev//blog/node-js-twitter-bot-tutorial",
-            "title": "Writing a Node.js Twitter Bot Part 1",
-            "summary": "Writing a Node.js Twitter Bot Part 1",
+            "id": "https://amanhimself.dev//blog/node-js-twitter-bot-tutorial-part-2",
+            "url": "https://amanhimself.dev//blog/node-js-twitter-bot-tutorial-part-2",
+            "title": "Writing a Node.js Twitter Bot Part 2",
+            "summary": "Writing a Node.js Twitter Bot Part 2",
             "date_modified": "2016-12-25T00:00:00.000Z",
             "author": {
                 "name": "Aman Mittal",

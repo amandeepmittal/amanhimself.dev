@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://amanhimself.dev/</id>
     <title>Aman Mittal' blog</title>
-    <updated>2023-05-27T08:23:43.686Z</updated>
+    <updated>2023-05-29T21:34:14.203Z</updated>
     <generator>Feed for Node.js</generator>
     <author>
         <name>Aman Mittal</name>
@@ -13,6 +13,18 @@
     <link rel="self" href="https://amanhimself.dev//rss/atom.xml"/>
     <icon>https://amanhimself.dev//favicon.jpg</icon>
     <rights>2019 - 2023, Aman Mittal · All Rights Reserved.</rights>
+    <entry>
+        <title type="html"><![CDATA[How to clear global npx cache]]></title>
+        <id>https://amanhimself.dev//blog/clear-global-npx-cache</id>
+        <link href="https://amanhimself.dev//blog/clear-global-npx-cache"/>
+        <updated>2023-05-30T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[How to clear global npx cache]]></summary>
+        <author>
+            <name>Aman Mittal</name>
+            <email>amanmittal.work@gmail.com</email>
+            <uri>https://twitter.com/amanhimself</uri>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Bypass CORS to fetch files when working with localhost]]></title>
         <id>https://amanhimself.dev//blog/bypass-cors-when-working-with-localhost</id>
@@ -818,11 +830,11 @@
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[How to add a Search bar in a FlatList in React Native apps]]></title>
-        <id>https://amanhimself.dev//blog/add-search-bar-to-a-flatlist-in-react-native</id>
-        <link href="https://amanhimself.dev//blog/add-search-bar-to-a-flatlist-in-react-native"/>
+        <title type="html"><![CDATA[Chat app with React Native (part 2) - Firebase Email Authentication with react-native-firebase]]></title>
+        <id>https://amanhimself.dev//blog/chat-app-with-react-native-part-2</id>
+        <link href="https://amanhimself.dev//blog/chat-app-with-react-native-part-2"/>
         <updated>2020-04-16T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[How to add a Search bar in a FlatList in React Native apps]]></summary>
+        <summary type="html"><![CDATA[Chat app with React Native (part 2) - Firebase Email Authentication with react-native-firebase]]></summary>
         <author>
             <name>Aman Mittal</name>
             <email>amanmittal.work@gmail.com</email>
@@ -830,11 +842,11 @@
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Chat app with React Native (part 2) - Firebase Email Authentication with react-native-firebase]]></title>
-        <id>https://amanhimself.dev//blog/chat-app-with-react-native-part-2</id>
-        <link href="https://amanhimself.dev//blog/chat-app-with-react-native-part-2"/>
+        <title type="html"><![CDATA[How to add a Search bar in a FlatList in React Native apps]]></title>
+        <id>https://amanhimself.dev//blog/add-search-bar-to-a-flatlist-in-react-native</id>
+        <link href="https://amanhimself.dev//blog/add-search-bar-to-a-flatlist-in-react-native"/>
         <updated>2020-04-16T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Chat app with React Native (part 2) - Firebase Email Authentication with react-native-firebase]]></summary>
+        <summary type="html"><![CDATA[How to add a Search bar in a FlatList in React Native apps]]></summary>
         <author>
             <name>Aman Mittal</name>
             <email>amanmittal.work@gmail.com</email>
@@ -1946,11 +1958,11 @@
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Writing a Node.js Twitter Bot Part 2]]></title>
-        <id>https://amanhimself.dev//blog/node-js-twitter-bot-tutorial-part-2</id>
-        <link href="https://amanhimself.dev//blog/node-js-twitter-bot-tutorial-part-2"/>
+        <title type="html"><![CDATA[Writing a Node.js Twitter Bot Part 1]]></title>
+        <id>https://amanhimself.dev//blog/node-js-twitter-bot-tutorial</id>
+        <link href="https://amanhimself.dev//blog/node-js-twitter-bot-tutorial"/>
         <updated>2016-12-25T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Writing a Node.js Twitter Bot Part 2]]></summary>
+        <summary type="html"><![CDATA[Writing a Node.js Twitter Bot Part 1]]></summary>
         <author>
             <name>Aman Mittal</name>
             <email>amanmittal.work@gmail.com</email>
@@ -1958,11 +1970,11 @@
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Writing a Node.js Twitter Bot Part 1]]></title>
-        <id>https://amanhimself.dev//blog/node-js-twitter-bot-tutorial</id>
-        <link href="https://amanhimself.dev//blog/node-js-twitter-bot-tutorial"/>
+        <title type="html"><![CDATA[Writing a Node.js Twitter Bot Part 2]]></title>
+        <id>https://amanhimself.dev//blog/node-js-twitter-bot-tutorial-part-2</id>
+        <link href="https://amanhimself.dev//blog/node-js-twitter-bot-tutorial-part-2"/>
         <updated>2016-12-25T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Writing a Node.js Twitter Bot Part 1]]></summary>
+        <summary type="html"><![CDATA[Writing a Node.js Twitter Bot Part 2]]></summary>
         <author>
             <name>Aman Mittal</name>
             <email>amanmittal.work@gmail.com</email>
