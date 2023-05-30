@@ -4,12 +4,10 @@ slug: 'react-navigation-v6-and-typescript-in-react-native'
 date: '2022-06-11'
 thumbnail: '/thumbnails/react-navigation.png'
 tag: 'react-native'
-canonicalUrl: 'https://blog.jscrambler.com/getting-started-with-react-navigation-v6-and-typescript-in-react-native/'
+canonicalUrl: 'https://jscrambler.com/blog/getting-started-with-react-navigation-v6-and-typescript-in-react-native/'
 ---
 
-![cover_image](https://blog.jscrambler.com/content/images/2022/06/React-Navigation-v6-and-TypeScript-in-React-Native.jpg)
-
-> Originally published at [Jscrambler.com](https://blog.jscrambler.com/getting-started-with-react-navigation-v6-and-typescript-in-react-native/)
+> Originally published at [Jscrambler.com](https://jscrambler.com/blog/getting-started-with-react-navigation-v6-and-typescript-in-react-native/)
 
 When you have a complex mobile application structure or many screens in your application, handling navigation can become tricky. However, with open-source libraries like [React Navigation](https://reactnavigation.org/), the process of implementing navigation patterns does become easier.
 

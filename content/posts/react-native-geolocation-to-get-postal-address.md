@@ -4,10 +4,8 @@ date: '2021-02-25'
 slug: 'react-native-geolocation-to-get-postal-address'
 thumbnail: '/thumbnails/expo.png'
 tag: 'expo'
-canonicalUrl: 'https://blog.jscrambler.com/how-to-use-react-native-geolocation-to-get-postal-address/'
+canonicalUrl: 'https://jscrambler.com/blog/how-to-use-react-native-geolocation-to-get-postal-address/'
 ---
-
-![cover_image](https://blog.jscrambler.com/content/images/2021/02/jscrambler-blog-how-to-create-a-react-native-geolocation-app.jpg)
 
 Geolocation in React Native applications is the ability to fetch the geographic position of the device when it is connected to the internet. It takes advantage of an API that provides the current location of the device in the form of Longitude and Latitude coordinates. It can be used to add features such as fetching simple location coordinates of a device or getting the current location of the device. Ultimately, Geolocation provides support to the development functionalities seen in delivery or ride-hailing applications.
 
@@ -378,4 +376,4 @@ That's it! We hope you have found this tutorial helpful. We are adding some refe
 
 **The source code is available at this [GitHub repo](https://github.com/amandeepmittal/react-native-examples/tree/master/expo-geolocation-example).**
 
-_Originally Published at [Jscrambler's Blog](https://blog.jscrambler.com/how-to-use-react-native-geolocation-to-get-postal-address/)_
+_Originally Published at [Jscrambler's Blog](https://jscrambler.com/blog/how-to-use-react-native-geolocation-to-get-postal-address/)_

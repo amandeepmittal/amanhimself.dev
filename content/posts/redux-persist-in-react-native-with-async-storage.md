@@ -4,10 +4,8 @@ slug: 'redux-persist-in-react-native-with-async-storage'
 date: '2021-01-08'
 thumbnail: '/thumbnails/expo.png'
 tag: 'expo'
-canonicalUrl: 'https://blog.jscrambler.com/how-to-use-redux-persist-in-react-native-with-asyncstorage/'
+canonicalUrl: 'https://jscrambler.com/blog/how-to-use-redux-persist-in-react-native-with-asyncstorage'
 ---
-
-![cover_image](https://blog.jscrambler.com/content/images/2021/01/jscrambler-blog-redux-persist-in-react-native.jpg)
 
 [Redux persist](https://github.com/rt2zz/redux-persist) is a library that allows saving a Redux store in the local storage of an application. In React Native terms, [Asyncstorage](https://blog.jscrambler.com/how-to-use-react-native-asyncstorage/) is a key value-based, unencrypted, asynchronous storage system that is global and can be used as the local storage for the app.
 
@@ -813,4 +811,4 @@ And that's it! I hope you have found this tutorial helpful.
 
 - [Deep Dive Into React - Separation of Concerns by Andrei Calazans](https://www.g2i.co/blog/react-separation-of-concerns)
 
-_Originally published at [Jscrambler.com](https://blog.jscrambler.com/how-to-use-redux-persist-in-react-native-with-asyncstorage/)_
+_Originally published at [Jscrambler.com](https://jscrambler.com/blog/how-to-use-redux-persist-in-react-native-with-asyncstorage)_

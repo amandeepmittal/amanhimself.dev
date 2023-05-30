@@ -4,12 +4,10 @@ date: '2021-03-31'
 slug: 'upload-image-to-cloudinary-using-expo-camera'
 thumbnail: '/thumbnails/expo.png'
 tag: 'expo'
-canonicalUrl: 'https://blog.jscrambler.com/how-to-upload-an-image-using-expo-camera-to-cloudinary/'
+canonicalUrl: 'https://jscrambler.com/blog/how-to-upload-an-image-using-expo-camera-to-cloudinary/'
 ---
 
-![cover_image](https://blog.jscrambler.com/content/images/2021/03/jscrambler-blog-how-to-upload-an-image-using-expo-camera-to-cloudinary.jpg)
-
-> Originally Published at **[Jscrambler's Blog](https://blog.jscrambler.com/how-to-upload-an-image-using-expo-camera-to-cloudinary/)**.
+> Originally Published at **[Jscrambler's Blog](https://jscrambler.com/blog/how-to-upload-an-image-using-expo-camera-to-cloudinary/)**.
 
 The camera feature in a mobile device allows it to capture pictures and record videos, making it very helpful in many circumstances. By using the expo-camera library the process of adding that camera feature to an application becomes seamless, which is why in this tutorial, we’ll take a look at how to use [Expo Camera](https://docs.expo.io/versions/latest/sdk/camera/) to take a picture and then upload that same picture to a real-time cloud service [Cloudinary](https://cloudinary.com/).
 

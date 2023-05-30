@@ -4,12 +4,8 @@ date: '2021-10-01'
 slug: 'how-to-add-a-splash-screen-and-app-icon-in-react-native-with-react-native-bootsplash'
 thumbnail: '/thumbnails/react.png'
 tag: 'react-native'
-canonicalUrl: 'https://blog.jscrambler.com/how-to-add-a-splash-screen-and-app-icon-in-react-native/'
+canonicalUrl: 'https://amanhimself.dev/blog/how-to-add-a-splash-screen-and-app-icon-in-react-native-with-react-native-bootsplash'
 ---
-
-![cover_image](https://blog.jscrambler.com/content/images/2021/09/jscrambler-blog-how-to-add-splash-screen-and-app-icon.jpg)
-
-> [Originally Published at Jscrambler's Blog](https://blog.jscrambler.com/how-to-add-a-splash-screen-and-app-icon-in-react-native/).
 
 Every mobile application has a splash screen and an app icon, and together they provide the first impression. An app icon is displayed in various places, such as on an app store, on the device's app drawer, etc., whereas a splash screen is shown during the app startup. Adding a splash screen or an app icon to a React Native app can be an agile process.
 
