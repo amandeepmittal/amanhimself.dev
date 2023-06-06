@@ -11,7 +11,7 @@ import Image from 'next/image';
 
 import { DocumentHead } from '../src/components';
 import { MEDIUM, TWITTER } from '../src/data/socialLinks';
-// import { SponsorCard } from '../src/components/BlogPostPage';
+import { SponsorCard } from '../src/components/BlogPostPage';
 
 const SPONSORS_LIST = [
   {
@@ -41,7 +41,7 @@ const SponsorshipPage = () => {
       />
       <VStack spacing={3} alignItems="flex-start" w="full" as="section" pt={28}>
         <Heading size="lg" as="h2">
-          Sponsor amanhimself.dev&apos;s Newsletter
+          Sponsor amanhimself.dev
         </Heading>
         <Text lineHeight="175%" as="h2" fontSize="lg">
           Since 2017, I have been publishing blog posts and tutorials on{' '}
@@ -49,7 +49,7 @@ const SponsorshipPage = () => {
             Medium
           </Link>
           . I have worked with esteemed publications like freeCodeCamp,
-          Hackernoon, Logrocket, Jscrambler, Digital Ocean AppSignal etc., and
+          Hackernoon, Logrocket, Jscrambler, Digital Ocean, AppSignal, etc., and
           got{' '}
           <Link
             isExternal
@@ -67,7 +67,7 @@ const SponsorshipPage = () => {
           host my own blog (and own the content). His suggestion opened the door
           of opportunities for me, a little wider.
         </Text>
-        <Text lineHeight="175%" as="h2" fontSize="lg">
+        {/* <Text lineHeight="175%" as="h2" fontSize="lg">
           Along with the blog, I decided to{' '}
           <strong>
             start a{' '}
@@ -82,26 +82,20 @@ const SponsorshipPage = () => {
           to share a summarized version of my writings and tutorials to a
           specific set of people who are curious and highly interested in
           learning more about the craft.
-        </Text>
+        </Text> */}
         {/* Every year change the link here */}
         <Text lineHeight="175%" as="h2" fontSize="lg">
-          Since then, this blog has grown its own{' '}
-          <Link
-            href="https://amanhimself.dev/blog/year-in-review-2021/#i-wrote-43-articles"
-            color="purple.500"
-          >
-            little audience
-          </Link>
-          . Each new post is announced on my{' '}
+          Since then, this blog has grown its own audience. Each new post is
+          announced on my{' '}
           <Link isExternal href={TWITTER} color="purple.500">
             Twitter
           </Link>{' '}
           and included in my newsletter. This results in over{' '}
           <Link
-            href="https://amanhimself.dev/blog/year-in-review-2021/#i-wrote-43-articles"
+            href="https://amanhimself.dev/blog/year-in-review-2022/#my-blog-in-numbers"
             color="purple.500"
           >
-            <strong>90k+</strong>
+            <strong>150k+</strong>
           </Link>{' '}
           views on this blog alone and <strong>1000+</strong> newsletter
           subscribers.
@@ -123,24 +117,25 @@ const SponsorshipPage = () => {
         <Heading size="lg" as="h2" pt={4}>
           Example of an advertisement
         </Heading>
-        <VStack alignItems="stetch" w="full" as="section">
+        <SponsorCard />
+        {/* <VStack alignItems="stetch" w="full" as="section">
           <Image
             src="https://i.imgur.com/OP5h0gQ.png"
             alt="newsletter sponsor example"
             width={1282}
             height={942}
           />
-        </VStack>
+        </VStack> */}
         <Heading size="lg" as="h2" pt={4}>
           Sponsor packages and pricing
         </Heading>
-        <Text lineHeight="175%" as="h2" fontSize="lg">
+        {/* <Text lineHeight="175%" as="h2" fontSize="lg">
           The newsletter is delivered when I have new content to offer.
         </Text>
         <Text lineHeight="175%" as="h2" fontSize="lg">
           The following sponsor packages are available for your product or
           service:
-        </Text>
+        </Text> */}
         {/* <Text lineHeight="175%" as="h2" fontWeight="700" fontSize="lg">
           4 newsletters - $600
         </Text>
@@ -159,14 +154,50 @@ const SponsorshipPage = () => {
             </ListItem>
           </UnorderedList>
         </Text> */}
-        <Text lineHeight="175%" as="h2" fontWeight="700" fontSize="lg">
+        {/* <Text lineHeight="175%" as="h2" fontWeight="700" fontSize="lg">
           1 newsletter sponsorship - $200
+        </Text> */}
+        {/* <Text lineHeight="175%" as="h2" fontSize="lg">
+          This package includes:
+          <UnorderedList spacing={2}>
+            <ListItem fontSize="lg">
+              Your advertisement visible for one newsletter (next available)
+            </ListItem>
+          </UnorderedList>
+        </Text> */}
+        <Text lineHeight="175%" as="h2" fontSize="lg">
+          Sponsoring amanhimself.dev s excellent if you own a product or service
+          attractive to React, React Native and Expo Developers.
+        </Text>
+        <Text lineHeight="175%" as="h2" fontSize="lg">
+          The following sponsor packages are available for your product or
+          service:
+        </Text>
+        <Text lineHeight="175%" as="h2" fontWeight="700" fontSize="lg">
+          1 week of sponsorship - $250
         </Text>
         <Text lineHeight="175%" as="h2" fontSize="lg">
           This package includes:
           <UnorderedList spacing={2}>
             <ListItem fontSize="lg">
-              Your advertisement visible for one newsletter (next available)
+              Your advertisement visible for one week.
+            </ListItem>
+            <ListItem fontSize="lg">
+              An advertisement appears on all ~170 blog posts.
+            </ListItem>
+          </UnorderedList>
+        </Text>
+        <Text lineHeight="175%" as="h2" fontWeight="700" fontSize="lg">
+          4 weeks of sponsorship - $800
+        </Text>
+        <Text lineHeight="175%" as="h2" fontSize="lg">
+          This package includes:
+          <UnorderedList spacing={2}>
+            <ListItem fontSize="lg">
+              Your advertisement visible for four weeks.
+            </ListItem>
+            <ListItem fontSize="lg">
+              An advertisement appears on all ~170 blog posts.
             </ListItem>
           </UnorderedList>
         </Text>
@@ -224,7 +255,9 @@ const SponsorshipPage = () => {
           .
         </Text>
         <Text lineHeight="175%" as="h2" fontSize="lg">
-          <span style={{ fontWeight: 'bold' }}>Long term Supporters</span>
+          <span style={{ fontWeight: 'bold' }}>
+            Long term and past supporters
+          </span>
           <UnorderedList>
             <ListItem>
               <Link
@@ -246,10 +279,46 @@ const SponsorshipPage = () => {
             <ListItem>
               <Link
                 isExternal
-                href="https://twitter.com/ccheever"
+                href="https://twitter.com/hirbod_dev"
                 textDecoration="underline"
               >
                 Hirbod Mirjavadi
+              </Link>{' '}
+            </ListItem>
+            <ListItem>
+              <Link
+                isExternal
+                href="https://twitter.com/Quantium"
+                textDecoration="underline"
+              >
+                Andrés González Aragón
+              </Link>{' '}
+            </ListItem>
+            <ListItem>
+              <Link
+                isExternal
+                href="https://twitter.com/sergiosrtd"
+                textDecoration="underline"
+              >
+                Sergio Sotelo
+              </Link>{' '}
+            </ListItem>
+            <ListItem>
+              <Link
+                isExternal
+                href="https://github.com/nmelo"
+                textDecoration="underline"
+              >
+                Nelson Melo{' '}
+              </Link>{' '}
+            </ListItem>
+            <ListItem>
+              <Link
+                isExternal
+                href="https://github.com/github"
+                textDecoration="underline"
+              >
+                GitHub
               </Link>{' '}
             </ListItem>
           </UnorderedList>

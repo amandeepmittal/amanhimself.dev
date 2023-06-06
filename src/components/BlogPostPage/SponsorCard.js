@@ -21,12 +21,13 @@ const SponsorCard = () => {
           <Text as="h2" fontSize="2xl" fontWeight="600" color={textMode}>
             Sponsor Title
           </Text>
-          <Text fontSize="sm" color="purple.500" as="i">
+          <Text fontSize="xs" color="purple.500" as="i">
             SPONSOR
           </Text>
         </HStack>
         <Text fontSize="md" color={textMode}>
-          This blog post is sponsored by amanhimself.
+          This blog post is sponsored by amanhimself. Your copy for the
+          sponsorship message will go here.
         </Text>
         <Link isExternal href="https://amanhimself.substack.com/">
           <Text fontSize="lg" fontWeight="700" color="purple.500">
