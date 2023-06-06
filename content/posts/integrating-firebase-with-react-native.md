@@ -3,7 +3,7 @@ title: 'Integrating Firebase with React Native'
 date: '2018-12-05'
 slug: 'integrating-firebase-with-react-native'
 thumbnail: '/thumbnails/react.png'
-tag: 'react'
+tag: 'reactjs'
 canonicalUrl: 'https://blog.jscrambler.com/integrating-firebase-with-react-native/'
 ---
 

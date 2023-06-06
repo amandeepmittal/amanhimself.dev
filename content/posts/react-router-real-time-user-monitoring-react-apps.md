@@ -3,7 +3,7 @@ title: 'How to use React Router and real time user monitoring in React apps'
 date: '2020-08-14'
 slug: 'react-router-real-time-user-monitoring-react-apps'
 thumbnail: '/thumbnails/react.png'
-tag: 'react'
+tag: 'reactjs'
 canonicalUrl: 'https://amanhimself.dev/blog/blog/react-router-real-time-user-monitoring-react-apps/'
 ---
 

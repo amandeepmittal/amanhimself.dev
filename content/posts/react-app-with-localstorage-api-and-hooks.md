@@ -3,7 +3,7 @@ title: 'Build an Expense Tracker app with React Hooks and LocalStorage API'
 date: '2020-03-11'
 slug: 'react-app-with-localstorage-api-and-hooks'
 thumbnail: '/thumbnails/react.png'
-tag: 'react'
+tag: 'reactjs'
 canonicalUrl: 'https://blog.crowdbotics.com/build-a-react-app-with-localstorage-api-and-hooks/'
 ---
 

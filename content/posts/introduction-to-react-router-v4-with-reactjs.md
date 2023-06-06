@@ -3,7 +3,7 @@ title: 'Using React Router to Optimize Single Page Applications (SPAs)'
 date: '2019-07-11'
 slug: 'introduction-to-react-router-v4-with-reactjs'
 thumbnail: '/thumbnails/react.png'
-tag: 'react'
+tag: 'reactjs'
 canonicalUrl: 'https://blog.crowdbotics.com/introduction-to-react-router-v4-with-reactjs/'
 ---
 

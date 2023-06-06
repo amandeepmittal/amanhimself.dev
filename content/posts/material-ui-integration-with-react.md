@@ -3,7 +3,7 @@ title: 'How to integrate Material UI library in React apps'
 date: '2020-05-24'
 slug: 'material-ui-integration-with-react'
 thumbnail: '/thumbnails/react.png'
-tag: 'react'
+tag: 'reactjs'
 canonicalUrl: 'https://amanhimself.dev/blog/material-ui-integration-with-react/'
 ---
 

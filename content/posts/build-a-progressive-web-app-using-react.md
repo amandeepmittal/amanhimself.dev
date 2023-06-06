@@ -3,7 +3,7 @@ title: 'Build a Progressive Web App using React'
 slug: 'build-a-progressive-web-app-using-react'
 date: '2018-02-01'
 thumbnail: '/thumbnails/react.png'
-tag: 'react'
+tag: 'reactjs'
 canonicalUrl: 'https://www.zeolearn.com/magazine/an-introduction-to-progressive-web-apps-pwa'
 ---
 

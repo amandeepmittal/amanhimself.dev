@@ -9,7 +9,7 @@ const TAGS_ARRAY = [
     color: '#4E91DF'
   },
   {
-    name: 'react',
+    name: 'reactjs',
     color: '#61dafb'
   },
   {

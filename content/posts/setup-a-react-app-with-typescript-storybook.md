@@ -3,7 +3,7 @@ title: 'How to Setup a React App with TypeScript, Storybook'
 slug: 'setup-a-react-app-with-typescript-storybook'
 date: '2019-06-14'
 thumbnail: '/thumbnails/react.png'
-tag: 'react'
+tag: 'reactjs'
 canonicalUrl: 'https://blog.crowdbotics.com/setup-a-react-app-with-typescript-storybook-and-crowdbotics/'
 ---
 

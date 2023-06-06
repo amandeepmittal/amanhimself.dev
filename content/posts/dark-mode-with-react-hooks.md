@@ -3,7 +3,7 @@ title: 'How to add Dark mode functionality with React Hooks'
 date: '2020-01-09'
 slug: 'dark-mode-with-react-hooks'
 thumbnail: '/thumbnails/react.png'
-tag: 'react'
+tag: 'reactjs'
 canonicalUrl: 'https://blog.crowdbotics.com/how-to-add-dark-mode-functionality-with-react-hooks/'
 ---
 
