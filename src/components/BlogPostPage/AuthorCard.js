@@ -32,7 +32,10 @@ const AuthorCard = () => {
                 alignItems="center"
                 border="1px solid #805AD5"
               > */}
-              <Link isExternal href="https://ko-fi.com/amanhimself">
+              <Link
+                isExternal
+                href="https://github.com/sponsors/amandeepmittal?frequency=one-time"
+              >
                 <Text fontSize="13px" color="purple.500" fontWeight="bold">
                   Buy me coffee
                 </Text>

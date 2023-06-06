@@ -4,7 +4,7 @@
         <title>Aman Mittal' blog</title>
         <link>https://amanhimself.dev/</link>
         <description></description>
-        <lastBuildDate>Mon, 29 May 2023 21:34:14 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 06 Jun 2023 09:26:45 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Feed for Node.js</generator>
         <copyright>2019 - 2023, Aman Mittal · All Rights Reserved.</copyright>
@@ -553,19 +553,19 @@
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
         <item>
-            <title><![CDATA[Chat app with React Native (part 2) - Firebase Email Authentication with react-native-firebase]]></title>
-            <link>https://amanhimself.dev//blog/chat-app-with-react-native-part-2</link>
-            <guid>https://amanhimself.dev//blog/chat-app-with-react-native-part-2</guid>
-            <pubDate>Thu, 16 Apr 2020 00:00:00 GMT</pubDate>
-            <description><![CDATA[Chat app with React Native (part 2) - Firebase Email Authentication with react-native-firebase]]></description>
-            <author>amanmittal.work@gmail.com (Aman Mittal)</author>
-        </item>
-        <item>
             <title><![CDATA[How to add a Search bar in a FlatList in React Native apps]]></title>
             <link>https://amanhimself.dev//blog/add-search-bar-to-a-flatlist-in-react-native</link>
             <guid>https://amanhimself.dev//blog/add-search-bar-to-a-flatlist-in-react-native</guid>
             <pubDate>Thu, 16 Apr 2020 00:00:00 GMT</pubDate>
             <description><![CDATA[How to add a Search bar in a FlatList in React Native apps]]></description>
+            <author>amanmittal.work@gmail.com (Aman Mittal)</author>
+        </item>
+        <item>
+            <title><![CDATA[Chat app with React Native (part 2) - Firebase Email Authentication with react-native-firebase]]></title>
+            <link>https://amanhimself.dev//blog/chat-app-with-react-native-part-2</link>
+            <guid>https://amanhimself.dev//blog/chat-app-with-react-native-part-2</guid>
+            <pubDate>Thu, 16 Apr 2020 00:00:00 GMT</pubDate>
+            <description><![CDATA[Chat app with React Native (part 2) - Firebase Email Authentication with react-native-firebase]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
         <item>
@@ -1305,19 +1305,19 @@
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
         <item>
-            <title><![CDATA[Writing a Node.js Twitter Bot Part 1]]></title>
-            <link>https://amanhimself.dev//blog/node-js-twitter-bot-tutorial</link>
-            <guid>https://amanhimself.dev//blog/node-js-twitter-bot-tutorial</guid>
-            <pubDate>Sun, 25 Dec 2016 00:00:00 GMT</pubDate>
-            <description><![CDATA[Writing a Node.js Twitter Bot Part 1]]></description>
-            <author>amanmittal.work@gmail.com (Aman Mittal)</author>
-        </item>
-        <item>
             <title><![CDATA[Writing a Node.js Twitter Bot Part 2]]></title>
             <link>https://amanhimself.dev//blog/node-js-twitter-bot-tutorial-part-2</link>
             <guid>https://amanhimself.dev//blog/node-js-twitter-bot-tutorial-part-2</guid>
             <pubDate>Sun, 25 Dec 2016 00:00:00 GMT</pubDate>
             <description><![CDATA[Writing a Node.js Twitter Bot Part 2]]></description>
+            <author>amanmittal.work@gmail.com (Aman Mittal)</author>
+        </item>
+        <item>
+            <title><![CDATA[Writing a Node.js Twitter Bot Part 1]]></title>
+            <link>https://amanhimself.dev//blog/node-js-twitter-bot-tutorial</link>
+            <guid>https://amanhimself.dev//blog/node-js-twitter-bot-tutorial</guid>
+            <pubDate>Sun, 25 Dec 2016 00:00:00 GMT</pubDate>
+            <description><![CDATA[Writing a Node.js Twitter Bot Part 1]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
         <item>
