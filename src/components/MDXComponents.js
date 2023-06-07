@@ -7,7 +7,6 @@ import {
   useColorModeValue,
   useColorMode,
   HStack,
-  Button,
   useClipboard
 } from '@chakra-ui/react';
 import { mode } from '@chakra-ui/theme-tools';
@@ -16,7 +15,7 @@ import slugify from 'slugify';
 import Highlight, { defaultProps } from 'prism-react-renderer';
 import dracula from 'prism-react-renderer/themes/dracula';
 import { DiJsBadge } from 'react-icons/di';
-import { IoClipboardOutline, IoTerminal } from 'react-icons/io5';
+import { IoTerminal } from 'react-icons/io5';
 import { FaGitAlt } from 'react-icons/fa';
 import {
   SiReact,
@@ -65,56 +64,60 @@ const TData = props => (
 const CopyButton = ({ value }) => {
   const { onCopy, hasCopied } = useClipboard(value);
   return (
-    <Button
+    <chakra.button
       color="white"
       aria-label="Copy text"
       textTransform="uppercase"
       role="button"
       onClick={onCopy}
-      fontSize="md"
-      mr={2}
-      p={1}
-      bgColor="#202020"
+      fontSize="sm"
+      bgColor="white"
+      paddingX={1}
+      paddingY={0.5}
+      borderRadius="sm"
     >
-      <IoClipboardOutline size={14} color="white" />
-    </Button>
+      <chakra.p fontSize="xs" color="#202020" fontWeight="bold">
+        {hasCopied ? 'Copied' : 'Copy'}
+      </chakra.p>
+    </chakra.button>
   );
 };
 
 const CodeHighlight = ({ children: codeString, className: language }) => {
   language = language.replace('language-', '');
+  const size = 18;
   const showLanguage = () => {
     switch (language) {
       case 'typescript':
-        return <SiTypescript size={18} color="#408ef5" />;
+        return <SiTypescript size={size} color="#408ef5" />;
       case 'tsx':
-        return <SiTypescript size={18} color="#408ef5" />;
+        return <SiTypescript size={size} color="#408ef5" />;
       case 'ts':
-        return <SiTypescript size={18} color="#408ef5" />;
+        return <SiTypescript size={size} color="#408ef5" />;
       case 'javascript':
-        return <DiJsBadge size={18} color="#f7df1e" />;
+        return <DiJsBadge size={size} color="#f7df1e" />;
       case 'js':
-        return <DiJsBadge size={18} color="#f7df1e" />;
+        return <DiJsBadge size={size} color="#f7df1e" />;
       case 'bash':
-        return <IoTerminal size={18} color="#57cc99" />;
+        return <IoTerminal size={size} color="#57cc99" />;
       case 'git':
-        return <FaGitAlt size={18} color="#57cc99" />;
+        return <FaGitAlt size={size} color="#57cc99" />;
       case 'shell':
-        return <IoTerminal size={18} color="#57cc99" />;
+        return <IoTerminal size={size} color="#57cc99" />;
       case 'diff':
-        return <FaGitAlt size={18} color="#57cc99" />;
+        return <FaGitAlt size={size} color="#57cc99" />;
       case 'jsx':
-        return <SiReact size={18} color="#61dafb" />;
+        return <SiReact size={size} color="#61dafb" />;
       case 'html':
-        return <SiHtml5 size={18} color="#ff9800" />;
+        return <SiHtml5 size={size} color="#ff9800" />;
       case 'css':
-        return <SiCsswizardry size={18} color="#610094" />;
+        return <SiCsswizardry size={size} color="#610094" />;
       case 'json':
-        return <VscJson size={18} color="#e6ffed" />;
+        return <VscJson size={size} color="#e6ffed" />;
       case 'prisma':
-        return <SiPrisma size={18} color="#57cc99" />;
+        return <SiPrisma size={size} color="#57cc99" />;
       case 'graphql':
-        return <SiGraphql size={18} color="#e10098" />;
+        return <SiGraphql size={size} color="#e10098" />;
       default:
         break;
     }
@@ -204,7 +207,7 @@ const LinkedHeading = props => {
         display="inline"
         fontFamily="heading"
         color={useColorModeValue('gray.700', 'white')}
-        fontSize="3xl"
+        fontSize={props.fontSize}
       >
         {props.children}
       </Box>
@@ -213,7 +216,7 @@ const LinkedHeading = props => {
         color="purple.500"
         userSelect="none"
         fontWeight="normal"
-        fontSize="1.5rem"
+        fontSize="1rem"
         outline="none"
         _focus={{ opacity: 1, boxShadow: 'outline' }}
         opacity={0}
@@ -256,10 +259,18 @@ const Anchor = props => {
 const MDXComponents = {
   code: CodeHighlight,
   inlineCode: InlineCode,
-  h1: props => <LinkedHeading as="h1" apply="mdx.h1" {...props} />,
-  h2: props => <LinkedHeading as="h2" apply="mdx.h2" {...props} />,
-  h3: props => <LinkedHeading as="h3" apply="mdx.h3" {...props} />,
-  h4: props => <LinkedHeading as="h4" apply="mdx.h4" {...props} />,
+  h1: props => (
+    <LinkedHeading as="h1" apply="mdx.h1" fontSize="3xl" {...props} />
+  ),
+  h2: props => (
+    <LinkedHeading as="h2" apply="mdx.h2" fontSize="2xl" {...props} />
+  ),
+  h3: props => (
+    <LinkedHeading as="h3" apply="mdx.h3" fontSize="xl" {...props} />
+  ),
+  h4: props => (
+    <LinkedHeading as="h4" apply="mdx.h4" fontSize="xl" {...props} />
+  ),
   hr: props => <chakra.hr apply="mdx.hr" {...props} />,
   strong: props => <Box as="strong" fontWeight="semibold" {...props} />,
   pre: Pre,
