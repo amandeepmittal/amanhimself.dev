@@ -60,9 +60,8 @@ const Hero = () => {
             Previously, I&apos;ve worked as{' '}
             <ExternalLink href="https://amanhimself.dev/blog/first-three-months-as-developer-advocate/">
               Developer Advocate
-            </ExternalLink>
-            , and Senior Content Developer with companies like Draftbit and
-            Vercel.
+            </ExternalLink>{' '}
+            at Draftbit, and Senior Content Developer at Vercel.
           </Text>
           <ExternalLinksCloud />
         </VStack>
