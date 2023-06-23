@@ -103,7 +103,7 @@ Run `git rebase` command with `--continue` flag to continue the rebase process:
 git rebase --continue
 ```
 
-> **Tip:** If required, save changes by pressing :wq! in the terminal.
+> **Tip:** If required, save changes by pressing `:wq!` in the terminal.
 
 ### Step 7: Verify new commits
 
@@ -129,3 +129,5 @@ A few added rules I think are worth mentioning in this process:
 
 - Only use rebase for local branches and if you are the owner of that branch.
 - If you anticipate that the conflicts can become messy, use the strategy described above at regular intervals to avoid a lot of conflicts.
+
+> A big thank you to my colleague [Sundeep Peswani](https://www.sundeeppeswani.com/) for teaching this via live coding and jumping on a call to help me understand the process and making my life easier.
