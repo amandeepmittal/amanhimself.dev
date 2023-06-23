@@ -4,10 +4,18 @@
         <title>Aman Mittal' blog</title>
         <link>https://amanhimself.dev/</link>
         <description></description>
-        <lastBuildDate>Wed, 07 Jun 2023 10:37:17 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 23 Jun 2023 10:22:34 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Feed for Node.js</generator>
         <copyright>2019 - 2023, Aman Mittal · All Rights Reserved.</copyright>
+        <item>
+            <title><![CDATA[Resolve merge conflicts with git rebase]]></title>
+            <link>https://amanhimself.dev//blog/resolve-merge-conflicts-with-git-rebase</link>
+            <guid>https://amanhimself.dev//blog/resolve-merge-conflicts-with-git-rebase</guid>
+            <pubDate>Fri, 23 Jun 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[Resolve merge conflicts with git rebase]]></description>
+            <author>amanmittal.work@gmail.com (Aman Mittal)</author>
+        </item>
         <item>
             <title><![CDATA[How to clear global npx cache]]></title>
             <link>https://amanhimself.dev//blog/clear-global-npx-cache</link>
@@ -1305,19 +1313,19 @@
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
         <item>
-            <title><![CDATA[Writing a Node.js Twitter Bot Part 2]]></title>
-            <link>https://amanhimself.dev//blog/node-js-twitter-bot-tutorial-part-2</link>
-            <guid>https://amanhimself.dev//blog/node-js-twitter-bot-tutorial-part-2</guid>
-            <pubDate>Sun, 25 Dec 2016 00:00:00 GMT</pubDate>
-            <description><![CDATA[Writing a Node.js Twitter Bot Part 2]]></description>
-            <author>amanmittal.work@gmail.com (Aman Mittal)</author>
-        </item>
-        <item>
             <title><![CDATA[Writing a Node.js Twitter Bot Part 1]]></title>
             <link>https://amanhimself.dev//blog/node-js-twitter-bot-tutorial</link>
             <guid>https://amanhimself.dev//blog/node-js-twitter-bot-tutorial</guid>
             <pubDate>Sun, 25 Dec 2016 00:00:00 GMT</pubDate>
             <description><![CDATA[Writing a Node.js Twitter Bot Part 1]]></description>
+            <author>amanmittal.work@gmail.com (Aman Mittal)</author>
+        </item>
+        <item>
+            <title><![CDATA[Writing a Node.js Twitter Bot Part 2]]></title>
+            <link>https://amanhimself.dev//blog/node-js-twitter-bot-tutorial-part-2</link>
+            <guid>https://amanhimself.dev//blog/node-js-twitter-bot-tutorial-part-2</guid>
+            <pubDate>Sun, 25 Dec 2016 00:00:00 GMT</pubDate>
+            <description><![CDATA[Writing a Node.js Twitter Bot Part 2]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
         <item>

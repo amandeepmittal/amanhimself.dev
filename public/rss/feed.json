@@ -9,6 +9,17 @@
     },
     "items": [
         {
+            "id": "https://amanhimself.dev//blog/resolve-merge-conflicts-with-git-rebase",
+            "url": "https://amanhimself.dev//blog/resolve-merge-conflicts-with-git-rebase",
+            "title": "Resolve merge conflicts with git rebase",
+            "summary": "Resolve merge conflicts with git rebase",
+            "date_modified": "2023-06-23T00:00:00.000Z",
+            "author": {
+                "name": "Aman Mittal",
+                "url": "https://twitter.com/amanhimself"
+            }
+        },
+        {
             "id": "https://amanhimself.dev//blog/clear-global-npx-cache",
             "url": "https://amanhimself.dev//blog/clear-global-npx-cache",
             "title": "How to clear global npx cache",
@@ -1791,10 +1802,10 @@
             }
         },
         {
-            "id": "https://amanhimself.dev//blog/node-js-twitter-bot-tutorial-part-2",
-            "url": "https://amanhimself.dev//blog/node-js-twitter-bot-tutorial-part-2",
-            "title": "Writing a Node.js Twitter Bot Part 2",
-            "summary": "Writing a Node.js Twitter Bot Part 2",
+            "id": "https://amanhimself.dev//blog/node-js-twitter-bot-tutorial",
+            "url": "https://amanhimself.dev//blog/node-js-twitter-bot-tutorial",
+            "title": "Writing a Node.js Twitter Bot Part 1",
+            "summary": "Writing a Node.js Twitter Bot Part 1",
             "date_modified": "2016-12-25T00:00:00.000Z",
             "author": {
                 "name": "Aman Mittal",
@@ -1802,10 +1813,10 @@
             }
         },
         {
-            "id": "https://amanhimself.dev//blog/node-js-twitter-bot-tutorial",
-            "url": "https://amanhimself.dev//blog/node-js-twitter-bot-tutorial",
-            "title": "Writing a Node.js Twitter Bot Part 1",
-            "summary": "Writing a Node.js Twitter Bot Part 1",
+            "id": "https://amanhimself.dev//blog/node-js-twitter-bot-tutorial-part-2",
+            "url": "https://amanhimself.dev//blog/node-js-twitter-bot-tutorial-part-2",
+            "title": "Writing a Node.js Twitter Bot Part 2",
+            "summary": "Writing a Node.js Twitter Bot Part 2",
             "date_modified": "2016-12-25T00:00:00.000Z",
             "author": {
                 "name": "Aman Mittal",
