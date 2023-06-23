@@ -11,4 +11,4 @@ I have written for over 30+ tech publications and over 150+ posts. This website 
 
 Copyright (c) 2019 - Present Aman Mittal
 
-[![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/A611K61)
+[![](https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=%23fe8e86)](https://github.com/sponsors/amandeepmittal?frequency=one-time)
