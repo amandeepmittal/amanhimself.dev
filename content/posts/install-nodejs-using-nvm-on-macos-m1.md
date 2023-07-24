@@ -138,5 +138,5 @@ nvm install --lts
 After installing the latest version, to re-install any global packages installed with the previous version, run:
 
 ```shell
-nvm install [version from the latest install] --reinstall-packages-from=[previous version]
+nvm reinstall-packages [previous version]
 ```
