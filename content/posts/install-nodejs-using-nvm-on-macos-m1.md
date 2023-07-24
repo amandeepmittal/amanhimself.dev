@@ -7,7 +7,7 @@ tag: 'nodejs'
 canonicalUrl: 'https://amanhimself.dev/blog/install-nodejs-using-nvm-on-macos-m1/'
 ---
 
-> Updated on September 10, 2022
+> Updated on July 24, 2023
 
 Node.js can be installed in different ways. I recently started working on an organization repository that requires using different Node.js versions. Using [Node Version Manager (NVM)](https://github.com/nvm-sh/nvm) it is possible to switch between different Node.js versions on the fly. It also allows testing code with older Node.js versions.
 
@@ -138,5 +138,5 @@ nvm install --lts
 After installing the latest version, to re-install any global packages installed with the previous version, run:
 
 ```shell
-nvm reinstall-packages [previous version]
+nvm reinstall-packages previous_version
 ```
