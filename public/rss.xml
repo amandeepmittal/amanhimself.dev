@@ -4,10 +4,18 @@
         <title>Aman Mittal' blog</title>
         <link>https://amanhimself.dev/</link>
         <description></description>
-        <lastBuildDate>Fri, 23 Jun 2023 11:15:40 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 25 Jul 2023 10:12:05 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Feed for Node.js</generator>
         <copyright>2019 - 2023, Aman Mittal · All Rights Reserved.</copyright>
+        <item>
+            <title><![CDATA[How to configure ESLint and Prettier in an Expo project]]></title>
+            <link>https://amanhimself.dev//blog/configure-eslint-prettier-expo-project</link>
+            <guid>https://amanhimself.dev//blog/configure-eslint-prettier-expo-project</guid>
+            <pubDate>Tue, 25 Jul 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[How to configure ESLint and Prettier in an Expo project]]></description>
+            <author>amanmittal.work@gmail.com (Aman Mittal)</author>
+        </item>
         <item>
             <title><![CDATA[Resolve merge conflicts with git rebase]]></title>
             <link>https://amanhimself.dev//blog/resolve-merge-conflicts-with-git-rebase</link>

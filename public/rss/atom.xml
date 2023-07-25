@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://amanhimself.dev/</id>
     <title>Aman Mittal' blog</title>
-    <updated>2023-06-23T11:15:40.159Z</updated>
+    <updated>2023-07-25T10:12:05.064Z</updated>
     <generator>Feed for Node.js</generator>
     <author>
         <name>Aman Mittal</name>
@@ -13,6 +13,18 @@
     <link rel="self" href="https://amanhimself.dev//rss/atom.xml"/>
     <icon>https://amanhimself.dev//favicon.jpg</icon>
     <rights>2019 - 2023, Aman Mittal · All Rights Reserved.</rights>
+    <entry>
+        <title type="html"><![CDATA[How to configure ESLint and Prettier in an Expo project]]></title>
+        <id>https://amanhimself.dev//blog/configure-eslint-prettier-expo-project</id>
+        <link href="https://amanhimself.dev//blog/configure-eslint-prettier-expo-project"/>
+        <updated>2023-07-25T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[How to configure ESLint and Prettier in an Expo project]]></summary>
+        <author>
+            <name>Aman Mittal</name>
+            <email>amanmittal.work@gmail.com</email>
+            <uri>https://twitter.com/amanhimself</uri>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Resolve merge conflicts with git rebase]]></title>
         <id>https://amanhimself.dev//blog/resolve-merge-conflicts-with-git-rebase</id>
