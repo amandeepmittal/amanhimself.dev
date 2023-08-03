@@ -7,11 +7,13 @@ tag: 'expo'
 canonicalUrl: 'https://amanhimself.dev/blog/configure-eslint-prettier-expo-project'
 ---
 
+> Make sure to see the official Expo documentation on using [ESLint](https://docs.expo.dev/guides/using-eslint/) in your React Native project.
+
 When writing JavaScript, I spend a good amount of time fixing basic mistakes. Different project files sometimes end up following different syntax and formatting conventions.
 
 Using ESLint rescues me from those mistakes. It is a linter for the JavaScript programming language that helps keep the code syntax consistent and match conventions and warns against the possible source of problems. It is written in Node.js.
 
-Also, I like to use some specific set of Prettier rules in my personal projects. ESLint configures well with it.
+Also, I like to use some specific set of Prettier rules in my projects. ESLint configures well with it.
 
 ## Create a new project
 
@@ -28,7 +30,7 @@ cd projectName
 
 After creating a new project, the next step is to install ESLint and Prettier as dev dependencies.
 
-The Expo team has been awesome to provide a package called [eslint-config-universe](https://github.com/expo/expo/tree/master/packages/eslint-config-universe) that comes with basic and shared ESLint configuration for Node.js, React Native and web projects. This is useful because I don't have to set up and define ESLint configuration from scratch.
+The Expo team has been awesome to provide a package called [eslint-config-universe](https://github.com/expo/expo/tree/master/packages/eslint-config-universe) that comes with basic and shared ESLint configuration for Node.js, React Native and web projects. This is useful because I don't have to set up and define the ESLint configuration from scratch.
 
 Run the following command in the terminal:
 
