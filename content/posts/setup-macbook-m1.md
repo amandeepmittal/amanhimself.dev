@@ -62,7 +62,7 @@ export ZSH="$HOME/.oh-my-zsh"
 The `$HOME` should be `/Users/<your-macos-username>`. You can verify this by running:
 
 ```shell
-$ echo $HOME
+echo $HOME
 ```
 
 ### Step 2.2: Install syntax highlighting plugin
