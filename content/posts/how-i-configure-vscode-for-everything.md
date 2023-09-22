@@ -9,7 +9,7 @@ canonicalUrl: 'https://medium.com/better-programming/how-i-configure-vscode-for-
 
 ![cover](https://i.imgur.com/hJ7W51N.jpg)
 
-[**I made updates to this post here**](https://amanhimself.dev/blog/setup-macbook-m1/) **with additions to setup a new Macbook Pro based on M1 chip in 2021!**
+> [**I made updates to this post here**](https://amanhimself.dev/blog/setup-macbook-m1/) **with additions to setup a new Macbook Pro based on M1 chip in 2021!**
 
 Recently, I was at the Boryspil Airport in Ukraine, working on a blog article, when suddenly my VS Code stopped working. It actually crashed! Not once, but twice in less than 30 minutes. Some of the content was autosaved, but some of it was gone forever.
 
@@ -25,10 +25,10 @@ Now, that’s what I call win-win. It’s fast compared to the previous editors 
 
 ## Themes
 
-The first thing I did was install themes that I see all day. I like my editor to be charming and appealing. Thus, I used the following themes for different purposes.
+The first thing I did was install themes that I saw all day. I like my editor to be charming and appealing. Thus, I used the following themes for different purposes.
 
 - fairyFloss (most of the time, because I love purple backgrounds).
-- Dracula Official (I used this with my [iTerm](https://www.iterm2.com/) setup and switch between it and fairyFloss).
+- Dracula Official (I used this with my [iTerm](https://www.iterm2.com/) setup and switched between it and fairyFloss).
 - Night Owl (just to try something new).
 - Material-Icon-Theme (for file icons).
 
@@ -48,7 +48,7 @@ Next, I changed a few things that I remembered from my previous settings.
 
 ### Extensions
 
-Next step for me is to make this editor work like a charm with the help of some well maintained and free extensions.
+The next step for me is to make this editor work like a charm with the help of some well-maintained and free extensions.
 
 - [emojisense](https://marketplace.visualstudio.com/items?itemName=bierner.emojisense):
 - [Bracket Pair Colorizer](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer)
