@@ -4,7 +4,7 @@
         <title>Aman Mittal' blog</title>
         <link>https://amanhimself.dev/</link>
         <description></description>
-        <lastBuildDate>Fri, 22 Sep 2023 06:54:18 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 24 Sep 2023 17:44:54 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Feed for Node.js</generator>
         <copyright>2019 - 2023, Aman Mittal · All Rights Reserved.</copyright>
@@ -129,11 +129,11 @@
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
         <item>
-            <title><![CDATA[Remove bottom border or shadow on header in React Navigation]]></title>
+            <title><![CDATA[Remove bottom border or shadow on header in React Navigation or Expo Router]]></title>
             <link>https://amanhimself.dev//blog/remove-bottom-border-shadow-on-header-in-react-navigation</link>
             <guid>https://amanhimself.dev//blog/remove-bottom-border-shadow-on-header-in-react-navigation</guid>
             <pubDate>Sun, 05 Jun 2022 00:00:00 GMT</pubDate>
-            <description><![CDATA[Remove bottom border or shadow on header in React Navigation]]></description>
+            <description><![CDATA[Remove bottom border or shadow on header in React Navigation or Expo Router]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
         <item>
