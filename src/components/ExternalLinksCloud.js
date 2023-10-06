@@ -16,8 +16,8 @@ const ExternalLinksCloud = () => {
         </ExternalLink>
       </Text>
       <Text>
-        <ExternalLink href="https://twitter.com/amanhimself">
-          🐦 Twitter
+        <ExternalLink href="https://x.com/amanhimself">
+          🐦 X (Twitter)
         </ExternalLink>
       </Text>
       <Text>

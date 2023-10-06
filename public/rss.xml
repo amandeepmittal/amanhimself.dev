@@ -4,10 +4,18 @@
         <title>Aman Mittal' blog</title>
         <link>https://amanhimself.dev/</link>
         <description></description>
-        <lastBuildDate>Sun, 24 Sep 2023 17:44:54 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 06 Oct 2023 11:44:48 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Feed for Node.js</generator>
         <copyright>2019 - 2023, Aman Mittal · All Rights Reserved.</copyright>
+        <item>
+            <title><![CDATA[Remove bottom border or shadow on header in React Navigation or Expo Router]]></title>
+            <link>https://amanhimself.dev//blog/remove-bottom-border-shadow-on-header-in-react-navigation</link>
+            <guid>https://amanhimself.dev//blog/remove-bottom-border-shadow-on-header-in-react-navigation</guid>
+            <pubDate>Sun, 24 Sep 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[Remove bottom border or shadow on header in React Navigation or Expo Router]]></description>
+            <author>amanmittal.work@gmail.com (Aman Mittal)</author>
+        </item>
         <item>
             <title><![CDATA[How to configure ESLint and Prettier in an Expo project]]></title>
             <link>https://amanhimself.dev//blog/configure-eslint-prettier-expo-project</link>
@@ -126,14 +134,6 @@
             <guid>https://amanhimself.dev//blog/react-navigation-v6-and-typescript-in-react-native</guid>
             <pubDate>Sat, 11 Jun 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[Getting Started with React Navigation v6 and TypeScript in React Native]]></description>
-            <author>amanmittal.work@gmail.com (Aman Mittal)</author>
-        </item>
-        <item>
-            <title><![CDATA[Remove bottom border or shadow on header in React Navigation or Expo Router]]></title>
-            <link>https://amanhimself.dev//blog/remove-bottom-border-shadow-on-header-in-react-navigation</link>
-            <guid>https://amanhimself.dev//blog/remove-bottom-border-shadow-on-header-in-react-navigation</guid>
-            <pubDate>Sun, 05 Jun 2022 00:00:00 GMT</pubDate>
-            <description><![CDATA[Remove bottom border or shadow on header in React Navigation or Expo Router]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
         <item>
@@ -1321,19 +1321,19 @@
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
         <item>
-            <title><![CDATA[Writing a Node.js Twitter Bot Part 2]]></title>
-            <link>https://amanhimself.dev//blog/node-js-twitter-bot-tutorial-part-2</link>
-            <guid>https://amanhimself.dev//blog/node-js-twitter-bot-tutorial-part-2</guid>
-            <pubDate>Sun, 25 Dec 2016 00:00:00 GMT</pubDate>
-            <description><![CDATA[Writing a Node.js Twitter Bot Part 2]]></description>
-            <author>amanmittal.work@gmail.com (Aman Mittal)</author>
-        </item>
-        <item>
             <title><![CDATA[Writing a Node.js Twitter Bot Part 1]]></title>
             <link>https://amanhimself.dev//blog/node-js-twitter-bot-tutorial</link>
             <guid>https://amanhimself.dev//blog/node-js-twitter-bot-tutorial</guid>
             <pubDate>Sun, 25 Dec 2016 00:00:00 GMT</pubDate>
             <description><![CDATA[Writing a Node.js Twitter Bot Part 1]]></description>
+            <author>amanmittal.work@gmail.com (Aman Mittal)</author>
+        </item>
+        <item>
+            <title><![CDATA[Writing a Node.js Twitter Bot Part 2]]></title>
+            <link>https://amanhimself.dev//blog/node-js-twitter-bot-tutorial-part-2</link>
+            <guid>https://amanhimself.dev//blog/node-js-twitter-bot-tutorial-part-2</guid>
+            <pubDate>Sun, 25 Dec 2016 00:00:00 GMT</pubDate>
+            <description><![CDATA[Writing a Node.js Twitter Bot Part 2]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
         <item>

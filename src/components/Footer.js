@@ -62,7 +62,7 @@ const Footer = () => {
             </Link>
             <Link isExternal href={TWITTER}>
               <Text fontSize="sm" color={textMode}>
-                Twitter
+                X (Twitter)
               </Text>
             </Link>
             <Link isExternal href={RSS}>
@@ -87,7 +87,7 @@ const Footer = () => {
             </Link>
             <Link isExternal href={TWITTER}>
               <Text fontSize="sm" color={textMode}>
-                Twitter
+                X (Twitter)
               </Text>
             </Link>
             <Link isExternal href={MEDIUM}>

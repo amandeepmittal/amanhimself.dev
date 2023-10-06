@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://amanhimself.dev/</id>
     <title>Aman Mittal' blog</title>
-    <updated>2023-09-24T17:44:54.576Z</updated>
+    <updated>2023-10-06T11:44:48.429Z</updated>
     <generator>Feed for Node.js</generator>
     <author>
         <name>Aman Mittal</name>
@@ -13,6 +13,18 @@
     <link rel="self" href="https://amanhimself.dev//rss/atom.xml"/>
     <icon>https://amanhimself.dev//favicon.jpg</icon>
     <rights>2019 - 2023, Aman Mittal · All Rights Reserved.</rights>
+    <entry>
+        <title type="html"><![CDATA[Remove bottom border or shadow on header in React Navigation or Expo Router]]></title>
+        <id>https://amanhimself.dev//blog/remove-bottom-border-shadow-on-header-in-react-navigation</id>
+        <link href="https://amanhimself.dev//blog/remove-bottom-border-shadow-on-header-in-react-navigation"/>
+        <updated>2023-09-24T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Remove bottom border or shadow on header in React Navigation or Expo Router]]></summary>
+        <author>
+            <name>Aman Mittal</name>
+            <email>amanmittal.work@gmail.com</email>
+            <uri>https://twitter.com/amanhimself</uri>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[How to configure ESLint and Prettier in an Expo project]]></title>
         <id>https://amanhimself.dev//blog/configure-eslint-prettier-expo-project</id>
@@ -187,18 +199,6 @@
         <link href="https://amanhimself.dev//blog/react-navigation-v6-and-typescript-in-react-native"/>
         <updated>2022-06-11T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Getting Started with React Navigation v6 and TypeScript in React Native]]></summary>
-        <author>
-            <name>Aman Mittal</name>
-            <email>amanmittal.work@gmail.com</email>
-            <uri>https://twitter.com/amanhimself</uri>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Remove bottom border or shadow on header in React Navigation or Expo Router]]></title>
-        <id>https://amanhimself.dev//blog/remove-bottom-border-shadow-on-header-in-react-navigation</id>
-        <link href="https://amanhimself.dev//blog/remove-bottom-border-shadow-on-header-in-react-navigation"/>
-        <updated>2022-06-05T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Remove bottom border or shadow on header in React Navigation or Expo Router]]></summary>
         <author>
             <name>Aman Mittal</name>
             <email>amanmittal.work@gmail.com</email>
@@ -1982,11 +1982,11 @@
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Writing a Node.js Twitter Bot Part 2]]></title>
-        <id>https://amanhimself.dev//blog/node-js-twitter-bot-tutorial-part-2</id>
-        <link href="https://amanhimself.dev//blog/node-js-twitter-bot-tutorial-part-2"/>
+        <title type="html"><![CDATA[Writing a Node.js Twitter Bot Part 1]]></title>
+        <id>https://amanhimself.dev//blog/node-js-twitter-bot-tutorial</id>
+        <link href="https://amanhimself.dev//blog/node-js-twitter-bot-tutorial"/>
         <updated>2016-12-25T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Writing a Node.js Twitter Bot Part 2]]></summary>
+        <summary type="html"><![CDATA[Writing a Node.js Twitter Bot Part 1]]></summary>
         <author>
             <name>Aman Mittal</name>
             <email>amanmittal.work@gmail.com</email>
@@ -1994,11 +1994,11 @@
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Writing a Node.js Twitter Bot Part 1]]></title>
-        <id>https://amanhimself.dev//blog/node-js-twitter-bot-tutorial</id>
-        <link href="https://amanhimself.dev//blog/node-js-twitter-bot-tutorial"/>
+        <title type="html"><![CDATA[Writing a Node.js Twitter Bot Part 2]]></title>
+        <id>https://amanhimself.dev//blog/node-js-twitter-bot-tutorial-part-2</id>
+        <link href="https://amanhimself.dev//blog/node-js-twitter-bot-tutorial-part-2"/>
         <updated>2016-12-25T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Writing a Node.js Twitter Bot Part 1]]></summary>
+        <summary type="html"><![CDATA[Writing a Node.js Twitter Bot Part 2]]></summary>
         <author>
             <name>Aman Mittal</name>
             <email>amanmittal.work@gmail.com</email>

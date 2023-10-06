@@ -57,7 +57,7 @@ const AuthorCard = () => {
               > */}
               <Link isExternal href="https://twitter.com/amanhimself">
                 <Text fontSize="13px" color="purple.500" fontWeight="bold">
-                  Twitter
+                  X (Twitter)
                 </Text>
               </Link>
               {/* </Box> */}

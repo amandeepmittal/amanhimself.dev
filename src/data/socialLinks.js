@@ -1,4 +1,4 @@
-export const TWITTER = 'https://twitter.com/amanhimself';
+export const TWITTER = 'https://x.com/amanhimself';
 export const NEWSLETTER = 'https://amanhimself.substack.com/';
 export const EMAIL = 'mailto:amanmittal.work@gmail.com';
 export const GITHUB = 'https://github.com/amandeepmittal';
