@@ -53,7 +53,7 @@ const SponsorshipPage = () => {
           got{' '}
           <Link
             isExternal
-            href="https://twitter.com/amanhimself/status/1285554115464982528"
+            href="https://x.com/amanhimself/status/1285554115464982528"
             color="purple.500"
           >
             millions
@@ -88,7 +88,7 @@ const SponsorshipPage = () => {
           Since then, this blog has grown its own audience. Each new post is
           announced on my{' '}
           <Link isExternal href={TWITTER} color="purple.500">
-            Twitter
+            X (Twitter)
           </Link>{' '}
           and included in my newsletter. This results in over{' '}
           <Link
@@ -262,7 +262,7 @@ const SponsorshipPage = () => {
             <ListItem>
               <Link
                 isExternal
-                href="https://twitter.com/ccheever"
+                href="https://x.com/ccheever"
                 textDecoration="underline"
               >
                 Charlie Cheever
@@ -279,7 +279,7 @@ const SponsorshipPage = () => {
             <ListItem>
               <Link
                 isExternal
-                href="https://twitter.com/hirbod_dev"
+                href="https://x.com/hirbod_dev"
                 textDecoration="underline"
               >
                 Hirbod Mirjavadi
@@ -288,7 +288,7 @@ const SponsorshipPage = () => {
             <ListItem>
               <Link
                 isExternal
-                href="https://twitter.com/Quantium"
+                href="https://x.com/Quantium"
                 textDecoration="underline"
               >
                 Andrés González Aragón
@@ -297,7 +297,7 @@ const SponsorshipPage = () => {
             <ListItem>
               <Link
                 isExternal
-                href="https://twitter.com/sergiosrtd"
+                href="https://x.com/sergiosrtd"
                 textDecoration="underline"
               >
                 Sergio Sotelo
