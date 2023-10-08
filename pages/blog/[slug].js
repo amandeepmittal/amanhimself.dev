@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import { MDXRemote } from 'next-mdx-remote';
 import { useRouter } from 'next/router';
 import { serialize } from 'next-mdx-remote/serialize';
