@@ -479,12 +479,12 @@ I usually like to switch between a dark and a light theme.
 For a light theme, I prefer:
 
 - Quiet Light (built-in)
-- Expo Light (unreleased -- based on [Expo Docs](https://docs.expo.dev/))
+- [Expo Light](https://marketplace.visualstudio.com/items?itemName=expo.vscode-expo-theme) (based on [Expo Docs](https://docs.expo.dev/))
 
 For the dark theme where I spent most of my time with fairyFloss.
 
 - [fairyFloss](https://marketplace.visualstudio.com/items?itemName=nopjmp.fairyfloss)
-- Expo Dark theme (unreleased -- based on [Expo Docs](https://docs.expo.dev/))
+- [Expo Dark theme](https://marketplace.visualstudio.com/items?itemName=expo.vscode-expo-theme) (based on [Expo Docs](https://docs.expo.dev/))
 
 For file icons, I love [Material-Icon-Theme](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme).
 
