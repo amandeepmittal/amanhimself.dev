@@ -49,7 +49,7 @@ And, also that visitors are coming mostly through organic search:
 
 ![ss4](https://i.imgur.com/xErLMj1.png)
 
-I still cross-post stuff at times on [Medium](https://medium.com/@amanhimself), [Dev.to](https://dev.to/amanhimself) and [Hashnode](https://amanhimself.hashnode.dev/). Not as much as I would like to, but I am eager to explore Hashnode more next year.
+I still cross-post stuff at times on [Medium](https://medium.com/@amanhimself), [Dev.to](https://dev.to/amanhimself) and ~~[Hashnode](https://amanhimself.hashnode.dev/)~~. Not as much as I would like to, but I am eager to explore Hashnode more next year.
 
 Dev.to has been my focus on cross-posting this year. I did manage to get 70k+ views and 15k followers.
 

@@ -7,7 +7,6 @@ export const MEDIUM = 'https://medium.com/@amanhimself';
 export const INSTAGRAM = 'https://www.instagram.com/amanhimselfcodes/';
 export const GOODREADS =
   'https://www.goodreads.com/author/show/17657541.Aman_Mittal';
-export const HASHNODE = 'https://amanhimself.hashnode.dev/';
 export const POLYWORK = 'https://www.polywork.com/amanhimself';
 export const KOFI = 'https://ko-fi.com/amanhimself';
 export const RSS = 'https://amanhimself.dev/rss.xml';

@@ -61,7 +61,7 @@ I also realized that Markdown is definitely one of the best things to happen in 
 Not focusing on Medium enough, also gave me the opportunity to explore two awesome blogging platforms that are meant for developers:
 
 - [Dev.to](https://dev.to/amanhimself)
-- [Hashnode](https://hashnode.com/@amanhimself)
+- ~~[Hashnode](https://hashnode.com/@amanhimself)~~
 
 I started cross-posting on Dev.to [last year](https://dev.to/amanhimself/getting-started-with-react-native-in-2019-build-your-first-app-542d) and in this year I have managed to get around 100k+ views.
 

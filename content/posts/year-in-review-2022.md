@@ -75,7 +75,7 @@ Also that visitors are coming mostly through organic search:
 
 ![Most traffic is organic](https://res.cloudinary.com/amanmittal/image/upload/v1672561601/CleanShot_2023-01-01_at_13.56.26_2x_x6jacf.png)
 
-I occasionally cross-posted my articles on [Medium](https://medium.com/@amanhimself), [Dev.to](https://dev.to/amanhimself) and [Hashnode](https://amanhimself.hashnode.dev/). Not as much as I would like to since I didn't spend that much time writing.
+I occasionally cross-posted my articles on [Medium](https://medium.com/@amanhimself), [Dev.to](https://dev.to/amanhimself) and ~~[Hashnode](https://amanhimself.hashnode.dev/)~~. Not as much as I would like to since I didn't spend that much time writing.
 
 Dev.to is my primary platform to focus on cross-posting this year. I did manage to get 45k+ views.
 
