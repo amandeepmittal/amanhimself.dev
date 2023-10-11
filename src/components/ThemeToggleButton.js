@@ -16,6 +16,7 @@ const ThemeToggleButton = () => {
         transition={{ duration: 0.2 }}
       >
         <IconButton
+          variant="ghost"
           aria-label="Toggle theme"
           colorScheme={useColorModeValue('purple', undefined)}
           icon={useColorModeValue(<FiMoon />, <FiSun />)}
