@@ -1,16 +1,9 @@
 import { Box, Stack, VStack, Heading, Text } from '@chakra-ui/react';
-import styled from '@emotion/styled';
 import Image from 'next/image';
 
 import ExternalLink from './ExternalLink';
 import ExternalLinksCloud from './ExternalLinksCloud';
 import HeroImage from './HeroImage';
-
-const RotateBox = styled.span`
-  &:hover img {
-    transform: rotate(20deg);
-  }
-`;
 
 const Hero = () => {
   return (
@@ -31,15 +24,7 @@ const Hero = () => {
             alignItems="center"
           >
             <Heading size="lg" as="h1">
-              <RotateBox>
-                <Image
-                  src="/handwave.png"
-                  width={24}
-                  height={24}
-                  alt="Hand Wave Emoji"
-                />
-              </RotateBox>{' '}
-              Hey, I&apos;m Aman
+              <span role="emoji">👋</span> Hey, I&apos;m Aman
             </Heading>
           </Stack>
 
