@@ -1,7 +1,7 @@
 {
   "name": "amanhimself-blog",
   "description": "Personal website running on Next.js and Chakra UI.",
-  "version": "9.9.35",
+  "version": "9.9.36",
   "author": "Aman Mittal <amandeepmittal@live.com>",
   "private": true,
   "scripts": {
