@@ -11,7 +11,7 @@ canonicalUrl: 'https://amanhimself.dev/blog/remove-bottom-border-shadow-on-heade
 
 Expo Router and React Navigation are both amazing navigation libraries in the React Native ecosystem. I have been a big fan of React Navigation as I have used it for a while but lately, I have started using Expo Router.
 
-Both libraries share `screenOptions` since Expo Router is built on top of React Navigation. Using these options, the border at the bottom of the header can be removed. By default, the Stack and Tab Navigators in the React Navigation library add a header on the screen. Expo Router version 2 also follows the same pattern. The example described in this blog post applies to both libraries.
+Both libraries share `screenOptions` since Expo Router is built on top of React Navigation. Using these options, the border at the bottom of the header can be removed. By default, the Stack and Tab Navigators in the React Navigation library add a header on the screen. Expo Router version 2 also follows the same pattern. The example described on this blog post applies to both libraries.
 
 ## Header with a shadow
 
