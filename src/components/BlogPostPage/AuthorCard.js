@@ -64,8 +64,9 @@ const AuthorCard = () => {
             </HStack>
           </HStack>
           <Text fontSize="md" color={textMode}>
-            I&apos;m a software developer and a technical writer. In this blog,
-            I write about Technical writing, Node.js, React Native and Expo.
+            I&apos;m a software developer and a technical writer. On this blog,
+            I write about my learnings in software development and technical
+            writing.
             <br />
             <br />
             Currently, working at Expo. Previously, I&apos;ve worked as a
