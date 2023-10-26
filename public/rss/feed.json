@@ -9,6 +9,17 @@
     },
     "items": [
         {
+            "id": "https://amanhimself.dev//blog/stash-changes-with-vscode",
+            "url": "https://amanhimself.dev//blog/stash-changes-with-vscode",
+            "title": "Stash changes in a git repository with VSCode",
+            "summary": "Stash changes in a git repository with VSCode",
+            "date_modified": "2023-10-26T00:00:00.000Z",
+            "author": {
+                "name": "Aman Mittal",
+                "url": "https://twitter.com/amanhimself"
+            }
+        },
+        {
             "id": "https://amanhimself.dev//blog/remove-bottom-border-shadow-on-header-in-react-navigation",
             "url": "https://amanhimself.dev//blog/remove-bottom-border-shadow-on-header-in-react-navigation",
             "title": "Remove bottom border or shadow on header in React Navigation or Expo Router",
