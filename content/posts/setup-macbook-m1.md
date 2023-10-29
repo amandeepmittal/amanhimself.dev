@@ -209,7 +209,7 @@ Some highlights from the above script:
 - [Watchman](https://facebook.github.io/watchman/) to watch changes in the filesystem.
 - [scrcpy](https://github.com/Genymobile/scrcpy) (control Android devices connect via USB on Mac)
 - [exa](https://github.com/ogham/exa#readme) a modern replacement for `ls`.
-- [imageoptim]((https://imageoptim.com/mac) for compressing image files. See [ImageOptim Settings](#imageoptim-settings) for how to set it up.
+- [imageoptim](https://imageoptim.com/mac) for compressing image files. See [ImageOptim Settings](#imageoptim-settings) for how to set it up.
 
 ## Step 7: After installing Node.js
 
