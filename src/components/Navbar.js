@@ -112,7 +112,7 @@ const Navbar = props => {
             >
               RSS
             </LinkItem>
-            <LinkItem
+            {/* <LinkItem
               _target="_blank"
               href="https://amanhimself.substack.com/"
               display="inline-flex"
@@ -121,7 +121,7 @@ const Navbar = props => {
               pl={2}
             >
               Newsletter
-            </LinkItem>
+            </LinkItem> */}
           </Stack>
         )}
         <Box flex={1} align="right">
