@@ -7,7 +7,9 @@ tag: 'expo'
 canonicalUrl: 'https://blog.logrocket.com/tamagui-react-native-create-faster-design-systems/'
 ---
 
-> Originally Published at [Blog.Logrocket.com](https://blog.logrocket.com/tamagui-react-native-create-faster-design-systems/) on December 24, 2021
+> Originally Published at [Blog.Logrocket.com](https://blog.logrocket.com/tamagui-react-native-create-faster-design-systems/) on December 24, 2021.
+
+> **Update (6 November, 2023)**: This post may have been outdated. See [Tamagui documentation](https://tamagui.dev/docs/intro/installation) for up to date information.
 
 The React Native system is gradually progressing towards solutions for sharing code between React Native and React Native web applications.
 
