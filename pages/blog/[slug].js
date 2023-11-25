@@ -13,7 +13,6 @@ import {
 } from '@chakra-ui/react';
 import { promises as fs } from 'fs';
 import path from 'path';
-
 import readingTime from 'reading-time';
 
 import { getAllBlogPosts } from './index';
