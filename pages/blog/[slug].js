@@ -21,13 +21,11 @@ import { DocumentHead, MDXComponents } from '../../src/components';
 import imageMetadata from '../../src/utils/imageMetaData';
 import {
   AuthorCard,
-  SubscribeCard,
   ShareArticle,
   ArticleNavigator,
   TimeToRead,
   PublishedDate,
-  Tag,
-  SponsorCard
+  Tag
 } from '../../src/components/BlogPostPage';
 import CarbonAds from '../../src/components/Carbon';
 
