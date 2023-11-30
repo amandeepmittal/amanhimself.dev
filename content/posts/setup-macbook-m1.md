@@ -525,7 +525,7 @@ For file icons, I love [Material-Icon-Theme](https://marketplace.visualstudio.co
 
 ### Step 10: Download browsers
 
-- [Arc Browser](https://arc.net/) from Gmail as it is in private beta. Login to work Gmail and Calendar.
+- [Arc Browser](https://arc.net/)
 - [Google Chrome](https://www.google.com/chrome/?brand=YTUH&gclid=EAIaIQobChMI9vmFxpL0-AIVDJ1LBR11UATAEAAYASAAEgJBQPD_BwE&gclsrc=aw.ds) Login to work and personal Gmail.
 - [Brave Browser](https://brave.com/download/).
 
