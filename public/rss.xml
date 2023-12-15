@@ -4,10 +4,18 @@
         <title>Aman Mittal' blog</title>
         <link>https://amanhimself.dev/</link>
         <description></description>
-        <lastBuildDate>Fri, 15 Dec 2023 13:30:46 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 15 Dec 2023 21:00:47 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Feed for Node.js</generator>
         <copyright>2019 - 2023, Aman Mittal · All Rights Reserved.</copyright>
+        <item>
+            <title><![CDATA[Default apps 2023]]></title>
+            <link>https://amanhimself.dev//blog/default-apps-2023</link>
+            <guid>https://amanhimself.dev//blog/default-apps-2023</guid>
+            <pubDate>Sat, 16 Dec 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[Default apps 2023]]></description>
+            <author>amanmittal.work@gmail.com (Aman Mittal)</author>
+        </item>
         <item>
             <title><![CDATA[Stash changes in a git repository with VSCode]]></title>
             <link>https://amanhimself.dev//blog/stash-changes-with-vscode</link>
