@@ -14,7 +14,13 @@ const AboutPage = () => {
   return (
     <>
       <DocumentHead pageTitle="Aman Mittal - About" postPath="/about" />
-      <VStack spacing={3} alignItems="flex-start" w="full" as="section" pt={28}>
+      <VStack
+        spacing={1.5}
+        alignItems="flex-start"
+        w="full"
+        as="section"
+        pt={28}
+      >
         <Heading size="lg" as="h1">
           About Me
         </Heading>
@@ -29,13 +35,13 @@ const AboutPage = () => {
           I&apos;ve as a Developer Advocate at Draftbit, and Senior Content
           Developer at Vercel.
         </Text>
-        <Text lineHeight="175%" as="h2" fontSize="lg">
+        {/* <Text lineHeight="175%" as="h2" fontSize="lg">
           I write a{' '}
           <ExternalLink href="https://amanhimself.substack.com/">
             newsletter
           </ExternalLink>{' '}
           in which I share my latest tutorials and articles.
-        </Text>
+        </Text> */}
         <Text lineHeight="175%" as="h2" fontSize="lg">
           When I am not writing code or working on a blog post, I&#39;m probably
           spending my time either{' '}
