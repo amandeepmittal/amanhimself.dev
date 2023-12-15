@@ -9,7 +9,7 @@ canonicalUrl: 'https://medium.com/hackernoon/setup-nodemon-to-auto-restart-nodej
 
 Manually restarting Node.js application is a tiring and tedious job. [Nodemon](https://www.npmjs.com/package/nodemon) is the best solution available to autorestart a nodejs app server in development mode.
 
-### Step 1
+### First step
 
 Organize the source directory `src` and initiate it with an `app.js` or `index.js` or `server.js` or any other convention you use to bootstrap a Node.js server.
 
@@ -30,7 +30,7 @@ Update the `package.json` file accordingly by adding a `start` script.
 }
 ```
 
-### Step 2
+### Second step
 
 Add `express` or any other framework as dependency to bootstrap a minimal server.
 
@@ -82,7 +82,7 @@ Lorem Ipsum
 
 This whole process is repetitive will slow your development of any package or application. Better solution is to use `nodemon`.
 
-### Step 3
+### Third step
 
 Add nodemon as `devDependency`:
 
@@ -111,7 +111,7 @@ $ npm i -D nodemon
 }
 ```
 
-### Step 4
+### Fourth step
 
 Make another script `dev` under npm scripts in `package.json` file:
 

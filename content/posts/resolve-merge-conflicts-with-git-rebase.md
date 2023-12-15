@@ -22,7 +22,7 @@ I have been working on a `feature-branch` in an open-source repository for work 
 
 Using `git rebase` in the `feature-branch` allows to bring changes from the `main`, and resolve the merge conflicts. Then, I can use VSCode (which has a Resolve merge conflict editor and is pretty handy) and push the changes back to my feature branch. Once the conflicts are resolved, I can merge my branch into the `main` without any issues which will make GitHub happy.
 
-### Step 1: Fetch the latest changes from the main
+### 1: Fetch the latest changes from the main
 
 Open a fresh terminal tab, and navigate into the repository. On the `main` branch, run:
 
@@ -32,7 +32,7 @@ git pull
 
 This makes sure that the local copy of the `main` branch on my machine has all the latest changes.
 
-### Step 2: Run git log to verify
+### 2: Run git log to verify
 
 Running `git log` helps verifying that `main` branch has all the latest commits:
 
@@ -42,7 +42,7 @@ git log --oneline --graph --decorate --color
 # I use an alias: glog
 ```
 
-### Step 3: Checkout to the feature-branch
+### 3: Checkout to the feature-branch
 
 Time to switch to the `feature-branch`:
 
@@ -52,7 +52,7 @@ git checkout feature-branch
 # I use an alias: gck feature-branch
 ```
 
-### Step 4: Run git rebase to bring changes from the main
+### 4: Run git rebase to bring changes from the main
 
 To bring changes from the `main` to the `feature-branch`, run:
 
@@ -68,7 +68,7 @@ git status
 # I use an alias: gs
 ```
 
-### Step 5: Resolve merge conflicts
+### 5: Resolve merge conflicts
 
 If there are merge conflicts, running `git status` will let you know. Open VSCode, click on open Resolve Merge Conflict editor and you can now accept changes in the left tab which shows the latest changes from `main` branch.
 
@@ -95,7 +95,7 @@ git commit -m "commit message..."
 # I use an alias: gc "commit message..."
 ```
 
-### Step 6: Continue the rebase
+### 6: Continue the rebase
 
 Run `git rebase` command with `--continue` flag to continue the rebase process:
 
@@ -105,7 +105,7 @@ git rebase --continue
 
 > **Tip:** If required, save changes by pressing `:wq!` in the terminal.
 
-### Step 7: Verify new commits
+### 7: Verify new commits
 
 Run the following command to verify that the new commits from `feature-branch` are at the top of the commit history and changes from the `main`:
 
@@ -115,7 +115,7 @@ git log --oneline --graph --decorate --color
 # I use an alias: glog
 ```
 
-### Step 8: Commit changes from local to remote
+### 8: Commit changes from local to remote
 
 Finally, push the changes from the local `feature-branch` to the remote `feature-branch`:
 

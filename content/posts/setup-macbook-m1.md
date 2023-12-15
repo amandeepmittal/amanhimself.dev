@@ -15,7 +15,7 @@ It's 2023, and I am still coming back to this article. I wrote this originally i
 
 I believe small optimizations help you go faster in the long run. Also, a flavor of personalization makes my developer experience more enjoyable. I like to keep two separate setups, one for work and the other for personal use and fun. However, often I end up switching between both. Having the same set of tools and configurations helps me just be me. It also helps me keep my setup portable and up-to-date (have had those days where I lost everything).
 
-## Step 1: Install Xcode and Command Line Tools
+## 1: Install Xcode and Command Line Tools
 
 To get started, open the App Store on the Mac and install [Xcode](https://apps.apple.com/in/app/xcode/id497799835?mt=12). It's a large download, so it might take a while.
 
@@ -25,13 +25,13 @@ Once installed, open the Terminal app on the Mac and run:
 xcode-select --install && sudo xcodebuild -license
 ```
 
-#### Step 1.1: Verify Command Line Tools installation
+#### 1.1: Verify Command Line Tools installation
 
 After installing Xcode and command line tools, open the app. Then, from the menu bar, open **Xcode > Preferences > Locations** and make sure that **Command Line Tools** point towards the current Xcode app.
 
 ![ss3](https://i.imgur.com/ZXS88QM.png)
 
-## Step 2: Install Warp terminal
+## 2: Install Warp terminal
 
 > Previously, I've used iTerm2 as y default terminal app over the years. Find more info about iterm2 in the Alternate tools section at the end of this post.
 
@@ -42,7 +42,7 @@ I recently started using [Warp](https://warp.dev) as my first choice for a termi
 - Window Opacity: 95
 - Window Blur Radius: 17
 
-### Step 2.1: Install Oh My Zsh
+### 2.1: Install Oh My Zsh
 
 [ZSH](https://github.com/zsh-users/zsh) is the default shell in macOS. However, I like to use [Oh My Zsh](https://ohmyz.sh/) to manage the ZSH configuration, plugins, and a theme to prettify the terminal (especially when using iterm2 previously).
 
@@ -65,7 +65,7 @@ The `$HOME` should be `/Users/<your-macos-username>`. You can verify this by run
 echo $HOME
 ```
 
-### Step 2.2: Install syntax highlighting plugin
+### 2.2: Install syntax highlighting plugin
 
 The first I like to do after setting up the bare minimum ZSH configuration is to install a plugin called [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md). It provides syntax highlighting for the ZSH shell. Execute the series below commands in the terminal window:
 
@@ -119,7 +119,7 @@ source $ZSH/oh-my-zsh.sh
 source /Users/amanhimself/.oh-my-zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 ```
 
-## Step 3: Change system settings
+## 3: Change system settings
 
 System preferences and settings that I prefer. These settings are available in the Systems Settings:
 
@@ -154,7 +154,7 @@ System preferences and settings that I prefer. These settings are available in t
   - Turn display off on battery when inactive: For 3 hours
   - Turn display off on power adapter when inactive: For 3 hours
 
-## Step 4: Install homebrew
+## 4: Install homebrew
 
 On December 1, 2020, the Homebrew team announced on their [website](https://brew.sh/2020/12/01/homebrew-2.6.0/) about the version release `2.6.0`. The most significant changes they listed were:
 
@@ -168,7 +168,7 @@ Using the terminal, you can install the Homebrew by executing the default comman
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-## Step 5: Install Git
+## 5: Install Git
 
 To install Git, run the command:
 
@@ -190,7 +190,7 @@ To enable colors in the output, run the command:
 git config --global color.ui auto
 ```
 
-## Step 6: Install homebrew packages
+## 6: Install homebrew packages
 
 - Node.js and npm via Node Version Manager (NVM). [Read the entire blog post on how to install Node.js using NVM](https://amanhimself.dev/blog/install-nodejs-using-nvm-on-macos-m1/).
 
@@ -211,7 +211,7 @@ Some highlights from the above script:
 - [exa](https://github.com/ogham/exa#readme) a modern replacement for `ls`.
 - [imageoptim](https://imageoptim.com/mac) for compressing image files. See [ImageOptim Settings](#imageoptim-settings) for how to set it up.
 
-## Step 7: After installing Node.js
+## 7: After installing Node.js
 
 Node.js comes with the default package manager `npm`. Set defaults for it:
 
@@ -221,7 +221,7 @@ npm config set init-author-url "example.com"
 npm config set init-license MIT
 ```
 
-### Step 8: Install global npm packages
+### 8: Install global npm packages
 
 - [eas-cli](https://www.npmjs.com/package/eas-cli) For work and personal use:
 
@@ -235,7 +235,7 @@ Also, I use the following command to update global packages:
 npx npm-check -gu
 ```
 
-## Step 9: VSCode
+## 9: VSCode
 
 VSCode and VS Code Insiders are currently supported on ARM chips (March 13, 2021). Download the installer for Insiders edition from [here](https://code.visualstudio.com/insiders/) and for VSCode [here](https://code.visualstudio.com/download).
 
@@ -523,7 +523,7 @@ For file icons, I love [Material-Icon-Theme](https://marketplace.visualstudio.co
 
 ## Apps
 
-### Step 10: Download browsers
+### 10: Download browsers
 
 - [Arc Browser](https://arc.net/)
 - [Google Chrome](https://www.google.com/chrome/?brand=YTUH&gclid=EAIaIQobChMI9vmFxpL0-AIVDJ1LBR11UATAEAAYASAAEgJBQPD_BwE&gclsrc=aw.ds) Login to work and personal Gmail.
