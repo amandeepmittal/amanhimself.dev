@@ -13,16 +13,16 @@ In this article, I will describe how to take an existing Web Application that is
 
 ### MERN Stack
 
-MongoDB, ExpressJS, Node.js, and Reactjs are used together to build web applications. In this, Node.js and Express bind together to serve the backend, MongoDB provides a NoSQL database to store the data and frontend is built using React that a user interacts with. All four of these technologies are open source, cross-platform and JavaScript based. Since they are JavaScript based, one of the main reasons why they are often used together.
+MongoDB, ExpressJS, Node.js, and Reactjs are used together to build web applications. In this, Node.js and Express bind together to serve the backend, MongoDB provides a NoSQL database to store the data and the frontend is built using React that a user interacts with. All four of these technologies are open-source, cross-platform and JavaScript-based. Since they are JavaScript-based, one of the main reasons why they are often used together.
 
-As JavaScript is used throughout to build a Fullstack application, developers do not need to learn and change the context of using different programming languages to build or work on different aspect of a web application.
+As JavaScript is used throughout to build a Fullstack application, developers do not need to learn and change the context of using different programming languages to build or work on different aspects of a web application.
 
 To continue to follow this tutorial there are requirements that you will need to build the demo application and then deploy it on Heroku.
 
 - Node.js/npm installed
 - Heroku account
 
-For MongoDB, we are going to use a cloud based service like mLab which provides database as a service. It has a free tier, and having an account there will be time saving.
+For MongoDB, we are going to use a cloud-based service like mLab which provides a database as a service. It has a free tier, and having an account there will be time-saving.
 
 ## Building a Full-stack app using MERN
 
