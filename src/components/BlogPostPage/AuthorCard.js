@@ -7,6 +7,8 @@ import {
   HStack
 } from '@chakra-ui/react';
 
+import ExternalLink from '../ExternalLink';
+
 const AuthorCard = () => {
   const textMode = useColorModeValue('black', 'white');
   return (
@@ -26,12 +28,6 @@ const AuthorCard = () => {
               </Text>
             </Text>
             <HStack justifyContent="flex-end">
-              {/* <Box
-                borderRadius="md"
-                padding="2px 2px"
-                alignItems="center"
-                border="1px solid #805AD5"
-              > */}
               <Link
                 isExternal
                 href="https://github.com/sponsors/amandeepmittal?frequency=one-time"
@@ -40,27 +36,18 @@ const AuthorCard = () => {
                   Buy me coffee
                 </Text>
               </Link>
-              {/* </Box> */}
               <Box>&nbsp;</Box>
-              <Link isExternal href="https://amanhimself.substack.com/">
+              <Link isExternal href="https://github.com/amandeepmittal">
                 <Text fontSize="13px" color="purple.500" fontWeight="bold">
-                  Newsletter
+                  GitHub
                 </Text>
               </Link>
-              {/* </Box> */}
               <Box>&nbsp;</Box>
-              {/* <Box
-                borderRadius="md"
-                padding="2px 2px"
-                alignItems="center"
-                border="1px solid #805AD5"
-              > */}
               <Link isExternal href="https://twitter.com/amanhimself">
                 <Text fontSize="13px" color="purple.500" fontWeight="bold">
                   X (Twitter)
                 </Text>
               </Link>
-              {/* </Box> */}
             </HStack>
           </HStack>
           <Text fontSize="md" color={textMode}>
@@ -68,10 +55,13 @@ const AuthorCard = () => {
             I write about my learnings in software development and technical
             writing.
             <br />
-            <br />
-            Currently, working at Expo. Previously, I&apos;ve worked as a
-            Developer Advocate at Draftbit, and Senior Content Developer at
-            Vercel.
+            Currently, working maintaining docs at{' '}
+            <ExternalLink href="https://expo.dev/">Expo</ExternalLink>. Read
+            more about me on the{' '}
+            <ExternalLink href="https://amanhimself.dev/about/">
+              About page
+            </ExternalLink>
+            .
           </Text>
         </VStack>
       </HStack>
