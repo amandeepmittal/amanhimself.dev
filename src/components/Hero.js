@@ -33,6 +33,12 @@ const Hero = () => {
             with open source technologies and writing about what I learn.
           </Text>
           <Text lineHeight="175%" as="h2" fontSize="lg">
+            I mainly enjoy working with React Native and Expo. Currently working
+            as a documentation maintainer at{' '}
+            <ExternalLink href="https://expo.dev/">Expo</ExternalLink> among
+            other stuff.
+          </Text>
+          <Text lineHeight="175%" as="h2" fontSize="lg">
             I&apos;ve been writing online since 2017, mostly cross-platform
             mobile development and sometimes on web. I&apos;ve written over 150
             articles and tutorials for more than 30 publications and
@@ -40,13 +46,18 @@ const Hero = () => {
             share my software development journey.
           </Text>
           <Text lineHeight="175%" as="h2" fontSize="lg">
-            Currently, documentation maintainer at{' '}
-            <ExternalLink href="https://expo.dev/">Expo</ExternalLink>.
             Previously, I&apos;ve worked as{' '}
             <ExternalLink href="https://amanhimself.dev/blog/first-three-months-as-developer-advocate/">
               Developer Advocate
             </ExternalLink>{' '}
             at Draftbit, and Senior Content Developer at Vercel.
+          </Text>
+          <Text lineHeight="175%" as="h2" fontSize="lg">
+            Read more about me on the{' '}
+            <ExternalLink href="https://amanhimself.dev/about/">
+              About page
+            </ExternalLink>
+            .
           </Text>
           <ExternalLinksCloud />
         </VStack>
