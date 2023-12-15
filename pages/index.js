@@ -16,7 +16,7 @@ export const getRecentBlogPosts = async () => {
 
   const recentPosts = posts
     .sort((a, b) => Date.parse(b.date) - Date.parse(a.date))
-    .slice(0, 10);
+    .slice(0, 15);
 
   return recentPosts;
 };
@@ -84,7 +84,7 @@ export const getStaticProps = async () => {
 const HomePage = ({ posts }) => {
   return (
     <>
-      <DocumentHead pageTitle="Aman Mittal – Software Developer, Tech Writer." />
+      <DocumentHead pageTitle="Aman Mittal - Software Developer, Tech Writer." />
       <Hero />
       {/* Latest Blog Posts */}
       <LatestPostsSection posts={posts} />

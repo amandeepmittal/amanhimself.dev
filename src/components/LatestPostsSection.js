@@ -5,8 +5,7 @@ import {
   ListItem,
   Text,
   Link,
-  HStack,
-  Box
+  HStack
 } from '@chakra-ui/react';
 
 import BlogPostCard from './BlogPostCard';
@@ -21,15 +20,14 @@ const LatestPostsSection = ({ posts }) => {
     >
       <HStack justifyContent="center" alignItems="center">
         <Heading size="lg">Latest Posts</Heading>
-        <HStack justifyContent="flex-end">
-          <Link href="/blog">
-            <Text fontSize="lg" color="purple.500" textAlign="center">
-              See all
-            </Text>
-          </Link>
-        </HStack>
+        <Text color="gray.500" mx={2}>
+          •
+        </Text>
+        <Heading size="lg" color="purple.500" textAlign="center">
+          <Link href="/blog">See all</Link>
+        </Heading>
       </HStack>
-      <List spacing={6}>
+      <List spacing={2}>
         {posts.map(post => (
           <ListItem key={post.slug}>
             <BlogPostCard {...post} />
