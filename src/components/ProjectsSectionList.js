@@ -6,7 +6,7 @@ const ProjectsSectionList = ({ projects }) => {
   return (
     <VStack w="full" alignItems="flex-start" spacing={4} as="section" mt={16}>
       <Heading size="lg">Open Source Projects I&#39;ve Worked on</Heading>
-      <List spacing={6}>
+      <List spacing={2.5}>
         {projects.map(project => (
           <ListItem key={project.href}>
             <ProjectInfoCard {...project} />
