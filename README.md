@@ -5,7 +5,15 @@ A [personal website](https://amanhimself.dev/) where I keep:
 - information about myself
 - blog posts
 
-I have written for over 30+ tech publications and over 150+ posts. This website is an alternate platform to the collection of the blog posts and tutorials I have written so far.
+I have written for over 30+ tech publications and over 150+ posts. This website is an alternate platform to the collection of blog posts and tutorials I have written so far.
+
+## Author
+
+👤 **Aman mittal**
+
+- X/Twitter: [@amanhimself](https://twitter.com/amanhimself)
+- GitHub: [@amandeepmittal](https://github.com/amandeepmittal)
+- Blog: [amanhimself.dev/blog](https://amanhimself.dev/blog/)
 
 ## License
 
