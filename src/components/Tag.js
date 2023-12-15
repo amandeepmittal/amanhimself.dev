@@ -4,7 +4,7 @@ import { Link as ChakraLink, Flex, Text } from '@chakra-ui/react';
 
 const Tag = ({ children, url }) => {
   let tag = (
-    <Flex mx="0.5rem">
+    <Flex mx="0.2rem">
       <Text _hover={{ textDecoration: 'underline' }} color={'white'}>
         {children.toUpperCase()}
       </Text>

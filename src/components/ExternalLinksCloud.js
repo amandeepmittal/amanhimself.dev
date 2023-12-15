@@ -5,7 +5,7 @@ import ExternalLink from './ExternalLink';
 const ExternalLinksCloud = () => {
   return (
     <HStack>
-      <Text fontWeight="bold">Social links:</Text>
+      <Text fontWeight="semibold">Social links:</Text>
       <Text>
         <ExternalLink href="https://x.com/amanhimself">
           🐦 X (Twitter)
