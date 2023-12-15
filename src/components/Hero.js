@@ -1,5 +1,4 @@
 import { Box, Stack, VStack, Heading, Text } from '@chakra-ui/react';
-import Image from 'next/image';
 
 import ExternalLink from './ExternalLink';
 import ExternalLinksCloud from './ExternalLinksCloud';
