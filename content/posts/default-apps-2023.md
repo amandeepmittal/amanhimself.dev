@@ -7,7 +7,7 @@ tag: 'tools'
 canonicalUrl: 'https://amanhimself.dev/blog/default-apps-2023/'
 ---
 
-Read about the ongoing [Default Apps](https://defaults.rknight.me/) project first at [Chris Coyier's](https://chriscoyier.net/2023/11/25/default-apps-2023/) blog (thank you!). Tracing back to where it started seems to be the [Hemispheric Views](https://listen.hemisphericviews.com/097) podcast. During this back and forth of opening links on a Friday night, I got to discover so many new cool personalized blogs through the "Default Apps" list. Decided to jot down my own list.
+Read about the ongoing [Default Apps](https://defaults.rknight.me/) project first at [Chris Coyier's](https://chriscoyier.net/2023/11/25/default-apps-2023/) blog (thank you!). Tracing back to where it started seems to be the [Hemispheric Views](https://listen.hemisphericviews.com/097) podcast. During this back and forth of opening links on a Friday night, I got to discover so many new cool personalized blogs through the "Default Apps" list. Decided to jot down my own.
 
 - 📨 **Mail Client:** Gmail
 - 📮 **Mail Server:** [Google](https://www.google.com/gmail/about/)
