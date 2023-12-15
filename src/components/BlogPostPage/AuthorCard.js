@@ -54,8 +54,9 @@ const AuthorCard = () => {
             I&apos;m a software developer and a technical writer. On this blog,
             I write about my learnings in software development and technical
             writing.
-            <br />
-            Currently, working maintaining docs at{' '}
+          </Text>
+          <Text fontSize="md" color={textMode}>
+            Currently, working maintaining docs at 𝝠{' '}
             <ExternalLink href="https://expo.dev/">Expo</ExternalLink>. Read
             more about me on the{' '}
             <ExternalLink href="https://amanhimself.dev/about/">
