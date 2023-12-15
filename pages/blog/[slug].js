@@ -116,9 +116,9 @@ const BlogPostPage = ({
             <Tag tag={tag} />
           </HStack>
         </VStack>
-        <Center>
+        {/* <Center>
           <CarbonAds />
-        </Center>
+        </Center> */}
         <MDXRemote {...source} components={MDXComponents} />
         {/* Sponsor - only uncomment when there is an actual sponsor */}
         {/* <SponsorCard /> */}
