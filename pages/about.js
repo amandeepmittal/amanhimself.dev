@@ -24,7 +24,7 @@ const AboutPage = () => {
         <Heading size="lg" as="h1">
           About Me
         </Heading>
-        <small>Last Update: May 17, 2023</small>
+        <small>Last Update: Dec 15, 2023</small>
         <Text lineHeight="175%" as="h2" fontSize="lg" pt={2}>
           Hi! My name is Aman Mittal. I am an independent software developer,
           and a technical writer. I love working with open source technologies
