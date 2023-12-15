@@ -1,12 +1,4 @@
-import {
-  VStack,
-  Heading,
-  Text,
-  UnorderedList,
-  ListItem,
-  Link,
-  Divider
-} from '@chakra-ui/react';
+import { VStack, Heading, Text, Link } from '@chakra-ui/react';
 import Image from 'next/image';
 
 import { DocumentHead } from '../src/components';
