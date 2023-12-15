@@ -66,7 +66,7 @@ const TAGS_ARRAY = [
   },
   {
     name: 'writing',
-    color: '#526D82'
+    color: '#83A2FF'
   }
 ];
 
