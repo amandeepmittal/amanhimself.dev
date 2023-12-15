@@ -327,6 +327,24 @@ const SponsorshipPage = () => {
                 GitHub
               </Link>{' '}
             </ListItem>
+            <ListItem>
+              <Link
+                isExternal
+                href="https://github.com/ulysses82"
+                textDecoration="underline"
+              >
+                ulysses82
+              </Link>{' '}
+            </ListItem>
+            <ListItem>
+              <Link
+                isExternal
+                href="https://github.com/beekeeb"
+                textDecoration="underline"
+              >
+                beekeeb
+              </Link>{' '}
+            </ListItem>
           </UnorderedList>
         </Text>
       </VStack>
