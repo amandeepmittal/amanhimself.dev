@@ -39,7 +39,13 @@ const SponsorshipPage = () => {
         pageTitle="Aman Mittal - Sponsor this blog"
         postPath="/uses"
       />
-      <VStack spacing={3} alignItems="flex-start" w="full" as="section" pt={28}>
+      <VStack
+        spacing={1.5}
+        alignItems="flex-start"
+        w="full"
+        as="section"
+        pt={28}
+      >
         <Heading size="lg" as="h2">
           Sponsor amanhimself.dev
         </Heading>
