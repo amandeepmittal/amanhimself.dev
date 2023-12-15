@@ -266,23 +266,17 @@ const AboutPage = () => {
           <ListItem> 📝 Senior Content Developer at Vercel (2022)</ListItem>
           <ListItem>🥑 Developer Advocate at Draftbit (2021 - 2022)</ListItem>
           <ListItem>
-            💻 📝 Contract Developer & Tech Writer
+            💻 📝 Software consultant and Tech Writer
             <List spacing={2}>
-              <ListItem>
-                Crowdbotics (Software Consultant & Technical Writer, 2018 -
-                2021)
-              </ListItem>
-              <ListItem>Logrocket (Tech Writer, 2020 - Present)</ListItem>
+              <ListItem>Crowdbotics (2018 - 2021)</ListItem>
+              <ListItem>Logrocket (Tech Writer, 2020 - 2023)</ListItem>
               <ListItem>
                 Heartbeat (React Native Technical Writer, 2019 - 2020)
               </ListItem>
               <ListItem>
-                Jscrambler (React Native Technical Writer, 2018 - Present)
+                Jscrambler (React Native Technical Writer, 2018 - 2022)
               </ListItem>
             </List>
-          </ListItem>
-          <ListItem>
-            Node.js Developer (2016 - 2017) at Unique Touch Solution
           </ListItem>
         </List>
         <Heading size="lg" as="h2" pt={8}>
