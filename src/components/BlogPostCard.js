@@ -10,7 +10,6 @@ import {
   useColorModeValue,
   useMediaQuery
 } from '@chakra-ui/react';
-import dayjs from 'dayjs';
 
 import TimeToRead from './BlogPostPage/TimeToRead';
 import PublishedDate from './BlogPostPage/PublishedDate';
@@ -25,7 +24,7 @@ const BlogPostCard = ({ title, date, slug, thumbnail, timeToRead }) => {
       <Stack
         direction={{ base: 'row', md: 'row' }}
         p={4}
-        spacing={{ base: 8, md: 5 }}
+        spacing={{ base: 8, md: 4 }}
         rounded="md"
         alignItems="center"
         transitionProperty="transform"

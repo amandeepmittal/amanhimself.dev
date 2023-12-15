@@ -94,7 +94,7 @@ const Blog = ({ posts }) => {
         {/* Common Tags cloud */}
         <TagsCloud />
       </VStack>
-      <List spacing={1} w="full">
+      <List spacing={0} w="full">
         {displayPosts.map(post => (
           <ListItem key={post.slug}>
             <BlogPostCard {...post} />
