@@ -5,7 +5,7 @@ import TagsSummary from '../TagSummary';
 
 const TagsCloud = () => {
   return (
-    <HStack spacing={3} pt={4} flexWrap="wrap">
+    <HStack spacing={1.5} pt={4} flexWrap="wrap">
       <Text fontSize="lg" fontWeight="700">
         Common tags:
       </Text>
