@@ -1,5 +1,5 @@
 ---
-title: 'My Default apps in 2023'
+title: 'My default apps in 2023'
 date: '2023-12-16'
 slug: 'default-apps-2023'
 thumbnail: '/thumbnails/apple.png'
@@ -7,7 +7,7 @@ tag: 'tools'
 canonicalUrl: 'https://amanhimself.dev/blog/default-apps-2023/'
 ---
 
-Read about the ongoing [Default Apps](https://defaults.rknight.me/) project first at [Chris Coyier's](https://chriscoyier.net/2023/11/25/default-apps-2023/) blog (thank you!). Tracing back to where it started seems to be the [Hemispheric Views](https://listen.hemisphericviews.com/097) podcast. During this back and forth of opening links on a Friday night, I got to discover so many new cool personalized blogs through the "Default Apps" list. Decided to jot down my own.
+Read about the ongoing [Default Apps](https://defaults.rknight.me/) project first at [Chris Coyier's](https://chriscoyier.net/2023/11/25/default-apps-2023/) blog. Tracing back to where it started seems to be the [Hemispheric Views](https://listen.hemisphericviews.com/097) podcast. During this back and forth of opening links on a Friday night, I got to discover so many new cool personalized blogs through the "Default Apps" list. Decided to jot down my own.
 
 - 📨 **Mail Client:** Gmail
 - 📮 **Mail Server:** [Google](https://www.google.com/gmail/about/)
@@ -17,7 +17,7 @@ Read about the ongoing [Default Apps](https://defaults.rknight.me/) project firs
 - 🟦 **Photo Management:** [iCloud](https://icloud.com/)
 - 📆 **Calendar:** [Apple Calendar](https://apps.apple.com/us/app/calendar/id1108185179) and [Google Calendar](https://calendar.google.com/) (professionally)
 - 📁 **Cloud File Storage:** [iCloud](https://icloud.com/) for some applications to sync between both phone and laptop
-- 📖 **RSS:** N/A at the moment
+- 📖 **RSS:** N/A
 - 🙍🏻‍♂️ **Contacts:** [Contacts](https://apps.apple.com/us/app/contacts/id1069512615)
 - 🌐 **Browser:** [Chrome](https://www.google.com/chrome/) professionally on desktop and iOS, [Brave](https://brave.com/) and [Safari](https://www.apple.com/in/safari/) personal
 - 💬 **Chat:** [Slack](https://slack.com/), [Telegram](https://web.telegram.org/)
@@ -40,4 +40,4 @@ Read about the ongoing [Default Apps](https://defaults.rknight.me/) project firs
 - 💻 **Terminal Emulator:** [iTerm](https://iterm2.com/)
 - 🌌 **(Annotated) Screenshots and quick videos:** [CleanShot X](https://cleanshot.com/)
 
-This covers app the list of apps that I use almost daily either for work or for personal use. In the future, maybe I'll add a couple more categories to this post.
+This covers app the list of apps that I use almost daily either for work or for personal use.
