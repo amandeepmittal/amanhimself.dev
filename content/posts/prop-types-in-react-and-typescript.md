@@ -100,7 +100,7 @@ function FavoriteColor({ color }: Props) {
 }
 ```
 
-The VSCode IntelliSense will detect the type of `color` prop in the `App` component. It will allow you to provide anything other than a `string` value for this prop.
+The VS Code IntelliSense will detect the type of `color` prop in the `App` component. It will allow you to provide anything other than a `string` value for this prop.
 
 ![s4](https://res.cloudinary.com/amanmittal/image/upload/v1624823701/s4_fyz6bw.png)
 
