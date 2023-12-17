@@ -36,7 +36,7 @@ function App() {
 export default App;
 ```
 
-Above code snippet will run fine, and there no errors or warnings yet. If you use VSCode, hover over the prop `color` in the `App` component. You will see the expected data type on the prop.
+Above code snippet will run fine, and there no errors or warnings yet. If you use VS Code, hover over the prop `color` in the `App` component. You will see the expected data type on the prop.
 
 ![s1](https://res.cloudinary.com/amanmittal/image/upload/v1624823701/s1_beblnm.png)
 
