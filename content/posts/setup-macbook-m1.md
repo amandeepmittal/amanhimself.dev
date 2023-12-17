@@ -235,13 +235,13 @@ Also, I use the following command to update global packages:
 npx npm-check -gu
 ```
 
-## 9: VSCode
+## 9: VS Code
 
-VSCode and VS Code Insiders are currently supported on ARM chips (March 13, 2021). Download the installer for Insiders edition from [here](https://code.visualstudio.com/insiders/) and for VSCode [here](https://code.visualstudio.com/download).
+VS Code and VS Code Insiders are currently supported on ARM chips (March 13, 2021). Download the installer for Insiders edition from [here](https://code.visualstudio.com/insiders/) and for VS Code [here](https://code.visualstudio.com/download).
 
 ![ss5](https://i.imgur.com/Yd4wQ10.png)
 
-I am using the following VSCode configuration:
+I am using the following VS Code configuration:
 
 ```json
 {
@@ -472,7 +472,7 @@ I am using the following VSCode configuration:
   "githubPullRequests.pullBranch": "never"
 ```
 
-### VSCode themes
+### VS Code themes
 
 I usually like to switch between a dark and a light theme.
 
@@ -488,7 +488,7 @@ For the dark theme where I spent most of my time with fairyFloss.
 
 For file icons, I love [Material-Icon-Theme](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme).
 
-### VSCode extensions
+### VS Code extensions
 
 - [Auto Close tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag)
 - [Auto Complete Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-complete-tag)

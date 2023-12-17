@@ -20,7 +20,7 @@ I have been working on a `feature-branch` in an open-source repository for work 
 
 ## Solution: Resolve conflicts with git rebase
 
-Using `git rebase` in the `feature-branch` allows to bring changes from the `main`, and resolve the merge conflicts. Then, I can use VSCode (which has a Resolve merge conflict editor and is pretty handy) and push the changes back to my feature branch. Once the conflicts are resolved, I can merge my branch into the `main` without any issues which will make GitHub happy.
+Using `git rebase` in the `feature-branch` allows to bring changes from the `main`, and resolve the merge conflicts. Then, I can use VS Code (which has a Resolve merge conflict editor and is pretty handy) and push the changes back to my feature branch. Once the conflicts are resolved, I can merge my branch into the `main` without any issues which will make GitHub happy.
 
 ### 1: Fetch the latest changes from the main
 
@@ -70,7 +70,7 @@ git status
 
 ### 5: Resolve merge conflicts
 
-If there are merge conflicts, running `git status` will let you know. Open VSCode, click on open Resolve Merge Conflict editor and you can now accept changes in the left tab which shows the latest changes from `main` branch.
+If there are merge conflicts, running `git status` will let you know. Open VS Code, click on open Resolve Merge Conflict editor and you can now accept changes in the left tab which shows the latest changes from `main` branch.
 
 On the right side, changes from the current `feature-branch` (probably the ones that are causing conflicts) are shown.
 
