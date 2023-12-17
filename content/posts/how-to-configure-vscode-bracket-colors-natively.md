@@ -1,5 +1,5 @@
 ---
-title: 'How to configure VSCode Bracket Pair Colors Natively'
+title: 'How to configure VS Code Bracket Pair Colors natively'
 date: '2021-10-12'
 slug: 'how-to-configure-vscode-bracket-colors-natively'
 thumbnail: '/thumbnails/vscode.png'
@@ -9,15 +9,15 @@ canonicalUrl: 'https://amanhimself.dev/blog/how-to-configure-vscode-bracket-colo
 
 ![cover image](https://res.cloudinary.com/practicaldev/image/fetch/s--lgaAXnJK--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/r84rtekdnk3qd4r4v31e.png)
 
-With an [update in August 2021](https://code.visualstudio.com/updates/v1_60#_high-performance-bracket-pair-colorization), VSCode started supporting Bracket pair colorization natively. It means there is no need to use the [Bracket Pair Colorizer](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer) extension (_which I love_).
+With an [update in August 2021](https://code.visualstudio.com/updates/v1_60#_high-performance-bracket-pair-colorization), VS Code started supporting Bracket pair colorization natively. It means there is no need to use the [Bracket Pair Colorizer](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer) extension (_which I love_).
 
-In their official announcement, the VSCode team states they choose to implement this feature natively to address performance issues.
+In their official announcement, the VS Code team states they chose to implement this feature natively to address performance issues.
 
 I recently uninstalled the extension and thought, let's try to use the editor without any bracket color extension. I cannot. I've been using the extension [as long as I remember](https://amanhimself.dev/blog/how-i-configure-vscode-for-everything/) and I cannot go back to plain, colorless brackets.
 
 ![ss1](https://i.imgur.com/JBOVcnV.png)
 
-To enable this setting, open the `settings.json` file for the VSCode editor and add the following:
+To enable this setting, open the `settings.json` file for the VS Code editor and add the following:
 
 ```json
 {
