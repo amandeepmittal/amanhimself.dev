@@ -398,7 +398,7 @@ const AboutPage = () => {
           </ListItem>
         </List>
         <Text>
-          Find out more about what VSCode extensions I regularly use{' '}
+          Find out more about what VS Code extensions I regularly use{' '}
           <ExternalLink href="https://amanhimself.dev/blog/setup-macbook-m1/">
             here
           </ExternalLink>
