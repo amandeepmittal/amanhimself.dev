@@ -1,5 +1,5 @@
 ---
-title: 'How I Configure VSCode for Everything'
+title: 'How I Configure VS Code for Everything'
 slug: 'how-i-configure-vscode-for-everything'
 date: '2019-04-22'
 thumbnail: '/thumbnails/vscode.png'
