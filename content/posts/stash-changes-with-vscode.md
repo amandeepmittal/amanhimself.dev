@@ -26,7 +26,7 @@ Using in-built **Source Control**, you can quickly view the modified files and t
 
 Let's assume you've now created a new branch where you want to bring those changes that are saved temporarily.
 
-- In VSCode's Source Control, open the dropdown menu.
+- In VS Code's Source Control, open the dropdown menu.
 - Select **Stash** > **Apply Latest Stash**.
 
 ![Stashing changes locally using VS Code](/images/apply-stash-in-branch.png)
