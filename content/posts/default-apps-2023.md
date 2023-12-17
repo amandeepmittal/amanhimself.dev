@@ -37,7 +37,7 @@ Read about the ongoing [Default Apps](https://defaults.rknight.me/) project firs
 **Now, there are a few categories I want to add myself:**
 
 - 🧑‍💻 **Code Editor:** [VS Code](https://code.visualstudio.com/)
-- 💻 **Terminal Emulator:** [iTerm](https://iterm2.com/)
+- 👾 **Terminal Emulator:** [iTerm](https://iterm2.com/)
 - 🌌 **(Annotated) Screenshots and quick videos:** [CleanShot X](https://cleanshot.com/)
 
 This covers app the list of apps that I use almost daily either for work or for personal use.
