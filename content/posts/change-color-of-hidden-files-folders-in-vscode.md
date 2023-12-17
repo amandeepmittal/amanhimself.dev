@@ -45,4 +45,4 @@ With this simple tweak, the ignored files and folders now appear in a familiar g
 
 ## Conclusion
 
-The level of customization in VS Code never ceases to amaze me. It's empowering to be able to adjust even the smallest details to suit my visual preferences.
+The level of customization in VS Code allows, never ceases to amaze me.
