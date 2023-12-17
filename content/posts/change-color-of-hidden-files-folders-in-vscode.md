@@ -1,5 +1,5 @@
 ---
-title: 'Change the color of hidden files and folders in VSCode'
+title: 'Change the color of hidden files and folders in VS Code'
 date: '2022-09-04'
 slug: 'change-color-hidden-file-folder-name-in-vscode'
 thumbnail: '/thumbnails/vscode.png'
@@ -7,21 +7,27 @@ tag: 'vscode'
 canonicalUrl: 'https://amanhimself.dev/blog/change-color-hidden-file-folder-name-in-vscode/'
 ---
 
-Using VSCode, I love switching back and forth between dark and light themes to make things interesting for myself when working. Generally, I prefer a [light-ish dark theme](https://amanhimself.dev/blog/setup-macbook-m1/#themes) such as [fairyFloss](https://marketplace.visualstudio.com/items?itemName=nopjmp.fairyfloss) or Quiet Light that comes pre-installed.
+> **Last update:** 17 December, 2023
 
-I recently switched to [morgan.code](https://marketplace.visualstudio.com/items?itemName=morgan-codes.morgan-codes-vscode-theme) theme, which uses a set of contrasting colors that are pleasing to my growing old eyes. It is developed by a fellow developer [Morgan Richardson](https://www.instagram.com/morgan.codes/).
+I often switch between dark and light themes in VS Code to keep my coding environment fresh and engaging. My preference leans towards [light themes](https://amanhimself.dev/blog/setup-macbook-m1/#themes), such as pre-installed Quiet Light.
 
-Using this theme for a while, I realized I am so used to seeing files and folder names that git ignores in a specific gray color.
+## Discovering the morgan.code theme
 
-The original theme comes with blue-ish (maybe some sort of Cyan or Aqua) color for the ignored files and folders.
+My latest choice is the [morgan.code theme](https://marketplace.visualstudio.com/items?itemName=morgan-codes.morgan-codes-vscode-theme), crafted by [Morgan Richardson](https://www.instagram.com/morgan.codes/). Its contrasting colors are particularly soothing for my eyes.
 
-![original theme](https://i.imgur.com/J6hik7g.jpg)
+### A customization need
 
-To customize this color value, VSCode, provides a property called `gitDecoration.ignoredResourceForeground` which accepts a color value in hexadecimal format. It can be used with the VSCode theme color setting: [`workbench.colorCustomizations`](https://code.visualstudio.com/api/references/theme-color) to override the value that the original theme provides.
+After using this theme for some time, I noticed a longing for a familiar sight &mdhash; files and folders ignored by git displayed in a specific shade of gray. The **morgan.code** theme, however, presents these items in a blue-ish tone, possibly Cyan or Aqua.
+
+![Orginial theme](https://i.imgur.com/J6hik7g.jpg)
+
+## Tailoring ignored files and folders color
+
+VS Code has a property named `gitDecoration.ignoredResourceForeground` for customizing the color of ignored files and folders. This property when used in conjunction with [`workbench.colorCustomizations`](https://code.visualstudio.com/api/references/theme-color) allows overriding the default theme color.
+
+Here is how I adjusted the color setting in my `settings.json`:
 
 ```json
-// settings.json
-
 {
   // ...
   "workbench.colorCustomizations": {
@@ -33,8 +39,10 @@ To customize this color value, VSCode, provides a property called `gitDecoration
 }
 ```
 
-That's it! And now, my optic nerves are happy again.
+With this simple tweak, the ignored files and folders now appear in a familiar gray. My optic nerves are happy again.
 
 ![customized theme](https://i.imgur.com/sk0tFYi.jpg)
 
-VSCode is so customizable that it surprises me at times.
+## Conclusion
+
+The level of customization in VS Code never ceases to amaze me. It's empowering to be able to adjust even the smallest details to suit my visual preferences.
