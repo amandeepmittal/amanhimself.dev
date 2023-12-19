@@ -4,7 +4,7 @@ date: '2023-07-25'
 slug: 'configure-eslint-prettier-expo-project'
 thumbnail: '/thumbnails/expo.png'
 tag: 'expo'
-canonicalUrl: 'https://amanhimself.dev/blog/configure-eslint-prettier-expo-project'
+canonicalUrl: 'https://amanhimself.dev/blog/configure-eslint-prettier-expo-project/'
 ---
 
 > Make sure to see the official Expo documentation on using [ESLint](https://docs.expo.dev/guides/using-eslint/) in your React Native project.
