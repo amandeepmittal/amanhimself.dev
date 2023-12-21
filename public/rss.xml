@@ -4,10 +4,18 @@
         <title>Aman Mittal' blog</title>
         <link>https://amanhimself.dev/</link>
         <description></description>
-        <lastBuildDate>Sun, 17 Dec 2023 09:37:16 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 21 Dec 2023 12:15:16 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Feed for Node.js</generator>
         <copyright>2019 - 2023, Aman Mittal · All Rights Reserved.</copyright>
+        <item>
+            <title><![CDATA[Change comment color visibility in a VS Code theme]]></title>
+            <link>https://amanhimself.dev//blog/change-comment-color-visibility-in-a-vs-code-theme</link>
+            <guid>https://amanhimself.dev//blog/change-comment-color-visibility-in-a-vs-code-theme</guid>
+            <pubDate>Thu, 21 Dec 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[Change comment color visibility in a VS Code theme]]></description>
+            <author>amanmittal.work@gmail.com (Aman Mittal)</author>
+        </item>
         <item>
             <title><![CDATA[My default apps in 2023]]></title>
             <link>https://amanhimself.dev//blog/default-apps-2023</link>
@@ -17,11 +25,11 @@
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
         <item>
-            <title><![CDATA[Stash changes in a git repository with VSCode]]></title>
+            <title><![CDATA[Stash changes in a git repository with VS Code]]></title>
             <link>https://amanhimself.dev//blog/stash-changes-with-vscode</link>
             <guid>https://amanhimself.dev//blog/stash-changes-with-vscode</guid>
             <pubDate>Thu, 26 Oct 2023 00:00:00 GMT</pubDate>
-            <description><![CDATA[Stash changes in a git repository with VSCode]]></description>
+            <description><![CDATA[Stash changes in a git repository with VS Code]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
         <item>
@@ -105,11 +113,11 @@
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
         <item>
-            <title><![CDATA[Change the color of hidden files and folders in VSCode]]></title>
+            <title><![CDATA[Change the color of hidden files and folders in VS Code]]></title>
             <link>https://amanhimself.dev//blog/change-color-of-hidden-files-folders-in-vscode</link>
             <guid>https://amanhimself.dev//blog/change-color-of-hidden-files-folders-in-vscode</guid>
             <pubDate>Sun, 04 Sep 2022 00:00:00 GMT</pubDate>
-            <description><![CDATA[Change the color of hidden files and folders in VSCode]]></description>
+            <description><![CDATA[Change the color of hidden files and folders in VS Code]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
         <item>
@@ -257,11 +265,11 @@
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
         <item>
-            <title><![CDATA[How to configure VSCode Bracket Pair Colors Natively]]></title>
+            <title><![CDATA[How to configure VS Code Bracket Pair Colors natively]]></title>
             <link>https://amanhimself.dev//blog/how-to-configure-vscode-bracket-colors-natively</link>
             <guid>https://amanhimself.dev//blog/how-to-configure-vscode-bracket-colors-natively</guid>
             <pubDate>Tue, 12 Oct 2021 00:00:00 GMT</pubDate>
-            <description><![CDATA[How to configure VSCode Bracket Pair Colors Natively]]></description>
+            <description><![CDATA[How to configure VS Code Bracket Pair Colors natively]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
         <item>
@@ -865,11 +873,11 @@
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
         <item>
-            <title><![CDATA[How I Configure VSCode for Everything]]></title>
+            <title><![CDATA[How I Configure VS Code for Everything]]></title>
             <link>https://amanhimself.dev//blog/how-i-configure-vscode-for-everything</link>
             <guid>https://amanhimself.dev//blog/how-i-configure-vscode-for-everything</guid>
             <pubDate>Mon, 22 Apr 2019 00:00:00 GMT</pubDate>
-            <description><![CDATA[How I Configure VSCode for Everything]]></description>
+            <description><![CDATA[How I Configure VS Code for Everything]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
         <item>

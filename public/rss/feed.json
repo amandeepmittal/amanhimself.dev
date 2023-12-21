@@ -9,6 +9,17 @@
     },
     "items": [
         {
+            "id": "https://amanhimself.dev//blog/change-comment-color-visibility-in-a-vs-code-theme",
+            "url": "https://amanhimself.dev//blog/change-comment-color-visibility-in-a-vs-code-theme",
+            "title": "Change comment color visibility in a VS Code theme",
+            "summary": "Change comment color visibility in a VS Code theme",
+            "date_modified": "2023-12-21T00:00:00.000Z",
+            "author": {
+                "name": "Aman Mittal",
+                "url": "https://twitter.com/amanhimself"
+            }
+        },
+        {
             "id": "https://amanhimself.dev//blog/default-apps-2023",
             "url": "https://amanhimself.dev//blog/default-apps-2023",
             "title": "My default apps in 2023",
@@ -22,8 +33,8 @@
         {
             "id": "https://amanhimself.dev//blog/stash-changes-with-vscode",
             "url": "https://amanhimself.dev//blog/stash-changes-with-vscode",
-            "title": "Stash changes in a git repository with VSCode",
-            "summary": "Stash changes in a git repository with VSCode",
+            "title": "Stash changes in a git repository with VS Code",
+            "summary": "Stash changes in a git repository with VS Code",
             "date_modified": "2023-10-26T00:00:00.000Z",
             "author": {
                 "name": "Aman Mittal",
@@ -143,8 +154,8 @@
         {
             "id": "https://amanhimself.dev//blog/change-color-of-hidden-files-folders-in-vscode",
             "url": "https://amanhimself.dev//blog/change-color-of-hidden-files-folders-in-vscode",
-            "title": "Change the color of hidden files and folders in VSCode",
-            "summary": "Change the color of hidden files and folders in VSCode",
+            "title": "Change the color of hidden files and folders in VS Code",
+            "summary": "Change the color of hidden files and folders in VS Code",
             "date_modified": "2022-09-04T00:00:00.000Z",
             "author": {
                 "name": "Aman Mittal",
@@ -352,8 +363,8 @@
         {
             "id": "https://amanhimself.dev//blog/how-to-configure-vscode-bracket-colors-natively",
             "url": "https://amanhimself.dev//blog/how-to-configure-vscode-bracket-colors-natively",
-            "title": "How to configure VSCode Bracket Pair Colors Natively",
-            "summary": "How to configure VSCode Bracket Pair Colors Natively",
+            "title": "How to configure VS Code Bracket Pair Colors natively",
+            "summary": "How to configure VS Code Bracket Pair Colors natively",
             "date_modified": "2021-10-12T00:00:00.000Z",
             "author": {
                 "name": "Aman Mittal",
@@ -1188,8 +1199,8 @@
         {
             "id": "https://amanhimself.dev//blog/how-i-configure-vscode-for-everything",
             "url": "https://amanhimself.dev//blog/how-i-configure-vscode-for-everything",
-            "title": "How I Configure VSCode for Everything",
-            "summary": "How I Configure VSCode for Everything",
+            "title": "How I Configure VS Code for Everything",
+            "summary": "How I Configure VS Code for Everything",
             "date_modified": "2019-04-22T00:00:00.000Z",
             "author": {
                 "name": "Aman Mittal",
