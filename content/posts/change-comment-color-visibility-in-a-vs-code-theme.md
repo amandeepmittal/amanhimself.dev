@@ -63,4 +63,4 @@ To tweak the token value for a particular theme, wrap `textMateRules` with the t
 
 ## Conclusion
 
-VS Code's flexibility in customization is a significant advantage. It allows you to tailor any theme to your liking. To learn more about syntax highlighting, tokens and scopes, see [VS Code documentation](https://code.visualstudio.com/api/language-extensions/syntax-highlight-guide#textmate-tokens-and-scopes).
+VS Code's flexibility in customization is a significant advantage. It allows you to tailor any theme to your liking. To learn more about syntax highlighting, tokens, and scopes, see [VS Code documentation](https://code.visualstudio.com/api/language-extensions/syntax-highlight-guide#textmate-tokens-and-scopes).
