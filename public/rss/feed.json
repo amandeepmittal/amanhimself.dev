@@ -9,6 +9,17 @@
     },
     "items": [
         {
+            "id": "https://amanhimself.dev//blog/hide-unhide-files-or-directories-with-chflags",
+            "url": "https://amanhimself.dev//blog/hide-unhide-files-or-directories-with-chflags",
+            "title": "Hide and unhide files or directories visibility with chflags on macOS",
+            "summary": "Hide and unhide files or directories visibility with chflags on macOS",
+            "date_modified": "2023-12-25T00:00:00.000Z",
+            "author": {
+                "name": "Aman Mittal",
+                "url": "https://twitter.com/amanhimself"
+            }
+        },
+        {
             "id": "https://amanhimself.dev//blog/change-comment-color-visibility-in-a-vs-code-theme",
             "url": "https://amanhimself.dev//blog/change-comment-color-visibility-in-a-vs-code-theme",
             "title": "Change comment color visibility in a VS Code theme",
