@@ -11,7 +11,7 @@ canonicalUrl: 'https://amanhimself.dev/blog/change-color-hidden-file-folder-name
 
 I often switch between dark and light themes in VS Code to keep my coding environment fresh and engaging. My preference leans towards [light themes](https://amanhimself.dev/blog/setup-macbook-m1/#themes), such as pre-installed Quiet Light.
 
-## Customzing the morgan.code theme
+## Customizing the morgan.code theme
 
 My latest choice is the [morgan.code theme](https://marketplace.visualstudio.com/items?itemName=morgan-codes.morgan-codes-vscode-theme), crafted by [Morgan Richardson](https://www.instagram.com/morgan.codes/). Its contrasting colors are particularly soothing for my eyes.
 
