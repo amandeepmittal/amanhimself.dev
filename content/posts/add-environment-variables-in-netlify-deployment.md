@@ -49,7 +49,7 @@ This is where all the deployment-related settings are stored. On the next screen
 
 ## Further reading
 
-Here is a list of all the links I came across when resolving this issue. Might be helpful:
+Here is a list of all the links I came across when resolving this issue:
 
 - [The JavaScript heap out of memory thread](https://community.netlify.com/t/fatal-error-call-and-retry-last-allocation-failed-javascript-heap-out-of-memory/1840/4)
 - [The Stackoverflow thread that explains shortcomings of V8 in managing memory](https://stackoverflow.com/questions/48387040/nodejs-recommended-max-old-space-size/48392705)
