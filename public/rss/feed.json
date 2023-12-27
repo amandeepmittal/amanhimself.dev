@@ -9,6 +9,17 @@
     },
     "items": [
         {
+            "id": "https://amanhimself.dev//blog/pomodoro-with-cli",
+            "url": "https://amanhimself.dev//blog/pomodoro-with-cli",
+            "title": "Pomodoro technique with CLI on macOS",
+            "summary": "Pomodoro technique with CLI on macOS",
+            "date_modified": "2023-12-28T00:00:00.000Z",
+            "author": {
+                "name": "Aman Mittal",
+                "url": "https://twitter.com/amanhimself"
+            }
+        },
+        {
             "id": "https://amanhimself.dev//blog/hide-unhide-files-or-directories-with-chflags",
             "url": "https://amanhimself.dev//blog/hide-unhide-files-or-directories-with-chflags",
             "title": "Hide and unhide files or directories visibility with chflags on macOS",
@@ -1153,10 +1164,10 @@
             }
         },
         {
-            "id": "https://amanhimself.dev//blog/build-a-custom-modal-with-the-animated-api-in-react-native",
-            "url": "https://amanhimself.dev//blog/build-a-custom-modal-with-the-animated-api-in-react-native",
-            "title": "Build a Custom Modal with the Animated API in React Native",
-            "summary": "Build a Custom Modal with the Animated API in React Native",
+            "id": "https://amanhimself.dev//blog/build-a-twitter-clone-server-with-apollo-graphql-nodejs",
+            "url": "https://amanhimself.dev//blog/build-a-twitter-clone-server-with-apollo-graphql-nodejs",
+            "title": "Build a Twitter Clone Server with Apollo, GraphQL, Nodejs, and Crowdbotics",
+            "summary": "Build a Twitter Clone Server with Apollo, GraphQL, Nodejs, and Crowdbotics",
             "date_modified": "2019-06-13T00:00:00.000Z",
             "author": {
                 "name": "Aman Mittal",
@@ -1164,10 +1175,10 @@
             }
         },
         {
-            "id": "https://amanhimself.dev//blog/build-a-twitter-clone-server-with-apollo-graphql-nodejs",
-            "url": "https://amanhimself.dev//blog/build-a-twitter-clone-server-with-apollo-graphql-nodejs",
-            "title": "Build a Twitter Clone Server with Apollo, GraphQL, Nodejs, and Crowdbotics",
-            "summary": "Build a Twitter Clone Server with Apollo, GraphQL, Nodejs, and Crowdbotics",
+            "id": "https://amanhimself.dev//blog/build-a-custom-modal-with-the-animated-api-in-react-native",
+            "url": "https://amanhimself.dev//blog/build-a-custom-modal-with-the-animated-api-in-react-native",
+            "title": "Build a Custom Modal with the Animated API in React Native",
+            "summary": "Build a Custom Modal with the Animated API in React Native",
             "date_modified": "2019-06-13T00:00:00.000Z",
             "author": {
                 "name": "Aman Mittal",
@@ -1857,10 +1868,10 @@
             }
         },
         {
-            "id": "https://amanhimself.dev//blog/node-js-twitter-bot-tutorial",
-            "url": "https://amanhimself.dev//blog/node-js-twitter-bot-tutorial",
-            "title": "Writing a Node.js Twitter Bot Part 1",
-            "summary": "Writing a Node.js Twitter Bot Part 1",
+            "id": "https://amanhimself.dev//blog/node-js-twitter-bot-tutorial-part-2",
+            "url": "https://amanhimself.dev//blog/node-js-twitter-bot-tutorial-part-2",
+            "title": "Writing a Node.js Twitter Bot Part 2",
+            "summary": "Writing a Node.js Twitter Bot Part 2",
             "date_modified": "2016-12-25T00:00:00.000Z",
             "author": {
                 "name": "Aman Mittal",
@@ -1868,10 +1879,10 @@
             }
         },
         {
-            "id": "https://amanhimself.dev//blog/node-js-twitter-bot-tutorial-part-2",
-            "url": "https://amanhimself.dev//blog/node-js-twitter-bot-tutorial-part-2",
-            "title": "Writing a Node.js Twitter Bot Part 2",
-            "summary": "Writing a Node.js Twitter Bot Part 2",
+            "id": "https://amanhimself.dev//blog/node-js-twitter-bot-tutorial",
+            "url": "https://amanhimself.dev//blog/node-js-twitter-bot-tutorial",
+            "title": "Writing a Node.js Twitter Bot Part 1",
+            "summary": "Writing a Node.js Twitter Bot Part 1",
             "date_modified": "2016-12-25T00:00:00.000Z",
             "author": {
                 "name": "Aman Mittal",
