@@ -10,19 +10,19 @@ const TAGS_ARRAY = [
   },
   {
     name: 'reactjs',
-    color: '#61dafb'
+    color: '#61DAFB'
   },
   {
     name: 'nodejs',
-    color: '#4cae4c'
+    color: '#4CAE4C'
   },
   {
     name: 'firebase',
-    color: '#ff6900'
+    color: '#FF6900'
   },
   {
     name: 'git',
-    color: '#ee4e3a'
+    color: '#EE4E3A'
   },
   {
     name: 'obsidian',
