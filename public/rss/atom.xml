@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://amanhimself.dev/</id>
     <title>Aman Mittal' blog</title>
-    <updated>2024-01-01T09:29:37.159Z</updated>
+    <updated>2024-01-01T11:14:42.000Z</updated>
     <generator>Feed for Node.js</generator>
     <author>
         <name>Aman Mittal</name>
@@ -13,6 +13,18 @@
     <link rel="self" href="https://amanhimself.dev//rss/atom.xml"/>
     <icon>https://amanhimself.dev//favicon.jpg</icon>
     <rights>2019 - 2024, Aman Mittal · All Rights Reserved.</rights>
+    <entry>
+        <title type="html"><![CDATA[Overview most used commands with zsh_stats]]></title>
+        <id>https://amanhimself.dev//blog/zsh-stats</id>
+        <link href="https://amanhimself.dev//blog/zsh-stats"/>
+        <updated>2024-01-01T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Overview most used commands with zsh_stats]]></summary>
+        <author>
+            <name>Aman Mittal</name>
+            <email>amanmittal.work@gmail.com</email>
+            <uri>https://twitter.com/amanhimself</uri>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Pomodoro technique with CLI on macOS]]></title>
         <id>https://amanhimself.dev//blog/pomodoro-with-cli</id>
@@ -1274,11 +1286,11 @@
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Build a Custom Modal with the Animated API in React Native]]></title>
-        <id>https://amanhimself.dev//blog/build-a-custom-modal-with-the-animated-api-in-react-native</id>
-        <link href="https://amanhimself.dev//blog/build-a-custom-modal-with-the-animated-api-in-react-native"/>
+        <title type="html"><![CDATA[Build a Twitter Clone Server with Apollo, GraphQL, Nodejs, and Crowdbotics]]></title>
+        <id>https://amanhimself.dev//blog/build-a-twitter-clone-server-with-apollo-graphql-nodejs</id>
+        <link href="https://amanhimself.dev//blog/build-a-twitter-clone-server-with-apollo-graphql-nodejs"/>
         <updated>2019-06-13T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Build a Custom Modal with the Animated API in React Native]]></summary>
+        <summary type="html"><![CDATA[Build a Twitter Clone Server with Apollo, GraphQL, Nodejs, and Crowdbotics]]></summary>
         <author>
             <name>Aman Mittal</name>
             <email>amanmittal.work@gmail.com</email>
@@ -1286,11 +1298,11 @@
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Build a Twitter Clone Server with Apollo, GraphQL, Nodejs, and Crowdbotics]]></title>
-        <id>https://amanhimself.dev//blog/build-a-twitter-clone-server-with-apollo-graphql-nodejs</id>
-        <link href="https://amanhimself.dev//blog/build-a-twitter-clone-server-with-apollo-graphql-nodejs"/>
+        <title type="html"><![CDATA[Build a Custom Modal with the Animated API in React Native]]></title>
+        <id>https://amanhimself.dev//blog/build-a-custom-modal-with-the-animated-api-in-react-native</id>
+        <link href="https://amanhimself.dev//blog/build-a-custom-modal-with-the-animated-api-in-react-native"/>
         <updated>2019-06-13T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Build a Twitter Clone Server with Apollo, GraphQL, Nodejs, and Crowdbotics]]></summary>
+        <summary type="html"><![CDATA[Build a Custom Modal with the Animated API in React Native]]></summary>
         <author>
             <name>Aman Mittal</name>
             <email>amanmittal.work@gmail.com</email>
@@ -2042,11 +2054,11 @@
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Writing a Node.js Twitter Bot Part 1]]></title>
-        <id>https://amanhimself.dev//blog/node-js-twitter-bot-tutorial</id>
-        <link href="https://amanhimself.dev//blog/node-js-twitter-bot-tutorial"/>
+        <title type="html"><![CDATA[Writing a Node.js Twitter Bot Part 2]]></title>
+        <id>https://amanhimself.dev//blog/node-js-twitter-bot-tutorial-part-2</id>
+        <link href="https://amanhimself.dev//blog/node-js-twitter-bot-tutorial-part-2"/>
         <updated>2016-12-25T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Writing a Node.js Twitter Bot Part 1]]></summary>
+        <summary type="html"><![CDATA[Writing a Node.js Twitter Bot Part 2]]></summary>
         <author>
             <name>Aman Mittal</name>
             <email>amanmittal.work@gmail.com</email>
@@ -2054,11 +2066,11 @@
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Writing a Node.js Twitter Bot Part 2]]></title>
-        <id>https://amanhimself.dev//blog/node-js-twitter-bot-tutorial-part-2</id>
-        <link href="https://amanhimself.dev//blog/node-js-twitter-bot-tutorial-part-2"/>
+        <title type="html"><![CDATA[Writing a Node.js Twitter Bot Part 1]]></title>
+        <id>https://amanhimself.dev//blog/node-js-twitter-bot-tutorial</id>
+        <link href="https://amanhimself.dev//blog/node-js-twitter-bot-tutorial"/>
         <updated>2016-12-25T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Writing a Node.js Twitter Bot Part 2]]></summary>
+        <summary type="html"><![CDATA[Writing a Node.js Twitter Bot Part 1]]></summary>
         <author>
             <name>Aman Mittal</name>
             <email>amanmittal.work@gmail.com</email>
