@@ -73,9 +73,7 @@ const Blog = ({ posts }) => {
         <Heading size="xl" as="h1">
           Blog
         </Heading>
-        <Text fontSize="xl">
-          Recent Web development and React Native tutorials and blog posts.
-        </Text>
+        <Text fontSize="xl">React Native tutorials and other blog posts.</Text>
         <Text fontSize="xl">
           In total I&#39;ve written <strong>{Object.keys(posts).length}</strong>{' '}
           tutorials and posts on internet. This site is a collection of most of

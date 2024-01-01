@@ -4,10 +4,10 @@
         <title>Aman Mittal' blog</title>
         <link>https://amanhimself.dev/</link>
         <description></description>
-        <lastBuildDate>Wed, 27 Dec 2023 18:44:43 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 01 Jan 2024 09:17:21 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Feed for Node.js</generator>
-        <copyright>2019 - 2023, Aman Mittal · All Rights Reserved.</copyright>
+        <copyright>2019 - 2024, Aman Mittal · All Rights Reserved.</copyright>
         <item>
             <title><![CDATA[Pomodoro technique with CLI on macOS]]></title>
             <link>https://amanhimself.dev//blog/pomodoro-with-cli</link>
@@ -849,19 +849,19 @@
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
         <item>
-            <title><![CDATA[Build a Twitter Clone Server with Apollo, GraphQL, Nodejs, and Crowdbotics]]></title>
-            <link>https://amanhimself.dev//blog/build-a-twitter-clone-server-with-apollo-graphql-nodejs</link>
-            <guid>https://amanhimself.dev//blog/build-a-twitter-clone-server-with-apollo-graphql-nodejs</guid>
-            <pubDate>Thu, 13 Jun 2019 00:00:00 GMT</pubDate>
-            <description><![CDATA[Build a Twitter Clone Server with Apollo, GraphQL, Nodejs, and Crowdbotics]]></description>
-            <author>amanmittal.work@gmail.com (Aman Mittal)</author>
-        </item>
-        <item>
             <title><![CDATA[Build a Custom Modal with the Animated API in React Native]]></title>
             <link>https://amanhimself.dev//blog/build-a-custom-modal-with-the-animated-api-in-react-native</link>
             <guid>https://amanhimself.dev//blog/build-a-custom-modal-with-the-animated-api-in-react-native</guid>
             <pubDate>Thu, 13 Jun 2019 00:00:00 GMT</pubDate>
             <description><![CDATA[Build a Custom Modal with the Animated API in React Native]]></description>
+            <author>amanmittal.work@gmail.com (Aman Mittal)</author>
+        </item>
+        <item>
+            <title><![CDATA[Build a Twitter Clone Server with Apollo, GraphQL, Nodejs, and Crowdbotics]]></title>
+            <link>https://amanhimself.dev//blog/build-a-twitter-clone-server-with-apollo-graphql-nodejs</link>
+            <guid>https://amanhimself.dev//blog/build-a-twitter-clone-server-with-apollo-graphql-nodejs</guid>
+            <pubDate>Thu, 13 Jun 2019 00:00:00 GMT</pubDate>
+            <description><![CDATA[Build a Twitter Clone Server with Apollo, GraphQL, Nodejs, and Crowdbotics]]></description>
             <author>amanmittal.work@gmail.com (Aman Mittal)</author>
         </item>
         <item>

@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://amanhimself.dev/</id>
     <title>Aman Mittal' blog</title>
-    <updated>2023-12-27T18:44:43.913Z</updated>
+    <updated>2024-01-01T09:17:21.565Z</updated>
     <generator>Feed for Node.js</generator>
     <author>
         <name>Aman Mittal</name>
@@ -12,7 +12,7 @@
     <link rel="alternate" href="https://amanhimself.dev/"/>
     <link rel="self" href="https://amanhimself.dev//rss/atom.xml"/>
     <icon>https://amanhimself.dev//favicon.jpg</icon>
-    <rights>2019 - 2023, Aman Mittal · All Rights Reserved.</rights>
+    <rights>2019 - 2024, Aman Mittal · All Rights Reserved.</rights>
     <entry>
         <title type="html"><![CDATA[Pomodoro technique with CLI on macOS]]></title>
         <id>https://amanhimself.dev//blog/pomodoro-with-cli</id>
@@ -1274,11 +1274,11 @@
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Build a Twitter Clone Server with Apollo, GraphQL, Nodejs, and Crowdbotics]]></title>
-        <id>https://amanhimself.dev//blog/build-a-twitter-clone-server-with-apollo-graphql-nodejs</id>
-        <link href="https://amanhimself.dev//blog/build-a-twitter-clone-server-with-apollo-graphql-nodejs"/>
+        <title type="html"><![CDATA[Build a Custom Modal with the Animated API in React Native]]></title>
+        <id>https://amanhimself.dev//blog/build-a-custom-modal-with-the-animated-api-in-react-native</id>
+        <link href="https://amanhimself.dev//blog/build-a-custom-modal-with-the-animated-api-in-react-native"/>
         <updated>2019-06-13T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Build a Twitter Clone Server with Apollo, GraphQL, Nodejs, and Crowdbotics]]></summary>
+        <summary type="html"><![CDATA[Build a Custom Modal with the Animated API in React Native]]></summary>
         <author>
             <name>Aman Mittal</name>
             <email>amanmittal.work@gmail.com</email>
@@ -1286,11 +1286,11 @@
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Build a Custom Modal with the Animated API in React Native]]></title>
-        <id>https://amanhimself.dev//blog/build-a-custom-modal-with-the-animated-api-in-react-native</id>
-        <link href="https://amanhimself.dev//blog/build-a-custom-modal-with-the-animated-api-in-react-native"/>
+        <title type="html"><![CDATA[Build a Twitter Clone Server with Apollo, GraphQL, Nodejs, and Crowdbotics]]></title>
+        <id>https://amanhimself.dev//blog/build-a-twitter-clone-server-with-apollo-graphql-nodejs</id>
+        <link href="https://amanhimself.dev//blog/build-a-twitter-clone-server-with-apollo-graphql-nodejs"/>
         <updated>2019-06-13T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Build a Custom Modal with the Animated API in React Native]]></summary>
+        <summary type="html"><![CDATA[Build a Twitter Clone Server with Apollo, GraphQL, Nodejs, and Crowdbotics]]></summary>
         <author>
             <name>Aman Mittal</name>
             <email>amanmittal.work@gmail.com</email>
