@@ -26,7 +26,6 @@ const Footer = () => {
   return (
     <VStack pb={8} as="footer" alignItems="flex-start">
       <Divider />
-
       <Stack
         w="full"
         direction={{ base: 'column', md: 'row' }}
