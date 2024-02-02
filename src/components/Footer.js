@@ -32,7 +32,7 @@ const Footer = () => {
         alignItems="center"
         justifyContent={{ base: 'center', md: 'space-between' }}
       >
-        <Text color={linkColor}>
+        <Text color={linkColor} style={{ fontSize: 14 }}>
           Copyright &copy;&nbsp; 2019-
           {`${new Date().getFullYear()} Aman Mittal · All Rights Reserved.`}
         </Text>
