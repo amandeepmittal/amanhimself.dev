@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0">
     <channel>
-        <title>Aman Mittal' blog</title>
+        <title>Aman Mittal's blog</title>
         <link>https://amanhimself.dev/</link>
         <description></description>
-        <lastBuildDate>Fri, 02 Feb 2024 14:20:50 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 04 Feb 2024 10:06:27 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Feed for Node.js</generator>
         <copyright>2019 - 2024, Aman Mittal · All Rights Reserved.</copyright>

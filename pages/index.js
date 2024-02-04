@@ -32,7 +32,7 @@ const generateRssFeed = async () => {
   };
 
   const feed = new Feed({
-    title: "Aman Mittal' blog",
+    title: "Aman Mittal's blog",
     description: '',
     id: siteURL,
     link: siteURL,

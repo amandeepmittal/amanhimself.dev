@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://amanhimself.dev/</id>
-    <title>Aman Mittal' blog</title>
-    <updated>2024-02-02T14:20:50.960Z</updated>
+    <title>Aman Mittal's blog</title>
+    <updated>2024-02-04T10:06:27.292Z</updated>
     <generator>Feed for Node.js</generator>
     <author>
         <name>Aman Mittal</name>
