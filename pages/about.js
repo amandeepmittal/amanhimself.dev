@@ -26,14 +26,14 @@ const AboutPage = () => {
         </Heading>
         <small>Last Update: Dec 17, 2023</small>
         <Text lineHeight="175%" as="h2" fontSize="lg" pt={2}>
-          Hi! My name is Aman Mittal. I am an independent software developer,
-          and a technical writer. I love working with open source technologies
-          and writing about what I learn.
+          Hi! My name is Aman Mittal. I am a software developer, and a technical
+          writer. I love working with open source technologies and writing about
+          what I learn.
         </Text>
         <Text lineHeight="175%" as="h2" fontSize="lg" pt={2}>
           Currently, I&apos;m working on documentation at Expo. Previously,
-          I&apos;ve as a Developer Advocate at Draftbit, and Senior Content
-          Developer at Vercel.
+          I&apos;ve worked as a Developer Advocate at Draftbit, and Senior
+          Content Developer at Vercel.
         </Text>
         {/* <Text lineHeight="175%" as="h2" fontSize="lg">
           I write a{' '}
