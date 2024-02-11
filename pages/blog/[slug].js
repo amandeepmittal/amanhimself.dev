@@ -9,7 +9,8 @@ import {
   HStack,
   Text,
   Divider,
-  Center
+  Center,
+  Show
 } from '@chakra-ui/react';
 import { promises as fs } from 'fs';
 import path from 'path';
@@ -27,6 +28,7 @@ import {
   Tag
 } from '../../src/components/BlogPostPage';
 import CarbonAds from '../../src/components/Carbon';
+import ScrollToTopButton from '../../src/components/ScrollToTop';
 
 export const readBlogPost = async slug => {
   const postPath = path.join(process.cwd(), './content/posts', `${slug}.md`);
@@ -137,6 +139,9 @@ const BlogPostPage = ({
         {/* Author Card */}
         <AuthorCard />
       </VStack>
+      <Show above="md">
+        <ScrollToTopButton />
+      </Show>
     </>
   );
 };
