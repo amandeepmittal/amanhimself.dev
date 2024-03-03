@@ -1,7 +1,7 @@
 {
   "name": "amanhimself-blog",
   "description": "Personal website and blog. Running on Next.js and Chakra UI.",
-  "version": "9.9.51",
+  "version": "9.9.52",
   "author": "Aman Mittal <amandeepmittal@live.com>",
   "private": true,
   "scripts": {
@@ -28,7 +28,7 @@
     "prism-react-renderer": "^1.2.1",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "react-icons": "^4.11.0",
+    "react-icons": "^5.0.1",
     "reading-time": "^1.5.0",
     "slugify": "^1.6.4",
     "unist-util-visit": "^4.1.0"
