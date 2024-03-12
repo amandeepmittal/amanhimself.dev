@@ -266,7 +266,7 @@ const AboutPage = () => {
         </Heading>
         <List spacing={4}>
           <ListItem>
-            🚀 Software consultant and documentation maintainer at Expo (2022 -
+            🚀 Software consultant and documentation lead at Expo (2022 -
             Present)
           </ListItem>
           <ListItem> 📝 Senior Content Developer at Vercel (2022)</ListItem>

@@ -33,7 +33,7 @@ const Hero = () => {
           </Text>
           <Text lineHeight="175%" as="h2" fontSize="lg">
             I mainly enjoy working with React Native and Expo. Currently working
-            as a documentation maintainer at 𝝠{' '}
+            as a documentation lead at 𝝠{' '}
             <ExternalLink href="https://expo.dev/">Expo</ExternalLink> among
             other stuff.
           </Text>
