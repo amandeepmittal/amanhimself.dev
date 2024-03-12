@@ -345,6 +345,15 @@ const SponsorshipPage = () => {
                 beekeeb
               </Link>{' '}
             </ListItem>
+            <ListItem>
+              <Link
+                isExternal
+                href="https://github.com/markstreich"
+                textDecoration="underline"
+              >
+                Mark (markstreich)
+              </Link>{' '}
+            </ListItem>
           </UnorderedList>
         </Text>
       </VStack>
