@@ -35,7 +35,7 @@ const Hero = () => {
             I mainly enjoy working with React Native and Expo. Currently working
             as a documentation lead at 𝝠{' '}
             <ExternalLink href="https://expo.dev/">Expo</ExternalLink> among
-            other stuff.
+            other hats.
           </Text>
           <Text lineHeight="175%" as="h2" fontSize="lg">
             I&apos;ve been writing online since 2017, mostly cross-platform
