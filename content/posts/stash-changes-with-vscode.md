@@ -7,7 +7,9 @@ tag: 'vscode'
 canonicalUrl: 'https://amanhimself.dev/blog/stash-changes-with-vscode/'
 ---
 
-`git stash` is a useful command that allows one to shelve current changes in a Git repository temporarily. This can be done without committing the changes anywhere, making it possible to return to them later.
+> Updated on March 12, 2024.
+
+`git stash` is a useful command that temporarily stores current changes in a Git repository without committing them, making it possible to return to them later.
 
 ## Stash using VS Code
 
@@ -35,4 +37,4 @@ You can now bring those changes to the current branch and commit them.
 
 ## Conclusion
 
-Stashing is particularly useful when you want to fix something and keep those changes around so that you can return to them later. Collecting the stashed changes can result in a new branch, where local changes can be brought later on.
+Stashing is particularly useful when you want to fix something and keep those changes around so you can return to them later. Collecting the stashed changes can result in a new branch, where local changes can be brought later.
