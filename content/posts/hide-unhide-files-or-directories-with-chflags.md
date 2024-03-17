@@ -13,10 +13,10 @@ The `chflags` command in macOS is a command for quickly hiding or unhiding files
 
 You might need to access files located in the `Library` directory. On a new Mac setup, this directory is hidden by default, making it less accessible for everyday users.
 
-To make a hidden file or directory visible, use the `unhidden` flag with the `chflags` command. For example, to unhide the `Library` directory:
+To make a hidden file or directory visible, use the `nohidden` flag with the `chflags` command. For example, to unhide the `Library` directory:
 
 ```shell
-chflags unhidden ~/Library
+chflags nohidden ~/Library
 ```
 
 This command removes the `hidden` attribute and makes the `Library` directory visible in the Finder.
