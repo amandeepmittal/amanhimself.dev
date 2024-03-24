@@ -4,7 +4,7 @@ slug: 'multi-language-support-in-react-native-with-react-i18next'
 date: '2021-08-16'
 thumbnail: '/thumbnails/react.png'
 tag: 'react-native'
-canonicalUrl: 'https://blog.crowdbotics.com/how-to-offer-multi-language-support-in-a-react-native-app/'
+canonicalUrl: 'https://amanhimself.dev/blog/how-to-offer-multi-language-support-in-a-react-native-app/'
 ---
 
 <!-- ![cover_image](https://crowdbotics.ghost.io/content/images/2021/08/React-Native--1-.png) -->
