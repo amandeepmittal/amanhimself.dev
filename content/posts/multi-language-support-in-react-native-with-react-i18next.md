@@ -7,13 +7,13 @@ tag: 'react-native'
 canonicalUrl: 'https://blog.crowdbotics.com/how-to-offer-multi-language-support-in-a-react-native-app/'
 ---
 
-![cover_image](https://crowdbotics.ghost.io/content/images/2021/08/React-Native--1-.png)
+<!-- ![cover_image](https://crowdbotics.ghost.io/content/images/2021/08/React-Native--1-.png) -->
 
 _[Originally Published at Crowdbotics.com](https://crowdbotics.ghost.io/how-to-offer-multi-language-support-in-a-react-native-app/)_
 
 Internationalization is an important feature to overcome the language barrier among people who use a particular software application. Not every app requires us to consider a global customer base. But if you have plans to include support for international users in your app, you’ll need internationalization in your React Native app.
 
-[i18next](https://www.i18next.com/) is an internationalization framework written in JavaScript and provides methods for localizing the app and implement the other standard i18n features.
+[i18next](https://www.i18next.com/) is an internationalization framework written in JavaScript and provides methods for localizing the app and implementing the other standard i18n features.
 
 In this tutorial, let's take a look at the steps to add multi-language support to a React Native app using i18n.
 
@@ -153,7 +153,7 @@ export default function App() {
 
 At this point, if you run the `npx react-native run-ios` or `npx react-native run-android` command, you should see the following screen on a simulator/emulator or on a device:
 
-![cb1](https://crowdbotics.ghost.io/content/images/2021/08/cb1.png)
+![cb1](/images/cb/img1.png)
 
 ## Create translation files
 
@@ -165,7 +165,7 @@ Inside each language directory, create separate files that will split the transl
 
 Here is how the directory structure would like under `translations/`:
 
-![cb2](https://crowdbotics.ghost.io/content/images/2021/08/cb2.png)
+![cb1](/images/cb/img2.png)
 
 Inside `en/common.js` file, add the following snippet:
 
@@ -436,7 +436,7 @@ export default function SettingsScreen() {
 
 Here is the output in the simulator after this step:
 
-![cb3](https://crowdbotics.ghost.io/content/images/2021/08/cb3.png)
+![cb1](/images/cb/img3.png)
 
 ## Using the useTranslation hook
 
@@ -460,7 +460,7 @@ Next, modify the `Text` component contents used to define the title:
 
 Here is the output. The default or the initial language in our case is English. When the next language is selected, it translates the title on the Settings screen.
 
-![cb4](https://crowdbotics.ghost.io/content/images/2021/08/cb4.gif)
+![cb1](/images/cb/img4.gif)
 
 You can also modify the text strings according to the previously defined namespaces in the translation files.
 
@@ -519,7 +519,7 @@ export default function RootNavigator() {
 
 Here is the final output:
 
-![cb5](https://crowdbotics.ghost.io/content/images/2021/08/cb5.gif)
+![cb1](/images/cb/img5.gif)
 
 ## Conclusion
 
@@ -530,4 +530,4 @@ Please don't mind my translation for French text corresponding to English text. 
 **Useful Links**
 
 - [useTranslation Hook](https://react.i18next.com/latest/usetranslation-hook)
-- [**You can find the complete source code at GitHub**](https://github.com/amandeepmittal/react-native-examples/tree/master/rnMultiLanguageExample)
+- [You can find the complete source code at GitHub](https://github.com/amandeepmittal/react-native-examples/tree/master/rnMultiLanguageExample)
