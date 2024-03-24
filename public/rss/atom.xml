@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://amanhimself.dev/</id>
     <title>Aman Mittal's blog</title>
-    <updated>2024-03-23T21:27:38.488Z</updated>
+    <updated>2024-03-24T17:14:54.587Z</updated>
     <generator>Feed for Node.js</generator>
     <author>
         <name>Aman Mittal</name>
@@ -890,35 +890,11 @@
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[How to integrate GraphQL and Apollo Client in React Native app]]></title>
-        <id>https://amanhimself.dev//blog/integrate-apollo-client-in-react-native</id>
-        <link href="https://amanhimself.dev//blog/integrate-apollo-client-in-react-native"/>
-        <updated>2020-05-11T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[How to integrate GraphQL and Apollo Client in React Native app]]></summary>
-        <author>
-            <name>Aman Mittal</name>
-            <email>amanmittal.work@gmail.com</email>
-            <uri>https://twitter.com/amanhimself</uri>
-        </author>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[Chat app with React Native (part 4) - A guide to create Chat UI Screens with react-native-gifted-chat]]></title>
         <id>https://amanhimself.dev//blog/chat-app-with-react-native-part-4</id>
         <link href="https://amanhimself.dev//blog/chat-app-with-react-native-part-4"/>
         <updated>2020-04-28T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Chat app with React Native (part 4) - A guide to create Chat UI Screens with react-native-gifted-chat]]></summary>
-        <author>
-            <name>Aman Mittal</name>
-            <email>amanmittal.work@gmail.com</email>
-            <uri>https://twitter.com/amanhimself</uri>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[An in-depth guide on how to use React Native Image Picker]]></title>
-        <id>https://amanhimself.dev//blog/how-to-use-react-native-image-picker</id>
-        <link href="https://amanhimself.dev//blog/how-to-use-react-native-image-picker"/>
-        <updated>2020-04-27T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[An in-depth guide on how to use React Native Image Picker]]></summary>
         <author>
             <name>Aman Mittal</name>
             <email>amanmittal.work@gmail.com</email>
@@ -998,18 +974,6 @@
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Build an Expense Tracker app with React Hooks and LocalStorage API]]></title>
-        <id>https://amanhimself.dev//blog/react-app-with-localstorage-api-and-hooks</id>
-        <link href="https://amanhimself.dev//blog/react-app-with-localstorage-api-and-hooks"/>
-        <updated>2020-03-11T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Build an Expense Tracker app with React Hooks and LocalStorage API]]></summary>
-        <author>
-            <name>Aman Mittal</name>
-            <email>amanmittal.work@gmail.com</email>
-            <uri>https://twitter.com/amanhimself</uri>
-        </author>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[Nesting Tab and Stack navigators in React Native and Expo apps]]></title>
         <id>https://amanhimself.dev//blog/nested-navigators-in-react-native</id>
         <link href="https://amanhimself.dev//blog/nested-navigators-in-react-native"/>
@@ -1051,18 +1015,6 @@
         <link href="https://amanhimself.dev//blog/getting-started-with-react-native-expo-hooks-2020"/>
         <updated>2020-01-17T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Getting Started with React Native and Expo using Hooks in 2020]]></summary>
-        <author>
-            <name>Aman Mittal</name>
-            <email>amanmittal.work@gmail.com</email>
-            <uri>https://twitter.com/amanhimself</uri>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[How to add Dark mode functionality with React Hooks]]></title>
-        <id>https://amanhimself.dev//blog/dark-mode-with-react-hooks</id>
-        <link href="https://amanhimself.dev//blog/dark-mode-with-react-hooks"/>
-        <updated>2020-01-09T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[How to add Dark mode functionality with React Hooks]]></summary>
         <author>
             <name>Aman Mittal</name>
             <email>amanmittal.work@gmail.com</email>
@@ -1238,71 +1190,11 @@
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[How to Create a Chatbot with Dialogflow, NodeJS, and Webhooks]]></title>
-        <id>https://amanhimself.dev//blog/build-chatbot-dialogflow-nodejs-webhooks</id>
-        <link href="https://amanhimself.dev//blog/build-chatbot-dialogflow-nodejs-webhooks"/>
-        <updated>2019-07-19T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[How to Create a Chatbot with Dialogflow, NodeJS, and Webhooks]]></summary>
-        <author>
-            <name>Aman Mittal</name>
-            <email>amanmittal.work@gmail.com</email>
-            <uri>https://twitter.com/amanhimself</uri>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Using React Router to Optimize Single Page Applications (SPAs)]]></title>
-        <id>https://amanhimself.dev//blog/introduction-to-react-router-v4-with-reactjs</id>
-        <link href="https://amanhimself.dev//blog/introduction-to-react-router-v4-with-reactjs"/>
-        <updated>2019-07-11T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Using React Router to Optimize Single Page Applications (SPAs)]]></summary>
-        <author>
-            <name>Aman Mittal</name>
-            <email>amanmittal.work@gmail.com</email>
-            <uri>https://twitter.com/amanhimself</uri>
-        </author>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[To Travel, A Tech Conference and One Million views - a Recap]]></title>
         <id>https://amanhimself.dev//blog/to-travel-a-tech-conference-and-one-million-views-a-recap</id>
         <link href="https://amanhimself.dev//blog/to-travel-a-tech-conference-and-one-million-views-a-recap"/>
         <updated>2019-07-02T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[To Travel, A Tech Conference and One Million views - a Recap]]></summary>
-        <author>
-            <name>Aman Mittal</name>
-            <email>amanmittal.work@gmail.com</email>
-            <uri>https://twitter.com/amanhimself</uri>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[How to integrate Firebase and Firestore cloud database with a React application]]></title>
-        <id>https://amanhimself.dev//blog/how-to-integrate-firebase-firestore-react-and-crowdbotics-platform</id>
-        <link href="https://amanhimself.dev//blog/how-to-integrate-firebase-firestore-react-and-crowdbotics-platform"/>
-        <updated>2019-06-20T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[How to integrate Firebase and Firestore cloud database with a React application]]></summary>
-        <author>
-            <name>Aman Mittal</name>
-            <email>amanmittal.work@gmail.com</email>
-            <uri>https://twitter.com/amanhimself</uri>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[How to Setup a React App with TypeScript, Storybook]]></title>
-        <id>https://amanhimself.dev//blog/setup-a-react-app-with-typescript-storybook</id>
-        <link href="https://amanhimself.dev//blog/setup-a-react-app-with-typescript-storybook"/>
-        <updated>2019-06-14T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[How to Setup a React App with TypeScript, Storybook]]></summary>
-        <author>
-            <name>Aman Mittal</name>
-            <email>amanmittal.work@gmail.com</email>
-            <uri>https://twitter.com/amanhimself</uri>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Build a Twitter Clone Server with Apollo, GraphQL, Nodejs, and Crowdbotics]]></title>
-        <id>https://amanhimself.dev//blog/build-a-twitter-clone-server-with-apollo-graphql-nodejs</id>
-        <link href="https://amanhimself.dev//blog/build-a-twitter-clone-server-with-apollo-graphql-nodejs"/>
-        <updated>2019-06-13T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Build a Twitter Clone Server with Apollo, GraphQL, Nodejs, and Crowdbotics]]></summary>
         <author>
             <name>Aman Mittal</name>
             <email>amanmittal.work@gmail.com</email>
@@ -2066,11 +1958,11 @@
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Writing a Node.js Twitter Bot Part 1]]></title>
-        <id>https://amanhimself.dev//blog/node-js-twitter-bot-tutorial</id>
-        <link href="https://amanhimself.dev//blog/node-js-twitter-bot-tutorial"/>
+        <title type="html"><![CDATA[Writing a Node.js Twitter Bot Part 2]]></title>
+        <id>https://amanhimself.dev//blog/node-js-twitter-bot-tutorial-part-2</id>
+        <link href="https://amanhimself.dev//blog/node-js-twitter-bot-tutorial-part-2"/>
         <updated>2016-12-25T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Writing a Node.js Twitter Bot Part 1]]></summary>
+        <summary type="html"><![CDATA[Writing a Node.js Twitter Bot Part 2]]></summary>
         <author>
             <name>Aman Mittal</name>
             <email>amanmittal.work@gmail.com</email>
@@ -2078,11 +1970,11 @@
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Writing a Node.js Twitter Bot Part 2]]></title>
-        <id>https://amanhimself.dev//blog/node-js-twitter-bot-tutorial-part-2</id>
-        <link href="https://amanhimself.dev//blog/node-js-twitter-bot-tutorial-part-2"/>
+        <title type="html"><![CDATA[Writing a Node.js Twitter Bot Part 1]]></title>
+        <id>https://amanhimself.dev//blog/node-js-twitter-bot-tutorial</id>
+        <link href="https://amanhimself.dev//blog/node-js-twitter-bot-tutorial"/>
         <updated>2016-12-25T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Writing a Node.js Twitter Bot Part 2]]></summary>
+        <summary type="html"><![CDATA[Writing a Node.js Twitter Bot Part 1]]></summary>
         <author>
             <name>Aman Mittal</name>
             <email>amanmittal.work@gmail.com</email>
