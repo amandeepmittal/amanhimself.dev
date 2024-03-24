@@ -7,10 +7,6 @@ tag: 'react-native'
 canonicalUrl: 'https://amanhimself.dev/blog/how-to-offer-multi-language-support-in-a-react-native-app/'
 ---
 
-<!-- ![cover_image](https://crowdbotics.ghost.io/content/images/2021/08/React-Native--1-.png) -->
-
-_[Originally Published at Crowdbotics.com](https://crowdbotics.ghost.io/how-to-offer-multi-language-support-in-a-react-native-app/)_
-
 Internationalization is an important feature to overcome the language barrier among people who use a particular software application. Not every app requires us to consider a global customer base. But if you have plans to include support for international users in your app, you’ll need internationalization in your React Native app.
 
 [i18next](https://www.i18next.com/) is an internationalization framework written in JavaScript and provides methods for localizing the app and implementing the other standard i18n features.
@@ -24,8 +20,6 @@ To follow this tutorial, please make sure you are familiarized with JavaScript/E
 - Node.js version `12.x.x` or above installed.
 - Have access to one package manager such as npm or yarn or npx.
 - [react-native-cli](https://www.npmjs.com/package/react-native-cli) installed, or use npx.
-
-<!-- Depending on your skill level and experience, it may be beneficial to brush up on **[how to scaffold a new custom mobile app with Crowdbotics](https://crowdbotics.ghost.io/how-to-create-a-custom-mobile-react-native-app-with-crowdbotics/)** prior to jumping into this tutorial. -->
 
 ## Setting up a React Native app
 
@@ -531,3 +525,4 @@ Please don't mind my translation for French text corresponding to English text. 
 
 - [useTranslation Hook](https://react.i18next.com/latest/usetranslation-hook)
 - [You can find the complete source code at GitHub](https://github.com/amandeepmittal/react-native-examples/tree/master/rnMultiLanguageExample)
+- [Originally Published at Crowdbotics.com](https://amanhimself.dev/blog/how-to-offer-multi-language-support-in-a-react-native-app/)

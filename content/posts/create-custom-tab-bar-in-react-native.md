@@ -4,7 +4,7 @@ slug: 'create-custom-tab-bar-in-react-native'
 date: '2021-05-07'
 thumbnail: '/thumbnails/react.png'
 tag: 'react-native'
-canonicalUrl: 'https://blog.crowdbotics.com/how-to-create-a-custom-tab-bar-in-react-native/'
+canonicalUrl: 'https://crowdbotics.com/posts/blog/how-to-create-a-custom-tab-bar-in-react-native/'
 ---
 
 [React Native](https://reactnative.dev/) is an amazing tool for creating beautiful and high performing mobile applications that run on both iOS and Android. Developing these apps, you might need navigation to navigate from one screen to another. To implement navigation in a React Native app, [React Navigation](https://reactnavigation.org/docs/getting-started) library does an awesome job of providing various navigation patterns such as stack, tabs, and drawer that can be utilized and customize based on the UI design of the app.
@@ -98,7 +98,7 @@ To build the app for iOS, please execute the command `npx react-native run-ios` 
 
 Here is the default app running after the building for iOS:
 
-<img src='https://crowdbotics.ghost.io/content/images/2021/02/ss1-3.png' />
+![cb1](/images/cb/img6.png)
 
 ## Add mock screens
 
@@ -390,7 +390,7 @@ export default App;
 
 On an iOS simulator, the tab bar is shown as below. There are no custom styles currently applicable on the tab bar. The way it looks is because the tab bar component from React Navigation library has some default styles.
 
-<img src='https://crowdbotics.ghost.io/content/images/2021/02/ss2-1.png' />
+![cb1](/images/cb/img7.png)
 
 ## Add icons to the tab bar
 
@@ -442,7 +442,7 @@ const TabNavigator = () => {
 
 Go back to the iOS simulator and you will notice that the icons for each tab route are now displayed.
 
-<img src='https://crowdbotics.ghost.io/content/images/2021/02/ss3.png' />
+![cb1](/images/cb/img8.png)
 
 ## Customizing the tab bar
 
@@ -525,7 +525,7 @@ Here is the final snippet for `CustomTabBar` component:
 
 The tab bar is now translucent. Here is the example app running on an iOS simulator.
 
-<img src='https://crowdbotics.ghost.io/content/images/2021/02/ss4.gif' />
+![cb1](/images/cb/img9.gif)
 
 Do notice that, since the `BlurView` component has the position set to `absolute` we need to apply the `paddingBottom` property at the `ScrollView` component inside the `Home.js` tab screen. The value of this property is going to be the height of the whole tab bar. To get the height of the current tab bar, the @react-navigation/bottom-tabs module has a hook called `useBottomTabBarHeight` that gives this value.
 
@@ -555,14 +555,13 @@ const Home = () => {
 
 Back in the iOS simulator, you will notice that it works fine now:
 
-<img src='https://crowdbotics.ghost.io/content/images/2021/02/ss5.gif' />
+![cb1](/images/cb/img10.gif)
 
 Running the app build on an Android device, the results are similar:
 
-<img src='https://crowdbotics.ghost.io/content/images/2021/02/ss6.gif' />
+![cb1](/images/cb/img11.gif)
 
 ## Conclusion
 
 We have discussed only one scenario of customizing the bottom tab bar. The main objective here is to get familiar with the component-based configuration of the Tab Navigator in the latest version of the react-navigation library and learn the steps to create a custom tab bar.
-
-Originally Published at **[Crowdbotics's Blog](https://blog.crowdbotics.com/how-to-create-a-custom-tab-bar-in-react-native/)**.
+Originally Published on [Crowdbotics's Blog](https://crowdbotics.com/posts/blog/how-to-create-a-custom-tab-bar-in-react-native/).

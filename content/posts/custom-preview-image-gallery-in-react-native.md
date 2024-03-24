@@ -4,7 +4,7 @@ slug: 'custom-preview-image-gallery-in-react-native'
 date: '2021-05-17'
 thumbnail: '/thumbnails/react.png'
 tag: 'react-native'
-canonicalUrl: 'https://blog.crowdbotics.com/how-to-create-a-custom-tab-bar-in-react-native/'
+canonicalUrl: 'https://crowdbotics.com/posts/blog/how-to-create-a-custom-gallery-view-in-react-native/'
 ---
 
 In React Native, there are many ways to display a collection of images in a gallery view. One form is commonly known as carousel. Using an open-source library such as [react-native-swiper](https://github.com/leecade/react-native-swiper) or more advance [react-native-snap-carousel](https://github.com/meliorence/react-native-snap-carousel) serves the purpose. But what if we want to create a custom gallery view with additional functionality?
