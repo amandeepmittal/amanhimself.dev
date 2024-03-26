@@ -7,7 +7,6 @@ import {
   Link,
   Divider
 } from '@chakra-ui/react';
-import Image from 'next/image';
 
 import { DocumentHead } from '../src/components';
 import { MEDIUM, TWITTER } from '../src/data/socialLinks';
@@ -180,7 +179,7 @@ const SponsorshipPage = () => {
           service:
         </Text>
         <Text lineHeight="175%" as="h2" fontWeight="700" fontSize="lg">
-          1 week of sponsorship - $250
+          1 week of sponsorship - $100 (USD)
         </Text>
         <Text lineHeight="175%" as="h2" fontSize="lg">
           This package includes:
@@ -194,7 +193,7 @@ const SponsorshipPage = () => {
           </UnorderedList>
         </Text>
         <Text lineHeight="175%" as="h2" fontWeight="700" fontSize="lg">
-          4 weeks of sponsorship - $800
+          4 weeks of sponsorship - $300 (USD)
         </Text>
         <Text lineHeight="175%" as="h2" fontSize="lg">
           This package includes:
