@@ -49,7 +49,7 @@ const ScrollToTopButton = () => {
     <IconButton
       aria-label="scroll to top"
       icon={<IoArrowUpSharp />}
-      size="lg"
+      size="md"
       colorScheme="purple"
       variant="outline"
       border="1px solid"
