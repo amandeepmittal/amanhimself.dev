@@ -11,9 +11,9 @@ canonicalUrl: 'https://jscrambler.com/blog/how-to-use-redux-persist-in-react-nat
 
 Using a state management library like [Redux](https://jscrambler.com/blog/asynchronous-operations-in-react-redux) in a React Native app is beneficial to manage the state of an application from one place. As your application advances in terms of features, you may want to persist some of the information for each user that is local to them.
 
-For example, you are building a shopping cart application and it requires persisting the data related to products a user is adding into the cart before making a purchase order. What if the user closes the application for an arbitrary reason before making that purchase but comes back later and finds that number of items to vanish completely from their cart. This is not a good user experience.
+For example, you are building a shopping cart application and it requires persisting the data related to products a user is adding to the cart before making a purchase order. What if the user closes the application for an arbitrary reason before making that purchase but comes back later and finds that number of items to vanish completely from their cart. This is not a good user experience.
 
-To improve this user experience, you could save the items in their device's local storage. This where redux-persist along with Asyncstorage comes in handy for a React Native app. In this tutorial, we are going to set up the `redux-persist` library in a React Native app that uses Redux as its state management library and preserve the data in Asyncstorage for scenarios where the app is closed.
+To improve this user experience, you could save the items in their device's local storage. This is where redux-persist along with Asyncstorage comes in handy for a React Native app. In this tutorial, we are going to set up the `redux-persist` library in a React Native app that uses Redux as its state management library and preserve the data in Asyncstorage for scenarios where the app is closed.
 
 [The source code is available at this GitHub repo](https://github.com/amandeepmittal/react-native-examples/tree/master/redux-persist-asyncstorage).
 
@@ -248,7 +248,7 @@ export const getBooks = () => {
 
 ## Add a reducer
 
-Whenever an action has triggered, the state of the application changes. The handling of the application’s state is done by a reducer.
+Whenever an action is triggered, the state of the application changes. The handling of the application’s state is done by a reducer.
 
 A reducer is a pure function that calculates the next state based on the initial or previous state. It always produces the same output if the state is unchanged. It takes two inputs—the state and action—and must return the default state.
 
@@ -320,24 +320,7 @@ export default function App() {
 ## Fetching data from the API
 
 The `BooksList.js` file is the tab where the data is going to fetch from the Base URL. Import the following statements.
-
-```js
-import React, { useEffect } from 'react';
-import {
-  Text,
-  View,
-  FlatList,
-  TouchableOpacity,
-  Image,
-  SafeAreaView
-} from 'react-native';
-import { useSelector, useDispatch } from 'react-redux';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
-
-import { getBooks } from '../redux/actions';
-```
-
-To access state from a Redux store, the `useSelector` hook is used. Inside the `BooksList` component, access the `books` from the state.
+To access the state from a Redux store, the `useSelector` hook is used. Inside the `BooksList` component, access the `books` from the state.
 
 ```js
 export default function BooksList() {
@@ -545,7 +528,7 @@ const persistConfig = {
 
 In the above snippet, the `key` and `storage` are required to create the config for a persisted reducer. The `storage` has the value of the storage engine which is used to save and persist the data. In React Native, it is essential to pass the value of the `storage` explicitly. In the current demo app, let's use `AsyncStorage`.
 
-The `whitelist` takes an array of strings. It is used to define which object key to use from the initial state to save the data. If no `whitelist` is provided, then redux persists both `books` and `bookmarks`. Providing `bookmarks` as the value of the `whitelist` is going to only save the data that is in the `bookmarks` array (_which is empty at the moment but will be populated later when a bookmark is added or removed_).
+The `whitelist` takes an array of strings. It is used to define which object key to use from the initial state to save the data. If no `whitelist` is provided, then redux persists for both `books` and `bookmarks`. Providing `bookmarks` as the value of the `whitelist` is going to only save the data that is in the `bookmarks` array (_which is empty at the moment but will be populated later when a bookmark is added or removed_).
 
 Then, update `rootReducer` with the persisted reducer with two arguments: `persistConfig` and `booksReducer`.
 
