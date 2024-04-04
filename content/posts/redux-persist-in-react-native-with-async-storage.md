@@ -7,9 +7,9 @@ tag: 'expo'
 canonicalUrl: 'https://jscrambler.com/blog/how-to-use-redux-persist-in-react-native-with-asyncstorage'
 ---
 
-[Redux persist](https://github.com/rt2zz/redux-persist) is a library that allows saving a Redux store in the local storage of an application. In React Native terms, [Asyncstorage](https://blog.jscrambler.com/how-to-use-react-native-asyncstorage/) is a key value-based, unencrypted, asynchronous storage system that is global and can be used as the local storage for the app.
+[Redux persist](https://github.com/rt2zz/redux-persist) is a library that allows saving a Redux store in the local storage of an application. In React Native terms, [Asyncstorage](https://jscrambler.com/blog/how-to-use-react-native-asyncstorage) is a key value-based, unencrypted, asynchronous storage system that is global and can be used as the local storage for the app.
 
-Using a state management library like [Redux](https://blog.jscrambler.com/asynchronous-operations-in-react-redux/) in a React Native app is beneficial to manage the state of an application from one place. As your application advances in terms of features, you may want to persist some of the information for each user that is local to them.
+Using a state management library like [Redux](https://jscrambler.com/blog/asynchronous-operations-in-react-redux) in a React Native app is beneficial to manage the state of an application from one place. As your application advances in terms of features, you may want to persist some of the information for each user that is local to them.
 
 For example, you are building a shopping cart application and it requires persisting the data related to products a user is adding into the cart before making a purchase order. What if the user closes the application for an arbitrary reason before making that purchase but comes back later and finds that number of items to vanish completely from their cart. This is not a good user experience.
 

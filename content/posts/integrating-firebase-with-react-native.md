@@ -4,10 +4,10 @@ date: '2018-12-05'
 slug: 'integrating-firebase-with-react-native'
 thumbnail: '/thumbnails/react.png'
 tag: 'reactjs'
-canonicalUrl: 'https://blog.jscrambler.com/integrating-firebase-with-react-native/'
+canonicalUrl: 'https://jscrambler.com/blog/integrating-firebase-with-react-native'
 ---
 
-**This post has been updated in 2021. Please visit [this URL](https://blog.jscrambler.com/integrating-firebase-with-react-native/) to view the new post.**
+**This post has been updated in 2021. Please visit [this URL](https://jscrambler.com/blog/integrating-firebase-with-react-native) to view the new post.**
 
 Firebase is a Backend as a Service (_BaaS_) that provides an advantage to mobile developers who use React Native for developing mobile applications. As a React Native developer, by using Firebase you can start building an MVP (minimum viable product), keeping the costs low and prototyping the application pretty fast. In this tutorial, we will be learning how to get started by integrating Firebase with a React Native application. We will also create a small application from scratch with the help of Firebase & React Native to see how they work together.
 
@@ -461,4 +461,4 @@ In this tutorial, we’ve shown you how to integrate Firebase with a React Nativ
 
 You can find the complete code inside [this Github repo](https://github.com/amandeepmittal/rnFirebaseDemo).
 
-[Originally published at Jscrambler](https://blog.jscrambler.com/integrating-firebase-with-react-native/)
+[Originally published at Jscrambler](https://jscrambler.com/blog/integrating-firebase-with-react-native)

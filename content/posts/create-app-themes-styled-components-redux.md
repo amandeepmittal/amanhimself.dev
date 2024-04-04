@@ -4,12 +4,12 @@ date: '2019-10-02'
 slug: 'create-app-themes-styled-components-redux'
 thumbnail: '/thumbnails/react.png'
 tag: 'react-native'
-canonicalUrl: 'https://blog.jscrambler.com/changing-app-themes-using-react-native-styled-components-and-redux/'
+canonicalUrl: 'https://jscrambler.com/blog/changing-app-themes-using-react-native-styled-components-and-redux'
 ---
 
 ![cover](https://i.imgur.com/RSo1BSr.jpg)
 
-> [Originally published at Jscrambler](https://blog.jscrambler.com/changing-app-themes-using-react-native-styled-components-and-redux/)
+> [Originally published at Jscrambler](https://jscrambler.com/blog/changing-app-themes-using-react-native-styled-components-and-redux)
 
 If you are getting into React Native or have already dipped your toes, you know that there are different ways you can style a React Native app. React Native uses JavaScript objects to style by default. If you have some experience with the CSS of the web, you know that styling a component is nothing more than writing code by using proper styling syntax.
 

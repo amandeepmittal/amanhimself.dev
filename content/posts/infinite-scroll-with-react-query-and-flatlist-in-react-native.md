@@ -4,10 +4,10 @@ date: '2022-01-30'
 slug: 'infinite-scroll-with-react-query-and-flatlist-in-react-native'
 thumbnail: '/thumbnails/expo.png'
 tag: 'expo'
-canonicalUrl: 'https://blog.jscrambler.com/implementing-infinite-scroll-with-react-query-and-flatlist-in-react-native/'
+canonicalUrl: 'https://jscrambler.com/blog/implementing-infinite-scroll-with-react-query-and-flatlist-in-react-native'
 ---
 
-> Originally published at [Jscrambler.com](https://blog.jscrambler.com/implementing-infinite-scroll-with-react-query-and-flatlist-in-react-native/)
+> Originally published at [Jscrambler.com](https://jscrambler.com/blog/implementing-infinite-scroll-with-react-query-and-flatlist-in-react-native)
 
 Infinite Scrolling is a way to implement pagination in mobile devices. It is common among mobile interfaces due to the limited amount of space. If you use social media applications like Instagram or Twitter, this implementation is commonly used across those apps.
 

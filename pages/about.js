@@ -152,7 +152,7 @@ const AboutPage = () => {
             LogRocket
           </ExternalLink>
           ,{' '}
-          <ExternalLink href="https://blog.jscrambler.com/author/aman-mittal">
+          <ExternalLink href="https://jscrambler.com/blog/implementing-infinite-scroll-with-react-query-and-flatlist-in-react-native">
             Jscrambler
           </ExternalLink>
           ,{' '}

@@ -4,12 +4,12 @@ date: '2019-02-13'
 slug: 'google-vision-api-firebase-react-native'
 thumbnail: '/thumbnails/react.png'
 tag: 'react-native'
-canonicalUrl: 'https://blog.jscrambler.com/create-a-react-native-image-recognition-app-with-google-vision-api/'
+canonicalUrl: 'https://jscrambler.com/blog/create-a-react-native-image-recognition-app-with-google-vision-api'
 ---
 
 ![cover](https://i.imgur.com/UIZsVjh.jpg)
 
-> [Originally published at Jscrambler](https://blog.jscrambler.com/create-a-react-native-image-recognition-app-with-google-vision-api/)
+> [Originally published at Jscrambler](https://jscrambler.com/blog/create-a-react-native-image-recognition-app-with-google-vision-api)
 
 Google Cloud Vision API is a machine learning tool that can classify details from an image provided as an input into thousands of different categories with pre-trained API models. It offers these pre-trained models through an API and the categories are detected as individual objects within the image. In this tutorial, you are going to learn how to integrate Google Cloud Vision API in a React Native application and make use of real time APIs.
 

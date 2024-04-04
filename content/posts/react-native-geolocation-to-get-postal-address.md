@@ -122,7 +122,7 @@ const styles = StyleSheet.create({
 export default Home;
 ```
 
-Let's hook up the stack navigation container in the `App.js` file since we do not have multiple files and different ways to navigate in this demo app. I am not going through how to set up and use the React Navigation library. If you'd like to learn more on that subject please go through the post [How to Set Up and Use Navigators in React Native](https://blog.jscrambler.com/how-to-set-up-and-use-navigators-in-react-native/).
+Let's hook up the stack navigation container in the `App.js` file since we do not have multiple files and different ways to navigate in this demo app. I am not going through how to set up and use the React Navigation library. If you'd like to learn more on that subject please go through the post [How to Set Up and Use Navigators in React Native](https://jscrambler.com/blog/how-to-set-up-and-use-navigators-in-react-native).
 
 Open up the `App.js` file and add the following:
 

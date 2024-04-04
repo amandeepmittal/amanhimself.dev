@@ -4,12 +4,12 @@ date: '2022-03-29'
 slug: 'handle-deep-linking-react-native'
 thumbnail: '/thumbnails/react.png'
 tag: 'react-native'
-canonicalUrl: 'https://blog.jscrambler.com/how-to-handle-deep-linking-in-a-react-native-app/'
+canonicalUrl: 'https://jscrambler.com/blog/how-to-handle-deep-linking-in-a-react-native-app'
 ---
 
 ![cover](https://i.imgur.com/cHaZZW8.jpg)
 
-> Originally published at [Jscrambler](https://blog.jscrambler.com/how-to-handle-deep-linking-in-a-react-native-app/)
+> Originally published at [Jscrambler](https://jscrambler.com/blog/how-to-handle-deep-linking-in-a-react-native-app)
 
 Deep Linking is a technique in which a given URL or resource is used to open a specific page or screen on mobile. So, instead of just launching the app on mobile, a deep link can lead a user to a specific screen within the app, providing a better user experience. This particular screen may reside under a series of hierarchical pages, hence the term "deep" in deep linking.
 

@@ -4,7 +4,7 @@ slug: 'quarantine-pro-app'
 date: '2020-05-14'
 thumbnail: '/thumbnails/expo.png'
 tag: 'expo'
-canonicalUrl: 'https://blog.jscrambler.com/creating-quarantine-pro-a-fun-learning-experiment-in-react-native/'
+canonicalUrl: 'https://jscrambler.com/blog/creating-quarantine-pro-a-fun-learning-experiment-in-react-native'
 ---
 
 Covid-19 changed our way of life since the start of 2020 - a year some of us want to fast forward like a button on that TV remote. That said, self-isolating is the best thing you can do right now, and thus, isolating ourselves at Jscrambler, we came up with a fun, simple React Native app idea.
@@ -83,7 +83,7 @@ When you are downloading a font to use in an Expo React Native app, make sure yo
 
 ### Use The useFonts Hook
 
-To use any [hook](https://blog.jscrambler.com/introducing-react-hooks/) in a React or React Native app, you have to use functional components. To set up a new font, start by importing the following statements.
+To use any [hook](https://jscrambler.com/blog/introducing-react-hooks) in a React or React Native app, you have to use functional components. To set up a new font, start by importing the following statements.
 
 ```js
 import React from 'react';
@@ -589,8 +589,8 @@ We hope you had fun building this app and learning as well. The main objectives 
 - How to use the [datetime picker modal](https://github.com/mmazzarolo/react-native-modal-datetime-picker) to select a date
 - Use [Moment.js](https://momentjs.com/) to convert the date input provided by the user and calculate the difference between the current date (“quarantine score”).
 
-Check out [@react-native-community/datetimepicker](https://github.com/react-native-community/datetimepicker) for more information on how to customize the date picker modal or try to use a time picker. The Moment.js library is full of functions to help you manage date and time in JavaScript apps (another tutorial [here](https://blog.jscrambler.com/a-momentjs-in-time/)).
+Check out [@react-native-community/datetimepicker](https://github.com/react-native-community/datetimepicker) for more information on how to customize the date picker modal or try to use a time picker. The Moment.js library is full of functions to help you manage date and time in JavaScript apps (another tutorial [here](https://jscrambler.com/blog/a-momentjs-in-time)).
 
 The app is available at Expo [here](https://expo.io/@amanhimself/quarantinepro), you just need to scan the QR code with the Expo client ([iOS](https://apps.apple.com/app/apple-store/id982107779) | [Android](https://play.google.com/store/apps/details?id=host.exp.exponent&referrer=www)) app on your device.
 
-Originally published at [Jscrambler's blog](https://blog.jscrambler.com/creating-quarantine-pro-a-fun-learning-experiment-in-react-native/).
+Originally published at [Jscrambler's blog](https://jscrambler.com/blog/creating-quarantine-pro-a-fun-learning-experiment-in-react-native).

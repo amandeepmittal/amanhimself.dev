@@ -4,7 +4,7 @@ date: '2019-03-26'
 slug: 'build-a-chatbot-with-dialogflow-and-react-native'
 thumbnail: '/thumbnails/react.png'
 tag: 'react-native'
-canonicalUrl: 'https://blog.jscrambler.com/build-a-chatbot-with-dialogflow-and-react-native/'
+canonicalUrl: 'https://jscrambler.com/blog/build-a-chatbot-with-dialogflow-and-react-native'
 ---
 
 ![cover_image](https://i.imgur.com/SUVqOZ5.jpg)
@@ -407,4 +407,4 @@ export default App;
 
 The possibilities of using a powerful API such as Dialogflow are endless. In no time, you can build up your own chatbot interface inside a React Native application as a valuable support or marketing tool.
 
-[Originally published at Jscrambler](https://blog.jscrambler.com/build-a-chatbot-with-dialogflow-and-react-native/)
+[Originally published at Jscrambler](https://jscrambler.com/blog/build-a-chatbot-with-dialogflow-and-react-native)
