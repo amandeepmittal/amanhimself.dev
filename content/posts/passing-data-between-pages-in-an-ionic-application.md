@@ -11,7 +11,7 @@ In the previous posts, we have seen [how to setup a basic navigation between mul
 
 ### Generate the application
 
-In this demo application we will first setup a home page with a text box to enter data that will be transfered to the next page. First, let’s generate a new Ionic application:
+In this demo application we will first setup a home page with a text box to enter data that will be transferred to the next page. First, let’s generate a new Ionic application:
 
 ```shell
 $ ionic start -a 'Passing Data between Pages' -i

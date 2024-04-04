@@ -253,7 +253,7 @@ The `defaultJSONData` is going to be the source of the data until we successfull
 
 Inside the `render` method, we are using a combination of elements from both `react-native` and third party UI kit library, `react-native-elements`.
 
-The `TouchableHiglight` component from react native is going to be useful to us. It is a wrapper that makes a normal view in React Native respond to touches properly on a mobile device.
+The `TouchableHighlight` component from react native is going to be useful to us. It is a wrapper that makes a normal view in React Native respond to touches properly on a mobile device.
 
 These are the three UI elements from **react-native-elements**. A `Card` is helping us to display news article information. It contains content in the form of
 

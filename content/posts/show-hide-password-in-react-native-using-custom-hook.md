@@ -82,7 +82,7 @@ Start by importing the `useState` hook from React library. You will need to crea
 Then define a function called `useTogglePasswordVisibility`. Inside this function, create two new state variables:
 
 - `passwordVisibility`: set its initial value to `true`. The reason is that this variable will be the value of the prop `secureTextEntry` on the `TextInput` component. You would want to hide the password field initially when the user enters the password in the input field.
-- `rightIcon`: set its default valye to `eye`. This value depends on the icon library you're using in your React Native app. For this example, I'm using **MaterialCommunityIcons** from [Expo Vector Icons](https://docs.expo.dev//guides/icons/#expovector-icons).
+- `rightIcon`: set its default value to `eye`. This value depends on the icon library you're using in your React Native app. For this example, I'm using **MaterialCommunityIcons** from [Expo Vector Icons](https://docs.expo.dev//guides/icons/#expovector-icons).
 
 ```js
 export const useTogglePasswordVisibility = () => {

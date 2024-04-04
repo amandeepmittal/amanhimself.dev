@@ -38,7 +38,7 @@ Next step is to install TypeScript compiler.
 ```shell
 $ npm install -g typescript
 
-# After installtion, to check if installed correctly:
+# After installation, to check if installed correctly:
 $ tsc -v
 Version 2.3.4
 ```
@@ -70,11 +70,11 @@ System:
     ios-sim    : not installed
 ```
 
-### Platfrom Guides
+### Platform Guides
 
-To install platform such as iOS and espcially android, I will want you to refer the official guidelines:
+To install platforms such as iOS and especially android, I will want you to refer to the official guidelines:
 
 - for iOS: [Cordova iOS Platform Guide](https://cordova.apache.org/docs/en/latest/guide/platforms/ios/)
-- for android: [Cordova android Platform Guide](https://cordova.apache.org/docs/en/latest/guide/platforms/android/)
+- for android: [Cordova Android Platform Guide](https://cordova.apache.org/docs/en/latest/guide/platforms/android/)
 
 [Originally Published at Hackernoon.com](https://medium.com/hackernoon/what-is-ionic-c1da6eab0d8a)

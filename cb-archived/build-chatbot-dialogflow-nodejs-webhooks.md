@@ -118,8 +118,8 @@ app.post('/getmovie', (req, res) => {
         const movie = JSON.parse(completeResponse);
 
         let dataToSend = movieToSearch;
-        dataToSend = `${movie.Title} was released 
-        in the year ${movie.Year}. It is directed 
+        dataToSend = `${movie.Title} was released
+        in the year ${movie.Year}. It is directed
         by ${movie.Director} and stars ${movie.Actors}.\n Here some glimpse of the plot: $
         {movie.Plot}.
                 }`;
@@ -280,7 +280,7 @@ Let us create new training phrases in this section. To create a new phrase, go t
 
 For the movie chatbot, each user expression is going to contain the name of the movie. The Dialogflow agent is not smart enough to extract the name of the movie out of the user's expression. You have to provide an entity that can highlight the name of the movie every time a new training phrase is introduced to the bot.
 
-From the sidebar menu, go to the entity section and click on the button **Create Entity**. Fill in the name of your entity as `movie` because this is what is being passed inside the webhook's request body. From the server, remember the following line:
+From the sidebar menu, go to the entity section and click on the button **Create Entity**. Fill in the name of your entity as a `movie` because this is what is being passed inside the webhook's request body. From the server, remember the following line:
 
 ```js
 req.body.queryResult.parameters.movie;
@@ -292,7 +292,7 @@ Once you have saved your entity, go back to the intent.
 
 ## Enable the Webhook
 
-To test out that everything is working, let us use the default response provided by the Dialogflow intent. As shown below, on the right-hand side of the screen, you can test out by entering a user expression. The movie chatbot will return the default response.
+To test that everything is working, let us use the default response provided by the Dialogflow intent. As shown below, on the right-hand side of the screen, you can test out by entering a user expression. The movie chatbot will return the default response.
 
 <img src='https://crowdbotics.ghost.io/content/images/2019/07/ss15.png' />
 

@@ -98,7 +98,7 @@ In the [**last post**](LINK HERE), I left you with a challenge to figure out how
 </Formik>
 ```
 
-In the `validationSchema` object add a new property called `confirmPassword` that is going to be a string. Next, using `oneOf` the method from Yup's API. Inside its array parameter, it accepts a `Yup.ref()` which creates a reference to another sibling from the `intialValues` object.
+In the `validationSchema` object add a new property called `confirmPassword` that is going to be a string. Next, use `oneOf` method from Yup's API. Inside its array parameter, it accepts a `Yup.ref()` which creates a reference to another sibling from the `initialValues` object.
 
 ```js
 const validationSchema = Yup.object().shape({

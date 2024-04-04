@@ -9,11 +9,11 @@ canonicalUrl: 'https://amanhimself.dev/blog/implement-forgot-password-firebase-r
 
 > Originally published at [Heartbeat.Fritz.ai](https://heartbeat.fritz.ai/how-to-implement-forgot-password-feature-in-react-native-and-firebase-app-890b572d9759)
 
-In some of the previous posts, you built a React Native app using Firebase as the backend service provider for Email authentication and storing user's data upon successful sign-up.
+In some of the previous posts, you built a React Native app using Firebase as the backend service provider for Email authentication and storing user data upon successful sign-up.
 
-Let's add another common yet useful and necessary feature in the current app structure: **Forgot Password**. This feature will require another screen in the current React Native app. To follow this tutorial, you can either go through the previous posts if you are a beginner to React Native world:
+Let's add another common yet useful and necessary feature in the current app structure: **Forgot Password**. This feature will require another screen in the current React Native app. To follow this tutorial, you can go through the previous posts if you are a beginner to the React Native world:
 
-- [How authenitcation works using react-navigation 4.x.x](https://heartbeat.fritz.ai/how-authentication-flow-works-in-react-native-apps-using-react-navigation-4-x-a30bb4d9e5d6)
+- [How authentication works using react-navigation 4.x.x](https://heartbeat.fritz.ai/how-authentication-flow-works-in-react-native-apps-using-react-navigation-4-x-a30bb4d9e5d6)
 - [How to build and validate forms in React Native apps using Formik and Yup](https://heartbeat.fritz.ai/build-and-validate-forms-in-react-native-using-formik-and-yup-6489e2dff6a2)
 - [Handle different field types in React Native forms](https://heartbeat.fritz.ai/handling-different-field-types-in-react-native-forms-with-formik-and-yup-fa9ea89d867e)
 - [Use React Context API to build React Native, Expo and Firebase apps](https://amanhimself.dev/context-api-react-native-firebase)

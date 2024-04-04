@@ -226,7 +226,7 @@ export default function Login() {
 }
 ```
 
-Do note that each of the `FormInput` element has different props being passed. For example, The email component has `autoCaptialize` set to `none`. The password component has `secureTextEntry` set to boolean true. Including others, this is where `...rest` becomes helpful (_as you have seen in the previous section_).
+Do note that each of the `FormInput` elements has different props being passed. For example, The email component has `autoCapitalize` set to `none`. The password component has `secureTextEntry` set to boolean true. Including others, this is where `...rest` becomes helpful (_as you have seen in the previous section_).
 
 The `onChangeText` prop accepts a callback that is invoked whenever the text of the input field changes.
 
@@ -498,7 +498,7 @@ Then, go to the simulator and you are going to get the following result.
 
 ## What’s Next?
 
-In part one of this tutorial series, you’ve successfully built a navigation flow using the react-navigation library, set up a stack navigator, and learned how to use pre-defined UI components from react-navtive-paper to create re-usable custom form components.
+In part one of this tutorial series, you’ve successfully built a navigation flow using the react-navigation library, set up a stack navigator, and learned how to use pre-defined UI components from react-native-paper to create reusable custom form components.
 
 In the [next part](https://amanhimself.dev/blog/chat-app-with-react-native-part-2) of this series, we’ll learn how to install the Firebase SDK, how to generate and add Firebase credentials and API keys for iOS apps, implement an email sign-in provider with Firebase, and thus, use the navigation flow with a real-time backend service.
 

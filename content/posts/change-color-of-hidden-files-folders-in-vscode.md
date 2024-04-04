@@ -17,7 +17,7 @@ My latest choice is the [morgan.code theme](https://marketplace.visualstudio.com
 
 After using this theme for some time, I noticed a longing for a familiar sight &mdhash; files and folders ignored by git displayed in a specific shade of gray. The **morgan.code** theme, however, presents these items in a blue-ish tone, possibly Cyan or Aqua.
 
-![Orginial theme](https://i.imgur.com/J6hik7g.jpg)
+![Original theme](https://i.imgur.com/J6hik7g.jpg)
 
 ## Changing ignored files and folders color
 

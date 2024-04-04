@@ -35,7 +35,7 @@ Applications that make use of REST APIs perform four basic operations that are k
 - U: Updating data
 - D: Deleting/removing data​
 
-**Prequisites**
+**Prerequisites**
 
 There are some things we need to go through this tutorial successfully.
 
@@ -44,13 +44,13 @@ There are some things we need to go through this tutorial successfully.
 - IDE/Editor
 - [Postman](https://www.getpostman.com/), a REST client to test our API’s endpoints
 
-If you do not have [MongoDB](https://www.zeolearn.com/mongodb-training) installed on your local mahcine, do not worry. In the next step I am going walk you through setting up a free tier of MongoDB in cloud.
+If you do not have [MongoDB](https://www.zeolearn.com/mongodb-training) installed on your local machine, do not worry. In the next step, I am going to walk you through setting up a free tier of MongoDB in the cloud.
 
 **Consuming MongoDB in Cloud**
 
 For the sake of brevity, I am going to use [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) a service that you can use to store data for your sample application. You can also use other popular database-as-a-service [Mlab](https://mlab.com/) without any hassle.
 
-I already have an account setup, so I’d suggest you to sign up on mongodb atlas’ site with your email. Once you have logged in, you will get the below screen:
+I already have an account set up, so I’d suggest you sign up on MongoDB atlas site with your email. Once you have logged in, you will get the below screen:
 
 <img src='https://cdn-images-1.medium.com/max/1200/0*K-3GHE1axS48h85u.png' />
 
@@ -83,18 +83,18 @@ That’s it. The database is now ready to be used. Now let us setup our applicat
 From your terminal:
 
 ```shell
-# to initalise our node project, we need a package.json file
+# to initialize our node project, we need a package.json file
 npm init --yes
 
 # install express framework
 npm install -S express mongoose body-parser
 ```
 
-Mongoose is client that helps us connect and communicate with our database. BodyParser is needed as a middleware to parse the data to be sent through HTTP requests. Express is de facto standard and is one of the reason we will be using it.
+Mongoose is a client that helps us connect and communicate with our database. BodyParser is needed as a middleware to parse the data to be sent through HTTP requests. Express is the de-facto standard and is one of the reasons we will be using it.
 
 ## Running the Server
 
-Let’s first the nitty gritties of our server. Create a file app.js in the root directory with the following code:
+Let’s first the nitty gritty of our server. Create a file app.js in the root directory with the following code:
 
 ```js
 // app.js

@@ -85,7 +85,7 @@ We will now make a static Timer component to see how things fit in. We’ll star
 
 #### Adding Buttons 🔘
 
-In this section, we are going to replace the section that displays `Start and Stop Buttons!` with actual buttons. We will be using `TouchableOpactiy` to make this work. A `TouchableOpacity` component acts as a wrapper for making views respond properly to touches. The opacity of the wrapped view (or the button in our case) gets decreased whenever a user touches it.
+In this section, we are going to replace the section that displays `Start and Stop Buttons!` with actual buttons. We will be using `TouchableOpacity` to make this work. A `TouchableOpacity` component acts as a wrapper for making views respond properly to touches. The opacity of the wrapped view (or the button in our case) gets decreased whenever a user touches it.
 
 We create a reusable component since we need two buttons: Start and Stop.
 

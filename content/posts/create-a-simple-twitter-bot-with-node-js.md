@@ -132,7 +132,7 @@ var retweet = function () {
     result_type: 'recent',
     lang: 'en'
   };
-  // for more parametes, see: https://dev.twitter.com/rest/reference/get/search/tweets
+  // for more parameters, see: https://dev.twitter.com/rest/reference/get/search/tweets
 
   Twitter.get('search/tweets', params, function (err, data) {
     // if there no errors
@@ -193,7 +193,7 @@ var favoriteTweet = function () {
     result_type: 'recent',
     lang: 'en'
   };
-  // for more parametes, see: https://dev.twitter.com/rest/reference
+  // for more parameters, see: https://dev.twitter.com/rest/reference
 
   // find the tweet
   Twitter.get('search/tweets', params, function (err, data) {

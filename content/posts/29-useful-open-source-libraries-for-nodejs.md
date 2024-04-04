@@ -175,9 +175,9 @@ async function getUser() {
 
 ### Socket.io
 
-This is a library that enables a bi-directional communication in real-time by using WebSockets. It provides reliability for handling proxies and load balancers, personal firewalls and antivirus softwares, and supports binary streaming.
+This is a library that enables bi-directional communication in real time by using WebSockets. It provides reliability for handling proxies and load balancers, personal firewalls and antivirus software, and supports binary streaming.
 
-Other features include auto-connection support where unless instructed otherwise a disconnected client will try to reconnect forever, until the server is available again. Used by organizations such as Microsoft, Zendesk, Trello it also includes real-time analytics with counters, logs and charts and has a variety of use cases in IOT.
+Other features include auto-connection support where unless instructed otherwise a disconnected client will try to reconnect forever until the server is available again. Used by organizations such as Microsoft, Zendesk, and Trello it also includes real-time analytics with counters, logs and charts and has a variety of use cases in IoT.
 
 ```js
 io.on('connection', socket => {

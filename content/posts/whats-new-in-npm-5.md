@@ -7,11 +7,11 @@ tag: 'nodejs'
 canonicalUrl: 'https://amanhimself.dev/blog/whats-new-in-npm-5/'
 ---
 
-In May, in the very last week, [**npm**](https://npmjs.com/) announced the new major release for the JavaScript package manager. **5.0.0**, hopefully, will be shipped with upcoming version of [**Nodejs**](https://nodejs.org/en/) **(>=8.0.0)**as well. It seems a big step towards providing better tooling with significantly improved performance as quite a lot of developers made a switch to `yarn`, just because it could download the packages from the `npm` registery at a faster rate. However, this point is debatable, so let’s not get into that.
+In May, in the very last week, [**npm**](https://npmjs.com/) announced the new major release for the JavaScript package manager. **5.0.0**, hopefully, will be shipped with upcoming version of [**Nodejs**](https://nodejs.org/en/) **(>=8.0.0)**as well. It seems a big step towards providing better tooling with significantly improved performance as quite a lot of developers made a switch to `yarn`, just because it could download the packages from the `npm` registry at a faster rate. However, this point is debatable, so let’s not get into that.
 
 ## A Peek at Major Changes
 
-Some of the major changes which I want to hightlight in this article and am eagerly looking forward to are:
+Some of the major changes that I want to highlight in this article and am eagerly looking forward to are:
 
 - `npm will --save` is available by default now. See the [demo](https://twitter.com/maybekatz/status/859229741676625920) with your own eyes.
 - Running `npm` while offline will no longer insist on retrying network requests. npm will now immediately fall back to cache if possible, or fail.

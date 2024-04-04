@@ -298,7 +298,7 @@ module.exports = (sequelize, DataTypes) => {
 };
 ```
 
-The first modification you will make is to add `type` to make the attribute easier to read. Next, inside `Todo.associate` class method we are defining a relationship between both our models using `hasMany` method. Notice how it intakes `models` parameter. The `foriegnKey,` in this case, the `id` of each `TodoItem`. The `as` attribute next to `foriegnKey` means that on each query for a todo, it will include the todo items for the above id.
+The first modification you will make is to add `type` to make the attribute easier to read. Next, inside `Todo.associate` class method we are defining a relationship between both our models using `hasMany` method. Notice how it intakes `models` parameter. The `foreignKey,` in this case, the `id` of each `TodoItem`. The `as` attribute next to `foreignKey` means that on each query for a todo, it will include the todo items for the above id.
 
 Now, open `todoitem.js`.
 

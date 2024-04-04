@@ -23,11 +23,11 @@ To follow this tutorial, please make sure you are familiarized with JavaScript/E
 
 ## Create a React Native app with expo-cli
 
-Create a new React Native project using `expo-cli` and then install the dependencies required to build this demo app. Let's breakdown what we are going to implement:
+Create a new React Native project using `expo-cli` and then install the dependencies required to build this demo app. Let's break down what we are going to implement:
 
 - The demo app is going to mimic a food delivery app feature where when an end-user opens the app, the first thing they are prompted for is to fetch their current location. Let's call this screen a Welcome screen.
 - Only once the location is fetched, will the end-user be taken to the Home screen of the app. This is a condition we are going to put in our demo.
-- We will be using a stack navigator from [React Navigation](https://reactnavigation.org/docs/getting-started) library. This is just an example to understand the concepts of using Geolocation data in a React Native app. You can use the same concepts in the way you want to implement the feature of fetching the current location.
+- We will be using a stack navigator from [React Navigation](https://reactnavigation.org/docs/getting-started) library. This is just an example of understanding the concepts of using Geolocation data in a React Native app. You can use the same concepts in the way you want to implement the feature of fetching the current location.
 
 Open a terminal window and execute the following commands:
 

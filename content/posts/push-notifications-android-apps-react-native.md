@@ -248,7 +248,7 @@ Next, it will ask you to register the application.
 
 ![ss4](https://i.imgur.com/gcW6Giq.png)
 
-Download the file `google-services.json` and save it at the location `android/app/` inside your React Nativ project.
+Download the file `google-services.json` and save it at the location `android/app/` inside your React Native project.
 
 ![ss5](https://i.imgur.com/mTEX4G9.png)
 

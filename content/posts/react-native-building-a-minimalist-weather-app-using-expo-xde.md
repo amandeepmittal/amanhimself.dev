@@ -301,7 +301,7 @@ export default class App extends React.Component {
       },
       error => {
         this.setState({
-          error: 'Error Gettig Weather Condtions'
+          error: 'Error Getting Weather Conditions'
         });
       }
     );

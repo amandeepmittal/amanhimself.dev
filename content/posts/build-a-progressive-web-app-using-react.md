@@ -175,7 +175,7 @@ Let’s setup a service worker first. That is the first thing Lighthouse audited
 
 It is a two step process. First we will create a`service-worker.js` file (service worker, after all is JavaScript code) and then register that worker in our `index.html`.
 
-In the `public` directory of our app strucutre, create a file `service-worker.js`. I am going to use Addy Osmani's service worker configuraiton and I will recommend you to do so, at least for this one. You can find the complete thing in much much detail [here](https://medium.com/@addyosmani/progressive-web-apps-with-react-js-part-3-offline-support-and-network-resilience-c84db889162c). To continue, make sure you add the following code in `service-worker.js` file:
+In the `public` directory of our app structure, create a file `service-worker.js`. I am going to use Addy Osmani's service worker configuration and I will recommend you to do so, at least for this one. You can find the complete thing in much detail [here](https://medium.com/@addyosmani/progressive-web-apps-with-react-js-part-3-offline-support-and-network-resilience-c84db889162c). To continue, make sure you add the following code in `service-worker.js` file:
 
 ```js
 var doCache = false;
@@ -264,11 +264,11 @@ If we run the Lighthouse audit process again, I hope we will get a better result
 
 ![](https://i.imgur.com/xaTMUez.png)
 
-Yes, you can clearly compare the above with our previous audit. It has imporved, and our previous first issue is now coming under Passed Audits. Now let’s move and add some enhancement.
+Yes, you can clearly compare the above with our previous audit. It has improved, and our previous first issue is now coming under Passed Audits. Now let’s move and add some enhancement.
 
 ### Adding Progressive Enhancement
 
-Progressive Enhancement is way to improve the app/site since it will work without any JavaScript loading. Now, we want to display a loading message and some CSS or none (your choice) before the React app initializes the DOM. Let’s add a the required CSS and a loading message to our `index.html`. To increase performance, I am also adding all our CSS (that is CSS contained inside `App.css` and `index.css`) in our `index.html` file.
+Progressive Enhancement is a way to improve the app/site since it will work without any JavaScript loading. Now, we want to display a loading message and some CSS or none (your choice) before the React app initializes the DOM. Let’s add the required CSS and a loading message to our `index.html`. To increase performance, I am also adding all our CSS (that is CSS contained inside `App.css` and `index.css`) in our `index.html` file.
 
 ```html
 <!DOCTYPE html>

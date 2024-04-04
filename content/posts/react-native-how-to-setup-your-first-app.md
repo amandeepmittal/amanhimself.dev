@@ -96,9 +96,9 @@ The file that renders this `App` component is `index.js` in the root directory. 
 
 <img src='https://cdn-images-1.medium.com/max/800/0*NsVZtz_ZooVZxt1F.png' />
 
-Do you notice something? There is no `react-dom` because there is no DOM in React Native. `AppRegistery` is the entry point to run a React Native application. `App` component or any other root component in the app should register by using `AppRegistry.registerComponent` such that a native system can load the bundle of the app and run the app by starting `AppRegistry.runApplication`.
+Do you notice something? There is no `react-dom` because there is no DOM in React Native. `AppRegistry` is the entry point to run a React Native application. `App` component or any other root component in the app should register by using `AppRegistry.registerComponent` such that a native system can load the bundle of the app and run the app by starting `AppRegistry.runApplication`.
 
-You can read more about `AppRegistery` [here](https://facebook.github.io/react-native/docs/appregistry.html).
+You can read more about `AppRegistry` [here](https://facebook.github.io/react-native/docs/appregistry.html).
 
 You have successfully setup your first React Native application. You can read my other articles on React Native:
 

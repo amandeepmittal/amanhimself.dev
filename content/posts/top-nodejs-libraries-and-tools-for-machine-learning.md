@@ -148,7 +148,7 @@ In the above example, an array as resource is provided to train the batch of key
 Other use cases for this library can be found in the link below. Some of them are listed here:
 
 - Serialization: you might want to train a classifier on your home computer, and use it on a remote server. To do this, you should somehow convert the trained classifier to a string, send the string to the remote server, and deserialize it there.
-- Mutli-label classification: In binary classification, you get the output either as `0` or `1` . On multi-label, , the output is a set of zero or more labels.
+- Multi-label classification: In binary classification, you get the output either as `0` or `1` . On multi-label, , the output is a set of zero or more labels.
 
 [**erelsgl/limdu**](https://github.com/erelsgl/limdu)
 
@@ -201,7 +201,7 @@ It has vast variety of tutorials and guides listed officially on its website [**
 
 It is similar to Tensorflow.js in many ways. One of the similarities is that Keras has support for high-level APIs that take care of abstraction provided by backend frameworks. Using Keras, models can be trained in any backend and you can even hook Tensorflow for that.
 
-Offical KerasJS library offers many use cases in different domains such as:
+Official KerasJS library offers many use cases in different domains such as:
 
 - Basic Convnet for MNIST
 - Convolutional Variational Autoencoder, trained on MNIST

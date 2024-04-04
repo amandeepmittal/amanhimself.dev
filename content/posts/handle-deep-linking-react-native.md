@@ -462,7 +462,7 @@ const linking = {
 };
 ```
 
-The `personId` is now available to the Details screen as a [route paramater](https://reactnavigation.org/docs/params/). Route parameters are accessible to a screen using `route.params` from React Navigation library.
+The `personId` is now available to the Details screen as a [route parameter](https://reactnavigation.org/docs/params/). Route parameters are accessible to a screen using `route.params` from React Navigation library.
 
 Based on the `personId` value, the Details screen will fetch the data from the API and display the person's information.
 

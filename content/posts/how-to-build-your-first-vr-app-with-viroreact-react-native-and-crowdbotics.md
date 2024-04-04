@@ -165,7 +165,7 @@ Next, let us modify the `render` function. Create a text-based scene of our own.
 </ViroScene>
 ```
 
-`ViroText` is a component that provides two-dimensional text functionality. It uses props such as the `text` itself, the `textAlign`, `fontSize`, `witdh`, `position`, and so on. The styling of the text can be done using a `fontFamily` but do note that not all platforms support all font families. You can also use styling object created using `StyleSheet` from React Native core. The size of the text can be increased or decreased using `fontSize` property. See the result of the above snippet of code as below.
+`ViroText` is a component that provides two-dimensional text functionality. It uses props such as the `text` itself, the `textAlign`, `fontSize`, `width`, `position`, and so on. The styling of the text can be done using a `fontFamily` but do note that not all platforms support all font families. You can also use styling objects created using `StyleSheet` from React Native core. The size of the text can be increased or decreased using `fontSize` property. See the result of the above snippet of code below.
 
 <img src='https://cdn-images-1.medium.com/max/800/1*eeKdtwtZur54KOQMB3serQ.gif' />
 

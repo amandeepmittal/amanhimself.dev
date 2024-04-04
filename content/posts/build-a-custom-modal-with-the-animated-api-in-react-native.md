@@ -451,7 +451,7 @@ You will get the following result in your simulator device.
 
 ## Integrating Redux to Modal
 
-In this section, you are going to use Redux to manage the state of opening and closing the modal. We have already defined the reducers and actions to serve this purpose. Open `CustomModal.js` and import the `connect` Hight Order Function `react-redux` library. After that, create two new functions that are somewhat boilerplate code when using a redux in any React or React Native application. These functions are called: `mapStateToProps()` and `mapDispatchToProps()`.
+In this section, you are going to use Redux to manage the state of opening and closing the modal. We have already defined the reducers and actions to serve this purpose. Open `CustomModal.js` and import the `connect` High Order Function `react-redux` library. After that, create two new functions that are somewhat boilerplate code when using a redux in any React or React Native application. These functions are called: `mapStateToProps()` and `mapDispatchToProps()`.
 
 ```js
 // ...

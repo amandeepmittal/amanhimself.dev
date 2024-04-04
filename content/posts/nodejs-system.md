@@ -59,4 +59,4 @@ This is a JavaScript library that implements high-level Node.js API (a.k.a. node
 
 The image borrowed above clarifies and represents a complete Node.js System. I hope this article has made things more clear as it did to me.
 
-> [Orignally Published at Hackernoon.com](https://medium.com/hackernoon/the-node-js-system-51090c35dddc)
+> [Originally Published at Hackernoon.com](https://medium.com/hackernoon/the-node-js-system-51090c35dddc)
