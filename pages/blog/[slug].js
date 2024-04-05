@@ -120,7 +120,7 @@ const BlogPostPage = ({
             <Tag tag={tag} />
           </HStack>
         </VStack>
-        <Center>
+        <Center paddingBottom={8} paddingTop={8}>
           <CarbonAds />
         </Center>
         <MDXRemote {...source} components={MDXComponents} />

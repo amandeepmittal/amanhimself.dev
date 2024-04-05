@@ -144,7 +144,8 @@ const CodeHighlight = ({ children: codeString, className: language }) => {
               overflowX="auto"
               borderRadius="md"
               p={2}
-              mx={-4}
+              mb={3}
+              // mx={-4}
               fontSize="sm"
             >
               <HStack justifyContent="flex-end" pb={2}>
@@ -300,6 +301,7 @@ const MDXComponents = {
         as="blockquote"
         rounded="4px"
         {...props}
+        mb={4}
         mx={-4}
         w="unset"
       />
