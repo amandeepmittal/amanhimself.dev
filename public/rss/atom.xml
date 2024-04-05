@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://amanhimself.dev/</id>
     <title>Aman Mittal's blog</title>
-    <updated>2024-04-05T17:24:25.362Z</updated>
+    <updated>2024-04-05T17:37:20.347Z</updated>
     <generator>Feed for Node.js</generator>
     <author>
         <name>Aman Mittal</name>
@@ -17,7 +17,7 @@
         <title type="html"><![CDATA[My 2024 Macbook setup]]></title>
         <id>https://amanhimself.dev//blog/macbook-setup-2024</id>
         <link href="https://amanhimself.dev//blog/macbook-setup-2024"/>
-        <updated>2024-04-06T00:00:00.000Z</updated>
+        <updated>2024-04-05T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[My 2024 Macbook setup]]></summary>
         <author>
             <name>Aman Mittal</name>
