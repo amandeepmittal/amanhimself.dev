@@ -1,7 +1,7 @@
 ---
 title: 'My 2024 Macbook setup'
 slug: 'macbook-setup-2024'
-date: '2024-04-06'
+date: '2024-04-05'
 thumbnail: '/thumbnails/apple.png'
 tag: 'tools'
 canonicalUrl: 'https://amanhimself.dev/blog/macbook-setup-2024/'
