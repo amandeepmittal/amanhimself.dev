@@ -7,6 +7,8 @@ tag: 'tools'
 canonicalUrl: 'https://amanhimself.dev/blog/setup-macbook-m1/'
 ---
 
+> **Note**: A new version of this post was written in 2024. See [My 2024 Macbook setup](/blog/macbook-setup-2024/) for more information.
+
 > 🕑 This article was originally written on March 14, 2021. Since then, it has been updated many times to reflect my setup process. In 2023, I decided to re-write this article from scratch.
 
 ![cover_image](https://i.imgur.com/tAJjTOU.png)

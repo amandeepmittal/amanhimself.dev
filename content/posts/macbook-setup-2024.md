@@ -13,7 +13,7 @@ A guide on setting up Apple Macbook for daily development work.
 
 I documented my entire setup when I first switched to a MacBook Pro with Apple Silicon in 2020. Since then, I have upgraded to two different Macbooks and made some changes and adjustments to my personal setup by adopting new tools and leaving the old ones behind.
 
-After recently revisiting [my old setup guide](https://amanhimself.dev/blog/setup-macbook-m1/) while reconfiguring a previous laptop, I noticed significant changes and decided an update was in order. This post reflects my current setup strategy.
+After recently revisiting [my old setup guide](/blog/setup-macbook-m1/) while reconfiguring a previous laptop, I noticed significant changes and decided an update was in order. This post reflects my current setup strategy.
 
 ## Initial setup
 
@@ -442,9 +442,18 @@ VS Code has supported ARM chips since March 13, 2021. Download the [installer fo
 }
 ```
 
+### Setup VS Code as the default editor
+
+To set up VS Code as the default editor, use `code .` to open a directory directly from the command line to the editor, you need to install `code` command in the `PATH`.
+
+- Open VS Code, and open the command palette.
+- Type **Shell** and select **Shell Command: Install 'code' command in PATH**.
+
+![Installing code command in Path in VS Code](/images/macbook-setup-shell.png)
+
 ### VS Code themes
 
-I usually switch between following themes:
+I usually switch between the following themes:
 
 - Quiet Light (built-in)
 - [Catppuccin Latte](https://github.com/catppuccin/catppuccin)
