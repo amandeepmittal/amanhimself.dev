@@ -260,13 +260,13 @@ const MDXComponents = {
   code: CodeHighlight,
   inlineCode: InlineCode,
   h1: props => (
-    <LinkedHeading as="h1" apply="mdx.h1" fontSize="3xl" {...props} />
+    <LinkedHeading as="h1" apply="mdx.h1" fontSize="4xl" {...props} />
   ),
   h2: props => (
-    <LinkedHeading as="h2" apply="mdx.h2" fontSize="2xl" {...props} />
+    <LinkedHeading as="h2" apply="mdx.h2" fontSize="3xl" {...props} />
   ),
   h3: props => (
-    <LinkedHeading as="h3" apply="mdx.h3" fontSize="xl" {...props} />
+    <LinkedHeading as="h3" apply="mdx.h3" fontSize="2xl" {...props} />
   ),
   h4: props => (
     <LinkedHeading as="h4" apply="mdx.h4" fontSize="xl" {...props} />
@@ -287,7 +287,7 @@ const MDXComponents = {
   th: THead,
   td: TData,
   a: Anchor,
-  p: props => <chakra.p apply="mdx.p" fontSize="md" {...props} />,
+  p: props => <chakra.p apply="mdx.p" pb="8px" fontSize="md" {...props} />,
   ul: props => <chakra.ul px={{ base: 4, md: 8 }} apply="mdx.ul" {...props} />,
   ol: props => <chakra.ol apply="mdx.ul" {...props} />,
   li: props => <chakra.li pb="4px" fontSize="md" {...props} />,

@@ -98,10 +98,12 @@ const BlogPostPage = ({
         postPath={`/${slug}/`}
         canonicalUrl={canonicalUrl}
       />
-      <VStack spacing={8} alignItems="stetch" w="full" as="section" pt={28}>
+      <VStack alignItems="stetch" w="full" as="section" pt={28}>
         <VStack spacing={3} alignItems="flex-start">
           {/* Post Title */}
-          <Heading size="lg">{title}</Heading>
+          <Heading size="lg" as="h1">
+            {title}
+          </Heading>
           {/* Post Meta */}
           <HStack
             divider={
