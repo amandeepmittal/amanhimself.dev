@@ -373,7 +373,7 @@ VS Code has supported ARM chips since March 13, 2021. Download the [installer fo
   "editor.fontSize": 12.5,
   "workbench.iconTheme": "catppuccin-latte",
   "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
-  "workbench.colorTheme": "Catppuccin Latte",
+  "workbench.colorTheme": "Expo Light",
   "workbench.activityBar.location": "top",
   "editor.fontFamily": "JetBrains Mono ",
   "editor.fontWeight": "normal",
@@ -456,7 +456,6 @@ To set up VS Code as the default editor, use `code .` to open a directory direct
 I usually switch between the following themes:
 
 - Quiet Light (built-in)
-- [Catppuccin Latte](https://github.com/catppuccin/catppuccin)
 - [Expo Light](https://marketplace.visualstudio.com/items?itemName=expo.vscode-expo-theme) (based on [Expo Docs](https://docs.expo.dev/))
 
 ### VS Code extensions
