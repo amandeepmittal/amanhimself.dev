@@ -7,9 +7,7 @@ const ExternalLinksCloud = () => {
     <HStack>
       <Text fontWeight="semibold">Social links:</Text>
       <Text>
-        <ExternalLink href="https://x.com/amanhimself">
-          🐦 X (Twitter)
-        </ExternalLink>
+        <ExternalLink href="https://x.com/amanhimself">🐦 X</ExternalLink>
       </Text>
       <Text>
         <ExternalLink href="https://github.com/amandeepmittal">

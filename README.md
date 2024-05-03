@@ -11,7 +11,7 @@ I have written for over 30+ tech publications and over 150+ posts. This website 
 
 👤 **Aman mittal**
 
-- X/Twitter: [@amanhimself](https://twitter.com/amanhimself)
+- X: [@amanhimself](https://twitter.com/amanhimself)
 - GitHub: [@amandeepmittal](https://github.com/amandeepmittal)
 - Blog: [amanhimself.dev/blog](https://amanhimself.dev/blog/)
 

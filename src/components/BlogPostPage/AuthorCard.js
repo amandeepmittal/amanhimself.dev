@@ -45,7 +45,7 @@ const AuthorCard = () => {
               <Box>&nbsp;</Box>
               <Link isExternal href="https://twitter.com/amanhimself">
                 <Text fontSize="13px" color="purple.500" fontWeight="bold">
-                  X (Twitter)
+                  X
                 </Text>
               </Link>
             </HStack>
