@@ -56,7 +56,7 @@ const AuthorCard = () => {
             writing.
           </Text>
           <Text fontSize="md" color={textMode}>
-            Currently, leading documentation at 𝝠{' '}
+            Currently, working as a documentation lead at 𝝠{' '}
             <ExternalLink href="https://expo.dev/">Expo</ExternalLink>. Read
             more about me on the{' '}
             <ExternalLink href="https://amanhimself.dev/about/">
