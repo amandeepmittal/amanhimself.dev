@@ -7,6 +7,8 @@ tag: 'tools'
 canonicalUrl: 'https://amanhimself.dev/blog/macbook-setup-2024/'
 ---
 
+> Updated on May 29, 2024.
+
 A guide on setting up Apple Macbook for daily development work.
 
 ## A brief history of this guide
@@ -100,9 +102,21 @@ Click **Apple Icon** from the menu bar and open **System Settings** to change or
   - General > Enable Hard disks, disable CDs, DVDs, and iPods
     - Set New Finder windows show to Downloads
   - Tags: Switch off all
-    - Advanced > Show filename extensions
-    - Enable showing hidden files (hold Cmd + Shift dot(`.`) in a Finder window)
-    - Enable: View > Show Path Bar, Show Status Bar
+  - Advanced > Show filename extensions
+  - Enable showing hidden files (hold Cmd + Shift dot(`.`) in a Finder window)
+  - Enable: View > Show Path Bar, Show Status Bar
+- **Change Launchpad icon grid layout:**
+
+```shell
+# Specify the number of columns to be used.
+defaults write com.apple.dock springboard-columns -int 12
+
+# Specify the number of rows to be used.
+defaults write com.apple.dock springboard-rows -int 10
+
+# Restart the Dock to apply the changes.
+killall Dock
+```
 
 ## Install Homebrew - macOS package manager
 
@@ -260,6 +274,7 @@ To configure an account on GitHub.com and use an SSH key, follow the steps from 
 - Profiles> Colors > Import `Dracula.itermcolors` from `dotfiles` repo for Color Presets and apply it.
 - Text > Font and Non-ASCII Font, select **JetBrainsMono Nerd Font**.
 - Appearance > General > Theme > set to **Minimal**.
+- Terminal > Show mark indicators > **Disable**.
 
 ### Configure starship
 
@@ -276,7 +291,6 @@ To install Node.js and npm, use Node Version Manager (NVM). [Read the entire bl
 Run the following script to install other packages from homebrew:
 
 ```shell
-brew tap homebrew/cask-versions
 brew install yarn
 brew install scrcpy
 brew install watchman
@@ -291,12 +305,12 @@ brew install vale
 brew install --cask notunes
 ```
 
-- [Watchman](https://facebook.github.io/watchman/) to watch changes in the filesystem.
+- [Watchman](https://facebook.github.io/watchman/) to watch changes in the filesystem. Used for React Native app development.
 - [scrcpy](https://github.com/Genymobile/scrcpy) control Android devices connect via USB on Mac.
 - [imageoptim](https://imageoptim.com/mac) for compressing image files. See [ImageOptim [Settings](https://amanhimself.dev/blog/setup-macbook-m1/#imageoptim-settings) for instructions on how to set it up.
   [expo-orbit](https://expo.dev/orbit) to open development builds and updates quickly.
 - [rbenv](https://github.com/rbenv/rbenv) is similar to NVM but allows managing Ruby versions.
-- [imagemagick](https://github.com/ImageMagick/ImageMagick: required sometimes to append two images.
+- [imagemagick](https://github.com/ImageMagick/ImageMagick): required sometimes to append two images.
 - [vale](https://vale.sh/) required for work.
 - [typos-cli](https://crates.io/crates/typos-cli) is a nice, fast tool based on Rust to detect typos in markdown or mdx files.
 - [notunes](https://github.com/tombonez/noTunes) to avoid accidentally opening Apple Music app.
@@ -306,7 +320,7 @@ brew install --cask notunes
 To install Java17, run:
 
 ```shell
-brew install --cask zulu17
+brew install --cask zulu@17
 ```
 
 Add the `JAVA_HOME` environment variable in  **~/.zshrc**:
@@ -331,7 +345,7 @@ npm config set init-license MIT
 
 Install the following global npm packages:
 
-- [eas-cli](https://www.npmjs.com/package/eas-cli) For work and personal use
+- [eas-cli](https://www.npmjs.com/package/eas-cli): For work and personal use.
 
 ```shell
 npm i -g eas-cli
