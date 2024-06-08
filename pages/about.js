@@ -53,7 +53,30 @@ const AboutPage = () => {
             traveling.
           </ExternalLink>
         </Text>
-
+        <Heading size="lg" as="h1" pt={8}>
+          Work History
+        </Heading>
+        <List spacing={4}>
+          <ListItem>
+            🚀 Software consultant and documentation lead at Expo (2022 -
+            Present)
+          </ListItem>
+          <ListItem> 📝 Senior Content Developer at Vercel (2022)</ListItem>
+          <ListItem>🥑 Developer Advocate at Draftbit (2021 - 2022)</ListItem>
+          <ListItem>
+            💻 📝 Software consultant and Tech Writer
+            <List spacing={2}>
+              <ListItem>Crowdbotics (2018 - 2021)</ListItem>
+              <ListItem>Logrocket (Tech Writer, 2020 - 2023)</ListItem>
+              <ListItem>
+                Heartbeat (React Native Technical Writer, 2019 - 2020)
+              </ListItem>
+              <ListItem>
+                Jscrambler (React Native Technical Writer, 2018 - 2022)
+              </ListItem>
+            </List>
+          </ListItem>
+        </List>
         <Heading size="lg" as="h1" pt={8}>
           Open Source & Me
         </Heading>
@@ -261,30 +284,6 @@ const AboutPage = () => {
           </ExternalLink>
           .
         </Text>
-        <Heading size="lg" as="h1" pt={8}>
-          Work History
-        </Heading>
-        <List spacing={4}>
-          <ListItem>
-            🚀 Software consultant and documentation lead at Expo (2022 -
-            Present)
-          </ListItem>
-          <ListItem> 📝 Senior Content Developer at Vercel (2022)</ListItem>
-          <ListItem>🥑 Developer Advocate at Draftbit (2021 - 2022)</ListItem>
-          <ListItem>
-            💻 📝 Software consultant and Tech Writer
-            <List spacing={2}>
-              <ListItem>Crowdbotics (2018 - 2021)</ListItem>
-              <ListItem>Logrocket (Tech Writer, 2020 - 2023)</ListItem>
-              <ListItem>
-                Heartbeat (React Native Technical Writer, 2019 - 2020)
-              </ListItem>
-              <ListItem>
-                Jscrambler (React Native Technical Writer, 2018 - 2022)
-              </ListItem>
-            </List>
-          </ListItem>
-        </List>
         <Heading size="lg" as="h2" pt={8}>
           Speaking
         </Heading>
