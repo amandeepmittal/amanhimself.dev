@@ -7,7 +7,7 @@ tag: 'tools'
 canonicalUrl: 'https://amanhimself.dev/blog/macbook-setup-2024/'
 ---
 
-> Updated on May 29, 2024.
+> Updated on June 11, 2024.
 
 A guide on setting up Apple Macbook for daily development work.
 
@@ -427,13 +427,6 @@ VS Code has supported ARM chips since March 13, 2021. Download the [installer fo
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "grammarly.files.include": [
-    "**/README.md",
-    "**/readme.md",
-    "**/*.txt",
-    "**/*.md",
-    "**/*.mdx"
-  ],
   // ----------------------------------
   // ESLINT
   "eslint.validate": [
@@ -489,7 +482,6 @@ I usually switch between the following themes:
 - [GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot)
 - [GitHub Pull Requests and Issues](https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-github)
 - Git Lens
-- [Grammarly](https://marketplace.visualstudio.com/items?itemName=znck.grammarly)
 - [Highlight Matching Tag](https://marketplace.visualstudio.com/items?itemName=vincaslt.highlight-matching-tag)
 - [Indent rainbow](https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow)
 - [iOS common files](https://marketplace.visualstudio.com/items?itemName=Orta.vscode-ios-common-files)
