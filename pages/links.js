@@ -30,11 +30,9 @@ import { DocumentHead } from '../src/components';
 import {
   MEDIUM,
   TWITTER,
-  NEWSLETTER,
   RSS,
   EMAIL,
   DEVTO,
-  INSTAGRAM,
   GOODREADS,
   LINKEDIN,
   BLUESKY
@@ -54,10 +52,10 @@ export default function LinksPage() {
         as="section"
         pt={28}
       >
-        <Heading size="lg" as="h2" paddingBottom="20px">
+        <Heading size="2xl" as="h2" paddingBottom="30px">
           Links
         </Heading>
-        <Text lineHeight="175%" fontSize="md" paddingBottom="12px">
+        <Text lineHeight="175%" fontSize="md" paddingBottom="20px">
           Find Aman on the internet:
         </Text>
         <Box paddingLeft="10px">
