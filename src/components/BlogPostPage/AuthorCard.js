@@ -4,10 +4,12 @@ import {
   VStack,
   Link,
   useColorModeValue,
-  HStack
+  HStack,
+  Icon
 } from '@chakra-ui/react';
 
 import ExternalLink from '../ExternalLink';
+import { SiExpo } from 'react-icons/si';
 
 const AuthorCard = () => {
   const textMode = useColorModeValue('black', 'white');
@@ -56,7 +58,10 @@ const AuthorCard = () => {
             writing.
           </Text>
           <Text fontSize="md" color={textMode}>
-            Currently, working as the documentation lead at 𝝠{' '}
+            Currently, working as the documentation lead at{' '}
+            <span role="img" aria-label="expo">
+              <Icon as={SiExpo} w={3} h={3} display="inline" />
+            </span>{' '}
             <ExternalLink href="https://expo.dev/">Expo</ExternalLink>. Read
             more about me on the{' '}
             <ExternalLink href="https://amanhimself.dev/about/">

@@ -1,8 +1,9 @@
-import { Box, Stack, VStack, Heading, Text } from '@chakra-ui/react';
+import { Box, Stack, VStack, Heading, Text, Icon } from '@chakra-ui/react';
 
 import ExternalLink from './ExternalLink';
 import ExternalLinksCloud from './ExternalLinksCloud';
 import HeroImage from './HeroImage';
+import { SiExpo } from 'react-icons/si';
 
 const Hero = () => {
   return (
@@ -32,10 +33,21 @@ const Hero = () => {
             with open source technologies and writing about what I learn.
           </Text>
           <Text lineHeight="175%" as="h2" fontSize="lg">
-            I mainly enjoy working with React Native and Expo. Currently, working
-            as the documentation lead at 𝝠{' '}
-            <ExternalLink href="https://expo.dev/">Expo</ExternalLink> among
-            other hats.
+            I mainly enjoy working with React Native and Expo. Currently,
+            working as the documentation lead at{' '}
+            <span
+              style={{
+                backgroundColor: '#e5e7eb',
+                padding: '2px 4px',
+                borderRadius: '4px'
+              }}
+            >
+              <span role="img" aria-label="expo">
+                <Icon as={SiExpo} w={3.5} h={3.5} display="inline" />
+              </span>{' '}
+              <ExternalLink href="https://expo.dev/">Expo</ExternalLink>
+            </span>{' '}
+            among other hats.
           </Text>
           <Text lineHeight="175%" as="h2" fontSize="lg">
             I&apos;ve been writing online since 2017, mostly cross-platform
