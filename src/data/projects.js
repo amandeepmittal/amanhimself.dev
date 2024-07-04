@@ -2,7 +2,7 @@ export const ProjectsList = [
   {
     id: '1',
     title: 'React Native Examples',
-    description: `📱 A repo that contains React Native examples most related to tutorials I publish. Has over 850+ GitHub stars 🤩`,
+    description: `📱 A repo that contains React Native examples most related to tutorials I publish. Has over 900+ GitHub stars 🤩`,
     href: 'https://github.com/amandeepmittal/react-native-examples/',
     expoIcon: true
   },
