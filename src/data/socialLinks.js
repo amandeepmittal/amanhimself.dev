@@ -10,3 +10,4 @@ export const GOODREADS =
 export const POLYWORK = 'https://www.polywork.com/amanhimself';
 export const RSS = 'https://amanhimself.dev/rss.xml';
 export const LINKEDIN = 'www.linkedin.com/in/aman-mittal-05a239117';
+export const BLUESKY = 'https://bsky.app/profile/aman.bsky.social';
