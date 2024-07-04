@@ -7,7 +7,7 @@ tag: 'vscode'
 canonicalUrl: 'https://amanhimself.dev/blog/change-cursor-color-in-vscode/'
 ---
 
-Until yesterday, I was unaware that I could change the cursor color in VS Code. Not only changed the color but can also use a linear gradient.
+Until yesterday, I was unaware that I could change the cursor color in VS Code. Not only just change the color but also use a linear gradient.
 
 All thanks to VS Code's customizability. It gets this behavior from the Monaco editor. You can find extensive [documentation and a playground](https://microsoft.github.io/monaco-editor/) for Monaco Editor's API.
 
