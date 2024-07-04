@@ -9,14 +9,7 @@ import {
   useMediaQuery
 } from '@chakra-ui/react';
 
-import {
-  TWITTER,
-  DEVTO,
-  MEDIUM,
-  GITHUB,
-  NEWSLETTER,
-  RSS
-} from '../data/socialLinks';
+import { TWITTER, GITHUB, NEWSLETTER, RSS } from '../data/socialLinks';
 
 const Footer = () => {
   const [isMobile] = useMediaQuery('(max-width: 768px)');
@@ -92,6 +85,11 @@ const Footer = () => {
             <Link isExternal href={RSS}>
               <Text fontSize="sm" color={textMode}>
                 RSS
+              </Text>
+            </Link>
+            <Link href="/links/">
+              <Text fontSize="sm" color={textMode}>
+                All links
               </Text>
             </Link>
           </HStack>
