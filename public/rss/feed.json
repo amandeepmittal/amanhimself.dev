@@ -9,6 +9,17 @@
     },
     "items": [
         {
+            "id": "https://amanhimself.dev//blog/change-cursor-color-in-vscode",
+            "url": "https://amanhimself.dev//blog/change-cursor-color-in-vscode",
+            "title": "Change cursor color in VS Code to use a linear gradient",
+            "summary": "Change cursor color in VS Code to use a linear gradient",
+            "date_modified": "2024-07-10T00:00:00.000Z",
+            "author": {
+                "name": "Aman Mittal",
+                "url": "https://twitter.com/amanhimself"
+            }
+        },
+        {
             "id": "https://amanhimself.dev//blog/macbook-setup-2024",
             "url": "https://amanhimself.dev//blog/macbook-setup-2024",
             "title": "My 2024 Macbook setup",

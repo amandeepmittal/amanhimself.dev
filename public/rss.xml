@@ -4,10 +4,18 @@
         <title>Aman Mittal's blog</title>
         <link>https://amanhimself.dev/</link>
         <description></description>
-        <lastBuildDate>Thu, 04 Jul 2024 13:25:42 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 04 Jul 2024 14:53:39 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Feed for Node.js</generator>
         <copyright>2019 - 2024, Aman Mittal · All Rights Reserved.</copyright>
+        <item>
+            <title><![CDATA[Change cursor color in VS Code to use a linear gradient]]></title>
+            <link>https://amanhimself.dev//blog/change-cursor-color-in-vscode</link>
+            <guid>https://amanhimself.dev//blog/change-cursor-color-in-vscode</guid>
+            <pubDate>Wed, 10 Jul 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[Change cursor color in VS Code to use a linear gradient]]></description>
+            <author>amanmittal.work@gmail.com (Aman Mittal)</author>
+        </item>
         <item>
             <title><![CDATA[My 2024 Macbook setup]]></title>
             <link>https://amanhimself.dev//blog/macbook-setup-2024</link>
