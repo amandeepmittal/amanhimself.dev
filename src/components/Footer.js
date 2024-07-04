@@ -47,11 +47,6 @@ const Footer = () => {
               </Text>
             }
           >
-            <Link isExternal href={NEWSLETTER}>
-              <Text fontSize="sm" color={textMode}>
-                Newsletter
-              </Text>
-            </Link>
             <Link isExternal href={TWITTER}>
               <Text fontSize="sm" color={textMode}>
                 X
@@ -60,6 +55,11 @@ const Footer = () => {
             <Link isExternal href={RSS}>
               <Text fontSize="sm" color={textMode}>
                 RSS
+              </Text>
+            </Link>
+            <Link href="/links/">
+              <Text fontSize="sm" color={textMode}>
+                All links
               </Text>
             </Link>
           </HStack>
