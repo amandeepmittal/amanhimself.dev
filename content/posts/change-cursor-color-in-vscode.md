@@ -1,6 +1,6 @@
 ---
 title: 'Change cursor color in VS Code to use a linear gradient'
-date: '2024-07-10'
+date: '2024-07-04'
 slug: 'change-cursor-color-in-vscode'
 thumbnail: '/thumbnails/vscode.png'
 tag: 'vscode'
@@ -15,7 +15,7 @@ All thanks to VS Code's customizability. It gets this behavior from the Monaco e
 
 The extension [APC Customize UI++](https://marketplace.visualstudio.com/items?itemName=drcika.apc-extension) allows customizations that are beyond VS Code's abilities. Mostly because VS Code is an electron app and like any other electron app, uses CSS and JS.
 
-After installing the extension, open command palette in VSCode and then run: Enable APC extension. This will enable this extension and any custom settings you're going to apply in the next session, VS Code will automatically ask to restart the editor.
+After [installing the extension](https://marketplace.visualstudio.com/items?itemName=drcika.apc-extension), open command palette in VS Code and then run: Enable APC extension. This will enable this extension and any custom settings you're going to apply in the next session, VS Code will automatically ask to restart the editor.
 
 ## Find a gradient
 
