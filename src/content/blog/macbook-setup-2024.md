@@ -2,6 +2,7 @@
 title: My 2024 Macbook setup
 author: Aman Mittal
 pubDatetime: 2024-04-05T03:42:51Z
+modDatetime: 2024-06-11T03:42:51Z
 slug: macbook-setup-2024
 featured: false
 draft: false
@@ -9,10 +10,6 @@ tags:
   - tools
 description: "A guide on setting up Apple Macbook for daily development work."
 ---
-
-> Updated on June 11, 2024.
-
-A guide on setting up Apple Macbook for daily development work.
 
 ## A brief history of this guide
 
