@@ -1,21 +1,18 @@
 ## amanhimself.dev
 
-A [personal website](https://amanhimself.dev/) where I keep:
+![X (formerly Twitter) Follow](https://img.shields.io/twitter/follow/amanhimself)
 
-- information about myself
-- blog posts
+Personal website [amanhimself.dev](https://amanhimself.dev/) made with [Astro](https://astro.build/) and [AstroPaper](https://github.com/satnaing/astro-paper).
 
-I have written for over 30+ tech publications and over 150+ posts. This website is an alternate platform to the collection of blog posts and tutorials I have written so far.
 
-## Author
+### Links
 
-👤 **Aman mittal**
 
 - X: [@amanhimself](https://twitter.com/amanhimself)
 - GitHub: [@amandeepmittal](https://github.com/amandeepmittal)
 - Blog: [amanhimself.dev/blog](https://amanhimself.dev/blog/)
 
-## License
+### License for content
 
 Copyright (c) 2019 - Present Aman Mittal
 
