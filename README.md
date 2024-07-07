@@ -1,7 +1,5 @@
 ## amanhimself.dev
 
-![X (formerly Twitter) Follow](https://img.shields.io/twitter/follow/amanhimself)
-
 Personal website [amanhimself.dev](https://amanhimself.dev/) made with [Astro](https://astro.build/) and [AstroPaper](https://github.com/satnaing/astro-paper).
 
 
