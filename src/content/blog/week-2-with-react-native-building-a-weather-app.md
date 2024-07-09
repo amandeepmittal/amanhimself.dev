@@ -1,14 +1,13 @@
 ---
-title: "Week 2 With React Native - Building a Weather App"
+title: 'Week 2 With React Native - Building a Weather App'
 author: Aman Mittal
 pubDatetime: 2018-07-16T03:42:51Z
 slug: week-2-with-react-native-building-a-weather-app
 featured: false
 draft: false
 tags:
-  - expo
-  - weekly-review
-description: ""
+  - notes
+description: ''
 ---
 
 > [Originally published at Hackernoon.com](https://medium.com/hackernoon/week-2-with-react-native-building-a-weather-app-ca50fcfcb1e1)
