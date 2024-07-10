@@ -2,15 +2,14 @@
 title: Stash changes in a git repository with VS Code
 author: Aman Mittal
 pubDatetime: 2023-10-26T03:42:51Z
+modDatetime: 2024-03-12T03:42:51Z
 slug: stash-changes-with-vscode
 featured: false
 draft: false
 tags:
   - vscode
-description: ""
+description: ''
 ---
-
-> Updated on March 12, 2024.
 
 `git stash` is a useful command that temporarily stores current changes in a Git repository without committing them, making it possible to return to them later.
 
