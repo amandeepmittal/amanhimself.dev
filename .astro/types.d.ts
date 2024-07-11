@@ -581,6 +581,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"hide-folders-from-graph-view-obsidian.md": {
+	id: "hide-folders-from-graph-view-obsidian.md";
+  slug: "hide-folders-from-graph-view-obsidian";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "hide-unhide-files-or-directories-with-chflags.md": {
 	id: "hide-unhide-files-or-directories-with-chflags.md";
   slug: "hide-unhide-files-or-directories-with-chflags";
