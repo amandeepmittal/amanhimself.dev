@@ -4,7 +4,7 @@ author: Aman Mittal
 pubDatetime: 2023-10-26T03:42:51Z
 modDatetime: 2024-03-12T03:42:51Z
 slug: stash-changes-with-vscode
-featured: false
+featured: true
 draft: false
 tags:
   - vscode

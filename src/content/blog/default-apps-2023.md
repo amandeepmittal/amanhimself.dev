@@ -3,11 +3,11 @@ title: My default apps in 2023
 author: Aman Mittal
 pubDatetime: 2023-12-16T03:42:51Z
 slug: default-apps-2023
-featured: true
+featured: false
 draft: false
 tags:
   - tools
-description: ""
+description: ''
 ---
 
 Read about the ongoing [Default Apps](https://defaults.rknight.me/) project first at [Chris Coyier's](https://chriscoyier.net/2023/11/25/default-apps-2023/) blog. Tracing back to where it started seems to be the [Hemispheric Views](https://listen.hemisphericviews.com/097) podcast. During this back and forth of opening links on a Friday night, I got to discover so many new cool personalized blogs through the "Default Apps" list. Decided to jot down my own.
