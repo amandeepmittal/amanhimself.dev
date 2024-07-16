@@ -85,6 +85,9 @@ const layoutProps = {
       </div>
     </div>
     <article id="article" role="article" class="prose mx-auto mt-8 max-w-3xl">
+      <div class="flex items-center justify-center">
+        <div id="carbonads" />
+      </div>
       <Content />
     </article>
 
@@ -277,6 +280,20 @@ const layoutProps = {
           });
       }
       backToTop();
+
+      /** Load Carbon Ads */
+      function loadCarbonAds() {
+        const carbon = document.getElementById("carbonads");
+        if (carbon) {
+          const script = document.createElement("script");
+          script.src = "https://cdn.carbonads.com/carbon.js?serve=CEAIE2JY&placement=amanhimselfdev";
+          script.id = "_carbonads_js";
+          script.async = true;
+          script.type = "text/javascript";
+          carbon.appendChild(script);
+        }
+      }
+      loadCarbonAds();
     </script>
   </main>
 </Layout>
