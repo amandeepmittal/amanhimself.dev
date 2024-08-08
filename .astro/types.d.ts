@@ -1204,6 +1204,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"tracking-notes-in-obsidian-with-dataview.md": {
+	id: "tracking-notes-in-obsidian-with-dataview.md";
+  slug: "tracking-notes-in-obsidian-with-dataview";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "upload-image-to-cloudinary-using-expo-camera.md": {
 	id: "upload-image-to-cloudinary-using-expo-camera.md";
   slug: "upload-image-to-cloudinary-using-expo-camera";
