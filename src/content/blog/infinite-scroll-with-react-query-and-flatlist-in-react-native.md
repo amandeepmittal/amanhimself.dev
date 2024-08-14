@@ -6,8 +6,8 @@ slug: infinite-scroll-with-react-query-and-flatlist-in-react-native
 featured: false
 draft: false
 tags:
-  - expo
-description: ""
+  - react-native
+description: ''
 ---
 
 > Originally published at [Jscrambler.com](https://jscrambler.com/blog/implementing-infinite-scroll-with-react-query-and-flatlist-in-react-native)
@@ -66,14 +66,14 @@ Let's create a new directory called `/src`. This directory will contain all the 
 In this file, let's add some JSX code to display the title of the app screen.
 
 ```js
-import React from "react";
-import { Box, Text, Divider } from "native-base";
+import React from 'react';
+import { Box, Text, Divider } from 'native-base';
 
 export const HomeScreen = () => {
   return (
     <Box flex={1} safeAreaTop backgroundColor="white">
-      <Box height={16} justifyContent={"center"} px={2}>
-        <Text fontSize={28} fontWeight={"600"} color={"emerald.500"}>
+      <Box height={16} justifyContent={'center'} px={2}>
+        <Text fontSize={28} fontWeight={'600'} color={'emerald.500'}>
           Explore Games
         </Text>
       </Box>
@@ -92,12 +92,12 @@ Most NativeBase components also use utility props for most commonly used styled 
 Both NativeBase and React Query libraries require their corresponding providers to set up at the root of the app. Open the `App.js` file and add the following:
 
 ```js
-import React from "react";
-import { StatusBar } from "expo-status-bar";
-import { NativeBaseProvider } from "native-base";
-import { QueryClient, QueryClientProvider } from "react-query";
+import React from 'react';
+import { StatusBar } from 'expo-status-bar';
+import { NativeBaseProvider } from 'native-base';
+import { QueryClient, QueryClientProvider } from 'react-query';
 
-import { HomeScreen } from "./src/screens/HomeScreen";
+import { HomeScreen } from './src/screens/HomeScreen';
 
 const queryClient = new QueryClient();
 
@@ -128,9 +128,9 @@ After modifying `App.js`, you will get the following output on a device:
 If you want to continue reading this post and build along with the demo app, make sure you have access to the API key for your RAWG account. Once you've done that, create a new file called `index.js` inside the `/src/config` directory. This file will export the base url of the API and API key.
 
 ```js
-const BASE_URL = "https://api.rawg.io/api";
+const BASE_URL = 'https://api.rawg.io/api';
 // Replace the Xs below with your own API key
-const API_KEY = "XXXXXX";
+const API_KEY = 'XXXXXX';
 
 export { BASE_URL, API_KEY };
 ```
@@ -142,14 +142,14 @@ Replace the Xs in the above snippet with your own API key.
 To fetch the data, we will use JavaScript `fetch` API method. Create a new file called `index.js` inside `/src/api`. It will import the base url and the API key from the `/config` directory and expose a function that fetches the data.
 
 ```js
-import { BASE_URL, API_KEY } from "../config";
+import { BASE_URL, API_KEY } from '../config';
 
 export const gamesApi = {
   // later convert this url to infinite scrolling
   fetchAllGames: () =>
     fetch(`${BASE_URL}/games?key=${API_KEY}`).then(res => {
       return res.json();
-    }),
+    })
 };
 ```
 
@@ -160,14 +160,14 @@ The second argument is a function that returns a promise. This promise is resolv
 Inside the `HomeScreen`, let's call this hook to get the data.
 
 ```js
-import React from "react";
-import { Box, Text, FlatList, Divider, Spinner } from "native-base";
-import { useQuery } from "react-query";
+import React from 'react';
+import { Box, Text, FlatList, Divider, Spinner } from 'native-base';
+import { useQuery } from 'react-query';
 
-import { gamesApi } from "../api";
+import { gamesApi } from '../api';
 
 export const HomeScreen = () => {
-  const { isLoading, data } = useQuery("games", gamesApi.fetchAllGames);
+  const { isLoading, data } = useQuery('games', gamesApi.fetchAllGames);
 
   const gameItemExtractorKey = (item, index) => {
     return index.toString();
@@ -192,8 +192,8 @@ export const HomeScreen = () => {
     </Box>
   ) : (
     <Box flex={1} safeAreaTop backgroundColor="white">
-      <Box height={16} justifyContent={"center"} px={2}>
-        <Text fontSize={28} fontWeight={"600"} color={"emerald.500"}>
+      <Box height={16} justifyContent={'center'} px={2}>
+        <Text fontSize={28} fontWeight={'600'} color={'emerald.500'}>
           Explore Games
         </Text>
       </Box>
@@ -237,7 +237,7 @@ export const gamesApi = {
   fetchAllGames: ({ pageParam = 1 }) =>
     fetch(`${BASE_URL}/games?key=${API_KEY}&page=${pageParam}`).then(res => {
       return res.json();
-    }),
+    })
 };
 ```
 
@@ -249,7 +249,7 @@ Let's import the `useInfiniteQuery` hook in the `HomeScreen.js` file.
 
 ```js
 // rest of the import statements remain same
-import { useInfiniteQuery } from "react-query";
+import { useInfiniteQuery } from 'react-query';
 ```
 
 Next, inside the `HomeScreen` component, replace the `useQuery` hook with the `useInfiniteQuery` hook as shown below. Along with the two arguments, the new hook will also contain an object as the third argument. This object contains the logic to fetch the data from the next page using the `getNextPageParam` function.
@@ -258,7 +258,7 @@ The function retrieves the page number of the next page. It accepts a parameter 
 
 ```js
 const { isLoading, data, hasNextPage, fetchNextPage } = useInfiniteQuery(
-  "games",
+  'games',
   gamesApi.fetchAllGames,
   {
     getNextPageParam: lastPage => {
@@ -267,7 +267,7 @@ const { isLoading, data, hasNextPage, fetchNextPage } = useInfiniteQuery(
       }
 
       return lastPage;
-    },
+    }
   }
 );
 ```
@@ -326,14 +326,14 @@ Modify the `HomeScreen` component as shown below. The loading spinner renders wh
 ```js
 export const HomeScreen = () => {
   const { isLoading, data, hasNextPage, fetchNextPage, isFetchingNextPage } =
-    useInfiniteQuery("games", gamesApi.fetchAllGames, {
+    useInfiniteQuery('games', gamesApi.fetchAllGames, {
       getNextPageParam: lastPage => {
         if (lastPage.next !== null) {
           return lastPage.next;
         }
 
         return lastPage;
-      },
+      }
     });
 
   const loadMore = () => {
@@ -369,8 +369,8 @@ export const HomeScreen = () => {
     </Box>
   ) : (
     <Box flex={1} safeAreaTop backgroundColor="white">
-      <Box height={16} justifyContent={"center"} px={2}>
-        <Text fontSize={28} fontWeight={"600"} color={"emerald.500"}>
+      <Box height={16} justifyContent={'center'} px={2}>
+        <Text fontSize={28} fontWeight={'600'} color={'emerald.500'}>
           Explore Games
         </Text>
       </Box>
