@@ -1,8 +1,8 @@
 ---
-title: 'Year rewind: 2020'
+title: 'Year rewind: 2025'
 author: Aman Mittal
 pubDatetime: 2020-12-23T03:42:51Z
-slug: year-rewind-2020
+slug: year-rewind-2025
 featured: false
 draft: false
 tags:
