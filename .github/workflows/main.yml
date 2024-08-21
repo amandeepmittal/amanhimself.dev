@@ -11,5 +11,5 @@ jobs:
       - uses: errata-ai/vale-action@reviewdog
         with:
           vale_flags: '--config=./.vale.ini'
-          filter_mode: notifier
+          filter_mode: diff_context
           fail_on_error: true
