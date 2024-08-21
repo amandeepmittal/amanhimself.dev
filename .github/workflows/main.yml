@@ -11,5 +11,6 @@ jobs:
       - uses: errata-ai/vale-action@reviewdog
         with:
           vale_flags: '--config=./.vale.ini'
-          filter_mode: diff_context
+          reporter: github-pr-check
+          filter_mode: notifier
           fail_on_error: true
