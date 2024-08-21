@@ -1,0 +1,17 @@
+name: prose-linter
+on: [pull_request]
+
+jobs:
+  vale:
+    name: runner / vale
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v3
+      - uses: errata-ai/vale-action@reviewdog
+        with:
+          - vale_flags: "--config=./.vale.ini"
+          filter_mode: diff_context
+          fail_on_error: true
+
+
