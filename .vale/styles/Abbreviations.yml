@@ -1,11 +1,11 @@
 extends: substitution
-message: Use '%s' instead of '%s'
-ignorecase: false
+message: "Use '%s' instead of '%s'"
+link: 'https://github.com/expo/expo/blob/main/guides/Expo%20Documentation%20Writing%20Style%20Guide.md#abbreviations'
+ignorecase: true
 level: warning
 nonword: true
+action:
+  name: replace
 swap:
-  '\beg\b': e.g.,
-  '\bie\b': i.e.,
-  'e\.g\.(?:[^,]|$)': e.g.,
-  'i\.e\.(?:[^,]|$)': i.e.,
-  '\betc\b[^\.]': etc.
+  '\b(?:etc|e\t\c\.)': more or and so on
+  '\bvs\.': versus
