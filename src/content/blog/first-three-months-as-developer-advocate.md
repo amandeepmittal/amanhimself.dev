@@ -1,5 +1,5 @@
 ---
-title: "Life at Draftbit - First 3 Months as a Developer Advocate"
+title: 'Life at Draftbit - First 3 Months as a Developer Advocate'
 author: Aman Mittal
 pubDatetime: 2021-05-25T03:42:51Z
 slug: first-three-months-as-developer-advocate
@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - devrel
-description: ""
+description: ''
 ---
 
 ![cover_image](https://i.imgur.com/TBebjua.jpg)
@@ -40,7 +40,11 @@ A few weeks back I did share my thoughts in the [newsletter](https://amanhimself
 
 - Mary Thengvall's [The Business Value of Developer Relations](https://www.persea-consulting.com/book)
 
+<!-- vale off -->
+
 It goes more in-depth and talks about the importance of nurturing a community, maintaining positive relations, building a team of DevRels, and much more. She [has an amazing post on her blog](https://www.marythengvall.com/blog/2020/6/29/the-camunda-developer-relations-career-path) sharing her own experience.
+
+<!-- vale on -->
 
 ## Working with Draftbit
 

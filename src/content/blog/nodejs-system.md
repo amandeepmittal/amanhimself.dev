@@ -7,14 +7,14 @@ featured: false
 draft: false
 tags:
   - nodejs
-description: ""
+description: ''
 ---
 
 When I started learning Node.js, I always wondered, how does it work? How is it inside Node.js? Event loop and Event Queue jargons are digested. But what exactly is going on? Where do those jargons Event Loop and Event Queue come from.To satisfy my curiosity as well to know the answer to my previous question, I went in depth as much as I can and came across some things which I’d like to share with you. In brief, this article is about **Node.js System** — a glimpse of internal workings of Node.
 
 If you are familiar with Node.js, it is a known fact that Node.js is single threaded. If you are from programming/computer science background you know what a thread means. Consider this scenario: traditionally — an I/O request comes to a web server and is assigned to an available thread, and for each concurrent connection there is one thread available. That request is handled on the specific thread until it is fulfilled and the response is sent.
 
-This scenario is a perfect example of **Blocking I/O** because while handling a particular request by a specific thread, there will be some idle time when the operations are being done (such as retrieving a file, opening it, reading it, etc.). A single thread consumes memory. A longer running thread for each connection and then sitting idly for some amount of time is not considered an efficient way in the [world of Node.js](https://medium.com/@amanhimself/the-node-way-philosophy-of-a-platform-f9738ed5f9d2).
+This scenario is a perfect example of **Blocking I/O** because while handling a particular request by a specific thread, there will be some idle time when the operations are being done (such as retrieving a file, opening it, reading it, and so on). A single thread consumes memory. A longer running thread for each connection and then sitting idly for some amount of time is not considered an efficient way in the [world of Node.js](https://medium.com/@amanhimself/the-node-way-philosophy-of-a-platform-f9738ed5f9d2).
 
 ## Enter Reactor Pattern- Heart of Node.js
 

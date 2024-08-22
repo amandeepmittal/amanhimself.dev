@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - nodejs
-description: ""
+description: ''
 ---
 
 ![cover_image](https://blog.appsignal.com/_next/image?url=%2Fimages%2Fblog%2F2022-02%2Fpatterns.png&w=2048&q=50)
@@ -38,7 +38,7 @@ myInt = 6;
 console.log(myInt); // 6
 let myArray = [0, 1, 2, 3];
 console.log(myArray); // [ 0, 1, 2, 3 ]
-let myOtherArray = ["one", "two", "three"];
+let myOtherArray = ['one', 'two', 'three'];
 myArray = myOtherArray;
 console.log(myArray); // [ 'one', 'two', 'three' ]
 ```
@@ -50,10 +50,10 @@ const myInt = 3;
 myInt = 6; // TypeError: Assignment to constant variable.
 const myArray = [0, 1, 2, 3];
 console.log(myArray); // [ 0, 1, 2, 3 ]
-myArray[0] = "eleven";
+myArray[0] = 'eleven';
 console.log(myArray); // [ 'eleven', 1, 2, 3 ]
 
-let myOtherArray = ["one", "two", "three"];
+let myOtherArray = ['one', 'two', 'three'];
 myArray = myOtherArray; // TypeError: Assignment to constant variable
 ```
 
@@ -174,7 +174,7 @@ In the above, we declare a variable `var x = 2;` inside the `if` statement. The 
 
 ### Proper Naming Conventions
 
-It's important to follow a naming convention when naming constants, variables, classes, and functions in an app. This helps you visually differentiate between local variables, global variables, functions, classes, etc., and maintain a consistent style throughout your codebase.
+It's important to follow a naming convention when naming constants, variables, classes, and functions in an app. This helps you visually differentiate between local variables, global variables, functions, classes, and so on, and maintain a consistent style throughout your codebase.
 
 For naming local variables and functions, use lowerCamelCase.
 
@@ -267,7 +267,7 @@ As an example, throw a string as shown below:
 
 ```js
 if (!data) {
-  throw "There is no data";
+  throw 'There is no data';
 }
 ```
 
@@ -277,13 +277,13 @@ Instead, use the built-in Error object:
 
 ```js
 if (!data) {
-  throw new Error("There is no data");
+  throw new Error('There is no data');
 }
 ```
 
 ## Loggers for Your Node.js Project
 
-There's no denying it - we've all used `console` statements at times. They can be good for quickly debugging something or printing a standard output. But the console lacks proper configuration options for production-grade applications.
+There's no denying it&mdash;we've all used `console` statements at times. They can be good for quickly debugging something or printing a standard output. But the console lacks proper configuration options for production-grade applications.
 
 It is also crucial for a logger to be high-performant in identifying errors and possible issues. A slow logging library might harm your application's runtime performance.
 
@@ -299,14 +299,14 @@ A good logging library provides features that make it easier to centralize and f
 An example of configuring Pino:
 
 ```js
-const app = require("express")();
-const pino = require("pino-http")();
+const app = require('express')();
+const pino = require('pino-http')();
 
 app.use(pino);
 
-app.get("/", function (req, res) {
-  req.log.info("something");
-  res.send("hello world");
+app.get('/', function (req, res) {
+  req.log.info('something');
+  res.send('hello world');
 });
 
 app.listen(3000);
@@ -325,8 +325,8 @@ In a Node.js application, writing API tests is a good start. They provide more c
 Consider the example below. It is a simple Express app that serves one route:
 
 ```js
-const express = require("express");
-const bodyParser = require("body-parser");
+const express = require('express');
+const bodyParser = require('body-parser');
 
 const app = express();
 
@@ -335,8 +335,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // Other middlewares...
 
-app.get("/", (req, res, next) => {
-  res.json({ hello: "Hello World" });
+app.get('/', (req, res, next) => {
+  res.json({ hello: 'Hello World' });
 });
 
 module.exports = app;
@@ -345,14 +345,14 @@ module.exports = app;
 Here's appropriate way to write this using Supertest:
 
 ```js
-const request = require("supertest");
-const app = require("./index");
+const request = require('supertest');
+const app = require('./index');
 
-describe("hello test", () => {
-  it("/ should return a response", async () => {
-    const res = await request(app).get("/");
+describe('hello test', () => {
+  it('/ should return a response', async () => {
+    const res = await request(app).get('/');
     expect(res.statusCode).toEqual(200);
-    expect(res.body).toEqual({ hello: "Hello World" });
+    expect(res.body).toEqual({ hello: 'Hello World' });
   });
 });
 ```
@@ -373,6 +373,6 @@ A package can have vulnerabilities. Use community-based tools such as [npm audit
 
 In this article, we covered practices and patterns to help you avoid anti-patterns and write better code for your Node.js applications.
 
-We looked at some key principles around coding style, error handling, loggers, and testing. Some of the practices we discussed are more general - like checking for outdated packages or vulnerable dependencies. Others - such as using a performant logging library using ESLint and style guides - will help you maintain a consistent way of writing code, especially when working on large projects.
+We looked at some key principles around coding style, error handling, loggers, and testing. Some of the practices we discussed are more general&mdash;like checking for outdated packages or vulnerable dependencies. Others&mdash;such as using a performant logging library using ESLint and style guides&mdash;will help you maintain a consistent way of writing code, especially when working on large projects.
 
 Happy coding!
