@@ -12,5 +12,4 @@ jobs:
         with:
           files: '["src/content/blog"]'
           vale_flags: '--config=./.vale.ini'
-          filter_mode: diff_context
           fail_on_error: true
