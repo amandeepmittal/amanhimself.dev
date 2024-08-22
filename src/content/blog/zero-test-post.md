@@ -17,4 +17,4 @@ Another his and her test.
 
 ## HEading has punctuation.
 
-Another test.
+Another test. e.g., i.e., etc.
