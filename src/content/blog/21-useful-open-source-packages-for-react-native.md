@@ -1,5 +1,5 @@
 ---
-title: "21 Useful Open Source Packages for React Native"
+title: '21 Useful Open Source Packages for React Native'
 author: Aman Mittal
 pubDatetime: 2019-01-08T03:42:51Z
 slug: 21-useful-open-source-packages-for-react-native
@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - react-native
-description: ""
+description: ''
 ---
 
 ![cover_image](https://i.imgur.com/nbq2XcZ.png)
@@ -112,10 +112,10 @@ A community package, react-native-languages is a library that helps you integrat
 For example, to get the current device’s language, you would write the following code.
 
 ```js
-import RNLanguages from "react-native-languages";
+import RNLanguages from 'react-native-languages';
 
 // Get Current device language
-console.log("language", RNLanguages.language);
+console.log('language', RNLanguages.language);
 ```
 
 [**react-native-community/react-native-languages**](https://github.com/react-native-community/react-native-languages)
@@ -217,17 +217,17 @@ The most difficult part of automated testing on mobile is the tip of the testing
 For example, a test for a login screen in Detox as it runs on a device/simulator like an actual user looks like below:
 
 ```js
-describe("Login flow", () => {
-  it("should login successfully", async () => {
+describe('Login flow', () => {
+  it('should login successfully', async () => {
     await device.reloadReactNative();
-    await expect(element(by.id("email"))).toBeVisible();
+    await expect(element(by.id('email'))).toBeVisible();
 
-    await element(by.id("email")).typeText("john@example.com");
-    await element(by.id("password")).typeText("123456");
-    await element(by.text("Login")).tap();
+    await element(by.id('email')).typeText('john@example.com');
+    await element(by.id('password')).typeText('123456');
+    await element(by.text('Login')).tap();
 
-    await expect(element(by.text("Welcome"))).toBeVisible();
-    await expect(element(by.id("email"))).toNotExist();
+    await expect(element(by.text('Welcome'))).toBeVisible();
+    await expect(element(by.id('email'))).toNotExist();
   });
 });
 ```
@@ -244,7 +244,7 @@ This third-party solution is relatively new. React-native-mock helps developers 
 
 Lastly, I leave you with the go to linting library used by almost every JavaScript developer. It is called ESLint. It is a pluggable linting utility for JavaScript and to let programmers discover issues with their JavaScript code before executing it. One great benefit of ESLint is that it gives developers the opportunity to create their own linting rules. I personally prefer to use rules provided by the team at AirBnb with some tweaks of my own.
 
-[**ESLint - Pluggable JavaScript linter**](https://eslint.org/)
+[**ESLint&mdash;Pluggable JavaScript linter**](https://eslint.org/)
 
 ### Conclusion
 

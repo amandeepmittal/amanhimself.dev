@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - tools
-description: ""
+description: ''
 ---
 
 > **Note**: A new version of this post was written in 2024. See [My 2024 Macbook setup](/blog/macbook-setup-2024/) for more information.

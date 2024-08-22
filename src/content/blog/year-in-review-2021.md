@@ -1,5 +1,5 @@
 ---
-title: "2021 - A year in review"
+title: '2021 - A year in review'
 author: Aman Mittal
 pubDatetime: 2021-12-31T03:42:51Z
 slug: year-in-review-2021
@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - year-review
-description: ""
+description: ''
 ---
 
 As we transition to 2022 and leave 2021 behind, it's a great time to reflect on the year passing by. It is my second year writing a ["year review"](https://amanhimself.dev/blog/year-rewind-2020/). It's fun for me to look back over what I did and what I focused on last year. I want to continue the tradition this year as well.
@@ -78,14 +78,18 @@ I also got my first [GitHub sponsor](https://twitter.com/amanhimself/status/1454
 
 I failed to run my [weekly newsletter](https://amanhimself.substack.com/). First, it became bi-weekly and then monthly. It's all due to my inconsistency in sending out and not managing my time with publishing posts. However, it did grow to 1319 subscribers from 1201 last year. I appreciate folks who stick around after me being inconsistent enough to deliver.
 
+<!-- vale off -->
+
 I did move it from Substack to Revue after Twitter acquired Revue. With Revue, I like the experience so far. I've been using it for three months and have sent three newsletters. Anyone using Twitter can now easily subscribe from [my Twitter profile](https://twitter.com/amanhimself). Thanks to my buddy [Scott Spence](https://twitter.com/spences10) who showed me how easy it was to migrate to Revue. If you're on Twitter, then give Scott a follow. He's an amazing person, an experienced developer, and he creates awesome content in the Web Dev space.
+
+<!-- vale on -->
 
 ## Reading 📚
 
 I did manage to go through some good books this year. Here are some of my picks that I enjoyed reading:
 
-- [Getting Started in Developer Relations by Sam Julien](https://www.goodreads.com/book/show/57735972-getting-started-in-developer-relations) - One of the best resources I read starting out. Sam concisely talks about what a Dev Rel/Advocacy role is about, the skillset, the mindset, and some red flags when seeking a role like this one. I highly recommend this book.
-- [The Business Value of Developer Relations: How and Why Technical Communities Are Key to Your Success](https://www.goodreads.com/book/show/40167835-the-business-value-of-developer-relations) - It goes more in-depth and talks about the importance of nurturing a community, maintaining positive relations, building a team of DevRels, and much more.
+- [Getting Started in Developer Relations by Sam Julien](https://www.goodreads.com/book/show/57735972-getting-started-in-developer-relations): One of the best resources I read starting out. Sam concisely talks about what a Dev Rel/Advocacy role is about, the skillset, the mindset, and some red flags when seeking a role like this one. I highly recommend this book.
+- [The Business Value of Developer Relations: How and Why Technical Communities Are Key to Your Success](https://www.goodreads.com/book/show/40167835-the-business-value-of-developer-relations): It goes more in-depth and talks about the importance of nurturing a community, maintaining positive relations, building a team of DevRels, and much more.
 - [Before the Coffee Gets Cold: Tales from the Café](https://www.goodreads.com/book/show/54373691-before-the-coffee-gets-cold) - I've only one word for it: mesmerizing!
 
 ## Travelling

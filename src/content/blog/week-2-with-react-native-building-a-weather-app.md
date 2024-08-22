@@ -21,7 +21,7 @@ This week I advanced further in my journey. I completed [Spencer Carli](https://
 - Prettier: using code formatting tool
 - Debugging
 
-Though, I had been already familiar with the process of lint and prettier since I use both of them in my daily workflow. Debugging and other modules are a delight to get familiar with in the start and will give an overall aspect of things such that you do not loose patience with yourself when trying to use them later. Moreover, Spencer is a calm instructor and has soothing voice. I enjoyed his method of teaching.
+Though, I had been already familiar with the process of lint and prettier since I use both of them in my daily workflow. Debugging and other modules are a delight to get familiar with in the start and will give an overall aspect of things such that you do not loose patience with yourself when trying to use them later. Moreover, Spencer is a calm instructor and has soothing voice. I enjoyed their method of teaching.
 
 ### eslint-config 🛠
 
