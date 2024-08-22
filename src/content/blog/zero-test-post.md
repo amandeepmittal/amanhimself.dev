@@ -15,4 +15,6 @@ This is -- .
 
 Another his and her test.
 
+## HEading has punctuation.
+
 Another test.
