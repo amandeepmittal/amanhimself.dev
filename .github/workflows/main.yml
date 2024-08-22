@@ -7,11 +7,10 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: errata-ai/vale-action@reviewdog
         with:
-          - vale_flags: "--config=./.vale.ini"
-          filter_mode: diff_context
+          reporter: github-pr-check
+          files: '["src/content/blog"]'
+          vale_flags: '--config=./.vale.ini'
           fail_on_error: true
-
-
