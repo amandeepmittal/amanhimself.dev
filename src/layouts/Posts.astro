@@ -20,13 +20,14 @@ export interface Props {
 const { currentPage, totalPages, paginatedPosts } = Astro.props;
 const posts = await getCollection("blog");
 let tags = getUniqueTags(posts);
+let totalPostsCount = posts.length
 ---
 
 <Layout title={`Blog | ${SITE.title}`}>
   <Header activeNav="blog" />
   <Main
     pageTitle="Blog"
-    pageDesc="This site is a collection of most of the blogs I've written."
+    pageDesc=`This site is a collection of most of the posts (${totalPostsCount}) I've written.`
   >
     <ul>
       {tags.map(({ tag }) => <Tag {tag} size="sm" />)}

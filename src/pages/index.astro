@@ -17,6 +17,8 @@ const sortedPosts = await getSortedPosts(posts);
 const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
 
 const socialCount = SOCIALS.filter(social => social.active).length;
+
+const totalPostsCount = posts.length;
 ---
 
 <Layout>
@@ -108,7 +110,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
 
       <div class="all-posts-btn-wrapper">
         <LinkButton href="/blog/">
-          See All Posts
+          See All {totalPostsCount} Posts
           <svg xmlns="http://www.w3.org/2000/svg"
             ><path
               d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"
