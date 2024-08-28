@@ -1,13 +1,13 @@
 ---
-title: "2022 - A year in review"
+title: '2022 - A year in review'
 author: Aman Mittal
 pubDatetime: 2023-01-01T03:42:51Z
 slug: year-in-review-2022
 featured: false
 draft: false
 tags:
-  - year-review
-description: ""
+  - year-reviews
+description: ''
 ---
 
 My blog has been neglected for the last few months. Writing a year review is my way of making amendments to start writing back and reflecting on the year gone by.

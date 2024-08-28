@@ -6,8 +6,8 @@ slug: how-to-open-any-folder-from-terminal-in-finder-on-mac
 featured: false
 draft: false
 tags:
-  - tools
-description: ""
+  - cli
+description: ''
 ---
 
 Often, I struggle or want to open the current directory I am working from the Terminal app to the Finder window on macOS.

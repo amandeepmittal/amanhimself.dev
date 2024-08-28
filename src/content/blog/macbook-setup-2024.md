@@ -7,8 +7,8 @@ slug: macbook-setup-2024
 featured: false
 draft: false
 tags:
-  - tools
-description: "A guide on setting up Apple Macbook for daily development work."
+  - macos
+description: 'A guide on setting up Apple Macbook for daily development work.'
 ---
 
 ## A brief history of this guide

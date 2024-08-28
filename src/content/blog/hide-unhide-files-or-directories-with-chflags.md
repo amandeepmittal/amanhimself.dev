@@ -6,8 +6,8 @@ slug: hide-unhide-files-or-directories-with-chflags
 featured: false
 draft: false
 tags:
-  - tools
-description: ""
+  - macos
+description: ''
 ---
 
 The `chflags` command in macOS is a command for quickly hiding or unhiding files and directories. It is particularly useful for managing the visibility of files by altering their flags.

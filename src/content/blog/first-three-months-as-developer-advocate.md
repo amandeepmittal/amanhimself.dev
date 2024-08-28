@@ -6,7 +6,7 @@ slug: first-three-months-as-developer-advocate
 featured: false
 draft: false
 tags:
-  - devrel
+  - notes
 description: ''
 ---
 

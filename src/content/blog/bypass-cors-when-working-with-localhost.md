@@ -1,13 +1,13 @@
 ---
-title: "Bypass CORS to fetch files when working with localhost"
+title: 'Bypass CORS to fetch files when working with localhost'
 author: Aman Mittal
 pubDatetime: 2023-05-24T03:42:51Z
 slug: bypass-cors-when-working-with-localhost
 featured: false
 draft: false
 tags:
-  - tools
-description: ""
+  - cli
+description: ''
 ---
 
 Sometime back I learned about [opening files or directories using the `open` command from the CLI on a Mac](/blog/how-to-open-any-folder-from-terminal-in-finder-on-mac/). It's simple yet effective.

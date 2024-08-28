@@ -12,7 +12,7 @@ description: ''
 
 I've been using Obsidian for more than a year, and it has become more than a commonplace note-taking app. I use one vault to store all of my notes. They are related to work, projects, bookmarks, and sometimes my journal.
 
-## Graph view - a useful tool
+## Graph view: a useful tool
 
 One of the fascinating tools I've found that Obsidian provides is the Graph view. The Graph view is an opportunity to view all of your notes in one place and see the connections between different notes. It's not only visual but also interactive. Clicking a node in the graph opens the note.
 

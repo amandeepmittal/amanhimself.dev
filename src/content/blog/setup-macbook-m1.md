@@ -6,7 +6,7 @@ slug: setup-macbook-m1
 featured: false
 draft: false
 tags:
-  - tools
+  - macos
 description: ''
 ---
 

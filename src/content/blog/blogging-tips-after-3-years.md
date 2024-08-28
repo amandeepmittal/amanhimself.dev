@@ -1,13 +1,13 @@
 ---
-title: "Blogging tips after 3 years and a 100+ posts"
+title: 'Blogging tips after 3 years and a 100+ posts'
 author: Aman Mittal
 pubDatetime: 2020-04-13T03:42:51Z
 slug: blogging-tips-after-3-years
 featured: false
 draft: false
 tags:
-  - writing
-description: ""
+  - notes
+description: ''
 ---
 
 ![cover_image](https://i.imgur.com/XHghbGg.jpg)

@@ -1,13 +1,13 @@
 ---
-title: "To Travel, A Tech Conference and One Million views - a Recap"
+title: 'To Travel, A Tech Conference and One Million views - a Recap'
 author: Aman Mittal
 pubDatetime: 2019-07-02T03:42:51Z
 slug: to-travel-a-tech-conference-and-one-million-views-a-recap
 featured: false
 draft: false
 tags:
-  - conference
-description: ""
+  - notes
+description: ''
 ---
 
 The year 2019 started for me a bit unusual than the previous ones. I never expected to get so much attraction on my blog posts that are mostly published here. Had only one trip planned, ended up doing two. Did end up attending a tech conference too. Something when I started my career as a developer I hadn’t thought of.

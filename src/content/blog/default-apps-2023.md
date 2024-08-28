@@ -6,7 +6,7 @@ slug: default-apps-2023
 featured: false
 draft: false
 tags:
-  - tools
+  - notes
 description: ''
 ---
 

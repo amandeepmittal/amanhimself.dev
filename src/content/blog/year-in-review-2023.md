@@ -6,8 +6,8 @@ slug: year-in-review-2023
 featured: false
 draft: false
 tags:
-  - year-review
-description: ""
+  - year-reviews
+description: ''
 ---
 
 I must admit that I'm late to the yearly review party this time. The calendar has already flipped to the end of January, yet here I find myself, typing away.

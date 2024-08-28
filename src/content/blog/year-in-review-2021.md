@@ -6,7 +6,7 @@ slug: year-in-review-2021
 featured: false
 draft: false
 tags:
-  - year-review
+  - year-reviews
 description: ''
 ---
 
