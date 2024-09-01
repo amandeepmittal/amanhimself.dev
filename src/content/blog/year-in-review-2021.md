@@ -90,7 +90,7 @@ I did manage to go through some good books this year. Here are some of my picks 
 
 - [Getting Started in Developer Relations by Sam Julien](https://www.goodreads.com/book/show/57735972-getting-started-in-developer-relations): One of the best resources I read starting out. Sam concisely talks about what a Dev Rel/Advocacy role is about, the skillset, the mindset, and some red flags when seeking a role like this one. I highly recommend this book.
 - [The Business Value of Developer Relations: How and Why Technical Communities Are Key to Your Success](https://www.goodreads.com/book/show/40167835-the-business-value-of-developer-relations): It goes more in-depth and talks about the importance of nurturing a community, maintaining positive relations, building a team of DevRels, and much more.
-- [Before the Coffee Gets Cold: Tales from the Café](https://www.goodreads.com/book/show/54373691-before-the-coffee-gets-cold) - I've only one word for it: mesmerizing!
+- [Before the Coffee Gets Cold: Tales from the Café](https://www.goodreads.com/book/show/54373691-before-the-coffee-gets-cold) &mdash; I've only one word for it: mesmerizing!
 
 ## Travelling
 

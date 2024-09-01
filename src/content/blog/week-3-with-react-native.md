@@ -23,7 +23,7 @@ This week I took a dive deeper in Expo and React Native. I successfully, impleme
 - [Expo Facebook](https://docs.expo.io/versions/latest/sdk/facebook#__next)
 - For Firebase SDK setup and integration in a React Native app go through [this link](https://docs.expo.io/versions/latest/guides/using-firebase#__next), also provided by Expo API.
 
-One good thing about Expo is that it comes with Create-React-Native-App starter project. Second most important thing I went through this week was integrating and implementing a Redux store in a React Native. To quickly get started, I went through a [Udemy Course by Stefan Hyltoft](https://www.udemy.com/learn-redux-in-react-native-in-less-than-2-hours/) since enrolling was free and seemed to the point. His explanation of concepts is clear but his methodology of working did not appeal me. Any recommendation on how to organize the actions and reducers will be helpful.
+One good thing about Expo is that it comes with Create-React-Native-App starter project. Second most important thing I went through this week was integrating and implementing a Redux store in a React Native. To quickly get started, I went through a [Udemy Course by Stefan Hyltoft](https://www.udemy.com/learn-redux-in-react-native-in-less-than-2-hours/) since enrolling was free and seemed to the point. Their explanation of concepts is clear but their methodology of working did not appeal me. Any recommendation on how to organize the actions and reducers will be helpful.
 
 ### Why Use Expo for React Native?
 
@@ -47,4 +47,4 @@ exp build:android
 
 There are shortcomings using Expo. I am not going to list them here but the team behind it seems to works rapidly to implement these new features. You can submit a feature or upvote one using this or get involved as a contributor.
 
-[**Feature Requests - Expo**](https://expo.canny.io/feature-requests)
+[**Feature Requests for Expo**](https://expo.canny.io/feature-requests)

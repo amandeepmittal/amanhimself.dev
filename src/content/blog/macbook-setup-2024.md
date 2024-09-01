@@ -71,6 +71,8 @@ Let's update some System Settings to navigate through the macOS with ease and fa
 
 Click **Apple Icon** from the menu bar and open **System Settings** to change or apply the settings below:
 
+<!-- vale off -->
+
 - **Siri:** Disable it (if not already)
 - **Spotlight**:
   - Under Search results, disable search except for Applications, Calculator, Conversion, Definition, Developer, Events & Reminders, and System Settings
@@ -118,7 +120,9 @@ defaults write com.apple.dock springboard-rows -int 10
 killall Dock
 ```
 
-## Install Homebrew - macOS package manager
+<!-- vale on -->
+
+## Install Homebrew: macOS package manager
 
 An important step in installing development-related tools is using Homebrew, a package manager I've trusted for nearly eight years.
 

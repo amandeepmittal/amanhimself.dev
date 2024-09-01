@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - expo
-description: ""
+description: ''
 ---
 
 > Originally Published at **[Jscrambler's Blog](https://jscrambler.com/blog/how-to-upload-an-image-using-expo-camera-to-cloudinary/)**.
@@ -47,16 +47,16 @@ For this demo, let's create a component that when rendered renders the `<Camera>
 Start by adding the following import statements in the `App.js` file.
 
 ```js
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect } from 'react';
 import {
   StyleSheet,
   Dimensions,
   View,
   Text,
-  TouchableOpacity,
-} from "react-native";
-import { Camera } from "expo-camera";
-import { AntDesign, MaterialIcons } from "@expo/vector-icons";
+  TouchableOpacity
+} from 'react-native';
+import { Camera } from 'expo-camera';
+import { AntDesign, MaterialIcons } from '@expo/vector-icons';
 ```
 
 The `@expo/vector-icons` is another package bundled with Expo SDK and allows the use of various icons from different icon sets. You can find the references to these icons at [icons.expo.fyi](https://icons.expo.fyi/).
@@ -68,7 +68,7 @@ The `Dimensions` from React Native is used to get the application’s windows wi
 - Add the following code snippet before the `App` component.
 
 ```js
-const WINDOW_HEIGHT = Dimensions.get("window").height;
+const WINDOW_HEIGHT = Dimensions.get('window').height;
 const CAPTURE_SIZE = Math.floor(WINDOW_HEIGHT * 0.08);
 ```
 
@@ -93,11 +93,11 @@ Add the corresponding styles to the `App` component.
 ```js
 const styles = StyleSheet.create({
   container: {
-    ...StyleSheet.absoluteFillObject,
+    ...StyleSheet.absoluteFillObject
   },
   text: {
-    color: "#fff",
-  },
+    color: '#fff'
+  }
 });
 ```
 
@@ -123,7 +123,7 @@ export default function App() {
 
   const onHandlePermission = async () => {
     const { status } = await Camera.requestPermissionsAsync();
-    setHasPermission(status === "granted");
+    setHasPermission(status === 'granted');
   };
 
   if (hasPermission === null) {
@@ -180,7 +180,7 @@ export default function App() {
 
   const onHandlePermission = async () => {
     const { status } = await Camera.requestPermissionsAsync();
-    setHasPermission(status === "granted");
+    setHasPermission(status === 'granted');
   };
 
   const onCameraReady = () => {
@@ -252,13 +252,13 @@ Add the styles for the above code snippet:
 const styles = StyleSheet.create({
   // ...
   bottomButtonsContainer: {
-    position: "absolute",
-    flexDirection: "row",
+    position: 'absolute',
+    flexDirection: 'row',
     bottom: 28,
-    width: "100%",
-    alignItems: "center",
-    justifyContent: "center",
-  },
+    width: '100%',
+    alignItems: 'center',
+    justifyContent: 'center'
+  }
 });
 ```
 
@@ -270,7 +270,7 @@ Here is how the switch button is displayed:
 
 Camera API from the `expo-camera` library uses a method called `takePictureAsync()` to take a picture. It saves the photographed image in the app's cache directory by default.
 
-The method accepts a configuration object with different options such as quality, base64, skipProcessing, exif, etc. We will use two options:
+The method accepts a configuration object with different options such as quality, base64, skipProcessing, exif, and more. We will use two options:
 
 - `quality` to specify the compression rate of the image snapped
 - `base64` to include the image data in Base64 format.
@@ -344,14 +344,14 @@ Add the styles for the above code snippet:
 const styles = StyleSheet.create({
   // ...
   capture: {
-    backgroundColor: "#5A45FF",
+    backgroundColor: '#5A45FF',
     borderRadius: 5,
     height: CAPTURE_SIZE,
     width: CAPTURE_SIZE,
     borderRadius: Math.floor(CAPTURE_SIZE / 2),
     marginBottom: 28,
-    marginHorizontal: 30,
-  },
+    marginHorizontal: 30
+  }
 });
 ```
 
@@ -384,17 +384,17 @@ Add the styles for the above code snippet:
 const styles = StyleSheet.create({
   // ...
   closeButton: {
-    position: "absolute",
+    position: 'absolute',
     top: 35,
     right: 20,
     height: 50,
     width: 50,
     borderRadius: 25,
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "#5A45FF",
-    opacity: 0.7,
-  },
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#5A45FF',
+    opacity: 0.7
+  }
 });
 ```
 
@@ -450,27 +450,27 @@ const onSnap = async () => {
 
       let base64Img = `data:image/jpg;base64,${source}`;
       let apiUrl =
-        "https://api.cloudinary.com/v1_1/<your-cloud-name>/image/upload";
+        'https://api.cloudinary.com/v1_1/<your-cloud-name>/image/upload';
       let data = {
         file: base64Img,
-        upload_preset: "<your-upload-preset>",
+        upload_preset: '<your-upload-preset>'
       };
 
       fetch(apiUrl, {
         body: JSON.stringify(data),
         headers: {
-          "content-type": "application/json",
+          'content-type': 'application/json'
         },
-        method: "POST",
+        method: 'POST'
       })
         .then(async response => {
           let data = await response.json();
           if (data.secure_url) {
-            alert("Upload successful");
+            alert('Upload successful');
           }
         })
         .catch(err => {
-          alert("Cannot upload");
+          alert('Cannot upload');
         });
     }
   }

@@ -10,6 +10,8 @@ tags:
 description: ''
 ---
 
+<!-- vale off -->
+
 The year 2020 is coming to an end. The Earth is completing one more revolution around the Sun.
 
 I am not a big fan of new year's resolutions since I never end up completing or even following one for a long time. However, I do like to introspect on the year passing by 😬.
