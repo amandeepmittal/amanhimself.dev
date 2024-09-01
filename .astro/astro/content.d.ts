@@ -1184,6 +1184,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"tag-gardening.md": {
+	id: "tag-gardening.md";
+  slug: "tag-gardening";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "tamagui-for-react-native.md": {
 	id: "tamagui-for-react-native.md";
   slug: "tamagui-for-react-native";
