@@ -17,13 +17,13 @@ When I'm not immersed in code or crafting documentation, you’ll find me either
 
 I’ve worn many hats over the years:
 
-- 🚀 Software consultant and documentation lead at Expo (2022 - Present)
+- 🚀 Software consultant and documentation lead at Expo (2022 &mdash; Present)
 - 📝 Senior Content Developer at Vercel (2022)
-- 🥑 Developer Advocate at Draftbit (2021 - 2022)
-- 💻 📝 Software consultant and Tech Writer for Crowdbotics (2018 - 2021)
-- Logrocket (Tech Writer, 2020 - 2023)
-- Heartbeat (a.k.a FritzAI) (React Native Technical Writer, 2019 - 2020)
-- Jscrambler (React Native Technical Writer, 2018 - 2022)
+- 🥑 Developer Advocate at Draftbit (2021 &mdash; 2022)
+- 💻 📝 Software consultant and Tech Writer for Crowdbotics (2018 &mdash; 2021)
+- Logrocket (Tech Writer, 2020 &mdash; 2023)
+- Heartbeat (a.k.a FritzAI) (React Native Technical Writer, 2019 &mdash; 2020)
+- Jscrambler (React Native Technical Writer, 2018 &mdash; 2022)
 
 ## Open Source & Me
 

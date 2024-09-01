@@ -7,12 +7,12 @@ featured: false
 draft: false
 tags:
   - nextjs
-description: ""
+description: ''
 ---
 
-Working on a large codebase, having a consistent style guide is important. Inconsistencies can occur by using single quotes instead of double quotes, tabs instead of spaces, etc.
+Working on a large codebase, having a consistent style guide is important. Inconsistencies can occur by using single quotes instead of double quotes, tabs instead of spaces, and so on.
 
-A pre-commit hook can address this problem. Before making a new commit, a pre-commit hook can check for types in TypeScript files, run a lint test, use prettier to format files, etc. All of this is possible by using:
+A pre-commit hook can address this problem. Before making a new commit, a pre-commit hook can check for types in TypeScript files, run a lint test, use prettier to format files, and so on. All of this is possible by using:
 
 - ESLint
 - Prettier
@@ -165,16 +165,16 @@ Create a `.lintstagedrc.js` file at the root of the Next.js app and add the foll
 ```js
 module.exports = {
   // Type check TypeScript files
-  "**/*.(ts|tsx)": () => "yarn tsc --noEmit",
+  '**/*.(ts|tsx)': () => 'yarn tsc --noEmit',
 
   // Lint & Prettify TS and JS files
-  "**/*.(ts|tsx|js)": filenames => [
-    `yarn eslint ${filenames.join(" ")}`,
-    `yarn prettier --write ${filenames.join(" ")}`,
+  '**/*.(ts|tsx|js)': filenames => [
+    `yarn eslint ${filenames.join(' ')}`,
+    `yarn prettier --write ${filenames.join(' ')}`
   ],
 
   // Prettify only Markdown and JSON files
-  "**/*.(md|json)": filenames => `yarn prettier --write ${filenames.join(" ")}`,
+  '**/*.(md|json)': filenames => `yarn prettier --write ${filenames.join(' ')}`
 };
 ```
 

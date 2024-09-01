@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - nodejs
-description: ""
+description: ''
 ---
 
 ![cover_image](https://i.imgur.com/SX2uERE.png)
@@ -24,7 +24,7 @@ There are many advantages to this bare infrastructure such as free HTTPS certifi
 
 ## The problem that leads me to use an environment variable
 
-That said, let's get back to the main topic. After deploying the blog with 90+ posts, I ran into an issue that is known as "Allocation failed - JavaScript heap out of memory" in Node.js world.
+That said, let's get back to the main topic. After deploying the blog with 90+ posts, I ran into an issue that is known as "Allocation failed &mdash; JavaScript heap out of memory" in Node.js world.
 
 The issue occurs when the deployment build runs out of memory. Node.js does not handle this by rolling back and moves forward with the build which eventually concludes in the build to fail.
 

@@ -1,5 +1,5 @@
 ---
-title: "Tamagui for React Native: Create faster design systems"
+title: 'Tamagui for React Native: Create faster design systems'
 author: Aman Mittal
 pubDatetime: 2022-01-09T03:42:51Z
 slug: tamagui-for-react-native
@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - react-native
-description: ""
+description: ''
 ---
 
 > Originally Published at [Blog.Logrocket.com](https://blog.logrocket.com/tamagui-react-native-create-faster-design-systems/) on December 24, 2021.
@@ -90,16 +90,16 @@ Now that our dependencies are installed, add `@tamagui/babel-plugin` to the `bab
 module.exports = function (api) {
   api.cache(true);
   return {
-    presets: ["babel-preset-expo"],
+    presets: ['babel-preset-expo'],
     plugins: [
       [
-        "@tamagui/babel-plugin",
+        '@tamagui/babel-plugin',
         {
-          components: ["tamagui"],
-          config: "./tamagui.config.ts",
-        },
-      ],
-    ],
+          components: ['tamagui'],
+          config: './tamagui.config.ts'
+        }
+      ]
+    ]
   };
 };
 ```
@@ -115,7 +115,7 @@ To set up the required Tamagui configuration, we’ll use the `createTamagui` fu
 - `tokens`: Generate variables in `theme` and `app`
 - `media`: Defines reusable responsive media queries
 - `themes`: Defines your design theme
-- `shorthands`: Allows you to define keys that expand the `style value` props. For example, you can define `f` for flex, `ai` for `alignItems`, `jc` for `justifyContent`, etc.
+- `shorthands`: Allows you to define keys that expand the `style value` props. For example, you can define `f` for flex, `ai` for `alignItems`, `jc` for `justifyContent`, and so on.
 
 You can start setting up the configuration with the `size` and `space` properties. We’ll also need `defaultFont` using the `createFont` function with a configuration object that contains values for font `family`, `size`, `lineHeight`, `fontWeight`, and `letter spacing`.
 
@@ -124,47 +124,47 @@ All of the values above are used inside of the `createTokens` function, which al
 The code block below contains a minimal configuration that I've created for the demo app with all of the required properties:
 
 ```ts
-import { createFont, createTokens, createTamagui } from "tamagui";
+import { createFont, createTokens, createTamagui } from 'tamagui';
 const size = {
   0: 0,
   1: 4,
-  2: 8,
+  2: 8
 };
 const space = {
   ...size,
-  "-0": -0,
-  "-1": -5,
+  '-0': -0,
+  '-1': -5
 };
 const defaultFont = createFont({
-  family: "Arial",
+  family: 'Arial',
   size: {
     1: 14,
     2: 18,
-    3: 22,
+    3: 22
   },
   lineHeight: {
     1: 15,
-    2: 20,
+    2: 20
   },
   weight: {
-    4: "300",
-    7: "600",
+    4: '300',
+    7: '600'
   },
   letterSpacing: {
     4: 0,
-    7: -1,
-  },
+    7: -1
+  }
 });
 const tokens = createTokens({
   size,
   space,
   font: {
     title: defaultFont,
-    body: defaultFont,
+    body: defaultFont
   },
   color: {
-    lightPurple: "#EDD2F3",
-    darkPurple: "#544179",
+    lightPurple: '#EDD2F3',
+    darkPurple: '#544179'
   },
   radius: {
     0: 0,
@@ -172,7 +172,7 @@ const tokens = createTokens({
     2: 5,
     3: 10,
     4: 15,
-    5: 20,
+    5: 20
   },
   zIndex: {
     0: 0,
@@ -180,21 +180,21 @@ const tokens = createTokens({
     2: 200,
     3: 300,
     4: 400,
-    5: 500,
-  },
+    5: 500
+  }
 });
 const shorthands = {
-  ai: "alignItems",
-  bg: "backgroundColor",
-  br: "borderRadius",
-  f: "flex",
-  h: "height",
-  jc: "justifyContent",
-  m: "margin",
-  p: "padding",
-  w: "width",
-  lh: "lineHeight",
-  ta: "textAlign",
+  ai: 'alignItems',
+  bg: 'backgroundColor',
+  br: 'borderRadius',
+  f: 'flex',
+  h: 'height',
+  jc: 'justifyContent',
+  m: 'margin',
+  p: 'padding',
+  w: 'width',
+  lh: 'lineHeight',
+  ta: 'textAlign'
 } as const;
 const media = {
   xs: { maxWidth: 660 },
@@ -209,22 +209,22 @@ const media = {
   xxl: { minWidth: 1420 },
   short: { maxHeight: 820 },
   tall: { minHeight: 820 },
-  hoverNone: { hover: "none" },
-  pointerCoarse: { pointer: "coarse" },
+  hoverNone: { hover: 'none' },
+  pointerCoarse: { pointer: 'coarse' }
 };
 const config = createTamagui({
-  defaultTheme: "light",
+  defaultTheme: 'light',
   shorthands,
   media,
   tokens,
   themes: {
     light: {
-      bg: tokens.color.lightPurple,
-    },
-  },
+      bg: tokens.color.lightPurple
+    }
+  }
 });
 type Conf = typeof config;
-declare module "tamagui" {
+declare module 'tamagui' {
   interface TamaguiCustomConfig extends Conf {}
 }
 export default config;
@@ -235,8 +235,8 @@ export default config;
 Tamagui configuration provides a [Tamagui.Provider](https://tamagui.dev/docs/intro/configuration#add-provider) component that wraps all the other components inside your app:
 
 ```tsx
-import React from "react";
-import Tamagui from "./tamagui.config";
+import React from 'react';
+import Tamagui from './tamagui.config';
 export default function App() {
   return <Tamagui.Provider>{/* The rest of your app here */}</Tamagui.Provider>;
 }
@@ -251,10 +251,10 @@ In the example below, the `defaultTheme` takes the value of the theme you've def
 The value of the `$bg` prop is also coming from the config file, where we’ve explicitly defined that the `bg` property for the `light` theme should have a particular color value. The value of `space` on the `YStack` is set to `$2` from the config file itself:
 
 ```tsx
-import { StatusBar } from "expo-status-bar";
-import React from "react";
-import { YStack, Text, XStack } from "tamagui";
-import Tamagui from "./tamagui.config";
+import { StatusBar } from 'expo-status-bar';
+import React from 'react';
+import { YStack, Text, XStack } from 'tamagui';
+import Tamagui from './tamagui.config';
 export default function App() {
   return (
     <Tamagui.Provider defaultTheme="light">
@@ -338,7 +338,7 @@ You’ll get the following output at `http://localhost:19006/`:
 You can incorporate media queries directly in the UI elements of your app. After defining your media queries in the `tamagui.config.ts` file, you’ll use a Hook called `useMedia` provided by the library:
 
 ```tsx
-import { YStack, Text, XStack, useMedia } from "tamagui";
+import { YStack, Text, XStack, useMedia } from 'tamagui';
 ```
 
 Now, let's add a background color to `YStack`. The color value will vary on the screen's minimum width using the media query `md: { minWidth: 980 }`.
@@ -357,7 +357,7 @@ export default function App() {
           width={200}
           height={100}
           p={10}
-          bg={media.md ? "red" : "yellow"}
+          bg={media.md ? 'red' : 'yellow'}
         >
           <Text fontSize={media.md ? 32 : 18} marginBottom={20}>
             Tamagui

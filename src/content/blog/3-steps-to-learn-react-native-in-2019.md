@@ -1,5 +1,5 @@
 ---
-title: "3 Steps to learn React Native in 2019"
+title: '3 Steps to learn React Native in 2019'
 author: Aman Mittal
 pubDatetime: 2019-01-04T03:42:51Z
 slug: 3-steps-to-learn-react-native-in-2019
@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - react-native
-description: ""
+description: ''
 ---
 
 ![cover_image](https://i.imgur.com/LUgTT2v.jpg)
@@ -28,7 +28,7 @@ For example, learn how to use `FlatList` component. Try creating a list with you
 
 Take small steps, and build small things at first before dipping your toes deep in the complexity of state management libraries such as Redux and Mobx, or persisting data, using third-party APIs, using TypeScript or Flow, and so on.
 
-These are just tools, you do not need to know them on day one (_but I am not saying you have to never learn about them. The keyword here is that they are TOOLS_). If you are new to JavaScript, make sure you are clear with the basic ES6 features such as classes, arrow functions etc. Then, you must go through the basic ReactJS concepts such as props, state, and stateless components in general.
+These are just tools, you do not need to know them on day one (_but I am not saying you have to never learn about them. The keyword here is that they are TOOLS_). If you are new to JavaScript, make sure you are clear with the basic ES6 features such as classes, arrow functions, and so on. Then, you must go through the basic ReactJS concepts such as props, state, and stateless components in general.
 
 In summary, start by familiarizing yourself with:
 
