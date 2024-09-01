@@ -32,11 +32,11 @@ Recently, I refactored my blog to migrate from Next.js to Astro and I noticed th
 
 I consider tags an integral part of any blog. They easily allow us to navigate and explore a topic of interest deeply by finding related posts written on the same blog.
 
-Limiting the number of tags on a blog is I've started advocating for on my blog as well.
+Limiting the number of tags on a blog is something I've started advocating for on my blog as well.
 
 ### Technique to trim down tags
 
-Before writing this post, my blog has 21 tags. To manage this tag cloud, I've done the following:
+Before writing this post, my blog had 21 tags. To manage this tag cloud, I've done the following:
 
 - Delete the tags that are no longer in use or used only once
 - Merge tags that overlap or are similar in nature
