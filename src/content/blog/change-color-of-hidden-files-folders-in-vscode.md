@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - vscode
-description: ""
+description: ''
 ---
 
 > **Last update:** 17 December, 2023
