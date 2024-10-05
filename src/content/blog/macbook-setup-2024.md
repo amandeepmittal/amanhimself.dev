@@ -31,7 +31,7 @@ Once the macOS version is up to date, I turn off some annoying settings. They mi
 
 - Go to System Settings > Battery > Options > Disable **Slightly dim the display on battery**.
 - Go to Lock Screen and
-  - Set Start the screen save when in active for **1 hour**.
+  - Set Start the screen saver when in active for **1 hour**.
   - Set the turn display off on the battery when it is inactive for **3 hours**.
   - Set the display off on power adapter when inactive for **3 hours**.
 
