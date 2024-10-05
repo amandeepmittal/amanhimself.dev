@@ -2,7 +2,7 @@
 title: My 2024 Macbook setup
 author: Aman Mittal
 pubDatetime: 2024-04-05T03:42:51Z
-modDatetime: 2024-10-06T03:42:51Z
+modDatetime: 2024-10-06T02:07:00Z
 slug: macbook-setup-2024
 featured: false
 draft: false
