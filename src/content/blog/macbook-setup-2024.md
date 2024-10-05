@@ -238,23 +238,30 @@ echo "source ${(q-)PWD}/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> 
 
 After installing the syntax highlight plugin on iterm2, restart it or open a new instance for it to start recognizing the commands.
 
+### Configure .zshrc
+
+Copy and paste the `.zshrc` from [`dotfiles`](https://github.com/amandeepmittal/dotfiles) to `Users/user-name/.zshrc`. The file is organized in such a way that it should work without any additional configuration.
+
 ### Configure Starship prompt
 
 I have been using Spaceship as my command line prompt for a long time, but it has been having some problems lately. I learned about Starship a few months ago and decided to try it out. It meets all my requirements, so I continued using it.
 
-Since Starship is already installed in the brew bundle step, add the following at the end of `~/.zshrc`:
+Since Starship is already installed in the brew bundle step, ensure the following is added to the end of `~/.zshrc`:
 
 ```shell
 eval "$(starship init zsh)"
 ```
 
-### Configure starship
+To use the pre-defined configuration, copy `starship.toml` from the [`dotfiles`](https://github.com/amandeepmittal/dotfiles) repo to `Users/user-name/config`. The file is organized in such a way that it should work without any additional configuration.
 
-To use the pre-defined configuration, copy `starship.toml` from the `dotfiles` repo to `Users/user-name/config/`. The file is organized in such a way that it should work without any additional configuration.
+## Configure iTerm
 
-### Configure .zshrc
-
-Copy and paste the `.zshrc` from `dotfiles` to `Users/user-name/.zshrc`. The file is organized in such a way that it should work without any additional configuration.
+- Open iTerm > Preferences > Profiles and Import `iterm-default.json` from [`dotfiles`](https://github.com/amandeepmittal/dotfiles) repo.
+- Profiles> Colors > Import `Dracula.itermcolors` from `dotfiles` repo for Color Presets and apply it.
+- Text > Font, select **JetBrainsMono Nerd Font**.
+- Text > Non-ASCII Font, select **Hack Nerd Font Mono**.
+- Appearance > General > Theme > set to **Minimal**.
+- Terminal > Show mark indicators > **Disable**.
 
 ## Setup a primary web browser
 
@@ -289,61 +296,9 @@ To configure an account on GitHub.com and use an SSH key, follow the steps from 
 
 > **Note:** After configuring SSH key with GitHub, download GitHub desktop app and clone `dotfiles` repository because you will need the configuration files from it in the next few steps.
 
-## Configure iTerm
-
-- Use [Jet Brains Mono](https://www.jetbrains.com/lp/mono/) and [JetBrainsMono Nerd Font](https://www.nerdfonts.com/font-downloads).
-- Open iTerm > Preferences > Profiles and Import `iterm-default.json` from `dotfiles` repo.
-- Profiles> Colors > Import `Dracula.itermcolors` from `dotfiles` repo for Color Presets and apply it.
-- Text > Font and Non-ASCII Font, select **JetBrainsMono Nerd Font**.
-- Appearance > General > Theme > set to **Minimal**.
-- Terminal > Show mark indicators > **Disable**.
-
-## Setup environments and apps with homebrew
+## Install Node.js and npm
 
 To install Node.js and npm, use Node Version Manager (NVM). [Read the entire blog post on how to install Node.js using NVM](https://amanhimself.dev/blog/install-nodejs-using-nvm-on-macos-m1/).
-
-Run the following script to install other packages from homebrew:
-
-```shell
-brew install yarn
-brew install scrcpy
-brew install watchman
-brew install imageoptim
-brew install rbenv
-brew install imagemagick
-brew install git-crypt
-brew install git-lfs
-brew install expo-orbit
-brew install typos-cli
-brew install vale
-brew install --cask notunes
-```
-
-- [Watchman](https://facebook.github.io/watchman/) to watch changes in the filesystem. Used for React Native app development.
-- [scrcpy](https://github.com/Genymobile/scrcpy) control Android devices connect via USB on Mac.
-- [imageoptim](https://imageoptim.com/mac) for compressing image files. See [ImageOptim Settings](https://amanhimself.dev/blog/setup-macbook-m1/#imageoptim-settings) for instructions on how to set it up.
-  [expo-orbit](https://expo.dev/orbit) to open development builds and updates quickly.
-- [rbenv](https://github.com/rbenv/rbenv) is similar to NVM but allows managing Ruby versions.
-- [imagemagick](https://github.com/ImageMagick/ImageMagick): required sometimes to append two images.
-- [vale](https://vale.sh/) required for work.
-- [typos-cli](https://crates.io/crates/typos-cli) is a nice, fast tool based on Rust to detect typos in markdown or mdx files.
-- [notunes](https://github.com/tombonez/noTunes) to avoid accidentally opening Apple Music app.
-
-### Install Java
-
-To install Java17, run:
-
-```shell
-brew install --cask zulu@17
-```
-
-Add the `JAVA_HOME` environment variable in  **~/.zshrc**:
-
-```shell
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home
-```
-
-> **Note**: Already configured in `.zshrc` if copied dotfiles were setup correctly.
 
 ### After installing Node.js and npm
 
@@ -370,6 +325,22 @@ Also, I use the following command to update global packages:
 ```shell
 npx npm-check -gu
 ```
+
+## Install Java
+
+To install Java17, run:
+
+```shell
+brew install --cask zulu@17
+```
+
+Add the `JAVA_HOME` environment variable in  **~/.zshrc**:
+
+```shell
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home
+```
+
+> **Note**: Already configured in `.zshrc` if copied dotfiles were setup correctly.
 
 ## VS Code
 
@@ -506,6 +477,7 @@ I usually switch between the following themes:
 - [Paste JSON as code](https://marketplace.visualstudio.com/items?itemName=quicktype.quicktype)
 - [React Native Tools](https://marketplace.visualstudio.com/items?itemName=msjsdiag.vscode-react-native)
 - [Read Time](https://marketplace.visualstudio.com/items?itemName=johnpapa.read-time)
+- [Sort Lines](https://marketplace.visualstudio.com/items?itemName=Tyriar.sort-lines)
 - [TODO Highlight](https://marketplace.visualstudio.com/items?itemName=wayou.vscode-todo-highlight)
 - [Version Lens](https://marketplace.visualstudio.com/items?itemName=pflannery.vscode-versionlens)
 - [WakaTime](https://marketplace.visualstudio.com/items?itemName=WakaTime.vscode-wakatime)
@@ -519,9 +491,7 @@ I usually switch between the following themes:
   - [Twemex: Sidebar for Twitter](https://chrome.google.com/webstore/detail/twemex-sidebar-for-twitte/amoldiondpmjdnllknhklocndiibkcoe?hl=en)
   - [Minimal Twitter](https://chrome.google.com/webstore/detail/minimal-twitter/pobhoodpcipjmedfenaigbeloiidbflp?hl=en)
   - [Medium Enhanced Stats](https://chrome.google.com/webstore/detail/medium-enhanced-stats/jnomnfoenpdinfkpaaigokicgcfkomjo?hl=en)
-  - [Toby](https://www.gettoby.com/) to organize tabs
-  - [DF Tube (Distraction Free for YouTube™)](https://chrome.google.com/webstore/detail/df-tube-distraction-free/mjdepdfccjgcndkmemponafgioodelna?hl=en)
 
 ## Conclusion
 
-That’s the setup I now use for my JavaScript, Node.js, React, React Native, Expo, and documentation work.
+That's the setup I now use for my JavaScript, Node.js, React, React Native, Expo, and documentation work.
