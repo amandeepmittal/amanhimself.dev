@@ -218,6 +218,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"automation-with-hombrew-bundle.md": {
+	id: "automation-with-hombrew-bundle.md";
+  slug: "automation-with-homebrew-bundle";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "basic-navigation-in-ionic-applications.md": {
 	id: "basic-navigation-in-ionic-applications.md";
   slug: "basic-navigation-in-ionic-applications";
