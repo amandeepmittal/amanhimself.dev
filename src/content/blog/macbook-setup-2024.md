@@ -2,7 +2,7 @@
 title: My 2024 Macbook setup
 author: Aman Mittal
 pubDatetime: 2024-04-05T03:42:51Z
-modDatetime: 2024-06-11T03:42:51Z
+modDatetime: 2024-10-06T03:42:51Z
 slug: macbook-setup-2024
 featured: false
 draft: false
@@ -120,6 +120,23 @@ defaults write com.apple.dock springboard-rows -int 10
 killall Dock
 ```
 
+### Modify other default re-writes
+
+Preferences are stored in `~/Library/Preferences/`. The following are some of the default settings that I change:
+
+```shell
+# Disable .DS_Store files
+defaults write com.apple.desktopservices DSDontWriteNetworkStores true
+
+# Disable autocorrect
+defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
+
+# Set key-repeat values
+# Source: https://mac-key-repeat.zaymon.dev/
+defaults write -g InitialKeyRepeat -int 12
+defaults write -g KeyRepeat -int 2
+```
+
 <!-- vale on -->
 
 ## Install Homebrew: macOS package manager
@@ -147,15 +164,15 @@ Then, add the following to `.zshrc`:
 export PATH=/opt/homebrew/bin:$PATH
 ```
 
-## Install Git
+## Install apps from Homebrew bundle
 
-Git is already installed as part of Xcode Command Line Tools. However, I prefer to install the latest version from `brew` and avoid using the outdated version installed by Apple.
+I keep a list of must install apps in a Homebrew bundle inside my dotfiles repo. [Download the file](https://github.com/amandeepmittal/dotfiles/blob/master/brewfile.sh) from the repo and run the following command to install the apps:
 
 ```shell
-brew install git
+brew bundle --file=brewfile.sh
 ```
 
-> **Tip**: After installing `git`, run `git --version` in a new terminal window. If you run this command in the same terminal window, it will show the Apple Git version.
+> **Tip**: Git is already installed as part of Xcode Command Line Tools. However, I prefer to install the latest version from `brew` and avoid using the outdated version installed by Apple. After installing `git`, run `git --version` in a new terminal window. If you run this command in the same terminal window, it will show the Apple Git version.
 
 ### Git global configurations
 
