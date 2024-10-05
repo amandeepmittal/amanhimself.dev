@@ -61,7 +61,7 @@ Most of these packages are helpful in my daily JavaScript coding environment. I 
 - js-hyperclick (as your project goes bigger, you will get addicted to it)
 - atom-lupa (nice one if your daily musings includes React)
 - autocomplete-modules (Node.js devs: autocompletes require statements)
-- atom-pair (developed by the guys at Pusher, a must if you do pair coding)
+- atom-pair (developed by the folks at Pusher, a must if you do pair coding)
 - javascript-snippets (JavaScript and Node.js snippets)
 - atom-nodejs-snippets (this is another Nodejs & JavaScript snippet package, made by me. Supports ES6 syntax)
 - linter + linter-jshint
