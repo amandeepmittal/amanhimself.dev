@@ -238,30 +238,31 @@ echo "source ${(q-)PWD}/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> 
 
 After installing the syntax highlight plugin on iterm2, restart it or open a new instance for it to start recognizing the commands.
 
-### Install Starship prompt
+### Configure Starship prompt
 
-"I have been using Spaceship as my command line prompt for a long time, but it has been having some problems lately. I learned about Starship a few months ago and decided to try it out. It meets all my requirements, so I continued using it."
+I have been using Spaceship as my command line prompt for a long time, but it has been having some problems lately. I learned about Starship a few months ago and decided to try it out. It meets all my requirements, so I continued using it.
 
-To install Starship:
-
-```shell
-brew install starship
-```
-
-Then, add the following at the end of `~/.zshrc`:
+Since Starship is already installed in the brew bundle step, add the following at the end of `~/.zshrc`:
 
 ```shell
 eval "$(starship init zsh)"
 ```
 
-## Install a primary web browser
+### Configure starship
+
+To use the pre-defined configuration, copy `starship.toml` from the `dotfiles` repo to `Users/user-name/config/`. The file is organized in such a way that it should work without any additional configuration.
+
+### Configure .zshrc
+
+Copy and paste the `.zshrc` from `dotfiles` to `Users/user-name/.zshrc`. The file is organized in such a way that it should work without any additional configuration.
+
+## Setup a primary web browser
 
 By now, you will need a primary web browser to set up and do some things further.
 
-- Download Arc for personal and primary browser
+- Arc for personal and primary browser
   - Log in to the primary email
-  - Install 1-Password (another side-quest)
-- Download Chrome for work
+- Chrome for work
   - Log in to work email
 
 ### Shared extensions to install for both browsers
@@ -290,20 +291,12 @@ To configure an account on GitHub.com and use an SSH key, follow the steps from 
 
 ## Configure iTerm
 
-- Download [Jet Brains Mono](https://www.jetbrains.com/lp/mono/) and [JetBrainsMono Nerd Font](https://www.nerdfonts.com/font-downloads), and install them.
+- Use [Jet Brains Mono](https://www.jetbrains.com/lp/mono/) and [JetBrainsMono Nerd Font](https://www.nerdfonts.com/font-downloads).
 - Open iTerm > Preferences > Profiles and Import `iterm-default.json` from `dotfiles` repo.
 - Profiles> Colors > Import `Dracula.itermcolors` from `dotfiles` repo for Color Presets and apply it.
 - Text > Font and Non-ASCII Font, select **JetBrainsMono Nerd Font**.
 - Appearance > General > Theme > set to **Minimal**.
 - Terminal > Show mark indicators > **Disable**.
-
-### Configure starship
-
-To use the pre-defined configuration, copy `starship.toml` from the `dotfiles` repo to `Users/user-name/config/`. The file is organized in such a way that it should work without any additional configuration.
-
-### Configure .zshrc
-
-Copy and paste the `.zshrc` from `dotfiles` to `Users/user-name/.zshrc`. The file is organized in such a way that it should work without any additional configuration.
 
 ## Setup environments and apps with homebrew
 
