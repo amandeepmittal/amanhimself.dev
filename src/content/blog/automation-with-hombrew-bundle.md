@@ -60,7 +60,7 @@ mas "Slack", id: 803453959
 mas 'Bandwidth+', id: 490461369
 ```
 
-When I am setting up my Macbook, I download this file and run the following command to install everything from this file:
+When I am setting up my Macbook, I [download this file](https://github.com/amandeepmittal/dotfiles) and run the following command to install everything from this file:
 
 ```shell
 brew bundle --file=brewfile.sh
