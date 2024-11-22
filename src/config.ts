@@ -1,53 +1,59 @@
-import type { Site, SocialObjects } from "./types";
+import type { Site, SocialObjects } from './types';
 
 export const SITE: Site = {
-  website: "https://amanhimself.dev/", // replace this with your deployed domain
-  author: "Aman Mittal",
+  website: 'https://amanhimself.dev/', // replace this with your deployed domain
+  author: 'Aman Mittal',
   desc: "I'm Aman Mittal (@amanhimself). Software Developer and Tech Writer. Welcome to my blog!",
-  title: "amanhimself.dev",
-  ogImage: "astropaper-og.jpg",
+  title: 'amanhimself.dev',
+  ogImage: 'astropaper-og.jpg',
   lightAndDarkMode: true,
   postPerPage: 100,
-  scheduledPostMargin: 15 * 60 * 1000, // 15 minutes
+  scheduledPostMargin: 15 * 60 * 1000 // 15 minutes
 };
 
 export const LOCALE = {
-  lang: "en", // html lang code. Set this empty and default will be "en"
-  langTag: ["en-EN"], // BCP 47 Language Tags. Set this empty [] to use the environment default
+  lang: 'en', // html lang code. Set this empty and default will be "en"
+  langTag: ['en-EN'] // BCP 47 Language Tags. Set this empty [] to use the environment default
 } as const;
 
 export const LOGO_IMAGE = {
   enable: false, // Enable/Disable logo image
   svg: true,
   width: 216,
-  height: 46,
+  height: 46
 };
 
 export const SOCIALS: SocialObjects = [
   {
-    name: "Twitter",
-    href: "https://x.com/amanhimself",
+    name: 'Twitter',
+    href: 'https://x.com/amanhimself',
     linkTitle: `${SITE.title} on X`,
-    active: true,
+    active: true
   },
   {
-    name: "Github",
-    href: "https://github.com/amandeepmittal",
+    name: 'Github',
+    href: 'https://github.com/amandeepmittal',
     linkTitle: ` ${SITE.title} on Github`,
-    active: true,
+    active: true
   },
   {
-    name: "LinkedIn",
-    href: "https://www.linkedin.com/in/aman-mittal-05a239117/",
+    name: 'LinkedIn',
+    href: 'https://www.linkedin.com/in/aman-mittal-05a239117/',
     linkTitle: `${SITE.title} on LinkedIn`,
-    active: true,
+    active: true
   },
   {
-    name: "Mail",
-    href: "mailto:amanmittal.work@gmail.com",
+    name: 'Mail',
+    href: 'mailto:amanmittal.work@gmail.com',
     linkTitle: `Send an email to ${SITE.title}`,
-    active: true,
+    active: true
   },
+  {
+    name: 'Bluesky',
+    href: 'https://bsky.app/profile/aman.bsky.social',
+    linkTitle: `${SITE.title} on Bluesky`,
+    active: true
+  }
   // {
   //   name: "Twitch",
   //   href: "https://github.com/satnaing/astro-paper",
