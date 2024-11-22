@@ -169,6 +169,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"add-bluesky-icon-to-astropaper.md": {
+	id: "add-bluesky-icon-to-astropaper.md";
+  slug: "add-bluesky-icon-to-astropaper";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "add-environment-variables-in-netlify-deployment.md": {
 	id: "add-environment-variables-in-netlify-deployment.md";
   slug: "add-environment-variables-in-netlify-deployment";
