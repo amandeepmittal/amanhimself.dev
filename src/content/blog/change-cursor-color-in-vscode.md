@@ -10,7 +10,7 @@ tags:
 description: 'The extension APC Customize UI++ allows customizations that are beyond VS Code’s abilities.'
 ---
 
-> **Note**: With the latest VS Code version, it seems the options to tweak cursor has been disabled, so the following the strategy might now work.
+> **Note**: With the latest VS Code version, it seems the options to tweak cursor has been disabled, so the following the strategy will not work.
 
 Until yesterday, I was unaware that I could change the cursor color in VS Code. Not only just change the color but also use a linear gradient.
 
