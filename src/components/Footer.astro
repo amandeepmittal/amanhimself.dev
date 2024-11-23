@@ -15,10 +15,13 @@ const { noMarginTop = false } = Astro.props;
   <Hr noPadding />
   <div class="footer-wrapper">
     <Socials centered />
-    <div class="copyright-wrapper opacity-80">
-      <span>Copyright &#169; 2019 - {currentYear} Aman Mittal</span>
-      <span class="separator">&nbsp;|&nbsp;</span>
-      <span>All rights reserved.</span>
+    <div class="copyright-wrapper opacity-80 text-sm">
+      <div>
+        <span>Copyright &#169; 2019 - {currentYear} Aman Mittal</span>
+        <span class="separator">&nbsp;|&nbsp;</span>
+        <span>Licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a>.</span>
+      </div>
+
     </div>
   </div>
 </footer>
