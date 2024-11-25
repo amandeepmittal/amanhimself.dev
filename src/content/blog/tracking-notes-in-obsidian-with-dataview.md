@@ -12,7 +12,7 @@ description: ''
 
 My daily note is the starting point for capturing workday information. To record this information, I either create a fleeting note or add it to my daily note. Creating too many new notes can be cumbersome and overwhelming at the end of a week when I'm going through them for my weekly review sessions.
 
-To quickly go through the notes created during the week, I do this by keeping track of the files created each day inside that day's daily note.
+To review the notes created during the week, I do this by keeping track of the files created each day inside that day's daily note.
 
 At the end of each daily note, I include a section for "Notes created today". Inside this, a live data query runs which provides a list of notes created on that day. The query links to the note titles using Obsidian's link `[[...]]` syntax.
 
