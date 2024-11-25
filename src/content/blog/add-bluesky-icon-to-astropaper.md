@@ -10,7 +10,9 @@ tags:
 description: ''
 ---
 
-I use [AstroPaper](https://github.com/satnaing/astro-paper) as the default theme for my blog. This theme is minimal and customization-friendly. With [Bluesky growing rapidly, adding over one million users daily](https://www.cnet.com/tech/bluesky-explained-why-this-social-media-network-is-now-growing-by-1-million-users-daily-luke-skywalker/), is built using Expo (yes the place where I'm working right now), and "tech Twitter" (yes, Twitter, not X) is moving to this platform, the overall vibes I get from it is good days of using Twitter.
+I use [AstroPaper](https://github.com/satnaing/astro-paper) as the default theme for my blog. This theme is minimal and customization-friendly. Astro is a modern static site builder that allows you to build faster websites with less client-side JavaScript. This theme is minimal and customization-friendly.
+
+With [Bluesky growing rapidly, adding over one million users daily](https://www.cnet.com/tech/bluesky-explained-why-this-social-media-network-is-now-growing-by-1-million-users-daily-luke-skywalker/), is built using Expo (yes the place where I'm working right now), and "tech Twitter" (yes, Twitter, not X) is moving to this platform, the overall vibes I get from it is good days of using Twitter.
 
 I decided to look into [AstroPaper's GitHub repository](https://github.com/satnaing/astro-paper) to see if there are any new updates for adding this new icon. The instructions in this post are from [this closed PR](https://github.com/satnaing/astro-paper/pull/209).
 
