@@ -10,7 +10,7 @@ tags:
 description: ''
 ---
 
-If you are like me and like to set up your Macbook once in a while from scratch, you might get frustrated about the manual work that goes into setting it up each time.
+If you periodically set up your Macbook from scratch like I do, you're probably frustrated by the manual setup process.
 
 Homebrew to the rescue. It's a macOS package manager that I've used since I started using macOS. It allows creating a "bundle" file that can automate the process of installing many command-line utilities, applications, and apps from the App Store.
 
@@ -68,7 +68,7 @@ brew bundle --file=brewfile.sh
 
 ## Dissection of the bundle file
 
-The important piece from the above configuration is to define a path for the applications to install inside the `Applications` directory. Otherwise, MacOS might recognize an app or warn you to manually move it inside that directory. The `cask_args` allows passing the directory path.
+The important piece from the above configuration is to define a path for the applications to install inside the `Applications` directory. Otherwise, macOS might recognize an app or warn you to manually move it inside that directory. The `cask_args` allows passing the directory path.
 
 ```shell
 cask_args appdir: "/Applications"
@@ -83,7 +83,7 @@ tap "homebrew/core"
 
 The next step is to install packages and other applications that I'd be installing manually otherwise.
 
-Also, I recently found out that [`mas`](https://github.com/mas-cli/mas) is a command line interface for macOS App Store and allows an app from the store with its product identifier and can be used with brew. For example:
+Also, I discovered that [`mas`](https://github.com/mas-cli/mas) is a command line interface for macOS App Store and allows an app from the store with its product identifier and can be used with brew. For example:
 
 ```shell
 mas 'Bandwidth+', id: 490461369
