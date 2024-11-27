@@ -41,4 +41,4 @@ const pagination = await getPagination({
 });
 ---
 
-{post ? <PostDetails post={post} /> : <Posts {...pagination} />}
+{post ? <PostDetails post={post} posts={sortedPosts}/> : <Posts {...pagination} />}
