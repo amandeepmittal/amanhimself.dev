@@ -1,12 +1,12 @@
-import Fuse from "fuse.js";
-import { useEffect, useRef, useState, useMemo } from "react";
-import Card from "@components/Card";
-import type { CollectionEntry } from "astro:content";
+import Fuse from 'fuse.js';
+import { useEffect, useRef, useState, useMemo } from 'react';
+import Card from '@components/Card';
+import type { CollectionEntry } from 'astro:content';
 
 export type SearchItem = {
   title: string;
   description: string;
-  data: CollectionEntry<"blog">["data"];
+  data: CollectionEntry<'blog'>['data'];
   slug: string;
 };
 
@@ -21,7 +21,7 @@ interface SearchResult {
 
 export default function SearchBar({ searchList }: Props) {
   const inputRef = useRef<HTMLInputElement>(null);
-  const [inputVal, setInputVal] = useState("");
+  const [inputVal, setInputVal] = useState('');
   const [searchResults, setSearchResults] = useState<SearchResult[] | null>(
     null
   );
@@ -33,10 +33,10 @@ export default function SearchBar({ searchList }: Props) {
   const fuse = useMemo(
     () =>
       new Fuse(searchList, {
-        keys: ["title", "description"],
+        keys: ['title', 'description'],
         includeMatches: true,
         minMatchCharLength: 2,
-        threshold: 0.5,
+        threshold: 0.5
       }),
     [searchList]
   );
@@ -45,7 +45,7 @@ export default function SearchBar({ searchList }: Props) {
     // if URL has search query,
     // insert that search query in input field
     const searchUrl = new URLSearchParams(window.location.search);
-    const searchStr = searchUrl.get("q");
+    const searchStr = searchUrl.get('q');
     if (searchStr) setInputVal(searchStr);
 
     // put focus cursor at the end of the string
@@ -64,12 +64,19 @@ export default function SearchBar({ searchList }: Props) {
     // Update search string in URL
     if (inputVal.length > 0) {
       const searchParams = new URLSearchParams(window.location.search);
-      searchParams.set("q", inputVal);
+      searchParams.set('q', inputVal);
       const newRelativePathQuery =
-        window.location.pathname + "?" + searchParams.toString();
-      history.replaceState(history.state, "", newRelativePathQuery);
+        window.location.pathname + '?' + searchParams.toString();
+      history.replaceState(history.state, '', newRelativePathQuery);
     } else {
-      history.replaceState(history.state, "", window.location.pathname);
+      history.replaceState(history.state, '', window.location.pathname);
+    }
+  }, [inputVal]);
+
+  useEffect(() => {
+    // Focus on text input when search bar is displayed
+    if (inputRef.current) {
+      inputRef.current.focus();
     }
   }, [inputVal]);
 
@@ -102,8 +109,8 @@ export default function SearchBar({ searchList }: Props) {
         <div className="mt-8">
           Found {searchResults?.length}
           {searchResults?.length && searchResults?.length === 1
-            ? " result"
-            : " results"}{" "}
+            ? ' result'
+            : ' results'}{' '}
           for '{inputVal}'
         </div>
       )}
