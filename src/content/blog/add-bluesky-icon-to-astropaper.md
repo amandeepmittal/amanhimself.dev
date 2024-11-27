@@ -10,7 +10,7 @@ tags:
 description: ''
 ---
 
-I use [AstroPaper](https://github.com/satnaing/astro-paper) as the default theme for my blog. It is a minimal, responsive and SEO-friendly Astro blog theme.. Astro is a modern static site builder that allows you to build faster websites with less client-side JavaScript. This theme is minimal and customization-friendly.
+I use [AstroPaper](https://github.com/satnaing/astro-paper) as the default theme for my blog. It is a minimal, responsive and SEO-friendly Astro blog theme. Astro is a modern static site builder that allows you to build faster websites with less client-side JavaScript. This theme is minimal and customization-friendly.
 
 With [Bluesky growing rapidly, adding over one million users daily](https://www.cnet.com/tech/bluesky-explained-why-this-social-media-network-is-now-growing-by-1-million-users-daily-luke-skywalker/), is built using Expo (where I currently work), and attracting the "tech Twitter" community (yes, Twitter, not X), it reminds me of Twitter's early days.
 
