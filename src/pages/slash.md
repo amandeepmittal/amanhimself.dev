@@ -11,6 +11,7 @@ A collection of all **/slash** pages on this site.
 - [**/links**](/links): A page of all the web links that the author is present on
 - [**/now**](/now): What the author is doing right now
 - [**/rss**](/rss.xml): A page listing RSS feed to subscribe this site's content
+- [**/stats**](https://app.usefathom.com/share/habfbpub/amanhimself.dev): A page that share this sites stats (weekly, monthly, yearly)
 
 ## What is a slash page, anyways?
 
