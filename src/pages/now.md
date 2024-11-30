@@ -13,7 +13,7 @@ _Location: New Delhi, India_
 - My interest in technology currently includes Information Architecture around technical documentation, and Expo and React Native for creating mobiles apps.
 - 🕹️ Playing: The Legend of Zelda: Breath of the Wild
 - 📚 Reading: Check out my [Goodreads](https://www.goodreads.com/author/show/17657541.Aman_Mittal)
-- Trying to write everyday.
+- Trying to write everyday in my free time so this blog doesn't get trivialize.
 
 ## What is this page, anyways?
 
