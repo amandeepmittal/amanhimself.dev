@@ -24,4 +24,4 @@ You can find plethora of examples on [aboutideasnow](https://aboutideasnow.com/a
 
 ---
 
-> Looking for more information about me, or my past history, see the [About](/about) page.
+> Looking for more information about me, or my past work experience, see the [About](/about) page.
