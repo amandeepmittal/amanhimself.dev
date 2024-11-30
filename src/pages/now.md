@@ -10,15 +10,14 @@ _Last Update: November 30, 2024_
 _Location: New Delhi, India_
 
 - I'm currently work as a documentation person at Expo. Some call me docs steward and some call me docs lead. I think my work mostly resvolves around managing the content side of [docs.expo.dev](https://docs.expo.dev) as well contribute to it, among other hats I wear at my day job.
-- I'm 32 years old and living
+- My interest in technology currently includes Information Architecture around technical documentation, and Expo and React Native for creating mobiles apps.
+- 🕹️ Playing: The Legend of Zelda: Breath of the Wild
+- 📚 Reading: Check out my [Goodreads](https://www.goodreads.com/author/show/17657541.Aman_Mittal)
+- Trying to write everyday.
 
-Where am I working and how am I working (remote)
-
-## What are now pages?
+## What is this page, anyways?
 
 According to [aboutideasnow](https://aboutideasnow.com/about), an
 "/about" page is to talk about past stuff including what you have done in your past life. In comparison, a "/now" page is more personal look at what a person is doing right now, and what they care about. A "/now" page is inspired by [Derek Sivers](https://sive.rs/now).
 
-With mass of information here and there, or looking at social media profiles of a person, it tells you, what I've done but doesn't tell you what I am doing at the moment.
-
-You can find plethora of examples on [aboutideasnow](https://aboutideasnow.com/about). Get inspired and make your own.
+You can find plethora of examples on [aboutideasnow](https://aboutideasnow.com/about) and [nownownow](https://nownownow.com/).
