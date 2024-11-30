@@ -3,7 +3,7 @@ layout: ../layouts/AboutLayout.astro
 title: 'About'
 ---
 
-_Last Update: July 6, 2024_
+_Last Update: November 30, 2024_
 
 I’m Aman Mittal, a documentarian and developer. I love to explore and write about different technologies. My journey in the tech world started as a consultant and a Developer Advocate and has evolved through various roles in content development and technical writing.
 
