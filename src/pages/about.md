@@ -13,7 +13,7 @@ I’m Aman Mittal, a documentarian and developer. I love to explore and write ab
 
 When I'm not immersed in code or crafting documentation, you’ll find me either [reading a book](https://www.goodreads.com/author/show/17657541.Aman_Mittal) or exploring new places.
 
-## Work History
+## Work history
 
 I’ve worn many hats over the years:
 
@@ -25,11 +25,11 @@ I’ve worn many hats over the years:
 - Heartbeat (a.k.a FritzAI) (React Native Technical Writer, 2019 &mdash; 2020)
 - Jscrambler (React Native Technical Writer, 2018 &mdash; 2022)
 
-## Open Source and Me
+## Open soucrce and me
 
 In 2018, I made my first open-source contribution by writing a Twitter Bot for freeCodeCamp’s [#100DaysOfCode](https://x.com/_100Daysofcode) campaign, which now has over 200k followers. Over the years I've made some contributions to some projects and organizations such as Node.js, Gatsbyjs and freeCodeCamp both as a contributor. and I was recognized among the [Top 200 Open Source Contributors](https://www.freecodecamp.org/news/announcing-our-freecodecamp-2018-top-contributor-award-winners-861da08a77e1/) by freeCodeCamp.org in 2018.
 
-## Technical Writing
+## Technical writing
 
 My journey in technical writing started on [Medium](https://medium.com/@amanhimself) in 2017. Since then, I’ve:
 
@@ -45,7 +45,7 @@ Other notable publications and organizations: Rising Stack, Codeburst.io, ZeoLea
 
 Some of my blog articles and tutorials have featured in esteemed Newsletters: [Node Weekly](https://nodeweekly.com/issues/190), [React Status](https://react.statuscode.com/issues/148), [Mobile Dev Weekly](https://mobiledevweekly.com/issues/201), [Daily.dev Weekly Picks](https://daily.dev/blog/weekly-picks-73-development-posts), [Mobile Developers Café](https://issues.mobiledeveloperscafe.com/issues/weekly-issue-33-985474), and [React Native Newsletter](https://reactnative.cc/issues/2021/08-17-2021.html).
 
-## Speaking Engagements
+## Speaking engagements
 
 I’ve shared my knowledge at various events:
 
@@ -58,6 +58,6 @@ I’ve shared my knowledge at various events:
 
 I work on a [M1 Macbook Pro 16” 2023](https://www.apple.com/in/shop/buy-mac/macbook-pro) and use any flat surface as my desk and chair.
 
-## Awards and Recognition
+## Awards and recognition
 
 I was awarded as the [Most Authentic Developer Advocate of the Year 2022](https://www.noonies.tech/2022/programming/2022-most-authentic-developer-advocate-of-the-year) at #Noonies2022 by Hackernoon.
