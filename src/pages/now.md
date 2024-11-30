@@ -17,8 +17,7 @@ _Location: New Delhi, India_
 
 ## What is this page, anyways?
 
-According to [aboutideasnow](https://aboutideasnow.com/about), an
-"/about" page is to talk about past stuff including what you have done in your past life. In comparison, a "/now" page is more personal look at what a person is doing right now, and what they care about. A "/now" page is inspired by [Derek Sivers](https://sive.rs/now).
+According to [aboutideasnow](https://aboutideasnow.com/about), an "/about" page is to talk about past stuff including what you have done in your past life. In comparison, a "/now" page is more personal look at what a person is doing right now, and what they care about. A "/now" page is inspired by [Derek Sivers](https://sive.rs/now).
 
 You can find plethora of examples on [aboutideasnow](https://aboutideasnow.com/about) and [nownownow](https://nownownow.com/).
 
