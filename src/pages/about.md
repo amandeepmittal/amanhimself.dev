@@ -11,8 +11,6 @@ I’m Aman Mittal, a documentarian and developer. I love to explore and write ab
   <img src="/avatar.jpg" alt="Aman Mittal avatar" class="sm:w-1/3 mx-auto rounded-xl" />
 </div>
 
-When I'm not immersed in code or crafting documentation, you’ll find me either [reading a book](https://www.goodreads.com/author/show/17657541.Aman_Mittal) or exploring new places.
-
 ## Work history
 
 I’ve worn many hats over the years:
