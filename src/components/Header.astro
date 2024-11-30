@@ -4,7 +4,7 @@ import Hr from "./Hr.astro";
 import LinkButton from "./LinkButton.astro";
 
 export interface Props {
-  activeNav?: "blog" | "tags" | "about" | "search" | "links" | "now" | "slash";
+  activeNav?: "blog" | "tags" | "about" | "search" | "links" | "now" | "slashes";
 }
 
 const { activeNav } = Astro.props;
@@ -67,7 +67,7 @@ const { activeNav } = Astro.props;
             </a>
           </li>
           <li>
-            <a href="/slash/" class={activeNav === "slash" ? "active" : ""}>
+            <a href="/slash/" class={activeNav === "slashes" ? "active" : ""}>
               Slashes
             </a>
           </li>

@@ -1,6 +1,6 @@
 ---
 layout: ../layouts/GenericLayout.astro
-title: 'Slash'
+title: 'Slashes'
 ---
 
 A collection of all **/slash** pages on this site.
