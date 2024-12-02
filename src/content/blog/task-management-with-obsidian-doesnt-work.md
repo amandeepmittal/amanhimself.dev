@@ -10,7 +10,7 @@ tags:
 description: ''
 ---
 
-I have been using Obsidian for more than a year to take notes of all sorts (meetings, work, personal, long-form writing, blog drafts, etc.). It provides a distraction-free environment to write drafts and do long-form writing, but I couldn't get the hang of it as my daily task manager.
+I have been using Obsidian for more than a year to take notes of all sorts (meetings, work, personal, long-form writing, blog drafts, and so on). It provides a distraction-free environment to write drafts and do long-form writing, but I couldn't get the hang of it as my daily task manager.
 
 I used to maintain an Inbox directory to capture everything (work and personal tasks). The list grew over time. I also used [Obsidian Tasks](<[https://github.com/obsidian-tasks-group/obsidian-tasks](https://github.com/obsidian-tasks-group/obsidian-tasks)>) plugin, which has modern-day app equivalent features of managing a task such as adding a due date, recurring date, setting priorities, checking the task as done or canceled, scheduling it, and more.
 
