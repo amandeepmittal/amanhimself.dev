@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - nodejs
-description: ""
+description: ''
 ---
 
 > Updated on December 11, 2023
@@ -141,7 +141,7 @@ nvm install --lts
 After installing the latest version, to re-install any global packages installed with the previous version, run:
 
 ```shell
-nvm reinstall-packages previous_version
+nvm install node --reinstall-packages-from=node
 ```
 
 Then, [uninstall the previous Node.js version](#uninstall-a-node.js-version).
