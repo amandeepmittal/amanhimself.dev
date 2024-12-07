@@ -2,7 +2,7 @@
 title: My 2024 Macbook setup
 author: Aman Mittal
 pubDatetime: 2024-04-05T03:42:51Z
-modDatetime: 2024-10-05T19:51:31Z
+modDatetime: 2024-12-07T14:51:31Z
 slug: macbook-setup-2024
 featured: false
 draft: false
@@ -262,6 +262,7 @@ To use the pre-defined configuration, copy `starship.toml` from the [`dotfiles`]
 - Text > Non-ASCII Font, select **Hack Nerd Font Mono**.
 - Appearance > General > Theme > set to **Minimal**.
 - Terminal > Show mark indicators > **Disable**.
+- General > Selection > Clicking on command selects it to restrict Find and Filter > **Disable**.
 
 ## Setup a primary web browser
 
