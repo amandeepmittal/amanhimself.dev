@@ -2,6 +2,7 @@
 title: How to install Node.js using NVM on macOS M1
 author: Aman Mittal
 pubDatetime: 2022-02-06T03:42:51Z
+modDatetime: 2024-12-07T14:51:31Z
 slug: install-nodejs-using-nvm-on-macos-m1
 featured: false
 draft: false
@@ -9,8 +10,6 @@ tags:
   - nodejs
 description: ''
 ---
-
-> Updated on December 11, 2023
 
 Node.js can be installed in different ways. I recently started working on an organization repository that requires using different Node.js versions. Using [Node Version Manager (NVM)](https://github.com/nvm-sh/nvm) it is possible to switch between different Node.js versions on the fly. It also allows testing code with older Node.js versions.
 
