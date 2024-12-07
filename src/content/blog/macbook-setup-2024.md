@@ -490,15 +490,6 @@ I usually switch between the following themes:
 - [WakaTime](https://marketplace.visualstudio.com/items?itemName=WakaTime.vscode-wakatime)
 - [Word Count](https://marketplace.visualstudio.com/items?itemName=ms-vscode.wordcount)
 
-## Other Chrome extensions
-
-- Sync settings and switch **"Developer Mode"** on.
-- **Extensions** that I use:
-  - [Redefined GitHub](https://chrome.google.com/webstore/detail/refined-github/hlepfoohegkhhmjieoechaddaejaokhf)
-  - [Twemex: Sidebar for Twitter](https://chrome.google.com/webstore/detail/twemex-sidebar-for-twitte/amoldiondpmjdnllknhklocndiibkcoe?hl=en)
-  - [Minimal Twitter](https://chrome.google.com/webstore/detail/minimal-twitter/pobhoodpcipjmedfenaigbeloiidbflp?hl=en)
-  - [Medium Enhanced Stats](https://chrome.google.com/webstore/detail/medium-enhanced-stats/jnomnfoenpdinfkpaaigokicgcfkomjo?hl=en)
-
 ## Conclusion
 
 That's the setup I now use for my JavaScript, Node.js, React, React Native, Expo, and documentation work.
