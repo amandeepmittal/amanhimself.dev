@@ -135,6 +135,12 @@ defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 # Source: https://mac-key-repeat.zaymon.dev/
 defaults write -g InitialKeyRepeat -int 12
 defaults write -g KeyRepeat -int 2
+
+# Show Library folder
+chflags nohidden ~/Library
+
+# Show hidden files
+defaults write com.apple.finder AppleShowAllFiles YES
 ```
 
 <!-- vale on -->
