@@ -1261,6 +1261,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"uninstall-nodejs-version-using-volta.md": {
+	id: "uninstall-nodejs-version-using-volta.md";
+  slug: "uninstall-nodejs-version-using-volta";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "upload-image-to-cloudinary-using-expo-camera.md": {
 	id: "upload-image-to-cloudinary-using-expo-camera.md";
   slug: "upload-image-to-cloudinary-using-expo-camera";
