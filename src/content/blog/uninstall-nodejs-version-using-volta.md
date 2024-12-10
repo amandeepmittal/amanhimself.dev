@@ -10,7 +10,7 @@ tags:
 description: ''
 ---
 
-If you're using Volta to manage Node.js versions on your computer, you might have noticed that running `volta uninstall node@version` command doesn't work as expected. This expectation comes from using other [Node.js version managers like NVM](/blog/install-nodejs-using-nvm-on-macos-m1/#uninstall-a-nodejs-version), unlike Volta, which requires removing each version manually.
+If you're using Volta to manage Node.js versions on your computer, you might have noticed that running `volta uninstall node-version` command doesn't work as expected. This expectation comes from using other [Node.js version managers like NVM](/blog/install-nodejs-using-nvm-on-macos-m1/#uninstall-a-nodejs-version), unlike Volta, which requires removing each version manually.
 
 ## Check all installed Node.js versions
 
