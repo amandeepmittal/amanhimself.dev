@@ -34,7 +34,7 @@ This command will display all runtimes installed:
 
 The `default` is the version I am actively using.
 
-## Remove a installed version manually
+## Remove an installed version manually
 
 1. To remove a specific version, navigate to the Volta's installation directory:
 
