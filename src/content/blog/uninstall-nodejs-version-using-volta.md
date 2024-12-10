@@ -69,4 +69,4 @@ rm -rf ~/.volta
 
 ## Summary
 
-Compared to tools like nvm, Volta's approach to Node.js version management is a lot more different considering this manual process.
+Compared to tools like nvm, Volta's approach to Node.js version management is a bit different considering this manual process.
