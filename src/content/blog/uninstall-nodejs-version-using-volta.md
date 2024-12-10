@@ -42,10 +42,10 @@ The `default` is the version I am actively using.
 cd ~/.volta/images/node
 ```
 
-2. All Node.js runtimes are installed inside their own version directory. Delete a directory for the version you want to remove.
+2. All Node.js runtimes are installed inside their own version directory. Delete a directory for the version you want to remove:
 
 ```shell
-cd rm -rf v22.11.0
+rm -rf v22.11.0
 ```
 
 3. Verify the removal by running `volta ls node` again:
