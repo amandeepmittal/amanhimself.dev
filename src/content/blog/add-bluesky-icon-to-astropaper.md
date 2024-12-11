@@ -6,7 +6,7 @@ slug: add-bluesky-icon-to-astropaper
 featured: false
 draft: false
 tags:
-  - notes
+  - blogging
 description: ''
 ---
 

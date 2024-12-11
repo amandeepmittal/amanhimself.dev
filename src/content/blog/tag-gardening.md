@@ -6,7 +6,7 @@ slug: tag-gardening
 featured: false
 draft: false
 tags:
-  - notes
+  - blogging
 description: ''
 ---
 

@@ -6,7 +6,7 @@ slug: blogging-tips-after-3-years
 featured: false
 draft: false
 tags:
-  - notes
+  - blogging
 description: ''
 ---
 
