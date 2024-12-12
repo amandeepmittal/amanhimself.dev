@@ -239,6 +239,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"block-unwanted-external-links-using-google-search-console-disavow.md": {
+	id: "block-unwanted-external-links-using-google-search-console-disavow.md";
+  slug: "block-unwanted-external-links-using-google-search-console-disavow";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "blogging-tips-after-3-years.md": {
 	id: "blogging-tips-after-3-years.md";
   slug: "blogging-tips-after-3-years";
