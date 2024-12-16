@@ -1,0 +1,107 @@
+{
+  "$ref": "#/definitions/blog",
+  "definitions": {
+    "blog": {
+      "type": "object",
+      "properties": {
+        "author": {
+          "type": "string",
+          "default": "Aman Mittal"
+        },
+        "pubDatetime": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date-time"
+            },
+            {
+              "type": "string",
+              "format": "date"
+            },
+            {
+              "type": "integer",
+              "format": "unix-time"
+            }
+          ]
+        },
+        "modDatetime": {
+          "anyOf": [
+            {
+              "anyOf": [
+                {
+                  "not": {}
+                },
+                {
+                  "anyOf": [
+                    {
+                      "type": "string",
+                      "format": "date-time"
+                    },
+                    {
+                      "type": "string",
+                      "format": "date"
+                    },
+                    {
+                      "type": "integer",
+                      "format": "unix-time"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "title": {
+          "type": "string"
+        },
+        "featured": {
+          "type": "boolean"
+        },
+        "draft": {
+          "type": "boolean"
+        },
+        "tags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [
+            "others"
+          ]
+        },
+        "ogImage": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "string"
+            }
+          ]
+        },
+        "description": {
+          "type": "string"
+        },
+        "canonicalURL": {
+          "type": "string"
+        },
+        "readingTime": {
+          "type": "string"
+        },
+        "$schema": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "pubDatetime",
+        "title",
+        "description"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}
