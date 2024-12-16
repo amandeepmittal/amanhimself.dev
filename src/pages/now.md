@@ -15,6 +15,12 @@ _Location: New Delhi, India_
 - 📚 Reading: Check out my [Goodreads](https://www.goodreads.com/author/show/17657541.Aman_Mittal)
 - Trying to write everyday in my free time so this blog doesn't get trivialize.
 
+### What are my interests?
+
+- Blogging
+- Documentation-as-code
+- Technical writing
+
 ## What is this page, anyways?
 
 According to [aboutideasnow](https://aboutideasnow.com/about), an "/about" page is to talk about past stuff including what you have done in your past life. In comparison, a "/now" page is more personal look at what a person is doing right now, and what they care about. A "/now" page is inspired by [Derek Sivers](https://sive.rs/now).
