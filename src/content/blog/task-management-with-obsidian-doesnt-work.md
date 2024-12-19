@@ -16,6 +16,6 @@ I used to maintain an Inbox directory to capture everything (work and personal t
 
 It worked fine, but it was overwhelming for me. Things got complicated quickly. The UI was boring, and since I don't use Obsidian Sync with my iOS device, it lost the point to capture everything/brain dump.
 
-I ended up moving to the Things 3 app and good old friends &mdash; and pen and paper. I won't do a second attempt at Obsidian since both Things 3 and paper work for my brain and help me with reminders and retention. I have used Things 3 just for work in my previous job, so it is not a new app that comes with a learning curve.
+I ended up moving to the Things 3 app and a couple of good old friends &mdash; pen and paper. I won't do a second attempt at Obsidian since both Things 3 and paper work for my brain and help me with reminders and retention. I have used Things 3 just for work in my previous job, so it is not a new app that comes with a learning curve.
 
 I'll still keep using Obsidian as my personal knowledge storage system and for long-form writing.
