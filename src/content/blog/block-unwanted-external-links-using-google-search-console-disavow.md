@@ -46,7 +46,7 @@ https://another-site.com/wrong-link
 - If required, you can also also disavow the complete domain by adding it to the text file
 
 ```txt
-# Site's to disavow
+# Sites to disavow
 domain:example.com
 ```
 
