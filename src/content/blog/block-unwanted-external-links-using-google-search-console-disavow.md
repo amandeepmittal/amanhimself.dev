@@ -12,7 +12,7 @@ description: ''
 
 When managing a docs site SEO, you might encounter situations when external websites link to incorrect or non-existent pages from your site. These unwanted backlinks can impact your site's search performance and create unnecessary 5xx errors.
 
-Solution is to use Google Search Console's [disavow links tool](^1) to create a list of unwanted backlinks.
+Solution is to use Google Search Console's [disavow links tool](https://support.google.com/webmasters/answer/2648487?hl=en) to create a list of unwanted backlinks.
 
 ## Detecting incorrect external links
 
@@ -57,10 +57,4 @@ domain:example.com
 
 ## Summary
 
-The Google Search Console disavow links tool is a valuable resource for managing unwanted or incorrect external links. While it shouldn't be your first solution as per [Google's documentation](^1), it's an effective way to handle situations where you can't get incorrect links modified at their source.
-
----
-
-Footnote:
-
-- [^1](https://support.google.com/webmasters/answer/2648487?hl=en)
+The Google Search Console disavow links tool is a valuable resource for managing unwanted or incorrect external links. While it shouldn't be your first solution as per [Google's documentation](https://support.google.com/webmasters/answer/2648487?hl=en), it's an effective way to handle situations where you can't get incorrect links modified at their source.
