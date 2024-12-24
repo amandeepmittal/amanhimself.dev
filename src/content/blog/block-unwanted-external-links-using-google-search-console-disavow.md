@@ -26,7 +26,7 @@ This is a common issue many website owners face, external sites linking to incor
 
 ## Understanding the impact
 
-Incorrect external links can cause multiple issues such as: 404 error reports and 5xx Page not indexed. Having multiple error pages for too long can potentially affect your site's performance.
+Incorrect external links can cause multiple issues such as: 404 error reports and 5xx Page not indexed.
 
 ## Using Google's Disavow links tool
 
@@ -43,7 +43,7 @@ https://example.com/incorrect-page
 https://another-site.com/wrong-link
 ```
 
-- If required, you can also also disavow the complete domain by adding it to the text file
+If required, you can also also disavow the complete domain by adding it to the text file:
 
 ```txt
 # Sites to disavow
