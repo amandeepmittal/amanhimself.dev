@@ -2,13 +2,13 @@
 title: My 2024 Macbook setup
 author: Aman Mittal
 pubDatetime: 2024-04-05T03:42:51Z
-modDatetime: 2024-12-07T14:51:31Z
+modDatetime: 2024-12-27T00:00:01Z
 slug: macbook-setup-2024
 featured: false
 draft: false
 tags:
   - macos
-description: 'A guide on setting up Apple Macbook for daily development work.'
+description: 'A guide on setting up Apple Macbook for daily work.'
 ---
 
 ## A brief history of this guide
@@ -462,12 +462,11 @@ I usually switch between the following themes:
 - [Auto Close tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag)
 - [Auto Complete Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-complete-tag)
 - [Auto Rename Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag)
-- [Babel JavaScript](https://marketplace.visualstudio.com/items?itemName=mgmcdermott.vscode-language-babel)
 - VSCode supports colored bracket pairs natively. See [How to configure VSCode Bracket Pair Colors Natively](https://amanhimself.dev/blog/how-to-configure-vscode-bracket-colors-natively/)
 - [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
 - [Code::Stats](https://codestats.net/)
 - [Color Highlight](https://marketplace.visualstudio.com/items?itemName=naumovs.color-highlight)
-- Catppuccin for VS Code
+- [Catppuccin Icons](https://marketplace.visualstudio.com/items?itemName=Catppuccin.catppuccin-vsc-icons)
 - [ESLint](https://eslint.org/)
 - Even Better Toml
 - [Expo Tools](https://marketplace.visualstudio.com/items?itemName=byCedric.vscode-expo)
@@ -477,16 +476,15 @@ I usually switch between the following themes:
 - [Highlight Matching Tag](https://marketplace.visualstudio.com/items?itemName=vincaslt.highlight-matching-tag)
 - [Indent rainbow](https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow)
 - [iOS common files](https://marketplace.visualstudio.com/items?itemName=Orta.vscode-ios-common-files)
-- [Material Icon Theme](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme)
+- [Kotlin Language](https://marketplace.visualstudio.com/items?itemName=mathiasfrohlich.Kotlin)
 - [MDX](https://marketplace.visualstudio.com/items?itemName=silvenon.mdx) - For syntax highlighting of `.mdx` files
 - [npm IntelliSense](https://marketplace.visualstudio.com/items?itemName=christian-kohler.npm-intellisense)
 - [Prettier](https://prettier.io/)
-- [Paste JSON as code](https://marketplace.visualstudio.com/items?itemName=quicktype.quicktype)
 - [React Native Tools](https://marketplace.visualstudio.com/items?itemName=msjsdiag.vscode-react-native)
 - [Read Time](https://marketplace.visualstudio.com/items?itemName=johnpapa.read-time)
-- [Sort Lines](https://marketplace.visualstudio.com/items?itemName=Tyriar.sort-lines)
+- [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
 - [TODO Highlight](https://marketplace.visualstudio.com/items?itemName=wayou.vscode-todo-highlight)
-- [Version Lens](https://marketplace.visualstudio.com/items?itemName=pflannery.vscode-versionlens)
+- [Vale VSCode](https://marketplace.visualstudio.com/items?itemName=ChrisChinchilla.vale-vscode)
 - [WakaTime](https://marketplace.visualstudio.com/items?itemName=WakaTime.vscode-wakatime)
 - [Word Count](https://marketplace.visualstudio.com/items?itemName=ms-vscode.wordcount)
 
