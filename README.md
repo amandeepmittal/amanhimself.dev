@@ -7,6 +7,7 @@ Personal website [amanhimself.dev](https://amanhimself.dev/) made with [Astro](h
 - X: [@amanhimself](https://twitter.com/amanhimself)
 - GitHub: [@amandeepmittal](https://github.com/amandeepmittal)
 - Blog: [amanhimself.dev/blog](https://amanhimself.dev/blog/)
+- Bsky: [aman.bsky.social](https://bsky.app/profile/aman.bsky.social)
 
 ### License for content
 
