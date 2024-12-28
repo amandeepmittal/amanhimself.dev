@@ -25,7 +25,7 @@ export const LOGO_IMAGE = {
 
 export const SOCIALS: SocialObjects = [
   {
-    name: 'Twitter',
+    name: 'X',
     href: 'https://x.com/amanhimself',
     linkTitle: `${SITE.title} on X`,
     active: true
