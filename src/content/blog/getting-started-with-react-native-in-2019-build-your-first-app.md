@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - react-native
-description: ""
+description: ''
 ---
 
 ![cover](https://i.imgur.com/p0FiCt8.jpg)
@@ -168,8 +168,8 @@ This is an option for enabling an Android Virtual Device (_AVD_). If you have ju
 To see the app in action on both the devices, let us modify `App.js` with the code below.
 
 ```js
-import React, { Component } from "react";
-import { Platform, StyleSheet, Text, View } from "react-native";
+import React, { Component } from 'react';
+import { Platform, StyleSheet, Text, View } from 'react-native';
 
 export default class App extends Component {
   render() {
@@ -184,15 +184,15 @@ export default class App extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "#F5FCFF",
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#F5FCFF'
   },
   instructions: {
-    textAlign: "center",
-    color: "#333333",
-    marginBottom: 5,
-  },
+    textAlign: 'center',
+    color: '#333333',
+    marginBottom: 5
+  }
 });
 ```
 
@@ -215,9 +215,9 @@ The file that renders this App component is `index.js` in the root directory whi
 ```js
 /** @format */
 
-import { AppRegistry } from "react-native";
-import App from "./App";
-import { name as appName } from "./app.json";
+import { AppRegistry } from 'react-native';
+import App from './App';
+import { name as appName } from './app.json';
 
 AppRegistry.registerComponent(appName, () => App);
 ```
@@ -250,20 +250,20 @@ You are going to build a small application to just familiarize yourself with bas
 The above is nothing but a list of text coming directly from the component’s state. Create a new `src/components` directory in the root of the project and inside `components/` create a new file called `EmojiDict.js` with the following snippet of code.
 
 ```js
-import React, { Component } from "react";
-import { View, Text, StyleSheet } from "react-native";
+import React, { Component } from 'react';
+import { View, Text, StyleSheet } from 'react-native';
 
 class EmojiDict extends Component {
   state = {
-    "😃": "😃 Smiley",
-    "🚀": "🚀 Rocket",
-    "⚛️": "⚛️ Atom Symbol",
+    '😃': '😃 Smiley',
+    '🚀': '🚀 Rocket',
+    '⚛️': '⚛️ Atom Symbol'
   };
 
   render() {
     return (
       <View style={styles.container}>
-        <Text>{this.state["😃"]}</Text>
+        <Text>{this.state['😃']}</Text>
       </View>
     );
   }
@@ -272,9 +272,9 @@ class EmojiDict extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-  },
+    justifyContent: 'center',
+    alignItems: 'center'
+  }
 });
 
 export default EmojiDict;
@@ -283,9 +283,9 @@ export default EmojiDict;
 Accordingly, we have to modify `App.js` file in order to display the result of this component.
 
 ```js
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
-import EmojiDict from "./src/components/EmojiDict";
+import EmojiDict from './src/components/EmojiDict';
 
 export default class App extends Component {
   render() {
@@ -330,9 +330,9 @@ The way we are creating a list of emojis isn’t a pragmatic approach to handle 
 <FlatList
   contentContainerStyle={styles.container}
   data={[
-    { key: "😃", value: "😃 Smiley" },
-    { key: "🚀", value: "🚀 Rocket" },
-    { key: "⚛️", value: "⚛️ Atom Symbol" },
+    { key: '😃', value: '😃 Smiley' },
+    { key: '🚀', value: '🚀 Rocket' },
+    { key: '⚛️', value: '⚛️ Atom Symbol' }
   ]}
   renderItem={({ item }) => <Text>{item.value}</Text>}
 />
@@ -352,7 +352,7 @@ Here is what I think you can do to advance with React Native development.
 
 ### Start with basics
 
-This article just provides you with an overview of what inside the React Native app development process and how things work behind the scenes, briefly. I often come across (especially through [_#100DaysOfCode_](https://twitter.com/_100DaysOfCOde) campaign) developers who struggle to learn a new framework with little no background in specific the programming language. My advice, before you leap to make gigantic projects, start with the basics. Learn the concepts as each specific component to the curve, make sure to apply them as much as you can and build small things.
+This article just provides you with an overview of what inside the React Native app development process and how things work behind the scenes, briefly. I often come across (especially through [_#100DaysOfCode_](https://x.com/_100DaysOfCOde) campaign) developers who struggle to learn a new framework with little no background in specific the programming language. My advice, before you leap to make gigantic projects, start with the basics. Learn the concepts as each specific component to the curve, make sure to apply them as much as you can and build small things.
 
 For example, today learned about using `FlatList` component in this article. Try creating a list with your own dataset or find a mock/fake data set on the internet and try to build a small app out of it. Always remember the feeling you got from creating your first _Hello World_ program. Do you remember that sense of accomplishment?
 

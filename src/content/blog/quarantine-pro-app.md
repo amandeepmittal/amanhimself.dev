@@ -1,5 +1,5 @@
 ---
-title: "Creating Quarantine Pro — A Fun Learning Experiment in React Native"
+title: 'Creating Quarantine Pro — A Fun Learning Experiment in React Native'
 author: Aman Mittal
 pubDatetime: 2020-05-14T03:42:51Z
 slug: quarantine-pro-app
@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - expo
-description: ""
+description: ''
 ---
 
 Covid-19 changed our way of life since the start of 2020 - a year some of us want to fast forward like a button on that TV remote. That said, self-isolating is the best thing you can do right now, and thus, isolating ourselves at Jscrambler, we came up with a fun, simple React Native app idea.
@@ -89,10 +89,10 @@ When you are downloading a font to use in an Expo React Native app, make sure yo
 To use any [hook](https://jscrambler.com/blog/introducing-react-hooks) in a React or React Native app, you have to use functional components. To set up a new font, start by importing the following statements.
 
 ```js
-import React from "react";
-import { View, Text } from "react-native";
-import { useFonts } from "@use-expo/font";
-import { AppLoading } from "expo";
+import React from 'react';
+import { View, Text } from 'react-native';
+import { useFonts } from '@use-expo/font';
+import { AppLoading } from 'expo';
 ```
 
 The `useFonts` hook takes one argument as a JavaScript object and returns a single item list containing a value telling you whether the font is loaded or not. This eliminates the need for a lot of boilerplate code to make this check.
@@ -101,7 +101,7 @@ After you have imported the statements, create a new object called `customFont`.
 
 ```js
 const customFont = {
-  "Press-Start2p": require("./assets/fonts/PressStart2P-Regular.ttf"),
+  'Press-Start2p': require('./assets/fonts/PressStart2P-Regular.ttf')
 };
 ```
 
@@ -123,16 +123,16 @@ export default function App() {
     <View
       style={{
         flex: 1,
-        alignItems: "center",
-        backgroundColor: "#ffbd12",
+        alignItems: 'center',
+        backgroundColor: '#ffbd12'
       }}
     >
       <Text
         style={{
-          fontFamily: "Press-Start2p",
+          fontFamily: 'Press-Start2p',
           fontSize: 24,
           marginTop: 80,
-          paddingHorizontal: 20,
+          paddingHorizontal: 20
         }}
       >
         {`Are You a Quarantine Pro?`}
@@ -148,7 +148,7 @@ Go back to the Expo client and you are going to see the following result.
 
 ![js5](https://i.imgur.com/TdsTeq1.png)
 
-That's it! You have completed the first step of loading fonts and using them in a React Native app. Thanks to [Cedric van Putten](https://twitter.com/cedricvanputten) who has made the process of loading and mapping fonts easier for us. For more information check out Cedric's collection of hooks that you can use in an Expo app [here](https://github.com/byCedric/use-expo).
+That's it! You have completed the first step of loading fonts and using them in a React Native app. Thanks to [Cedric van Putten](https://x.com/cedricvanputten) who has made the process of loading and mapping fonts easier for us. For more information check out Cedric's collection of hooks that you can use in an Expo app [here](https://github.com/byCedric/use-expo).
 
 ## Create a Button To Use The Datetime Picker Modal
 
@@ -157,20 +157,20 @@ Since we have already installed the required npm dependencies to show a date pic
 Start by modifying the import statements as stated below and add the new ones.
 
 ```js
-import React, { useState } from "react";
+import React, { useState } from 'react';
 import {
   View,
   Text,
   StyleSheet,
   Dimensions,
-  TouchableWithoutFeedback,
-} from "react-native";
+  TouchableWithoutFeedback
+} from 'react-native';
 import {
   Fontisto,
   MaterialCommunityIcons,
-  FontAwesome,
-} from "@expo/vector-icons";
-import DateTimePickerModal from "react-native-modal-datetime-picker";
+  FontAwesome
+} from '@expo/vector-icons';
+import DateTimePickerModal from 'react-native-modal-datetime-picker';
 ```
 
 To set the width and the height of the button, we are going to use the `Dimensions` API from the `react-native` core. The width and height of the button are going to be calculated based on the width of the current window.
@@ -178,7 +178,7 @@ To set the width and the height of the button, we are going to use the `Dimensio
 Define a variable `W` that is going to represent the width of the window before the `App` functional component.
 
 ```js
-const W = Dimensions.get("window").width;
+const W = Dimensions.get('window').width;
 ```
 
 Next, after the app's title text, define another container `View` component for the button. We are going to wrap the contents of the `TouchableWithoutFeedback` button inside a separate `View` component since this touchable component from React Native is only allowed to have a child component. However, we are going to have two child components: the icon of the button and the text. Modify the return statement of the `App` component as per the code snippet below.
@@ -203,39 +203,39 @@ Add the following styles for the above code snippet. Let's make use of the `Styl
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: "center",
-    backgroundColor: "#ffbd12",
+    alignItems: 'center',
+    backgroundColor: '#ffbd12'
   },
   title: {
-    fontFamily: "Press-Start2p",
+    fontFamily: 'Press-Start2p',
     fontSize: 24,
     marginTop: 80,
     paddingHorizontal: 20,
-    lineHeight: 30,
+    lineHeight: 30
   },
   pickerContainer: {
     marginTop: 20,
-    backgroundColor: "#00c6ae",
+    backgroundColor: '#00c6ae',
     width: W / 1.2,
     height: W / 4,
     borderRadius: 10,
     borderWidth: 1,
-    borderColor: "#000",
+    borderColor: '#000',
     borderBottomWidth: 5,
-    borderBottomColor: "#000",
-    justifyContent: "center",
-    alignItems: "center",
-    flexDirection: "row",
+    borderBottomColor: '#000',
+    justifyContent: 'center',
+    alignItems: 'center',
+    flexDirection: 'row'
   },
   pickerText: {
-    fontFamily: "Press-Start2p",
+    fontFamily: 'Press-Start2p',
     fontSize: 14,
     paddingHorizontal: 10,
-    lineHeight: 20,
+    lineHeight: 20
   },
   icon: {
-    color: "#000",
-  },
+    color: '#000'
+  }
 });
 ```
 
@@ -323,7 +323,7 @@ Start by importing the `moment` library in the `App.js` file after the rest of t
 
 ```js
 // rest of the import statements
-import moment from "moment";
+import moment from 'moment';
 ```
 
 This library is also going to help us format the input from the date picker modal and display only the date (and not time) from the user's input in the format `YYYY-MM-DD`.
@@ -557,22 +557,22 @@ const styles = StyleSheet.create({
   // rest of the styles remain same
   resultContainer: {
     marginTop: 20,
-    backgroundColor: "#FF89BB",
+    backgroundColor: '#FF89BB',
     width: W / 1.2,
     height: W / 2,
     borderRadius: 10,
     borderWidth: 1,
-    borderColor: "#000",
-    justifyContent: "center",
-    alignItems: "center",
+    borderColor: '#000',
+    justifyContent: 'center',
+    alignItems: 'center'
   },
   resultText: {
-    color: "#fff",
-    fontFamily: "Press-Start2p",
+    color: '#fff',
+    fontFamily: 'Press-Start2p',
     fontSize: 16,
     padding: 15,
-    lineHeight: 20,
-  },
+    lineHeight: 20
+  }
 });
 ```
 

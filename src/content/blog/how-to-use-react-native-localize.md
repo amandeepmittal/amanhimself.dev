@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - react-native
-description: ""
+description: ''
 ---
 
 Not every app require global customers but if you have plans to have, you would need internationalization in your React Native app. Using [`react-native-localize`](https://github.com/react-native-community/react-native-localize) your app can detect the operating system or the device language and support the multi-languages.
@@ -81,19 +81,19 @@ Following are the contents of each file:
 Open `App.js` file and import the following statements.
 
 ```js
-import React from "react";
-import * as RNLocalize from "react-native-localize";
-import i18n from "i18n-js";
-import memoize from "lodash.memoize";
-import { SafeAreaView, StyleSheet, Text } from "react-native";
+import React from 'react';
+import * as RNLocalize from 'react-native-localize';
+import i18n from 'i18n-js';
+import memoize from 'lodash.memoize';
+import { SafeAreaView, StyleSheet, Text } from 'react-native';
 ```
 
 Next, require the translation files from the directory created in the previous step, using an object `translationGetters`.
 
 ```js
 const translationGetters = {
-  en: () => require("./src/translations/en.json"),
-  nl: () => require("./src/translations/nl.json"),
+  en: () => require('./src/translations/en.json'),
+  nl: () => require('./src/translations/nl.json')
 };
 ```
 
@@ -112,7 +112,7 @@ Also, using `RNLocalize.findBestAvailableLanguage()` method, you can let the app
 
 ```js
 const setI18nConfig = () => {
-  const fallback = { languageTag: "en" };
+  const fallback = { languageTag: 'en' };
   const { languageTag } =
     RNLocalize.findBestAvailableLanguage(Object.keys(translationGetters)) ||
     fallback;
@@ -215,6 +215,6 @@ This completes the tutorial on how to use `react-native-localize` to add and use
 
 Here is the complete code for this demo in a **[Github repo](https://github.com/amandeepmittal/rni18nDemo)**.
 
-Checkout [Jonathan Palma's](https://twitter.com/jonathanpalma__) who wrote [a small i18n library](https://github.com/jonathanpalma/react-native-simple-i18n#readme) after being inspired from this post. Check the library here on [GitHub](https://github.com/jonathanpalma/react-native-simple-i18n#readme).
+Checkout [Jonathan Palma's](https://x.com/jonathanpalma__) who wrote [a small i18n library](https://github.com/jonathanpalma/react-native-simple-i18n#readme) after being inspired from this post. Check the library here on [GitHub](https://github.com/jonathanpalma/react-native-simple-i18n#readme).
 
 Originally published at [Heartbeat.fritz.ai](https://heartbeat.fritz.ai/how-to-use-react-native-localize-in-react-native-apps-3bb3d510f801)

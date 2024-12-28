@@ -22,7 +22,7 @@ Here is what I think you can do to advance with React Native development.
 
 ## Start with basics
 
-This article briefly provides you with an overview of what is inside the React Native app development process and how things work behind the scenes, briefly. I often come across (especially through [_#100DaysOfCode_](https://twitter.com/_100DaysOfCOde) campaign) developers who struggle to learn a new framework with little to no background in specific the programming language. My advice, is before you leap to make gigantic projects, start with the basics. Learn the concepts as each specific component to the curve, make sure to apply them as much as you can and build small things.
+This article briefly provides you with an overview of what is inside the React Native app development process and how things work behind the scenes, briefly. I often come across (especially through [_#100DaysOfCode_](https://x.com/_100DaysOfCOde) campaign) developers who struggle to learn a new framework with little to no background in specific the programming language. My advice, is before you leap to make gigantic projects, start with the basics. Learn the concepts as each specific component to the curve, make sure to apply them as much as you can and build small things.
 
 For example, learn how to use `FlatList` component. Try creating a list with your own dataset or find a mock/fake data set on the internet and try to build a small app out of it. Always remember the feeling you got from creating your first _Hello World_ program. Do you remember that sense of accomplishment?
 

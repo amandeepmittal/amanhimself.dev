@@ -1,5 +1,5 @@
 ---
-title: "Create a Simple Twitter Bot with Node.js"
+title: 'Create a Simple Twitter Bot with Node.js'
 author: Aman Mittal
 pubDatetime: 2016-11-23T03:42:51Z
 slug: create-a-simple-twitter-bot-with-node-js
@@ -7,12 +7,12 @@ featured: false
 draft: false
 tags:
   - nodejs
-description: ""
+description: ''
 ---
 
 > [Originally Published at Hackernoon.com](https://medium.com/hackernoon/create-a-simple-twitter-bot-with-node-js-5b14eb006c08)
 
-How about a Twitter Bot that retweets, favorites, on the basis of hashtags and replies to other users if they follow it? I made a similar kind of a Twitter Bot [(@nodejstweet)](https://twitter.com/nodejstweet) that feeds me the latest or the ongoing news/articles/how-to’s on a set of hashtags such as #Nodejs, #MongoDB, #AngularJS, #IonicFramework, et cetera. At the time I never expected it having more followers than me but that has been surpassed.
+How about a Twitter Bot that retweets, favorites, on the basis of hashtags and replies to other users if they follow it? I made a similar kind of a Twitter Bot [(@nodejstweet)](https://x.com/nodejstweet) that feeds me the latest or the ongoing news/articles/how-to’s on a set of hashtags such as #Nodejs, #MongoDB, #AngularJS, #IonicFramework, et cetera. At the time I never expected it having more followers than me but that has been surpassed.
 
 <img src='https://cdn-images-1.medium.com/max/800/1*DcLASOdtPlO8p86oUg86JA.png' />
 
@@ -68,10 +68,10 @@ Open the `config.js` file and paste all four values inside it. Expose those valu
  */
 
 module.exports = {
-  consumerconsumer_key: "",
-  consumerconsumer_secret: "",
-  accessaccess_token: "",
-  accessaccess_tokenaccess_token_secret: "",
+  consumerconsumer_key: '',
+  consumerconsumer_secret: '',
+  accessaccess_token: '',
+  accessaccess_tokenaccess_token_secret: ''
 };
 ```
 
@@ -131,31 +131,31 @@ Our next step is to search for the tweets based on our parameters. For this, we 
 // find latest tweet according the query 'q' in params
 var retweet = function () {
   var params = {
-    q: "#nodejs, #Nodejs", // REQUIRED
-    result_type: "recent",
-    lang: "en",
+    q: '#nodejs, #Nodejs', // REQUIRED
+    result_type: 'recent',
+    lang: 'en'
   };
   // for more parameters, see: https://dev.twitter.com/rest/reference/get/search/tweets
 
-  Twitter.get("search/tweets", params, function (err, data) {
+  Twitter.get('search/tweets', params, function (err, data) {
     // if there no errors
     if (!err) {
       // grab ID of tweet to retweet
       var retweetId = data.statuses[0].id_str;
       // Tell TWITTER to retweet
       Twitter.post(
-        "statuses/retweet/:id",
+        'statuses/retweet/:id',
         {
-          id: retweetId,
+          id: retweetId
         },
         function (err, response) {
           if (response) {
-            console.log("Retweeted!!!");
+            console.log('Retweeted!!!');
           }
           // if there was an error while tweeting
           if (err) {
             console.log(
-              "Something went wrong while RETWEETING... Duplication maybe..."
+              'Something went wrong while RETWEETING... Duplication maybe...'
             );
           }
         }
@@ -163,7 +163,7 @@ var retweet = function () {
     }
     // if unable to Search a tweet
     else {
-      console.log("Something went wrong while SEARCHING...");
+      console.log('Something went wrong while SEARCHING...');
     }
   });
 };
@@ -192,30 +192,30 @@ Similar to `retweet` bot we can define and initialise another function expressio
 // find a random tweet and 'favorite' it
 var favoriteTweet = function () {
   var params = {
-    q: "#nodejs, #Nodejs", // REQUIRED
-    result_type: "recent",
-    lang: "en",
+    q: '#nodejs, #Nodejs', // REQUIRED
+    result_type: 'recent',
+    lang: 'en'
   };
   // for more parameters, see: https://dev.twitter.com/rest/reference
 
   // find the tweet
-  Twitter.get("search/tweets", params, function (err, data) {
+  Twitter.get('search/tweets', params, function (err, data) {
     // find tweets
     var tweet = data.statuses;
     var randomTweet = ranDom(tweet); // pick a random tweet
 
     // if random tweet exists
-    if (typeof randomTweet != "undefined") {
+    if (typeof randomTweet != 'undefined') {
       // Tell TWITTER to 'favorite'
       Twitter.post(
-        "favorites/create",
+        'favorites/create',
         { id: randomTweet.id_str },
         function (err, response) {
           // if there was an error while 'favorite'
           if (err) {
-            console.log("CANNOT BE FAVORITE... Error");
+            console.log('CANNOT BE FAVORITE... Error');
           } else {
-            console.log("FAVORITED... Success!!!");
+            console.log('FAVORITED... Success!!!');
           }
         }
       );
@@ -240,8 +240,8 @@ The complete module: `bot.js` :
 
 ```js
 // Dependencies =========================
-var twit = require("twit"),
-  config = require("./config");
+var twit = require('twit'),
+  config = require('./config');
 
 var Twitter = new twit(config);
 
@@ -250,29 +250,29 @@ var Twitter = new twit(config);
 // find latest tweet according the query 'q' in params
 var retweet = function () {
   var params = {
-    q: "#nodejs, #Nodejs", // REQUIRED
-    result_type: "recent",
-    lang: "en",
+    q: '#nodejs, #Nodejs', // REQUIRED
+    result_type: 'recent',
+    lang: 'en'
   };
-  Twitter.get("search/tweets", params, function (err, data) {
+  Twitter.get('search/tweets', params, function (err, data) {
     // if there no errors
     if (!err) {
       // grab ID of tweet to retweet
       var retweetId = data.statuses[0].id_str;
       // Tell TWITTER to retweet
       Twitter.post(
-        "statuses/retweet/:id",
+        'statuses/retweet/:id',
         {
-          id: retweetId,
+          id: retweetId
         },
         function (err, response) {
           if (response) {
-            console.log("Retweeted!!!");
+            console.log('Retweeted!!!');
           }
           // if there was an error while tweeting
           if (err) {
             console.log(
-              "Something went wrong while RETWEETING... Duplication maybe..."
+              'Something went wrong while RETWEETING... Duplication maybe...'
             );
           }
         }
@@ -280,7 +280,7 @@ var retweet = function () {
     }
     // if unable to Search a tweet
     else {
-      console.log("Something went wrong while SEARCHING...");
+      console.log('Something went wrong while SEARCHING...');
     }
   });
 };
@@ -295,28 +295,28 @@ setInterval(retweet, 3000000);
 // find a random tweet and 'favorite' it
 var favoriteTweet = function () {
   var params = {
-    q: "#nodejs, #Nodejs", // REQUIRED
-    result_type: "recent",
-    lang: "en",
+    q: '#nodejs, #Nodejs', // REQUIRED
+    result_type: 'recent',
+    lang: 'en'
   };
   // find the tweet
-  Twitter.get("search/tweets", params, function (err, data) {
+  Twitter.get('search/tweets', params, function (err, data) {
     // find tweets
     var tweet = data.statuses;
     var randomTweet = ranDom(tweet); // pick a random tweet
 
     // if random tweet exists
-    if (typeof randomTweet != "undefined") {
+    if (typeof randomTweet != 'undefined') {
       // Tell TWITTER to 'favorite'
       Twitter.post(
-        "favorites/create",
+        'favorites/create',
         { id: randomTweet.id_str },
         function (err, response) {
           // if there was an error while 'favorite'
           if (err) {
-            console.log("CANNOT BE FAVORITE... Error");
+            console.log('CANNOT BE FAVORITE... Error');
           } else {
-            console.log("FAVORITED... Success!!!");
+            console.log('FAVORITED... Success!!!');
           }
         }
       );

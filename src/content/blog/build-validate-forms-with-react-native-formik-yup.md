@@ -5,7 +5,7 @@ pubDatetime: 2019-10-06T03:42:51Z
 slug: build-validate-forms-with-react-native-formik-yup
 tags:
   - react-native
-description: ""
+description: ''
 ---
 
 ![cover](https://i.imgur.com/JK4oQuJ.png)
@@ -86,8 +86,8 @@ It is a touchable element that allows the user to interact with the device's scr
 
 ```js
 //FormButton.js
-import React from "react";
-import { Button } from "react-native-elements";
+import React from 'react';
+import { Button } from 'react-native-elements';
 
 const FormButton = ({ title, buttonType, buttonColor, ...rest }) => (
   <Button
@@ -107,10 +107,10 @@ Next, open `FormInput.js` file. Again, it is going to be a custom component for 
 Lastly, notice how the remaining props are passed through an object using rest operator. This is also known as [rest parameter syntax](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters). Make sure the order of the props remains same as below. That is, the `...rest` comes before other props in the `FormInput` component, as it won't be able to override those other properties.
 
 ```js
-import React from "react";
-import { Input } from "react-native-elements";
-import { StyleSheet, View } from "react-native";
-import { Ionicons } from "@expo/vector-icons";
+import React from 'react';
+import { Input } from 'react-native-elements';
+import { StyleSheet, View } from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
 
 const FormInput = ({
   iconName,
@@ -138,11 +138,11 @@ const FormInput = ({
 
 const styles = StyleSheet.create({
   inputContainer: {
-    margin: 15,
+    margin: 15
   },
   iconStyle: {
-    marginRight: 10,
-  },
+    marginRight: 10
+  }
 });
 
 export default FormInput;
@@ -153,16 +153,16 @@ export default FormInput;
 Now that the custom components are all set up, let us create a login screen component. Open `screens/Login.js` file and import all required statements. Then, without changing the state or any handler functions from the previous base repo you downloaded and are following for this tutorial, let us straight dive into the render method of the `Login` component.
 
 ```js
-import React from "react";
-import { StyleSheet, SafeAreaView, View } from "react-native";
-import { Button } from "react-native-elements";
-import FormInput from "../components/FormInput";
-import FormButton from "../components/FormButton";
+import React from 'react';
+import { StyleSheet, SafeAreaView, View } from 'react-native';
+import { Button } from 'react-native-elements';
+import FormInput from '../components/FormInput';
+import FormButton from '../components/FormButton';
 
 export default class Login extends React.Component {
   state = {
-    email: "",
-    password: "",
+    email: '',
+    password: ''
   };
 
   handleEmailChange = email => {
@@ -177,14 +177,14 @@ export default class Login extends React.Component {
     const { email, password } = this.state;
     try {
       if (email.length > 0 && password.length > 0) {
-        this.props.navigation.navigate("App");
+        this.props.navigation.navigate('App');
       }
     } catch (error) {
       alert(error);
     }
   };
 
-  goToSignup = () => this.props.navigation.navigate("Signup");
+  goToSignup = () => this.props.navigation.navigate('Signup');
   render() {
     const { email, password } = this.state;
 
@@ -220,7 +220,7 @@ export default class Login extends React.Component {
           title="Don't have an account? Sign Up"
           onPress={this.goToSignup}
           titleStyle={{
-            color: "#F57C00",
+            color: '#F57C00'
           }}
           type="clear"
         />
@@ -232,11 +232,11 @@ export default class Login extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: '#fff'
   },
   buttonContainer: {
-    margin: 25,
-  },
+    margin: 25
+  }
 });
 ```
 
@@ -252,7 +252,7 @@ Formik is a small library that helps forms to be organized in React and React Na
 - handles form submission via reusable methods and handlers (_such as `handleChange`, `handleBlur`, and `handleSubmit`_)
 - handles validation and error messages out of the box
 
-At times it becomes hard to manage and fulfill the above points. Using Formik, you can understand what exactly is happening in forms and write fewer lines of code. Created by [Jared Palmer](https://twitter.com/jaredpalmer) it has a great [API](https://jaredpalmer.com/formik/docs/overview) to refer.
+At times it becomes hard to manage and fulfill the above points. Using Formik, you can understand what exactly is happening in forms and write fewer lines of code. Created by [Jared Palmer](https://x.com/jaredpalmer) it has a great [API](https://jaredpalmer.com/formik/docs/overview) to refer.
 
 To get started, open `Login.js` file and import the library.
 
@@ -260,7 +260,7 @@ To get started, open `Login.js` file and import the library.
 //Login.js
 
 // ... with other import statements
-import { Formik } from "formik";
+import { Formik } from 'formik';
 ```
 
 Next, inside the `SafeAreaView` use `Formik` as the wrapper element. It comes with different props to handle forms such as `initialValues` and `onSubmit` handler method. The `initialValues` accepts an object containing form values. In the case of the current form, these values are going to be `email` and `password`. The `onSubmit` method accepts a function that has these `values` as the first argument to handle the form submission.
@@ -269,12 +269,12 @@ Lastly, the third method used in Formik is the render method itself. It follows 
 
 ```js
 export default class Login extends React.Component {
-  goToSignup = () => this.props.navigation.navigate("Signup");
+  goToSignup = () => this.props.navigation.navigate('Signup');
   render() {
     return (
       <SafeAreaView style={styles.container}>
         <Formik
-          initialValues={{ email: "", password: "" }}
+          initialValues={{ email: '', password: '' }}
           onSubmit={values => {}}
         >
           {formikProps => (
@@ -282,7 +282,7 @@ export default class Login extends React.Component {
               <FormInput
                 name="email"
                 value={values.email}
-                onChangeText={formikProps.handleChange("email")}
+                onChangeText={formikProps.handleChange('email')}
                 placeholder="Enter email"
                 autoCapitalize="none"
                 iconName="ios-mail"
@@ -291,7 +291,7 @@ export default class Login extends React.Component {
               <FormInput
                 name="password"
                 value={values.password}
-                onChangeText={formikProps.handleChange("password")}
+                onChangeText={formikProps.handleChange('password')}
                 placeholder="Enter password"
                 secureTextEntry
                 iconName="ios-lock"
@@ -312,7 +312,7 @@ export default class Login extends React.Component {
           title="Don't have an account? Sign Up"
           onPress={this.goToSignup}
           titleStyle={{
-            color: "#F57C00",
+            color: '#F57C00'
           }}
           type="clear"
         />
@@ -333,7 +333,7 @@ You can refactor the current component into the following:
       <FormInput
         name="email"
         value={values.email}
-        onChangeText={handleChange("email")}
+        onChangeText={handleChange('email')}
         placeholder="Enter email"
         autoCapitalize="none"
         iconName="ios-mail"
@@ -342,7 +342,7 @@ You can refactor the current component into the following:
       <FormInput
         name="password"
         value={values.password}
-        onChangeText={handleChange("password")}
+        onChangeText={handleChange('password')}
         placeholder="Enter password"
         secureTextEntry
         iconName="ios-lock"
@@ -384,7 +384,7 @@ Next, define the `handleSubmit` method before the `render` function.
 ```js
 handleSubmit = values => {
   if (values.email.length > 0 && values.password.length > 0) {
-    this.props.navigation.navigate("App");
+    this.props.navigation.navigate('App');
   }
 };
 ```
@@ -427,7 +427,7 @@ The [`yup`](https://github.com/jquense/yup) library is useful to manage complex 
 Import everything from the `yup` library with other import statements.
 
 ```js
-import * as yup from "yup";
+import * as yup from 'yup';
 ```
 
 If you are familiar with Nodejs development, you will find `yup` library is quite similar to another validation library called `joi`. Next, let us define a new object before the `Login` class component called `validationSchema`.
@@ -437,13 +437,13 @@ Since `initialValues` is an object, you have to specify `yup.object()` and defin
 ```js
 const validationSchema = Yup.object().shape({
   email: Yup.string()
-    .label("Email")
-    .email("Enter a valid email")
-    .required("Please enter a registered email"),
+    .label('Email')
+    .email('Enter a valid email')
+    .required('Please enter a registered email'),
   password: Yup.string()
-    .label("Password")
+    .label('Password')
     .required()
-    .min(4, "Password must have at least 4 characters "),
+    .min(4, 'Password must have at least 4 characters ')
 });
 ```
 
@@ -511,8 +511,8 @@ Notice that the error messages change and the correct error message is displayed
 In this section, let us create a reusable presentational component to display the error messages. Open `components/ErrorMessage.js` file and add the following.
 
 ```js
-import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import React from 'react';
+import { View, Text, StyleSheet } from 'react-native';
 
 const ErrorMessage = ({ errorValue }) => (
   <View style={styles.container}>
@@ -522,11 +522,11 @@ const ErrorMessage = ({ errorValue }) => (
 
 const styles = StyleSheet.create({
   container: {
-    marginLeft: 25,
+    marginLeft: 25
   },
   errorText: {
-    color: "red",
-  },
+    color: 'red'
+  }
 });
 
 export default ErrorMessage;
@@ -649,7 +649,7 @@ To mimic an API call, add a `setTimeout` function to the `handleSubmit` method.
 handleSubmit = values => {
   if (values.email.length > 0 && values.password.length > 0) {
     setTimeout(() => {
-      this.props.navigation.navigate("App");
+      this.props.navigation.navigate('App');
     }, 3000);
   }
 };

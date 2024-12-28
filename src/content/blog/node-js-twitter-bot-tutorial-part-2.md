@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - nodejs
-description: ""
+description: ''
 ---
 
 If you read the [first part of my tutorial](https://community.risingstack.com/node-js-twitter-bot-tutorial/), you already know how to make a Twitter Bot with Node.js that retweets and favorites tweets using the Twitter API.
@@ -47,7 +47,7 @@ First, we have to set up a stream. Fortunately, the third party npm dependency `
 // Use Streams API for interacting with a USER
 // set up a user stream
 
-var stream = Twitter.stream("user");
+var stream = Twitter.stream('user');
 ```
 
 `.stream()` keeps the connection alive, and returns an `EventEmitter`.
@@ -58,7 +58,7 @@ Right now we are only interested in the follow event, however the basic syntax i
 
 ```js
 // when someone follows
-stream.on("follow", followed);
+stream.on('follow', followed);
 ```
 
 When a user follows our Twitter Bot, the `follow` event will trigger the callback associated with it, in our case `followed`.
@@ -88,13 +88,13 @@ If you noticed in the [previous tutorial](https://community.risingstack.com/node
 ```js
 function tweetNow(tweetTxt) {
   var tweet = {
-    status: tweetTxt,
+    status: tweetTxt
   };
-  Twitter.post("statuses/update", tweet, function (err, data, response) {
+  Twitter.post('statuses/update', tweet, function (err, data, response) {
     if (err) {
-      console.log("Error in Replying");
+      console.log('Error in Replying');
     } else {
-      console.log("Gratitude shown successfully");
+      console.log('Gratitude shown successfully');
     }
   });
 }
@@ -108,33 +108,33 @@ Here comes the complete code of our bot:
 // Use Streams API for interacting with a USER ==========
 // set up a user stream
 
-var stream = Twitter.stream("user");
+var stream = Twitter.stream('user');
 
 // FOLLOW-Reply BOT ===========================
 
 // when someone follows
-stream.on("follow", followed);
+stream.on('follow', followed);
 
 // ...trigger the callback
 function followed(event) {
-  console.log("Follow Event is running");
+  console.log('Follow Event is running');
   //get their twitter handler (screen name)
   var name = event.source.name,
     screenName = event.source.screen_name;
   // function that replies back to the user who followed
-  tweetNow("@" + screenName + " Thank you for the follow up.");
+  tweetNow('@' + screenName + ' Thank you for the follow up.');
 }
 
 // function definition to tweet back to user who followed
 function tweetNow(tweetTxt) {
   var tweet = {
-    status: tweetTxt,
+    status: tweetTxt
   };
-  Twitter.post("statuses/update", tweet, function (err, data, response) {
+  Twitter.post('statuses/update', tweet, function (err, data, response) {
     if (err) {
-      console.log("Error in Replying");
+      console.log('Error in Replying');
     } else {
-      console.log("Gratitude shown successfully");
+      console.log('Gratitude shown successfully');
     }
   });
 }
@@ -178,7 +178,7 @@ To do further smart things with your bot, go and check out the [twit documentati
 
 If you are interested in Twitter Bots, check [Botwiki.org](https://botwiki.org/bots/twitterbots/) - as they have the vast collection of Twitter Bots in different programming languages.
 
-The sole purpose of Bot as a web application is automation. For example, when I created my first Twitter Bot [@nodejstweets](https://twitter.com/nodejstweet), the whole idea was to remain up to date with the most recent happenings.
+The sole purpose of Bot as a web application is automation. For example, when I created my first Twitter Bot [@nodejstweets](https://x.com/nodejstweet), the whole idea was to remain up to date with the most recent happenings.
 
 You can do a lot of things with a Twitter Bot, whether for your own sole purpose or to solve a purpose for a community. See [@100DaysOfCode](http://twitter.com/@_100DaysOfCode) as a great example.
 

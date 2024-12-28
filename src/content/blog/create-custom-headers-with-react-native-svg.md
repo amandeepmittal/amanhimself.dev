@@ -1,5 +1,5 @@
 ---
-title: "How to create custom wavy headers with react-native-svg"
+title: 'How to create custom wavy headers with react-native-svg'
 author: Aman Mittal
 pubDatetime: 2020-05-06T03:42:51Z
 slug: create-custom-headers-with-react-native-svg
@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - react-native
-description: ""
+description: ''
 ---
 
 > [Originally Published at Heartbeat.Fritz.ai](https://heartbeat.fritz.ai/creating-custom-wavy-headers-using-react-native-svg-639ce0861327)
@@ -63,8 +63,8 @@ Start by creating a new screen component inside `src/screens/ScreenOne.js` file 
 Add the following code snippet to this file.
 
 ```js
-import React from "react";
-import { StyleSheet, View, Text, Dimensions } from "react-native";
+import React from 'react';
+import { StyleSheet, View, Text, Dimensions } from 'react-native';
 
 export default function ScreenOne() {
   return (
@@ -79,28 +79,28 @@ export default function ScreenOne() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: '#fff'
   },
   headerContainer: {
     marginTop: 50,
-    marginHorizontal: 10,
+    marginHorizontal: 10
   },
   headerText: {
     fontSize: 30,
-    fontWeight: "bold",
-    color: "#333",
-    textAlign: "center",
-    marginTop: 35,
-  },
+    fontWeight: 'bold',
+    color: '#333',
+    textAlign: 'center',
+    marginTop: 35
+  }
 });
 ```
 
 Next, go to `App.js` file and modify it to render the `ScreenOne` functional component as below.
 
 ```js
-import React from "react";
-import ScreenOne from "./src/screens/ScreenOne";
-import { StatusBar } from "react-native";
+import React from 'react';
+import ScreenOne from './src/screens/ScreenOne';
+import { StatusBar } from 'react-native';
 
 export default function App() {
   return (
@@ -131,9 +131,9 @@ Make sure to copy the values of properties such as `viewbox` and `d` as shown ab
 Next, create a file called `WavyHeader.js` inside `src/components/` directory. Import the following statements.
 
 ```js
-import React from "react";
-import { View } from "react-native";
-import Svg, { Path } from "react-native-svg";
+import React from 'react';
+import { View } from 'react-native';
+import Svg, { Path } from 'react-native-svg';
 ```
 
 Create a functional component called `WavyHeader` that is going to have a prop passed from the parent (_the screen component_) it is going to be used. Let us call this prop `customStyles`. The main reason to pass this prop here is to define the dimensions of the screen component in its own file and keep the style value dynamic for different screens.
@@ -144,12 +144,12 @@ Here is the complete code snippet for this custom component. Notice the properti
 export default function WavyHeader({ customStyles }) {
   return (
     <View style={customStyles}>
-      <View style={{ backgroundColor: "#5000ca", height: 160 }}>
+      <View style={{ backgroundColor: '#5000ca', height: 160 }}>
         <Svg
           height="60%"
           width="100%"
           viewBox="0 0 1440 320"
-          style={{ position: "absolute", top: 130 }}
+          style={{ position: 'absolute', top: 130 }}
         >
           <Path
             fill="#5000ca"
@@ -171,7 +171,7 @@ Now, go back to the `ScreenOne.js` file and import this custom component after t
 
 ```js
 // rest of the import statements
-import WavyHeader from "../components/WavyHeader";
+import WavyHeader from '../components/WavyHeader';
 ```
 
 Add this component before the `<View>` that represents `headerContainer`.
@@ -195,17 +195,17 @@ Lastly, define the style reference `svgCurve` in the `StyleSheet` object as show
 const styles = StyleSheet.create({
   // rest of the styles
   svgCurve: {
-    position: "absolute",
-    width: Dimensions.get("window").width,
+    position: 'absolute',
+    width: Dimensions.get('window').width
   },
   headerText: {
     fontSize: 30,
-    fontWeight: "bold",
+    fontWeight: 'bold',
     // change the color property for better output
-    color: "#fff",
-    textAlign: "center",
-    marginTop: 35,
-  },
+    color: '#fff',
+    textAlign: 'center',
+    marginTop: 35
+  }
 });
 ```
 
@@ -229,7 +229,7 @@ export default function WavyHeader({
   customHeight,
   customTop,
   customBgColor,
-  customWavePattern,
+  customWavePattern
 }) {
   return (
     <View style={customStyles}>
@@ -238,7 +238,7 @@ export default function WavyHeader({
           height="60%"
           width="100%"
           viewBox="0 0 1440 320"
-          style={{ position: "absolute", top: customTop }}
+          style={{ position: 'absolute', top: customTop }}
         >
           <Path fill={customBgColor} d={customWavePattern} />
         </Svg>
@@ -290,7 +290,7 @@ You can try adding more custom screens to have different wave patterns and try t
 
 - [Source code](https://github.com/amandeepmittal/wavySVGExample).
 - Or try using an Expo client [here](https://expo.io/@amanhimself/rnwavysvg).
-- Or check out [Leandro Favre’s](https://twitter.com/FavreLeandro) [Whicecream](https://github.com/AtilaDev/whicecream) example based on this tutorial!
+- Or check out [Leandro Favre’s](https://x.com/FavreLeandro) [Whicecream](https://github.com/AtilaDev/whicecream) example based on this tutorial!
 
 Here is the list of resources used in order to create this post:
 

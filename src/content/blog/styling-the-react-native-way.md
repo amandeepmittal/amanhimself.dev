@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - expo
-description: ""
+description: ''
 ---
 
 > [Originally published at Level up coding on January 14, 2019.](https://levelup.gitconnected.com/styling-the-react-native-way-3cc6d3ef52d0)
@@ -30,20 +30,20 @@ There are different ways you can add styles to your React Native component. Firs
 
 ```js
 // inline example
-import React from "react";
-import { View, Text } from "react-native";
+import React from 'react';
+import { View, Text } from 'react-native';
 
 export default function App() {
   return (
     <View
       style={{
         flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-        backgroundColor: "blue",
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: 'blue'
       }}
     >
-      <Text style={{ color: "white", fontSize: 32 }}>Some Text</Text>
+      <Text style={{ color: 'white', fontSize: 32 }}>Some Text</Text>
     </View>
   );
 }
@@ -59,8 +59,8 @@ Available from React Native API, by importing and using `StyleSheet`, you create
 
 ```js
 // StyleSheet Example
-import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import React from 'react';
+import { View, Text, StyleSheet } from 'react-native';
 
 export default function App() {
   return (
@@ -73,14 +73,14 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "blue",
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'blue'
   },
   bigText: {
-    color: "white",
-    fontSize: 32,
-  },
+    color: 'white',
+    fontSize: 32
+  }
 });
 ```
 
@@ -106,19 +106,19 @@ Another way to define styles is to organize your application code in such a way 
 
 ```js
 // AppStyles.js
-import { StyleSheet } from "react-native";
+import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "blue",
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'blue'
   },
   bigText: {
-    color: "white",
-    fontSize: 32,
-  },
+    color: 'white',
+    fontSize: 32
+  }
 });
 ```
 
@@ -126,10 +126,10 @@ Next step is to import this file inside `App.js`.
 
 ```js
 //App.js
-import React from "react";
-import { View, Text } from "react-native";
+import React from 'react';
+import { View, Text } from 'react-native';
 
-import styles from "./AppStyles";
+import styles from './AppStyles';
 
 export default function App() {
   return (
@@ -147,8 +147,8 @@ The demo runs and produces the same result as before. This separation of styles 
 In inline styling, you must have observed that it is nothing but an object that starts with a `style` prop and an object is passed with key-value pairs. Similarly, you can use an array that can contain multiple key-value pairs as the value of the `style` prop.
 
 ```js
-import React, { Component } from "react";
-import { View, Text, StyleSheet } from "react-native";
+import React, { Component } from 'react';
+import { View, Text, StyleSheet } from 'react-native';
 
 export default function App() {
   return (
@@ -161,17 +161,17 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "blue",
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'blue'
   },
   bigText: {
-    color: "white",
-    fontSize: 32,
+    color: 'white',
+    fontSize: 32
   },
   textYellow: {
-    color: "yellow",
-  },
+    color: 'yellow'
+  }
 });
 ```
 
@@ -188,47 +188,47 @@ In this section, you are going to build a simple app called **light/dark mode** 
 First, let us define styles for it. Open `AppStyles.js` the external styling file.
 
 ```js
-import { StyleSheet } from "react-native";
+import { StyleSheet } from 'react-native';
 
 const Colors = {
-  light: "white",
-  dark: "black",
+  light: 'white',
+  dark: 'black'
 };
 
 const baseContainer = {
   flex: 1,
-  justifyContent: "center",
-  alignItems: "center",
+  justifyContent: 'center',
+  alignItems: 'center'
 };
 
 const buttonBorderContainer = {
-  justifyContent: "center",
-  alignItems: "center",
+  justifyContent: 'center',
+  alignItems: 'center',
   borderWidth: 3,
   height: 50,
-  width: 150,
+  width: 150
 };
 
 const lightStyles = StyleSheet.create({
   container: {
     ...baseContainer,
-    backgroundColor: Colors.light,
+    backgroundColor: Colors.light
   },
   button: {
     ...buttonBorderContainer,
-    backgroundColor: Colors.dark,
-  },
+    backgroundColor: Colors.dark
+  }
 });
 
 const darkStyles = StyleSheet.create({
   container: {
     ...baseContainer,
-    backgroundColor: Colors.dark,
+    backgroundColor: Colors.dark
   },
   button: {
     ...buttonBorderContainer,
-    backgroundColor: Colors.light,
-  },
+    backgroundColor: Colors.light
+  }
 });
 
 export default function useTheme(darkTheme) {
@@ -245,10 +245,10 @@ Lastly, there is a function that gets exported that returns theme based upon a b
 The file `AppStyles.js` is a clear representation of structuring styles in a React Native app. This file is then imported inside the `App.js` that has the following content.
 
 ```js
-import React, { useState } from "react";
-import { View, Button } from "react-native";
+import React, { useState } from 'react';
+import { View, Button } from 'react-native';
 
-import useTheme from "./AppStyles";
+import useTheme from './AppStyles';
 
 export default function App() {
   const [darkTheme, setDarkTheme] = useState(false);
@@ -261,7 +261,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       <View style={styles.button}>
-        <Button title={"Click Me"} onPress={toggleTheme} />
+        <Button title={'Click Me'} onPress={toggleTheme} />
       </View>
     </View>
   );
@@ -275,7 +275,7 @@ You can see this in action below.
 ![ss6](https://i.imgur.com/uEQLG9f.gif)
 
 - You can find the complete code for the example at [this Expo Snack](https://snack.expo.io/@amanhimself/38e20d).
-- A big thank you to [Catalin Miron](https://twitter.com/mironcatalin) for proof reading it 🤗
+- A big thank you to [Catalin Miron](https://x.com/mironcatalin) for proof reading it 🤗
 
 **Resources & Further Reading:**
 

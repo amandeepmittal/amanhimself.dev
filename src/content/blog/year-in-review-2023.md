@@ -20,11 +20,11 @@ I'm extremely thankful for the opportunity I got this year to give an in-person 
 
 ![Workshop at App.js with Alek](/images/year-2023/b0.jpeg)
 
-Thankful to the conference organizers at Software Mansion and my team at Expo for this opportunity. And of course, to [Aleksander Mikucki](https://twitter.com/aleqsio) who was my partner in crime.
+Thankful to the conference organizers at Software Mansion and my team at Expo for this opportunity. And of course, to [Aleksander Mikucki](https://x.com/aleqsio) who was my partner in crime.
 
 ![Customary photo with Catalin Miron and David Leuliette](/images/year-2023/b12.jpeg)
 
-[It was a wonderful experience to attend it in person](https://twitter.com/amanhimself/status/1535694759653740547), meet old friends, make new ones and travel once again. Everything from the venue, the beautiful city of Krakow, and quality talks, was a great experience. Kudos to the organizers for hosting it and providing that altogether!
+[It was a wonderful experience to attend it in person](https://x.com/amanhimself/status/1535694759653740547), meet old friends, make new ones and travel once again. Everything from the venue, the beautiful city of Krakow, and quality talks, was a great experience. Kudos to the organizers for hosting it and providing that altogether!
 
 I can also officially say I met my colleagues in person since I started working at Expo, mostly after a year and to many, for the first time. The conference just feels different when you are surrounded by people whose avatars you interact with all the time and once a day or week, meet them in a huddle or a Zoom call.
 

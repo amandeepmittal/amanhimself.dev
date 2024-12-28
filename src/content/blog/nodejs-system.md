@@ -42,7 +42,7 @@ Pronounced as “lib u v”, is library written in C language to make Node.js co
 
 Each operating system has its own interface for the demultiplexer. Such as Kqueue for Mac OS X, IOCP for Windows and Epoll for Linux. Different multiplexers will behave differently when handling an I/O request. And then, each I/O operation can differ in its behaviour within the same operating system. This creates an inconsistency and to overcome this inconsistency libuv is the solution.
 
-I am not going to talk about internal workings of libuv here, not an expert on that, myself. For more info on libuv [check their docs](http://docs.libuv.org/) or this [slide](http://www.slideshare.net/saghul/libuv-nodejs-and-everything-in-between) by Saúl Ibarra Corretgé [(@saghul)](https://twitter.com/saghul) is a good start.
+I am not going to talk about internal workings of libuv here, not an expert on that, myself. For more info on libuv [check their docs](http://docs.libuv.org/) or this [slide](http://www.slideshare.net/saghul/libuv-nodejs-and-everything-in-between) by Saúl Ibarra Corretgé [(@saghul)](https://x.com/saghul) is a good start.
 
 [Also, libuv is independently maintained by awesome developers.](https://github.com/libuv/libuv)
 

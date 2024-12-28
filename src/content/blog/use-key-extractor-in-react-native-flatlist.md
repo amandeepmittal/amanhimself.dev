@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - react-native
-description: ""
+description: ''
 ---
 
 ![cover_image](https://i.imgur.com/sRxXsyt.png)
@@ -28,44 +28,44 @@ Consider the following structure of data. There are ten items in the array, and 
 const DATA_WITH_ID = [
   {
     id: 1,
-    title: "quidem molestiae enim",
+    title: 'quidem molestiae enim'
   },
   {
     id: 2,
-    title: "sunt qui excepturi placeat culpa",
+    title: 'sunt qui excepturi placeat culpa'
   },
   {
     id: 3,
-    title: "omnis laborum odio",
+    title: 'omnis laborum odio'
   },
   {
     id: 4,
-    title: "non esse culpa molestiae omnis sed optio",
+    title: 'non esse culpa molestiae omnis sed optio'
   },
   {
     id: 5,
-    title: "eaque aut omnis a",
+    title: 'eaque aut omnis a'
   },
   {
     id: 6,
-    title: "natus impedit quibusdam illo est",
+    title: 'natus impedit quibusdam illo est'
   },
   {
     id: 7,
-    title: "quibusdam autem aliquid et et quia",
+    title: 'quibusdam autem aliquid et et quia'
   },
   {
     id: 8,
-    title: "qui fuga est a eum",
+    title: 'qui fuga est a eum'
   },
   {
     id: 9,
-    title: "saepe unde necessitatibus rem",
+    title: 'saepe unde necessitatibus rem'
   },
   {
     id: 10,
-    title: "distinctio laborum qui",
-  },
+    title: 'distinctio laborum qui'
+  }
 ];
 ```
 
@@ -109,44 +109,44 @@ Now, let's consider a scenario where array of data contains a unique key with ea
 const DATA_WITH_USER_ID = [
   {
     userId: 1,
-    title: "quidem molestiae enim",
+    title: 'quidem molestiae enim'
   },
   {
     userId: 2,
-    title: "sunt qui excepturi placeat culpa",
+    title: 'sunt qui excepturi placeat culpa'
   },
   {
     userId: 3,
-    title: "omnis laborum odio",
+    title: 'omnis laborum odio'
   },
   {
     userId: 4,
-    title: "non esse culpa molestiae omnis sed optio",
+    title: 'non esse culpa molestiae omnis sed optio'
   },
   {
     userId: 5,
-    title: "eaque aut omnis a",
+    title: 'eaque aut omnis a'
   },
   {
     userId: 6,
-    title: "natus impedit quibusdam illo est",
+    title: 'natus impedit quibusdam illo est'
   },
   {
     userId: 7,
-    title: "quibusdam autem aliquid et et quia",
+    title: 'quibusdam autem aliquid et et quia'
   },
   {
     userId: 8,
-    title: "qui fuga est a eum",
+    title: 'qui fuga est a eum'
   },
   {
     userId: 9,
-    title: "saepe unde necessitatibus rem",
+    title: 'saepe unde necessitatibus rem'
   },
   {
     userId: 10,
-    title: "distinctio laborum qui",
-  },
+    title: 'distinctio laborum qui'
+  }
 ];
 ```
 
@@ -170,4 +170,4 @@ The warning will also disappear after this step.
 
 When using a `FlatList` component, if the data array has a unique `id` or a `key` property, you do not need to use the `keyExtractor` prop explicitly. However, for custom id names, use the `keyExtractor` prop to explicitly tell the component which unique key to extract.
 
-If you like to learn more about React Native, check out the [React Native category](https://amanhimself.dev/tags/react-native/) and [Expo category](https://amanhimself.dev/tags/expo/) pages on my blog. You can also subscribe my [newsletter](https://amanhimself.substack.com/) or follow on [Twitter](https://twitter.com/amanhimself) to get updates on whenever I publish a new article or tutorial.
+If you like to learn more about React Native, check out the [React Native category](https://amanhimself.dev/tags/react-native/) and [Expo category](https://amanhimself.dev/tags/expo/) pages on my blog. You can also subscribe my [newsletter](https://amanhimself.substack.com/) or follow on [Twitter](https://x.com/amanhimself) to get updates on whenever I publish a new article or tutorial.

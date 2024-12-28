@@ -42,7 +42,7 @@ Draft your posts in advance and make sure that it helps you stick to your publis
 
 I usually write almost all of my blog posts in Markdown format and store each draft on my laptop, inside a directory of [my blog site](https://amanhimself.dev). This way, it saves me time when I publish them since I use Gatsby and Markdown format for each blog post.
 
-When I publish on sites like [Medium](https://medium.com/@amanhimself) that do not support Markdown format completely, I use a tool called [Markdown to Medium](https://markdowntomedium.com/) which allows you to publish markdown formatted posts on Medium with correct syntax highlighting **( this is important if your post contain code snippets)** using editable GitHub gists. It is fast and it works like a charm. (_Shoutout to [Jake Bennett](https://twitter.com/jacobbennett) for creating it and making it free to use_). However, at the same time, publishing on sites like [Dev.to](https://dev.to/amanhimself), Markdown can be your friend.
+When I publish on sites like [Medium](https://medium.com/@amanhimself) that do not support Markdown format completely, I use a tool called [Markdown to Medium](https://markdowntomedium.com/) which allows you to publish markdown formatted posts on Medium with correct syntax highlighting **( this is important if your post contain code snippets)** using editable GitHub gists. It is fast and it works like a charm. (_Shoutout to [Jake Bennett](https://x.com/jacobbennett) for creating it and making it free to use_). However, at the same time, publishing on sites like [Dev.to](https://dev.to/amanhimself), Markdown can be your friend.
 
 ## List your ideas
 

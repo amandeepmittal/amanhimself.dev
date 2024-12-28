@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - nodejs
-description: ""
+description: ''
 ---
 
 > [Originally Published at Hackernoon.com](https://hackernoon.com/how-to-mock-data-for-node-js-applications-using-faker-js-b1f4c0e78102)
@@ -20,7 +20,7 @@ In a recent scenario, building a prototype of an E-Commerce web application for 
 
 ### Enter faker.js
 
-It’s a wonderful node module to create fake/mock data when you face a similar situation. fakerjs has its own API, and it’s huge. All credit goes to [**Marak**](https://twitter.com/marak), who built it. It has a vast API for almost every use case with an excellent [_documentation_ that can help you get familiar in minutes on Github.](https://github.com/marak/Faker.js/)
+It’s a wonderful node module to create fake/mock data when you face a similar situation. fakerjs has its own API, and it’s huge. All credit goes to [**Marak**](https://x.com/marak), who built it. It has a vast API for almost every use case with an excellent [_documentation_ that can help you get familiar in minutes on Github.](https://github.com/marak/Faker.js/)
 
 Let’s consider a test case where I want some _a user_ to have the following amount of fields:
 
@@ -32,7 +32,7 @@ Let’s consider a test case where I want some _a user_ to have the following am
 - image/avatar
 
 ```js
-const faker = require("faker");
+const faker = require('faker');
 
 const User = {
   name: faker.name.findName(),
@@ -43,7 +43,7 @@ const User = {
     faker.address.city() +
     faker.address.country(),
   bio: faker.lorem.sentences(),
-  image: faker.image.avatar(),
+  image: faker.image.avatar()
 };
 
 module.exports = User;

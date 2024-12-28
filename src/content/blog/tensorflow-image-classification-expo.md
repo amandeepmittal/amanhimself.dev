@@ -7,12 +7,12 @@ featured: false
 draft: false
 tags:
   - react-native
-description: ""
+description: ''
 ---
 
 Recently, the alpha version [Tensorflow.js](https://www.tensorflow.org/js/) for React Native and Expo applications was released. It currently provides the capabilities of loading pre-trained models and training. Here is the announcement tweet:
 
-> [Tweet](https://twitter.com/tensorflow/status/1169309153715732480?lang=en)
+> [Tweet](https://x.com/tensorflow/status/1169309153715732480?lang=en)
 
 TensorFlow.js provides many [pre-trained models](https://github.com/tensorflow/tfjs-models) that simplify the time-consuming task of training a machine learning model from scratch. In this tutorial, we are going to explore [Tensorflow.js](https://www.tensorflow.org/js/) and the MobileNet pre-trained model to classify image based on the input image provided in a React Native mobile application.
 
@@ -51,20 +51,20 @@ Even though you are using Expo, it is necessary to install [async-storage](https
 Before we move on, let us test out that the tfjs is getting loaded into the app before the app is rendered. There is an asynchronous function to do so, called `tf.ready()`. Open `App.js` file, import the necessary dependencies, and define an initial state `isTfReady` with a boolean false.
 
 ```js
-import React from "react";
-import { StyleSheet, Text, View } from "react-native";
-import * as tf from "@tensorflow/tfjs";
-import { fetch } from "@tensorflow/tfjs-react-native";
+import React from 'react';
+import { StyleSheet, Text, View } from 'react-native';
+import * as tf from '@tensorflow/tfjs';
+import { fetch } from '@tensorflow/tfjs-react-native';
 
 class App extends React.Component {
   state = {
-    isTfReady: false,
+    isTfReady: false
   };
 
   async componentDidMount() {
     await tf.ready();
     this.setState({
-      isTfReady: true,
+      isTfReady: true
     });
 
     //Output in Expo console
@@ -74,7 +74,7 @@ class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>TFJS ready? {this.state.isTfReady ? <Text>Yes</Text> : ""}</Text>
+        <Text>TFJS ready? {this.state.isTfReady ? <Text>Yes</Text> : ''}</Text>
       </View>
     );
   }
@@ -83,10 +83,10 @@ class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center'
+  }
 });
 
 export default App;
@@ -107,7 +107,7 @@ Or in the console, if using the `console` statement as the above snippet.
 Similar to the previous section, you can load the model being used in this app (_mobilenet_) is integrating or not. Loading a tfjs pre-trained model from the web is an expensive network call and will take a good amount of time. Modify the `App.js` file to load the MobileNet model. Start by importing the model.
 
 ```js
-import * as mobilenet from "@tensorflow-models/mobilenet";
+import * as mobilenet from '@tensorflow-models/mobilenet';
 ```
 
 Next, add another property to the initial state.
@@ -115,7 +115,7 @@ Next, add another property to the initial state.
 ```js
 state = {
   isTfReady: false,
-  isModelReady: false,
+  isModelReady: false
 };
 ```
 
@@ -136,7 +136,7 @@ Lastly, the display on the screen when the loading of the model is complete.
 
 ```js
 <Text>
-  Model ready?{" "}
+  Model ready?{' '}
   {this.state.isModelReady ? <Text>Yes</Text> : <Text>Loading Model...</Text>}
 </Text>
 ```
@@ -162,8 +162,8 @@ expo install expo-permissions expo-constants expo-image-picker
 Next, add the following import statements in the `App.js` file.
 
 ```js
-import Constants from "expo-constants";
-import * as Permissions from "expo-permissions";
+import Constants from 'expo-constants';
+import * as Permissions from 'expo-permissions';
 ```
 
 In the `App` class component, add the following method.
@@ -172,8 +172,8 @@ In the `App` class component, add the following method.
 getPermissionAsync = async () => {
   if (Constants.platform.ios) {
     const { status } = await Permissions.askAsync(Permissions.CAMERA_ROLL);
-    if (status !== "granted") {
-      alert("Sorry, we need camera roll permissions to make this work!");
+    if (status !== 'granted') {
+      alert('Sorry, we need camera roll permissions to make this work!');
     }
   }
 };
@@ -202,7 +202,7 @@ The application will require the user to upload an image from their phone's came
 In the `App.js` file, start by importing [`jpeg-js` package](https://www.npmjs.com/package/jpeg-js) that will be used to decode the data from the image.
 
 ```js
-import * as jpeg from "jpeg-js";
+import * as jpeg from 'jpeg-js';
 ```
 
 It decodes the width, height and the binary data from the image inside the handler method `imageToTensor` that accepts a parameter of the raw image data.
@@ -239,7 +239,7 @@ state = {
   isTfReady: false,
   isModelReady: false,
   predictions: null,
-  image: null,
+  image: null
 };
 ```
 
@@ -270,7 +270,7 @@ The results from the pre-trained model are yield in an array. An example is show
 To select an image from the device's camera roll using the system's UI, you are going to use the asynchronous method `ImagePicker.launchImageLibraryAsync` provided the package `expo-image-picker`. Import the package itself.
 
 ```js
-import * as Permissions from "expo-permissions";
+import * as Permissions from 'expo-permissions';
 ```
 
 Next, add a handler method `selectImage` that will be responsible for
@@ -285,7 +285,7 @@ selectImage = async () => {
     let response = await ImagePicker.launchImageLibraryAsync({
       mediaTypes: ImagePicker.MediaTypeOptions.All,
       allowsEditing: true,
-      aspect: [4, 3],
+      aspect: [4, 3]
     });
 
     if (!response.cancelled) {
@@ -363,65 +363,65 @@ Here is the list of the complete `styles` object.
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#171f24",
-    alignItems: "center",
+    backgroundColor: '#171f24',
+    alignItems: 'center'
   },
   loadingContainer: {
     marginTop: 80,
-    justifyContent: "center",
+    justifyContent: 'center'
   },
   text: {
-    color: "#ffffff",
-    fontSize: 16,
+    color: '#ffffff',
+    fontSize: 16
   },
   loadingModelContainer: {
-    flexDirection: "row",
-    marginTop: 10,
+    flexDirection: 'row',
+    marginTop: 10
   },
   imageWrapper: {
     width: 280,
     height: 280,
     padding: 10,
-    borderColor: "#cf667f",
+    borderColor: '#cf667f',
     borderWidth: 5,
-    borderStyle: "dashed",
+    borderStyle: 'dashed',
     marginTop: 40,
     marginBottom: 10,
-    position: "relative",
-    justifyContent: "center",
-    alignItems: "center",
+    position: 'relative',
+    justifyContent: 'center',
+    alignItems: 'center'
   },
   imageContainer: {
     width: 250,
     height: 250,
-    position: "absolute",
+    position: 'absolute',
     top: 10,
     left: 10,
     bottom: 10,
-    right: 10,
+    right: 10
   },
   predictionWrapper: {
     height: 100,
-    width: "100%",
-    flexDirection: "column",
-    alignItems: "center",
+    width: '100%',
+    flexDirection: 'column',
+    alignItems: 'center'
   },
   transparentText: {
-    color: "#ffffff",
-    opacity: 0.7,
+    color: '#ffffff',
+    opacity: 0.7
   },
   footer: {
-    marginTop: 40,
+    marginTop: 40
   },
   poweredBy: {
     fontSize: 20,
-    color: "#e69e34",
-    marginBottom: 6,
+    color: '#e69e34',
+    marginBottom: 6
   },
   tfLogo: {
     width: 125,
-    height: 70,
-  },
+    height: 70
+  }
 });
 ```
 

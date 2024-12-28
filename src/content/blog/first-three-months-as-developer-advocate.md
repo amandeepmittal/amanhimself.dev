@@ -74,7 +74,7 @@ Here is me talking about Custom Code during Draftbit office hours:
 
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/pMz4XRjdOd0/0.jpg)](https://www.youtube.com/watch?v=pMz4XRjdOd0)
 
-🙌 Shoutout to my colleague [Nick](https://twitter.com/nickselman) for these timely opportunities.
+🙌 Shoutout to my colleague [Nick](https://x.com/nickselman) for these timely opportunities.
 
 ## Final Thoughts
 
@@ -82,6 +82,6 @@ Providing a value is vital and it is with this mindset I try to approach things.
 
 If you want to work with me, check out [draftbit.com/jobs](https://draftbit.com/jobs#openings) to see if there's a role that is exciting to you.
 
-If you want to talk about Draftbit, have questions, or React Native, or DevRel, please DM me on [Twitter](https://twitter.com/amanhimself).
+If you want to talk about Draftbit, have questions, or React Native, or DevRel, please DM me on [Twitter](https://x.com/amanhimself).
 
 💌 To get notified about my future articles, subscribe my [personal newsletter here](https://amanhimself.substack.com/).

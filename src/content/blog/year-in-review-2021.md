@@ -64,7 +64,7 @@ Giving talks or speaking is not my strongest asset, and I used to find it quite 
 
 Thanks to React Day Bangalore for inviting me for a panel discussion on React Native. It's on [YouTube](https://www.youtube.com/watch?v=_HKzhe8f47Y). I also [gave workshops](https://amanhimself.dev/speaking) due to my role of working as a Developer Advocate.
 
-I also got invited [to speak at a Twitter space](https://twitter.com/TheAnkurTyagi/status/1465624585773228034). Thanks to my friend Ankur ([@TheAnkurTyagi](https://twitter.com/TheAnkurTyagi/)) for the invitation and hosting it. We talked about tech writing and its impact on being a Developer Advocate role and working with startups.
+I also got invited [to speak at a Twitter space](https://x.com/TheAnkurTyagi/status/1465624585773228034). Thanks to my friend Ankur ([@TheAnkurTyagi](https://x.com/TheAnkurTyagi/)) for the invitation and hosting it. We talked about tech writing and its impact on being a Developer Advocate role and working with startups.
 
 ## Highlights from my GitHub 🐙
 
@@ -72,7 +72,7 @@ Last year, I started to maintain [a single GitHub repo](https://github.com/amand
 
 Another thing I maintain is an [Expo Community project](https://github.com/expo-community/expo-firebase-starter) that integrates Firebase JS SDK in an Expo app. Since the Expo SDK's exponential growth in the past year with the awesome tooling, Developer Experience (DX), and support for native modules, I have some thoughts on what changes I'll be doing next year. Keep an eye on this [GitHub repo](https://github.com/expo-community/expo-firebase-starter).
 
-I also got my first [GitHub sponsor](https://twitter.com/amanhimself/status/1454352509124820994) this year 🤩
+I also got my first [GitHub sponsor](https://x.com/amanhimself/status/1454352509124820994) this year 🤩
 
 ## Newsletter saga continues 💌
 
@@ -80,7 +80,7 @@ I failed to run my [weekly newsletter](https://amanhimself.substack.com/). First
 
 <!-- vale off -->
 
-I did move it from Substack to Revue after Twitter acquired Revue. With Revue, I like the experience so far. I've been using it for three months and have sent three newsletters. Anyone using Twitter can now easily subscribe from [my Twitter profile](https://twitter.com/amanhimself). Thanks to my buddy [Scott Spence](https://twitter.com/spences10) who showed me how easy it was to migrate to Revue. If you're on Twitter, then give Scott a follow. He's an amazing person, an experienced developer, and he creates awesome content in the Web Dev space.
+I did move it from Substack to Revue after Twitter acquired Revue. With Revue, I like the experience so far. I've been using it for three months and have sent three newsletters. Anyone using Twitter can now easily subscribe from [my Twitter profile](https://x.com/amanhimself). Thanks to my buddy [Scott Spence](https://x.com/spences10) who showed me how easy it was to migrate to Revue. If you're on Twitter, then give Scott a follow. He's an amazing person, an experienced developer, and he creates awesome content in the Web Dev space.
 
 <!-- vale on -->
 

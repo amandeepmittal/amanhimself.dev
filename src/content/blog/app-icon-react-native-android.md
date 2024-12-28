@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - react-native
-description: ""
+description: ''
 ---
 
 ![cover_image](https://i.imgur.com/tZtGF2K.png)
@@ -18,7 +18,7 @@ In this post, let's generate an app icon and learn how to add it to an Android a
 
 ### Quickly build an app icon
 
-To create an app icon we are going to make use of a free tool called [Expo Icon Builder](https://buildicon.netlify.app/). Thanks to [Evan Bacon](https://twitter.com/baconbrix?lang=en) for making it free and available for us to use. You are free to use any other design tool of your own choice such as Figma.
+To create an app icon we are going to make use of a free tool called [Expo Icon Builder](https://buildicon.netlify.app/). Thanks to [Evan Bacon](https://x.com/baconbrix?lang=en) for making it free and available for us to use. You are free to use any other design tool of your own choice such as Figma.
 
 This tool allows building an app icon quickly using an Emoji icon with a customized background color scheme. For example, in the below image you will find that we have selected the coffee icon emoji since it is going to represent the main app. The Emoji icon is selected from the right-hand panel. The selected item is shown on the left-hand side. You can also add a customized background color.
 

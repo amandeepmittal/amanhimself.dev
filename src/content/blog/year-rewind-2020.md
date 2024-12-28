@@ -51,11 +51,11 @@ Here are some of the posts that I wrote this year:
 
 ## I moved my blog from Gatsby to Next.js and back to Gatsby again 🤪
 
-My personal blog has been the most consistent thing over course of these 12 months in my life. It deserves more credit than I give it. Also, I never planned to have a self-hosted blog until a friend of mine, [Valentin](https://twitter.com/RadValentin), casually suggested its importance. I started writing on [Medium](https://medium.com/@amanhimself) when I was getting into web development back in late 2016 and early 2017. At that time, I did not think much about pursuing writing posts or the importance of sharing via creating content. It was all new to me. I was just exploring horizons and wanted to document the good things about it.
+My personal blog has been the most consistent thing over course of these 12 months in my life. It deserves more credit than I give it. Also, I never planned to have a self-hosted blog until a friend of mine, [Valentin](https://x.com/RadValentin), casually suggested its importance. I started writing on [Medium](https://medium.com/@amanhimself) when I was getting into web development back in late 2016 and early 2017. At that time, I did not think much about pursuing writing posts or the importance of sharing via creating content. It was all new to me. I was just exploring horizons and wanted to document the good things about it.
 
 ![ss4](/images/2020-1.png)
 
-Three years forward, in 2020, I did not give much emphasis on Medium this year as my primary blog publishing platform. Even though I did reach an exploding [2 million views](https://twitter.com/amanhimself/status/1285554115464982528), I do not like how some publications (that I think have an impact in terms of audience) are forcing down to have a payment wall associated with a post published under their publication. I am not against getting the original author paid for their work but as a popular publication with a significant audience, it should not force a contributing writer and be open about it. That said, some publications are not forcing down and are still enjoyable to write for.
+Three years forward, in 2020, I did not give much emphasis on Medium this year as my primary blog publishing platform. Even though I did reach an exploding [2 million views](https://x.com/amanhimself/status/1285554115464982528), I do not like how some publications (that I think have an impact in terms of audience) are forcing down to have a payment wall associated with a post published under their publication. I am not against getting the original author paid for their work but as a popular publication with a significant audience, it should not force a contributing writer and be open about it. That said, some publications are not forcing down and are still enjoyable to write for.
 
 This gave me an opportunity to continue to build and maintain my own blog which was initially created using [Gatsby](https://www.gatsbyjs.com/). However, in the desire to explore things, I migrated my blog to [Next.js](https://nextjs.org/) in the middle of the year. I wanted to continue using it. As a framework built over React, I think Next.js is more flexible than Gatsby but in the month of November, I decided to migrate back to Gatsby since I feel more comfortable using it since I have been closely following its development for quite some years, and I was able to cut down the 10 minutes of build time that was happening with Next.js by 70% with Gatsby. I am sure that it was my fault that the build time was around 10 minutes with Next.js and I was too lazy and uninterested to actually debug it. Nonetheless, I am glad for the opportunity to try out Next.js for the first time and will try to use it in some other projects next year.
 
@@ -78,11 +78,11 @@ Writing a blog post and publishing is just one aspect. Since the year 2018, I ha
 
 Thus, I'd like to thank from the bottom of my heart, these awesome human beings for always listening to my ideas and not taking my mistakes too seriously, and sharing their insight and unique perspective which has helped me not only write but grow as a person.
 
-- [Filipe Lima](https://twitter.com/filipeslima) at Jscrambler
-- [Kate Trahan](https://twitter.com/Katerade4) at Logrocket
-- [Austin Kodra](https://twitter.com/austin_kodra) at Fritz AI & Heartbeat
-- [Nick Selman](https://twitter.com/nickselman) at Draftbit
-- [Margo McCabe](https://twitter.com/margo_hdb) at HarperDB
+- [Filipe Lima](https://x.com/filipeslima) at Jscrambler
+- [Kate Trahan](https://x.com/Katerade4) at Logrocket
+- [Austin Kodra](https://x.com/austin_kodra) at Fritz AI & Heartbeat
+- [Nick Selman](https://x.com/nickselman) at Draftbit
+- [Margo McCabe](https://x.com/margo_hdb) at HarperDB
 
 Without their feedback and honest review, their perspective on what works and what doesn't, I would have never been able to improve in the skill of writing. Most blog posts that you get to read on this blog or on their publications would never have been in the readable format and would have never seen the light of getting published.
 
@@ -108,11 +108,11 @@ Continued to maintain the [expo-community project on integrating Firebase SDK in
 
 ## Newsletter saga continues 💌
 
-I run [a weekly newsletter](https://amanhimself.substack.com/) that is of late, has become a bi-weekly newsletter due to my inconsistency of publishing blog posts. I don't send out newsletters when I don't have anything to share in terms of blog articles or tutorials. I don't like getting spam and I don't want to spam anyone. I started taking sending out newsletters seriously in 2019 and at the end of that year, I had [845 subscribers](https://twitter.com/amanhimself/status/1201933182070874112). This year, it did manage to grow to 1201 subscribers. I did not count how many newsletters in total I send out and now it's too late.
+I run [a weekly newsletter](https://amanhimself.substack.com/) that is of late, has become a bi-weekly newsletter due to my inconsistency of publishing blog posts. I don't send out newsletters when I don't have anything to share in terms of blog articles or tutorials. I don't like getting spam and I don't want to spam anyone. I started taking sending out newsletters seriously in 2019 and at the end of that year, I had [845 subscribers](https://x.com/amanhimself/status/1201933182070874112). This year, it did manage to grow to 1201 subscribers. I did not count how many newsletters in total I send out and now it's too late.
 
-I did move from [Tinyletter](http://tinyletter.com/) to [Substack](https://substack.com/). After using Tinyletter for 22 months, I was missing out on somethings, but importantly, I was not able to provide a good reading experience to my readers who open the email they receive and spend time reading it. Both are free, but I find Substack has a more modern UI and a pleasing to the eye approach. Thanks to my friend [Alex Kallaway](https://twitter.com/ka11away) for making me realize this and convincing me to make the move.
+I did move from [Tinyletter](http://tinyletter.com/) to [Substack](https://substack.com/). After using Tinyletter for 22 months, I was missing out on somethings, but importantly, I was not able to provide a good reading experience to my readers who open the email they receive and spend time reading it. Both are free, but I find Substack has a more modern UI and a pleasing to the eye approach. Thanks to my friend [Alex Kallaway](https://x.com/ka11away) for making me realize this and convincing me to make the move.
 
-I also took a free seven day email course called [**Blogging for Devs**](https://bloggingfordevs.com/) created [Monica Lent](https://twitter.com/monicalent). Without giving too much away, I learned a great deal from it. She is an inspiration to me because, in 2019, her income from blogging enabled her to quit her day job and pursue her own journey of bootstrapping a SaaS company. Reading her emails made me realize what I was doing wrong and how can I improve on some of the things I do.
+I also took a free seven day email course called [**Blogging for Devs**](https://bloggingfordevs.com/) created [Monica Lent](https://x.com/monicalent). Without giving too much away, I learned a great deal from it. She is an inspiration to me because, in 2019, her income from blogging enabled her to quit her day job and pursue her own journey of bootstrapping a SaaS company. Reading her emails made me realize what I was doing wrong and how can I improve on some of the things I do.
 
 ## Coffee ☕️
 

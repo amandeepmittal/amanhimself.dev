@@ -32,7 +32,7 @@ In 2018, I made my first open-source contribution by writing a Twitter Bot for f
 My journey in technical writing started on [Medium](https://medium.com/@amanhimself) in 2017. Since then, I’ve:
 
 - Become an [AWS Amplify Community contributor](https://amplify.aws/community/contributors) in 2019.
-- Reached over 2 million views on [Medium](https://twitter.com/amanhimself/status/1285554115464982528) by July 2020.
+- Reached over 2 million views on [Medium](https://x.com/amanhimself/status/1285554115464982528) by July 2020.
 - Been recognized as a Distinguished Author and moderator by [Dev.to](https://dev.to/amanhimself) in December 2020.
 - Had my work featured as an official resource by Google’s [Dev Library](https://devlibrary.withgoogle.com/products/firebase) in 2021.
 - Written over 100 articles and tutorials for more than 30 organizations and tech publications by 2022.
@@ -47,7 +47,7 @@ Some of my blog articles and tutorials have featured in esteemed Newsletters: [N
 
 I’ve shared my knowledge at various events:
 
-- **2023:** [Workshop on developing and deploying React Native apps with Expo and EAS](https://twitter.com/appjsconf/status/1653746880738742272) at App.js 2023.
+- **2023:** [Workshop on developing and deploying React Native apps with Expo and EAS](https://x.com/appjsconf/status/1653746880738742272) at App.js 2023.
 - **2021:** Talks on [Build Low-Code Apps using Hasura & Draftbit](https://www.youtube.com/watch?v=WrhQKt5-QY8), [Building Attractive UIs with Draftbit at Explore Hacks](https://www.youtube.com/watch?v=h9kWdOyQrSw), [Getting Started with Drafitbit- Aman Mittal at Hack The Mountains 2.O](https://www.youtube.com/watch?v=bIXQYrBd1DE), [The Rise of No-Code and a Guide to Using Draftbit](https://www.youtube.com/watch?v=sSbAuEcjjJA).
 - **2020:** Session on [writing consistently at Hashnode’s Technical Writing Bootcamp](https://www.youtube.com/watch?v=YIRxTUCY0NQ).
 - **2018:** [Podcast on setting up and getting used to Gatsby](https://dev.to/reactroundup/rru-006-setting-up-and-getting-used-to-gatsby-with-aman-mittal) with Charles Max Wood, Cory House, Tara Manicsic, and Kent C. Dodds.

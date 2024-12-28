@@ -18,7 +18,7 @@ Right now, I'm still trying to balance my life and work and find a way to fit th
 
 ## Starting the year with a new job
 
-I started the year by switching jobs in a new role as a [Senior Content Developer at Vercel](https://twitter.com/amanhimself/status/1488351029708341251).
+I started the year by switching jobs in a new role as a [Senior Content Developer at Vercel](https://x.com/amanhimself/status/1488351029708341251).
 
 I was excited to work full-time on the docs team. In the past year, I have often felt like I have been working towards this career path. I started at the end of January and left it at the end of April.
 
@@ -32,7 +32,7 @@ Meeting with beautiful and like-minded people who share their work and interesti
 
 ![Me with friends at the App.js conference in June 2022](https://2022.appjs.co/images/photos/0014.jpg)
 
-[It was a wonderful experience to attend it in person](https://twitter.com/amanhimself/status/1535694759653740547), meet old friends, make new ones and travel once again. Everything from the venue, the beautiful city of Krakow, the quality talks, and the MCs, was a great experience. Kudos to the organizers for hosting it and providing that altogether!
+[It was a wonderful experience to attend it in person](https://x.com/amanhimself/status/1535694759653740547), meet old friends, make new ones and travel once again. Everything from the venue, the beautiful city of Krakow, the quality talks, and the MCs, was a great experience. Kudos to the organizers for hosting it and providing that altogether!
 
 ## Joining Expo
 
