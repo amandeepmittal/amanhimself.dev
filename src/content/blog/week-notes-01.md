@@ -29,3 +29,9 @@ As 2024 comes to an end, I am starting to write Week Notes. Since this is my fir
 
 - Finished book 54: Breakfast with Seneca by David Fideler. Started reading it on Christmas day. I liked how they focused on twelve to thirteen Seneca's letters for the book's core. It has some references from Epictetus and Marcus Aurelius, but you cannot go without it when reading or writing a book, Stoicism.
 - Finished book 55: The Art of Note-taking by Thinknetic. It was okay. The five note-taking strategies discussed in the book, the sentence-based note-taking technique, stood out. I learned about myself that I already do that sometimes (especially during meetings) with a list/outline structure that I follow.
+
+## Photos
+
+One pic of the week is the stats from my Kobo Libra 2 color:
+
+<img src="/images/week-notes/01.jpeg" alt="Weekly Kobo Libra 2 stats" width="360">
