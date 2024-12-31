@@ -5,7 +5,7 @@ const robots = `
 User-agent: *
 Allow: /
 
-Sitemap: ${new URL('/sitemap.xml', SITE.website).href}
+Sitemap: ${new URL('/sitemap-0.xml', SITE.website).href}
 `.trim();
 
 export const GET: APIRoute = () =>
