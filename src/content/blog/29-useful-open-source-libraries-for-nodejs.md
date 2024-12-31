@@ -1,5 +1,5 @@
 ---
-title: "Top open source libraries for Node.js"
+title: 'Top open source libraries for Node.js'
 author: Aman Mittal
 pubDatetime: 2019-01-31T03:01:50Z
 slug: useful-open-source-libraries-for-nodejs
@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - nodejs
-description: ""
+description: ''
 ---
 
 ![cover_image](https://i.imgur.com/Yv3yfrm.png)
@@ -59,11 +59,11 @@ GraphicsMagick and ImageMagick are two popular tools for creating, editing, comp
 - encoding
 
 ```js
-var fs = require("fs"),
-  gm = require("gm").subClass({ imageMagick: true });
+var fs = require('fs'),
+  gm = require('gm').subClass({ imageMagick: true });
 
 // resize and remove EXIF profile data
-gm("/path/to/my/img.jpg").resize(240, 240);
+gm('/path/to/my/img.jpg').resize(240, 240);
 ```
 
 [**aheckmann/gm**](https://github.com/aheckmann/gm)
@@ -89,7 +89,7 @@ sharp('input.jpg')
 
 The CSV (comma-separated values) format is often used when interchanging table-based data. For example, Microsoft Excel allows you to export or import your data in that format. `node-csv` simplifies the process of working with CSV data in a server side application.
 
-node-sv provides functionalities for generating, parsing, transforming and stringifying CSV and uses streams API for that. It also comes with a callback API, a stream API and a synchronous API to fullfil your needs.
+node-sv provides functionalities for generating, parsing, transforming and stringifying CSV and uses streams API for that. It also comes with a callback API, a stream API and a synchronous API to fulfil your needs.
 
 [**adaltas/node-csv**](https://github.com/adaltas/node-csv)
 
@@ -139,13 +139,13 @@ This is a utility library that provides extra functionalities such as iteration,
 
 ```js
 // Load the full build.
-const _ = require("lodash");
+const _ = require('lodash');
 
 // Load the core build.
-const _ = require("lodash/core");
+const _ = require('lodash/core');
 
 // Load the FP build for immutable auto-curried iteratee-first data-last methods.
-const fp = require("lodash/fp");
+const fp = require('lodash/fp');
 ```
 
 [**lodash/lodash**](https://github.com/lodash/lodash)
@@ -168,7 +168,7 @@ Most of the above enlisted features have ae absent from native `fetch` JavaScrip
 ```js
 async function getUser() {
   try {
-    const response = await axios.get("/user?ID=54321");
+    const response = await axios.get('/user?ID=54321');
     console.log(response);
   } catch (error) {
     console.error(error);
@@ -183,10 +183,10 @@ This is a library that enables bi-directional communication in real time by usin
 Other features include auto-connection support where unless instructed otherwise a disconnected client will try to reconnect forever until the server is available again. Used by organizations such as Microsoft, Zendesk, and Trello it also includes real-time analytics with counters, logs and charts and has a variety of use cases in IoT.
 
 ```js
-io.on("connection", socket => {
-  socket.emit("request" /* … */); // emit an event to the socket
-  io.emit("broadcast" /* … */); // emit an event to all connected sockets
-  socket.on("reply", () => {
+io.on('connection', socket => {
+  socket.emit('request' /* … */); // emit an event to the socket
+  io.emit('broadcast' /* … */); // emit an event to all connected sockets
+  socket.on('reply', () => {
     /* … */
   }); // listen to the event
 });
@@ -211,7 +211,7 @@ This makes it very easy to handle and validate data at the application level bef
 Joi is used to validate schema objects with additional rules provided by its own API. Moreover, it works with any Nodejs framework rather than just HapiJS.
 
 ```js
-const Joi = require("joi");
+const Joi = require('joi');
 
 const schema = Joi.object()
   .keys({
@@ -219,10 +219,10 @@ const schema = Joi.object()
     password: Joi.string().regex(/^[a-zA-Z0-9]{3,30}$/),
     access_token: [Joi.string(), Joi.number()],
     birthyear: Joi.number().integer().min(1900).max(2013),
-    email: Joi.string().email({ minDomainAtoms: 2 }),
+    email: Joi.string().email({ minDomainAtoms: 2 })
   })
-  .with("username", "birthyear")
-  .without("password", "access_token");
+  .with('username', 'birthyear')
+  .without('password', 'access_token');
 ```
 
 [**hapijs/joi**](https://github.com/hapijs/joi)
@@ -234,20 +234,20 @@ Whether you want to work with TypeScript enabled Nodejs server or make use of la
 For example, a typical connection to a database using TypeORM looks like:
 
 ```js
-import "reflect-metadata";
-import { createConnection } from "typeorm";
-import { Photo } from "./entity/Photo";
+import 'reflect-metadata';
+import { createConnection } from 'typeorm';
+import { Photo } from './entity/Photo';
 
 createConnection({
-  type: "mysql",
-  host: "localhost",
+  type: 'mysql',
+  host: 'localhost',
   port: 3306,
-  username: "root",
-  password: "admin",
-  database: "test",
+  username: 'root',
+  password: 'admin',
+  database: 'test',
   entities: [Photo],
   synchronize: true,
-  logging: false,
+  logging: false
 })
   .then(connection => {
     // here you can start to work with your entities
@@ -283,13 +283,13 @@ MongoDB is a commonly used NoSQL database in Nodejs applications. It stores the 
 Mongoose is an Object Data Modelling (ODM) library for MongoDB and Node.js. It manages relationships between data, provides schema validation, and is used to translate between objects in code and the representation of those objects in MongoDB.
 
 ```js
-const mongoose = require("mongoose");
-mongoose.connect("mongodb://localhost:27017/test", { useNewUrlParser: true });
+const mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost:27017/test', { useNewUrlParser: true });
 
-const Cat = mongoose.model("Cat", { name: String });
+const Cat = mongoose.model('Cat', { name: String });
 
-const kitty = new Cat({ name: "Zildjian" });
-kitty.save().then(() => console.log("meow"));
+const kitty = new Cat({ name: 'Zildjian' });
+kitty.save().then(() => console.log('meow'));
 ```
 
 [**Automattic/mongoose**](https://github.com/Automattic/mongoose)
@@ -299,11 +299,11 @@ kitty.save().then(() => console.log("meow"));
 Mocha.js is a JavaScript test framework based on Node.js. It enables you to test both in console and in the browser. You can use this really fast testing suite to do the unit and integration testing plus it works with testing patterns such as TDD (_Test-Driven Development_) and BDD (_Behavior Driven Development_). Mocha works well with other assertion libraries such as Chai, Sinon, Should.js. This is an advantage and the reason for its popularity.
 
 ```js
-const assert = require("assert");
+const assert = require('assert');
 
-describe("Array", function () {
-  describe("#indexOf()", function () {
-    it("should return -1 when the value is not present", function () {
+describe('Array', function () {
+  describe('#indexOf()', function () {
+    it('should return -1 when the value is not present', function () {
       assert.equal([1, 2, 3].indexOf(4), -1);
     });
   });
@@ -392,7 +392,7 @@ Another open source Content Management System for Nodejs application, Strapi has
 When we start to build an application, we generally do not want to worry much about data. To create a database and fill it with sample data seems much of a hassle to me personally.
 
 ```js
-var faker = require("faker");
+var faker = require('faker');
 
 var randomName = faker.name.findName(); // Rowan Nikolaus
 var randomEmail = faker.internet.email(); // Kassandra.Haley@erich.biz

@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - react-native
-description: ""
+description: ''
 ---
 
 React Native when used with Expo as a toolchain eases out the common pain to manage ios and android applications. After saying that, I realized that there is a delight to use this ever-growing open source mobile application framework. Expo has gained a lot of credibility as a framework to provide collective solutions to build React Native applications by lowering the time and effort of the developer using it. They are continuing to enhance it from time to time and keeping up with the latest changes in React Native community. That said, Expo SDK33 is a blast.
@@ -49,13 +49,13 @@ The last step needed is to have some sound files saved in your `assets` folder. 
 You might have got the idea of what the user interface is going to look while having a glimpse at the demo in the previous section. For each button, you are going to need a different color. Hence, create a new file called `contants/Colors.js` and add the following code.
 
 ```js
-export const NoteOne = "red";
-export const NoteTwo = "orange";
-export const NoteThree = "yellow";
-export const NoteFour = "green";
-export const NoteFive = "#00FFFF    ";
-export const NoteSix = "#000080";
-export const NoteSeven = "#B266FF";
+export const NoteOne = 'red';
+export const NoteTwo = 'orange';
+export const NoteThree = 'yellow';
+export const NoteFour = 'green';
+export const NoteFive = '#00FFFF    ';
+export const NoteSix = '#000080';
+export const NoteSeven = '#B266FF';
 ```
 
 Require this file and all the Color codes inside `App.js` file after other imports.
@@ -70,21 +70,21 @@ import {
   NoteFour,
   NoteFive,
   NoteSix,
-  NoteSeven,
-} from "./constants/Colors";
+  NoteSeven
+} from './constants/Colors';
 ```
 
 The color names are specified to mark each audio file which is named and numbered similarly. To import all the sounds file needed to build the application from the `assets` folder. Add the below object before the `App` component as shown.
 
 ```js
 const xyloSounds = {
-  one: require("./assets/note1.wav"),
-  two: require("./assets/note2.wav"),
-  three: require("./assets/note3.wav"),
-  four: require("./assets/note4.wav"),
-  five: require("./assets/note5.wav"),
-  six: require("./assets/note6.wav"),
-  seven: require("./assets/note7.wav"),
+  one: require('./assets/note1.wav'),
+  two: require('./assets/note2.wav'),
+  three: require('./assets/note3.wav'),
+  four: require('./assets/note4.wav'),
+  five: require('./assets/note5.wav'),
+  six: require('./assets/note6.wav'),
+  seven: require('./assets/note7.wav')
 };
 ```
 
@@ -95,7 +95,7 @@ The above object `xyloSounds` consist of the path to each sound file. This will 
 In this section, you are going to create a button using `TouchableOpacity` that is going to play the sound for the note when pressed. To start, make sure in the file `App.js` you have imported the following APIs from the react-native core.
 
 ```js
-import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
+import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 ```
 
 Then, you have to modify the contents of the `render` function from the default, boilerplate text that any Expo application comes with. This is going to be done by creating a `View` container for each button, which will have a fixed height and margin of value `5` to add some spacing between the buttons.
@@ -105,7 +105,7 @@ Then, you have to modify the contents of the `render` function from the default,
   <View style={styles.buttonContainer}>
     <TouchableOpacity
       style={[styles.button, { backgroundColor: NoteOne }]}
-      onPress={() => this.handlePlaySound("one")}
+      onPress={() => this.handlePlaySound('one')}
     >
       <Text style={styles.buttonText}>Note 1</Text>
     </TouchableOpacity>
@@ -121,22 +121,22 @@ The above snippet is followed by the styles that are created using `StyleSheet.c
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
-    marginTop: 50,
+    backgroundColor: '#fff',
+    marginTop: 50
   },
   buttonContainer: {
     height: 40,
-    margin: 5,
+    margin: 5
   },
   button: {
     flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
+    alignItems: 'center',
+    justifyContent: 'center'
   },
   buttonText: {
-    color: "#fff",
-    fontSize: 18,
-  },
+    color: '#fff',
+    fontSize: 18
+  }
 });
 ```
 
@@ -149,7 +149,7 @@ To see the current state of the application in action, go back to the terminal w
 To play a sound in an Expo application, you are required to first the API for the `Audio` from `expo-av`. So at the top of the `App.js` file and after other imports, you can add the following line.
 
 ```js
-import { Audio } from "expo-av";
+import { Audio } from 'expo-av';
 ```
 
 Next, you have to add the method `handlePlaySound` inside the `App` function and before the `render()` method. Inside this function, create a new sound object. Whenever you are required to play sound using `expo-av` library, you have to create a new object. This object is going to represent the instance of the class `Audio.sound`.
@@ -159,7 +159,7 @@ handlePlaySound = async note => {
   const soundObject = new Audio.Sound();
 
   try {
-    let source = require("./assets/note1.wav");
+    let source = require('./assets/note1.wav');
     await soundObject.loadAsync(source);
     await soundObject
       .playAsync()
@@ -191,9 +191,9 @@ To complete building the application, you have to read the path of each file fro
 Also, add the button for each note and do not forget to pass the correct source value inside the `onPress()` method. For your reference, here is the complete code of the file `App.js`.
 
 ```js
-import React from "react";
-import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
-import { Audio } from "expo-av";
+import React from 'react';
+import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import { Audio } from 'expo-av';
 
 import {
   NoteOne,
@@ -202,17 +202,17 @@ import {
   NoteFour,
   NoteFive,
   NoteSix,
-  NoteSeven,
-} from "./constants/Colors";
+  NoteSeven
+} from './constants/Colors';
 
 const xyloSounds = {
-  one: require("./assets/note1.wav"),
-  two: require("./assets/note2.wav"),
-  three: require("./assets/note3.wav"),
-  four: require("./assets/note4.wav"),
-  five: require("./assets/note5.wav"),
-  six: require("./assets/note6.wav"),
-  seven: require("./assets/note7.wav"),
+  one: require('./assets/note1.wav'),
+  two: require('./assets/note2.wav'),
+  three: require('./assets/note3.wav'),
+  four: require('./assets/note4.wav'),
+  five: require('./assets/note5.wav'),
+  six: require('./assets/note6.wav'),
+  seven: require('./assets/note7.wav')
 };
 
 export default function App() {
@@ -243,7 +243,7 @@ export default function App() {
       <View style={styles.buttonContainer}>
         <TouchableOpacity
           style={[styles.button, { backgroundColor: NoteOne }]}
-          onPress={() => this.handlePlaySound("one")}
+          onPress={() => this.handlePlaySound('one')}
         >
           <Text style={styles.buttonText}>Note 1</Text>
         </TouchableOpacity>
@@ -251,7 +251,7 @@ export default function App() {
       <View style={styles.buttonContainer}>
         <TouchableOpacity
           style={[styles.button, { backgroundColor: NoteTwo }]}
-          onPress={() => this.handlePlaySound("two")}
+          onPress={() => this.handlePlaySound('two')}
         >
           <Text style={styles.buttonText}>Note 2</Text>
         </TouchableOpacity>
@@ -259,7 +259,7 @@ export default function App() {
       <View style={styles.buttonContainer}>
         <TouchableOpacity
           style={[styles.button, { backgroundColor: NoteThree }]}
-          onPress={() => this.handlePlaySound("three")}
+          onPress={() => this.handlePlaySound('three')}
         >
           <Text style={styles.buttonText}>Note 3</Text>
         </TouchableOpacity>
@@ -267,7 +267,7 @@ export default function App() {
       <View style={styles.buttonContainer}>
         <TouchableOpacity
           style={[styles.button, { backgroundColor: NoteFour }]}
-          onPress={() => this.handlePlaySound("four")}
+          onPress={() => this.handlePlaySound('four')}
         >
           <Text style={styles.buttonText}>Note 4</Text>
         </TouchableOpacity>
@@ -275,7 +275,7 @@ export default function App() {
       <View style={styles.buttonContainer}>
         <TouchableOpacity
           style={[styles.button, { backgroundColor: NoteFive }]}
-          onPress={() => this.handlePlaySound("five")}
+          onPress={() => this.handlePlaySound('five')}
         >
           <Text style={styles.buttonText}>Note 5</Text>
         </TouchableOpacity>
@@ -283,7 +283,7 @@ export default function App() {
       <View style={styles.buttonContainer}>
         <TouchableOpacity
           style={[styles.button, { backgroundColor: NoteSix }]}
-          onPress={() => this.handlePlaySound("six")}
+          onPress={() => this.handlePlaySound('six')}
         >
           <Text style={styles.buttonText}>Note 6</Text>
         </TouchableOpacity>
@@ -291,7 +291,7 @@ export default function App() {
       <View style={styles.buttonContainer}>
         <TouchableOpacity
           style={[styles.button, { backgroundColor: NoteSeven }]}
-          onPress={() => this.handlePlaySound("seven")}
+          onPress={() => this.handlePlaySound('seven')}
         >
           <Text style={styles.buttonText}>Note 7</Text>
         </TouchableOpacity>
@@ -303,22 +303,22 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
-    marginTop: 50,
+    backgroundColor: '#fff',
+    marginTop: 50
   },
   buttonContainer: {
     height: 40,
-    margin: 5,
+    margin: 5
   },
   button: {
     flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
+    alignItems: 'center',
+    justifyContent: 'center'
   },
   buttonText: {
-    color: "#fff",
-    fontSize: 18,
-  },
+    color: '#fff',
+    fontSize: 18
+  }
 });
 ```
 
@@ -326,7 +326,7 @@ Now run the application in the simulator, and you will get the following screen.
 
 <img src='https://miro.medium.com/max/350/1*YE5sb3gX_ValSM48QGT1eQ.png' />
 
-## Conlusion
+## Conclusion
 
 You have reached the end of this tutorial. I hope you have learned how to integrate the `expo-av` library to use `Audio` class to create functionality in your cross-platform applications and play audio media files. Important things to notice in this demo application is how to use available methods like `loadAsync()`, `unloadAsync()` and leverage the duration of the playing media using the object `playplaybackStatus`.
 

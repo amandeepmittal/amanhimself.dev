@@ -7,10 +7,10 @@ featured: false
 draft: false
 tags:
   - react-native
-description: ""
+description: ''
 ---
 
-The _RCTBridge required dispatch_sync to load RCTDevLoadingView_ has become a common occurence when developing React Native apps with version `0.64` and `0.65`.
+The _RCTBridge required dispatch_sync to load RCTDevLoadingView_ has become a common occurrence when developing React Native apps with version `0.64` and `0.65`.
 
 ![ss1](https://i.imgur.com/IqzhnvQ.png)
 

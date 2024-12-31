@@ -1,5 +1,5 @@
 ---
-title: "Build a Progressive Web App using React"
+title: 'Build a Progressive Web App using React'
 author: Aman Mittal
 pubDatetime: 2018-02-01T03:42:51Z
 slug: build-a-progressive-web-app-using-react
@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - reactjs
-description: ""
+description: ''
 ---
 
 > [Originally this article was published on Zeolearn.com](https://www.zeolearn.com/magazine/an-introduction-to-progressive-web-apps-pwa)
@@ -81,12 +81,12 @@ The boilerplate code will and look like this:
 Since the sole purpose of this guide is to make you familiar with the build process, I am not going to work out a complex application. For sake of simplicity and your precious time, we will build a simple app. Go to `src/App.js` file and make amendments exactly like below:
 
 ```js
-import React, { Component } from "react";
-import { BrowserRouter, Route, Link } from "react-router-dom";
-import logo from "./logo.svg";
-import "./App.css";
-import Home from "./components/Home";
-import About from "./components/About";
+import React, { Component } from 'react';
+import { BrowserRouter, Route, Link } from 'react-router-dom';
+import logo from './logo.svg';
+import './App.css';
+import Home from './components/Home';
+import About from './components/About';
 
 class App extends Component {
   render() {
@@ -114,8 +114,8 @@ In above we are including two pages using `react-router-dom.`Further we define *
 For `Home.js`:
 
 ```js
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 const home = () => {
   return (
@@ -134,8 +134,8 @@ export default home;
 And for `About.js`:
 
 ```js
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 const about = () => {
   return (
@@ -183,16 +183,16 @@ In the `public` directory of our app structure, create a file `service-worker.js
 ```js
 var doCache = false;
 
-var CACHE_NAME = "my-pwa-cache-v1";
+var CACHE_NAME = 'my-pwa-cache-v1';
 
-self.addEventListener("activate", event => {
+self.addEventListener('activate', event => {
   const cacheWhitelist = [CACHE_NAME];
   event.waitUntil(
     caches.keys().then(keyList =>
       Promise.all(
         keyList.map(key => {
           if (!cacheWhitelist.includes(key)) {
-            console.log("Deleting cache: " + key);
+            console.log('Deleting cache: ' + key);
             return caches.delete(key);
           }
         })
@@ -201,25 +201,25 @@ self.addEventListener("activate", event => {
   );
 });
 
-self.addEventListener("install", function (event) {
+self.addEventListener('install', function (event) {
   if (doCache) {
     event.waitUntil(
       caches.open(CACHE_NAME).then(function (cache) {
-        fetch("manifest.json")
+        fetch('manifest.json')
           .then(response => {
             response.json();
           })
           .then(assets => {
-            const urlsToCache = ["/", assets["main.js"]];
+            const urlsToCache = ['/', assets['main.js']];
             cache.addAll(urlsToCache);
-            console.log("cached");
+            console.log('cached');
           });
       })
     );
   }
 });
 
-self.addEventListener("fetch", function (event) {
+self.addEventListener('fetch', function (event) {
   if (doCache) {
     event.respondWith(
       caches.match(event.request).then(function (response) {
@@ -234,19 +234,19 @@ Our next step is to register the our service worker by loading the one we just w
 
 ```html
 <script>
-  if ("serviceWorker" in navigator) {
-    window.addEventListener("load", function () {
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function () {
       navigator.serviceWorker
-        .register("service-worker.js")
+        .register('service-worker.js')
         .then(
           function (registration) {
             console.log(
-              "ServiceWorker registration successful with scope: ",
+              'ServiceWorker registration successful with scope: ',
               registration.scope
             );
           },
           function (err) {
-            console.log("ServiceWorker registration failed: ", err);
+            console.log('ServiceWorker registration failed: ', err);
           }
         )
         .catch(function (err) {
@@ -254,7 +254,7 @@ Our next step is to register the our service worker by loading the one we just w
         });
     });
   } else {
-    console.log("service worker is not supported");
+    console.log('service worker is not supported');
   }
 </script>
 ```
@@ -385,7 +385,7 @@ For this purpose, we are going to edit `public/manifest.json`:
 
 Let’s talk about this file a bit. The `short_name` is the name of app that will appear on Home Screen of device. `name` will appear on the splash screen. `icons` is important and is the main icon of our app and will appear along the `short_name` on home screen, just like a native mobile application. The size of the icon must be `192x192`. I haven't played around with other image formats but you can. [Here](https://i.imgur.com/RaN7Qey.png) is the link to a dummy logo for this walkthrough we are working on. Add it to the `public` directory. The 512 setting is for splash screen and is a requirement in auditing process. So here is the [link](https://i.imgur.com/TmblrhM.png) to download that.
 
-Next is `start_url` that notifies that the app was started frome Home Screen. Below it there are three more properties. `display` is for the appearance of the app, and I am making `theme_color` and `background_color` to be same since I want the application to match header background.
+Next is `start_url` that notifies that the app was started from Home Screen. Below it there are three more properties. `display` is for the appearance of the app, and I am making `theme_color` and `background_color` to be same since I want the application to match header background.
 
 We will now solve one of our issue in the previous audit. We are left with only some of them to resolve.
 

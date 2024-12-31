@@ -14,7 +14,7 @@ The [Atom](http://atom.io/) I am talking about is not a small particle in the wo
 
 In our world, in the world of developers, an editor plays an amount of significant role when it comes to writing code. They might seem just a tool, as a matter of fact, they are, but for someone who takes pleasure in writing code, it is an essential piece in their setup.
 
-Using an editor is really a matter of choice, your comfort zone but the game of plugins have a big role to play. As yourself, I have tried my hands on different editors & IDEs and for now I have decide to settle with Atom for its enormous amount of plugins available. Another reason for me is that it’s written in JavaScript (exactly CoffeScript & since I am a JS enthusiast) and is completely free to use because of its open source normality.
+Using an editor is really a matter of choice, your comfort zone but the game of plugins have a big role to play. As yourself, I have tried my hands on different editors & IDEs and for now I have decide to settle with Atom for its enormous amount of plugins available. Another reason for me is that it’s written in JavaScript (exactly CoffeeScript & since I am a JS enthusiast) and is completely free to use because of its open source normality.
 
 It is inspiring to open-source community as well. Few months back, Facebook released there version called Nuclide which focus more on mobile development. Then there is Electron for building cross-platform desktop application. Both are based on Atom Shell.
 
