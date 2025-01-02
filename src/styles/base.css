@@ -57,7 +57,6 @@
     prose-figcaption:!text-skin-base prose-figcaption:opacity-70
     prose-strong:!text-skin-base
 
-
     prose-code:rounded prose-code:bg-skin-card
     prose-code:bg-opacity-75 prose-code:p-1
     prose-code:before:!content-none prose-code:after:!content-none
@@ -69,6 +68,10 @@
     prose-img:mx-auto prose-img:border-2
     prose-img:border-skin-line prose-hr:!border-skin-line;
   }
+
+  .prose p {
+    @apply my-1;
+  }
   .prose a {
     @apply break-words hover:!text-skin-accent;
   }
@@ -76,6 +79,10 @@
   tbody td:first-child,
   tfoot td:first-child {
     padding-left: 0.5714286em;
+  }
+
+  .prose h3 {
+    @apply my-3;
   }
   .prose h2#table-of-contents {
     @apply mb-2;
