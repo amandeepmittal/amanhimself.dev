@@ -48,7 +48,7 @@ While I don’t intend to undertake significant customizations, I’ve discovere
 
 Since I have been bad at capturing screenshots and keeping a historical record of how this blog has looked, here is one from 2024:
 
-<img src="/images/old-blog.png" alt="amanhimself.dev's landing pages screenshot." width="600px" />
+<img src="/images/old-blog.png" alt="amanhimself.dev's landing pages screenshot." class="sm:w-2/3 mx-auto" />
 
 ## Looking forward
 
