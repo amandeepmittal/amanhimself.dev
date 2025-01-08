@@ -70,7 +70,7 @@
   }
 
   .prose p {
-    @apply my-1;
+    @apply my-2;
   }
   .prose a {
     @apply break-words hover:!text-skin-accent;
