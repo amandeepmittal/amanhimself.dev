@@ -54,7 +54,7 @@ Since I have been bad at capturing screenshots and keeping a historical record o
 
 These migrations over the years have taught me valuable lessons about static-site web development and why simpler is often better for personal projects like this blog. While it is tempting to use the latest and most flexible frameworks, what matters most is having a stable platform that allows you to focus on writing more than maintenance.
 
-Some key takeaways from this migration reflection:
+Some key takeaways from this migration:
 
 - Start with your core needs. A blog primarily needs good content management. Usually, a blog like this is all about putting content in markdown files, and those files are sourced from one folder.
 
