@@ -143,4 +143,4 @@ After installing the latest version, to re-install any global packages installed
 nvm install node --reinstall-packages-from=node
 ```
 
-Then, [uninstall the previous Node.js version](#uninstall-a-node.js-version).
+Then, [uninstall the previous Node.js version](#uninstall-a-nodejs-version).
