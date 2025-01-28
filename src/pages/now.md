@@ -11,7 +11,7 @@ _Location: New Delhi, India_
 
 - I'm currently working as a documentation lead at Expo. My work mostly resolves around managing the content side of [docs.expo.dev](https://docs.expo.dev) as well contribute to it, among other hats I wear at my day job.
 - My interest in technology currently includes blogging, documentation-as-code, technical writing, and mobile apps.
-- 🕹️ Playing: The Legend of Zelda: Breath of the Wild and Disco Elysium
+- 🕹️ Playing: The Legend of Zelda: Breath of the Wild and Celeste
 - 📚 Reading: Check out my [Goodreads](https://www.goodreads.com/author/show/17657541.Aman_Mittal)
 - Trying to write everyday in my free time so this blog doesn't get trivialize.
 
