@@ -13,7 +13,7 @@ _Location: New Delhi, India_
 - My interest in technology currently includes blogging, documentation-as-code, technical writing, and mobile apps.
 - 🕹️ Playing: The Legend of Zelda: Breath of the Wild and Celeste
 - 📚 Reading: Check out my [Goodreads](https://www.goodreads.com/author/show/17657541.Aman_Mittal)
-- Trying to write everyday in my free time so this blog doesn't get trivialize.
+- Trying to write every week in my free time so this blog doesn't get trivialize.
 
 ## What is this page, anyways?
 
