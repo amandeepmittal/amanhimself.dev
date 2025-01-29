@@ -7,6 +7,7 @@ featured: false
 draft: false
 tags:
   - react-native
+  - react-query
 description: ''
 ---
 
