@@ -3,7 +3,7 @@ layout: ../layouts/GenericLayout.astro
 title: 'Now'
 ---
 
-_Last Update: December 17, 2024_
+_Last Update: January 28, 2025_
 
 ## What I am doing now?
 
