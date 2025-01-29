@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - tech-writing
-  - notes
+  - cli
 description: ''
 ---
 
