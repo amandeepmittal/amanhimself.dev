@@ -7,6 +7,7 @@ featured: false
 draft: false
 tags:
   - blogging
+  - astro
 description: ''
 ---
 
