@@ -2,7 +2,7 @@
 title: My 2024 Macbook setup
 author: Aman Mittal
 pubDatetime: 2024-04-05T03:42:51Z
-modDatetime: 2024-12-27T00:00:01Z
+modDatetime: 2025-01-30T00:00:01Z
 slug: macbook-setup-2024
 featured: false
 draft: false
@@ -375,8 +375,8 @@ VS Code has supported ARM chips since March 13, 2021. Download the [installer fo
   "cSpell.language": "en,en-US",
   "cSpell.enableFiletypes": ["markdown", "mdx"],
   "editor.inlineSuggest.enabled": true,
-  "editor.minimap.enabled": false,
-  "editor.fontSize": 12.5,
+  "editor.minimap.enabled": true,
+  "editor.fontSize": 13,
   "workbench.iconTheme": "catppuccin-latte",
   "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
   "workbench.colorTheme": "Expo Light",
@@ -437,7 +437,13 @@ VS Code has supported ARM chips since March 13, 2021. Download the [installer fo
   "react-native-tools.showUserTips": false,
   "mdx.validate.validateFileLinks": "ignore",
   "workbench.editor.enablePreview": false,
-  "explorer.confirmDelete": false
+  "explorer.confirmDelete": false,
+  "editor.renderLineHighlight": "line",
+  "githubPullRequests.pullBranch": "never",
+  "editor.linkedEditing": true,
+  "workbench.startupEditor": "none",
+  "update.mode": "manual",
+  "telemetry.telemetryLevel": "crash"
 }
 ```
 
