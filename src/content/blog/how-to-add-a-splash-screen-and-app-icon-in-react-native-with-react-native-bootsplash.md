@@ -7,10 +7,10 @@ featured: false
 draft: false
 tags:
   - react-native
-description: ""
+description: ''
 ---
 
-Every mobile application has a splash screen and an app icon, and together they provide the first impression. An app icon is displayed in various places, such as on an app store, on the device's app drawer, etc., whereas a splash screen is shown during the app startup. Adding a splash screen or an app icon to a React Native app can be an agile process.
+Every mobile application has a splash screen and an app icon, and together they provide the first impression. An app icon is displayed in various places, such as on an app store, on the device's app drawer, and so on., whereas a splash screen is shown during the app startup. Adding a splash screen or an app icon to a React Native app can be an agile process.
 
 In this tutorial, let's learn how to use an awesome package called [react-native-bootsplash](https://github.com/zoontek/react-native-bootsplash) to display a splash screen when an app starts and then learn the process of adding app icons in a React Native app.
 
@@ -45,12 +45,12 @@ yarn add @react-navigation/native @react-navigation/native-stack react-native-sa
 Inside `src/` directory, create a new directory called `navigation/` with a new file named `RootNavigator.js`. Add the following code to use the stack navigation pattern inside this file:
 
 ```js
-import * as React from "react";
-import { NavigationContainer } from "@react-navigation/native";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import * as React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-import HomeScreen from "../screens/HomeScreen";
-import DetailScreen from "../screens/DetailScreen";
+import HomeScreen from '../screens/HomeScreen';
+import DetailScreen from '../screens/DetailScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -71,9 +71,9 @@ export default RootNavigator;
 Modify the `App.js` file:
 
 ```js
-import React from "react";
+import React from 'react';
 
-import RootNavigator from "./src/navigation/RootNavigator";
+import RootNavigator from './src/navigation/RootNavigator';
 
 const App = () => {
   return <RootNavigator />;
@@ -85,8 +85,8 @@ export default App;
 Now, let’s create two new screens. Start by creating a new directory called `src/screens/` and inside it, add the first file with the name `HomeScreen.js` and with the following code snippet:
 
 ```js
-import React from "react";
-import { View, Text, StyleSheet, Pressable } from "react-native";
+import React from 'react';
+import { View, Text, StyleSheet, Pressable } from 'react-native';
 
 const HomeScreen = ({ navigation }) => {
   return (
@@ -94,7 +94,7 @@ const HomeScreen = ({ navigation }) => {
       <Text style={styles.title}>Home Screen</Text>
       <Pressable
         style={styles.buttonStyle}
-        onPress={() => navigation.navigate("Details")}
+        onPress={() => navigation.navigate('Details')}
       >
         <Text style={styles.buttonTextStyle}>Go To Detail Screen</Text>
       </Pressable>
@@ -105,33 +105,33 @@ const HomeScreen = ({ navigation }) => {
 const styles = StyleSheet.create({
   screenContainer: {
     flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "#fff",
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#fff'
   },
   title: {
-    fontSize: 32,
+    fontSize: 32
   },
   buttonStyle: {
     height: 54,
-    width: "80%",
+    width: '80%',
     marginTop: 32,
     borderRadius: 8,
-    alignItems: "center",
-    justifyContent: "center",
-    backgroundColor: "#2EE59D",
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: '#2EE59D',
     shadowRadius: 5,
     shadowOpacity: 0.7,
-    shadowColor: "rgba(46, 229, 157, 0.5)",
+    shadowColor: 'rgba(46, 229, 157, 0.5)',
     shadowOffset: {
       width: 0,
-      height: 3,
-    },
+      height: 3
+    }
   },
   buttonTextStyle: {
-    color: "#fdfdfd",
-    fontWeight: "700",
-  },
+    color: '#fdfdfd',
+    fontWeight: '700'
+  }
 });
 
 export default HomeScreen;
@@ -140,8 +140,8 @@ export default HomeScreen;
 Now, add the second screen component file, `DetailScreen.js`, and the following code snippet:
 
 ```js
-import React from "react";
-import { View, Text, StyleSheet, Pressable } from "react-native";
+import React from 'react';
+import { View, Text, StyleSheet, Pressable } from 'react-native';
 
 const DetailScreen = ({ navigation }) => {
   return (
@@ -149,7 +149,7 @@ const DetailScreen = ({ navigation }) => {
       <Text style={styles.title}>Detail Screen</Text>
       <Pressable
         style={styles.buttonStyle}
-        onPress={() => navigation.navigate("Home")}
+        onPress={() => navigation.navigate('Home')}
       >
         <Text style={styles.buttonTextStyle}>Go To Home Screen</Text>
       </Pressable>
@@ -160,33 +160,33 @@ const DetailScreen = ({ navigation }) => {
 const styles = StyleSheet.create({
   screenContainer: {
     flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "#fff",
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#fff'
   },
   title: {
-    fontSize: 32,
+    fontSize: 32
   },
   buttonStyle: {
     height: 54,
-    width: "80%",
+    width: '80%',
     marginTop: 32,
     borderRadius: 8,
-    alignItems: "center",
-    justifyContent: "center",
-    backgroundColor: "#2EE59D",
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: '#2EE59D',
     shadowRadius: 5,
     shadowOpacity: 0.7,
-    shadowColor: "rgba(46, 229, 157, 0.5)",
+    shadowColor: 'rgba(46, 229, 157, 0.5)',
     shadowOffset: {
       width: 0,
-      height: 3,
-    },
+      height: 3
+    }
   },
   buttonTextStyle: {
-    color: "#fdfdfd",
-    fontWeight: "700",
-  },
+    color: '#fdfdfd',
+    fontWeight: '700'
+  }
 });
 
 export default DetailScreen;
@@ -404,7 +404,7 @@ Modify the `RootNavigator.js` file by importing the `react-native-bootsplash` an
 
 ```js
 // after other import statements
-import RNBootSplash from "react-native-bootsplash";
+import RNBootSplash from 'react-native-bootsplash';
 
 const RootNavigator = () => {
   return (
