@@ -7,6 +7,7 @@ featured: false
 draft: false
 tags:
   - macos
+  - homebrew
 description: ''
 ---
 
