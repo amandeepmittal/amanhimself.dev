@@ -29,7 +29,10 @@ export default defineConfig({
       ]
     ],
     shikiConfig: {
-      theme: 'rose-pine-moon',
+      themes: {
+        light: 'rose-pine-dawn',
+        dark: 'rose-pine-moon'
+      },
       wrap: true,
       transformers: []
     }
