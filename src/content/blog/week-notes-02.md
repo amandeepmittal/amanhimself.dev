@@ -1,5 +1,5 @@
 ---
-title: 'Week notes 02'
+title: Week notes 02
 author: Aman Mittal
 pubDatetime: 2025-01-05T00:00:01Z
 slug: week-notes-02

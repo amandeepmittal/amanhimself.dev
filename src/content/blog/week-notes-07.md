@@ -1,5 +1,5 @@
 ---
-title: 'Week notes 07'
+title: Week notes 07
 author: Aman Mittal
 pubDatetime: 2025-02-09T00:00:01Z
 slug: week-notes-07

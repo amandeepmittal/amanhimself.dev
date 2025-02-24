@@ -1,5 +1,5 @@
 ---
-title: 'Week notes 04'
+title: Week notes 04
 author: Aman Mittal
 pubDatetime: 2025-01-19T00:00:01Z
 slug: week-notes-04
