@@ -11,16 +11,23 @@
         "pubDatetime": {
           "anyOf": [
             {
-              "type": "string",
-              "format": "date-time"
+              "anyOf": [
+                {
+                  "type": "string",
+                  "format": "date-time"
+                },
+                {
+                  "type": "string",
+                  "format": "date"
+                },
+                {
+                  "type": "integer",
+                  "format": "unix-time"
+                }
+              ]
             },
             {
-              "type": "string",
-              "format": "date"
-            },
-            {
-              "type": "integer",
-              "format": "unix-time"
+              "type": "string"
             }
           ]
         },
@@ -34,16 +41,23 @@
                 {
                   "anyOf": [
                     {
-                      "type": "string",
-                      "format": "date-time"
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "format": "date-time"
+                        },
+                        {
+                          "type": "string",
+                          "format": "date"
+                        },
+                        {
+                          "type": "integer",
+                          "format": "unix-time"
+                        }
+                      ]
                     },
                     {
-                      "type": "string",
-                      "format": "date"
-                    },
-                    {
-                      "type": "integer",
-                      "format": "unix-time"
+                      "type": "string"
                     }
                   ]
                 }
