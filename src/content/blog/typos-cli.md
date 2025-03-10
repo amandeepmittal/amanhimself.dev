@@ -15,7 +15,7 @@ Spell checking for typos in code, documentation, and blog sites can impair searc
 
 It's a [Rust](https://www.rust-lang.org/) based spell checker that can be used with any command line interface and includes many different options. In this post, I'll explore some of the common use cases I have found using this CLI tool.
 
-# Getting started
+## Getting started
 
 Installing `typos-cli` as a command-line utility is straightforward. On macOS, it can be done with a package manager like [Homebrew](https://formulae.brew.sh/formula/typos-cli):
 
