@@ -25,7 +25,7 @@ const totalPostsCount = posts.length;
   <Header />
   <main id="main-content">
     <section id="hero">
-      <h1>👋 Hey, I'm Aman</h1>
+      <h1>Aman Mittal <span class="username">@amanhimself</span></h1>
       <a
         target="_blank"
         href="/rss.xml"
@@ -142,6 +142,14 @@ const totalPostsCount = posts.length;
     }
     #hero p {
       @apply my-2;
+    }
+    .username {
+      background-color: #7950f2; /* Purple background */
+      color: #ffffff; /* White text */
+      padding: 5px 10px;
+      display: inline-block;
+      font-weight: bold;
+      border-radius: 5px;
     }
     .social-wrapper {
       @apply mt-4 flex flex-col sm:flex-row sm:items-center;
