@@ -2,7 +2,7 @@
 title: My 2024 Macbook setup
 author: Aman Mittal
 pubDatetime: 2024-04-05T03:42:51Z
-modDatetime: 2025-01-30T00:00:01Z
+modDatetime: 2025-04-16T00:00:01Z
 slug: macbook-setup-2024
 featured: false
 draft: false
@@ -443,7 +443,13 @@ VS Code has supported ARM chips since March 13, 2021. Download the [installer fo
   "editor.linkedEditing": true,
   "workbench.startupEditor": "none",
   "update.mode": "manual",
-  "telemetry.telemetryLevel": "crash"
+  "telemetry.telemetryLevel": "crash",
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": true,
+    "scminput": false
+  }
 }
 ```
 
