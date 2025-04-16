@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - reactjs
-description: ""
+description: ''
 ---
 
 ![cover](https://i.imgur.com/u3tfk7P.png)
@@ -39,7 +39,7 @@ Now, setup the project as per the need. The following directory basic setup is h
 Add an initial modification of `src/App.js` file to the file code snippet.
 
 ```js
-import React from "react";
+import React from 'react';
 
 function App() {
   return (
@@ -157,7 +157,7 @@ Create a new file `src/Firebase/firebase.js` import the `firebase` library and c
 ```js
 // firebase.js
 
-import * as firebase from "firebase/app";
+import * as firebase from 'firebase/app';
 
 const firebaseConfig = {
   apiKey: process.env.DEV_API_KEY,
@@ -167,7 +167,7 @@ const firebaseConfig = {
   storageBucket: process.env.DEV_STORAGE_BUCKET,
   messagingSenderId: process.env.DEV_MESSAGING_SENDER_ID,
   appId: process.env.DEV_APP_ID,
-  measurementId: process.env.DEV_MEASUREMENT_ID,
+  measurementId: process.env.DEV_MEASUREMENT_ID
 };
 ```
 
@@ -190,7 +190,7 @@ const prodConfig = {
   storageBucket: process.env.PROD_STORAGE_BUCKET,
   messagingSenderId: process.env.PROD_MESSAGING_SENDER_ID,
   appId: process.env.PROD_APP_ID,
-  measurementId: process.env.PROD_MEASUREMENT_ID,
+  measurementId: process.env.PROD_MEASUREMENT_ID
 };
 
 const devConfig = {
@@ -201,14 +201,14 @@ const devConfig = {
   storageBucket: process.env.DEV_STORAGE_BUCKET,
   messagingSenderId: process.env.DEV_MESSAGING_SENDER_ID,
   appId: process.env.DEV_APP_ID,
-  measurementId: process.env.DEV_MEASUREMENT_ID,
+  measurementId: process.env.DEV_MEASUREMENT_ID
 };
 ```
 
 Then using JavaScript conditional operator, you can condition between the two.
 
 ```js
-const config = process.env.NODE_ENV === "production" ? prodConfig : devConfig;
+const config = process.env.NODE_ENV === 'production' ? prodConfig : devConfig;
 ```
 
 This way, you will prevent the mixing of data and other information between development mode app and production or deployed app.
@@ -232,11 +232,11 @@ export default firebase;
 Open `App.js` file, import the `firebase` instance, and using `useEffect` hook let us try to see if it's initialized or not.
 
 ```js
-import React, { useEffect } from "react";
+import React, { useEffect } from 'react';
 
 // TODO: REMOVE THIS IMPORT STATEMENT BELOW BEFORE PROCEEDING
 
-import firebase from "./Firebase/firebase";
+import firebase from './Firebase/firebase';
 
 function App() {
   // TODO: REMOVE THIS BEFORE PROCEEDING

@@ -1,5 +1,5 @@
 ---
-title: "How to Build a Serverless Backend with AWS Lambda and Nodejs"
+title: 'How to Build a Serverless Backend with AWS Lambda and Nodejs'
 author: Aman Mittal
 pubDatetime: 2018-11-13T03:42:51Z
 slug: how-to-build-a-serverless-backend-with-aws-lambda-and-nodejs
@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - nodejs
-description: ""
+description: ''
 ---
 
 Serverless architecture is a cloud computing execution model where a cloud provider like AWS, Azure or Google Cloud is used to deploy backend or server-side code. In comparison to traditionally deployed web applications, in serverless architecture, the developer does not has to maintain the servers or the infrastructure. They only have to pay a subscription to the third party vendor whereas the vendor is responsible to handle the operation of the backend logic of a server along with scalability, reliability, and security.
@@ -114,15 +114,15 @@ The `-p` flag will create a new directory with name `aws-serverless-demo`. The `
 The default handler file looks like below.
 
 ```js
-"use strict";
+'use strict';
 
 module.exports.hello = async (event, context) => {
   return {
     statusCode: 200,
     body: JSON.stringify({
-      message: "Go Serverless v1.0! Your function executed successfully!",
-      input: event,
-    }),
+      message: 'Go Serverless v1.0! Your function executed successfully!',
+      input: event
+    })
   };
 
   // Use this code if you don't use the http event with the LAMBDA-PROXY integration
@@ -133,11 +133,11 @@ module.exports.hello = async (event, context) => {
 In the above file, `hello` is the function that has two parameters: `event`, and `context`. `module.exports` is basic Nodes syntax as well as the rest of the code. You can clearly see it also supports ES6 features. An `event` is an object that contains all the necessary request data. The `context` object contains AWS-specific values. We have already discussed it before. Let us modify this function to our needs and add a third parameter called the`callback`. Open `handler.js` file and edit the `hello` function.
 
 ```js
-"use strict";
+'use strict';
 
 module.exports.hello = (event, context, callback) => {
-  console.log("Hello World");
-  callback(null, "Hello World");
+  console.log('Hello World');
+  callback(null, 'Hello World');
 };
 ```
 
@@ -388,11 +388,11 @@ I am going to demonstrate a simple Note taking app through our REST API. These C
 If you are familiar with Node.js and Express framework you will notice there is little difference in creating a controller function that leads to the business logic of a route. The similar approach we are going to use to define in each handler function.
 
 ```js
-"use strict";
+'use strict';
 
 module.exports.hello = (event, context, callback) => {
-  console.log("Hello World");
-  callback(null, "Hello World");
+  console.log('Hello World');
+  callback(null, 'Hello World');
 };
 
 module.exports.create = (event, context, callback) => {
@@ -403,14 +403,14 @@ module.exports.create = (event, context, callback) => {
       .then(note =>
         callback(null, {
           statusCode: 200,
-          body: JSON.stringify(note),
+          body: JSON.stringify(note)
         })
       )
       .catch(err =>
         callback(null, {
           statusCode: err.statusCode || 500,
-          headers: { "Content-Type": "text/plain" },
-          body: "Could not create the note.",
+          headers: { 'Content-Type': 'text/plain' },
+          body: 'Could not create the note.'
         })
       );
   });
@@ -424,14 +424,14 @@ module.exports.getOne = (event, context, callback) => {
       .then(note =>
         callback(null, {
           statusCode: 200,
-          body: JSON.stringify(note),
+          body: JSON.stringify(note)
         })
       )
       .catch(err =>
         callback(null, {
           statusCode: err.statusCode || 500,
-          headers: { "Content-Type": "text/plain" },
-          body: "Could not fetch the note.",
+          headers: { 'Content-Type': 'text/plain' },
+          body: 'Could not fetch the note.'
         })
       );
   });
@@ -445,14 +445,14 @@ module.exports.getAll = (event, context, callback) => {
       .then(notes =>
         callback(null, {
           statusCode: 200,
-          body: JSON.stringify(notes),
+          body: JSON.stringify(notes)
         })
       )
       .catch(err =>
         callback(null, {
           statusCode: err.statusCode || 500,
-          headers: { "Content-Type": "text/plain" },
-          body: "Could not fetch the notes.",
+          headers: { 'Content-Type': 'text/plain' },
+          body: 'Could not fetch the notes.'
         })
       );
   });
@@ -463,19 +463,19 @@ module.exports.update = (event, context, callback) => {
 
   connectToDatabase().then(() => {
     Note.findByIdAndUpdate(event.pathParameters.id, JSON.parse(event.body), {
-      new: true,
+      new: true
     })
       .then(note =>
         callback(null, {
           statusCode: 200,
-          body: JSON.stringify(note),
+          body: JSON.stringify(note)
         })
       )
       .catch(err =>
         callback(null, {
           statusCode: err.statusCode || 500,
-          headers: { "Content-Type": "text/plain" },
-          body: "Could not fetch the notes.",
+          headers: { 'Content-Type': 'text/plain' },
+          body: 'Could not fetch the notes.'
         })
       );
   });
@@ -490,16 +490,16 @@ module.exports.delete = (event, context, callback) => {
         callback(null, {
           statusCode: 200,
           body: JSON.stringify({
-            message: "Removed note with id: " + note._id,
-            note: note,
-          }),
+            message: 'Removed note with id: ' + note._id,
+            note: note
+          })
         })
       )
       .catch(err =>
         callback(null, {
           statusCode: err.statusCode || 500,
-          headers: { "Content-Type": "text/plain" },
-          body: "Could not fetch the notes.",
+          headers: { 'Content-Type': 'text/plain' },
+          body: 'Could not fetch the notes.'
         })
       );
   });
@@ -515,17 +515,17 @@ By default, the callback will wait until the event loop is empty before freezing
 We need to create a connection between the database and our serverless functions in order to consume the CRUD operations in real-time. Create a new file called `db.js` in the root and append it with following.
 
 ```js
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
 let isConnected;
 
 module.exports = connectToDatabase = () => {
   if (isConnected) {
-    console.log("=> using existing database connection");
+    console.log('=> using existing database connection');
     return Promise.resolve();
   }
 
-  console.log("=> using new database connection");
+  console.log('=> using new database connection');
   return mongoose.connect(process.env.DB).then(db => {
     isConnected = db.connections[0].readyState;
   });
@@ -535,26 +535,26 @@ module.exports = connectToDatabase = () => {
 The is common Mongoose connection that you might have seen in other Nodejs apps if using MongoDB as a database. The only difference here is that we are exporting `connectToDatabase` to import it inside `handler.js` for each CRUD operation. Modify `handler.js` file and import it at the top.
 
 ```js
-"use strict";
+'use strict';
 
-const connectToDatabase = require("./db");
+const connectToDatabase = require('./db');
 ```
 
 Next step is to define the data model we need in order for things to work. Mongoose provides this functionality too. Serverless stack is unopinionated about which ODM or ORM you use in your application. Create a new file called `notes.model.js` and add the following.
 
 ```js
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 const NoteSchema = new mongoose.Schema({
   title: String,
-  description: String,
+  description: String
 });
-module.exports = mongoose.model("Note", NoteSchema);
+module.exports = mongoose.model('Note', NoteSchema);
 ```
 
 Now import this model inside `handler.js` for our callbacks at the top of the file.
 
 ```js
-const Note = require("./notes.model.js");
+const Note = require('./notes.model.js');
 ```
 
 ### Using Dotenv and Environment Variables
@@ -578,7 +578,7 @@ net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin
 Replace the user and password field with your credentials. Now to make it work, all we have to add the following line in our `handler.js`.
 
 ```js
-require("dotenv").config({ path: "./variables.env" });
+require('dotenv').config({ path: './variables.env' });
 ```
 
 ### Deployment

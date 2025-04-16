@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - react-native
-description: ""
+description: ''
 ---
 
 Geolocation as an API has different methods that can be used in a web application. But it’s also a powerful API for mobile development. Ride share mobile apps like Uber, map app like Google Maps, and location features implemented in apps like Instagram depend on using this API. React Native takes advantage of this API and its available methods by extending the [**Geolocation Web specification**](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation).
@@ -182,8 +182,8 @@ Now, open up your `App.js` file and enter the following snippet of code to see i
 
 ```js
 // App.js
-import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import React from 'react';
+import { StyleSheet, Text, View } from 'react-native';
 
 export default class App extends React.Component {
   render() {
@@ -198,10 +198,10 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center'
+  }
 });
 ```
 
@@ -230,12 +230,12 @@ Whenever you link a library, you’ll always get a prompt message informing you 
 In this step, we’ll develop our first screen—a loading screen. Inside the `App.js` file, start by defining a local state:
 
 ```js
-import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import React from 'react';
+import { StyleSheet, Text, View } from 'react-native';
 
 export default class App extends React.Component {
   state = {
-    isLoading: true,
+    isLoading: true
   };
 
   render() {
@@ -255,10 +255,10 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center'
+  }
 });
 ```
 
@@ -297,8 +297,8 @@ In `Weather.js`, we start by defining two containers inside the main container: 
 
 ```js
 // Weather.js
-import React from "react";
-import { View, Text, Stylesheet } from "react-native";
+import React from 'react';
+import { View, Text, Stylesheet } from 'react-native';
 
 const Weather = () => {
   return (
@@ -311,10 +311,10 @@ const Weather = () => {
 
 const styles = StyleSheet({
   container: {
-    flex: 1,
+    flex: 1
   },
   headerContainer: {},
-  bodyContainer: {},
+  bodyContainer: {}
 });
 
 export default Weather;
@@ -323,15 +323,15 @@ export default Weather;
 I’m going to use `MaterialCommunityIcons` to display weather icons in the app.
 
 ```js
-import React from "react";
-import { View, Text, Stylesheet } from "react-native";
-import Icon from "react-native-vector-icons/MaterialCommunityIcons";
+import React from 'react';
+import { View, Text, Stylesheet } from 'react-native';
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const Weather = () => {
   return (
     <View style={styles.weatherContainer}>
       <View style={styles.headerContainer}>
-        <Icon size={48} name="weather-sunny" color={"#fff"} />
+        <Icon size={48} name="weather-sunny" color={'#fff'} />
         <Text style={styles.tempText}>Temperature˚</Text>
       </View>
       <View style={styles.bodyContainer}>
@@ -345,32 +345,32 @@ const Weather = () => {
 const styles = StyleSheet.create({
   weatherContainer: {
     flex: 1,
-    backgroundColor: "#f7b733",
+    backgroundColor: '#f7b733'
   },
   headerContainer: {
     flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
+    alignItems: 'center',
+    justifyContent: 'center'
   },
   tempText: {
     fontSize: 48,
-    color: "#fff",
+    color: '#fff'
   },
   bodyContainer: {
     flex: 2,
-    alignItems: "flex-start",
-    justifyContent: "flex-end",
+    alignItems: 'flex-start',
+    justifyContent: 'flex-end',
     paddingLeft: 25,
-    marginBottom: 40,
+    marginBottom: 40
   },
   title: {
     fontSize: 48,
-    color: "#fff",
+    color: '#fff'
   },
   subtitle: {
     fontSize: 24,
-    color: "#fff",
-  },
+    color: '#fff'
+  }
 });
 
 export default Weather;
@@ -401,7 +401,7 @@ render() {
 To fetch real-time weather data, I found the OpenWeatherMap API to be highly useful and consistent. To communicate with the API, you’ll need an API key (as discussed previously). To store the API key in our app, create a new file called `./utils/WeatherApiKey.js`.
 
 ```js
-export const API_KEY = "849338767c0e95025b5559533d26b7c4";
+export const API_KEY = '849338767c0e95025b5559533d26b7c4';
 ```
 
 The way the OpenWeatherMap API works is that we need to feed it longitude and latitude coordinates from the device’s location. It then fetches the data from its server as a JSON object. From the server, we now need two things: the temperature, and the weather condition. We should have both stored in the local state in `App.js`.
@@ -411,7 +411,7 @@ state = {
   isLoading: false,
   temperature: 0,
   weatherCondition: null,
-  error: null,
+  error: null
 };
 ```
 
@@ -468,7 +468,7 @@ const Weather = ({ weather, temperature }) => {
   return (
     <View style={styles.weatherContainer}>
       <View style={styles.headerContainer}>
-        <MaterialCommunityIcons size={48} name="weather-sunny" color={"#fff"} />
+        <MaterialCommunityIcons size={48} name="weather-sunny" color={'#fff'} />
         <Text style={styles.tempText}>{temperature}˚</Text>
       </View>
       <View style={styles.bodyContainer}>
@@ -493,76 +493,76 @@ Using `weatherCondition`, we can define changes in our background, title, subtit
 ```js
 export const weatherConditions = {
   Rain: {
-    color: "#005BEA",
-    title: "Raining",
-    subtitle: "Get a cup of coffee",
-    icon: "weather-rainy",
+    color: '#005BEA',
+    title: 'Raining',
+    subtitle: 'Get a cup of coffee',
+    icon: 'weather-rainy'
   },
   Clear: {
-    color: "#f7b733",
-    title: "So Sunny",
-    subtitle: "It is hurting my eyes",
-    icon: "weather-sunny",
+    color: '#f7b733',
+    title: 'So Sunny',
+    subtitle: 'It is hurting my eyes',
+    icon: 'weather-sunny'
   },
   Thunderstorm: {
-    color: "#616161",
-    title: "A Storm is coming",
-    subtitle: "Because Gods are angry",
-    icon: "weather-lightning",
+    color: '#616161',
+    title: 'A Storm is coming',
+    subtitle: 'Because Gods are angry',
+    icon: 'weather-lightning'
   },
   Clouds: {
-    color: "#1F1C2C",
-    title: "Clouds",
-    subtitle: "Everywhere",
-    icon: "weather-cloudy",
+    color: '#1F1C2C',
+    title: 'Clouds',
+    subtitle: 'Everywhere',
+    icon: 'weather-cloudy'
   },
 
   Snow: {
-    color: "#00d2ff",
-    title: "Snow",
-    subtitle: "Get out and build a snowman for me",
-    icon: "weather-snowy",
+    color: '#00d2ff',
+    title: 'Snow',
+    subtitle: 'Get out and build a snowman for me',
+    icon: 'weather-snowy'
   },
   Drizzle: {
-    color: "#076585",
-    title: "Drizzle",
-    subtitle: "Partially raining...",
-    icon: "weather-hail",
+    color: '#076585',
+    title: 'Drizzle',
+    subtitle: 'Partially raining...',
+    icon: 'weather-hail'
   },
   Haze: {
-    color: "#66A6FF",
-    title: "Haze",
-    subtitle: "Another name for Partial Raining",
-    icon: "weather-hail",
+    color: '#66A6FF',
+    title: 'Haze',
+    subtitle: 'Another name for Partial Raining',
+    icon: 'weather-hail'
   },
   Mist: {
-    color: "#3CD3AD",
-    title: "Mist",
+    color: '#3CD3AD',
+    title: 'Mist',
     subtitle: "Don't roam in forests!",
-    icon: "weather-fog",
-  },
+    icon: 'weather-fog'
+  }
 };
 ```
 
 These weather conditions are provided from the OpenWeatherMap API. Then, let’s import them in `Weather.js`:
 
 ```js
-import React from "react";
-import { View, Text, StyleSheet } from "react-native";
-import Icon from "react-native-vector-icons/MaterialCommunityIcons";
+import React from 'react';
+import { View, Text, StyleSheet } from 'react-native';
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
-import { weatherConditions } from "../utils/WeatherConditions";
+import { weatherConditions } from '../utils/WeatherConditions';
 
 const Weather = ({ weather, temperature }) => {
   return (
     <View
       style={[
         styles.weatherContainer,
-        { backgroundColor: weatherConditions[weather].color },
+        { backgroundColor: weatherConditions[weather].color }
       ]}
     >
       <View style={styles.headerContainer}>
-        <Icon size={72} name={weatherConditions[weather].icon} color={"#fff"} />
+        <Icon size={72} name={weatherConditions[weather].icon} color={'#fff'} />
         <Text style={styles.tempText}>{temperature}˚</Text>
       </View>
       <View style={styles.bodyContainer}>
@@ -577,32 +577,32 @@ const Weather = ({ weather, temperature }) => {
 
 const styles = StyleSheet.create({
   weatherContainer: {
-    flex: 1,
+    flex: 1
   },
   headerContainer: {
     flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
+    alignItems: 'center',
+    justifyContent: 'center'
   },
   tempText: {
     fontSize: 48,
-    color: "#fff",
+    color: '#fff'
   },
   bodyContainer: {
     flex: 2,
-    alignItems: "flex-start",
-    justifyContent: "flex-end",
+    alignItems: 'flex-start',
+    justifyContent: 'flex-end',
     paddingLeft: 25,
-    marginBottom: 40,
+    marginBottom: 40
   },
   title: {
     fontSize: 48,
-    color: "#fff",
+    color: '#fff'
   },
   subtitle: {
     fontSize: 24,
-    color: "#fff",
-  },
+    color: '#fff'
+  }
 });
 
 export default Weather;

@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - react-native
-description: ""
+description: ''
 ---
 
 In React Native, there are many ways to display a collection of images in a gallery view. One form is commonly known as carousel. Using an open-source library such as [react-native-swiper](https://github.com/leecade/react-native-swiper) or more advance [react-native-snap-carousel](https://github.com/meliorence/react-native-snap-carousel) serves the purpose. But what if we want to create a custom gallery view with additional functionality?
@@ -55,49 +55,49 @@ To set up the carousel view of an image for different screen sizes, let's use th
 Add the following code snippet to `App.js` and make sure to define state variables at the top of the `App` function. Hooks are always called at the top level of a functional component in React. When defining a state, they must be the first thing in the function, especially before returning a JSX.
 
 ```js
-import React, { useState, useRef } from "react";
+import React, { useState, useRef } from 'react';
 import {
   TouchableOpacity,
   View,
   Text,
   Image,
   FlatList,
-  Dimensions,
-} from "react-native";
+  Dimensions
+} from 'react-native';
 
-const { width } = Dimensions.get("window");
+const { width } = Dimensions.get('window');
 const SPACING = 10;
 const THUMB_SIZE = 80;
 
 const IMAGES = {
-  image1: require("./assets/images/1.jpeg"),
-  image2: require("./assets/images/2.jpeg"),
-  image3: require("./assets/images/3.jpeg"),
-  image4: require("./assets/images/4.jpeg"),
-  image5: require("./assets/images/5.jpeg"),
-  image6: require("./assets/images/6.jpeg"),
-  image7: require("./assets/images/7.jpeg"),
+  image1: require('./assets/images/1.jpeg'),
+  image2: require('./assets/images/2.jpeg'),
+  image3: require('./assets/images/3.jpeg'),
+  image4: require('./assets/images/4.jpeg'),
+  image5: require('./assets/images/5.jpeg'),
+  image6: require('./assets/images/6.jpeg'),
+  image7: require('./assets/images/7.jpeg')
 };
 
 const App = () => {
   const [images, setImages] = useState([
-    { id: "1", image: IMAGES.image1 },
-    { id: "2", image: IMAGES.image2 },
-    { id: "3", image: IMAGES.image3 },
-    { id: "4", image: IMAGES.image4 },
-    { id: "5", image: IMAGES.image5 },
-    { id: "6", image: IMAGES.image6 },
-    { id: "7", image: IMAGES.image7 },
+    { id: '1', image: IMAGES.image1 },
+    { id: '2', image: IMAGES.image2 },
+    { id: '3', image: IMAGES.image3 },
+    { id: '4', image: IMAGES.image4 },
+    { id: '5', image: IMAGES.image5 },
+    { id: '6', image: IMAGES.image6 },
+    { id: '7', image: IMAGES.image7 }
   ]);
 
   return (
-    <View style={{ flex: 1, backgroundColor: "black", alignItems: "center" }}>
+    <View style={{ flex: 1, backgroundColor: 'black', alignItems: 'center' }}>
       <Text
         style={{
-          color: "white",
+          color: 'white',
           fontSize: 32,
           marginTop: 50,
-          marginBottom: 25,
+          marginBottom: 25
         }}
       >
         Custom Gallery
@@ -125,7 +125,7 @@ For the current example, let's stick to the default layout pattern to display a 
 
 ```js
 // after other import statements
-import Carousel, { Pagination } from "react-native-snap-carousel";
+import Carousel, { Pagination } from 'react-native-snap-carousel';
 ```
 
 Then, add a `View` component after the title in the `App.js` file. It is going to wrap the `Carousel` component which takes a set of required props to work:
@@ -140,7 +140,7 @@ Add the following code snippet in `App.js` to see the carousel in action:
 
 ```js
 return (
-  <View style={{ flex: 1, backgroundColor: "black", alignItems: "center" }}>
+  <View style={{ flex: 1, backgroundColor: 'black', alignItems: 'center' }}>
     {/* Title JSX Remains same */}
     {/* Carousel View */}
     <View style={{ flex: 1 / 2, marginTop: 20 }}>
@@ -152,7 +152,7 @@ return (
         renderItem={({ item, index }) => (
           <Image
             key={index}
-            style={{ width: "100%", height: "100%" }}
+            style={{ width: '100%', height: '100%' }}
             resizeMode="contain"
             source={item.image}
           />
@@ -185,7 +185,7 @@ Add the following code snippet after the `Carousel` component in `App.js` file:
   {/* Carousel Component code remains same */}
   <Pagination
     inactiveDotColor="gray"
-    dotColor={"orange"}
+    dotColor={'orange'}
     activeDotIndex={indexSelected}
     dotsLength={images.length}
     animatedDuration={150}
@@ -230,13 +230,13 @@ Let's add another view component below the `View` that wraps the carousel to dis
   style={{
     marginTop: 20,
     paddingHorizontal: 32,
-    alignSelf: "flex-end",
+    alignSelf: 'flex-end'
   }}
 >
   <Text
     style={{
-      color: "white",
-      fontSize: 22,
+      color: 'white',
+      fontSize: 22
     }}
   >
     {indexSelected + 1}/{images.length}
@@ -264,10 +264,10 @@ Add the following code snippet after Carousel's View:
 <FlatList
   horizontal={true}
   data={images}
-  style={{ position: "absolute", bottom: 80 }}
+  style={{ position: 'absolute', bottom: 80 }}
   showsHorizontalScrollIndicator={false}
   contentContainerStyle={{
-    paddingHorizontal: SPACING,
+    paddingHorizontal: SPACING
   }}
   keyExtractor={item => item.id}
   renderItem={({ item, index }) => (
@@ -279,7 +279,7 @@ Add the following code snippet after Carousel's View:
           marginRight: SPACING,
           borderRadius: 16,
           borderWidth: index === indexSelected ? 4 : 0.75,
-          borderColor: index === indexSelected ? "orange" : "white",
+          borderColor: index === indexSelected ? 'orange' : 'white'
         }}
         source={item.image}
       />
@@ -376,7 +376,7 @@ const onSelect = indexSelected => {
 
   flatListRef?.current?.scrollToOffset({
     offset: indexSelected * THUMB_SIZE,
-    animated: true,
+    animated: true
   });
 };
 ```

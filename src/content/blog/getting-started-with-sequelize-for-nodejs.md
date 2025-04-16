@@ -1,5 +1,5 @@
 ---
-title: "Getting Started with Sequelize for Nodejs Applications"
+title: 'Getting Started with Sequelize for Nodejs Applications'
 author: Aman Mittal
 pubDatetime: 2017-05-30T03:42:51Z
 slug: getting-started-with-sequelize-for-nodejs
@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - nodejs
-description: ""
+description: ''
 ---
 
 > [Originally Published at Hackernoon.com](https://medium.com/hackernoon/getting-started-with-sequelize-for-nodejs-applications-2854c58ffb8c)
@@ -39,20 +39,20 @@ $ npm install --save tedious // MSSQL
 Sequelize does setup a connection between the rest api/application and your SQL database. To setup basic connection between the two:
 
 ```js
-const sequelize = new Sequelize("database", "username", "password", {
-  host: "localhost",
+const sequelize = new Sequelize('database', 'username', 'password', {
+  host: 'localhost',
   //choose anyone between them
-  dialect: "mysql" | "mariadb" | "sqlite" | "postgres" | "mssql",
+  dialect: 'mysql' | 'mariadb' | 'sqlite' | 'postgres' | 'mssql',
 
   // To create a pool of connections
   pool: {
     max: 5,
     min: 0,
-    idle: 10000,
+    idle: 10000
   },
 
   // For SQLite only
-  storage: "path/to/database.sqlite",
+  storage: 'path/to/database.sqlite'
 });
 ```
 
@@ -93,14 +93,14 @@ You can do this in your `.env` file if you like to follow that pattern. For mor
 After defining the configuration variables, in my `models/` folder or where I define schema of tables in the database at application level, I create the connection in an `index.js` file:
 
 ```js
-"use strict";
+'use strict';
 
-const fs = require("fs");
-const path = require("path");
-const Sequelize = require("sequelize");
+const fs = require('fs');
+const path = require('path');
+const Sequelize = require('sequelize');
 const basename = path.basename(module.filename);
-const env = process.env.NODE_ENV || "development";
-const config = require(__dirname + "/config.json")[env];
+const env = process.env.NODE_ENV || 'development';
+const config = require(__dirname + '/config.json')[env];
 const db = {};
 
 if (config.use_env_variable) {
@@ -117,11 +117,11 @@ if (config.use_env_variable) {
 fs.readdirSync(__dirname)
   .filter(file => {
     return (
-      file.indexOf(".") !== 0 && file !== basename && file.slice(-3) === ".js"
+      file.indexOf('.') !== 0 && file !== basename && file.slice(-3) === '.js'
     );
   })
   .forEach(file => {
-    const model = sequelize["import"](path.join(__dirname, file));
+    const model = sequelize['import'](path.join(__dirname, file));
     db[model.name] = model;
   });
 
@@ -134,19 +134,19 @@ Object.keys(db).forEach(modelName => {
 sequelize
   .authenticate()
   .then(() => {
-    console.log("Connection has been established successfully.");
+    console.log('Connection has been established successfully.');
   })
   .catch(err => {
-    console.log("Unable to connect to the database:", err);
+    console.log('Unable to connect to the database:', err);
   });
 
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
 // Import Models such that I can use them in the api just by importing 'db'
-db.user = require("./user")(sequelize, Sequelize);
-db.admin = require("./admin")(sequelize, Sequelize);
-db.articles = require("./articles")(sequelize, Sequelize);
+db.user = require('./user')(sequelize, Sequelize);
+db.admin = require('./admin')(sequelize, Sequelize);
+db.articles = require('./articles')(sequelize, Sequelize);
 
 module.exports = db;
 ```

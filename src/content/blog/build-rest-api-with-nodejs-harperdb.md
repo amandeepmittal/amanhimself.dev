@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - nodejs
-description: ""
+description: ''
 ---
 
 ![cover_image](https://i.imgur.com/9hGD05n.png)
@@ -61,12 +61,12 @@ yarn add express@4.17.1 body-parser@1.19.0
 Next, create a new file called `index.js` at the root of the project with the following code to trigger a minimal server:
 
 ```js
-const express = require("express");
+const express = require('express');
 
 const app = express();
 const PORT = 8000;
 
-app.get("/", (req, res) => res.json("Express Server"));
+app.get('/', (req, res) => res.json('Express Server'));
 
 app.listen(PORT, () => {
   console.log(`⚡️[server]: Server is running at https://localhost:${PORT}`);
@@ -173,14 +173,14 @@ At the end of the previous section, all these values are saved inside a `.env` f
 Add the following code snippet to the `dbconfig.js` file.
 
 ```js
-require("dotenv").config();
-const harperive = require("harperive");
+require('dotenv').config();
+const harperive = require('harperive');
 
 const DB_CONFIG = {
   harperHost: process.env.INSTANCE_URL,
   username: process.env.INSTANCE_USERNAME,
   password: process.env.INSTANCE_PASSWORD,
-  schema: process.env.INSTANCE_SCHEMA, // optional
+  schema: process.env.INSTANCE_SCHEMA // optional
 };
 
 const Client = harperive.Client;
@@ -198,8 +198,8 @@ To set up routes or endpoints of the server application, you need to include `bo
 BodyParser parses incoming HTTP requests as middleware under `req.body` before routes or API have access to them and perform any further actions on them. A very useful and essential step when using forms in a web application.
 
 ```js
-const express = require("express");
-const bodyParser = require("body-parser");
+const express = require('express');
+const bodyParser = require('body-parser');
 
 const app = express();
 const PORT = 8000;
@@ -221,7 +221,7 @@ The `urlencoded` method in the above snippet allows the body-parser middleware t
 Since the database doesn't have any records, let's start by writing the first query to insert new data in the database. Create a new directory called `api/` and inside it create a new file called `index.js`. Open index.js file and import the `db` from `config/dbconfig.js` file.
 
 ```js
-const db = require("../config/dbconfig");
+const db = require('../config/dbconfig');
 ```
 
 One of the main advantages of HarperDB is in querying the data from a database instance. It allows us to query the data either in the form of SQL queries or NoSQL queries. The advantage here is that the power of complex SQL queries can easily be used here to perform an operation. I am going to define all the queries in NoSQL form, however, do not forget to check official docs for more information on performing SQL queries [here](https://docs.harperdb.io/?version=latest#0b5f3698-60fc-4783-b736-b510d6063996).
@@ -232,13 +232,13 @@ The first query is going to be called `addBook`. This query is going to insert t
 exports.addBook = (request, response) => {
   db.insert(
     {
-      table: "books",
+      table: 'books',
       records: [
         {
           title: request.body.title,
-          author: request.body.author,
-        },
-      ],
+          author: request.body.author
+        }
+      ]
     },
     (err, res) => {
       if (err) response.status(500).json(err);
@@ -266,11 +266,11 @@ To insert the first data record in the database lets create a route. Open `index
 
 ```js
 // after other import statements
-const routesController = require("./api/index");
+const routesController = require('./api/index');
 
 //after defining middleware functions
 
-app.route("/books").post(routesController.addBook);
+app.route('/books').post(routesController.addBook);
 ```
 
 Go back to the REST client and make sure the Node.js server is running from the terminal window.
@@ -302,10 +302,10 @@ HarperDB allows to search database records in a table by using a column field na
 exports.getByAuthor = (request, response) => {
   db.searchByValue(
     {
-      table: "books",
-      searchAttribute: "author",
+      table: 'books',
+      searchAttribute: 'author',
       searchValue: request.body.author,
-      attributes: ["*"],
+      attributes: ['*']
     },
     (err, res) => {
       if (err) response.status(500).json(err);
@@ -321,7 +321,7 @@ exports.getByAuthor = (request, response) => {
 The data returned from the database is going to be in JSON format. Go back to the main `index.js` file and add another route.
 
 ```js
-app.route("/author").post(routesController.getByAuthor);
+app.route('/author').post(routesController.getByAuthor);
 ```
 
 Open the REST Client and make a request as shown below. The response of this HTTP request is going to be every data record that contains the value of the attribute `author`.
@@ -336,9 +336,9 @@ Another important way to search for data in a table is by the unique identifier.
 exports.getById = (request, response) => {
   db.searchByHash(
     {
-      table: "books",
+      table: 'books',
       hashValues: [request.body.id],
-      attributes: ["title"],
+      attributes: ['title']
     },
     (err, res) => {
       if (err) response.status(500).json(err);
@@ -354,7 +354,7 @@ When this query successfully runs, the result from the database is only going to
 Add the endpoint in the main `index.js` file.
 
 ```js
-app.route("/search").post(routesController.getById);
+app.route('/search').post(routesController.getById);
 ```
 
 Go to the REST client and run the query.
@@ -371,8 +371,8 @@ Add the following query to the `api/index.js` file.
 exports.deleteBook = (request, response) => {
   db.delete(
     {
-      table: "books",
-      hashValues: [request.body.id],
+      table: 'books',
+      hashValues: [request.body.id]
     },
     (err, res) => {
       if (err) response.status(500).json(err);
@@ -386,7 +386,7 @@ exports.deleteBook = (request, response) => {
 Next, go to the main `index.js` file and add the endpoint.
 
 ```js
-app.route("/delete").post(routesController.deleteBook);
+app.route('/delete').post(routesController.deleteBook);
 ```
 
 Lastly, go back to the REST client, pass on the id of the data record to delete. On successful deletion, it gives a response back in the form of a `message` that is directly sent from the HarperDB instance. This is very helpful since this message response can be directly used with any REST client or sent to a frontend framework.

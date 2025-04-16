@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - vscode
-description: ""
+description: ''
 ---
 
 ![cover](https://i.imgur.com/hJ7W51N.jpg)

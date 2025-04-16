@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - nodejs
-description: ""
+description: ''
 ---
 
 ![cover](https://i.imgur.com/0ARGlWV.png)
@@ -97,13 +97,13 @@ npm install -S sequelize-cli
 The next step is to create a `.sequelizerc` file in the root of our project. This is going to be the configuration file that contains the specific paths required by Sequelize module. It will help us generate folders and files necessary for sequelize to work.
 
 ```js
-path = require("path");
+path = require('path');
 
 module.exports = {
-  config: path.resolve("./config", "config.json"),
-  "models-path": path.resolve("./models"),
-  "seeders-path": path.resolve("./seeders"),
-  "migration-path": path.resolve("./migrations"),
+  config: path.resolve('./config', 'config.json'),
+  'models-path': path.resolve('./models'),
+  'seeders-path': path.resolve('./seeders'),
+  'migration-path': path.resolve('./migrations')
 };
 ```
 
@@ -170,14 +170,14 @@ The above `createdb` command is made available to us when we install the Postgre
 You can change the aforementioned values for all three: `development`, `test`, and `production` but do make a notice, for now, we are going to use `development`. This is done in `models/index.js`.
 
 ```js
-"use strict";
+'use strict';
 
-const fs = require("fs");
-const path = require("path");
-const Sequelize = require("sequelize");
+const fs = require('fs');
+const path = require('path');
+const Sequelize = require('sequelize');
 const basename = path.basename(__filename);
-const env = process.env.NODE_ENV || "development";
-const config = require(__dirname + "/../config/config.json")[env];
+const env = process.env.NODE_ENV || 'development';
+const config = require(__dirname + '/../config/config.json')[env];
 const db = {};
 
 let sequelize;
@@ -195,11 +195,11 @@ if (config.use_env_variable) {
 fs.readdirSync(__dirname)
   .filter(file => {
     return (
-      file.indexOf(".") !== 0 && file !== basename && file.slice(-3) === ".js"
+      file.indexOf('.') !== 0 && file !== basename && file.slice(-3) === '.js'
     );
   })
   .forEach(file => {
-    const model = sequelize["import"](path.join(__dirname, file));
+    const model = sequelize['import'](path.join(__dirname, file));
     db[model.name] = model;
   });
 
@@ -232,12 +232,12 @@ The above command will generate a new file inside `models/todo.js`. You can veri
 As you can see, another file is created in `migrations/` directory. Our concern at this time is the model file itself which looks like this.
 
 ```js
-"use strict";
+'use strict';
 module.exports = (sequelize, DataTypes) => {
   const Todo = sequelize.define(
-    "Todo",
+    'Todo',
     {
-      title: DataTypes.STRING,
+      title: DataTypes.STRING
     },
     {}
   );
@@ -257,13 +257,13 @@ sequelize model:create --name TodoItem --attributes content:string,complete:bool
 This is how our second model inside `todoitem.js` looks like. It has two attributes, `content` of datatype `string` and complete of datatype `boolean`.
 
 ```js
-"use strict";
+'use strict';
 module.exports = (sequelize, DataTypes) => {
   const TodoItem = sequelize.define(
-    "TodoItem",
+    'TodoItem',
     {
       content: DataTypes.STRING,
-      complete: DataTypes.BOOLEAN,
+      complete: DataTypes.BOOLEAN
     },
     {}
   );
@@ -279,22 +279,22 @@ module.exports = (sequelize, DataTypes) => {
 `Todo` and `TodoItem` are going to have one-to-many-relationship. This done by associating both the models and define a custom class method. Let us modify both the model files to add this and some modification in each attribute for things to work our way. Open `todo.js` file.
 
 ```js
-"use strict";
+'use strict';
 module.exports = (sequelize, DataTypes) => {
   const Todo = sequelize.define(
-    "Todo",
+    'Todo',
     {
       title: {
-        type: DataTypes.STRING,
-      },
+        type: DataTypes.STRING
+      }
     },
     {}
   );
   Todo.associate = function (models) {
     // associations can be defined here
     Todo.hasMany(models.TodoItem, {
-      foreignKey: "todoId",
-      as: "todoItems",
+      foreignKey: 'todoId',
+      as: 'todoItems'
     });
   };
   return Todo;
@@ -306,13 +306,13 @@ The first modification you will make is to add `type` to make the attribute easi
 Now, open `todoitem.js`.
 
 ```js
-"use strict";
+'use strict';
 module.exports = (sequelize, DataTypes) => {
   const TodoItem = sequelize.define(
-    "TodoItem",
+    'TodoItem',
     {
       content: { type: DataTypes.STRING },
-      complete: { type: DataTypes.BOOLEAN, defaultValue: false },
+      complete: { type: DataTypes.BOOLEAN, defaultValue: false }
     },
     {}
   );
@@ -320,8 +320,8 @@ module.exports = (sequelize, DataTypes) => {
     // associations can be defined here
 
     TodoItem.belongsTo(models.Todo, {
-      foreignKey: "todoId",
-      onDelete: "CASCADE",
+      foreignKey: 'todoId',
+      onDelete: 'CASCADE'
     });
   };
   return TodoItem;
@@ -337,77 +337,77 @@ Migrations provide a clearer picture of what our database models going to look l
 Running migrations take care of creating the database table and associated column inside the table for us. This is the functionality of each `up` function in both migrations files. There is also a `down` function that is only to run when you need to undo the changes inside the database table for some reason. Open inside `migrations/<date-time>-create-todo.js` file.
 
 ```js
-"use strict";
+'use strict';
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable("Todos", {
+    return queryInterface.createTable('Todos', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.INTEGER,
+        type: Sequelize.INTEGER
       },
       title: {
-        type: Sequelize.STRING,
+        type: Sequelize.STRING
       },
       createdAt: {
         allowNull: false,
-        type: Sequelize.DATE,
+        type: Sequelize.DATE
       },
       updatedAt: {
         allowNull: false,
-        type: Sequelize.DATE,
-      },
+        type: Sequelize.DATE
+      }
     });
   },
   down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable("Todos");
-  },
+    return queryInterface.dropTable('Todos');
+  }
 };
 ```
 
 Similar changes are made inside `migrations/<date-time>-crrate-todo-item.js`.
 
 ```js
-"use strict";
+'use strict';
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable("TodoItems", {
+    return queryInterface.createTable('TodoItems', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.INTEGER,
+        type: Sequelize.INTEGER
       },
       content: {
-        type: Sequelize.STRING,
+        type: Sequelize.STRING
       },
       complete: {
         type: Sequelize.BOOLEAN,
-        defaultValue: false,
+        defaultValue: false
       },
       createdAt: {
         allowNull: false,
-        type: Sequelize.DATE,
+        type: Sequelize.DATE
       },
       updatedAt: {
         allowNull: false,
-        type: Sequelize.DATE,
+        type: Sequelize.DATE
       },
       todoId: {
         type: Sequelize.INTEGER,
-        onDelete: "CASCADE",
+        onDelete: 'CASCADE',
         references: {
-          model: "Todos",
-          key: "id",
-          as: "todoId",
-        },
-      },
+          model: 'Todos',
+          key: 'id',
+          as: 'todoId'
+        }
+      }
     });
   },
   down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable("TodoItems");
-  },
+    return queryInterface.dropTable('TodoItems');
+  }
 };
 ```
 
@@ -432,16 +432,16 @@ createuser <username>
 Creating models might seem overwhelming if you are doing it the first time but if you have followed closely so far, you will have no problem going through the whole process next time. In this section, we are going to start building our API. You are going to create your first controller for `todos` inside a new directory and file `controllers/todos.js`. We start by requiring the `todos` model.
 
 ```js
-const Todo = require("../models").Todo;
+const Todo = require('../models').Todo;
 
 module.exports = {
   create(req, res) {
     return Todo.create({
-      title: req.body.title,
+      title: req.body.title
     })
       .then(todo => res.status(201).send(todo))
       .catch(error => res.status(400).send(error));
-  },
+  }
 };
 ```
 
@@ -450,23 +450,23 @@ Then, we are exporting the controller function inside which `create` function ex
 You can think of each todo we create here as the name of a list of items. Right now we only are defining the business logic of creating the name for each list. Let’s complete this process and test with a REST client to see if everything works. Now we are going to connect this controller to the desired route. Create a new folder called `routes` and inside it a file called `index.js`.
 
 ```js
-const todosController = require("../controllers/todos.js");
+const todosController = require('../controllers/todos.js');
 
 module.exports = app => {
-  app.get("/api", (req, res) =>
+  app.get('/api', (req, res) =>
     res.status(200).send({
-      message: "Create Your Own Todo Lists API",
+      message: 'Create Your Own Todo Lists API'
     })
   );
 
-  app.post("/api/todos", todosController.create);
+  app.post('/api/todos', todosController.create);
 };
 ```
 
 In the above file, there are two routes being defined. One is `/api` which displays the welcome message and using `app.post('/api/todos`) where the request for creating a new to-do list can be send. Last step before the testing of this two new routes begin is to hook the routes inside `server.js` file.
 
 ```js
-const express = require("express");
+const express = require('express');
 
 const app = express();
 const PORT = 4000;
@@ -474,7 +474,7 @@ const PORT = 4000;
 app.use(express.json());
 app.use(
   express.urlencoded({
-    extended: true,
+    extended: true
   })
 );
 
@@ -482,7 +482,7 @@ app.use(
 // 	res.json({ message: 'REST API with Node.js, and Postgres API' });
 // });
 
-require("./routes/index")(app);
+require('./routes/index')(app);
 
 app.listen(PORT, () => {
   console.log(`Server running at port ${PORT}.`);
@@ -513,7 +513,7 @@ list(req, res) {
 Now open `routes/index.js` and create the new route for this logic to run.
 
 ```js
-app.get("/api/todos", todosController.list);
+app.get('/api/todos', todosController.list);
 ```
 
 Open the REST client and visit the URL `http://localhost:4000/api/todos](http://localhost:4000/api/todos`.
@@ -525,37 +525,37 @@ Open the REST client and visit the URL `http://localhost:4000/api/todos](http://
 Since the API is responding to the logic we have written behind it, you can continue to build it. In this section, you are going to create an individual item and add it to a specific list. Start by creating a file `todoitem.js` inside `controllers/`.
 
 ```js
-const TodoItem = require("../models").TodoItem;
+const TodoItem = require('../models').TodoItem;
 
 module.exports = {
   create(req, res) {
     return TodoItem.create({
       content: req.body.content,
-      todoId: req.params.todoId,
+      todoId: req.params.todoId
     })
       .then(todoItem => res.status(201).send(todoItem))
       .catch(error => res.status(400).send(error));
-  },
+  }
 };
 ```
 
 Next step is to add the route for it inside `routes/index.js`.
 
 ```js
-const todosController = require("../controllers/todos.js");
-const todoItemsController = require("../controllers/todoitem.js");
+const todosController = require('../controllers/todos.js');
+const todoItemsController = require('../controllers/todoitem.js');
 
 module.exports = app => {
-  app.get("/api", (req, res) =>
+  app.get('/api', (req, res) =>
     res.status(200).send({
-      message: "Create Your Own Todo Lists API",
+      message: 'Create Your Own Todo Lists API'
     })
   );
 
-  app.post("/api/todos", todosController.create);
-  app.get("/api/todos", todosController.list);
+  app.post('/api/todos', todosController.create);
+  app.get('/api/todos', todosController.list);
 
-  app.post("/api/todos/:todoId/items", todoItemsController.create);
+  app.post('/api/todos/:todoId/items', todoItemsController.create);
 };
 ```
 
@@ -566,13 +566,13 @@ The last step is to test this API endpoint. Run the URL `http://localhost:4000/a
 Now let us modify the `list` function in `controllers/todos.js` such that it returns the todo item along with the list name.
 
 ```js
-const Todo = require("../models").Todo;
-const TodoItem = require("../models").TodoItem;
+const Todo = require('../models').Todo;
+const TodoItem = require('../models').TodoItem;
 
 module.exports = {
   create(req, res) {
     return Todo.create({
-      title: req.body.title,
+      title: req.body.title
     })
       .then(todo => res.status(201).send(todo))
       .catch(error => res.status(400).send(error));
@@ -582,13 +582,13 @@ module.exports = {
       include: [
         {
           model: TodoItem,
-          as: "todoItems",
-        },
-      ],
+          as: 'todoItems'
+        }
+      ]
     })
       .then(todos => res.status(201).send(todos))
       .catch(error => res.status(400).send(error));
-  },
+  }
 };
 ```
 
@@ -636,7 +636,7 @@ destroy(req, res) {
 Add the corresponding route inside `routes/index.js`.
 
 ```js
-app.delete("/api/todos/:todoId", todosController.destroy);
+app.delete('/api/todos/:todoId', todosController.destroy);
 ```
 
 When you run the URL `http://localhost:4000/api/todos/2` with HTTP `DELETE` request it will respond back like below.

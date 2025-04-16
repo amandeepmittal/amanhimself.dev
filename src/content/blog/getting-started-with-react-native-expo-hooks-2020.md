@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - expo
-description: ""
+description: ''
 ---
 
 We live in the world of a variety of mobile devices majorly dominated by two platforms, iOS, and Android. It is a two-horse race and I am sure we can all agree on that. Building a mobile application is not an easy task though.
@@ -87,8 +87,8 @@ That's all for the setup. Let us build something.
 The `App.js` file in the generated app structure is what initializes the Expo app. In other words, it is the entry point of the development process. By default, it displays a text message and uses a functional component for that. Open the `App.js` file and you are going to get the following screen component file.
 
 ```js
-import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import React from 'react';
+import { StyleSheet, Text, View } from 'react-native';
 
 export default function App() {
   return (
@@ -101,10 +101,10 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center'
+  }
 });
 ```
 
@@ -133,9 +133,9 @@ The `react-navigation` library provides a function called `createAppContainer` t
 To create the first route, you need to create the first screen. Create a new file called `ViewNotes.js` inside `src/screens` directory. This screen is going to be served as the first or home screen of the app. Right now, let us add some mock components and later we will add UI component to reflect the demo app.
 
 ```js
-import React from "react";
-import { StyleSheet, View } from "react-native";
-import { Text } from "react-native-paper";
+import React from 'react';
+import { StyleSheet, View } from 'react-native';
+import { Text } from 'react-native-paper';
 
 function ViewNotes() {
   return (
@@ -150,18 +150,18 @@ function ViewNotes() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: '#fff',
     paddingHorizontal: 10,
-    paddingVertical: 20,
+    paddingVertical: 20
   },
   titleContainer: {
-    alignItems: "center",
-    justifyContent: "center",
-    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    flex: 1
   },
   title: {
-    fontSize: 20,
-  },
+    fontSize: 20
+  }
 });
 
 export default ViewNotes;
@@ -170,19 +170,19 @@ export default ViewNotes;
 Next, create a new file called `index.js` inside `src/navigation/` with the following code snippet.
 
 ```js
-import { createAppContainer } from "react-navigation";
-import { createStackNavigator } from "react-navigation-stack";
-import ViewNotes from "../screens/ViewNotes";
+import { createAppContainer } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation-stack';
+import ViewNotes from '../screens/ViewNotes';
 
 const StackNavigator = createStackNavigator(
   {
     ViewNotes: {
-      screen: ViewNotes,
-    },
+      screen: ViewNotes
+    }
   },
   {
-    initialRouteName: "ViewNotes",
-    headerMode: "none",
+    initialRouteName: 'ViewNotes',
+    headerMode: 'none'
   }
 );
 
@@ -194,9 +194,9 @@ In the above code snippet, the parameters such as `initialRouteName` and `header
 To see this in action, open the `App.js` file, import the navigator created above as well as `PaperProvider` component from `react-native-paper`. This provider is going to wrap the navigator and provides the theme to all the components in the framework. I
 
 ```js
-import React from "react";
-import { Provider as PaperProvider } from "react-native-paper";
-import AppNavigator from "./src/navigation";
+import React from 'react';
+import { Provider as PaperProvider } from 'react-native-paper';
+import AppNavigator from './src/navigation';
 
 export default function App() {
   return (
@@ -216,9 +216,9 @@ Make sure the development server is running. You are going to get the following 
 To complete the navigation process, let us set up the other screen with some mock text to display. Inside `src/screens/` create another file called `AddNotes.js` and the following code snippet.
 
 ```js
-import React from "react";
-import { StyleSheet, View } from "react-native";
-import { Text } from "react-native-paper";
+import React from 'react';
+import { StyleSheet, View } from 'react-native';
+import { Text } from 'react-native-paper';
 
 function AddNotes() {
   return (
@@ -233,18 +233,18 @@ function AddNotes() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: '#fff',
     paddingHorizontal: 10,
-    paddingVertical: 20,
+    paddingVertical: 20
   },
   titleContainer: {
-    alignItems: "center",
-    justifyContent: "center",
-    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    flex: 1
   },
   title: {
-    fontSize: 20,
-  },
+    fontSize: 20
+  }
 });
 
 export default AddNotes;
@@ -253,24 +253,24 @@ export default AddNotes;
 Open the `navigation/index.js` file and modify the stack navigator.
 
 ```js
-import { createAppContainer } from "react-navigation";
-import { createStackNavigator } from "react-navigation-stack";
-import ViewNotes from "../screens/ViewNotes";
-import AddNotes from "../screens/AddNotes";
+import { createAppContainer } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation-stack';
+import ViewNotes from '../screens/ViewNotes';
+import AddNotes from '../screens/AddNotes';
 
 const StackNavigator = createStackNavigator(
   {
     ViewNotes: {
-      screen: ViewNotes,
+      screen: ViewNotes
     },
     AddNotes: {
-      screen: AddNotes,
-    },
+      screen: AddNotes
+    }
   },
   {
-    initialRouteName: "ViewNotes",
-    headerMode: "none",
-    mode: "modal",
+    initialRouteName: 'ViewNotes',
+    headerMode: 'none',
+    mode: 'modal'
   }
 );
 
@@ -284,7 +284,7 @@ Do note that in the _options_ object, adds a `mode` for stack navigator to `moda
 Since `react-native-paper` provides cross-platform components to add to the app. In this section, let us add a floating button on the `ViewNotes` screen that can be used to navigate to the `AddNotes` screen. Import the component from the UI library.
 
 ```js
-import { Text, FAB } from "react-native-paper";
+import { Text, FAB } from 'react-native-paper';
 ```
 
 Next, modify the return function and a `FAB` component as well as corresponding styles to position it at the bottom of the screen.
@@ -301,7 +301,7 @@ function ViewNotes({ navigation }) {
         small
         icon="plus"
         label="Add new note"
-        onPress={() => navigation.navigate("AddNotes")}
+        onPress={() => navigation.navigate('AddNotes')}
       />
     </View>
   );
@@ -310,24 +310,24 @@ function ViewNotes({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: '#fff',
     paddingHorizontal: 10,
-    paddingVertical: 20,
+    paddingVertical: 20
   },
   titleContainer: {
-    alignItems: "center",
-    justifyContent: "center",
-    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    flex: 1
   },
   title: {
-    fontSize: 20,
+    fontSize: 20
   },
   fab: {
-    position: "absolute",
+    position: 'absolute',
     margin: 20,
     right: 0,
-    bottom: 10,
-  },
+    bottom: 10
+  }
 });
 ```
 
@@ -352,9 +352,9 @@ In this section, let us build a custom header component that is reusable for bot
 Import the following components from `react-native` and `react-native-paper`.
 
 ```js
-import React from "react";
-import { View, StyleSheet } from "react-native";
-import { Appbar, Title } from "react-native-paper";
+import React from 'react';
+import { View, StyleSheet } from 'react-native';
+import { Appbar, Title } from 'react-native-paper';
 ```
 
 The `Appbar` is a component that displays items in a bar. Each of the items can have an action associated but for the demo app, you only require it to display a title. Add the following code snippet that consists of the component as well as the corresponding styles.
@@ -374,16 +374,16 @@ function Header({ titleText }) {
 
 const styles = StyleSheet.create({
   headerContainer: {
-    backgroundColor: "#60DBC5",
+    backgroundColor: '#60DBC5'
   },
   container: {
     flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
+    justifyContent: 'center',
+    alignItems: 'center'
   },
   title: {
-    color: "#2E7166",
-  },
+    color: '#2E7166'
+  }
 });
 
 export default Header;
@@ -393,7 +393,7 @@ Import this component in `ViewNotes.js` and modify the contents of the component
 
 ```js
 // add the following statement
-import Header from "../components/Header";
+import Header from '../components/Header';
 
 // modify ViewNotes component
 function ViewNotes({ navigation }) {
@@ -409,7 +409,7 @@ function ViewNotes({ navigation }) {
           small
           icon="plus"
           label="Add new note"
-          onPress={() => navigation.navigate("AddNotes")}
+          onPress={() => navigation.navigate('AddNotes')}
         />
       </View>
     </>
@@ -425,7 +425,7 @@ Similarly, modify the `AddNotes.js` file.
 
 ```js
 // add the following statement
-import Header from "../components/Header";
+import Header from '../components/Header';
 
 // modify AddNotes component
 function AddNotes() {
@@ -453,7 +453,7 @@ To clearly understand how functional components could be leveraged to manage a s
 Open `ViewNotes.js` file and start by importing `useState` from the React library.
 
 ```js
-import React, { useState } from "react";
+import React, { useState } from 'react';
 ```
 
 Let us an array to store and display all the notes. Using the array later as the value to the `FlatList` component, you can easily render each note. In a functional component, you can define a default state variable as shown below.
@@ -484,8 +484,8 @@ When the array `notes` is empty, let us display a text message that indicates th
 The component `FlatList` is an efficient way to create scrolling data lists in a React Native app. It has a simple API to work with and is more efficient and preferment with a large amount of information to display in comparison to its alternate.
 
 ```js
-import { StyleSheet, View, FlatList } from "react-native";
-import { Text, FAB, List } from "react-native-paper";
+import { StyleSheet, View, FlatList } from 'react-native';
+import { Text, FAB, List } from 'react-native-paper';
 ```
 
 Next, modify the JSX of the `ViewNotes` component. Do take note that when navigating to `AddNotes` screen, you have to pass it as a prop. This can be done by passing it as the second parameter to `navigation.navigate` function.
@@ -520,8 +520,8 @@ return (
         label="Add new note"
         // add a second parameter object
         onPress={() =>
-          navigation.navigate("AddNote", {
-            addNote,
+          navigation.navigate('AddNote', {
+            addNote
           })
         }
       />
@@ -549,17 +549,17 @@ listTitle: {
 Since there are no notes, for now, let us modify the `AddNotes` screen to make it functional. This screen is responsible to add a note to the `ViewNotes` screen. Start by modifying the existing import statements.
 
 ```js
-import React, { useState } from "react";
-import { View, StyleSheet } from "react-native";
-import { IconButton, TextInput, FAB } from "react-native-paper";
+import React, { useState } from 'react';
+import { View, StyleSheet } from 'react-native';
+import { IconButton, TextInput, FAB } from 'react-native-paper';
 ```
 
 Using the hook `useState` the component is going to hold the value of each note's title and its description as `noteTitle` and `noteValue`.
 
 ```js
 function AddNote({ navigation }) {
-  const [noteTitle, setNoteTitle] = useState("");
-  const [noteValue, setNoteValue] = useState("");
+  const [noteTitle, setNoteTitle] = useState('');
+  const [noteValue, setNoteValue] = useState('');
 
   // ...
 }
@@ -575,8 +575,8 @@ Here is the complete `AddNotes` code snippet along with corresponding styles.
 
 ```js
 function AddNote({ navigation }) {
-  const [noteTitle, setNoteTitle] = useState("");
-  const [noteValue, setNoteValue] = useState("");
+  const [noteTitle, setNoteTitle] = useState('');
+  const [noteValue, setNoteValue] = useState('');
 
   function onSaveNote() {
     navigation.state.params.addNote({ noteTitle, noteValue });
@@ -615,7 +615,7 @@ function AddNote({ navigation }) {
           style={styles.fab}
           small
           icon="check"
-          disabled={noteTitle == "" ? true : false}
+          disabled={noteTitle == '' ? true : false}
           onPress={() => onSaveNote()}
         />
       </View>
@@ -626,31 +626,31 @@ function AddNote({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: '#fff',
     paddingHorizontal: 20,
-    paddingVertical: 20,
+    paddingVertical: 20
   },
   iconButton: {
-    backgroundColor: "rgba(46, 113, 102, 0.8)",
-    position: "absolute",
+    backgroundColor: 'rgba(46, 113, 102, 0.8)',
+    position: 'absolute',
     right: 0,
     top: 40,
-    margin: 10,
+    margin: 10
   },
   title: {
     fontSize: 24,
-    marginBottom: 20,
+    marginBottom: 20
   },
   text: {
     height: 300,
-    fontSize: 16,
+    fontSize: 16
   },
   fab: {
-    position: "absolute",
+    position: 'absolute',
     margin: 20,
     right: 0,
-    bottom: 0,
-  },
+    bottom: 0
+  }
 });
 
 export default AddNote;

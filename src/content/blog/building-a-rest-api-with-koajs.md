@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - nodejs
-description: ""
+description: ''
 ---
 
 ![cover](https://i.imgur.com/ohg3d3s.png)
@@ -64,12 +64,12 @@ Below, we create a route in a file called `app.js`.
 
 ```js
 // app.js
-const Koa = require("koa");
+const Koa = require('koa');
 const app = new Koa();
 
 // Our First Route
 app.use(async ctx => {
-  ctx.body = "Hello World";
+  ctx.body = 'Hello World';
 });
 
 // Bootstrap the server
@@ -159,8 +159,8 @@ Write the following code in the `app.js` file.
 ```js
 // app.js
 
-const Koa = require("koa");
-const koaBody = require("koa-body");
+const Koa = require('koa');
+const koaBody = require('koa-body');
 
 // create app instance
 const app = new Koa();
@@ -180,18 +180,18 @@ After body-parser middleware, you are going to have the routes. I am using anoth
 ```js
 // books.js
 
-const Router = require("koa-router");
+const Router = require('koa-router');
 
 // Prefix all routes with: /books
 const router = new Router({
-  prefix: "/books",
+  prefix: '/books'
 });
 
 let books = [
-  { id: 101, name: "Fight Club", author: "Chuck Palahniuk" },
-  { id: 102, name: "Sharp Objects", author: "Gillian Flynn" },
-  { id: 103, name: "Frankenstein", author: "Mary Shelley" },
-  { id: 101, name: "Into The Wild", author: "John Krakauer" },
+  { id: 101, name: 'Fight Club', author: 'Chuck Palahniuk' },
+  { id: 102, name: 'Sharp Objects', author: 'Gillian Flynn' },
+  { id: 103, name: 'Frankenstein', author: 'Mary Shelley' },
+  { id: 101, name: 'Into The Wild', author: 'John Krakauer' }
 ];
 
 // Routes will go here
@@ -211,7 +211,7 @@ Below is the code for handling a `GET` request in Koa. Add the following code to
 
 ```js
 // books.js
-router.get("/", (ctx, next) => {
+router.get('/', (ctx, next) => {
   ctx.body = books;
   next();
 });
@@ -223,8 +223,8 @@ This callback function traverses through the `books` array when to send the resp
 
 ```js
 // app.js
-const Koa = require("koa");
-const koaBody = require("koa-body");
+const Koa = require('koa');
+const koaBody = require('koa-body');
 
 const app = new Koa();
 
@@ -232,7 +232,7 @@ const app = new Koa();
 app.use(koaBody());
 
 // Require the Router we defined in books.js
-let books = require("./books.js");
+let books = require('./books.js');
 
 // Use the Router on the sub route /books
 app.use(books.routes());
@@ -250,7 +250,7 @@ Next step is to create a route to fetch a book by its `id`. It is going to use t
 
 ```js
 // books.js
-router.get("/:id", (ctx, next) => {
+router.get('/:id', (ctx, next) => {
   let getCurrentBook = books.filter(function (book) {
     if (book.id == ctx.params.id) {
       return true;
@@ -261,7 +261,7 @@ router.get("/:id", (ctx, next) => {
     ctx.body = getCurrentBook[0];
   } else {
     ctx.response.status = 404;
-    ctx.body = "Book Not Found";
+    ctx.body = 'Book Not Found';
   }
   next();
 });
@@ -282,7 +282,7 @@ The last route you are going to build for this demonstration is going to handle 
 ```js
 // books.js
 
-router.post("/new", (ctx, next) => {
+router.post('/new', (ctx, next) => {
   // Check if any of the data field not empty
   if (
     !ctx.request.body.id ||
@@ -290,12 +290,12 @@ router.post("/new", (ctx, next) => {
     !ctx.request.body.author
   ) {
     ctx.response.status = 400;
-    ctx.body = "Please enter the data";
+    ctx.body = 'Please enter the data';
   } else {
     let newBook = books.push({
       id: ctx.request.body.id,
       name: ctx.request.body.name,
-      author: ctx.request.body.author,
+      author: ctx.request.body.author
     });
     ctx.response.status = 201;
     ctx.body = `New book added with id: ${ctx.request.body.id} & name: ${ctx.request.body.name}`;

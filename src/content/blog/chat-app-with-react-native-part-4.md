@@ -1,5 +1,5 @@
 ---
-title: "Chat app with React Native (Part 4) - A guide to create Chat UI Screens with react-native-gifted-chat"
+title: 'Chat app with React Native (Part 4) - A guide to create Chat UI Screens with react-native-gifted-chat'
 author: Aman Mittal
 pubDatetime: 2020-04-28T03:42:51Z
 slug: chat-app-with-react-native-part-4
@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - react-native
-description: ""
+description: ''
 ---
 
 ![cover](https://i.imgur.com/ROYjoYo.jpg)
@@ -40,8 +40,8 @@ Then, let us add a mock chat UI screen elements to this screen. This can be done
 - Lastly, return the following code snippet. The `newMessage` is concatenated with previous or the initial messages using `GiftedChat.append()` method.
 
 ```js
-import React, { useState } from "react";
-import { GiftedChat } from "react-native-gifted-chat";
+import React, { useState } from 'react';
+import { GiftedChat } from 'react-native-gifted-chat';
 
 export default function RoomScreen() {
   const [messages, setMessages] = useState([
@@ -51,20 +51,20 @@ export default function RoomScreen() {
     // example of system message
     {
       _id: 0,
-      text: "New room created.",
+      text: 'New room created.',
       createdAt: new Date().getTime(),
-      system: true,
+      system: true
     },
     // example of chat message
     {
       _id: 1,
-      text: "Henlo!",
+      text: 'Henlo!',
       createdAt: new Date().getTime(),
       user: {
         _id: 2,
-        name: "Test User",
-      },
-    },
+        name: 'Test User'
+      }
+    }
   ]);
 
   // helper method that is sends a message
@@ -87,14 +87,14 @@ export default function RoomScreen() {
 Each message thread is only going to be displayed when the user enters the chat room. Open `src/navigation/HomeStack.js` and add the `RoomScreen` component as the second screen to the `ChatApp` stack as shown below.
 
 ```js
-import React from "react";
-import { createStackNavigator } from "@react-navigation/stack";
-import { IconButton } from "react-native-paper";
-import HomeScreen from "../screens/HomeScreen";
-import AddRoomScreen from "../screens/AddRoomScreen";
+import React from 'react';
+import { createStackNavigator } from '@react-navigation/stack';
+import { IconButton } from 'react-native-paper';
+import HomeScreen from '../screens/HomeScreen';
+import AddRoomScreen from '../screens/AddRoomScreen';
 
 // Add this
-import RoomScreen from "../screens/RoomScreen";
+import RoomScreen from '../screens/RoomScreen';
 
 const ChatAppStack = createStackNavigator();
 const ModalStack = createStackNavigator();
@@ -104,12 +104,12 @@ function ChatApp() {
     <ChatAppStack.Navigator
       screenOptions={{
         headerStyle: {
-          backgroundColor: "#6646ee",
+          backgroundColor: '#6646ee'
         },
-        headerTintColor: "#ffffff",
+        headerTintColor: '#ffffff',
         headerTitleStyle: {
-          fontSize: 22,
-        },
+          fontSize: 22
+        }
       }}
     >
       <ChatAppStack.Screen
@@ -121,9 +121,9 @@ function ChatApp() {
               icon="message-plus"
               size={28}
               color="#ffffff"
-              onPress={() => navigation.navigate("AddRoom")}
+              onPress={() => navigation.navigate('AddRoom')}
             />
-          ),
+          )
         })}
       />
       {/* Add this */}
@@ -144,11 +144,11 @@ Each list item can be wrapped in the `TouchableOpacity` component such that usin
 Here is the complete code snippet after the modifications.
 
 ```js
-import React, { useState, useEffect } from "react";
-import { View, StyleSheet, FlatList, TouchableOpacity } from "react-native";
-import { List, Divider } from "react-native-paper";
-import firestore from "@react-native-firebase/firestore";
-import Loading from "../components/Loading";
+import React, { useState, useEffect } from 'react';
+import { View, StyleSheet, FlatList, TouchableOpacity } from 'react-native';
+import { List, Divider } from 'react-native-paper';
+import firestore from '@react-native-firebase/firestore';
+import Loading from '../components/Loading';
 
 export default function HomeScreen({ navigation }) {
   const [threads, setThreads] = useState([]);
@@ -159,15 +159,15 @@ export default function HomeScreen({ navigation }) {
    */
   useEffect(() => {
     const unsubscribe = firestore()
-      .collection("THREADS")
+      .collection('THREADS')
       // .orderBy('latestMessage.createdAt', 'desc')
       .onSnapshot(querySnapshot => {
         const threads = querySnapshot.docs.map(documentSnapshot => {
           return {
             _id: documentSnapshot.id,
             // give defaults
-            name: "",
-            ...documentSnapshot.data(),
+            name: '',
+            ...documentSnapshot.data()
           };
         });
 
@@ -196,7 +196,7 @@ export default function HomeScreen({ navigation }) {
         ItemSeparatorComponent={() => <Divider />}
         renderItem={({ item }) => (
           <TouchableOpacity
-            onPress={() => navigation.navigate("Room", { thread: item })}
+            onPress={() => navigation.navigate('Room', { thread: item })}
           >
             <List.Item
               title={item.name}
@@ -215,15 +215,15 @@ export default function HomeScreen({ navigation }) {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "#f5f5f5",
-    flex: 1,
+    backgroundColor: '#f5f5f5',
+    flex: 1
   },
   listTitle: {
-    fontSize: 22,
+    fontSize: 22
   },
   listDescription: {
-    fontSize: 16,
-  },
+    fontSize: 16
+  }
 });
 ```
 
@@ -250,7 +250,7 @@ This can be obtained using `route` props as shown below.
   name="Room"
   component={RoomScreen}
   options={({ route }) => ({
-    title: route.params.thread.name,
+    title: route.params.thread.name
   })}
 />
 ```
@@ -284,7 +284,7 @@ Let us change the background color of this bubble to reflect the same color as i
 
 ```js
 // Step 1: modify the import statement
-import { GiftedChat, Bubble } from "react-native-gifted-chat";
+import { GiftedChat, Bubble } from 'react-native-gifted-chat';
 
 export default function RoomScreen() {
   // ...
@@ -299,13 +299,13 @@ export default function RoomScreen() {
         wrapperStyle={{
           right: {
             // Here is the color change
-            backgroundColor: "#6646ee",
-          },
+            backgroundColor: '#6646ee'
+          }
         }}
         textStyle={{
           right: {
-            color: "#fff",
-          },
+            color: '#fff'
+          }
         }}
       />
     );
@@ -315,7 +315,7 @@ export default function RoomScreen() {
     <GiftedChat
       messages={messages}
       onSend={newMessage => handleSend(newMessage)}
-      user={{ _id: 1, name: "User Test" }}
+      user={{ _id: 1, name: 'User Test' }}
       renderBubble={renderBubble}
     />
   );
@@ -334,7 +334,7 @@ You can modify the placeholder text using the prop `placeholder` as shown below.
 <GiftedChat
   messages={messages}
   onSend={newMessage => handleSend(newMessage)}
-  user={{ _id: 1, name: "User Test" }}
+  user={{ _id: 1, name: 'User Test' }}
   renderBubble={renderBubble}
   placeholder="Type your message here..."
 />
@@ -354,7 +354,7 @@ You can add the prop `showUserAvatar` to always display the user avatar of the c
 <GiftedChat
   messages={messages}
   onSend={newMessage => handleSend(newMessage)}
-  user={{ _id: 1, name: "User Test" }}
+  user={{ _id: 1, name: 'User Test' }}
   renderBubble={renderBubble}
   placeholder="Type your message here..."
   showUserAvatar
@@ -369,7 +369,7 @@ Right now, the send button only appears when the user is typing a message. Add t
 <GiftedChat
   messages={messages}
   onSend={newMessage => handleSend(newMessage)}
-  user={{ _id: 1, name: "User Test" }}
+  user={{ _id: 1, name: 'User Test' }}
   renderBubble={renderBubble}
   placeholder="Type your message here..."
   showUserAvatar
@@ -391,10 +391,10 @@ You can also modify this send button to show a custom text or icon. Let us do th
 
 ```js
 // Step 1: import Send
-import { GiftedChat, Bubble, Send } from "react-native-gifted-chat";
+import { GiftedChat, Bubble, Send } from 'react-native-gifted-chat';
 // Step 2: import IconButton
-import { IconButton } from "react-native-paper";
-import { View, StyleSheet } from "react-native";
+import { IconButton } from 'react-native-paper';
+import { View, StyleSheet } from 'react-native';
 
 export default function RoomScreen() {
   // ...
@@ -415,7 +415,7 @@ export default function RoomScreen() {
     <GiftedChat
       messages={messages}
       onSend={newMessage => handleSend(newMessage)}
-      user={{ _id: 1, name: "User Test" }}
+      user={{ _id: 1, name: 'User Test' }}
       renderBubble={renderBubble}
       placeholder="Type your message here..."
       showUserAvatar
@@ -429,9 +429,9 @@ export default function RoomScreen() {
 // Step 5: add corresponding styles
 const styles = StyleSheet.create({
   sendingContainer: {
-    justifyContent: "center",
-    alignItems: "center",
-  },
+    justifyContent: 'center',
+    alignItems: 'center'
+  }
 });
 ```
 
@@ -451,7 +451,7 @@ This can be solved by adding prop `scrollToBottom`.
 <GiftedChat
   messages={messages}
   onSend={newMessage => handleSend(newMessage)}
-  user={{ _id: 1, name: "User Test" }}
+  user={{ _id: 1, name: 'User Test' }}
   renderBubble={renderBubble}
   placeholder="Type your message here..."
   showUserAvatar
@@ -489,7 +489,7 @@ export default function RoomScreen() {
     <GiftedChat
       messages={messages}
       onSend={newMessage => handleSend(newMessage)}
-      user={{ _id: 1, name: "User Test" }}
+      user={{ _id: 1, name: 'User Test' }}
       renderBubble={renderBubble}
       placeholder="Type your message here..."
       showUserAvatar
@@ -505,9 +505,9 @@ export default function RoomScreen() {
 const styles = StyleSheet.create({
   // rest remains same
   bottomComponentContainer: {
-    justifyContent: "center",
-    alignItems: "center",
-  },
+    justifyContent: 'center',
+    alignItems: 'center'
+  }
 });
 ```
 
@@ -526,7 +526,7 @@ Initializing a new screen or in the current case, a chat room may take some time
 
 ```js
 // Step 1: import ActivityIndicator
-import { ActivityIndicator, View, StyleSheet } from "react-native";
+import { ActivityIndicator, View, StyleSheet } from 'react-native';
 
 export default function RoomScreen() {
   // ...
@@ -545,7 +545,7 @@ export default function RoomScreen() {
     <GiftedChat
       messages={messages}
       onSend={newMessage => handleSend(newMessage)}
-      user={{ _id: 1, name: "User Test" }}
+      user={{ _id: 1, name: 'User Test' }}
       renderBubble={renderBubble}
       placeholder="Type your message here..."
       showUserAvatar
@@ -563,9 +563,9 @@ const styles = StyleSheet.create({
   // rest remains same
   loadingContainer: {
     flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-  },
+    alignItems: 'center',
+    justifyContent: 'center'
+  }
 });
 ```
 

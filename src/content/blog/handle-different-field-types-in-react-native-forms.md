@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - expo
-description: ""
+description: ''
 ---
 
 In the [previous post](https://amanhimself.dev/build-validate-forms-with-react-native-formik-yup), you did a lot of things. From creating Login and Signup forms from scratch and using powerful libraries like Formik and yup to validate those forms.
@@ -50,11 +50,11 @@ In the [**last post**](LINK HERE), I left you with a challenge to figure out how
 ```js
 <Formik
   initialValues={{
-    name: "",
-    email: "",
-    password: "",
+    name: '',
+    email: '',
+    password: '',
     // add this
-    confirmPassword: "",
+    confirmPassword: ''
   }}
   onSubmit={values => {
     this.handleSubmit(values);
@@ -69,19 +69,19 @@ In the [**last post**](LINK HERE), I left you with a challenge to figure out how
     isValid,
     touched,
     handleBlur,
-    isSubmitting,
+    isSubmitting
   }) => (
     <Fragment>
       {/* Rest of the code remains same */}
       <FormInput
         name="password"
         value={values.confirmPassword}
-        onChangeText={handleChange("confirmPassword")}
+        onChangeText={handleChange('confirmPassword')}
         placeholder="Confirm password"
         secureTextEntry
         iconName="ios-lock"
         iconColor="#2C384A"
-        onBlur={handleBlur("confirmPassword")}
+        onBlur={handleBlur('confirmPassword')}
       />
       <ErrorMessage
         errorValue={touched.confirmPassword && errors.confirmPassword}
@@ -106,22 +106,22 @@ In the `validationSchema` object add a new property called `confirmPassword` tha
 ```js
 const validationSchema = Yup.object().shape({
   name: Yup.string()
-    .label("Name")
+    .label('Name')
     .required()
-    .min(2, "Must have at least 2 characters"),
+    .min(2, 'Must have at least 2 characters'),
   email: Yup.string()
-    .label("Email")
-    .email("Enter a valid email")
-    .required("Please enter a registered email"),
+    .label('Email')
+    .email('Enter a valid email')
+    .required('Please enter a registered email'),
   password: Yup.string()
-    .label("Password")
+    .label('Password')
     .required()
-    .min(4, "Password must have more than 4 characters "),
+    .min(4, 'Password must have more than 4 characters '),
 
   // add this
   confirmPassword: Yup.string()
-    .oneOf([Yup.ref("password")], "Confirm Password must matched Password")
-    .required("Confirm Password is required"),
+    .oneOf([Yup.ref('password')], 'Confirm Password must matched Password')
+    .required('Confirm Password is required')
 });
 ```
 
@@ -164,7 +164,7 @@ At the checkbox, there is a prop called `checked` that is required. It holds the
   title="Agree to terms and conditions"
   checkedTitle="You agreed to our terms and conditions"
   checked={values.check}
-  onPress={() => setFieldValue("check", !values.check)}
+  onPress={() => setFieldValue('check', !values.check)}
 />
 ```
 
@@ -175,7 +175,7 @@ Using `setFieldValue` from Formik props, you can set the value of the `check` to
 Lastly, edit the `validationSchema` by adding the key `check`. It is going to use boolean schema type.
 
 ```js
-check: Yup.boolean().oneOf([true], "Please check the agreement");
+check: Yup.boolean().oneOf([true], 'Please check the agreement');
 ```
 
 See the below demonstration on how it works.
@@ -191,8 +191,8 @@ In this section, you are going to add the ability to hide or show the password o
 To start, open `Login.js` file and import `TouchableOpacity` from `react-native` and `Ionicons` from expo's vector icons library which comes with Expo SDK.
 
 ```js
-import { StyleSheet, SafeAreaView, View, TouchableOpacity } from "react-native";
-import { Ionicons } from "@expo/vector-icons";
+import { StyleSheet, SafeAreaView, View, TouchableOpacity } from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
 ```
 
 Next step is to define an initial state inside the `Login` component. This will help track of the current icon being shown and the visibility of the password.
@@ -200,7 +200,7 @@ Next step is to define an initial state inside the `Login` component. This will 
 ```js
 state = {
   passwordVisibility: true,
-  rightIcon: "ios-eye",
+  rightIcon: 'ios-eye'
 };
 ```
 
@@ -209,8 +209,8 @@ The define a handler method that will trigger on the `onPress` prop of `Touchabl
 ```js
 handlePasswordVisibility = () => {
   this.setState(prevState => ({
-    rightIcon: prevState.rightIcon === "ios-eye" ? "ios-eye-off" : "ios-eye",
-    passwordVisibility: !prevState.passwordVisibility,
+    rightIcon: prevState.rightIcon === 'ios-eye' ? 'ios-eye-off' : 'ios-eye',
+    passwordVisibility: !prevState.passwordVisibility
   }));
 };
 ```

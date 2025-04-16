@@ -1,5 +1,5 @@
 ---
-title: "Using Context API with React Native"
+title: 'Using Context API with React Native'
 author: Aman Mittal
 pubDatetime: 2019-09-27T03:42:51Z
 slug: context-api-react-native-firebase
@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - react-native
-description: ""
+description: ''
 ---
 
 ![cover](https://i.imgur.com/tEzuwkP.png)
@@ -76,13 +76,13 @@ Next, go inside the [Expo app](https://github.com/amandeepmittal/expo-firebase/r
 // Replace all Xs with real Firebase API keys
 
 export default {
-  apiKey: "XXXX",
-  authDomain: "XXXX",
-  databaseURL: "XXXX",
-  projectId: "XXXX",
-  storageBucket: "XXXX",
-  messagingSenderId: "XXXX",
-  appId: "XXXX",
+  apiKey: 'XXXX',
+  authDomain: 'XXXX',
+  databaseURL: 'XXXX',
+  projectId: 'XXXX',
+  storageBucket: 'XXXX',
+  messagingSenderId: 'XXXX',
+  appId: 'XXXX'
 };
 ```
 
@@ -97,10 +97,10 @@ Back to the `config/Firebase/` directory. Create a new file `firebase.js`. This 
 Also, define a `Firebase` object with some initial methods that you are going to use in the tutorial. These methods are going to conduct real-time events such as user authentication, sign out from the app, and store the user details based on the reference to `uid` (_unique user id Firebase creates for every registered user_) in real-time NoSQL database called **Cloud Firestore**.
 
 ```js
-import * as firebase from "firebase";
-import "firebase/auth";
-import "firebase/firestore";
-import firebaseConfig from "./firebaseConfig";
+import * as firebase from 'firebase';
+import 'firebase/auth';
+import 'firebase/firestore';
+import firebaseConfig from './firebaseConfig';
 
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
@@ -124,10 +124,10 @@ const Firebase = {
   createNewUser: userData => {
     return firebase
       .firestore()
-      .collection("users")
+      .collection('users')
       .doc(`${userData.uid}`)
       .set(userData);
-  },
+  }
 };
 
 export default Firebase;
@@ -162,7 +162,7 @@ The Context API consists of three building blocks:
 Create a new file inside the `Firebase` directory called `context.js`. Declare a `FirebaseContext` that is going to be an object.
 
 ```js
-import React, { createContext } from "react";
+import React, { createContext } from 'react';
 
 const FirebaseContext = createContext({});
 ```
@@ -188,8 +188,8 @@ export const withFirebaseHOC = Component => props => (
 You will understand with more clarity in the next section when modifying the existing `Login` and `Signup` component with this HoC. Now, create a new file `index.js` to export both the `Firebase` object from the `firebase.js` file, the provider and the HoC.
 
 ```js
-import Firebase from "./firebase";
-import { FirebaseProvider, withFirebaseHOC } from "./context";
+import Firebase from './firebase';
+import { FirebaseProvider, withFirebaseHOC } from './context';
 
 export default Firebase;
 
@@ -199,9 +199,9 @@ export { FirebaseProvider, withFirebaseHOC };
 The provider has to grab the value from the context object for the consumer to use that value. This is going to be done in `App.js` file. The value for the `FirebaseProvider` is going to be the `Firebase` object with different strategies and functions to authenticate and store the user data in real-time database. Wrap the `AppContainer` with it.
 
 ```js
-import React from "react";
-import AppContainer from "./navigation";
-import Firebase, { FirebaseProvider } from "./config/Firebase";
+import React from 'react';
+import AppContainer from './navigation';
+import Firebase, { FirebaseProvider } from './config/Firebase';
 
 export default function App() {
   return (
@@ -219,7 +219,7 @@ That's it for setting up the Firebase SDK.
 In this section, you are going to modify the existing `Signup.js` component in order to register a new user with the firebase backend and store their data in Firestore. To start, import the `withFirebaseHOC`.
 
 ```js
-import { withFirebaseHOC } from "../config/Firebase";
+import { withFirebaseHOC } from '../config/Firebase';
 ```
 
 Replace the `handleSubmit()` method with `handleOnSignup()`. Since all the input values are coming from Formik, you have to edit `onSubmit` prop on the `Formik` element too. The `signupWithEmail` is coming from firebase props and since you are already wrapping the navigation container with `FirebaseProvider`, `this.props.firebase` will make sure any method inside the `Firebase` object in the file `config/Firebase/firebase.js` is available to be used in this component.
@@ -261,7 +261,7 @@ The logic behind saving the user object is the following:
 createNewUser: userData => {
   return firebase
     .firestore()
-    .collection("users")
+    .collection('users')
     .doc(`${userData.uid}`)
     .set(userData);
 };
@@ -310,11 +310,11 @@ handleOnSignup = async (values, actions) => {
       const { uid } = response.user;
       const userData = { email, name, uid };
       await this.props.firebase.createNewUser(userData);
-      this.props.navigation.navigate("App");
+      this.props.navigation.navigate('App');
     }
   } catch (error) {
     // console.error(error)
-    actions.setFieldError("general", error.message);
+    actions.setFieldError('general', error.message);
   } finally {
     actions.setSubmitting(false);
   }
@@ -348,42 +348,42 @@ _Voila!_ It works! The error message is shown and it does not submit the form.
 As the previous section, similar number of steps have to be performed for the Login form to work. Instead of going through them individually, here is the complete `Login` component.
 
 ```js
-import React, { Component, Fragment } from "react";
-import { StyleSheet, SafeAreaView, View, TouchableOpacity } from "react-native";
-import { Button } from "react-native-elements";
-import { Ionicons } from "@expo/vector-icons";
-import { Formik } from "formik";
-import * as Yup from "yup";
-import { HideWithKeyboard } from "react-native-hide-with-keyboard";
-import FormInput from "../components/FormInput";
-import FormButton from "../components/FormButton";
-import ErrorMessage from "../components/ErrorMessage";
-import AppLogo from "../components/AppLogo";
-import { withFirebaseHOC } from "../config/Firebase";
+import React, { Component, Fragment } from 'react';
+import { StyleSheet, SafeAreaView, View, TouchableOpacity } from 'react-native';
+import { Button } from 'react-native-elements';
+import { Ionicons } from '@expo/vector-icons';
+import { Formik } from 'formik';
+import * as Yup from 'yup';
+import { HideWithKeyboard } from 'react-native-hide-with-keyboard';
+import FormInput from '../components/FormInput';
+import FormButton from '../components/FormButton';
+import ErrorMessage from '../components/ErrorMessage';
+import AppLogo from '../components/AppLogo';
+import { withFirebaseHOC } from '../config/Firebase';
 
 const validationSchema = Yup.object().shape({
   email: Yup.string()
-    .label("Email")
-    .email("Enter a valid email")
-    .required("Please enter a registered email"),
+    .label('Email')
+    .email('Enter a valid email')
+    .required('Please enter a registered email'),
   password: Yup.string()
-    .label("Password")
+    .label('Password')
     .required()
-    .min(6, "Password must have at least 6 characters "),
+    .min(6, 'Password must have at least 6 characters ')
 });
 
 class Login extends Component {
   state = {
     passwordVisibility: true,
-    rightIcon: "ios-eye",
+    rightIcon: 'ios-eye'
   };
 
-  goToSignup = () => this.props.navigation.navigate("Signup");
+  goToSignup = () => this.props.navigation.navigate('Signup');
 
   handlePasswordVisibility = () => {
     this.setState(prevState => ({
-      rightIcon: prevState.rightIcon === "ios-eye" ? "ios-eye-off" : "ios-eye",
-      passwordVisibility: !prevState.passwordVisibility,
+      rightIcon: prevState.rightIcon === 'ios-eye' ? 'ios-eye-off' : 'ios-eye',
+      passwordVisibility: !prevState.passwordVisibility
     }));
   };
 
@@ -396,10 +396,10 @@ class Login extends Component {
       );
 
       if (response.user) {
-        this.props.navigation.navigate("App");
+        this.props.navigation.navigate('App');
       }
     } catch (error) {
-      actions.setFieldError("general", error.message);
+      actions.setFieldError('general', error.message);
     } finally {
       actions.setSubmitting(false);
     }
@@ -413,7 +413,7 @@ class Login extends Component {
           <AppLogo />
         </HideWithKeyboard>
         <Formik
-          initialValues={{ email: "", password: "" }}
+          initialValues={{ email: '', password: '' }}
           onSubmit={(values, actions) => {
             this.handleOnLogin(values, actions);
           }}
@@ -427,29 +427,29 @@ class Login extends Component {
             isValid,
             touched,
             handleBlur,
-            isSubmitting,
+            isSubmitting
           }) => (
             <Fragment>
               <FormInput
                 name="email"
                 value={values.email}
-                onChangeText={handleChange("email")}
+                onChangeText={handleChange('email')}
                 placeholder="Enter email"
                 autoCapitalize="none"
                 iconName="ios-mail"
                 iconColor="#2C384A"
-                onBlur={handleBlur("email")}
+                onBlur={handleBlur('email')}
               />
               <ErrorMessage errorValue={touched.email && errors.email} />
               <FormInput
                 name="password"
                 value={values.password}
-                onChangeText={handleChange("password")}
+                onChangeText={handleChange('password')}
                 placeholder="Enter password"
                 secureTextEntry={passwordVisibility}
                 iconName="ios-lock"
                 iconColor="#2C384A"
-                onBlur={handleBlur("password")}
+                onBlur={handleBlur('password')}
                 rightIcon={
                   <TouchableOpacity onPress={this.handlePasswordVisibility}>
                     <Ionicons name={rightIcon} size={28} color="grey" />
@@ -475,7 +475,7 @@ class Login extends Component {
           title="Don't have an account? Sign Up"
           onPress={this.goToSignup}
           titleStyle={{
-            color: "#F57C00",
+            color: '#F57C00'
           }}
           type="clear"
         />
@@ -487,16 +487,16 @@ class Login extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
-    marginTop: 50,
+    backgroundColor: '#fff',
+    marginTop: 50
   },
   logoContainer: {
     marginBottom: 15,
-    alignItems: "center",
+    alignItems: 'center'
   },
   buttonContainer: {
-    margin: 25,
-  },
+    margin: 25
+  }
 });
 
 export default withFirebaseHOC(Login);
@@ -513,10 +513,10 @@ Sign out button at this point is essential but since there is no app interface r
 Also, import `withFirebaseHOC` and add the `Button` component below the text.
 
 ```js
-import React, { Component } from "react";
-import { StyleSheet, Text, View } from "react-native";
-import { Button } from "react-native-elements";
-import { withFirebaseHOC } from "../config/Firebase";
+import React, { Component } from 'react';
+import { StyleSheet, Text, View } from 'react-native';
+import { Button } from 'react-native-elements';
+import { withFirebaseHOC } from '../config/Firebase';
 
 class Home extends Component {
   render() {
@@ -527,7 +527,7 @@ class Home extends Component {
           title="Signout"
           onPress={this.handleSignout}
           titleStyle={{
-            color: "#F57C00",
+            color: '#F57C00'
           }}
           type="clear"
         />
@@ -539,10 +539,10 @@ class Home extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center'
+  }
 });
 
 export default withFirebaseHOC(Home);
@@ -558,7 +558,7 @@ Right now, this button doesn't do anything. You will have to add the `handleSign
 handleSignOut = async () => {
   try {
     await this.props.firebase.signOut();
-    this.props.navigation.navigate("Auth");
+    this.props.navigation.navigate('Auth');
   } catch (error) {
     console.log(error);
   }
@@ -580,19 +580,19 @@ The auth check is going to do at the same point when the application is loading 
 ```js
 // navigation.js
 
-import { createSwitchNavigator, createAppContainer } from "react-navigation";
-import Initial from "../screens/Initial";
-import AuthNavigation from "./AuthNavigation";
-import AppNavigation from "./AppNavigation";
+import { createSwitchNavigator, createAppContainer } from 'react-navigation';
+import Initial from '../screens/Initial';
+import AuthNavigation from './AuthNavigation';
+import AppNavigation from './AppNavigation';
 
 const SwitchNavigator = createSwitchNavigator(
   {
     Initial: Initial,
     Auth: AuthNavigation,
-    App: AppNavigation,
+    App: AppNavigation
   },
   {
-    initialRouteName: "Initial",
+    initialRouteName: 'Initial'
   }
 );
 
@@ -606,7 +606,7 @@ Using the lifecycle method inside the `Initial.js`, the authentication status of
 Start by importing the Firebase HoC in the file `screens/Initial.js`.
 
 ```js
-import { withFirebaseHOC } from "../config/Firebase";
+import { withFirebaseHOC } from '../config/Firebase';
 ```
 
 Next, inside the `componendDidMount` method add the following. If the user has previously logged in, the navigation flow will directly take the user to the Home screen. If the is not logged in, it will show the Login screen.
@@ -620,10 +620,10 @@ componentDidMount = async () => {
     await this.props.firebase.checkUserAuth(user => {
       if (user) {
         // if the user has previously logged in
-        this.props.navigation.navigate("App");
+        this.props.navigation.navigate('App');
       } else {
         // if the user has previously signed out from the app
-        this.props.navigation.navigate("Auth");
+        this.props.navigation.navigate('Auth');
       }
     });
   } catch (error) {

@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - ionic
-description: ""
+description: ''
 ---
 
 There is an element of confusion when it comes to use FontAwesome in an Ionic Application. To include this fonts library in Ionic needs a bit of configuration and this step by step guide will provide just that.

@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - react-native
-description: ""
+description: ''
 ---
 
 Google Vision API is a great way to add image recognition capabilities to your app. It does a great job detecting a variety of categories such as labels, popular logos, faces, landmarks, and text. You can think of Google Vision API as a Google Image Search offered as an API interface that you can incorporate into your applications.
@@ -123,34 +123,34 @@ After installing the Firebase SDK, create a folder called `config` and inside `f
 ```js
 var environments = {
   staging: {
-    FIREBASE_API_KEY: "XXXX",
-    FIREBASE_AUTH_DOMAIN: "XXXX",
-    FIREBASE_DATABASE_URL: "XXXX",
-    FIREBASE_PROJECT_ID: "XXXX",
-    FIREBASE_STORAGE_BUCKET: "XXXX",
-    FIREBASE_MESSAGING_SENDER_ID: "XXXX",
-    GOOGLE_CLOUD_VISION_API_KEY: "XXXX",
+    FIREBASE_API_KEY: 'XXXX',
+    FIREBASE_AUTH_DOMAIN: 'XXXX',
+    FIREBASE_DATABASE_URL: 'XXXX',
+    FIREBASE_PROJECT_ID: 'XXXX',
+    FIREBASE_STORAGE_BUCKET: 'XXXX',
+    FIREBASE_MESSAGING_SENDER_ID: 'XXXX',
+    GOOGLE_CLOUD_VISION_API_KEY: 'XXXX'
   },
   production: {
     // Warning: This file still gets included in
     // your native binary and is not a secure way
     // to store secrets if you build for the app stores.
     // Details: https://github.com/expo/expo/issues/83
-  },
+  }
 };
 
 function getReleaseChannel() {
   let releaseChannel = Expo.Constants.manifest.releaseChannel;
   if (releaseChannel === undefined) {
-    return "staging";
-  } else if (releaseChannel === "staging") {
-    return "staging";
+    return 'staging';
+  } else if (releaseChannel === 'staging') {
+    return 'staging';
   } else {
-    return "staging";
+    return 'staging';
   }
 }
 function getEnvironment(env) {
-  console.log("Release Channel: ", getReleaseChannel());
+  console.log('Release Channel: ', getReleaseChannel());
   return environments[env];
 }
 var Environment = getEnvironment(getReleaseChannel());
@@ -206,7 +206,7 @@ This package will help you create a blob for every image that is going to be use
 Let us start by importing the necessary libraries that we are going to use in our App component. Open `App.js` file and import the following.
 
 ```js
-import React, { Component } from "react";
+import React, { Component } from 'react';
 import {
   View,
   Text,
@@ -215,13 +215,13 @@ import {
   ActivityIndicator,
   Button,
   FlatList,
-  Clipboard,
-} from "react-native";
-import { ImagePicker, Permissions } from "expo";
-import uuid from "uuid";
+  Clipboard
+} from 'react-native';
+import { ImagePicker, Permissions } from 'expo';
+import uuid from 'uuid';
 
-import Environment from "./src/config/environment";
-import firebase from "./src/config/firebase";
+import Environment from './src/config/environment';
+import firebase from './src/config/firebase';
 ```
 
 Next, inside the class component, define an initial state with three properties.
@@ -272,10 +272,10 @@ async function uploadImageAsync(uri) {
     };
     xhr.onerror = function (e) {
       console.log(e);
-      reject(new TypeError("Network request failed"));
+      reject(new TypeError('Network request failed'));
     };
-    xhr.responseType = "blob";
-    xhr.open("GET", uri, true);
+    xhr.responseType = 'blob';
+    xhr.open('GET', uri, true);
     xhr.send(null);
   });
 
@@ -300,7 +300,7 @@ To use this API, `Permissions.CAMERA_ROLL` is required. Take a look below, how y
 _takePhoto = async () => {
   let pickerResult = await ImagePicker.launchCameraAsync({
     allowsEditing: true,
-    aspect: [4, 3],
+    aspect: [4, 3]
   });
 
   this._handleImagePicked(pickerResult);
@@ -309,7 +309,7 @@ _takePhoto = async () => {
 _pickImage = async () => {
   let pickerResult = await ImagePicker.launchImageLibraryAsync({
     allowsEditing: true,
-    aspect: [4, 3],
+    aspect: [4, 3]
   });
 
   this._handleImagePicked(pickerResult);
@@ -325,7 +325,7 @@ _handleImagePicked = async pickerResult => {
     }
   } catch (e) {
     console.log(e);
-    alert("Upload failed, sorry :(");
+    alert('Upload failed, sorry :(');
   } finally {
     this.setState({ uploading: false });
   }
@@ -374,42 +374,42 @@ submitToGoogle = async () => {
       requests: [
         {
           features: [
-            { type: "LABEL_DETECTION", maxResults: 10 },
-            { type: "LANDMARK_DETECTION", maxResults: 5 },
-            { type: "FACE_DETECTION", maxResults: 5 },
-            { type: "LOGO_DETECTION", maxResults: 5 },
-            { type: "TEXT_DETECTION", maxResults: 5 },
-            { type: "DOCUMENT_TEXT_DETECTION", maxResults: 5 },
-            { type: "SAFE_SEARCH_DETECTION", maxResults: 5 },
-            { type: "IMAGE_PROPERTIES", maxResults: 5 },
-            { type: "CROP_HINTS", maxResults: 5 },
-            { type: "WEB_DETECTION", maxResults: 5 },
+            { type: 'LABEL_DETECTION', maxResults: 10 },
+            { type: 'LANDMARK_DETECTION', maxResults: 5 },
+            { type: 'FACE_DETECTION', maxResults: 5 },
+            { type: 'LOGO_DETECTION', maxResults: 5 },
+            { type: 'TEXT_DETECTION', maxResults: 5 },
+            { type: 'DOCUMENT_TEXT_DETECTION', maxResults: 5 },
+            { type: 'SAFE_SEARCH_DETECTION', maxResults: 5 },
+            { type: 'IMAGE_PROPERTIES', maxResults: 5 },
+            { type: 'CROP_HINTS', maxResults: 5 },
+            { type: 'WEB_DETECTION', maxResults: 5 }
           ],
           image: {
             source: {
-              imageUri: image,
-            },
-          },
-        },
-      ],
+              imageUri: image
+            }
+          }
+        }
+      ]
     });
     let response = await fetch(
-      "https://vision.googleapis.com/v1/images:annotate?key=" +
-        Environment["GOOGLE_CLOUD_VISION_API_KEY"],
+      'https://vision.googleapis.com/v1/images:annotate?key=' +
+        Environment['GOOGLE_CLOUD_VISION_API_KEY'],
       {
         headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
+          Accept: 'application/json',
+          'Content-Type': 'application/json'
         },
-        method: "POST",
-        body: body,
+        method: 'POST',
+        body: body
       }
     );
     let responseJson = await response.json();
     console.log(responseJson);
     this.setState({
       googleResponse: responseJson,
-      uploading: false,
+      uploading: false
     });
   } catch (error) {
     console.log(error);

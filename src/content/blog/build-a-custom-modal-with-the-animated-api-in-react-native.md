@@ -1,5 +1,5 @@
 ---
-title: "Build a Custom Modal with the Animated API in React Native"
+title: 'Build a Custom Modal with the Animated API in React Native'
 author: Aman Mittal
 pubDatetime: 2019-06-13T03:42:51Z
 slug: build-a-custom-modal-with-the-animated-api-in-react-native
@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - react-native
-description: ""
+description: ''
 ---
 
 ![cover_image](https://i.imgur.com/0bXMoSY.png)
@@ -98,8 +98,8 @@ Create two screens inside a new directory called `screens/`. One is going to be 
 Here is the initial snippet of `screens/HomeScreen.js`.
 
 ```js
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 class HomeScreen extends React.Component {
   render() {
@@ -130,8 +130,8 @@ The above snippet is using `styled-components` to define new UI elements using R
 For `CustomModal.js`:
 
 ```js
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 class CustomModal extends React.Component {
   render() {
@@ -160,9 +160,9 @@ export default CustomModal;
 Now, let us import the `HomeScreen` component inside `App.js`. This component is going to be the entry point of our app.
 
 ```js
-import React from "react";
+import React from 'react';
 
-import HomeScreen from "./screens/HomeScreen";
+import HomeScreen from './screens/HomeScreen';
 
 export default function App() {
   return <HomeScreen />;
@@ -179,15 +179,15 @@ In this section, let us create a simple reducer for Redux state management libra
 
 ```js
 const initialState = {
-  action: "",
+  action: ''
 };
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
-    case "OPEN_MODAL":
-      return { ...state, action: "openModal" };
-    case "CLOSE_MODAL":
-      return { ...state, action: "closeModal" };
+    case 'OPEN_MODAL':
+      return { ...state, action: 'openModal' };
+    case 'CLOSE_MODAL':
+      return { ...state, action: 'closeModal' };
     default:
       return state;
   }
@@ -199,11 +199,11 @@ export default reducer;
 Since the `redux` and `react-redux` dependencies are already installed, open `App.js` file and inside write the code to hook a store provider for redux to manage global state in the app.
 
 ```js
-import React from "react";
-import { createStore } from "redux";
-import { Provider } from "react-redux";
-import HomeScreen from "./screens/HomeScreen";
-import reducer from "./reducers";
+import React from 'react';
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+import HomeScreen from './screens/HomeScreen';
+import reducer from './reducers';
 
 const store = createStore(reducer);
 
@@ -223,8 +223,8 @@ The redux setup is complete. Let us move on to the next section where the real t
 Even though we are creating this custom modal as a screen, you can always use this as a re-usable component. Open `CustomModel.js` file and add the following snippet of code.
 
 ```js
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 class CustomModal extends React.Component {
   render() {
@@ -264,7 +264,7 @@ In order to see this in action, open `HomeScreen.js` and import it.
 
 ```js
 // ...
-import CustomModal from "./CustomModal";
+import CustomModal from './CustomModal';
 
 class HomeScreen extends React.Component {
   render() {
@@ -289,13 +289,13 @@ Great! Now that we can see the Custom Model on the screen, let us start applying
 This initial state value defines an Animated `top` value to push model up and down.
 
 ```js
-import React from "react";
-import styled from "styled-components";
-import { Animated } from "react-native";
+import React from 'react';
+import styled from 'styled-components';
+import { Animated } from 'react-native';
 
 class CustomModal extends React.Component {
   state = {
-    top: new Animated.Value(900),
+    top: new Animated.Value(900)
   };
   render() {
     return (
@@ -357,16 +357,16 @@ You will get the following result.
 We need to add a button to close the modal. Let us add the styles and view for the close button on the modal. Create a `CloseView` component with `styled-components` library inside a `TouchableOpacity` button. Also, for the close icon, we are going to use `@expo/vector-icons` library.
 
 ```js
-import React from "react";
-import styled from "styled-components";
-import { Animated, TouchableOpacity, Dimensions } from "react-native";
-import * as Icon from "@expo/vector-icons";
+import React from 'react';
+import styled from 'styled-components';
+import { Animated, TouchableOpacity, Dimensions } from 'react-native';
+import * as Icon from '@expo/vector-icons';
 
-const screenHeight = Dimensions.get("window").height;
+const screenHeight = Dimensions.get('window').height;
 
 class CustomModal extends React.Component {
   state = {
-    top: new Animated.Value(screenHeight),
+    top: new Animated.Value(screenHeight)
   };
 
   componentDidMount() {
@@ -375,13 +375,13 @@ class CustomModal extends React.Component {
 
   toggleModal = () => {
     Animated.spring(this.state.top, {
-      toValue: 174,
+      toValue: 174
     }).start();
   };
 
   closeModal = () => {
     Animated.spring(this.state.top, {
-      toValue: screenHeight,
+      toValue: screenHeight
     }).start();
   };
 
@@ -392,11 +392,11 @@ class CustomModal extends React.Component {
         <TouchableOpacity
           onPress={this.closeModal}
           style={{
-            position: "absolute",
+            position: 'absolute',
             top: 120,
-            left: "50%",
+            left: '50%',
             marginLeft: -22,
-            zIndex: 1,
+            zIndex: 1
           }}
         >
           <CloseView style={{ elevation: 10 }}>
@@ -458,7 +458,7 @@ In this section, you are going to use Redux to manage the state of opening and c
 
 ```js
 // ...
-import { connect } from "react-redux";
+import { connect } from 'react-redux';
 
 function mapStateToProps(state) {
   return { action: state.action };
@@ -468,8 +468,8 @@ function mapDispatchToProps(dispatch) {
   return {
     closeModal: () =>
       dispatch({
-        type: "CLOSE_MODAL",
-      }),
+        type: 'CLOSE_MODAL'
+      })
   };
 }
 
@@ -480,14 +480,14 @@ Next, let us merge the business logic to trigger animations for opening and clos
 
 ```js
 toggleModal = () => {
-  if (this.props.action === "openModal") {
+  if (this.props.action === 'openModal') {
     Animated.spring(this.state.top, {
-      toValue: 174,
+      toValue: 174
     }).start();
   }
-  if (this.props.action === "closeModal") {
+  if (this.props.action === 'closeModal') {
     Animated.spring(this.state.top, {
-      toValue: screenHeight,
+      toValue: screenHeight
     }).start();
   }
 };
@@ -508,11 +508,11 @@ Since the initial state at the application level right now is empty, you are not
 Open `HomeScreen.js` and connect it to the redux state like below.
 
 ```js
-import React from "react";
-import { TouchableOpacity } from "react-native";
-import styled from "styled-components";
-import { connect } from "react-redux";
-import CustomModal from "./CustomModal";
+import React from 'react';
+import { TouchableOpacity } from 'react-native';
+import styled from 'styled-components';
+import { connect } from 'react-redux';
+import CustomModal from './CustomModal';
 
 class HomeScreen extends React.Component {
   render() {
@@ -546,8 +546,8 @@ function mapDispatchToProps(dispatch) {
   return {
     openModal: () =>
       dispatch({
-        type: "OPEN_MODAL",
-      }),
+        type: 'OPEN_MODAL'
+      })
   };
 }
 
@@ -575,8 +575,8 @@ import {
   StatusBar,
   Animated,
   Easing,
-  Platform,
-} from "react-native";
+  Platform
+} from 'react-native';
 ```
 
 In the above demo, we are switching between status bar's color from dark to light when the modal opens, we are going to use `StatusBar` inside `componentDidMount()`.
@@ -596,7 +596,7 @@ Next, we define an initial state to manage Animations with two properties, `scal
 ```js
 state = {
   scale: new Animated.Value(1),
-  opacity: new Animated.Value(1),
+  opacity: new Animated.Value(1)
 };
 ```
 
@@ -645,29 +645,29 @@ To create partial opacity when the home screen shrinks in the background, we are
 Here is the complete code for `HomeScreen.js` file.
 
 ```js
-import React from "react";
+import React from 'react';
 import {
   TouchableOpacity,
   StatusBar,
   Animated,
   Easing,
-  Platform,
-} from "react-native";
-import styled from "styled-components";
-import { connect } from "react-redux";
-import CustomModal from "./CustomModal";
+  Platform
+} from 'react-native';
+import styled from 'styled-components';
+import { connect } from 'react-redux';
+import CustomModal from './CustomModal';
 
 class HomeScreen extends React.Component {
   state = {
     scale: new Animated.Value(1),
-    opacity: new Animated.Value(1),
+    opacity: new Animated.Value(1)
   };
 
   componentDidMount() {
-    StatusBar.setBarStyle("dark-content", true);
+    StatusBar.setBarStyle('dark-content', true);
 
-    if (Platform.OS == "android") {
-      StatusBar.setBarStyle("light-content", true);
+    if (Platform.OS == 'android') {
+      StatusBar.setBarStyle('light-content', true);
     }
   }
 
@@ -676,29 +676,29 @@ class HomeScreen extends React.Component {
   }
 
   toggleModal = () => {
-    if (this.props.action === "openModal") {
+    if (this.props.action === 'openModal') {
       Animated.timing(this.state.scale, {
         toValue: 0.9,
         duration: 300,
-        easing: Easing.in(),
+        easing: Easing.in()
       }).start();
       Animated.spring(this.state.opacity, {
-        toValue: 0.5,
+        toValue: 0.5
       }).start();
 
-      StatusBar.setBarStyle("light-content", true);
+      StatusBar.setBarStyle('light-content', true);
     }
 
-    if (this.props.action === "closeModal") {
+    if (this.props.action === 'closeModal') {
       Animated.timing(this.state.scale, {
         toValue: 1,
         duration: 300,
-        easing: Easing.in(),
+        easing: Easing.in()
       }).start();
       Animated.spring(this.state.opacity, {
-        toValue: 1,
+        toValue: 1
       }).start();
-      StatusBar.setBarStyle("dark-content", true);
+      StatusBar.setBarStyle('dark-content', true);
     }
   };
 
@@ -709,7 +709,7 @@ class HomeScreen extends React.Component {
         <AnimatedContainer
           style={{
             transform: [{ scale: this.state.scale }],
-            opacity: this.state.opacity,
+            opacity: this.state.opacity
           }}
         >
           <TouchableOpacity onPress={this.props.openModal}>
@@ -750,8 +750,8 @@ function mapDispatchToProps(dispatch) {
   return {
     openModal: () =>
       dispatch({
-        type: "OPEN_MODAL",
-      }),
+        type: 'OPEN_MODAL'
+      })
   };
 }
 

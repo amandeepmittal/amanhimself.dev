@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - ionic
-description: ""
+description: ''
 ---
 
 > [Originally Published at Hackernoon.com](https://medium.com/hackernoon/ionic-2-3-cli-reference-13f9fae3f964)

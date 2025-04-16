@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - react-native
-description: ""
+description: ''
 ---
 
 React Native is a great platform to build cross-platform mobile applications for iOs and Android. While there are few other framework options available in the mobile app development space to build cross-platform applications, coming from JavaScript or web development background makes learning and using React Native as a framework easier.
@@ -76,7 +76,7 @@ You are going to use NewsApi for this tutorial. So it is better to get the API k
 To save this API key, create a new folder called `src` and inside create another new directory called `config`. Inside `config` create a new file called `env.js` and save the API key as below.
 
 ```js
-export const API_KEY = "XXXXXXXXX";
+export const API_KEY = 'XXXXXXXXX';
 ```
 
 This `API_KEY` is going to help us authenticate as a user of NewsAPI and use the free plan.
@@ -86,7 +86,7 @@ This `API_KEY` is going to help us authenticate as a user of NewsAPI and use the
 To fetch data from the news API using our recently you are going to use JavaScript’s `fetch` API. Let us write a function that will handle this process. Create a new file inside `src/utils/fetchNews.js` and then add the following snippet.
 
 ```js
-import { API_KEY } from "../config/env";
+import { API_KEY } from '../config/env';
 
 const url = `https://newsapi.org/v2/top-headlines?
 country=us&apiKey=${API_KEY}`;
@@ -271,10 +271,10 @@ The `Card` has some special props. Like when you want to use to display the cont
 I am sure, you are not getting much of this. So let us first find a way to display this card and then talk about it in detail. Open up `App.js` and add the following.
 
 ```js
-import React, { Component } from "react";
-import { View, StyleSheet } from "react-native";
+import React, { Component } from 'react';
+import { View, StyleSheet } from 'react-native';
 
-import Article from "./src/components/Article";
+import Article from './src/components/Article';
 
 export default class App extends Component {
   render() {
@@ -289,10 +289,10 @@ export default class App extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "#fff",
-  },
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#fff'
+  }
 });
 ```
 
@@ -306,7 +306,7 @@ Also notice closely, the `Divider` between the description of the news article, 
 
 ```js
 <Text style={{ marginBottom: 10 }}>
-  {defaultJSONData.description || "Read more..."}
+  {defaultJSONData.description || 'Read more...'}
 </Text>
 ```
 
@@ -317,16 +317,16 @@ In the description part, as in the above snippet, you will notice a default text
 In this section, we are going to learn how to use display multiple articles from the API as a list. Do note that, this list is going to be a scrollable list. Create a new file inside `components/News.js` with the following code.
 
 ```js
-import React, { Component } from "react";
-import { FlatList } from "react-native";
+import React, { Component } from 'react';
+import { FlatList } from 'react-native';
 
-import { getUSANews } from "../utils/fetchNews";
-import Article from "./Article";
+import { getUSANews } from '../utils/fetchNews';
+import Article from './Article';
 
 class News extends Component {
   state = {
     articles: [],
-    refreshing: true,
+    refreshing: true
   };
 
   componentDidMount = () => {
@@ -398,9 +398,9 @@ The `onRefresh` prop provides the functionality of _"Pull to Refresh"_. It also 
 To display its content on the screen, you have to modify `App.js` accordingly.
 
 ```js
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
-import News from "./src/components/News";
+import News from './src/components/News';
 
 export default class App extends Component {
   render() {

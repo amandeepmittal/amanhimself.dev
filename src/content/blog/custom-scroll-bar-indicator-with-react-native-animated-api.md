@@ -1,5 +1,5 @@
 ---
-title: "How to create a custom scrollbar with React Native Animated API"
+title: 'How to create a custom scrollbar with React Native Animated API'
 author: Aman Mittal
 pubDatetime: 2020-12-10T03:42:51Z
 slug: custom-scroll-bar-indicator-with-react-native-animated-api
@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - react-native
-description: ""
+description: ''
 ---
 
 > Updated on: August 4, 2021
@@ -21,7 +21,7 @@ In React Native, to implement a scroll view, there are two types of components a
 For example, this how a `ScrollView` component is implemented in a React Native app:
 
 ```js
-<ScrollView style={{ backgroundColor: "white", marginHorizontal: 20 }}>
+<ScrollView style={{ backgroundColor: 'white', marginHorizontal: 20 }}>
   <Text>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -71,17 +71,17 @@ And that's it. We are not using any third party library but the approach discuss
 Before we move onto the next section, let's start creating a mock screen. Open `App.js` file and add the following code snippet:
 
 ```js
-import React, { useState, useRef } from "react";
-import { ScrollView, Text, View, Animated } from "react-native";
-import { StatusBar } from "expo-status-bar";
+import React, { useState, useRef } from 'react';
+import { ScrollView, Text, View, Animated } from 'react-native';
+import { StatusBar } from 'expo-status-bar';
 
 export default function App() {
   return (
     <>
       <StatusBar style="light" />
-      <View style={{ flex: 1, backgroundColor: "#892cdc", paddingTop: 50 }}>
-        <View style={{ alignItems: "center" }}>
-          <Text style={{ color: "white", fontSize: 24, fontWeight: "700" }}>
+      <View style={{ flex: 1, backgroundColor: '#892cdc', paddingTop: 50 }}>
+        <View style={{ alignItems: 'center' }}>
+          <Text style={{ color: 'white', fontSize: 24, fontWeight: '700' }}>
             Custom Scroll Bar
           </Text>
         </View>
@@ -145,7 +145,7 @@ Make sure to import object inside the `App.js` file after other import statement
 
 ```js
 // ...
-import { booksData } from "./constants/data";
+import { booksData } from './constants/data';
 ```
 
 ## Display mock data using a ScrollView
@@ -163,23 +163,23 @@ export default function App() {
   return (
     <>
       <StatusBar style="light" />
-      <View style={{ flex: 1, backgroundColor: "#892cdc", paddingTop: 50 }}>
-        <View style={{ alignItems: "center" }}>
-          <Text style={{ color: "white", fontSize: 28, fontWeight: "700" }}>
+      <View style={{ flex: 1, backgroundColor: '#892cdc', paddingTop: 50 }}>
+        <View style={{ alignItems: 'center' }}>
+          <Text style={{ color: 'white', fontSize: 28, fontWeight: '700' }}>
             Custom Scroll Bar
           </Text>
         </View>
         <View style={{ flex: 3, marginVertical: 20 }}>
           <View
-            style={{ flex: 1, flexDirection: "row", paddingHorizontal: 20 }}
+            style={{ flex: 1, flexDirection: 'row', paddingHorizontal: 20 }}
           >
             <ScrollView>
               <Text
                 style={{
                   fontSize: 22,
-                  color: "white",
-                  fontWeight: "600",
-                  marginBottom: 12,
+                  color: 'white',
+                  fontWeight: '600',
+                  marginBottom: 12
                 }}
               >
                 {booksData.title}
@@ -187,7 +187,7 @@ export default function App() {
               <Text
                 style={{
                   fontSize: 18,
-                  color: "white",
+                  color: 'white'
                 }}
               >
                 {booksData.description}
@@ -222,14 +222,14 @@ Hide the default scroll indicator by adding the `showsVerticalScrollIndicator` p
 Next, to the content displayed, let's add a scroll bar. Add a `View` component whose `height` is set to `100%`. This will display the scroll bar with as much height as the height of its parent container.
 
 ```js
-<View style={{ flex: 1, flexDirection: "row", paddingHorizontal: 20 }}>
+<View style={{ flex: 1, flexDirection: 'row', paddingHorizontal: 20 }}>
   {/* ScrollView component here */}
   <View
     style={{
-      height: "100%",
+      height: '100%',
       width: 6,
-      backgroundColor: "#52057b",
-      borderRadius: 8,
+      backgroundColor: '#52057b',
+      borderRadius: 8
     }}
   ></View>
 </View>
@@ -261,22 +261,22 @@ const scrollIndicatorSize =
 Next, create the scroll bar indicator inside the scroll bar. The indicator is going to have its height equivalent to the `scrollIndicatorSize`.
 
 ```js
-<View style={{ flex: 1, flexDirection: "row", paddingHorizontal: 20 }}>
+<View style={{ flex: 1, flexDirection: 'row', paddingHorizontal: 20 }}>
   {/* ScrollView component here */}
   <View
     style={{
-      height: "100%",
+      height: '100%',
       width: 6,
-      backgroundColor: "#52057b",
-      borderRadius: 8,
+      backgroundColor: '#52057b',
+      borderRadius: 8
     }}
   >
     <View
       style={{
         width: 6,
         borderRadius: 8,
-        backgroundColor: "#bc6ff1",
-        height: scrollIndicatorSize,
+        backgroundColor: '#bc6ff1',
+        height: scrollIndicatorSize
       }}
     />
   </View>
@@ -321,7 +321,7 @@ const scrollIndicatorPosition = Animated.multiply(
 ).interpolate({
   inputRange: [0, difference],
   outputRange: [0, difference],
-  extrapolate: "clamp",
+  extrapolate: 'clamp'
 });
 ```
 
@@ -334,9 +334,9 @@ The value of this prop is going to be an array and inside it, a transformation o
   style={{
     width: 6,
     borderRadius: 8,
-    backgroundColor: "#bc6ff1",
+    backgroundColor: '#bc6ff1',
     height: scrollIndicatorSize,
-    transform: [{ translateY: scrollIndicatorHeight }],
+    transform: [{ translateY: scrollIndicatorHeight }]
   }}
 />
 ```
@@ -359,8 +359,8 @@ Modify the props of `ScrollView` component as shown below:
   }}
   onLayout={({
     nativeEvent: {
-      layout: { height },
-    },
+      layout: { height }
+    }
   }) => {
     setVisibleScrollBarHeight(height);
   }}

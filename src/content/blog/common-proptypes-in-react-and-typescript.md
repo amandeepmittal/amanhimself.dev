@@ -1,5 +1,5 @@
 ---
-title: "Common Prop Types in TypeScript and React"
+title: 'Common Prop Types in TypeScript and React'
 author: Aman Mittal
 pubDatetime: 2021-06-29T03:42:51Z
 slug: common-prop-types-in-typescript-and-react
@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - typescript
-description: ""
+description: ''
 ---
 
 All **primitives in JS** are available in TS.
@@ -73,7 +73,7 @@ Using **[union type](https://react-typescript-cheatsheet.netlify.app/docs/basic/
 
 ```ts
 type Button = {
-  variant: "primary" | "danger" | "info";
+  variant: 'primary' | 'danger' | 'info';
   value: string | number;
 };
 ```

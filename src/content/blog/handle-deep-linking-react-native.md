@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - react-native
-description: ""
+description: ''
 ---
 
 ![cover](https://i.imgur.com/cHaZZW8.jpg)
@@ -90,23 +90,23 @@ Each list person is wrapped by the `Pressable` component so that when an app use
 ```js
 // src/screens/HomeScreen.js
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
 import {
   ActivityIndicator,
   View,
   Text,
   FlatList,
-  Pressable,
-} from "react-native";
+  Pressable
+} from 'react-native';
 
-import Separator from "../components/Separator";
+import Separator from '../components/Separator';
 
 const HomeScreen = ({ navigation }) => {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/users")
+    fetch('https://jsonplaceholder.typicode.com/users')
       .then(res => res.json())
       .then(res => {
         setData(res);
@@ -120,10 +120,10 @@ const HomeScreen = ({ navigation }) => {
   const renderList = ({ item }) => {
     return (
       <Pressable
-        onPress={() => alert("Navigate to Details screen")}
+        onPress={() => alert('Navigate to Details screen')}
         style={{ paddingHorizontal: 10 }}
       >
-        <Text style={{ fontSize: 24, color: "#000" }}>{item.name}</Text>
+        <Text style={{ fontSize: 24, color: '#000' }}>{item.name}</Text>
       </Pressable>
     );
   };
@@ -137,7 +137,7 @@ const HomeScreen = ({ navigation }) => {
           <FlatList
             data={data}
             contentContainerStyle={{
-              paddingVertical: 20,
+              paddingVertical: 20
             }}
             keyExtractor={item => item.id}
             ItemSeparatorComponent={Separator}
@@ -159,16 +159,16 @@ It is used as a value for the prop `ItemSeparatorComponent` in the `FlatList` co
 ```js
 // src/components/Separator.js
 
-import React from "react";
-import { View } from "react-native";
+import React from 'react';
+import { View } from 'react-native';
 
 const Separator = () => (
   <View
     style={{
-      borderBottomColor: "#d3d3d3",
+      borderBottomColor: '#d3d3d3',
       borderBottomWidth: 1,
       marginTop: 10,
-      marginBottom: 10,
+      marginBottom: 10
     }}
   />
 );
@@ -179,12 +179,12 @@ export default Separator;
 For the details screen, for now, let us just display a text string in the screen component file `DetailsScreen.js`:
 
 ```js
-import React from "react";
-import { View, Text } from "react-native";
+import React from 'react';
+import { View, Text } from 'react-native';
 
 const DetailsScreen = ({ navigation }) => {
   return (
-    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
       <Text>Details Screen</Text>
     </View>
   );
@@ -200,12 +200,12 @@ To set up a Stack Navigator in the app, create a new file called `src/navigation
 ```js
 // src/navigation/RootNavigator.js
 
-import * as React from "react";
-import { NavigationContainer } from "@react-navigation/native";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import * as React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-import HomeScreen from "../screens/HomeScreen";
-import DetailsScreen from "../screens/DetailsScreen";
+import HomeScreen from '../screens/HomeScreen';
+import DetailsScreen from '../screens/DetailsScreen';
 
 const RootStack = createNativeStackNavigator();
 
@@ -228,9 +228,9 @@ Then, import `RootNavigator` in the `App.js` file:
 ```js
 // App.js
 
-import React from "react";
+import React from 'react';
 
-import RootNavigator from "./src/navigation/RootNavigator";
+import RootNavigator from './src/navigation/RootNavigator';
 
 const App = () => {
   return <RootNavigator />;
@@ -272,10 +272,10 @@ This configuration object is then passed to a prop called `linking` on the `Navi
 // src/navigation/RootNavigator.js
 
 // rest of the import statement remains same
-import { ActivityIndicator } from "react-native";
+import { ActivityIndicator } from 'react-native';
 
 const linking = {
-  prefixes: ["peoplesapp://"],
+  prefixes: ['peoplesapp://']
 };
 
 const RootNavigator = () => {
@@ -419,18 +419,18 @@ In the example app, let's define linking paths for both the Home and Details scr
 
 ```js
 const linking = {
-  prefixes: ["peoplesapp://"],
+  prefixes: ['peoplesapp://'],
   config: {
-    initialRouteName: "Home",
+    initialRouteName: 'Home',
     screens: {
       Home: {
-        path: "home",
+        path: 'home'
       },
       Details: {
-        path: "details",
-      },
-    },
-  },
+        path: 'details'
+      }
+    }
+  }
 };
 ```
 
@@ -450,18 +450,18 @@ To display information of each person when visiting the Details screen with the 
 
 ```js
 const linking = {
-  prefixes: ["peoplesapp://"],
+  prefixes: ['peoplesapp://'],
   config: {
-    initialRouteName: "Home",
+    initialRouteName: 'Home',
     screens: {
       Home: {
-        path: "home",
+        path: 'home'
       },
       Details: {
-        path: "details/:personId",
-      },
-    },
-  },
+        path: 'details/:personId'
+      }
+    }
+  }
 };
 ```
 
@@ -475,10 +475,10 @@ Let's also handle the case where an app user navigates to the Details screen fro
 // src/screens/HomeScreen.js
 
 <Pressable
-  onPress={() => navigation.navigate("Details", { personDetailsId: item.id })}
+  onPress={() => navigation.navigate('Details', { personDetailsId: item.id })}
   style={{ paddingHorizontal: 10 }}
 >
-  <Text style={{ fontSize: 24, color: "#000" }}>{item.name}</Text>
+  <Text style={{ fontSize: 24, color: '#000' }}>{item.name}</Text>
 </Pressable>
 ```
 
@@ -489,8 +489,8 @@ In the Details screen, let's get both `personDetailsId` (the id coming from the 
 Then using a `useEffect` hook, fetch data from Json Placeholder API and render the details:
 
 ```js
-import React, { useState, useEffect } from "react";
-import { View, Text, ActivityIndicator } from "react-native";
+import React, { useState, useEffect } from 'react';
+import { View, Text, ActivityIndicator } from 'react-native';
 
 const DetailsScreen = ({ route }) => {
   const params = route.params || {};

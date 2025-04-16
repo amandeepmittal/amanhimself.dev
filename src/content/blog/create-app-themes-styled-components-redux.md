@@ -1,5 +1,5 @@
 ---
-title: "Changing app themes using React Native, Styled Components and Redux"
+title: 'Changing app themes using React Native, Styled Components and Redux'
 author: Aman Mittal
 pubDatetime: 2019-10-02T03:42:51Z
 slug: create-app-themes-styled-components-redux
@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - react-native
-description: ""
+description: ''
 ---
 
 ![cover](https://i.imgur.com/RSo1BSr.jpg)
@@ -46,8 +46,8 @@ Styled Components is a CSS-in-JS library that enables developers to write each c
 Let us create a simple component that will act as a primary screen of the app. Create a new file inside `screens/HomeScreen.js`. It is a class component that displays a text inside a box. The visual components are created using `styled-components`. To consume this library, you start by writing an import statement from `styled-components/native`.
 
 ```js
-import React from "react";
-import styled from "styled-components/native";
+import React from 'react';
+import styled from 'styled-components/native';
 
 const Container = styled.SafeAreaView`
   flex: 1;
@@ -89,9 +89,9 @@ export default HomeScreen;
 Import the `HomeScreen` component inside the entry point file, `App.js`. Replace its existing content with the following.
 
 ```js
-import React from "react";
+import React from 'react';
 
-import HomeScreen from "./screens/HomeScreen";
+import HomeScreen from './screens/HomeScreen';
 
 const App = () => {
   return <HomeScreen />;
@@ -124,20 +124,20 @@ These attributes are nothing but colors for different React Native components. I
 
 ```js
 export const darkTheme = {
-  mode: "dark",
-  PRIMARY_BACKGROUND_COLOR: "#353c51",
-  PRIMARY_TEXT_COLOR: "#767d92",
-  SECONDARY_TEXT_COLOR: "#ffffff",
-  PRIMARY_BUTTON_COLOR: "#152642",
-  SECONDARY_BUTTON_COLOR: "#506680",
+  mode: 'dark',
+  PRIMARY_BACKGROUND_COLOR: '#353c51',
+  PRIMARY_TEXT_COLOR: '#767d92',
+  SECONDARY_TEXT_COLOR: '#ffffff',
+  PRIMARY_BUTTON_COLOR: '#152642',
+  SECONDARY_BUTTON_COLOR: '#506680'
 };
 export const lightTheme = {
-  mode: "light",
-  PRIMARY_BACKGROUND_COLOR: "#ffefd5",
-  PRIMARY_TEXT_COLOR: "#DB7093",
-  SECONDARY_TEXT_COLOR: "#333333",
-  PRIMARY_BUTTON_COLOR: "#b9d6f3",
-  SECONDARY_BUTTON_COLOR: "#a1c9f1",
+  mode: 'light',
+  PRIMARY_BACKGROUND_COLOR: '#ffefd5',
+  PRIMARY_TEXT_COLOR: '#DB7093',
+  SECONDARY_TEXT_COLOR: '#333333',
+  PRIMARY_BUTTON_COLOR: '#b9d6f3',
+  SECONDARY_BUTTON_COLOR: '#a1c9f1'
 };
 ```
 
@@ -165,14 +165,14 @@ There is the only action required right now called `switchTheme`. It will accept
 
 ```js
 // define type
-export const SWITCH_THEME = "SWITCH_THEME";
+export const SWITCH_THEME = 'SWITCH_THEME';
 
 // dispatch actions
 export const switchTheme = BaseTheme => {
   return dispatch => {
     dispatch({
       type: SWITCH_THEME,
-      baseTheme: BaseTheme,
+      baseTheme: BaseTheme
     });
   };
 };
@@ -183,11 +183,11 @@ To change the state of the app when using Redux, or in our case, to change the s
 Next, let us define `themeReducer` that will take the initial state of the application's theme and action to change that theme.
 
 ```js
-import { lightTheme } from "../styles/theme";
-import { SWITCH_THEME } from "./actions";
+import { lightTheme } from '../styles/theme';
+import { SWITCH_THEME } from './actions';
 
 const initialState = {
-  theme: { ...lightTheme },
+  theme: { ...lightTheme }
 };
 
 const themeReducer = (state = initialState, action) => {
@@ -195,7 +195,7 @@ const themeReducer = (state = initialState, action) => {
     case SWITCH_THEME:
       let newState = {
         ...state,
-        theme: { ...state.theme, ...action.baseTheme },
+        theme: { ...state.theme, ...action.baseTheme }
       };
       return newState;
     default:
@@ -213,13 +213,13 @@ A reducer is a pure function that calculates the next state based on the initial
 To create the store, you will have to modify the `App.js` file. Start by adding the following import statements.
 
 ```js
-import React from "react";
-import { Provider } from "react-redux";
-import { createStore, applyMiddleware, combineReducers } from "redux";
-import thunk from "redux-thunk";
+import React from 'react';
+import { Provider } from 'react-redux';
+import { createStore, applyMiddleware, combineReducers } from 'redux';
+import thunk from 'redux-thunk';
 
-import themeReducer from "./redux/themeReducer";
-import HomeScreen from "./screens/HomeScreen";
+import themeReducer from './redux/themeReducer';
+import HomeScreen from './screens/HomeScreen';
 ```
 
 A store is an object that brings actions and reducers together. It provides and holds state at the application level instead of individual components. Redux is not an opinionated library in terms of which framework or library should use it or not.
@@ -252,11 +252,11 @@ In this section, you are going write the logic to consume the state from redux's
 `styled-components` has gives React Native components theming support by a `ThemeProvider` wrapper component. In the render tree all `styled-components` such as `Container`, `Title` and so on, will have access to the provided theme. Open `HomeScreen.js` file adds the following import statements.
 
 ```js
-import styled, { ThemeProvider } from "styled-components/native";
-import { connect } from "react-redux";
-import { bindActionCreators } from "redux";
-import { switchTheme } from "../redux/actions";
-import { darkTheme, lightTheme } from "../styles/theme";
+import styled, { ThemeProvider } from 'styled-components/native';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { switchTheme } from '../redux/actions';
+import { darkTheme, lightTheme } from '../styles/theme';
 ```
 
 In the above code snippet, do note that you are also importing both the theme objects from `styles/theme.js` file. This is necessary because, initially, you will have to pass a theme value for `ThemeProvider` to know and display the components accordingly. Then, the redux action `switchTheme` that is responsible for the change theme, expects a parameter of the current theme value.
@@ -272,7 +272,7 @@ class HomeScreen extends React.Component {
           <TextContainer>
             <Title>Themed App with React Native & Styled Components</Title>
           </TextContainer>
-          {this.props.theme.mode === "light" ? (
+          {this.props.theme.mode === 'light' ? (
             <Button onPress={() => this.props.switchTheme(darkTheme)}>
               <ButtonText>Switch to Dark Theme</ButtonText>
             </Button>
@@ -298,11 +298,11 @@ Add the following at the end of component file:
 
 ```js
 const mapStateToProps = state => ({
-  theme: state.themeReducer.theme,
+  theme: state.themeReducer.theme
 });
 
 const mapDispatchToProps = dispatch => ({
-  switchTheme: bindActionCreators(switchTheme, dispatch),
+  switchTheme: bindActionCreators(switchTheme, dispatch)
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(HomeScreen);

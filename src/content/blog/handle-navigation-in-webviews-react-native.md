@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - react-native
-description: ""
+description: ''
 ---
 
 As a React Native developer, you are going to come across use cases that will require you to embed or redirect a web application or a web page inside a React Native app. [WebViews](https://facebook.github.io/react-native/docs/webview.html) are often used for such use cases.
@@ -78,9 +78,9 @@ If the app opens without any error, that means the configuration we have done so
 In this section, let us create a simple webview component and understand how it works. Start by importing the `WebView` component from `react-native-webview` to render web content in a native view. Open the `App.js` file.
 
 ```js
-import React from "react";
-import { SafeAreaView, StyleSheet, StatusBar } from "react-native";
-import WebView from "react-native-webview";
+import React from 'react';
+import { SafeAreaView, StyleSheet, StatusBar } from 'react-native';
+import WebView from 'react-native-webview';
 ```
 
 The `WebView` component requires a `source` prop. This prop loads the static HTML or a URI (which is the current case if you look closely at the above snippet). A URI is a remote location for a web page to exist.
@@ -93,7 +93,7 @@ const App = () => {
     <>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView style={styles.flexContainer}>
-        <WebView source={{ uri: "https://heartbeat.fritz.ai/" }} />
+        <WebView source={{ uri: 'https://heartbeat.fritz.ai/' }} />
       </SafeAreaView>
     </>
   );
@@ -101,8 +101,8 @@ const App = () => {
 
 const styles = StyleSheet.create({
   flexContainer: {
-    flex: 1,
-  },
+    flex: 1
+  }
 });
 
 export default App;
@@ -126,8 +126,8 @@ import {
   SafeAreaView,
   StyleSheet,
   StatusBar,
-  ActivityIndicator,
-} from "react-native";
+  ActivityIndicator
+} from 'react-native';
 ```
 
 To add a loading indicator that starts when the web page starts loading. Also, the indicator should stop when the web page has done loading.
@@ -138,7 +138,7 @@ Add both of these props to `WebView` in `App.js`:
 
 ```js
 <WebView
-  source={{ uri: "https://heartbeat.fritz.ai/" }}
+  source={{ uri: 'https://heartbeat.fritz.ai/' }}
   startInLoadingState={true}
   renderLoading={() => (
     <ActivityIndicator
@@ -171,7 +171,7 @@ For those who have been following along this tutorial so far, please make sure t
 Also, import some more components from the react-native core that is going to help us add a footer to the app screen. This footer is going to have two buttons: one to go to the previous URL and one to go to the forward URL (if exists).
 
 ```js
-import React, { useState, useRef } from "react";
+import React, { useState, useRef } from 'react';
 import {
   SafeAreaView,
   StyleSheet,
@@ -179,9 +179,9 @@ import {
   ActivityIndicator,
   View,
   TouchableOpacity,
-  Text,
-} from "react-native";
-import WebView from "react-native-webview";
+  Text
+} from 'react-native';
+import WebView from 'react-native-webview';
 ```
 
 Inside the functional component `App`, let us create three state variables for the following purposes:
@@ -196,7 +196,7 @@ Let us create these state variables inside the `App` component.
 const App = () => {
   const [canGoBack, setCanGoBack] = useState(false);
   const [canGoForward, setCanGoForward] = useState(false);
-  const [currentUrl, setCurrentUrl] = useState("");
+  const [currentUrl, setCurrentUrl] = useState('');
 
   //...
 };
@@ -224,7 +224,7 @@ Add the props `ref` and `onNavigationStateChange` to the `WebView` component. Th
 
 ```js
 <WebView
-  source={{ uri: "https://heartbeat.fritz.ai/" }}
+  source={{ uri: 'https://heartbeat.fritz.ai/' }}
   startInLoadingState={true}
   renderLoading={() => (
     <ActivityIndicator
@@ -260,18 +260,18 @@ Here are the corresponding styles used in the above code snippet:
 ```js
 const styles = StyleSheet.create({
   flexContainer: {
-    flex: 1,
+    flex: 1
   },
   tabBarContainer: {
     padding: 20,
-    flexDirection: "row",
-    justifyContent: "space-around",
-    backgroundColor: "#b43757",
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    backgroundColor: '#b43757'
   },
   button: {
-    color: "white",
-    fontSize: 24,
-  },
+    color: 'white',
+    fontSize: 24
+  }
 });
 ```
 

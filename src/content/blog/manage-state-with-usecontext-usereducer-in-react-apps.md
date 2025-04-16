@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - reactjs
-description: ""
+description: ''
 ---
 
 ![cover](https://i.imgur.com/Q0W4kzf.jpg)
@@ -55,7 +55,7 @@ After installing these dependencies, open the React project you created and open
 
 ```js
 // after other imports
-import "bootstrap/dist/css/bootstrap.min.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
 ```
 
 That's it to set up Bootstrap in the current React app.
@@ -67,8 +67,8 @@ Start by creating a new file called `GlobalState.js` inside the `src/` directory
 Let's use React's context API to create a Context provider that can is going to share the state across multiple components. You can think of this example as mimicking Redux' philosophy. Import the required statements.
 
 ```js
-import React, { useReducer, createContext } from "react";
-import { v4 as uuid } from "uuid";
+import React, { useReducer, createContext } from 'react';
+import { v4 as uuid } from 'uuid';
 ```
 
 Next, create an empty context for Expense and define an initial state object. This initial state is going to have one expense item present. This also helps to define a schema or data model for all other expense items (_but do note that this for demonstration purpose in context to this post_).
@@ -80,10 +80,10 @@ const initialState = {
   expenses: [
     {
       id: uuid(),
-      name: "Buy Milk",
-      amount: 10,
-    },
-  ],
+      name: 'Buy Milk',
+      amount: 10
+    }
+  ]
 };
 ```
 
@@ -94,13 +94,13 @@ For the following example, this `reducer` function is going to have one action t
 ```js
 const reducer = (state, action) => {
   switch (action.type) {
-    case "ADD_EXPENSE":
+    case 'ADD_EXPENSE':
       return {
-        expenses: [...state.expenses, action.payload],
+        expenses: [...state.expenses, action.payload]
       };
     default:
       return {
-        state,
+        state
       };
   }
 };
@@ -129,14 +129,14 @@ When the `ExpenseContextProvider` is wrapped around any component in the React a
 In this section, that's what we are going to do. Open, `App.js` file, and modify it as below.
 
 ```js
-import React from "react";
-import { Container } from "reactstrap";
+import React from 'react';
+import { Container } from 'reactstrap';
 
-import { ExpenseContextProvider } from "./GlobalState";
+import { ExpenseContextProvider } from './GlobalState';
 
-import Header from "./components/Header";
-import Form from "./components/Form";
-import List from "./components/List";
+import Header from './components/Header';
+import Form from './components/Form';
+import List from './components/List';
 
 export default function App() {
   return (
@@ -164,9 +164,9 @@ In this section, let us define a presentational component called `Header`. It's 
 Open `Header.js` and add the following snippet:
 
 ```js
-import React from "react";
-import { Jumbotron } from "reactstrap";
-import Logo from "../logo.svg";
+import React from 'react';
+import { Jumbotron } from 'reactstrap';
+import Logo from '../logo.svg';
 
 export default function Headers() {
   return (
@@ -185,18 +185,18 @@ export default function Headers() {
 Open `Form.js` file and import the following statements.
 
 ```js
-import React, { useState, useContext } from "react";
+import React, { useState, useContext } from 'react';
 import {
   Form as BTForm,
   FormGroup,
   Input,
   Label,
   Col,
-  Button,
-} from "reactstrap";
-import { v4 as uuid } from "uuid";
+  Button
+} from 'reactstrap';
+import { v4 as uuid } from 'uuid';
 
-import { ExpenseContext } from "../GlobalState";
+import { ExpenseContext } from '../GlobalState';
 ```
 
 The `uuid` module is going to generate a unique id for each expense item in the global state.
@@ -216,20 +216,20 @@ Using the `useState` reducer, define two state variables that are going to be lo
 Add the following initial state for `name` and `amount` using `useState`. Both of them are going to have an empty string as their initial value.
 
 ```js
-const [name, setName] = useState("");
-const [amount, setAmount] = useState("");
+const [name, setName] = useState('');
+const [amount, setAmount] = useState('');
 ```
 
 To update their values when a user starts typing, add the following handler methods. Both of these functions are going to retrieve the value from the corresponding field. The console statements are for testing purposes.
 
 ```js
 const handleName = event => {
-  console.log("Name ", event.target.value);
+  console.log('Name ', event.target.value);
   setName(event.target.value);
 };
 
 const handleAmount = event => {
-  console.log("Amount ", event.target.value);
+  console.log('Amount ', event.target.value);
   setAmount(event.target.value);
 };
 ```
@@ -239,17 +239,17 @@ Lastly, to submit the form, there is going to be another handler method called `
 ```js
 const handleSubmitForm = event => {
   event.preventDefault();
-  if (name !== "" && amount > 0) {
+  if (name !== '' && amount > 0) {
     dispatch({
-      type: "ADD_EXPENSE",
-      payload: { id: uuid(), name, amount },
+      type: 'ADD_EXPENSE',
+      payload: { id: uuid(), name, amount }
     });
 
     // clean input fields
-    setName("");
-    setAmount("");
+    setName('');
+    setAmount('');
   } else {
-    console.log("Invalid expense name or the amount");
+    console.log('Invalid expense name or the amount');
   }
 };
 ```
@@ -301,10 +301,10 @@ return (
 In this section, let's add the `List.js` component to display a list of items from the current state object provided by the `ExpenseContext`. Open the file and add the following import statements:
 
 ```js
-import React, { useContext } from "react";
-import { ListGroup, ListGroupItem } from "reactstrap";
+import React, { useContext } from 'react';
+import { ListGroup, ListGroupItem } from 'reactstrap';
 
-import { ExpenseContext } from "../GlobalState";
+import { ExpenseContext } from '../GlobalState';
 ```
 
 Next, map the `state` value to display the name of the expense and the amount of the expense as a list item.

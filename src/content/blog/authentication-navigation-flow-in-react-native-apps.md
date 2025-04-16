@@ -1,5 +1,5 @@
 ---
-title: "How Authentication Flow works in React Native apps using React Navigation 4.x"
+title: 'How Authentication Flow works in React Native apps using React Navigation 4.x'
 author: Aman Mittal
 pubDatetime: 2019-09-10T03:42:51Z
 slug: authentication-navigation-flow-in-react-native-apps
@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - react-native
-description: ""
+description: ''
 ---
 
 ![cover_image](https://i.imgur.com/0xwhr2a.png)
@@ -96,8 +96,8 @@ The three files inside the `screens` folder are going to be functional component
 For `Home.js`:
 
 ```js
-import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import React from 'react';
+import { StyleSheet, Text, View } from 'react-native';
 
 export default function Home() {
   return (
@@ -110,18 +110,18 @@ export default function Home() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center'
+  }
 });
 ```
 
 For `Login.js`:
 
 ```js
-import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import React from 'react';
+import { StyleSheet, Text, View } from 'react-native';
 
 export default function Login() {
   return (
@@ -134,18 +134,18 @@ export default function Login() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center'
+  }
 });
 ```
 
 For `Signup.js`:
 
 ```js
-import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import React from 'react';
+import { StyleSheet, Text, View } from 'react-native';
 
 export default function Signup() {
   return (
@@ -158,10 +158,10 @@ export default function Signup() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center'
+  }
 });
 ```
 
@@ -179,15 +179,15 @@ Let us setup the `AppNavigation` first since it will contain only one screen. Op
 
 ```js
 //AppNavigation.js
-import { createStackNavigator } from "react-navigation-stack";
-import Home from "../screens/Home";
+import { createStackNavigator } from 'react-navigation-stack';
+import Home from '../screens/Home';
 
 const AppNavigation = createStackNavigator(
   {
-    Home: { screen: Home },
+    Home: { screen: Home }
   },
   {
-    initialRouteName: "Home",
+    initialRouteName: 'Home'
   }
 );
 
@@ -202,17 +202,17 @@ Next, edit `AuthNavigation.js` file.
 
 ```js
 //AuthNavigation.js
-import { createStackNavigator } from "react-navigation-stack";
-import Login from "../screens/Login";
-import Signup from "../screens/Signup";
+import { createStackNavigator } from 'react-navigation-stack';
+import Login from '../screens/Login';
+import Signup from '../screens/Signup';
 
 const AuthNavigation = createStackNavigator(
   {
     Login: { screen: Login },
-    Signup: { screen: Signup },
+    Signup: { screen: Signup }
   },
   {
-    initialRouteName: "Login",
+    initialRouteName: 'Login'
   }
 );
 
@@ -225,8 +225,8 @@ In `AppNavigation` since there is only one screen, so it will always show `Home`
 
 ```js
 //index.js
-import { createAppContainer } from "react-navigation";
-import AuthNavigation from "./AuthNavigation";
+import { createAppContainer } from 'react-navigation';
+import AuthNavigation from './AuthNavigation';
 
 const AppContainer = createAppContainer(AuthNavigation);
 
@@ -239,8 +239,8 @@ Lastly, open the `App.js` file and use `AppContainer` to be the top-level compon
 
 ```js
 //App.js
-import React from "react";
-import AppContainer from "./navigation";
+import React from 'react';
+import AppContainer from './navigation';
 
 export default function App() {
   return <AppContainer />;
@@ -258,11 +258,11 @@ _Notice the empty space at the top of the screen?_ That is the header section. W
 const AuthNavigation = createStackNavigator(
   {
     Login: { screen: Login },
-    Signup: { screen: Signup },
+    Signup: { screen: Signup }
   },
   {
-    initialRouteName: "Login",
-    headerMode: "none",
+    initialRouteName: 'Login',
+    headerMode: 'none'
   }
 );
 ```
@@ -279,7 +279,7 @@ To transit between login to signup, create a button like below and pass an `onPr
 //Login.js
 
 //import Button
-import { StyleSheet, Text, View, Button } from "react-native";
+import { StyleSheet, Text, View, Button } from 'react-native';
 
 export default class Login extends React.Component {
   render() {
@@ -288,7 +288,7 @@ export default class Login extends React.Component {
         <Text>Login</Text>
         <Button
           title="Go to Signup"
-          onPress={() => this.props.navigation.navigate("Signup")}
+          onPress={() => this.props.navigation.navigate('Signup')}
         />
       </View>
     );
@@ -306,7 +306,7 @@ Similarly, you can add a way to navigate back to the login screen component from
 //Signup.js
 
 export default class Signup extends React.Component {
-  goToLogin = () => this.props.navigation.navigate("Login");
+  goToLogin = () => this.props.navigation.navigate('Login');
   render() {
     return (
       <View style={styles.container}>
@@ -328,17 +328,17 @@ In React Navigation, to manage authentication flow, Switch Navigator is used. Th
 
 ```js
 //index.js
-import { createSwitchNavigator, createAppContainer } from "react-navigation";
-import AuthNavigation from "./AuthNavigation";
-import AppNavigation from "./AppNavigation";
+import { createSwitchNavigator, createAppContainer } from 'react-navigation';
+import AuthNavigation from './AuthNavigation';
+import AppNavigation from './AppNavigation';
 
 const SwitchNavigator = createSwitchNavigator(
   {
     Auth: AuthNavigation,
-    App: AppNavigation,
+    App: AppNavigation
   },
   {
-    initialRouteName: "Auth",
+    initialRouteName: 'Auth'
   }
 );
 
@@ -355,13 +355,13 @@ Let us mock the behavior of logging into the app and see what happens when the u
 
 ```js
 //Login.js
-import React from "react";
-import { StyleSheet, View, Button, TextInput } from "react-native";
+import React from 'react';
+import { StyleSheet, View, Button, TextInput } from 'react-native';
 
 export default class Login extends React.Component {
   state = {
-    email: "",
-    password: "",
+    email: '',
+    password: ''
   };
 
   handleEmailChange = email => {
@@ -376,14 +376,14 @@ export default class Login extends React.Component {
     const { email, password } = this.state;
     try {
       if (email.length > 0 && password.length > 0) {
-        this.props.navigation.navigate("App");
+        this.props.navigation.navigate('App');
       }
     } catch (error) {
       alert(error);
     }
   };
 
-  goToSignup = () => this.props.navigation.navigate("Signup");
+  goToSignup = () => this.props.navigation.navigate('Signup');
   render() {
     const { email, password } = this.state;
 
@@ -417,10 +417,10 @@ export default class Login extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center'
+  }
 });
 ```
 

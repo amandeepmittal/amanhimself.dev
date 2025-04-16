@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - react-native
-description: ""
+description: ''
 ---
 
 > Originally published at [Heartbeat.Fritz.ai](https://heartbeat.fritz.ai/how-to-implement-forgot-password-feature-in-react-native-and-firebase-app-890b572d9759)
@@ -48,13 +48,13 @@ Let’s start with a basic screen and hook it up with current navigation flow su
 Create a new file `screens/ForgotPassword.js` with some dummy text.
 
 ```js
-import React, { Component } from "react";
-import { Text, View } from "react-native";
+import React, { Component } from 'react';
+import { Text, View } from 'react-native';
 
 class ForgotPassword extends Component {
   render() {
     return (
-      <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
         <Text>Forgot Password Screen</Text>
       </View>
     );
@@ -67,20 +67,20 @@ export default ForgotPassword;
 Open the `AuthNavigation.js` file and this new class component as below.
 
 ```js
-import { createStackNavigator } from "react-navigation-stack";
-import Login from "../screens/Login";
-import Signup from "../screens/Signup";
-import ForgotPassword from "../screens/ForgotPassword";
+import { createStackNavigator } from 'react-navigation-stack';
+import Login from '../screens/Login';
+import Signup from '../screens/Signup';
+import ForgotPassword from '../screens/ForgotPassword';
 
 const AuthNavigation = createStackNavigator(
   {
     Login: { screen: Login },
     Signup: { screen: Signup },
-    ForgotPassword: { screen: ForgotPassword },
+    ForgotPassword: { screen: ForgotPassword }
   },
   {
-    initialRouteName: "Login",
-    headerMode: "none",
+    initialRouteName: 'Login',
+    headerMode: 'none'
   }
 );
 
@@ -90,7 +90,7 @@ export default AuthNavigation;
 Lastly, open `Login.js` file. Logically, this where a button to navigate to this new `ForgotPassword` component should exist. First, add the handler method `goToForgotPassword` inside the `Login` class component with other handler methods.
 
 ```js
-goToForgotPassword = () => this.props.navigation.navigate("ForgotPassword");
+goToForgotPassword = () => this.props.navigation.navigate('ForgotPassword');
 ```
 
 Passing the name of the route as the first parameter to `navigation.navigate()` is how you navigate from one screen to the other screen using `react-navigation` library. In this case, the name of the route is going to be `ForgotPassword`.
@@ -102,7 +102,7 @@ Next, add the a `Button` component after the `Signup` button. The value of the `
   title="Forgot Password?"
   onPress={this.goToForgotPassword}
   titleStyle={{
-    color: "#039BE5",
+    color: '#039BE5'
   }}
   type="clear"
 />
@@ -139,14 +139,14 @@ Using the previously obtained knowledge of Formik ad yup let us add an input fie
 Open `ForgotPassword.js` file and add the following import statements.
 
 ```js
-import React, { Component, Fragment } from "react";
-import { Text, SafeAreaView, View, StyleSheet } from "react-native";
-import { Formik } from "formik";
-import * as Yup from "yup";
-import FormInput from "../components/FormInput";
-import FormButton from "../components/FormButton";
-import ErrorMessage from "../components/ErrorMessage";
-import { withFirebaseHOC } from "../config/Firebase";
+import React, { Component, Fragment } from 'react';
+import { Text, SafeAreaView, View, StyleSheet } from 'react-native';
+import { Formik } from 'formik';
+import * as Yup from 'yup';
+import FormInput from '../components/FormInput';
+import FormButton from '../components/FormButton';
+import ErrorMessage from '../components/ErrorMessage';
+import { withFirebaseHOC } from '../config/Firebase';
 ```
 
 After the import statements, add `validationSchema` object. This object is similar to that used in `Login` component and will help to determine whether the input provided already exists as the registered email or not.
@@ -154,9 +154,9 @@ After the import statements, add `validationSchema` object. This object is simil
 ```js
 const validationSchema = Yup.object().shape({
   email: Yup.string()
-    .label("Email")
-    .email("Enter a valid email")
-    .required("Please enter a registered email"),
+    .label('Email')
+    .email('Enter a valid email')
+    .required('Please enter a registered email')
 });
 ```
 
@@ -221,17 +221,17 @@ The corresponding styles to the component are:
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
-    marginTop: 150,
+    backgroundColor: '#fff',
+    marginTop: 150
   },
   text: {
-    color: "#333",
+    color: '#333',
     fontSize: 24,
-    marginLeft: 25,
+    marginLeft: 25
   },
   buttonContainer: {
-    margin: 25,
-  },
+    margin: 25
+  }
 });
 ```
 
@@ -257,10 +257,10 @@ handlePasswordReset = async (values, actions) => {
 
   try {
     await this.props.firebase.passwordReset(email);
-    console.log("Password reset email sent successfully");
-    this.props.navigation.navigate("Login");
+    console.log('Password reset email sent successfully');
+    this.props.navigation.navigate('Login');
   } catch (error) {
-    actions.setFieldError("general", error.message);
+    actions.setFieldError('general', error.message);
   }
 };
 ```

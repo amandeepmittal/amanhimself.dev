@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - xcode
-description: ""
+description: ''
 ---
 
 When working on React Native or Expo applications, it is important to create focus to get in a flow. Sometimes, there are a lot of tasks to cover and very little time. To help focus on the task ahead, one way to speed up development is to use full-screen mode for iOS simulators. For example, a focused environment on my laptop screen includes zero visibility for the Dock and the menu bar.

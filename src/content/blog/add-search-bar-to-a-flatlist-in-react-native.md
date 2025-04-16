@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - react-native
-description: ""
+description: ''
 ---
 
 ![cover_image](https://i.imgur.com/zeVnUHd.png)
@@ -53,12 +53,12 @@ _Note_: The dependency `react-native-svg` is required as a peer dependency for t
 UI Kitten is ready to use now. To check, everything has installed correctly, let us modify `App.js` file as the following snippet:
 
 ```js
-import React from "react";
-import { ApplicationProvider, Layout, Text } from "@ui-kitten/components";
-import { mapping, light as lightTheme } from "@eva-design/eva";
+import React from 'react';
+import { ApplicationProvider, Layout, Text } from '@ui-kitten/components';
+import { mapping, light as lightTheme } from '@eva-design/eva';
 
 const HomeScreen = () => (
-  <Layout style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+  <Layout style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
     <Text category="h1">HOME</Text>
   </Layout>
 );
@@ -101,17 +101,17 @@ There are three primary props that a FlatList component requires to display a li
 To get understand this pragmatically, let us build a mock an array of data and using `FlatList`, let us display it on our demo app. To start, import the following statements in `App.js` file.
 
 ```js
-import React from "react";
-import { FlatList, View, Text } from "react-native";
+import React from 'react';
+import { FlatList, View, Text } from 'react-native';
 ```
 
 Then, create an array of mock data.
 
 ```js
 const mockData = [
-  { id: "1", text: "Expo 💙" },
-  { id: "2", text: "is" },
-  { id: "3", text: "Awesome!" },
+  { id: '1', text: 'Expo 💙' },
+  { id: '2', text: 'is' },
+  { id: '3', text: 'Awesome!' }
 ];
 ```
 
@@ -124,7 +124,7 @@ const HomeScreen = () => (
       flex: 1,
       paddingHorizontal: 20,
       paddingVertical: 20,
-      marginTop: 40,
+      marginTop: 40
     }}
   >
     <FlatList
@@ -154,15 +154,15 @@ Open, `App.js` file and a state object with some properties to keep track of dat
 
 ```js
 // modify the import statements as below
-import React from "react";
+import React from 'react';
 import {
   FlatList,
   View,
   ActivityIndicator,
-  TouchableOpacity,
-} from "react-native";
-import { ApplicationProvider, Text, Avatar } from "@ui-kitten/components";
-import { mapping, light as lightTheme } from "@eva-design/eva";
+  TouchableOpacity
+} from 'react-native';
+import { ApplicationProvider, Text, Avatar } from '@ui-kitten/components';
+import { mapping, light as lightTheme } from '@eva-design/eva';
 
 // add a state object to the HomeScreen component
 class HomeScreen extends React.Component {
@@ -171,7 +171,7 @@ class HomeScreen extends React.Component {
     data: [],
     page: 1,
     seed: 1,
-    error: null,
+    error: null
   };
 
   // ... rest of the code
@@ -218,7 +218,7 @@ renderFooter = () => {
       style={{
         paddingVertical: 20,
         borderTopWidth: 1,
-        borderColor: "#CED0CE",
+        borderColor: '#CED0CE'
       }}
     >
       <ActivityIndicator animating size="large" />
@@ -243,9 +243,9 @@ renderSeparator = () => {
     <View
       style={{
         height: 1,
-        width: "86%",
-        backgroundColor: "#CED0CE",
-        marginLeft: "5%",
+        width: '86%',
+        backgroundColor: '#CED0CE',
+        marginLeft: '5%'
       }}
     />
   );
@@ -262,12 +262,12 @@ The individual items in the list are going to be separated by the `renderSeparat
 <FlatList
   data={this.state.data}
   renderItem={({ item }) => (
-    <TouchableOpacity onPress={() => alert("Item pressed!")}>
+    <TouchableOpacity onPress={() => alert('Item pressed!')}>
       <View
         style={{
-          flexDirection: "row",
+          flexDirection: 'row',
           padding: 16,
-          alignItems: "center",
+          alignItems: 'center'
         }}
       >
         <Avatar
@@ -278,7 +278,7 @@ The individual items in the list are going to be separated by the `renderSeparat
         <Text
           category="s1"
           style={{
-            color: "#000",
+            color: '#000'
           }}
         >{`${item.name.first} ${item.name.last}`}</Text>
       </View>
@@ -314,13 +314,13 @@ Open `App.js` file and add the following prop to the list.
 The search bar component is going to be an input field that can take the user's name from the end-user. To build one, let us start by modifying the import statements as below.
 
 ```js
-import filter from "lodash.filter";
+import filter from 'lodash.filter';
 import {
   ApplicationProvider,
   Text,
   Avatar,
-  Input,
-} from "@ui-kitten/components";
+  Input
+} from '@ui-kitten/components';
 ```
 
 Next, modify the `state` object and the following variables to it. The `query` is going to hold the search term when the input is provided. The `fullData` is a temporary array that a handler method is going to filter the user's name on the basis of a query.
@@ -328,8 +328,8 @@ Next, modify the `state` object and the following variables to it. The `query` i
 ```js
 state = {
   // add the following
-  query: "",
-  fullData: [],
+  query: '',
+  fullData: []
 };
 ```
 
@@ -350,7 +350,7 @@ makeRemoteRequest = () => {
         loading: false,
 
         // ---- ADD THIS ----
-        fullData: res.results,
+        fullData: res.results
       });
     })
     .catch(error => {
@@ -389,10 +389,10 @@ Lastly, add `renderHeader` to render the search bar on the UI.
 renderHeader = () => (
   <View
     style={{
-      backgroundColor: "#fff",
+      backgroundColor: '#fff',
       padding: 10,
-      alignItems: "center",
-      justifyContent: "center",
+      alignItems: 'center',
+      justifyContent: 'center'
     }}
   >
     <Input
@@ -403,10 +403,10 @@ renderHeader = () => (
       placeholder="Search"
       style={{
         borderRadius: 25,
-        borderColor: "#333",
-        backgroundColor: "#fff",
+        borderColor: '#333',
+        backgroundColor: '#fff'
       }}
-      textStyle={{ color: "#000" }}
+      textStyle={{ color: '#000' }}
     />
   </View>
 );

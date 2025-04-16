@@ -1,5 +1,5 @@
 ---
-title: "Creating and Validating React Native Forms with Formik"
+title: 'Creating and Validating React Native Forms with Formik'
 author: Aman Mittal
 pubDatetime: 2020-10-16T03:42:51Z
 slug: creating-and-validating-react-native-form-with-formik
@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - react-native
-description: ""
+description: ''
 ---
 
 ![cover](https://i.imgur.com/Qg4x9He.jpg)
@@ -62,8 +62,8 @@ Let's start by creating a simple form button component which is a touchable elem
 Create a new file called `Button.js` and add the following snippet:
 
 ```js
-import React from "react";
-import { TouchableOpacity, Text } from "react-native";
+import React from 'react';
+import { TouchableOpacity, Text } from 'react-native';
 
 export default function Button({ label, onPress }) {
   return (
@@ -72,15 +72,15 @@ export default function Button({ label, onPress }) {
         borderRadius: 8,
         height: 50,
         width: 245,
-        justifyContent: "center",
-        alignItems: "center",
-        backgroundColor: "#e94832",
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: '#e94832'
       }}
       activeOpacity={0.7}
       onPress={onPress}
     >
       <Text
-        style={{ fontSize: 18, color: "white", textTransform: "uppercase" }}
+        style={{ fontSize: 18, color: 'white', textTransform: 'uppercase' }}
       >
         {label}
       </Text>
@@ -94,22 +94,22 @@ Now, let's create the second reusable component to let users enter their credent
 It is going to accept one prop and that is the name of the `icon`. Each input field may have a different icon and other props that are generally used with a `TextInput` component in a React Native app. You will see what different props are used on a `TextInput` in the next section. For now, use a [rest parameter syntax](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters) to pass down the `...otherProps`.
 
 ```js
-import React from "react";
-import { TextInput as RNTextInput, View, StyleSheet } from "react-native";
-import { Entypo as Icon } from "@expo/vector-icons";
+import React from 'react';
+import { TextInput as RNTextInput, View, StyleSheet } from 'react-native';
+import { Entypo as Icon } from '@expo/vector-icons';
 
 export default function TextInput({ icon, ...otherProps }) {
-  const validationColor = "#223e4b";
+  const validationColor = '#223e4b';
   return (
     <View
       style={{
-        flexDirection: "row",
-        alignItems: "center",
+        flexDirection: 'row',
+        alignItems: 'center',
         height: 48,
         borderRadius: 8,
         borderColor: validationColor,
         borderWidth: StyleSheet.hairlineWidth,
-        padding: 8,
+        padding: 8
       }}
     >
       <View style={{ padding: 8 }}>
@@ -145,26 +145,26 @@ The second input field is going to be for `password`. It is going to use similar
 Here is the code snippet for the `Login` component after creating these two input fields:
 
 ```js
-import React from "react";
-import { Text, View } from "react-native";
+import React from 'react';
+import { Text, View } from 'react-native';
 
-import TextInput from "../components/TextInput";
-import Button from "../components/Button";
+import TextInput from '../components/TextInput';
+import Button from '../components/Button';
 
 export default function Login() {
   return (
     <View
       style={{
         flex: 1,
-        backgroundColor: "#fff",
-        alignItems: "center",
-        justifyContent: "center",
+        backgroundColor: '#fff',
+        alignItems: 'center',
+        justifyContent: 'center'
       }}
     >
-      <Text style={{ color: "#223e4b", fontSize: 20, marginBottom: 16 }}>
+      <Text style={{ color: '#223e4b', fontSize: 20, marginBottom: 16 }}>
         Login
       </Text>
-      <View style={{ paddingHorizontal: 32, marginBottom: 16, width: "100%" }}>
+      <View style={{ paddingHorizontal: 32, marginBottom: 16, width: '100%' }}>
         <TextInput
           icon="mail"
           placeholder="Enter your email"
@@ -176,7 +176,7 @@ export default function Login() {
           returnKeyLabel="next"
         />
       </View>
-      <View style={{ paddingHorizontal: 32, marginBottom: 16, width: "100%" }}>
+      <View style={{ paddingHorizontal: 32, marginBottom: 16, width: '100%' }}>
         <TextInput
           icon="key"
           placeholder="Enter your password"
@@ -205,7 +205,7 @@ To see the login form in action, run `expo start` or `yarn start`.
 To use it, we have to import it from the `formik` library in the `Login.js` file.
 
 ```js
-import { useFormik } from "formik";
+import { useFormik } from 'formik';
 ```
 
 You might have noticed by now that we are not using `useState` to handle the value of each input field in the Login form. The reason behind that is that `formik` comes with a property called `initialValues` whose value is the object containing form fields.
@@ -216,9 +216,9 @@ In the `Login` component, you can add the following.
 
 ```js
 const { handleChange, handleSubmit, values } = useFormik({
-  initialValues: { email: "", password: "" },
+  initialValues: { email: '', password: '' },
   onSubmit: values =>
-    alert(`Email: ${values.email}, Password: ${values.password}`),
+    alert(`Email: ${values.email}, Password: ${values.password}`)
 });
 ```
 
@@ -248,7 +248,7 @@ The `yup` library is useful for managing complex validations when using Formik i
 Start by importing it.
 
 ```js
-import * as Yup from "yup";
+import * as Yup from 'yup';
 ```
 
 Since `initialValues` is an object, you have to specify `yup.object()` and define the shape of the object. Make sure that, when you’re defining input fields inside the shape, their names correspond to those described in `initialValues`.
@@ -259,11 +259,11 @@ Add the following code snippet before the `Login` functional component.
 
 ```js
 const LoginSchema = Yup.object().shape({
-  email: Yup.string().email("Invalid email").required("Required"),
+  email: Yup.string().email('Invalid email').required('Required'),
   password: Yup.string()
-    .min(2, "Too Short!")
-    .max(10, "Too Long!")
-    .required("Required"),
+    .min(2, 'Too Short!')
+    .max(10, 'Too Long!')
+    .required('Required')
 });
 ```
 
@@ -274,9 +274,9 @@ To validate input fields based on the schema just defined, let's add another pro
 ```js
 const { handleChange, handleSubmit, values } = useFormik({
   validationSchema: LoginSchema,
-  initialValues: { email: "", password: "" },
+  initialValues: { email: '', password: '' },
   onSubmit: values =>
-    alert(`Email: ${values.email}, Password: ${values.password}`),
+    alert(`Email: ${values.email}, Password: ${values.password}`)
 });
 ```
 
@@ -294,9 +294,9 @@ In the `Login` component, modify the following:
 const { handleChange, handleSubmit, handleBlur, values, errors, touched } =
   useFormik({
     validationSchema: LoginSchema,
-    initialValues: { email: "", password: "" },
+    initialValues: { email: '', password: '' },
     onSubmit: values =>
-      alert(`Email: ${values.email}, Password: ${values.password}`),
+      alert(`Email: ${values.email}, Password: ${values.password}`)
   });
 ```
 
@@ -305,7 +305,7 @@ Then, for the email input field, add the following properties:
 ```js
 <TextInput
   // ... rest remains same
-  onBlur={handleBlur("email")}
+  onBlur={handleBlur('email')}
   error={errors.email}
   touched={touched.email}
 />
@@ -316,7 +316,7 @@ Similarly, modify the password field:
 ```js
 <TextInput
   // ... rest remains same
-  onBlur={handleBlur("password")}
+  onBlur={handleBlur('password')}
   error={errors.password}
   touched={touched.password}
 />
@@ -331,7 +331,7 @@ export default function TextInput({ icon, error, ...otherProps }) {...}
 Next, let's change the value of `validationColor` which we have defined in a previous section, based on whether the input field is touched or not and if there is an error or not by using a nested ternary operator.
 
 ```js
-const validationColor = !touched ? "#223e4b" : error ? "#FF5A5F" : "#223e4b";
+const validationColor = !touched ? '#223e4b' : error ? '#FF5A5F' : '#223e4b';
 ```
 
 Now, go back to the simulator and, without entering the value for any input field, press the Login button. You will find that the border color and the icon color for both input fields turns red.
@@ -355,7 +355,7 @@ Since there are only two input fields, the `next` button is shown only in the em
 In the `Login.js` file, start by importing the `useRef` hook from the React library and, inside the Login component, define the `ref` with the initial value of `null`.
 
 ```js
-import React, { useRef } from "react";
+import React, { useRef } from 'react';
 
 //...
 
@@ -389,24 +389,24 @@ This can be solved by using a `forwardRef` on the custom `TextInput` component. 
 Open `TextInput.js` and import `forwardRef` from the React library.
 
 ```js
-import React, { forwardRef } from "react";
+import React, { forwardRef } from 'react';
 ```
 
 Then, wrap all contents of the `TextInput` functional component with `forwardRef` as shown below:
 
 ```js
 const TextInput = forwardRef(({ icon, error, touched, ...otherProps }, ref) => {
-  const validationColor = !touched ? "#223e4b" : error ? "#FF5A5F" : "#223e4b";
+  const validationColor = !touched ? '#223e4b' : error ? '#FF5A5F' : '#223e4b';
   return (
     <View
       style={{
-        flexDirection: "row",
-        alignItems: "center",
+        flexDirection: 'row',
+        alignItems: 'center',
         height: 48,
         borderRadius: 8,
         borderColor: validationColor,
         borderWidth: StyleSheet.hairlineWidth,
-        padding: 8,
+        padding: 8
       }}
     >
       <View style={{ padding: 8 }}>

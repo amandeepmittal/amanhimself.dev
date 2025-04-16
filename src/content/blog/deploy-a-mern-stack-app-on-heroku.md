@@ -1,5 +1,5 @@
 ---
-title: "Deploy a MERN stack app on Heroku"
+title: 'Deploy a MERN stack app on Heroku'
 author: Aman Mittal
 pubDatetime: 2018-10-12T03:42:51Z
 slug: deploy-a-mern-stack-app-on-heroku
@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - nodejs
-description: ""
+description: ''
 ---
 
 ![cover](https://i.imgur.com/IP8rrV2.png)
@@ -47,7 +47,7 @@ Create a `server.js` file inside the root of the directory. This file will serve
 
 ```js
 // server.js
-const express = require("express");
+const express = require('express');
 const app = express();
 
 const PORT = process.env.PORT || 5000;
@@ -57,8 +57,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // routes
-app.get("/", (req, res) => {
-  res.send("Hello from MERN");
+app.get('/', (req, res) => {
+  res.send('Hello from MERN');
 });
 
 // Bootstrap server
@@ -90,21 +90,21 @@ I will start by creating a database model called `Book` inside the file `models/
 
 ```js
 // Books.js
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const bookSchema = new Schema({
   title: {
     type: String,
-    required: true,
+    required: true
   },
   author: {
     type: String,
-    required: true,
-  },
+    required: true
+  }
 });
 
-const Book = mongoose.model("Book", bookSchema);
+const Book = mongoose.model('Book', bookSchema);
 
 module.exports = Book;
 ```
@@ -119,7 +119,7 @@ Our application is going to need some routes that will help the client app to co
 
 ```js
 // booksControllers.js
-const Book = require("../models/Books");
+const Book = require('../models/Books');
 
 // Defining all methods and business logic for routes
 
@@ -149,7 +149,7 @@ module.exports = {
       .then(book => book.remove())
       .then(allbooks => res.json(allbooks))
       .catch(err => res.status(422).json(err));
-  },
+  }
 };
 ```
 
@@ -160,13 +160,13 @@ Next step is to use these methods in our routes inside `routes/` directory. Crea
 ```js
 // books.js
 
-const router = require("express").Router();
-const booksController = require("../controllers/booksController");
+const router = require('express').Router();
+const booksController = require('../controllers/booksController');
 
-router.route("/").get(booksController.findAll).post(booksController.create);
+router.route('/').get(booksController.findAll).post(booksController.create);
 
 router
-  .route("/:id")
+  .route('/:id')
   .get(booksController.findById)
   .put(booksController.update)
   .delete(booksController.remove);
@@ -179,10 +179,10 @@ I have separated the concerned routes that match a specific URL. For example, ro
 ```js
 // index.js
 
-const router = require("express").Router();
-const bookRoutes = require("./books");
+const router = require('express').Router();
+const bookRoutes = require('./books');
 
-router.use("/api/books", bookRoutes);
+router.use('/api/books', bookRoutes);
 
 module.exports = router;
 ```
@@ -194,7 +194,7 @@ For this to work, I am going to import book routes in the `server.js` file after
 ```js
 // server.js
 
-const routes = require("./routes");
+const routes = require('./routes');
 
 // after all middleware functions
 
@@ -225,8 +225,8 @@ and add the `dbuser` and `dbpassword` you just entered to create the new user. I
 
 ```js
 // config/index.js
-const dbuser = "xxxxxxxxxx";
-const dbpassword = "xxxxxxxxx";
+const dbuser = 'xxxxxxxxxx';
+const dbpassword = 'xxxxxxxxx';
 
 const MONGODB_URI = `mongodb://${dbuser}:${dbpassword}
 @ds125453.mlab.com:25453/mern-example`;
@@ -239,19 +239,19 @@ You can replace the `x`'s for `dbuser` and `dbpassword`. Now to define the conne
 ```js
 // models/index.js
 
-const mongoose = require("mongoose");
-const URI = require("../config/index");
+const mongoose = require('mongoose');
+const URI = require('../config/index');
 
 mongoose.connect(process.env.MONGODB_URI || URI);
 
 // When successfully connected
-mongoose.connection.on("connected", () => {
-  console.log("Established Mongoose Default Connection");
+mongoose.connection.on('connected', () => {
+  console.log('Established Mongoose Default Connection');
 });
 
 // When connection throws an error
-mongoose.connection.on("error", err => {
-  console.log("Mongoose Default Connection Error : " + err);
+mongoose.connection.on('error', err => {
+  console.log('Mongoose Default Connection Error : ' + err);
 });
 ```
 
@@ -259,15 +259,15 @@ We are importing the same database URI string that we just exported in `config`.
 
 ```js
 // server.js
-const express = require("express");
+const express = require('express');
 const app = express();
 
-const routes = require("./routes");
+const routes = require('./routes');
 
 const PORT = process.env.PORT || 5000;
 
 // require db connection
-require("./models");
+require('./models');
 
 // configure body parser for AJAX requests
 app.use(express.urlencoded({ extended: true }));
@@ -308,12 +308,12 @@ I am not going to walk you through every component and reusable component I have
 The main frontend file, `App.js` looks like this:
 
 ```js
-import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Books from "./pages/Books";
-import Detail from "./pages/Detail";
-import NoMatch from "./pages/NoMatch";
-import Nav from "./components/Nav";
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Books from './pages/Books';
+import Detail from './pages/Detail';
+import NoMatch from './pages/NoMatch';
+import Nav from './components/Nav';
 
 const App = () => (
   <Router>
@@ -335,25 +335,25 @@ export default App;
 Next, I have created an `API.js` inside the `utils` directory which we handle all the requests and fetching data, in simple terms AJAX requests between our client and the server.
 
 ```js
-import axios from "axios";
+import axios from 'axios';
 
 export default {
   // Gets all books
   getBooks: function () {
-    return axios.get("/api/books");
+    return axios.get('/api/books');
   },
   // Gets the book with the given id
   getBook: function (id) {
-    return axios.get("/api/books/" + id);
+    return axios.get('/api/books/' + id);
   },
   // Deletes the book with the given id
   deleteBook: function (id) {
-    return axios.delete("/api/books/" + id);
+    return axios.delete('/api/books/' + id);
   },
   // Saves a book to the database
   saveBook: function (bookData) {
-    return axios.post("/api/books", bookData);
-  },
+    return axios.post('/api/books', bookData);
+  }
 };
 ```
 
@@ -364,20 +364,20 @@ There are two pages `Books` and `Details`. Let us go through them.
 ```js
 // Books.js
 
-import React, { Component } from "react";
-import DeleteBtn from "../../components/DeleteBtn";
-import Jumbotron from "../../components/Jumbotron";
-import API from "../../utils/API";
-import { Link } from "react-router-dom";
-import { Col, Row, Container } from "../../components/Grid";
-import { List, ListItem } from "../../components/List";
-import { Input, FormBtn } from "../../components/Form";
+import React, { Component } from 'react';
+import DeleteBtn from '../../components/DeleteBtn';
+import Jumbotron from '../../components/Jumbotron';
+import API from '../../utils/API';
+import { Link } from 'react-router-dom';
+import { Col, Row, Container } from '../../components/Grid';
+import { List, ListItem } from '../../components/List';
+import { Input, FormBtn } from '../../components/Form';
 
 class Books extends Component {
   state = {
     books: [],
-    title: "",
-    author: "",
+    title: '',
+    author: ''
   };
 
   componentDidMount() {
@@ -386,7 +386,7 @@ class Books extends Component {
 
   loadBooks = () => {
     API.getBooks()
-      .then(res => this.setState({ books: res.data, title: "", author: "" }))
+      .then(res => this.setState({ books: res.data, title: '', author: '' }))
       .catch(err => console.log(err));
   };
 
@@ -399,7 +399,7 @@ class Books extends Component {
   handleInputChange = event => {
     const { name, value } = event.target;
     this.setState({
-      [name]: value,
+      [name]: value
     });
   };
 
@@ -408,7 +408,7 @@ class Books extends Component {
     if (this.state.title && this.state.author) {
       API.saveBook({
         title: this.state.title,
-        author: this.state.author,
+        author: this.state.author
       })
         .then(res => this.loadBooks())
         .catch(err => console.log(err));
@@ -453,7 +453,7 @@ class Books extends Component {
               <List>
                 {this.state.books.map(book => (
                   <ListItem key={book._id}>
-                    <Link to={"/books/" + book._id}>
+                    <Link to={'/books/' + book._id}>
                       <strong>
                         {book.title} by {book.author}
                       </strong>
@@ -479,15 +479,15 @@ We are defining a local state to manage data and pass it on to the API from the 
 
 ```js
 // Details.js
-import React, { Component } from "react";
-import { Link } from "react-router-dom";
-import { Col, Row, Container } from "../../components/Grid";
-import Jumbotron from "../../components/Jumbotron";
-import API from "../../utils/API";
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import { Col, Row, Container } from '../../components/Grid';
+import Jumbotron from '../../components/Jumbotron';
+import API from '../../utils/API';
 
 class Detail extends Component {
   state = {
-    book: {},
+    book: {}
   };
 
   componentDidMount() {
@@ -542,16 +542,16 @@ Open `routes/index.js` and add the following line.
 
 ```js
 // routes/index.js
-const router = require("express").Router();
-const bookRoutes = require("./books");
-const path = require("path");
+const router = require('express').Router();
+const bookRoutes = require('./books');
+const path = require('path');
 
 // API routes
-router.use("/api/books", bookRoutes);
+router.use('/api/books', bookRoutes);
 
 // If no API routes are hit, send the React app
 router.use(function (req, res) {
-  res.sendFile(path.join(__dirname, "../client/build/index.html"));
+  res.sendFile(path.join(__dirname, '../client/build/index.html'));
 });
 
 module.exports = router;
@@ -561,22 +561,22 @@ Next, open the `server.js` to in which we add another line using Express built-i
 
 ```js
 // server.js
-const express = require("express");
+const express = require('express');
 const app = express();
 
-const routes = require("./routes");
+const routes = require('./routes');
 
 const PORT = process.env.PORT || 5000;
 
 // require db connection
-require("./models");
+require('./models');
 
 // configure body parser for AJAX requests
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // ADD THIS LINE
-app.use(express.static("client/build"));
+app.use(express.static('client/build'));
 
 app.use(routes);
 

@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - react-native
-description: ""
+description: ''
 ---
 
 ![cover_image](https://i.imgur.com/XFvTGys.jpg)
@@ -170,7 +170,7 @@ export default class App extends React.Component {
     playbackInstance: null,
     currentIndex: 0,
     volume: 1.0,
-    isBuffering: false,
+    isBuffering: false
   };
   render() {
     return (
@@ -200,21 +200,21 @@ The next step is to modify the render function inside `App.js`. Inside the conta
   <Image
     style={styles.albumCover}
     source={{
-      uri: "http://www.archive.org/download/LibrivoxCdCoverArt8/hamlet_1104.jpg",
+      uri: 'http://www.archive.org/download/LibrivoxCdCoverArt8/hamlet_1104.jpg'
     }}
   />
   <View style={styles.controls}>
-    <TouchableOpacity style={styles.control} onPress={() => alert("")}>
+    <TouchableOpacity style={styles.control} onPress={() => alert('')}>
       <Ionicons name="ios-skip-backward" size={48} color="#444" />
     </TouchableOpacity>
-    <TouchableOpacity style={styles.control} onPress={() => alert("")}>
+    <TouchableOpacity style={styles.control} onPress={() => alert('')}>
       {this.state.isPlaying ? (
         <Ionicons name="ios-pause" size={48} color="#444" />
       ) : (
         <Ionicons name="ios-play-circle" size={48} color="#444" />
       )}
     </TouchableOpacity>
-    <TouchableOpacity style={styles.control} onPress={() => alert("")}>
+    <TouchableOpacity style={styles.control} onPress={() => alert('')}>
       <Ionicons name="ios-skip-forward" size={48} color="#444" />
     </TouchableOpacity>
   </View>
@@ -229,20 +229,20 @@ All of these buttons are going to be inside another view with a specific styling
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center'
   },
   albumCover: {
     width: 250,
-    height: 250,
+    height: 250
   },
   controls: {
-    flexDirection: "row",
+    flexDirection: 'row'
   },
   control: {
-    margin: 20,
-  },
+    margin: 20
+  }
 });
 ```
 
@@ -257,7 +257,7 @@ Execute the command `expo start` from a terminal window, if you haven't already,
 To play a sound in an Expo application, you’re required to use and import the API for the Audio class from `expo-av`. So at the top of the `App.js` file and after other imports, you can add the following line.
 
 ```js
-import { Audio } from "expo-av";
+import { Audio } from 'expo-av';
 ```
 
 To customize the audio experience inside an iOS or an Android app, Expo provides an asynchronous method called `setAudioModeAsync()`. This method takes an options object as its only parameter. This object contains a list of key-value pairs that are required to enable and use the audio component.
@@ -346,7 +346,7 @@ handlePlayPause = async () => {
     : await playbackInstance.playAsync();
 
   this.setState({
-    isPlaying: !isPlaying,
+    isPlaying: !isPlaying
   });
 };
 
@@ -358,7 +358,7 @@ handlePreviousTrack = async () => {
       ? (currentIndex -= 1)
       : (currentIndex = 0);
     this.setState({
-      currentIndex,
+      currentIndex
     });
     this.loadAudio();
   }
@@ -372,7 +372,7 @@ handleNextTrack = async () => {
       ? (currentIndex += 1)
       : (currentIndex = 0);
     this.setState({
-      currentIndex,
+      currentIndex
     });
     this.loadAudio();
   }

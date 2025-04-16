@@ -1,5 +1,5 @@
 ---
-title: "Basic Navigation in Ionic Applications"
+title: 'Basic Navigation in Ionic Applications'
 author: Aman Mittal
 pubDatetime: 2017-10-31T03:42:51Z
 slug: basic-navigation-in-ionic-applications
@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - ionic
-description: ""
+description: ''
 ---
 
 > [Originally Published at Hackernoon.com](https://medium.com/hackernoon/https-medium-com-amanhimself-basic-navigation-in-ionic-applications-ecb199cdf15b)
@@ -29,12 +29,12 @@ Inside the typescript file associated to above HTML code, we will have access to
 
 ```ts
 // home.ts
-import { Component } from "@angular/core";
-import { NavController } from "ionic-angular";
+import { Component } from '@angular/core';
+import { NavController } from 'ionic-angular';
 
 @Component({
-  selector: "page-home",
-  templateUrl: "home.html",
+  selector: 'page-home',
+  templateUrl: 'home.html'
 })
 export class HomePage {
   constructor(public navCtrl: NavController) {}

@@ -1,5 +1,5 @@
 ---
-title: "Convert png to jpg using ffmpeg"
+title: 'Convert png to jpg using ffmpeg'
 author: Aman Mittal
 pubDatetime: 2023-04-01T03:42:51Z
 slug: convert-png-to-jpg-using-ffmpeg
@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - cli
-description: ""
+description: ''
 ---
 
 As a documentarian, I've used [ffmpeg](https://ffmpeg.org/) command-line tool for a while now. It is a powerful tool that can do a lot of things. At work, I use it to convert videos and images.

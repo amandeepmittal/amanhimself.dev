@@ -5,7 +5,7 @@ pubDatetime: 2019-08-18T03:42:51Z
 slug: building-offline-react-native-apps-with-asyncstorage
 tags:
   - react-native
-description: ""
+description: ''
 ---
 
 ![cover](https://i.imgur.com/5eoYxcI.png)
@@ -87,17 +87,17 @@ Before you dive deep in building the Todolist app, in this section, let us build
 Open `App.js` file and add the following snippet. Start by importing the necessary components from React Native API. The most important one here is `AsyncStorage`. After that, define a variable named `STORAGE_KEY`. This variable will be used to store and retrieve the stored data using the `AsyncStorage` API. Think of it as an identifier for the value being stored or name of the key in the key-value pair. Since you are going to store only one value at the moment, there is only the requirement for one key.
 
 ```js
-import React from "react";
+import React from 'react';
 import {
   StyleSheet,
   Text,
   View,
   TextInput,
   AsyncStorage,
-  TouchableOpacity,
-} from "react-native";
+  TouchableOpacity
+} from 'react-native';
 
-const STORAGE_KEY = "@save_name";
+const STORAGE_KEY = '@save_name';
 ```
 
 Next, let us define an initial state with two empty strings. They are going to be used to save the value of the user input and then retrieve the value to display it on the app screen. After defining the initial state, there is going to be a lifecycle method that is going to load the data when the application starts for the first time or the App component renders.
@@ -105,8 +105,8 @@ Next, let us define an initial state with two empty strings. They are going to b
 ```js
 class App extends React.Component {
   state = {
-    text: "",
-    name: "",
+    text: '',
+    name: ''
   };
 
   componentDidMount() {
@@ -128,7 +128,7 @@ retrieveData = async () => {
       this.setState({ name });
     }
   } catch (e) {
-    alert("Failed to load name.");
+    alert('Failed to load name.');
   }
 };
 ```
@@ -141,10 +141,10 @@ The next function is going to save the data. In the below snippet, you will find
 save = async name => {
   try {
     await AsyncStorage.setItem(STORAGE_KEY, name);
-    alert("Data successfully saved!");
+    alert('Data successfully saved!');
     this.setState({ name });
   } catch (e) {
-    alert("Failed to save name.");
+    alert('Failed to save name.');
   }
 };
 ```
@@ -155,9 +155,9 @@ The last method that you are going to utilize from the `AsyncStorage` API is cal
 removeEverything = async () => {
   try {
     await AsyncStorage.clear();
-    alert("Storage successfully cleared!");
+    alert('Storage successfully cleared!');
   } catch (e) {
-    alert("Failed to clear the async storage.");
+    alert('Failed to clear the async storage.');
   }
 };
 ```
@@ -176,7 +176,7 @@ onSubmitEditing = () => {
   if (!text) return;
 
   onSave(text);
-  this.setState({ text: "" });
+  this.setState({ text: '' });
 };
 ```
 
@@ -271,10 +271,10 @@ Inside the `navigation` folder, there is an `index.js` file that is going to hol
 Let us start by importing the necessary components inside the `index.js` file.
 
 ```js
-import React from "react";
-import { createStackNavigator, createAppContainer } from "react-navigation";
-import HomeScreen from "../screens/HomeScreen";
-import AddTaskScreen from "../screens/AddTaskScreen";
+import React from 'react';
+import { createStackNavigator, createAppContainer } from 'react-navigation';
+import HomeScreen from '../screens/HomeScreen';
+import AddTaskScreen from '../screens/AddTaskScreen';
 ```
 
 From the above snippet, notice that the `createStackNavigator` is a function that returns a React component. It takes a route configuration object. The `createAppContainer` is responsible for linking the current React Native app while maintaining the navigation state from the top-level component. The top-level component in your app is `App`.
@@ -289,14 +289,14 @@ Right now, the route configuration object is going to be as the following snippe
 const StackNav = createStackNavigator(
   {
     Home: {
-      screen: HomeScreen,
+      screen: HomeScreen
     },
     AddTask: {
-      screen: AddTaskScreen,
-    },
+      screen: AddTaskScreen
+    }
   },
   {
-    mode: "modal",
+    mode: 'modal'
   }
 );
 ```
@@ -316,8 +316,8 @@ export default RootNavigator;
 Now, open `App.js` file and add the following content.
 
 ```js
-import React from "react";
-import RootNavigator from "./navigation";
+import React from 'react';
+import RootNavigator from './navigation';
 
 export default function App() {
   return <RootNavigator />;
@@ -375,9 +375,9 @@ In the current app, this `FloatingButton` is going to be responsible for navigat
 One important thing to notice in the snippet below is that the component library `native-base` is being used to create the FAB button. It saves a good amount of time and lines of code to create and style a component like below.
 
 ```js
-import React from "react";
-import { StyleSheet } from "react-native";
-import { Icon, Fab } from "native-base";
+import React from 'react';
+import { StyleSheet } from 'react-native';
+import { Icon, Fab } from 'native-base';
 
 const FloatingButton = ({ actionOnPress }) => (
   <Fab
@@ -392,8 +392,8 @@ const FloatingButton = ({ actionOnPress }) => (
 
 const styles = StyleSheet.create({
   button: {
-    backgroundColor: "#5859f2",
-  },
+    backgroundColor: '#5859f2'
+  }
 });
 
 export default FloatingButton;
@@ -404,15 +404,15 @@ export default FloatingButton;
 Once you have defined it, go to the file `HomeScreen.js` and the following snippet of code.
 
 ```js
-import React, { Component } from "react";
-import { View, Text, StyleSheet } from "react-native";
-import { AppLoading } from "expo";
-import * as Font from "expo-font";
-import FloatingButton from "../components/FloatingButton";
+import React, { Component } from 'react';
+import { View, Text, StyleSheet } from 'react-native';
+import { AppLoading } from 'expo';
+import * as Font from 'expo-font';
+import FloatingButton from '../components/FloatingButton';
 
 export class HomeScreen extends Component {
   state = {
-    isDataReady: false,
+    isDataReady: false
   };
   componentDidMount = () => {
     this.loadFonts();
@@ -421,18 +421,18 @@ export class HomeScreen extends Component {
   loadFonts = async () => {
     try {
       await Font.loadAsync({
-        Roboto: require("../node_modules/native-base/Fonts/Roboto.ttf"),
-        Roboto_medium: require("../node_modules/native-base/Fonts/Roboto_medium.ttf"),
-        Ionicons: require("../node_modules/native-base/Fonts/Ionicons.ttf"),
+        Roboto: require('../node_modules/native-base/Fonts/Roboto.ttf'),
+        Roboto_medium: require('../node_modules/native-base/Fonts/Roboto_medium.ttf'),
+        Ionicons: require('../node_modules/native-base/Fonts/Ionicons.ttf')
       });
       this.setState({ isDataReady: true });
     } catch (err) {
-      alert("Application Error. Cannot load fonts.");
+      alert('Application Error. Cannot load fonts.');
     }
   };
 
   onPressFab = () => {
-    this.props.navigation.navigate("AddTask");
+    this.props.navigation.navigate('AddTask');
   };
 
   render() {
@@ -452,8 +452,8 @@ export class HomeScreen extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-  },
+    flex: 1
+  }
 });
 
 export default HomeScreen;
@@ -478,14 +478,14 @@ Did you notice the `back` button on the `AddTaskScreen`? This is again where `re
 With Native Base components library, it is easy to customize a header component in few lines of code. Inside the file `Header.js` add the following snippet. Again, this is a functional component since it is going to enhance the UI and is not running business logic.
 
 ```js
-import React from "react";
-import { Header as NBHeader, Body, Title } from "native-base";
+import React from 'react';
+import { Header as NBHeader, Body, Title } from 'native-base';
 
 const Header = () => {
   return (
-    <NBHeader style={{ backgroundColor: "#5859f2" }}>
+    <NBHeader style={{ backgroundColor: '#5859f2' }}>
       <Body>
-        <Title style={{ color: "#ffffff" }}>Header</Title>
+        <Title style={{ color: '#ffffff' }}>Header</Title>
       </Body>
     </NBHeader>
   );
@@ -499,8 +499,8 @@ The `Header` component from the `native-base` library takes a `Body` as an input
 Import this component inside the `HomeScreen.js` file. Also, import the `StatusBar` component from the `react-native`. Since the background of the `Header` component is going to be a customize blue color, it is better to change the default dark `StatusBar` style into something pleasing and light.
 
 ```js
-import { View, Text, StyleSheet, StatusBar } from "react-native";
-import Header from "../components/Header";
+import { View, Text, StyleSheet, StatusBar } from 'react-native';
+import Header from '../components/Header';
 ```
 
 Inside the class component, the first thing you have to do is hide the header that is being provided by the stack navigator from `react-navigation` library. The object `navigationOptions` is how to customize the default navigators that `react-navigation` renders.
@@ -530,7 +530,7 @@ In this section, you are going to set up a List component that accepts mock or d
 ```js
 state = {
   isDataReady: false,
-  mockItems: ["First Item", "Second Item", "Third Item"],
+  mockItems: ['First Item', 'Second Item', 'Third Item']
 };
 ```
 
@@ -545,8 +545,8 @@ In the file `HomeScreen.js` replace the `Text` component with following `FlatLis
 
 ```js
 // import statements
-import { View, FlatList, StyleSheet, StatusBar } from "react-native";
-import Item from "../components/Item";
+import { View, FlatList, StyleSheet, StatusBar } from 'react-native';
+import Item from '../components/Item';
 
 // in render method, replace <Text> with the following
 <FlatList
@@ -562,16 +562,16 @@ import Item from "../components/Item";
 Now open the file `components/Item.js` and add the following snippet.
 
 ```js
-import React from "react";
+import React from 'react';
 import {
   View,
   Text,
   StyleSheet,
   TouchableOpacity,
-  Dimensions,
-} from "react-native";
+  Dimensions
+} from 'react-native';
 
-const { width } = Dimensions.get("window");
+const { width } = Dimensions.get('window');
 
 const Item = ({ text }) => {
   return (
@@ -585,23 +585,23 @@ const Item = ({ text }) => {
 
 const styles = StyleSheet.create({
   container: {
-    borderBottomColor: "#5859f2",
+    borderBottomColor: '#5859f2',
     borderBottomWidth: StyleSheet.hairlineWidth,
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between",
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between'
   },
   rowContainer: {
-    flexDirection: "row",
+    flexDirection: 'row',
     width: width / 2,
-    alignItems: "center",
+    alignItems: 'center'
   },
   text: {
-    color: "#4F50DC",
+    color: '#4F50DC',
     fontSize: 18,
     marginVertical: 20,
-    paddingLeft: 10,
-  },
+    paddingLeft: 10
+  }
 });
 
 export default Item;
@@ -640,22 +640,22 @@ But if you are going to use Objects instead of an array, how are you going to it
 First, let us start by importing all components and custom components required in order to build the application inside `HomeScreen.js` file.
 
 ```js
-import React, { Component } from "react";
+import React, { Component } from 'react';
 import {
   FlatList,
   View,
   StatusBar,
   StyleSheet,
-  AsyncStorage,
-} from "react-native";
-import uuidv1 from "uuid/v1";
-import _values from "lodash.values";
-import { Button, Text as NBText } from "native-base";
-import { AppLoading } from "expo";
-import * as Font from "expo-font";
-import Header from "../components/Header";
-import Item from "../components/Item";
-import FloatingButton from "../components/FloatingButton";
+  AsyncStorage
+} from 'react-native';
+import uuidv1 from 'uuid/v1';
+import _values from 'lodash.values';
+import { Button, Text as NBText } from 'native-base';
+import { AppLoading } from 'expo';
+import * as Font from 'expo-font';
+import Header from '../components/Header';
+import Item from '../components/Item';
+import FloatingButton from '../components/FloatingButton';
 ```
 
 After writing these import statements, let us modify the initial state.
@@ -663,7 +663,7 @@ After writing these import statements, let us modify the initial state.
 ```js
 state = {
   todos: {},
-  isDataReady: false,
+  isDataReady: false
 };
 ```
 
@@ -677,15 +677,15 @@ componentDidMount = () => {
 loadTodos = async () => {
   try {
     await Font.loadAsync({
-      Roboto: require("../node_modules/native-base/Fonts/Roboto.ttf"),
-      Roboto_medium: require("../node_modules/native-base/Fonts/Roboto_medium.ttf"),
+      Roboto: require('../node_modules/native-base/Fonts/Roboto.ttf'),
+      Roboto_medium: require('../node_modules/native-base/Fonts/Roboto_medium.ttf')
     });
 
-    const getTodos = await AsyncStorage.getItem("todos");
+    const getTodos = await AsyncStorage.getItem('todos');
     const parsedTodos = JSON.parse(getTodos);
     this.setState({ isDataReady: true, todos: parsedTodos || {} });
   } catch (err) {
-    alert("Application Error. Cannot load data.");
+    alert('Application Error. Cannot load data.');
   }
 };
 ```
@@ -706,13 +706,13 @@ Further, create a new object called `newState` which uses the `prevState` object
 
 ```js
 saveTodos = newToDos => {
-  const saveTodos = AsyncStorage.setItem("todos", JSON.stringify(newToDos));
+  const saveTodos = AsyncStorage.setItem('todos', JSON.stringify(newToDos));
 };
 
 addTodo = newTask => {
   const newTodoItem = newTask;
 
-  if (newTodoItem !== "") {
+  if (newTodoItem !== '') {
     this.setState(prevState => {
       const ID = uuidv1();
       const newToDoObject = {
@@ -720,15 +720,15 @@ addTodo = newTask => {
           id: ID,
           isCompleted: false,
           textValue: newTodoItem,
-          createdAt: Date.now(),
-        },
+          createdAt: Date.now()
+        }
       };
       const newState = {
         ...prevState,
         todos: {
           ...prevState.todos,
-          ...newToDoObject,
-        },
+          ...newToDoObject
+        }
       };
       this.saveTodos(newState.todos);
       return { ...newState };
@@ -748,7 +748,7 @@ deleteTodo = id => {
     delete todos[id];
     const newState = {
       ...prevState,
-      ...todos,
+      ...todos
     };
     this.saveTodos(newState.todos);
     return { ...newState };
@@ -771,9 +771,9 @@ inCompleteTodo = id => {
         ...prevState.todos,
         [id]: {
           ...prevState.todos[id],
-          isCompleted: false,
-        },
-      },
+          isCompleted: false
+        }
+      }
     };
     this.saveTodos(newState.todos);
     return { ...newState };
@@ -788,9 +788,9 @@ completeTodo = id => {
         ...prevState.todos,
         [id]: {
           ...prevState.todos[id],
-          isCompleted: true,
-        },
-      },
+          isCompleted: true
+        }
+      }
     };
     this.saveTodos(newState.todos);
     return { ...newState };
@@ -808,8 +808,8 @@ First, edit the `onPressFab` method like the below snippet.
 
 ```js
 onPressFab = () => {
-  this.props.navigation.navigate("AddTask", {
-    saveItem: this.addTodo,
+  this.props.navigation.navigate('AddTask', {
+    saveItem: this.addTodo
   });
 };
 ```
@@ -817,13 +817,13 @@ onPressFab = () => {
 Next, open `AddTaskScreen.js` and add the following snippet.
 
 ```js
-import React, { Component } from "react";
-import { View } from "react-native";
-import { Form, Item, Input, Button, Text as NBText } from "native-base";
+import React, { Component } from 'react';
+import { View } from 'react-native';
+import { Form, Item, Input, Button, Text as NBText } from 'native-base';
 
 export class AddTaskScreen extends Component {
   state = {
-    text: "",
+    text: ''
   };
 
   onChangeText = event => {
@@ -849,7 +849,7 @@ export class AddTaskScreen extends Component {
                 autoCorrect={false}
                 onChange={this.onChangeText}
                 onSubmitEditing={this.onAddTask}
-                returnKeyType={"done"}
+                returnKeyType={'done'}
               />
             </Item>
           </Form>
@@ -857,13 +857,13 @@ export class AddTaskScreen extends Component {
         <View style={{ marginTop: 20 }}>
           <Button
             style={{
-              backgroundColor: "#5067FF",
+              backgroundColor: '#5067FF',
               margin: 25,
-              justifyContent: "center",
+              justifyContent: 'center'
             }}
             onPress={this.onAddTask}
           >
-            <NBText style={{ fontWeight: "bold" }}>Add Task</NBText>
+            <NBText style={{ fontWeight: 'bold' }}>Add Task</NBText>
           </Button>
         </View>
       </View>
@@ -912,17 +912,17 @@ To display each todo list item, you will have first to pass the props as shown b
 Next, go to `Item.js` file and add the following snippet.
 
 ```js
-import React from "react";
+import React from 'react';
 import {
   View,
   Text,
   StyleSheet,
   TouchableOpacity,
-  Dimensions,
-} from "react-native";
-import { Icon } from "native-base";
+  Dimensions
+} from 'react-native';
+import { Icon } from 'native-base';
 
-const { width } = Dimensions.get("window");
+const { width } = Dimensions.get('window');
 
 const Item = ({
   inCompleteTodo,
@@ -930,7 +930,7 @@ const Item = ({
   textValue,
   id,
   deleteTodo,
-  isCompleted,
+  isCompleted
 }) => {
   toggleItem = () => {
     if (isCompleted) {
@@ -945,8 +945,8 @@ const Item = ({
       <View style={styles.rowContainer}>
         <TouchableOpacity onPress={this.toggleItem}>
           <Icon
-            name={isCompleted ? "checkmark-circle" : "radio-button-off"}
-            style={{ paddingLeft: 10, color: "#7A7AF6" }}
+            name={isCompleted ? 'checkmark-circle' : 'radio-button-off'}
+            style={{ paddingLeft: 10, color: '#7A7AF6' }}
           />
         </TouchableOpacity>
 
@@ -955,16 +955,16 @@ const Item = ({
             styles.text,
             {
               opacity: isCompleted ? 0.5 : 1.0,
-              textDecorationLine: isCompleted ? "line-through" : "none",
-              color: isCompleted ? "#7A7AF6" : "#4F50DC",
-            },
+              textDecorationLine: isCompleted ? 'line-through' : 'none',
+              color: isCompleted ? '#7A7AF6' : '#4F50DC'
+            }
           ]}
         >
           {textValue}
         </Text>
       </View>
       <TouchableOpacity onPressOut={() => deleteTodo(id)}>
-        <Icon name="md-trash" style={{ color: "#ABADF9", paddingRight: 10 }} />
+        <Icon name="md-trash" style={{ color: '#ABADF9', paddingRight: 10 }} />
       </TouchableOpacity>
     </View>
   );
@@ -972,24 +972,24 @@ const Item = ({
 
 const styles = StyleSheet.create({
   container: {
-    borderBottomColor: "#5859f2",
+    borderBottomColor: '#5859f2',
     borderBottomWidth: StyleSheet.hairlineWidth,
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between",
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between'
   },
   text: {
-    color: "#4F50DC",
+    color: '#4F50DC',
     fontSize: 18,
     marginVertical: 20,
-    paddingLeft: 10,
+    paddingLeft: 10
   },
 
   rowContainer: {
-    flexDirection: "row",
+    flexDirection: 'row',
     width: width / 2,
-    alignItems: "center",
-  },
+    alignItems: 'center'
+  }
 });
 
 export default Item;
@@ -1014,7 +1014,7 @@ Keeping the data source same from the storage API, let modify the state by addin
 state = {
   todos: {},
   isDataReady: false,
-  filter: "Todo",
+  filter: 'Todo'
 };
 ```
 
@@ -1024,12 +1024,12 @@ Next, you are going to add another handler function called `filteredItems`. This
 
 ```js
 filteredItems = () => {
-  if (this.state.filter === "Todo") {
+  if (this.state.filter === 'Todo') {
     return _values(this.state.todos).filter(i => {
       return !i.isCompleted;
     });
   }
-  if (this.state.filter === "Complete") {
+  if (this.state.filter === 'Complete') {
     return _values(this.state.todos).filter(i => {
       return i.isCompleted;
     });

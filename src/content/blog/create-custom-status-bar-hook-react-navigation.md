@@ -1,5 +1,5 @@
 ---
-title: "How to create a custom hook to change status bar styles for every screen using React Navigation"
+title: 'How to create a custom hook to change status bar styles for every screen using React Navigation'
 author: Aman Mittal
 pubDatetime: 2020-03-13T03:42:51Z
 slug: create-custom-status-bar-hook-react-navigation
@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - react-native
-description: ""
+description: ''
 ---
 
 React Native has a component called `StatusBar` that is used to control the app status bar. Using the `react-navigation` library you might have a scenario where you don't have a header bar and on different screens, you would like to ensure the color of the status bar is correctly rendered. Such as on the light background, a dark status bar is displayed and on a darker background of the screen, a light status bar is displayed.
@@ -50,11 +50,11 @@ Create a new file called `AppTabs.js` inside `src/navigation/` directory. This f
 Start by importing all the necessary components.
 
 ```js
-import React from "react";
-import { NavigationContainer } from "@react-navigation/native";
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { View, Text } from "react-native";
-import { Ionicons } from "@expo/vector-icons";
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { View, Text } from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
 ```
 
 I am using `@expo/vector-icons` to display icons for each tab but if you are using react-native cli to generate this project, you will have to install `react-native-vector-icons` library.
@@ -64,8 +64,8 @@ Create the functional component `HomeScreen` with a `View` and a `Text` as shown
 ```js
 function HomeScreen() {
   return (
-    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <Text style={{ fontSize: 20, color: "#333333" }}>Home Screen</Text>
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      <Text style={{ fontSize: 20, color: '#333333' }}>Home Screen</Text>
     </View>
   );
 }
@@ -75,17 +75,17 @@ Also, add the following code snippet for the tab screen, `SettingsScreen`.
 
 ```js
 function SettingsScreen() {
-  useStatusBar("light-content");
+  useStatusBar('light-content');
   return (
     <View
       style={{
         flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-        backgroundColor: "#be79df",
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: '#be79df'
       }}
     >
-      <Text style={{ fontSize: 20, color: "white" }}>Settings Screen</Text>
+      <Text style={{ fontSize: 20, color: 'white' }}>Settings Screen</Text>
     </View>
   );
 }
@@ -104,19 +104,19 @@ export default function AppTabs() {
           tabBarIcon: ({ focused, color, size }) => {
             let iconName;
 
-            if (route.name === "Home") {
+            if (route.name === 'Home') {
               iconName = focused
-                ? "ios-information-circle"
-                : "ios-information-circle-outline";
-            } else if (route.name === "Settings") {
-              iconName = focused ? "ios-list-box" : "ios-list";
+                ? 'ios-information-circle'
+                : 'ios-information-circle-outline';
+            } else if (route.name === 'Settings') {
+              iconName = focused ? 'ios-list-box' : 'ios-list';
             }
             return <Ionicons name={iconName} size={size} color={color} />;
-          },
+          }
         })}
         tabBarOptions={{
-          activeTintColor: "tomato",
-          inactiveTintColor: "gray",
+          activeTintColor: 'tomato',
+          inactiveTintColor: 'gray'
         }}
       >
         <Tabs.Screen name="Home" component={HomeScreen} />
@@ -144,9 +144,9 @@ Also, it is important to wrap the side-effect in `React.useCallback` hook to avo
 Create a new file called `Hooks.js` inside `src/utils/` directory. Import the following statements.
 
 ```js
-import React, { useCallback } from "react";
-import { StatusBar } from "react-native";
-import { useFocusEffect } from "@react-navigation/native";
+import React, { useCallback } from 'react';
+import { StatusBar } from 'react-native';
+import { useFocusEffect } from '@react-navigation/native';
 ```
 
 Then export a custom function called `useStatusBar` that is going to provide a simple way to change the color of the status bar when applied. Pass the `style` as the only parameter.
@@ -167,15 +167,15 @@ Open `src/navigation/AppTabs.js` file and import `useStatusBar`. Also, inside bo
 
 ```js
 // after other import statements
-import { useStatusBar } from "../utils/Hooks";
+import { useStatusBar } from '../utils/Hooks';
 
 function HomeScreen() {
-  useStatusBar("dark-content");
+  useStatusBar('dark-content');
   // rest of the code remains same
 }
 
 function SettingsScreen() {
-  useStatusBar("light-content");
+  useStatusBar('light-content');
   // rest of the code remains same
 }
 ```

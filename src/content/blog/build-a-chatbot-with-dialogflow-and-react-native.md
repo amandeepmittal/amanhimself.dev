@@ -1,5 +1,5 @@
 ---
-title: "Build a Chatbot with Dialogflow and React Native"
+title: 'Build a Chatbot with Dialogflow and React Native'
 author: Aman Mittal
 pubDatetime: 2019-03-26T03:42:51Z
 slug: build-a-chatbot-with-dialogflow-and-react-native
@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - react-native
-description: ""
+description: ''
 ---
 
 ![cover_image](https://i.imgur.com/SUVqOZ5.jpg)
@@ -70,9 +70,9 @@ Now, let us move on to create the first chat component. We will be using the `Ap
 
 ```js
 // App.js
-import React, { Component } from "react";
-import { StyleSheet, Text, View, Image } from "react-native";
-import { GiftedChat } from "react-native-gifted-chat";
+import React, { Component } from 'react';
+import { StyleSheet, Text, View, Image } from 'react-native';
+import { GiftedChat } from 'react-native-gifted-chat';
 
 class App extends Component {
   state = {
@@ -83,27 +83,27 @@ class App extends Component {
         createdAt: new Date(),
         user: {
           _id: 2,
-          name: "FAQ Bot",
-          avatar: "https://i.imgur.com/7k12EPD.png",
-        },
-      },
-    ],
+          name: 'FAQ Bot',
+          avatar: 'https://i.imgur.com/7k12EPD.png'
+        }
+      }
+    ]
   };
 
   onSend(messages = []) {
     this.setState(previousState => ({
-      messages: GiftedChat.append(previousState.messages, messages),
+      messages: GiftedChat.append(previousState.messages, messages)
     }));
   }
 
   render() {
     return (
-      <View style={{ flex: 1, backgroundColor: "#fff" }}>
+      <View style={{ flex: 1, backgroundColor: '#fff' }}>
         <GiftedChat
           messages={this.state.messages}
           onSend={messages => this.onSend(messages)}
           user={{
-            _id: 1,
+            _id: 1
           }}
         />
       </View>
@@ -211,25 +211,25 @@ Now, create a new file called `env.js` and inside place the same values as above
 // env.js
 
 export const dialogflowConfig = {
-  type: "service_account",
-  project_id: "faq-bot-XXXX",
-  private_key_id: "XXXX",
-  private_key: "-----BEGIN PRIVATE KEY-----XXXX\n-----END PRIVATE KEY-----\n",
-  client_email: "XXXX",
-  client_id: "XXXX",
-  auth_uri: "XXXX",
-  token_uri: "XXXX",
-  auth_provider_x509_cert_url: "XXXX",
-  client_x509_cert_url: "XXXX",
+  type: 'service_account',
+  project_id: 'faq-bot-XXXX',
+  private_key_id: 'XXXX',
+  private_key: '-----BEGIN PRIVATE KEY-----XXXX\n-----END PRIVATE KEY-----\n',
+  client_email: 'XXXX',
+  client_id: 'XXXX',
+  auth_uri: 'XXXX',
+  token_uri: 'XXXX',
+  auth_provider_x509_cert_url: 'XXXX',
+  client_x509_cert_url: 'XXXX'
 };
 ```
 
 Next, export the configuration object. You will be requiring it among other things in the `App.js` file.
 
 ```js
-import { Dialogflow_V2 } from "react-native-dialogflow";
+import { Dialogflow_V2 } from 'react-native-dialogflow';
 
-import { dialogflowConfig } from "./env";
+import { dialogflowConfig } from './env';
 ```
 
 Also, we are refactoring the user object by separating it from the state like below.
@@ -237,8 +237,8 @@ Also, we are refactoring the user object by separating it from the state like be
 ```js
 const BOT_USER = {
   _id: 2,
-  name: "FAQ Bot",
-  avatar: "https://i.imgur.com/7k12EPD.png",
+  name: 'FAQ Bot',
+  avatar: 'https://i.imgur.com/7k12EPD.png'
 };
 ```
 
@@ -251,9 +251,9 @@ state = {
       _id: 1,
       text: `Hi! I am the FAQ bot 🤖 from Jscrambler.\n\nHow may I help you with today?`,
       createdAt: new Date(),
-      user: BOT_USER, // <= note this
-    },
-  ],
+      user: BOT_USER // <= note this
+    }
+  ]
 };
 ```
 
@@ -323,17 +323,17 @@ You can find the complete code for `App.js` below.
 ```js
 // App.js
 
-import React, { Component } from "react";
-import { StyleSheet, Text, View } from "react-native";
-import { GiftedChat } from "react-native-gifted-chat";
-import { Dialogflow_V2 } from "react-native-dialogflow";
+import React, { Component } from 'react';
+import { StyleSheet, Text, View } from 'react-native';
+import { GiftedChat } from 'react-native-gifted-chat';
+import { Dialogflow_V2 } from 'react-native-dialogflow';
 
-import { dialogflowConfig } from "./env";
+import { dialogflowConfig } from './env';
 
 const BOT_USER = {
   _id: 2,
-  name: "FAQ Bot",
-  avatar: "https://i.imgur.com/7k12EPD.png",
+  name: 'FAQ Bot',
+  avatar: 'https://i.imgur.com/7k12EPD.png'
 };
 
 class App extends Component {
@@ -343,9 +343,9 @@ class App extends Component {
         _id: 1,
         text: `Hi! I am the FAQ bot 🤖 from Jscrambler.\n\nHow may I help you with today?`,
         createdAt: new Date(),
-        user: BOT_USER,
-      },
-    ],
+        user: BOT_USER
+      }
+    ]
   };
 
   componentDidMount() {
@@ -364,7 +364,7 @@ class App extends Component {
 
   onSend(messages = []) {
     this.setState(previousState => ({
-      messages: GiftedChat.append(previousState.messages, messages),
+      messages: GiftedChat.append(previousState.messages, messages)
     }));
 
     let message = messages[0].text;
@@ -380,22 +380,22 @@ class App extends Component {
       _id: this.state.messages.length + 1,
       text,
       createdAt: new Date(),
-      user: BOT_USER,
+      user: BOT_USER
     };
 
     this.setState(previousState => ({
-      messages: GiftedChat.append(previousState.messages, [msg]),
+      messages: GiftedChat.append(previousState.messages, [msg])
     }));
   }
 
   render() {
     return (
-      <View style={{ flex: 1, backgroundColor: "#fff" }}>
+      <View style={{ flex: 1, backgroundColor: '#fff' }}>
         <GiftedChat
           messages={this.state.messages}
           onSend={messages => this.onSend(messages)}
           user={{
-            _id: 1,
+            _id: 1
           }}
         />
       </View>

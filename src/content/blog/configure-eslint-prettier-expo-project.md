@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - expo
-description: ""
+description: ''
 ---
 
 > Make sure to see the official Expo documentation for latest details on using [ESLint](https://docs.expo.dev/guides/using-eslint/) in your React Native project.
@@ -51,13 +51,13 @@ Here is the minimal configuration I use:
 
 ```js
 module.exports = {
-  extends: ["universe", "universe/native"],
+  extends: ['universe', 'universe/native'],
   rules: {
-    "import/order": 0,
-    "react-native/no-inline-styles": 0,
-    "import/namespace": 0,
-    "no-duplicate-imports": "error",
-  },
+    'import/order': 0,
+    'react-native/no-inline-styles': 0,
+    'import/namespace': 0,
+    'no-duplicate-imports': 'error'
+  }
 };
 ```
 

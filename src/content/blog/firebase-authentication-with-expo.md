@@ -1,5 +1,5 @@
 ---
-title: "How To Integrate Firebase Authentication With an Expo App"
+title: 'How To Integrate Firebase Authentication With an Expo App'
 author: Aman Mittal
 pubDatetime: 2021-07-04T03:42:51Z
 slug: firebase-authentication-with-expo
@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - expo
-description: ""
+description: ''
 ---
 
 > Originally Published at [Jscrambler.com](https://jscrambler.com/blog/how-to-integrate-firebase-authentication-with-an-expo-app/).
@@ -124,35 +124,35 @@ Replace all `X's` in the above file with actual values for each key you get from
 Next, rename the `app.json` file to `app.config.js` at the root of your project. Add the import statement to use the `dotenv` configuration. Since it's a JSON file, you will have to export all Expo configuration variables and also add an `extra` object that contains Firebase configuration keys. Here is how the file should look like after this step:
 
 ```js
-import "dotenv/config";
+import 'dotenv/config';
 
 export default {
   expo: {
-    name: "expo-firebase-auth-example",
-    slug: "expo-firebase-auth-example",
-    version: "1.0.0",
-    orientation: "portrait",
-    icon: "./assets/icon.png",
+    name: 'expo-firebase-auth-example',
+    slug: 'expo-firebase-auth-example',
+    version: '1.0.0',
+    orientation: 'portrait',
+    icon: './assets/icon.png',
     splash: {
-      image: "./assets/splash.png",
-      resizeMode: "contain",
-      backgroundColor: "#ffffff",
+      image: './assets/splash.png',
+      resizeMode: 'contain',
+      backgroundColor: '#ffffff'
     },
     updates: {
-      fallbackToCacheTimeout: 0,
+      fallbackToCacheTimeout: 0
     },
-    assetBundlePatterns: ["**/*"],
+    assetBundlePatterns: ['**/*'],
     ios: {
-      supportsTablet: true,
+      supportsTablet: true
     },
     android: {
       adaptiveIcon: {
-        foregroundImage: "./assets/adaptive-icon.png",
-        backgroundColor: "#FFFFFF",
-      },
+        foregroundImage: './assets/adaptive-icon.png',
+        backgroundColor: '#FFFFFF'
+      }
     },
     web: {
-      favicon: "./assets/favicon.png",
+      favicon: './assets/favicon.png'
     },
     extra: {
       apiKey: process.env.API_KEY,
@@ -160,9 +160,9 @@ export default {
       projectId: process.env.PROJECT_ID,
       storageBucket: process.env.STORAGE_BUCKET,
       messagingSenderId: process.env.MESSAGING_SENDER_ID,
-      appId: process.env.APP_ID,
-    },
-  },
+      appId: process.env.APP_ID
+    }
+  }
 };
 ```
 
@@ -171,9 +171,9 @@ Now, all the keys inside the `extra` object are readable app-wide using `expo-co
 Open the Expo-generated project in your code editor, create a new directory in the root called `config/` and add a file called `firebase.js`. Edit the file as shown below:
 
 ```js
-import firebase from "firebase/app";
-import "firebase/auth";
-import Constants from "expo-constants";
+import firebase from 'firebase/app';
+import 'firebase/auth';
+import Constants from 'expo-constants';
 
 // Initialize Firebase
 const firebaseConfig = {
@@ -182,7 +182,7 @@ const firebaseConfig = {
   projectId: Constants.manifest.extra.projectId,
   storageBucket: Constants.manifest.extra.storageBucket,
   messagingSenderId: Constants.manifest.extra.messagingSenderId,
-  appId: Constants.manifest.extra.appId,
+  appId: Constants.manifest.extra.appId
 };
 
 let Firebase;
@@ -209,17 +209,17 @@ Add the following code snippet to the `Button.js` file:
 
 ```js
 // components/Button.js
-import React from "react";
-import { StyleSheet, Pressable, Text } from "react-native";
+import React from 'react';
+import { StyleSheet, Pressable, Text } from 'react-native';
 
 const Button = ({
   title,
-  backgroundColor = "#000",
-  titleColor = "#fff",
+  backgroundColor = '#000',
+  titleColor = '#fff',
   titleSize = 14,
   onPress,
-  width = "100%",
-  containerStyle,
+  width = '100%',
+  containerStyle
 }) => {
   return (
     <Pressable
@@ -231,9 +231,9 @@ const Button = ({
             {
               opacity: 0.5,
               backgroundColor,
-              width,
+              width
             },
-            containerStyle,
+            containerStyle
           ];
         }
 
@@ -242,9 +242,9 @@ const Button = ({
           {
             opacity: 1,
             backgroundColor,
-            width,
+            width
           },
-          containerStyle,
+          containerStyle
         ];
       }}
     >
@@ -257,15 +257,15 @@ const Button = ({
 
 const styles = StyleSheet.create({
   text: {
-    fontWeight: "600",
+    fontWeight: '600'
   },
   base: {
-    alignItems: "center",
-    justifyContent: "center",
+    alignItems: 'center',
+    justifyContent: 'center',
     minHeight: 42,
     borderRadius: 4,
-    paddingHorizontal: 12,
-  },
+    paddingHorizontal: 12
+  }
 });
 
 export default Button;
@@ -276,9 +276,9 @@ Add the following code snippet in `IconButton.js`:
 ```js
 // components/IconButton.js
 
-import React from "react";
-import { Pressable, StyleSheet } from "react-native";
-import { AntDesign } from "@expo/vector-icons";
+import React from 'react';
+import { Pressable, StyleSheet } from 'react-native';
+import { AntDesign } from '@expo/vector-icons';
 
 const IconButton = ({ color, size, onPress, name }) => {
   return (
@@ -289,12 +289,12 @@ const IconButton = ({ color, size, onPress, name }) => {
             styles.base,
             {
               opacity: 0.5,
-              backgroundColor: "transparent",
-            },
+              backgroundColor: 'transparent'
+            }
           ];
         }
 
-        return [styles.base, { opacity: 1, backgroundColor: "transparent" }];
+        return [styles.base, { opacity: 1, backgroundColor: 'transparent' }];
       }}
       onPress={onPress}
     >
@@ -305,9 +305,9 @@ const IconButton = ({ color, size, onPress, name }) => {
 
 const styles = StyleSheet.create({
   base: {
-    alignItems: "center",
-    justifyContent: "center",
-  },
+    alignItems: 'center',
+    justifyContent: 'center'
+  }
 });
 
 export default IconButton;
@@ -318,8 +318,8 @@ Add the following code snippet in `ErrorMessage.js`. This component will be used
 ```js
 // components/ErrorMessage.js
 
-import React from "react";
-import { StyleSheet, Text } from "react-native";
+import React from 'react';
+import { StyleSheet, Text } from 'react-native';
 
 const ErrorMessage = ({ error, visible }) => {
   if (!error || !visible) {
@@ -331,11 +331,11 @@ const ErrorMessage = ({ error, visible }) => {
 
 const styles = StyleSheet.create({
   errorText: {
-    color: "#fdca40",
+    color: '#fdca40',
     fontSize: 20,
     marginBottom: 10,
-    fontWeight: "600",
-  },
+    fontWeight: '600'
+  }
 });
 
 export default ErrorMessage;
@@ -345,17 +345,17 @@ Add the following code snippet in `InputField.js`:
 
 ```js
 // components/InputField.js
-import React from "react";
-import { View, StyleSheet, TextInput, TouchableOpacity } from "react-native";
-import { MaterialCommunityIcons } from "@expo/vector-icons";
+import React from 'react';
+import { View, StyleSheet, TextInput, TouchableOpacity } from 'react-native';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 const InputField = ({
   leftIcon,
-  iconColor = "#000",
+  iconColor = '#000',
   rightIcon,
   inputStyle,
   containerStyle,
-  placeholderTextColor = "#444",
+  placeholderTextColor = '#444',
   handlePasswordVisibility,
   ...rest
 }) => {
@@ -391,21 +391,21 @@ const InputField = ({
 const styles = StyleSheet.create({
   container: {
     borderRadius: 4,
-    flexDirection: "row",
-    padding: 12,
+    flexDirection: 'row',
+    padding: 12
   },
   leftIcon: {
-    marginRight: 10,
+    marginRight: 10
   },
   input: {
     flex: 1,
-    width: "100%",
-    fontSize: 18,
+    width: '100%',
+    fontSize: 18
   },
   rightIcon: {
-    alignSelf: "center",
-    marginLeft: 10,
-  },
+    alignSelf: 'center',
+    marginLeft: 10
+  }
 });
 
 export default InputField;
@@ -414,10 +414,10 @@ export default InputField;
 Lastly, create an `index.js` file that will expose all these components from the directory itself:
 
 ```js
-import IconButton from "./IconButton";
-import Button from "./Button";
-import ErrorMessage from "./ErrorMessage";
-import InputField from "./InputField";
+import IconButton from './IconButton';
+import Button from './Button';
+import ErrorMessage from './ErrorMessage';
+import InputField from './InputField';
 
 export { IconButton, Button, ErrorMessage, InputField };
 ```
@@ -447,13 +447,13 @@ The `firebase.auth().signOut()` function is a method provided by the Firebase au
 Add the following code snippet to `HomeScreen.js`.
 
 ```js
-import { StatusBar } from "expo-status-bar";
-import React, { useContext } from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StatusBar } from 'expo-status-bar';
+import React, { useContext } from 'react';
+import { StyleSheet, Text, View } from 'react-native';
 
-import { IconButton } from "../components";
-import Firebase from "../config/firebase";
-import { AuthenticatedUserContext } from "../navigation/AuthenticatedUserProvider";
+import { IconButton } from '../components';
+import Firebase from '../config/firebase';
+import { AuthenticatedUserContext } from '../navigation/AuthenticatedUserProvider';
 
 const auth = Firebase.auth();
 
@@ -486,26 +486,26 @@ export default function HomeScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#e93b81",
+    backgroundColor: '#e93b81',
     paddingTop: 50,
-    paddingHorizontal: 12,
+    paddingHorizontal: 12
   },
   row: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "center",
-    marginBottom: 24,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginBottom: 24
   },
   title: {
     fontSize: 24,
-    fontWeight: "600",
-    color: "#fff",
+    fontWeight: '600',
+    color: '#fff'
   },
   text: {
     fontSize: 16,
-    fontWeight: "normal",
-    color: "#fff",
-  },
+    fontWeight: 'normal',
+    color: '#fff'
+  }
 });
 ```
 
@@ -522,36 +522,36 @@ The three other state variables defined inside the `LoginScreen` component are:
 `onLogin` is an asynchronous method that handles whether to log in the user or not based on their `email` and `password` values. These values are passed as arguments to a method called `signInWithEmailAndPassword` provided by Firebase Auth.
 
 ```js
-import { StatusBar } from "expo-status-bar";
-import React from "react";
-import { useState } from "react";
-import { StyleSheet, Text, View, Button as RNButton } from "react-native";
+import { StatusBar } from 'expo-status-bar';
+import React from 'react';
+import { useState } from 'react';
+import { StyleSheet, Text, View, Button as RNButton } from 'react-native';
 
-import { Button, InputField, ErrorMessage } from "../components";
-import Firebase from "../config/firebase";
+import { Button, InputField, ErrorMessage } from '../components';
+import Firebase from '../config/firebase';
 
 const auth = Firebase.auth();
 
 export default function LoginScreen({ navigation }) {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const [passwordVisibility, setPasswordVisibility] = useState(true);
-  const [rightIcon, setRightIcon] = useState("eye");
-  const [loginError, setLoginError] = useState("");
+  const [rightIcon, setRightIcon] = useState('eye');
+  const [loginError, setLoginError] = useState('');
 
   const handlePasswordVisibility = () => {
-    if (rightIcon === "eye") {
-      setRightIcon("eye-off");
+    if (rightIcon === 'eye') {
+      setRightIcon('eye-off');
       setPasswordVisibility(!passwordVisibility);
-    } else if (rightIcon === "eye-off") {
-      setRightIcon("eye");
+    } else if (rightIcon === 'eye-off') {
+      setRightIcon('eye');
       setPasswordVisibility(!passwordVisibility);
     }
   };
 
   const onLogin = async () => {
     try {
-      if (email !== "" && password !== "") {
+      if (email !== '' && password !== '') {
         await auth.signInWithEmailAndPassword(email, password);
       }
     } catch (error) {
@@ -565,11 +565,11 @@ export default function LoginScreen({ navigation }) {
       <Text style={styles.title}>Login</Text>
       <InputField
         inputStyle={{
-          fontSize: 14,
+          fontSize: 14
         }}
         containerStyle={{
-          backgroundColor: "#fff",
-          marginBottom: 20,
+          backgroundColor: '#fff',
+          marginBottom: 20
         }}
         leftIcon="email"
         placeholder="Enter email"
@@ -582,11 +582,11 @@ export default function LoginScreen({ navigation }) {
       />
       <InputField
         inputStyle={{
-          fontSize: 14,
+          fontSize: 14
         }}
         containerStyle={{
-          backgroundColor: "#fff",
-          marginBottom: 20,
+          backgroundColor: '#fff',
+          marginBottom: 20
         }}
         leftIcon="lock"
         placeholder="Enter password"
@@ -607,11 +607,11 @@ export default function LoginScreen({ navigation }) {
         tileColor="#fff"
         titleSize={20}
         containerStyle={{
-          marginBottom: 24,
+          marginBottom: 24
         }}
       />
       <RNButton
-        onPress={() => navigation.navigate("Signup")}
+        onPress={() => navigation.navigate('Signup')}
         title="Go to Signup"
         color="#fff"
       />
@@ -622,53 +622,53 @@ export default function LoginScreen({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#e93b81",
+    backgroundColor: '#e93b81',
     paddingTop: 50,
-    paddingHorizontal: 12,
+    paddingHorizontal: 12
   },
   title: {
     fontSize: 24,
-    fontWeight: "600",
-    color: "#fff",
-    alignSelf: "center",
-    paddingBottom: 24,
-  },
+    fontWeight: '600',
+    color: '#fff',
+    alignSelf: 'center',
+    paddingBottom: 24
+  }
 });
 ```
 
 The signup screen is similar to the login screen. It uses `onHandleSignup`, which is an asynchronous method that handles the action of registering a user or not based on their `email` and `password` values. These values are passed as arguments to a method called `createUserWithEmailAndPassword` provided by Firebase Auth. Add the following code snippet to the `SignupScreen.js` file:
 
 ```js
-import { StatusBar } from "expo-status-bar";
-import React from "react";
-import { useState } from "react";
-import { StyleSheet, Text, View, Button as RNButton } from "react-native";
+import { StatusBar } from 'expo-status-bar';
+import React from 'react';
+import { useState } from 'react';
+import { StyleSheet, Text, View, Button as RNButton } from 'react-native';
 
-import { Button, InputField, ErrorMessage } from "../components";
-import Firebase from "../config/firebase";
+import { Button, InputField, ErrorMessage } from '../components';
+import Firebase from '../config/firebase';
 
 const auth = Firebase.auth();
 
 export default function SignupScreen({ navigation }) {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const [passwordVisibility, setPasswordVisibility] = useState(true);
-  const [rightIcon, setRightIcon] = useState("eye");
-  const [signupError, setSignupError] = useState("");
+  const [rightIcon, setRightIcon] = useState('eye');
+  const [signupError, setSignupError] = useState('');
 
   const handlePasswordVisibility = () => {
-    if (rightIcon === "eye") {
-      setRightIcon("eye-off");
+    if (rightIcon === 'eye') {
+      setRightIcon('eye-off');
       setPasswordVisibility(!passwordVisibility);
-    } else if (rightIcon === "eye-off") {
-      setRightIcon("eye");
+    } else if (rightIcon === 'eye-off') {
+      setRightIcon('eye');
       setPasswordVisibility(!passwordVisibility);
     }
   };
 
   const onHandleSignup = async () => {
     try {
-      if (email !== "" && password !== "") {
+      if (email !== '' && password !== '') {
         await auth.createUserWithEmailAndPassword(email, password);
       }
     } catch (error) {
@@ -682,11 +682,11 @@ export default function SignupScreen({ navigation }) {
       <Text style={styles.title}>Create new account</Text>
       <InputField
         inputStyle={{
-          fontSize: 14,
+          fontSize: 14
         }}
         containerStyle={{
-          backgroundColor: "#fff",
-          marginBottom: 20,
+          backgroundColor: '#fff',
+          marginBottom: 20
         }}
         leftIcon="email"
         placeholder="Enter email"
@@ -699,11 +699,11 @@ export default function SignupScreen({ navigation }) {
       />
       <InputField
         inputStyle={{
-          fontSize: 14,
+          fontSize: 14
         }}
         containerStyle={{
-          backgroundColor: "#fff",
-          marginBottom: 20,
+          backgroundColor: '#fff',
+          marginBottom: 20
         }}
         leftIcon="lock"
         placeholder="Enter password"
@@ -724,11 +724,11 @@ export default function SignupScreen({ navigation }) {
         tileColor="#fff"
         titleSize={20}
         containerStyle={{
-          marginBottom: 24,
+          marginBottom: 24
         }}
       />
       <RNButton
-        onPress={() => navigation.navigate("Login")}
+        onPress={() => navigation.navigate('Login')}
         title="Go to Login"
         color="#fff"
       />
@@ -739,17 +739,17 @@ export default function SignupScreen({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#e93b81",
+    backgroundColor: '#e93b81',
     paddingTop: 50,
-    paddingHorizontal: 12,
+    paddingHorizontal: 12
   },
   title: {
     fontSize: 24,
-    fontWeight: "600",
-    color: "#fff",
-    alignSelf: "center",
-    paddingBottom: 24,
-  },
+    fontWeight: '600',
+    color: '#fff',
+    alignSelf: 'center',
+    paddingBottom: 24
+  }
 });
 ```
 
@@ -768,7 +768,7 @@ The Provider allows the React components to subscribe to the context changes. It
 To create an authenticated user provider, export a function called `AuthenticatedUserProvider`. This provider is going to allow the screen components to access the logged-in or logged-out state of a user in the application. So, in the code snippet below, we define a state variable called `user`.
 
 ```js
-import React, { useState, createContext } from "react";
+import React, { useState, createContext } from 'react';
 
 export const AuthenticatedUserContext = createContext({});
 
@@ -795,10 +795,10 @@ Create these new files inside the `navigation/` directory.
 Add the following code snippet inside `HomeStack.js`:
 
 ```js
-import React from "react";
-import { createStackNavigator } from "@react-navigation/stack";
+import React from 'react';
+import { createStackNavigator } from '@react-navigation/stack';
 
-import HomeScreen from "../screens/HomeScreen";
+import HomeScreen from '../screens/HomeScreen';
 
 const Stack = createStackNavigator();
 
@@ -814,11 +814,11 @@ export default function HomeStack() {
 Next, add the following code snippet inside `AuthStack.js`:
 
 ```js
-import React from "react";
-import { createStackNavigator } from "@react-navigation/stack";
+import React from 'react';
+import { createStackNavigator } from '@react-navigation/stack';
 
-import LoginScreen from "../screens/LoginScreen";
-import SignupScreen from "../screens/SignupScreen";
+import LoginScreen from '../screens/LoginScreen';
+import SignupScreen from '../screens/SignupScreen';
 
 const Stack = createStackNavigator();
 
@@ -841,14 +841,14 @@ Using this listener, if the returned state of a user is `null`, it means that th
 We will use this listener method at the top of our navigator. Create a new file called `RootNavigator.js` inside the `navigation/` directory. Start by importing the following statements:
 
 ```js
-import React, { useContext, useEffect, useState } from "react";
-import { NavigationContainer } from "@react-navigation/native";
-import { View, ActivityIndicator } from "react-native";
+import React, { useContext, useEffect, useState } from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { View, ActivityIndicator } from 'react-native';
 
-import Firebase from "../config/firebase";
-import { AuthenticatedUserContext } from "./AuthenticatedUserProvider";
-import AuthStack from "./AuthStack";
-import HomeStack from "./HomeStack";
+import Firebase from '../config/firebase';
+import { AuthenticatedUserContext } from './AuthenticatedUserProvider';
+import AuthStack from './AuthStack';
+import HomeStack from './HomeStack';
 
 const auth = Firebase.auth();
 ```
@@ -885,7 +885,7 @@ export default function RootNavigator() {
 
   if (isLoading) {
     return (
-      <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
         <ActivityIndicator size="large" />
       </View>
     );
@@ -910,10 +910,10 @@ Well, you have to wrap this provider around the `RootNavigator` in order to use 
 Create an `index.js` file inside the `navigation/` directory and add the following code snippet:
 
 ```js
-import React from "react";
+import React from 'react';
 
-import { AuthenticatedUserProvider } from "./AuthenticatedUserProvider";
-import RootNavigator from "./RootNavigator";
+import { AuthenticatedUserProvider } from './AuthenticatedUserProvider';
+import RootNavigator from './RootNavigator';
 
 /**
  * Wrap all providers here

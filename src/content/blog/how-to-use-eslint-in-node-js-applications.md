@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - nodejs
-description: ""
+description: ''
 ---
 
 > [Originally Published at Hackernoon.com](https://medium.com/hackernoon/how-to-use-eslint-in-node-js-applications-cc4b2298ce55)

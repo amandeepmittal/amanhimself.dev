@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - git
-description: ""
+description: ''
 ---
 
 I'm currently [maintaining a GitHub repo](https://github.com/amandeepmittal/react-native-examples) that has grown over the last year. It primarily contains all the example code that I create when working on React Native and Expo articles and tutorials.

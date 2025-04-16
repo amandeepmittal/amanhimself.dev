@@ -1,5 +1,5 @@
 ---
-title: "Chat app with React Native (Part 6) - Create a custom hook to change status bar styles"
+title: 'Chat app with React Native (Part 6) - Create a custom hook to change status bar styles'
 author: Aman Mittal
 pubDatetime: 2020-05-18T03:42:51Z
 slug: chat-app-with-react-native-part-6
@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - react-native
-description: ""
+description: ''
 ---
 
 ![cover](https://i.imgur.com/ROYjoYo.jpg)
@@ -37,9 +37,9 @@ The `react-navigation` library provides a hook called `useFocusEffect` that help
 Let us begin to develop this custom hook. Create a new file called `useStatusBar.js` inside `src/utils/` directory. Import the following statements.
 
 ```js
-import React, { useCallback } from "react";
-import { StatusBar } from "react-native";
-import { useFocusEffect } from "@react-navigation/native";
+import React, { useCallback } from 'react';
+import { StatusBar } from 'react-native';
+import { useFocusEffect } from '@react-navigation/native';
 ```
 
 Export a custom function called `useStatusBar`. This function is going to be act as a custom hook that is going to provide a simple way to change the color of the status bar when applied. Pass the `style` as the only parameter for now. The value of the style is going to be determined on the screen component this hook is used.
@@ -62,10 +62,10 @@ To apply this hook for the first time, open `screen/HomeScreen.js` file, import 
 
 ```js
 // rest of the import statements
-import useStatsBar from "../utils/useStatusBar";
+import useStatsBar from '../utils/useStatusBar';
 
 export default function HomeScreen({ navigation }) {
-  useStatsBar("light-content");
+  useStatsBar('light-content');
   // rest of the code remains same
 }
 ```

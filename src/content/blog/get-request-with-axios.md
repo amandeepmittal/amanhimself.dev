@@ -1,5 +1,5 @@
 ---
-title: "GET Request params with Axios"
+title: 'GET Request params with Axios'
 author: Aman Mittal
 pubDatetime: 2021-08-11T03:42:51Z
 slug: get-request-params-with-axios
@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - javascript
-description: ""
+description: ''
 ---
 
 One of the popular libraries in JavaScript land to perform HTTP requests is [axios](https://github.com/axios/axios). It is promised based and allows writing code using `async await` syntax.
@@ -27,7 +27,7 @@ A simple GET HTTP request may look like:
 ```js
 axios.get({
   url: `${BASE_URL}/movie/popular?api_key=${API_KEY}&page=1`,
-  method: "get",
+  method: 'get'
 });
 ```
 
@@ -59,7 +59,7 @@ Or can use `params` property in the options:
 axios.get(`${BASE_URL}/movie/popular`, {
   params: {
     api_key: API_KEY,
-    page: pageNumber,
-  },
+    page: pageNumber
+  }
 });
 ```

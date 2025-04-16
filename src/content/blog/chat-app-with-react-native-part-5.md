@@ -1,5 +1,5 @@
 ---
-title: "Chat app with React Native (Part 5) - Create and Fetch Real-Time Messages with Firestore"
+title: 'Chat app with React Native (Part 5) - Create and Fetch Real-Time Messages with Firestore'
 author: Aman Mittal
 pubDatetime: 2020-05-11T03:42:51Z
 slug: chat-app-with-react-native-part-5
@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - react-native
-description: ""
+description: ''
 ---
 
 ![cover](https://i.imgur.com/ROYjoYo.jpg)
@@ -28,8 +28,8 @@ And few other things along the way. Let's get started.
 Remember, in [part 2](https://amanhimself.dev/blog/chat-app-with-react-native-part-2), when configuring Email authentication between the chat app and the Firebase service, you set the following `AuthProvider` that gives access to the current user as well other methods that are already being used in components `LoginScreen` and `SignupScreen`. Here is the ode for `src/navigation/AuthProvider.js` for your reference.
 
 ```js
-import React, { createContext, useState } from "react";
-import auth from "@react-native-firebase/auth";
+import React, { createContext, useState } from 'react';
+import auth from '@react-native-firebase/auth';
 
 /**
  * This provider is created
@@ -66,7 +66,7 @@ export const AuthProvider = ({ children }) => {
           } catch (e) {
             console.error(e);
           }
-        },
+        }
       }}
     >
       {children}
@@ -79,8 +79,8 @@ To fetch the logged in user information (aka the current user), start by importi
 
 ```js
 // ... rest of the import statements
-import React, { useContext, useEffect } from "react";
-import { AuthContext } from "../navigation/AuthProvider";
+import React, { useContext, useEffect } from 'react';
+import { AuthContext } from '../navigation/AuthProvider';
 ```
 
 Next, to verify that the you are getting the current user information, inside the `RoomScreen` component, add the following two lines.
@@ -135,8 +135,8 @@ Inside that, you are going to add another collection called `MESSAGES` that is o
 Start by importing the some necessary React Hooks as shown below. Also, import `firestore` to make queries to create new sub-collection, and fetch data.
 
 ```js
-import React, { useState, useContext, useEffect } from "react";
-import firestore from "@react-native-firebase/firestore";
+import React, { useState, useContext, useEffect } from 'react';
+import firestore from '@react-native-firebase/firestore';
 ```
 
 To get the `id` of the current chat room (_this is important_) you have to pass the `route` as a parameter to the `RoomScreen` functional component. Since, from the previous screen, a `thread` object is passed which gives the chat room id (_or thread id_) store in the Firebase collection `THREADS`. Using `route.params` you can get the whole `thread` object. This is possible because of `react-navigation`.
@@ -159,16 +159,16 @@ async function handleSend(messages) {
   const text = messages[0].text;
 
   firestore()
-    .collection("THREADS")
+    .collection('THREADS')
     .doc(thread._id)
-    .collection("MESSAGES")
+    .collection('MESSAGES')
     .add({
       text,
       createdAt: new Date().getTime(),
       user: {
         _id: currentUser.uid,
-        email: currentUser.email,
-      },
+        email: currentUser.email
+      }
     });
 }
 ```
@@ -198,14 +198,14 @@ async function handleSend(messages) {
   // ...
 
   await firestore()
-    .collection("THREADS")
+    .collection('THREADS')
     .doc(thread._id)
     .set(
       {
         latestMessage: {
           text,
-          createdAt: new Date().getTime(),
-        },
+          createdAt: new Date().getTime()
+        }
       },
       { merge: true }
     );
@@ -236,25 +236,25 @@ async function handleSend(messages) {
 
   useEffect(() => {
     const messagesListener = firestore()
-      .collection("THREADS")
+      .collection('THREADS')
       .doc(thread._id)
-      .collection("MESSAGES")
-      .orderBy("createdAt", "desc")
+      .collection('MESSAGES')
+      .orderBy('createdAt', 'desc')
       .onSnapshot(querySnapshot => {
         const messages = querySnapshot.docs.map(doc => {
           const firebaseData = doc.data();
 
           const data = {
             _id: doc.id,
-            text: "",
+            text: '',
             createdAt: new Date().getTime(),
-            ...firebaseData,
+            ...firebaseData
           };
 
           if (!firebaseData.system) {
             data.user = {
               ...firebaseData.user,
-              name: firebaseData.user.email,
+              name: firebaseData.user.email
             };
           }
 
@@ -302,21 +302,21 @@ The document or in the current case, the collection `MESSAGES` might not exist b
 function handleButtonPress() {
   if (roomName.length > 0) {
     firestore()
-      .collection("THREADS")
+      .collection('THREADS')
       .add({
         name: roomName,
         latestMessage: {
           text: `You have joined the room ${roomName}.`,
-          createdAt: new Date().getTime(),
-        },
+          createdAt: new Date().getTime()
+        }
       })
       .then(docRef => {
-        docRef.collection("MESSAGES").add({
+        docRef.collection('MESSAGES').add({
           text: `You have joined the room ${roomName}.`,
           createdAt: new Date().getTime(),
-          system: true,
+          system: true
         });
-        navigation.navigate("Home");
+        navigation.navigate('Home');
       });
   }
 }
@@ -344,8 +344,8 @@ import {
   Bubble,
   Send,
   // Add this
-  SystemMessage,
-} from "react-native-gifted-chat";
+  SystemMessage
+} from 'react-native-gifted-chat';
 ```
 
 Create a new helper method called `renderSystemMessage` inside the screen component with the following snippet. In the current scenario, you are going to change the background of the system message display as well as the text styles. For that you need to edit the props `wrapperStyle` and `textStyle` of `SystemMessage` component.
@@ -369,9 +369,9 @@ const styles = StyleSheet.create({
   // ... rest of the styles remain unchanged
   systemMessageText: {
     fontSize: 14,
-    color: "#fff",
-    fontWeight: "bold",
-  },
+    color: '#fff',
+    fontWeight: 'bold'
+  }
 });
 ```
 
@@ -399,20 +399,20 @@ Open `HomeScreen.js` and `orderBy()` when fetching name of chat rooms in the Eff
 ```js
 useEffect(() => {
   const unsubscribe = firestore()
-    .collection("THREADS")
+    .collection('THREADS')
     // add this
-    .orderBy("latestMessage.createdAt", "desc")
+    .orderBy('latestMessage.createdAt', 'desc')
     .onSnapshot(querySnapshot => {
       const threads = querySnapshot.docs.map(documentSnapshot => {
         return {
           _id: documentSnapshot.id,
-          name: "",
+          name: '',
           // add this
           latestMessage: {
-            text: "",
+            text: ''
           },
           // ---
-          ...documentSnapshot.data(),
+          ...documentSnapshot.data()
         };
       });
 

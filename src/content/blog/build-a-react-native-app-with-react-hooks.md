@@ -1,5 +1,5 @@
 ---
-title: "React Hooks Basics — Building a React Native App with React Hooks"
+title: 'React Hooks Basics — Building a React Native App with React Hooks'
 author: Aman Mittal
 pubDatetime: 2019-04-19T03:42:51Z
 slug: build-a-react-native-app-with-react-hooks
@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - react-native
-description: ""
+description: ''
 ---
 
 ![cover_image](https://i.imgur.com/5QMLIPd.png)
@@ -71,7 +71,7 @@ Using this command, a new project folder will be generated, traverse inside it a
 Also, note that `RNHooksTODOAPP` is the project and directory name, so in its place, you can enter anything. For more information on the current release candidate of React Native, you can visit their Github project.
 
 [facebook/react-native
-\_A framework for building native apps with React. Contribute to facebook/react-native development by creating an account…\_github.com](https://github.com/facebook/react-native/releases "https://github.com/facebook/react-native/releases")[](https://github.com/facebook/react-native/releases)
+\_A framework for building native apps with React. Contribute to facebook/react-native development by creating an account…\_github.com](https://github.com/facebook/react-native/releases 'https://github.com/facebook/react-native/releases')[](https://github.com/facebook/react-native/releases)
 
 To run the mobile application in an iOS/Android simulator you can run the same old CLI commands like `react-native run-ios` or `run-android`.
 
@@ -88,8 +88,8 @@ React provides a few built-in Hooks like `useState` and `useEffect`. You can als
 In the example below, let us take a look at how you will manage the local state of a component by using Hooks. Open up `App.js` file and paste this code.
 
 ```js
-import React, { useState } from "react";
-import { StyleSheet, Text, View, Button } from "react-native";
+import React, { useState } from 'react';
+import { StyleSheet, Text, View, Button } from 'react-native';
 
 export default function App() {
   const [count, setCount] = useState(0);
@@ -110,20 +110,20 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "#F5FCFF",
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#F5FCFF'
   },
   welcome: {
     fontSize: 20,
-    textAlign: "center",
-    margin: 10,
+    textAlign: 'center',
+    margin: 10
   },
   instructions: {
-    textAlign: "center",
-    color: "#333333",
-    marginBottom: 5,
-  },
+    textAlign: 'center',
+    color: '#333333',
+    marginBottom: 5
+  }
 });
 ```
 
@@ -182,14 +182,14 @@ In this section, you are going to build a Todo List application using React Nati
 We have already created a new project in the last section when we learned about Hooks. Let us continue from there. Open up `App.js` and modify it with the following code.
 
 ```js
-import React from "react";
+import React from 'react';
 import {
   StyleSheet,
   Text,
   View,
   TouchableOpacity,
-  TextInput,
-} from "react-native";
+  TextInput
+} from 'react-native';
 
 export default function App() {
   return (
@@ -210,33 +210,33 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "flex-start",
-    alignItems: "center",
-    backgroundColor: "#F5FCFF",
+    justifyContent: 'flex-start',
+    alignItems: 'center',
+    backgroundColor: '#F5FCFF'
   },
   header: {
-    marginTop: "15%",
+    marginTop: '15%',
     fontSize: 20,
-    color: "red",
-    paddingBottom: 10,
+    color: 'red',
+    paddingBottom: 10
   },
   textInputContainer: {
-    flexDirection: "row",
-    alignItems: "baseline",
-    borderColor: "black",
+    flexDirection: 'row',
+    alignItems: 'baseline',
+    borderColor: 'black',
     borderBottomWidth: 1,
     paddingRight: 10,
-    paddingBottom: 10,
+    paddingBottom: 10
   },
   textInput: {
     flex: 1,
     height: 20,
     fontSize: 18,
-    fontWeight: "bold",
-    color: "black",
+    fontWeight: 'bold',
+    color: 'black',
     paddingLeft: 10,
-    minHeight: "3%",
-  },
+    minHeight: '3%'
+  }
 });
 ```
 
@@ -277,10 +277,10 @@ import {
   Text,
   View,
   TouchableOpacity,
-  TextInput,
-} from "react-native";
+  TextInput
+} from 'react-native';
 
-import Icon from "react-native-vector-icons/Feather";
+import Icon from 'react-native-vector-icons/Feather';
 ```
 
 Next step is to add the `Icon` element inside `TouchableOpacity` next to the `TextInput`. This means the _plus_ to add an item to the list must be on the same line or axis as the text input field. `TouchableOpacity` makes the icon clickable and can have an event listener function (_which we will add later_) to run the business logic for adding an item to the list.
@@ -308,17 +308,17 @@ Now if you go back to the simulator you will have the following screen.
 In this section, you are going to add a local state to the component using Hooks. We will start by initializing the local state for the App component with the new hooks syntax. For that, you have to require `useState` from `react` core. Also, note that the initial state passed below is passed as an argument to the `useState()` function.
 
 ```js
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
 // ...
 export default function App() {
-  const [value, setValue] = useState("");
+  const [value, setValue] = useState('');
   const [todos, setTodos] = useState([]);
 
   addTodo = () => {
     if (value.length > 0) {
       setTodos([...todos, { text: value, key: Date.now(), checked: false }]);
-      setValue("");
+      setValue('');
     }
   };
 
@@ -333,25 +333,25 @@ The `addTodo` function we define is a handler function that will check if the `T
 Here is the complete code for `App.js` after adding state through Hooks.
 
 ```js
-import React, { useState } from "react";
+import React, { useState } from 'react';
 import {
   StyleSheet,
   Text,
   View,
   TouchableOpacity,
-  TextInput,
-} from "react-native";
+  TextInput
+} from 'react-native';
 
-import Icon from "react-native-vector-icons/Feather";
+import Icon from 'react-native-vector-icons/Feather';
 
 export default function App() {
-  const [value, setValue] = useState("");
+  const [value, setValue] = useState('');
   const [todos, setTodos] = useState([]);
 
   addTodo = () => {
     if (value.length > 0) {
       setTodos([...todos, { text: value, key: Date.now(), checked: false }]);
-      setValue("");
+      setValue('');
     }
   };
 
@@ -379,33 +379,33 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "flex-start",
-    alignItems: "center",
-    backgroundColor: "#F5FCFF",
+    justifyContent: 'flex-start',
+    alignItems: 'center',
+    backgroundColor: '#F5FCFF'
   },
   header: {
-    marginTop: "15%",
+    marginTop: '15%',
     fontSize: 20,
-    color: "red",
-    paddingBottom: 10,
+    color: 'red',
+    paddingBottom: 10
   },
   textInputContainer: {
-    flexDirection: "row",
-    alignItems: "baseline",
-    borderColor: "black",
+    flexDirection: 'row',
+    alignItems: 'baseline',
+    borderColor: 'black',
     borderBottomWidth: 1,
     paddingRight: 10,
-    paddingBottom: 10,
+    paddingBottom: 10
   },
   textInput: {
     flex: 1,
     height: 20,
     fontSize: 18,
-    fontWeight: "bold",
-    color: "black",
+    fontWeight: 'bold',
+    color: 'black',
     paddingLeft: 10,
-    minHeight: "3%",
-  },
+    minHeight: '3%'
+  }
 });
 ```
 
@@ -414,9 +414,9 @@ const styles = StyleSheet.create({
 You are going to create a new component that will be responsible for displaying each task that a user adds. Create a new file called `TodoList.js` and add the following code to the file.
 
 ```js
-import React from "react";
-import { StyleSheet, TouchableOpacity, View, Text } from "react-native";
-import Icon from "react-native-vector-icons/Feather";
+import React from 'react';
+import { StyleSheet, TouchableOpacity, View, Text } from 'react-native';
+import Icon from 'react-native-vector-icons/Feather';
 
 export default function TodoList(props) {
   return (
@@ -427,7 +427,7 @@ export default function TodoList(props) {
         name="trash-2"
         size={30}
         color="red"
-        style={{ marginLeft: "auto" }}
+        style={{ marginLeft: 'auto' }}
         onPress={props.deleteTodo}
       />
     </View>
@@ -436,24 +436,24 @@ export default function TodoList(props) {
 
 const styles = StyleSheet.create({
   listContainer: {
-    marginTop: "5%",
-    flexDirection: "row",
-    borderColor: "#aaaaaa",
+    marginTop: '5%',
+    flexDirection: 'row',
+    borderColor: '#aaaaaa',
     borderBottomWidth: 1.5,
-    width: "100%",
-    alignItems: "stretch",
-    minHeight: 40,
+    width: '100%',
+    alignItems: 'stretch',
+    minHeight: 40
   },
   listItem: {
     paddingBottom: 20,
     paddingLeft: 10,
     marginTop: 6,
-    borderColor: "green",
+    borderColor: 'green',
     borderBottomWidth: 1,
     fontSize: 17,
-    fontWeight: "bold",
-    color: "white",
-  },
+    fontWeight: 'bold',
+    color: 'white'
+  }
 });
 ```
 
@@ -466,18 +466,18 @@ import {
   View,
   TouchableOpacity,
   TextInput,
-  ScrollView,
-} from "react-native";
+  ScrollView
+} from 'react-native';
 
 // ...
 
-import TodoList from "./TodoList";
+import TodoList from './TodoList';
 
 // ...
 return (
   <View style={styles.container}>
     {/* ... */}
-    <ScrollView style={{ width: "100%" }}>
+    <ScrollView style={{ width: '100%' }}>
       {todos.map(item => (
         <TodoList text={item.text} key={item.key} />
       ))}
@@ -521,7 +521,7 @@ To make it work, we need to pass both of these functions to `TodoList` component
 
 ```js
 // App.js
-<ScrollView style={{ width: "100%" }}>
+<ScrollView style={{ width: '100%' }}>
   {todos.map(item => (
     <TodoList
       text={item.text}
@@ -537,15 +537,15 @@ To make it work, we need to pass both of these functions to `TodoList` component
 Now open, `TodoList.js` and these new props.
 
 ```js
-import React from "react";
-import { StyleSheet, View, Text } from "react-native";
-import Icon from "react-native-vector-icons/Feather";
+import React from 'react';
+import { StyleSheet, View, Text } from 'react-native';
+import Icon from 'react-native-vector-icons/Feather';
 
 export default function TodoList(props) {
   return (
     <View style={styles.listContainer}>
       <Icon
-        name={props.checked ? "check" : "square"}
+        name={props.checked ? 'check' : 'square'}
         size={30}
         color="black"
         style={{ marginLeft: 15 }}
@@ -559,7 +559,7 @@ export default function TodoList(props) {
         name="trash-2"
         size={30}
         color="red"
-        style={{ marginLeft: "auto" }}
+        style={{ marginLeft: 'auto' }}
         onPress={props.deleteTodo}
       />
     </View>
@@ -568,33 +568,33 @@ export default function TodoList(props) {
 
 const styles = StyleSheet.create({
   listContainer: {
-    marginTop: "5%",
-    flexDirection: "row",
-    borderColor: "#aaaaaa",
+    marginTop: '5%',
+    flexDirection: 'row',
+    borderColor: '#aaaaaa',
     borderBottomWidth: 1.5,
-    width: "100%",
-    alignItems: "stretch",
-    minHeight: 40,
+    width: '100%',
+    alignItems: 'stretch',
+    minHeight: 40
   },
   listItem: {
     paddingBottom: 20,
     paddingLeft: 10,
     marginTop: 6,
-    borderColor: "green",
+    borderColor: 'green',
     borderBottomWidth: 1,
     fontSize: 17,
-    fontWeight: "bold",
-    color: "black",
+    fontWeight: 'bold',
+    color: 'black'
   },
   verticalLine: {
-    borderBottomColor: "green",
+    borderBottomColor: 'green',
     borderBottomWidth: 4,
     marginLeft: 10,
-    width: "100%",
-    position: "absolute",
+    width: '100%',
+    position: 'absolute',
     marginTop: 15,
-    fontWeight: "bold",
-  },
+    fontWeight: 'bold'
+  }
 });
 ```
 

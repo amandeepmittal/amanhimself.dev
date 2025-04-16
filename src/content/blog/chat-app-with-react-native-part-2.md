@@ -1,5 +1,5 @@
 ---
-title: "Chat app with React Native (Part 2) - Firebase Email Authentication with react-native-firebase"
+title: 'Chat app with React Native (Part 2) - Firebase Email Authentication with react-native-firebase'
 author: Aman Mittal
 pubDatetime: 2020-04-16T03:42:51Z
 slug: chat-app-with-react-native-part-2
@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - react-native
-description: ""
+description: ''
 ---
 
 ![cover](https://i.imgur.com/ROYjoYo.jpg)
@@ -114,9 +114,9 @@ One such screen is going to be a home screen where all the chat rooms are going 
 Create a new screen component called `HomeScreen.js` inside `src/screens/` directory with the following code snippet.
 
 ```js
-import React from "react";
-import { View, StyleSheet } from "react-native";
-import { Title } from "react-native-paper";
+import React from 'react';
+import { View, StyleSheet } from 'react-native';
+import { Title } from 'react-native-paper';
 
 export default function HomeScreen() {
   return (
@@ -130,11 +130,11 @@ export default function HomeScreen() {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "#f5f5f5",
+    backgroundColor: '#f5f5f5',
     flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-  },
+    justifyContent: 'center',
+    alignItems: 'center'
+  }
 });
 ```
 
@@ -145,9 +145,9 @@ Create a new stack navigator file called `HomeStack.js` inside `src/navigation.j
 Open this file and add the following code snippet. Nothing new is going in terms of creating a stack navigator as shown below.
 
 ```js
-import React from "react";
-import { createStackNavigator } from "@react-navigation/stack";
-import HomeScreen from "../screens/HomeScreen";
+import React from 'react';
+import { createStackNavigator } from '@react-navigation/stack';
+import HomeScreen from '../screens/HomeScreen';
 
 const Stack = createStackNavigator();
 
@@ -167,8 +167,8 @@ In this section, you are going to create an authentication provider to check whe
 Create a new file called `AuthProvider.js` inside `src/navigation/`. Start by importing the following statements.
 
 ```js
-import React, { createContext, useState } from "react";
-import auth from "@react-native-firebase/auth";
+import React, { createContext, useState } from 'react';
+import auth from '@react-native-firebase/auth';
 ```
 
 Then create an `AuthContext` and make sure to export it since you are going to use it on several different screens.
@@ -210,7 +210,7 @@ export const AuthProvider = ({ children }) => {
           } catch (e) {
             console.error(e);
           }
-        },
+        }
       }}
     >
       {children}
@@ -230,10 +230,10 @@ Now, that the provider is created, but how to use for a set of components in the
 Open `navigation/index.js` file and modify it as follows.
 
 ```js
-import React from "react";
-import { Provider as PaperProvider } from "react-native-paper";
-import { AuthProvider } from "./AuthProvider";
-import Routes from "./Routes";
+import React from 'react';
+import { Provider as PaperProvider } from 'react-native-paper';
+import { AuthProvider } from './AuthProvider';
+import Routes from './Routes';
 
 /**
  * Wrap all providers here
@@ -257,13 +257,13 @@ Remember, from the previous post, we added that comment that to wrap all compone
 To check if the user is logged or not, let us modify the `navigation/Routes.js` file. Using the value of the `user` from the auth provider, you are going to switch between the stack navigators. To start, make sure you imported the following statements.
 
 ```js
-import React, { useContext, useState, useEffect } from "react";
-import { NavigationContainer } from "@react-navigation/native";
-import auth from "@react-native-firebase/auth";
-import AuthStack from "./AuthStack";
-import HomeStack from "./HomeStack";
-import { AuthContext } from "./AuthProvider";
-import Loading from "../components/Loading";
+import React, { useContext, useState, useEffect } from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import auth from '@react-native-firebase/auth';
+import AuthStack from './AuthStack';
+import HomeStack from './HomeStack';
+import { AuthContext } from './AuthProvider';
+import Loading from '../components/Loading';
 ```
 
 From the above snippet, ignore the `Loading` component for now. You are going to create it at the end of this section.
@@ -305,8 +305,8 @@ export default function Routes() {
 Lastly, create a new component file called `Loading.js` inside `src/components/` directory. This component is going to be responsible to display a loading spinner.
 
 ```js
-import React from "react";
-import { View, ActivityIndicator, StyleSheet } from "react-native";
+import React from 'react';
+import { View, ActivityIndicator, StyleSheet } from 'react-native';
 
 export default function Loading() {
   return (
@@ -319,9 +319,9 @@ export default function Loading() {
 const styles = StyleSheet.create({
   loadingContainer: {
     flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-  },
+    alignItems: 'center',
+    justifyContent: 'center'
+  }
 });
 ```
 
@@ -332,9 +332,9 @@ In order for the user to perform auth actions in the app, you have to use the co
 Start by opening `LoginScreen.js`. Import `useContext` from react and `AuthContext` from `AuthProvider`.
 
 ```js
-import React, { useState, useContext } from "react";
+import React, { useState, useContext } from 'react';
 // rest of the import statements remain same
-import { AuthContext } from "../navigation/AuthProvider";
+import { AuthContext } from '../navigation/AuthProvider';
 
 export default function LoginScreen({ navigation }) {
   const { login } = useContext(AuthContext);
@@ -357,9 +357,9 @@ Inside the `LoginScreen` function, make sure to add an `onPress` prop as shown b
 Similarly, you have to modify the `SignupScreen.js` file.
 
 ```js
-import React, { useState, useContext } from "react";
+import React, { useState, useContext } from 'react';
 // rest of the import statements remain same
-import { AuthContext } from "../navigation/AuthProvider";
+import { AuthContext } from '../navigation/AuthProvider';
 
 export default function SignupScreen({ navigation }) {
   const { register } = useContext(AuthContext);
@@ -379,11 +379,11 @@ export default function SignupScreen({ navigation }) {
 Lastly, modify the `HomeScreen` to add a sign out button and when the user is in the logged-in state, display their user `uid` (_the unique identifier in Firebase to differentiate and store different users_).
 
 ```js
-import React, { useContext } from "react";
-import { View, StyleSheet } from "react-native";
-import { Title } from "react-native-paper";
-import { AuthContext } from "../navigation/AuthProvider";
-import FormButton from "../components/FormButton";
+import React, { useContext } from 'react';
+import { View, StyleSheet } from 'react-native';
+import { Title } from 'react-native-paper';
+import { AuthContext } from '../navigation/AuthProvider';
+import FormButton from '../components/FormButton';
 
 export default function HomeScreen() {
   const { user, logout } = useContext(AuthContext);
@@ -404,11 +404,11 @@ export default function HomeScreen() {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "#f5f5f5",
+    backgroundColor: '#f5f5f5',
     flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-  },
+    justifyContent: 'center',
+    alignItems: 'center'
+  }
 });
 ```
 

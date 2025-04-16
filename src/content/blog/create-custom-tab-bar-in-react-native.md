@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - react-native
-description: ""
+description: ''
 ---
 
 [React Native](https://reactnative.dev/) is an amazing tool for creating beautiful and high performing mobile applications that run on both iOS and Android. Developing these apps, you might need navigation to navigate from one screen to another. To implement navigation in a React Native app, [React Navigation](https://reactnavigation.org/docs/getting-started) library does an awesome job of providing various navigation patterns such as stack, tabs, and drawer that can be utilized and customize based on the UI design of the app.
@@ -38,7 +38,7 @@ yarn add @react-navigation/native @react-navigation/bottom-tabs react-native-rea
 Do note that to demonstrate the example described in this article, we are using React Navigation v5 library. After installing these dependencies, please import the Gesture Handler library at the top of the `index.js` file of your React Native app:
 
 ```js
-import "react-native-gesture-handler";
+import 'react-native-gesture-handler';
 ```
 
 Then, for iOS, install the Cocoapods for all these dependencies by navigating inside the `ios` directory in a terminal window and executing the following command. Do note that, if you do not have the Cocoapods installed on your local dev machine, please follow the alternate command as described below:
@@ -117,57 +117,57 @@ Let's create them inside a separate directory called `screens/` and create the f
 
 export const data = [
   {
-    id: "1",
-    title: "Manarola, Italy",
-    description: "The Cliffs of Cinque Terre",
+    id: '1',
+    title: 'Manarola, Italy',
+    description: 'The Cliffs of Cinque Terre',
     image_url:
-      "https://images.unsplash.com/photo-1516483638261-f4dbaf036963?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=633&q=80",
-    iconName: "location-pin",
+      'https://images.unsplash.com/photo-1516483638261-f4dbaf036963?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=633&q=80',
+    iconName: 'location-pin'
   },
 
   {
-    id: "2",
-    title: "Venezia, Italy",
-    description: "Rialto Bridge, Venezia, Italy",
+    id: '2',
+    title: 'Venezia, Italy',
+    description: 'Rialto Bridge, Venezia, Italy',
     image_url:
-      "https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=630&q=80",
-    iconName: "location-pin",
+      'https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=630&q=80',
+    iconName: 'location-pin'
   },
   {
-    id: "3",
-    title: "Prague, Czechia",
-    description: "Tram in Prague",
+    id: '3',
+    title: 'Prague, Czechia',
+    description: 'Tram in Prague',
     image_url:
-      "https://images.unsplash.com/photo-1513805959324-96eb66ca8713?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
-    iconName: "location-pin",
+      'https://images.unsplash.com/photo-1513805959324-96eb66ca8713?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80',
+    iconName: 'location-pin'
   },
   {
-    id: "4",
-    title: "Venezia, Italy",
-    description: "Rialto Bridge, Venezia, Italy",
+    id: '4',
+    title: 'Venezia, Italy',
+    description: 'Rialto Bridge, Venezia, Italy',
     image_url:
-      "https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=630&q=80",
-    iconName: "location-pin",
-  },
+      'https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=630&q=80',
+    iconName: 'location-pin'
+  }
 ];
 ```
 
 In the above code snippet, you can see that `data` is an array that has different objects. Let's create the first tab screen called `Home.js` where this array of mock data will be used. Import the following statements inside it and then define a custom and width and height of the image card. This image card is displayed inside the list view as the item. Using React Native's `Dimensions` API, the width and height of the image are calculated based on the width of the device's screen.
 
 ```js
-import React from "react";
+import React from 'react';
 import {
   View,
   Text,
   StyleSheet,
   Image,
   Dimensions,
-  ScrollView,
-} from "react-native";
+  ScrollView
+} from 'react-native';
 
-import { data } from "./data";
+import { data } from './data';
 
-const { width } = Dimensions.get("screen");
+const { width } = Dimensions.get('screen');
 
 const ITEM_WIDTH = width * 0.9;
 const ITEM_HEIGHT = ITEM_WIDTH * 0.9;
@@ -190,7 +190,7 @@ const Home = () => {
           indicatorStyle="white"
           contentContainerStyle={[
             styles.scrollContentContainer,
-            { paddingBottom: tabBarheight },
+            { paddingBottom: tabBarheight }
           ]}
         >
           {data.map(item => (
@@ -217,32 +217,32 @@ Lastly, the add the styles reference for each component in the above snippet:
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#0f0f0f",
+    backgroundColor: '#0f0f0f'
   },
   contentContainer: {
     marginTop: 50,
-    alignItems: "center",
+    alignItems: 'center',
     paddingHorizontal: 20,
-    paddingBottom: 20,
+    paddingBottom: 20
   },
   title: {
     fontSize: 20,
-    color: "#fff",
+    color: '#fff'
   },
   scrollContainer: {
-    flex: 1,
+    flex: 1
   },
   scrollContentContainer: {
-    alignItems: "center",
+    alignItems: 'center'
   },
   imageContainer: {
-    marginBottom: 14,
+    marginBottom: 14
   },
   imageCard: {
     borderRadius: 14,
     width: ITEM_WIDTH,
-    height: ITEM_HEIGHT,
-  },
+    height: ITEM_HEIGHT
+  }
 });
 ```
 
@@ -251,8 +251,8 @@ The other two tab screens are created inside `Browse.js` and `Library.js` and th
 Inside the file `Browse.js`, add the following code snippet:
 
 ```js
-import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import React from 'react';
+import { View, Text, StyleSheet } from 'react-native';
 
 const Browse = () => {
   return (
@@ -267,17 +267,17 @@ const Browse = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#0f0f0f",
+    backgroundColor: '#0f0f0f'
   },
   contentContainer: {
     marginTop: 50,
-    alignItems: "center",
-    paddingHorizontal: 20,
+    alignItems: 'center',
+    paddingHorizontal: 20
   },
   title: {
     fontSize: 20,
-    color: "#fff",
-  },
+    color: '#fff'
+  }
 });
 
 export default Browse;
@@ -286,8 +286,8 @@ export default Browse;
 Inside the `Library.js` file, add the following snippet:
 
 ```js
-import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import React from 'react';
+import { View, Text, StyleSheet } from 'react-native';
 
 const Library = () => {
   return (
@@ -302,17 +302,17 @@ const Library = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#0f0f0f",
+    backgroundColor: '#0f0f0f'
   },
   contentContainer: {
     marginTop: 50,
-    alignItems: "center",
-    paddingHorizontal: 20,
+    alignItems: 'center',
+    paddingHorizontal: 20
   },
   title: {
     fontSize: 20,
-    color: "#fff",
-  },
+    color: '#fff'
+  }
 });
 
 export default Library;
@@ -330,12 +330,12 @@ Create a new directory called `navigation/` at the root of the React Native proj
 Inside the file `TabNavigator/index.js` import the `createBottomTabNavigator` from `@react-navigation/bottom-tabs` package. Using this, a `Tab` object is initialized. This object allows defining the structure of the routes using `Tab.Navigator` and the define each route using the `Tab.Screen` component.
 
 ```js
-import React from "react";
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import React from 'react';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-import Home from "../../screens/Home";
-import Browse from "../../screens/Browse";
-import Library from "../../screens/Library";
+import Home from '../../screens/Home';
+import Browse from '../../screens/Browse';
+import Library from '../../screens/Library';
 
 const Tab = createBottomTabNavigator();
 
@@ -355,10 +355,10 @@ export default TabNavigator;
 The simple tab bar configuration is done. To see it in action, let's wrap it with the `NavigationContainer` component inside the new file called `navigation/RootNavigator.js`. This component manages the navigation tree. It contains the navigation state prop.
 
 ```js
-import * as React from "react";
-import { NavigationContainer } from "@react-navigation/native";
+import * as React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
 
-import TabNavigator from "./TabNavigator";
+import TabNavigator from './TabNavigator';
 
 const RootNavigator = () => {
   return (
@@ -374,10 +374,10 @@ export default RootNavigator;
 The last step is to import and render the Root Navigator from inside the `App.js` file:
 
 ```js
-import React from "react";
-import { StatusBar } from "react-native";
+import React from 'react';
+import { StatusBar } from 'react-native';
 
-import RootNavigator from "./navigation/RootNavigator";
+import RootNavigator from './navigation/RootNavigator';
 
 const App = () => {
   return (
@@ -401,7 +401,7 @@ To add icons to each tab, first import the `Icon` component from react-native-ve
 
 ```js
 // after other import statements
-import Icon from "react-native-vector-icons/AntDesign";
+import Icon from 'react-native-vector-icons/AntDesign';
 ```
 
 Using the `screenOptions` object on `Tab.Navigator`, the configuration to display icons for each tab is enabled. This object has different methods and properties to enable different configurations. One such method is called `tabBarIcon` that allows us to display a custom icon for each tab. This function returns an `Icon` component that has props like `color` and `size` to apply tint color on the icon for each tab and define a numeric value for the size of the icon. It also has a prop called `name`
@@ -414,14 +414,14 @@ const screenOptions = (route, color) => {
   let iconName;
 
   switch (route.name) {
-    case "Home":
-      iconName = "home";
+    case 'Home':
+      iconName = 'home';
       break;
-    case "Browse":
-      iconName = "appstore-o";
+    case 'Browse':
+      iconName = 'appstore-o';
       break;
-    case "Library":
-      iconName = "folder1";
+    case 'Library':
+      iconName = 'folder1';
       break;
     default:
       break;
@@ -434,7 +434,7 @@ const TabNavigator = () => {
   return (
     <Tab.Navigator
       screenOptions={({ route }) => ({
-        tabBarIcon: ({ color }) => screenOptions(route, color),
+        tabBarIcon: ({ color }) => screenOptions(route, color)
       })}
     >
       {/* rest remains same */}
@@ -477,9 +477,9 @@ To make the tab bar translucent, we are going to use `BlurView` component from [
 Start by adding the following snippet inside `TabNavigator/CustomTabBar.js` file:
 
 ```js
-import React from "react";
-import { BottomTabBar } from "@react-navigation/bottom-tabs";
-import { BlurView } from "@react-native-community/blur";
+import React from 'react';
+import { BottomTabBar } from '@react-navigation/bottom-tabs';
+import { BlurView } from '@react-native-community/blur';
 
 const CustomTabBar = props => {
   return <BottomTabBar {...props} />;
@@ -512,10 +512,10 @@ Here is the final snippet for `CustomTabBar` component:
 ```js
 <BlurView
   style={{
-    position: "absolute",
+    position: 'absolute',
     bottom: 0,
     left: 0,
-    right: 0,
+    right: 0
   }}
   blurType="dark"
   blurAmount={10}

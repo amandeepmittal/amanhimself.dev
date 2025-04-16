@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - vscode
-description: ""
+description: ''
 ---
 
 ![cover image](https://res.cloudinary.com/practicaldev/image/fetch/s--lgaAXnJK--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/r84rtekdnk3qd4r4v31e.png)

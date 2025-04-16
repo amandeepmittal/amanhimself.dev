@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - react-native
-description: ""
+description: ''
 ---
 
 ![cover_image](https://i.imgur.com/qDKlX8L.jpg)
@@ -48,14 +48,14 @@ expo install react-native-safe-area-view react-native-safe-area-context
 To use safe area views, wrap the root of the React Native app with `SafeAreaProvider` from the [react-native-safe-area-context](https://github.com/th3rdwave/react-native-safe-area-context) library. Open `App.js` and modify the it as shown below:
 
 ```js
-import React from "react";
-import { Text, View } from "react-native";
-import { SafeAreaProvider } from "react-native-safe-area-context";
+import React from 'react';
+import { Text, View } from 'react-native';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 export default function App() {
   return (
     <SafeAreaProvider>
-      <View style={{ flex: 1, alignItems: "center" }}>
+      <View style={{ flex: 1, alignItems: 'center' }}>
         <Text>Open up App.js to start working on your app!</Text>
       </View>
     </SafeAreaProvider>
@@ -67,13 +67,13 @@ Next, wrap the contents of the `App` component with `SafeAreaView` from the [rea
 
 ```js
 // ... other import statements
-import SafeAreaView from "react-native-safe-area-view";
+import SafeAreaView from 'react-native-safe-area-view';
 
 export default function App() {
   return (
     <SafeAreaProvider>
-      <SafeAreaView style={{ flex: 1 }} forceInset={{ top: "always" }}>
-        <View style={{ flex: 1, alignItems: "center" }}>
+      <SafeAreaView style={{ flex: 1 }} forceInset={{ top: 'always' }}>
+        <View style={{ flex: 1, alignItems: 'center' }}>
           <Text>Open up App.js to start working on your app!</Text>
         </View>
       </SafeAreaView>
@@ -97,8 +97,8 @@ On iOS, the behavior is as expected:
 The last step in this section is to create a new component file called `AnimatedHeader.js` inside the `components/` directory. For now, it is going to return nothing.
 
 ```js
-import React from "react";
-import { Animated, View } from "react-native";
+import React from 'react';
+import { Animated, View } from 'react-native';
 
 const AnimatedHeader = () => {
   return null;
@@ -111,7 +111,7 @@ Make sure to import it in the `App.js` file:
 
 ```js
 // ... after other import statements
-import AnimatedHeader from "./components/AnimatedHeader";
+import AnimatedHeader from './components/AnimatedHeader';
 ```
 
 ## Creating an animated header component
@@ -119,8 +119,8 @@ import AnimatedHeader from "./components/AnimatedHeader";
 The animation on the position of the scroll on a `ScrollView` component is going to have an `Animated.Value` of `0`. To create an animation, `Animated.Value` is required. In the `App.js` file, import `useRef` from the React library. Then, define a variable called `offset` with a new `Animated.Value`. To use the Animated library from React Native, import it as well.
 
 ```js
-import React, { useRef } from "react";
-import { Text, View, Animated } from "react-native";
+import React, { useRef } from 'react';
+import { Text, View, Animated } from 'react-native';
 // ...other import statements
 
 export default function App() {
@@ -140,10 +140,10 @@ export default function App() {
 
   return (
     <SafeAreaProvider>
-      <SafeAreaView style={{ flex: 1 }} forceInset={{ top: "always" }}>
+      <SafeAreaView style={{ flex: 1 }} forceInset={{ top: 'always' }}>
         {/* Add the following AnimatedHeader */}
         <AnimatedHeader animatedValue={offset} />
-        <View style={{ flex: 1, alignItems: "center" }}>
+        <View style={{ flex: 1, alignItems: 'center' }}>
           <Text>Open up App.js to start working on your app!</Text>
         </View>
       </SafeAreaView>
@@ -169,7 +169,7 @@ First, let's import this hook in the `AnimatedHeader.js` file and then define a 
 
 ```js
 // ... other import statements
-import { useSafeAreaInsets } from "react-native-safe-area-context";
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 const HEADER_HEIGHT = 200;
 
@@ -197,7 +197,7 @@ const AnimatedHeader = ({ animatedValue }) => {
   const headerHeight = animValue.interpolate({
     inputRange: [0, HEADER_HEIGHT + insets.top],
     outputRange: [HEADER_HEIGHT + insets.top, insets.top + 44],
-    extrapolate: "clamp",
+    extrapolate: 'clamp'
   });
 
   // ...
@@ -212,13 +212,13 @@ const AnimatedHeader = ({ animatedValue }) => {
   return (
     <Animated.View
       style={{
-        position: "absolute",
+        position: 'absolute',
         top: 0,
         left: 0,
         right: 0,
         zIndex: 10,
         height: headerHeight,
-        backgroundColor: "lightblue",
+        backgroundColor: 'lightblue'
       }}
     />
   );
@@ -239,64 +239,64 @@ For this example, I've prepared a bare minimum list of book titles in a separate
 const DATA = [
   {
     id: 1,
-    title: "The Hunger Games",
+    title: 'The Hunger Games'
   },
   {
     id: 2,
-    title: "Harry Potter and the Order of the Phoenix",
+    title: 'Harry Potter and the Order of the Phoenix'
   },
   {
     id: 3,
-    title: "To Kill a Mockingbird",
+    title: 'To Kill a Mockingbird'
   },
   {
     id: 4,
-    title: "Pride and Prejudice",
+    title: 'Pride and Prejudice'
   },
   {
     id: 5,
-    title: "Twilight",
+    title: 'Twilight'
   },
   {
     id: 6,
-    title: "The Book Thief",
+    title: 'The Book Thief'
   },
   {
     id: 7,
-    title: "The Chronicles of Narnia",
+    title: 'The Chronicles of Narnia'
   },
   {
     id: 8,
-    title: "Animal Farm",
+    title: 'Animal Farm'
   },
   {
     id: 9,
-    title: "Gone with the Wind",
+    title: 'Gone with the Wind'
   },
   {
     id: 10,
-    title: "The Shadow of the Wind",
+    title: 'The Shadow of the Wind'
   },
   {
     id: 11,
-    title: "The Fault in Our Stars",
+    title: 'The Fault in Our Stars'
   },
   {
     id: 12,
-    title: "The Hitchhiker's Guide to the Galaxy",
+    title: "The Hitchhiker's Guide to the Galaxy"
   },
   {
     id: 13,
-    title: "The Giving Tree",
+    title: 'The Giving Tree'
   },
   {
     id: 14,
-    title: "Wuthering Heights",
+    title: 'Wuthering Heights'
   },
   {
     id: 15,
-    title: "The Da Vinci Code",
-  },
+    title: 'The Da Vinci Code'
+  }
 ];
 
 export default DATA;
@@ -306,9 +306,9 @@ The next step is to import this file in `App.js`. Also, import the `ScrollView` 
 
 ```js
 //...
-import { ScrollView, Text, View, Animated } from "react-native";
+import { ScrollView, Text, View, Animated } from 'react-native';
 
-import DATA from "./data";
+import DATA from './data';
 ```
 
 Next, modify the contents of the `App` component. The important prop to note below in the `ScrollView` component is the `onScroll` prop. Mapping gestures like scrolling directly to an animated value can be done by using `Animated.Event`. This type of event function is passed as the value to the `onScroll` prop.
@@ -323,14 +323,14 @@ export default function App() {
 
   return (
     <SafeAreaProvider>
-      <SafeAreaView style={{ flex: 1 }} forceInset={{ top: "always" }}>
+      <SafeAreaView style={{ flex: 1 }} forceInset={{ top: 'always' }}>
         <AnimatedHeader animatedValue={offset} />
         <ScrollView
-          style={{ flex: 1, backgroundColor: "white" }}
+          style={{ flex: 1, backgroundColor: 'white' }}
           contentContainerStyle={{
-            alignItems: "center",
+            alignItems: 'center',
             paddingTop: 220,
-            paddingHorizontal: 20,
+            paddingHorizontal: 20
           }}
           showsVerticalScrollIndicator={false}
           scrollEventThrottle={16}
@@ -343,10 +343,10 @@ export default function App() {
             <View
               key={item.id}
               style={{
-                marginBottom: 20,
+                marginBottom: 20
               }}
             >
-              <Text style={{ color: "#101010", fontSize: 32 }}>
+              <Text style={{ color: '#101010', fontSize: 32 }}>
                 {item.title}
               </Text>
             </View>

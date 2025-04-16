@@ -1,5 +1,5 @@
 ---
-title: "How to use ES6 import syntax in Node.js"
+title: 'How to use ES6 import syntax in Node.js'
 author: Aman Mittal
 pubDatetime: 2021-04-07T03:42:51Z
 slug: how-to-use-es6-import-syntax-in-node
@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - nodejs
-description: ""
+description: ''
 ---
 
 ![cover_image](https://i.imgur.com/mztPVQI.png)
@@ -23,13 +23,13 @@ A module is a JavaScript file that exports one or more values. The exported valu
 An ES6 import syntax allows importing modules exported from a different JavaScript file. It is a common pattern to use modules across React and React Native applications. The syntax is composed of the following ES module standard:
 
 ```js
-import XXX from "xxx";
+import XXX from 'xxx';
 ```
 
 An ES module is the ECMAScript standard of working with modules. Node.js uses the CommonJS standard to import modules. The syntax for this type of standard can be described as:
 
 ```js
-const XXX = require("xxx");
+const XXX = require('xxx');
 ```
 
 Node js doesn’t support ES6 import directly. Try writing the `import` syntax in a JS file:
@@ -37,7 +37,7 @@ Node js doesn’t support ES6 import directly. Try writing the `import` syntax i
 ```js
 // index.js
 
-import { ApolloServer, gql } from "apollo-server";
+import { ApolloServer, gql } from 'apollo-server';
 ```
 
 Run the Node.js server either by using `npm start` or `npm run dev` and you will encounter the following error:

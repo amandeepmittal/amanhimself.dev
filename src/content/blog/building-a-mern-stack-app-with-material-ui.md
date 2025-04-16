@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - nodejs
-description: ""
+description: ''
 ---
 
 ![cover](https://i.imgur.com/YHJ7UNq.png)
@@ -68,8 +68,8 @@ The next step is to define the configuration you will need to proceed with serve
 ```js
 const config = {
   port: process.env.PORT || 4000,
-  jwtSecret: process.env.JWT_SECRET || "mkT23j#u!45",
-  mongoURI: process.env.MONGODB_URI || "mongodb://localhost/mern-auth",
+  jwtSecret: process.env.JWT_SECRET || 'mkT23j#u!45',
+  mongoURI: process.env.MONGODB_URI || 'mongodb://localhost/mern-auth'
 };
 
 export default config;
@@ -90,20 +90,20 @@ Make sure add the `dev` script inside `package.json`.
 Inside `config` directory, create a new file called `dbConnection.js`. Let us start by defining the MongoDB connection.
 
 ```js
-import mongoose from "mongoose";
-import config from "./index";
+import mongoose from 'mongoose';
+import config from './index';
 
 const URI = config.mongoURI;
 mongoose.connect(URI);
 
 // When successfully connected
-mongoose.connection.on("connected", () => {
-  console.log("Established Mongoose Default Connection");
+mongoose.connection.on('connected', () => {
+  console.log('Established Mongoose Default Connection');
 });
 
 // When connection throws an error
-mongoose.connection.on("error", err => {
-  console.log("Mongoose Default Connection Error : " + err);
+mongoose.connection.on('error', err => {
+  console.log('Mongoose Default Connection Error : ' + err);
 });
 ```
 
@@ -114,12 +114,12 @@ Although MongoDB is a schema-less database, Mongoose helps our application under
 Let’s create a small server in the `index.js` file of the root of our web app. Here it is in action.
 
 ```js
-import express from "express";
-import cookieParser from "cookie-parser";
-import config from "./server/config";
+import express from 'express';
+import cookieParser from 'cookie-parser';
+import config from './server/config';
 
 // DB connection
-require("./server/config/dbConnection");
+require('./server/config/dbConnection');
 
 const app = express();
 
@@ -130,8 +130,8 @@ app.use(cookieParser());
 
 // Error handling middleware
 app.use((err, req, res, next) => {
-  if (err.name === "UnauthorizedError") {
-    res.status(401).json({ error: err.name + ":" + err.message });
+  if (err.name === 'UnauthorizedError') {
+    res.status(401).json({ error: err.name + ':' + err.message });
   }
 });
 
@@ -149,34 +149,34 @@ To demonstrate, I am going to create a user data model with properties to save t
 We will start by importing the necessary dependencies at the top of our file and then create a new Mongoose Schema, `userSchema` which is an object with properties. Typically, NoSQL databases are super flexible, in that they allow us to put whatever we want in them without enforcing any specific kind of structure. However, Mongoose adds a layer of structure on top of the typical MongoDB way of doing things. This helps us perform additional validation to ensure that our users are not submitting any random data to our database without us having to write tons of boilerplate code ourselves.
 
 ```js
-import mongoose from "mongoose";
-import crypto from "crypto";
+import mongoose from 'mongoose';
+import crypto from 'crypto';
 const Schema = mongoose.Schema;
 
 const userSchema = new Schema({
   name: {
     type: String,
     trim: true,
-    required: "User Name is required",
+    required: 'User Name is required'
   },
   email: {
     type: String,
     trim: true,
-    unique: "Email already exists",
-    match: [/.+\@.+\..+/, "Please fill a valid email address"],
-    required: "Email is required",
+    unique: 'Email already exists',
+    match: [/.+\@.+\..+/, 'Please fill a valid email address'],
+    required: 'Email is required'
   },
   hashedPassword: {
     type: String,
-    required: "Password is required",
+    required: 'Password is required'
   },
   salt: {
-    type: String,
-  },
+    type: String
+  }
 });
 
 userSchema
-  .virtual("password")
+  .virtual('password')
   .set(function (password) {
     this._password = password;
     this.salt = this.makeSalt();
@@ -191,31 +191,31 @@ userSchema.methods = {
     return this.encryptedPassword(plainText) === this.hashedPassword;
   },
   encryptedPassword: function (password) {
-    if (!password) return "";
+    if (!password) return '';
     try {
       return crypto
-        .createHmac("sha1", this.salt)
+        .createHmac('sha1', this.salt)
         .update(password)
-        .digest("hex");
+        .digest('hex');
     } catch (err) {
-      return "";
+      return '';
     }
   },
   makeSalt: function () {
-    return Math.round(new Date().valueOf() * Math.random()) + "";
-  },
+    return Math.round(new Date().valueOf() * Math.random()) + '';
+  }
 };
 
-userSchema.path("hashedPassword").validate(function (v) {
+userSchema.path('hashedPassword').validate(function (v) {
   if (this.hashedPassword && this._password.length < 6) {
-    this.invalidate("password", "Password must be at least 6 characters long.");
+    this.invalidate('password', 'Password must be at least 6 characters long.');
   }
   if (this.isNew && !this._password) {
-    this.invalidate("password", "Password is required.");
+    this.invalidate('password', 'Password is required.');
   }
 }, null);
 
-export default mongoose.model("User", userSchema);
+export default mongoose.model('User', userSchema);
 ```
 
 We now use the `userSchema` object to add a virtual`password` field. Note that whatever property is described inside the `userSchema` object is going to be saved in the MongoDB document. We are not saving the password directly. We are creating a virtual field first to generate an encrypted hash of the password and then save it in our database.
@@ -229,19 +229,19 @@ Using the Nodejs `crypto` module we are creating a hash that updates the virtual
 Now, let’s write the business logic behind the routes to create for the React end to interact with the server. Create a new file `server/controllers/user.js` and write the following code. Import the user model first that from the previous section.
 
 ```js
-import User from "../models/user";
-import errorHandler from "../helpers/dbErrorHandler";
+import User from '../models/user';
+import errorHandler from '../helpers/dbErrorHandler';
 
 export const registerUser = (req, res, next) => {
   const user = new User(req.body);
   user.save((err, result) => {
     if (err) {
       return res.status(400).json({
-        error: errorHandler.getErrorMessage(err),
+        error: errorHandler.getErrorMessage(err)
       });
     }
     res.status(200).json({
-      message: "New user registered successfully!",
+      message: 'New user registered successfully!'
     });
   });
 };
@@ -250,7 +250,7 @@ export const findUserById = (req, res, next, id) => {
   User.findById(id).exec((err, user) => {
     if (err || !user) {
       return res.status(400).json({
-        error: "No user found with that credentials!",
+        error: 'No user found with that credentials!'
       });
     }
     req.profile = user;
@@ -270,7 +270,7 @@ export const deleteUser = (req, res, next) => {
   user.remove((err, deletedUser) => {
     if (err) {
       return res.status(400).json({
-        error: errorHandler.getErrorMessage(err),
+        error: errorHandler.getErrorMessage(err)
       });
     }
     deletedUser.hashedPassword = undefined;
@@ -291,21 +291,21 @@ The next function we are exporting is `findUserById`. It queries the database to
 Now let use the controller logic and add it to corresponding routes inside `server/routes/user.js`.
 
 ```js
-import express from "express";
+import express from 'express';
 import {
   registerUser,
   findUserById,
   findUserProfile,
-  deleteUser,
-} from "../controllers/user";
+  deleteUser
+} from '../controllers/user';
 
 const router = express.Router();
 
-router.route("/api/users").post(registerUser);
+router.route('/api/users').post(registerUser);
 
-router.route("/api/users/:userId").get(findUserProfile).delete(deleteUser);
+router.route('/api/users/:userId').get(findUserProfile).delete(deleteUser);
 
-router.param("userId", findUserById);
+router.param('userId', findUserById);
 
 export default router;
 ```
@@ -317,14 +317,14 @@ The controller functions are first imported and then used with their correspondi
 To restrict access to user operations — such as the logged in user can only access their profile and no one else’s — we are going to implement a JWT authentication to protect the routes. The two routes required to sign in and sign out the user from our application are going to be inside a separate file `server/routes/auth.js`.
 
 ```js
-import express from "express";
-import { signin, signout } from "../controllers/auth";
+import express from 'express';
+import { signin, signout } from '../controllers/auth';
 
 const router = express.Router();
 
-router.route("/auth/signin").post(signin);
+router.route('/auth/signin').post(signin);
 
-router.route("/auth/signout").get(signout);
+router.route('/auth/signout').get(signout);
 
 export default router;
 ```
@@ -332,59 +332,59 @@ export default router;
 The first route uses an HTTP `POST` request to authenticate a user with email and password credentials. The second route is used when the user hits the `signout` button (which we will implement in our front-end). The logic behind how these two routes work has to be defined in another file. Create a new file `server/controllers/auth.js` with the following code.
 
 ```js
-import User from "../models/user";
-import jwt from "jsonwebtoken";
-import expressJwt from "express-jwt";
-import config from "../config";
+import User from '../models/user';
+import jwt from 'jsonwebtoken';
+import expressJwt from 'express-jwt';
+import config from '../config';
 
 export const signin = (req, res) => {
   User.findOne({ email: req.body.email }, (err, user) => {
     if (err || !user) {
       return res.status(401).json({
-        error: "User not found",
+        error: 'User not found'
       });
     }
     if (!user.authenticate(req.body.password)) {
       return res.status(401).json({
-        error: "Wrong Email or Password!",
+        error: 'Wrong Email or Password!'
       });
     }
 
     const token = jwt.sign(
       {
-        _id: user._id,
+        _id: user._id
       },
       config.jwtSecret
     );
 
-    res.cookie("t", token, {
-      expire: new Date() + 9999,
+    res.cookie('t', token, {
+      expire: new Date() + 9999
     });
 
     return res.json({
       token,
-      user: { _id: user._id, name: user.name, email: user.email },
+      user: { _id: user._id, name: user.name, email: user.email }
     });
   });
 };
 
 export const signout = (req, res) => {
-  res.clearCookie("t");
+  res.clearCookie('t');
   return res.status(200).json({
-    message: "Sign out successful!",
+    message: 'Sign out successful!'
   });
 };
 
 export const requireSignin = expressJwt({
   secret: config.jwtSecret,
-  userProperty: "auth",
+  userProperty: 'auth'
 });
 
 export const hasAuthorization = (req, res) => {
   const authorized = req.profile && req.auth && req.profile._id == req.auth._id;
   if (!authorized) {
     return res.status(403).json({
-      error: "User is not authorized!",
+      error: 'User is not authorized!'
     });
   }
 };
@@ -412,27 +412,27 @@ The `signout` function above clears the cookie containing the signed JWT token. 
 Now let us use these methods to protect user routes. Open `server/routes/user.js`.
 
 ```js
-import express from "express";
+import express from 'express';
 import {
   registerUser,
   findUserById,
   findUserProfile,
-  deleteUser,
-} from "../controllers/user";
+  deleteUser
+} from '../controllers/user';
 
 // import them to protect routes
-import { requireSignin, hasAuthorization } from "../controllers/auth";
+import { requireSignin, hasAuthorization } from '../controllers/auth';
 
 const router = express.Router();
 
-router.route("/api/users").post(registerUser);
+router.route('/api/users').post(registerUser);
 
 router
-  .route("/api/users/:userId")
+  .route('/api/users/:userId')
   .get(requireSignin, findUserProfile)
   .delete(requireSignin, hasAuthorization, deleteUser);
 
-router.param("userId", findUserById);
+router.param('userId', findUserById);
 
 export default router;
 ```
@@ -442,15 +442,15 @@ export default router;
 With the routing logic set up, we can now complete the server by adding our routes to `index.js` file.
 
 ```js
-import express from "express";
-import cookieParser from "cookie-parser";
-import config from "./server/config";
+import express from 'express';
+import cookieParser from 'cookie-parser';
+import config from './server/config';
 // ADD these
-import userRoutes from "./server/routes/user";
-import authRoutes from "./server/routes/auth";
+import userRoutes from './server/routes/user';
+import authRoutes from './server/routes/auth';
 
 // DB connection
-require("./server/config/dbConnection");
+require('./server/config/dbConnection');
 
 const app = express();
 
@@ -460,12 +460,12 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
 // ADD routes
-app.use("/", userRoutes);
-app.use("/", authRoutes);
+app.use('/', userRoutes);
+app.use('/', authRoutes);
 
 app.use((err, req, res, next) => {
-  if (err.name === "UnauthorizedError") {
-    res.status(401).json({ error: err.name + ":" + err.message });
+  if (err.name === 'UnauthorizedError') {
+    res.status(401).json({ error: err.name + ':' + err.message });
   }
 });
 
@@ -531,30 +531,30 @@ To see if everything installed correctly and is working, run the client project 
 Now let’s build the first component of our application. Create a new file inside `src/components/Home.js` and put the following content.
 
 ```js
-import React, { Component } from "react";
-import { withStyles } from "@material-ui/core/styles";
-import Card from "@material-ui/core/Card";
-import CardContent from "@material-ui/core/CardContent";
-import CardMedia from "@material-ui/core/CardMedia";
-import Typography from "@material-ui/core/Typography";
-import logo from "../logo.svg";
+import React, { Component } from 'react';
+import { withStyles } from '@material-ui/core/styles';
+import Card from '@material-ui/core/Card';
+import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
+import Typography from '@material-ui/core/Typography';
+import logo from '../logo.svg';
 
 const styles = theme => ({
   card: {
     maxWidth: 700,
-    margin: "auto",
-    marginTop: theme.spacing.unit * 5,
+    margin: 'auto',
+    marginTop: theme.spacing.unit * 5
   },
   title: {
     padding: `${theme.spacing.unit * 3}px ${theme.spacing.unit * 2.5}px ${
       theme.spacing.unit * 2
     }px`,
     color: theme.palette.text.secondary,
-    fontSize: 24,
+    fontSize: 24
   },
   media: {
-    minHeight: 450,
-  },
+    minHeight: 450
+  }
 });
 
 class Home extends Component {
@@ -591,32 +591,32 @@ The first component we are importing from `@material-ui` in this file is `withSt
 Now open up `App.js` and add the following content.
 
 ```js
-import React, { Component } from "react";
-import MuiThemeProvider from "@material-ui/core/styles/MuiThemeProvider";
-import { createMuiTheme } from "@material-ui/core/styles";
-import green from "@material-ui/core/colors/green";
-import red from "@material-ui/core/colors/red";
+import React, { Component } from 'react';
+import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
+import { createMuiTheme } from '@material-ui/core/styles';
+import green from '@material-ui/core/colors/green';
+import red from '@material-ui/core/colors/red';
 
-import Home from "./components/Home";
+import Home from './components/Home';
 
 const theme = createMuiTheme({
   palette: {
     primary: {
-      light: "#C8E6C9",
-      main: "#4CAF50",
-      dark: "#2E7D32",
-      contrastText: "#fff",
+      light: '#C8E6C9',
+      main: '#4CAF50',
+      dark: '#2E7D32',
+      contrastText: '#fff'
     },
     secondary: {
-      light: "#EF9A9A",
-      main: "#F44336",
-      dark: "#C62828",
-      contrastText: "#000",
+      light: '#EF9A9A',
+      main: '#F44336',
+      dark: '#C62828',
+      contrastText: '#000'
     },
-    openTitle: green["400"],
-    protectTitle: red["400"],
-    type: "dark",
-  },
+    openTitle: green['400'],
+    protectTitle: red['400'],
+    type: 'dark'
+  }
 });
 
 class App extends Component {
@@ -649,10 +649,10 @@ yarn add react-router react-router-dom
 `react-router` library is a collection of navigational components. To get started, create a new file inside `src` folder called `Routes.js`.
 
 ```js
-import React, { Component } from "react";
-import { Route, Switch } from "react-router-dom";
+import React, { Component } from 'react';
+import { Route, Switch } from 'react-router-dom';
 
-import Home from "./components/Home";
+import Home from './components/Home';
 
 class Routes extends Component {
   render() {
@@ -670,33 +670,33 @@ export default Routes;
 The `Route` component is the main building block of React Router. Anywhere that you want to only render content based on the location’s pathname, you should use a `Route` element. `Switch` is used to group different `Route` components. The route for the homepage, our `Home` component does include an `exact` prop. This is used to state that route should only match when the pathname matches the route’s path exactly. To use the newly created Routes, we have to make some changes to `App.js` to make it work.
 
 ```js
-import React, { Component } from "react";
-import MuiThemeProvider from "@material-ui/core/styles/MuiThemeProvider";
-import { createMuiTheme } from "@material-ui/core/styles";
-import green from "@material-ui/core/colors/green";
-import red from "@material-ui/core/colors/red";
-import { BrowserRouter } from "react-router-dom";
+import React, { Component } from 'react';
+import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
+import { createMuiTheme } from '@material-ui/core/styles';
+import green from '@material-ui/core/colors/green';
+import red from '@material-ui/core/colors/red';
+import { BrowserRouter } from 'react-router-dom';
 
-import Routes from "./Routes";
+import Routes from './Routes';
 
 const theme = createMuiTheme({
   palette: {
     primary: {
-      light: "#C8E6C9",
-      main: "#4CAF50",
-      dark: "#2E7D32",
-      contrastText: "#fff",
+      light: '#C8E6C9',
+      main: '#4CAF50',
+      dark: '#2E7D32',
+      contrastText: '#fff'
     },
     secondary: {
-      light: "#EF9A9A",
-      main: "#F44336",
-      dark: "#C62828",
-      contrastText: "#000",
+      light: '#EF9A9A',
+      main: '#F44336',
+      dark: '#C62828',
+      contrastText: '#000'
     },
-    openTitle: green["400"],
-    protectTitle: red["400"],
-    type: "dark",
-  },
+    openTitle: green['400'],
+    protectTitle: red['400'],
+    type: 'dark'
+  }
 });
 
 class App extends Component {
@@ -730,13 +730,13 @@ Next, I am going to add methods to be used in different components that will han
 // api-user.js
 
 export const registerUser = user => {
-  return fetch("/api/users/", {
-    method: "POST",
+  return fetch('/api/users/', {
+    method: 'POST',
     headers: {
-      Accept: "application/json",
-      "Content-Type": "application/json",
+      Accept: 'application/json',
+      'Content-Type': 'application/json'
     },
-    body: JSON.stringify(user),
+    body: JSON.stringify(user)
   })
     .then(response => {
       return response.json();
@@ -745,13 +745,13 @@ export const registerUser = user => {
 };
 
 export const findUserProfile = (params, credentials) => {
-  return fetch("/api/users/" + params.userId, {
-    method: "GET",
+  return fetch('/api/users/' + params.userId, {
+    method: 'GET',
     headers: {
-      Accept: "application/json",
-      "Content-Type": "application/json",
-      Authorization: "Bearer " + credentials.t,
-    },
+      Accept: 'application/json',
+      'Content-Type': 'application/json',
+      Authorization: 'Bearer ' + credentials.t
+    }
   })
     .then(response => {
       return response.json();
@@ -760,13 +760,13 @@ export const findUserProfile = (params, credentials) => {
 };
 
 export const deleteUser = (params, credentials) => {
-  return fetch("/api/users/" + params.userId, {
-    method: "DELETE",
+  return fetch('/api/users/' + params.userId, {
+    method: 'DELETE',
     headers: {
-      Accept: "application/json",
-      "Content-Type": "application/json",
-      Authorization: "Bearer " + credentials.t,
-    },
+      Accept: 'application/json',
+      'Content-Type': 'application/json',
+      Authorization: 'Bearer ' + credentials.t
+    }
   })
     .then(response => {
       return response.json();
@@ -780,14 +780,14 @@ In `api-auth.js`, add the following.
 ```js
 // api-auth.js
 export const signin = user => {
-  return fetch("/auth/signin/", {
-    method: "POST",
+  return fetch('/auth/signin/', {
+    method: 'POST',
     headers: {
-      Accept: "application/json",
-      "Content-Type": "application/json",
+      Accept: 'application/json',
+      'Content-Type': 'application/json'
     },
-    credentials: "include",
-    body: JSON.stringify(user),
+    credentials: 'include',
+    body: JSON.stringify(user)
   })
     .then(response => {
       return response.json();
@@ -796,8 +796,8 @@ export const signin = user => {
 };
 
 export const signout = () => {
-  return fetch("/auth/signout/", {
-    method: "GET",
+  return fetch('/auth/signout/', {
+    method: 'GET'
   })
     .then(response => {
       return response.json();
@@ -817,29 +817,29 @@ One by one, I am going to create new files so please follow closely.
 Create a new directory inside `components` and call it `auth`. Then, create a new file `auth-helper.js`.
 
 ```js
-import { signout } from "../../utils/api-auth.js";
+import { signout } from '../../utils/api-auth.js';
 
 const auth = {
   isAuthenticated() {
-    if (typeof window == "undefined") return false;
+    if (typeof window == 'undefined') return false;
 
-    if (sessionStorage.getItem("jwt"))
-      return JSON.parse(sessionStorage.getItem("jwt"));
+    if (sessionStorage.getItem('jwt'))
+      return JSON.parse(sessionStorage.getItem('jwt'));
     else return false;
   },
   authenticate(jwt, cb) {
-    if (typeof window !== "undefined")
-      sessionStorage.setItem("jwt", JSON.stringify(jwt));
+    if (typeof window !== 'undefined')
+      sessionStorage.setItem('jwt', JSON.stringify(jwt));
     cb();
   },
   signout(cb) {
-    if (typeof window !== "undefined") sessionStorage.removeItem("jwt");
+    if (typeof window !== 'undefined') sessionStorage.removeItem('jwt');
     cb();
     //optional
     signout().then(data => {
-      document.cookie = "t=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+      document.cookie = 't=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
     });
-  },
+  }
 };
 
 export default auth;
@@ -848,9 +848,9 @@ export default auth;
 These functions will help us manage the state of authentication in the browser. Using these methods our client side app will be able to check whether the user has logged in or not. To protect the routes, such as a user’s profile, from un-authorized access, we have to define a new component inside `PrivateRoute.js` and make use of the methods above.
 
 ```js
-import React, { Component } from "react";
-import { Route, Redirect } from "react-router-dom";
-import auth from "./auth-helper";
+import React, { Component } from 'react';
+import { Route, Redirect } from 'react-router-dom';
+import auth from './auth-helper';
 
 const PrivateRoute = ({ component: Component, ...rest }) => (
   <Route
@@ -861,8 +861,8 @@ const PrivateRoute = ({ component: Component, ...rest }) => (
       ) : (
         <Redirect
           to={{
-            pathname: "/signin",
-            state: { from: props.location },
+            pathname: '/signin',
+            state: { from: props.location }
           }}
         />
       )
@@ -876,57 +876,57 @@ export default PrivateRoute;
 We are going to use this component as an auth flow in the `Routes.js` we have defined. Components that rendered via this route component will only load when the user is authenticated. Our last component related to user authentication is to be defined inside `Signin.js`.
 
 ```js
-import React, { Component } from "react";
-import Card from "@material-ui/core/Card";
-import CardContent from "@material-ui/core/CardContent";
-import CardMedia from "@material-ui/core/CardMedia";
-import Button from "@material-ui/core/Button";
-import TextField from "@material-ui/core/TextField";
-import Typography from "@material-ui/core/Typography";
-import Icon from "@material-ui/core/Icon";
-import { withStyles } from "@material-ui/core/styles";
-import auth from "./auth-helper";
-import { Redirect } from "react-router-dom";
-import { signin } from "../../utils/api-auth.js";
+import React, { Component } from 'react';
+import Card from '@material-ui/core/Card';
+import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
+import Button from '@material-ui/core/Button';
+import TextField from '@material-ui/core/TextField';
+import Typography from '@material-ui/core/Typography';
+import Icon from '@material-ui/core/Icon';
+import { withStyles } from '@material-ui/core/styles';
+import auth from './auth-helper';
+import { Redirect } from 'react-router-dom';
+import { signin } from '../../utils/api-auth.js';
 
 const styles = theme => ({
   card: {
     maxWidth: 600,
-    margin: "auto",
-    textAlign: "center",
+    margin: 'auto',
+    textAlign: 'center',
     marginTop: theme.spacing.unit * 5,
-    paddingBottom: theme.spacing.unit * 2,
+    paddingBottom: theme.spacing.unit * 2
   },
   error: {
-    verticalAlign: "middle",
+    verticalAlign: 'middle'
   },
   title: {
     marginTop: theme.spacing.unit * 2,
-    color: theme.palette.openTitle,
+    color: theme.palette.openTitle
   },
   textField: {
     marginLeft: theme.spacing.unit,
     marginRight: theme.spacing.unit,
-    width: 300,
+    width: 300
   },
   submit: {
-    margin: "auto",
-    marginBottom: theme.spacing.unit * 2,
-  },
+    margin: 'auto',
+    marginBottom: theme.spacing.unit * 2
+  }
 });
 
 class Signin extends Component {
   state = {
-    email: "",
-    password: "",
-    error: "",
-    redirectToReferrer: false,
+    email: '',
+    password: '',
+    error: '',
+    redirectToReferrer: false
   };
 
   clickSubmit = () => {
     const user = {
       email: this.state.email || undefined,
-      password: this.state.password || undefined,
+      password: this.state.password || undefined
     };
 
     signin(user).then(data => {
@@ -948,8 +948,8 @@ class Signin extends Component {
     const { classes } = this.props;
     const { from } = this.props.location.state || {
       from: {
-        pathname: "/",
-      },
+        pathname: '/'
+      }
     };
     const { redirectToReferrer } = this.state;
     if (redirectToReferrer) {
@@ -968,7 +968,7 @@ class Signin extends Component {
             label="Email"
             className={classes.textField}
             value={this.state.email}
-            onChange={this.handleChange("email")}
+            onChange={this.handleChange('email')}
             margin="normal"
           />
           <br />
@@ -978,10 +978,10 @@ class Signin extends Component {
             label="Password"
             className={classes.textField}
             value={this.state.password}
-            onChange={this.handleChange("password")}
+            onChange={this.handleChange('password')}
             margin="normal"
           />
-          <br />{" "}
+          <br />{' '}
           {this.state.error && (
             <Typography component="p" color="error">
               <Icon color="error" className={classes.error}>
@@ -1016,57 +1016,57 @@ This is a form component that contains `email` and `password` field (\_as we def
 Similarly to our auth routes, we are going to separate our user components inside `components/user/` folder. First, we need a React component to register a new user. Create a file called `Signup.js`.
 
 ```js
-import React, { Component } from "react";
-import Card from "@material-ui/core/Card";
-import CardContent from "@material-ui/core/CardContent";
-import CardActions from "@material-ui/core/CardActions";
-import Button from "@material-ui/core/Button";
-import TextField from "@material-ui/core/TextField";
-import Typography from "@material-ui/core/Typography";
-import Icon from "@material-ui/core/Icon";
-import { withStyles } from "@material-ui/core/styles";
-import DialogTitle from "@material-ui/core/DialogTitle";
-import DialogActions from "@material-ui/core/DialogActions";
-import DialogContentText from "@material-ui/core/DialogContentText";
-import DialogContent from "@material-ui/core/DialogContent";
-import Dialog from "@material-ui/core/Dialog";
-import { Link } from "react-router-dom";
+import React, { Component } from 'react';
+import Card from '@material-ui/core/Card';
+import CardContent from '@material-ui/core/CardContent';
+import CardActions from '@material-ui/core/CardActions';
+import Button from '@material-ui/core/Button';
+import TextField from '@material-ui/core/TextField';
+import Typography from '@material-ui/core/Typography';
+import Icon from '@material-ui/core/Icon';
+import { withStyles } from '@material-ui/core/styles';
+import DialogTitle from '@material-ui/core/DialogTitle';
+import DialogActions from '@material-ui/core/DialogActions';
+import DialogContentText from '@material-ui/core/DialogContentText';
+import DialogContent from '@material-ui/core/DialogContent';
+import Dialog from '@material-ui/core/Dialog';
+import { Link } from 'react-router-dom';
 
-import { registerUser } from "../../utils/api-user.js";
+import { registerUser } from '../../utils/api-user.js';
 
 const styles = theme => ({
   card: {
     maxWidth: 600,
-    margin: "auto",
-    textAlign: "center",
+    margin: 'auto',
+    textAlign: 'center',
     marginTop: theme.spacing.unit * 5,
-    paddingBottom: theme.spacing.unit * 2,
+    paddingBottom: theme.spacing.unit * 2
   },
   error: {
-    verticalAlign: "middle",
+    verticalAlign: 'middle'
   },
   title: {
     marginTop: theme.spacing.unit * 2,
-    color: theme.palette.openTitle,
+    color: theme.palette.openTitle
   },
   textField: {
     marginLeft: theme.spacing.unit,
     marginRight: theme.spacing.unit,
-    width: 300,
+    width: 300
   },
   submit: {
-    margin: "auto",
-    marginBottom: theme.spacing.unit * 2,
-  },
+    margin: 'auto',
+    marginBottom: theme.spacing.unit * 2
+  }
 });
 
 class Signup extends Component {
   state = {
-    name: "",
-    password: "",
-    email: "",
+    name: '',
+    password: '',
+    email: '',
     open: false,
-    error: "",
+    error: ''
   };
 
   handleChange = name => event => {
@@ -1077,13 +1077,13 @@ class Signup extends Component {
     const user = {
       name: this.state.name || undefined,
       email: this.state.email || undefined,
-      password: this.state.password || undefined,
+      password: this.state.password || undefined
     };
     registerUser(user).then(data => {
       if (data.error) {
         this.setState({ error: data.error });
       } else {
-        this.setState({ error: "", open: true });
+        this.setState({ error: '', open: true });
       }
     });
   };
@@ -1106,7 +1106,7 @@ class Signup extends Component {
               label="Name"
               className={classes.textField}
               value={this.state.name}
-              onChange={this.handleChange("name")}
+              onChange={this.handleChange('name')}
               margin="normal"
             />
             <br />
@@ -1116,7 +1116,7 @@ class Signup extends Component {
               label="Email"
               className={classes.textField}
               value={this.state.email}
-              onChange={this.handleChange("email")}
+              onChange={this.handleChange('email')}
               margin="normal"
             />
             <br />
@@ -1126,10 +1126,10 @@ class Signup extends Component {
               label="Password"
               className={classes.textField}
               value={this.state.password}
-              onChange={this.handleChange("password")}
+              onChange={this.handleChange('password')}
               margin="normal"
             />
-            <br />{" "}
+            <br />{' '}
             {this.state.error && (
               <Typography component="p" color="error">
                 <Icon color="error" className={classes.error}>
@@ -1182,42 +1182,42 @@ We are also defining two handler functions. `handleChange` changes the new value
 Create a new file called `Profile.js`.
 
 ```js
-import React, { Component } from "react";
-import { withStyles } from "@material-ui/core/styles";
-import Paper from "@material-ui/core/Paper";
-import ListItem from "@material-ui/core/ListItem";
-import ListItemAvatar from "@material-ui/core/ListItemAvatar";
-import ListItemText from "@material-ui/core/ListItemText";
-import ListItemSecondaryAction from "@material-ui/core/ListItemSecondaryAction";
-import Avatar from "@material-ui/core/Avatar";
-import Typography from "@material-ui/core/Typography";
-import Person from "@material-ui/icons/Person";
-import Divider from "@material-ui/core/Divider";
-import auth from "../auth/auth-helper";
-import { findUserProfile } from "../../utils/api-user.js";
-import { Redirect, Link } from "react-router-dom";
+import React, { Component } from 'react';
+import { withStyles } from '@material-ui/core/styles';
+import Paper from '@material-ui/core/Paper';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemAvatar from '@material-ui/core/ListItemAvatar';
+import ListItemText from '@material-ui/core/ListItemText';
+import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
+import Avatar from '@material-ui/core/Avatar';
+import Typography from '@material-ui/core/Typography';
+import Person from '@material-ui/icons/Person';
+import Divider from '@material-ui/core/Divider';
+import auth from '../auth/auth-helper';
+import { findUserProfile } from '../../utils/api-user.js';
+import { Redirect, Link } from 'react-router-dom';
 
-import DeleteUser from "./DeleteUser";
+import DeleteUser from './DeleteUser';
 
 const styles = theme => ({
   root: theme.mixins.gutters({
     maxWidth: 600,
-    margin: "auto",
+    margin: 'auto',
     padding: theme.spacing.unit * 3,
-    marginTop: theme.spacing.unit * 5,
+    marginTop: theme.spacing.unit * 5
   }),
   title: {
     margin: `${theme.spacing.unit * 3}px 0 ${theme.spacing.unit * 2}px`,
-    color: theme.palette.protectedTitle,
-  },
+    color: theme.palette.protectedTitle
+  }
 });
 
 class Profile extends Component {
   constructor({ match }) {
     super();
     this.state = {
-      user: "",
-      redirectToSignin: false,
+      user: '',
+      redirectToSignin: false
     };
     this.match = match;
   }
@@ -1225,7 +1225,7 @@ class Profile extends Component {
     const jwt = auth.isAuthenticated();
     findUserProfile(
       {
-        userId: userId,
+        userId: userId
       },
       { t: jwt.token }
     ).then(data => {
@@ -1263,7 +1263,7 @@ class Profile extends Component {
             <ListItemText
               primary={this.state.user.name}
               secondary={this.state.user.email}
-            />{" "}
+            />{' '}
             {auth.isAuthenticated().user &&
               auth.isAuthenticated().user._id == this.state.user._id && (
                 <ListItemSecondaryAction>
@@ -1286,23 +1286,23 @@ This component shows a single user who is authenticated by the back-end of our a
 We are using `redirectToSignin` redirect to the user on sign-out. We are also adding a delete profile button as a separate component which has to be defined in a separate file called `DeleteUser.js`.
 
 ```js
-import React, { Component } from "react";
-import IconButton from "@material-ui/core/IconButton";
-import Button from "@material-ui/core//Button";
-import DialogTitle from "@material-ui/core/DialogTitle";
-import DialogActions from "@material-ui/core/DialogActions";
-import DialogContentText from "@material-ui/core/DialogContentText";
-import DialogContent from "@material-ui/core/DialogContent";
-import Dialog from "@material-ui/core/Dialog";
-import Delete from "@material-ui/icons/Delete";
-import auth from "../auth/auth-helper";
-import { deleteUser } from "../../utils/api-user";
-import { Redirect, Link } from "react-router-dom";
+import React, { Component } from 'react';
+import IconButton from '@material-ui/core/IconButton';
+import Button from '@material-ui/core//Button';
+import DialogTitle from '@material-ui/core/DialogTitle';
+import DialogActions from '@material-ui/core/DialogActions';
+import DialogContentText from '@material-ui/core/DialogContentText';
+import DialogContent from '@material-ui/core/DialogContent';
+import Dialog from '@material-ui/core/Dialog';
+import Delete from '@material-ui/icons/Delete';
+import auth from '../auth/auth-helper';
+import { deleteUser } from '../../utils/api-user';
+import { Redirect, Link } from 'react-router-dom';
 
 class DeleteUser extends Component {
   state = {
     redirect: false,
-    open: false,
+    open: false
   };
   clickButton = () => {
     this.setState({ open: true });
@@ -1311,14 +1311,14 @@ class DeleteUser extends Component {
     const jwt = auth.isAuthenticated();
     deleteUser(
       {
-        userId: this.props.userId,
+        userId: this.props.userId
       },
       { t: jwt.token }
     ).then(data => {
       if (data.error) {
         console.log(data.error);
       } else {
-        auth.signout(() => console.log("deleted"));
+        auth.signout(() => console.log('deleted'));
         this.setState({ redirect: true });
       }
     });
@@ -1342,7 +1342,7 @@ class DeleteUser extends Component {
         </IconButton>
 
         <Dialog open={this.state.open} onClose={this.handleRequestClose}>
-          <DialogTitle>{"Delete Account"}</DialogTitle>
+          <DialogTitle>{'Delete Account'}</DialogTitle>
           <DialogContent>
             <DialogContentText>
               Confirm to delete your account.
@@ -1376,19 +1376,19 @@ This component is used for deleting the user profile that exists in the database
 In this section we are going to complete our client side routes by leveraging a `Navbar` component. Create a new file `component/Navbar.js`.
 
 ```js
-import React from "react";
-import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
-import Typography from "@material-ui/core/Typography";
-import IconButton from "@material-ui/core/IconButton";
-import Home from "@material-ui/icons/Home";
-import Button from "@material-ui/core/Button";
-import auth from "./auth/auth-helper";
-import { Link, withRouter } from "react-router-dom";
+import React from 'react';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
+import IconButton from '@material-ui/core/IconButton';
+import Home from '@material-ui/icons/Home';
+import Button from '@material-ui/core/Button';
+import auth from './auth/auth-helper';
+import { Link, withRouter } from 'react-router-dom';
 
 const isActive = (history, path) => {
-  if (history.location.pathname == path) return { color: "#F44336" };
-  else return { color: "#ffffff" };
+  if (history.location.pathname == path) return { color: '#F44336' };
+  else return { color: '#ffffff' };
 };
 const Menu = withRouter(({ history }) => (
   <AppBar position="static">
@@ -1397,27 +1397,27 @@ const Menu = withRouter(({ history }) => (
         MERN App
       </Typography>
       <Link to="/">
-        <IconButton aria-label="Home" style={isActive(history, "/")}>
+        <IconButton aria-label="Home" style={isActive(history, '/')}>
           <Home />
         </IconButton>
       </Link>
       {!auth.isAuthenticated() && (
         <span>
           <Link to="/signup">
-            <Button style={isActive(history, "/signup")}>Sign up</Button>
+            <Button style={isActive(history, '/signup')}>Sign up</Button>
           </Link>
           <Link to="/signin">
-            <Button style={isActive(history, "/signin")}>Sign In</Button>
+            <Button style={isActive(history, '/signin')}>Sign In</Button>
           </Link>
         </span>
       )}
       {auth.isAuthenticated() && (
         <span>
-          <Link to={"/user/" + auth.isAuthenticated().user._id}>
+          <Link to={'/user/' + auth.isAuthenticated().user._id}>
             <Button
               style={isActive(
                 history,
-                "/user/" + auth.isAuthenticated().user._id
+                '/user/' + auth.isAuthenticated().user._id
               )}
             >
               My Profile
@@ -1426,7 +1426,7 @@ const Menu = withRouter(({ history }) => (
           <Button
             color="inherit"
             onClick={() => {
-              auth.signout(() => history.push("/"));
+              auth.signout(() => history.push('/'));
             }}
           >
             Sign out
@@ -1451,15 +1451,15 @@ Using `Link` from `react-router` and `auth.isAuthenticated()` from our authentic
 The next step is to import this navigation component inside `Routes.js` and define other necessary routes we need in our app. Open `Routes.js` and add the following.
 
 ```js
-import React, { Component } from "react";
-import { Route, Switch } from "react-router-dom";
-import Navbar from "./components/Navbar";
+import React, { Component } from 'react';
+import { Route, Switch } from 'react-router-dom';
+import Navbar from './components/Navbar';
 
-import Home from "./components/Home";
-import PrivateRoutes from "./components/auth/PrivateRoutes";
-import Signin from "./components/auth/Signin";
-import Profile from "./components/user/Profile";
-import Signup from "./components/user/Signup";
+import Home from './components/Home';
+import PrivateRoutes from './components/auth/PrivateRoutes';
+import Signin from './components/auth/Signin';
+import Profile from './components/user/Profile';
+import Signup from './components/user/Signup';
 
 class Routes extends Component {
   render() {

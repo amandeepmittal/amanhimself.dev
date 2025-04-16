@@ -1,5 +1,5 @@
 ---
-title: "How process.nextTick() works in Node.js?"
+title: 'How process.nextTick() works in Node.js?'
 author: Aman Mittal
 pubDatetime: 2016-06-25T03:42:51Z
 slug: how-process-nexttick-works-in-node-js
@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - nodejs
-description: ""
+description: ''
 ---
 
 The [process](https://nodejs.org/api/process.html) object is a one of the few global objects provided by the Node.js core API. It can be access from anywhere, thus its methods can also be accessed. Such is a method called `process.nextTick()` which is used by developers in realtime applications everyday to defer the execution of a function until the next [Event Loop Iteration](https://medium.com/@amanhimself/the-node-js-system-51090c35dddc).
@@ -28,10 +28,10 @@ The difference between setTimeout() and process.nextTick() is that the process.n
 
 ```js
 function cb() {
-  console.log("Processed in next iteration");
+  console.log('Processed in next iteration');
 }
 process.nextTick(cb);
-console.log("Processed in the first iteration");
+console.log('Processed in the first iteration');
 ```
 
 The above snippet is an example of how `process.nextTick()` works. You can save the snippet in a file.js and run using \$node file.js from your terminal. You will definitely notice that the second console.log printed before the console.log associated with function `cb()`.

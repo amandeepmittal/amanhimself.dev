@@ -1,5 +1,5 @@
 ---
-title: "Converting a Buffer to JSON and Utf8 Strings in Nodejs"
+title: 'Converting a Buffer to JSON and Utf8 Strings in Nodejs'
 author: Aman Mittal
 pubDatetime: 2017-08-10T03:42:51Z
 slug: converting-a-buffer-to-json-and-utf8-strings-in-nodejs
@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - nodejs
-description: ""
+description: ''
 ---
 
 Nodejs and browser based JavaScript differ because Node has a way to handle binary data even before the ES6 draft came up with `ArrayBuffer`. In Node, `Buffer` class is the primary data structure used with most I/O operations. It is a raw binary data that is allocated outside the V8 heap and once allocated, cannot be resized.
@@ -15,13 +15,13 @@ Nodejs and browser based JavaScript differ because Node has a way to handle bina
 Before Nodejs v6.0, to create a new buffer you could just call the constructor function with `new` keyword:
 
 ```js
-let newBuff = new Buffer("New String");
+let newBuff = new Buffer('New String');
 ```
 
 To create a new buffer instance, in latest and current stable releases of Node:
 
 ```js
-let newBuff = Buffer.from("New String");
+let newBuff = Buffer.from('New String');
 ```
 
 The `new Buffer()` constructor have been deprecated and replaced by separate `Buffer.from()`, `Buffer.alloc()`, and `Buffer.allocUnsafe()` methods.
@@ -33,7 +33,7 @@ More information can be read through [**official documentation**](https://nodejs
 Buffers can convert to JSON.
 
 ```js
-let bufferOne = Buffer.from("This is a buffer example.");
+let bufferOne = Buffer.from('This is a buffer example.');
 console.log(bufferOne);
 
 // Output: <Buffer 54 68 69 73 20 69 73 20 61 20 62 75 66
@@ -62,7 +62,7 @@ console.log(bufferOriginal);
 ### Convert Buffer to Utf-8 String
 
 ```js
-console.log(bufferOriginal.toString("utf8"));
+console.log(bufferOriginal.toString('utf8'));
 
 // Output: This is a buffer example.
 ```

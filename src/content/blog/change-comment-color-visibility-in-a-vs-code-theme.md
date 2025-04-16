@@ -1,5 +1,5 @@
 ---
-title: "Change comment color visibility in a VS Code theme"
+title: 'Change comment color visibility in a VS Code theme'
 author: Aman Mittal
 pubDatetime: 2023-12-21T03:42:51Z
 slug: change-comment-color-visibility-in-a-vs-code-theme
@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - vscode
-description: ""
+description: ''
 ---
 
 Switching to a different theme in VS Code can often lead to a mismatch in personal preferences. I enjoy personalizing themes with subtle modifications, especially when I find one theme that suits my taste.

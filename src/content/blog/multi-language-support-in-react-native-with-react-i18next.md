@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - react-native
-description: ""
+description: ''
 ---
 
 Internationalization is an important feature to overcome the language barrier among people who use a particular software application. Not every app requires us to consider a global customer base. But if you have plans to include support for international users in your app, you’ll need internationalization in your React Native app.
@@ -66,14 +66,14 @@ Create a `src/` folder inside the project root directory and inside it, create t
 Start by adding a `RootNavigator.js` file inside the `/navigation` folder. It will have both screens as tabs and some configuration to display an icon and a label for each tab.
 
 ```js
-import * as React from "react";
-import { Text, View } from "react-native";
-import { NavigationContainer } from "@react-navigation/native";
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import Ionicons from "react-native-vector-icons/dist/Ionicons";
+import * as React from 'react';
+import { Text, View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import Ionicons from 'react-native-vector-icons/dist/Ionicons';
 
-import HomeScreen from "../screens/HomeScreen";
-import SettingsScreen from "../screens/SettingsScreen";
+import HomeScreen from '../screens/HomeScreen';
+import SettingsScreen from '../screens/SettingsScreen';
 
 const Tab = createBottomTabNavigator();
 
@@ -85,17 +85,17 @@ export default function RootNavigator() {
           tabBarIcon: ({ focused, color, size }) => {
             let iconName;
 
-            if (route.name === "Home") {
-              iconName = focused ? "ios-home" : "ios-home-outline";
-            } else if (route.name === "Settings") {
-              iconName = focused ? "ios-settings" : "ios-settings-outline";
+            if (route.name === 'Home') {
+              iconName = focused ? 'ios-home' : 'ios-home-outline';
+            } else if (route.name === 'Settings') {
+              iconName = focused ? 'ios-settings' : 'ios-settings-outline';
             }
 
             return <Ionicons name={iconName} size={size} color={color} />;
           },
-          tabBarActiveTintColor: "tomato",
-          tabBarInactiveTintColor: "gray",
-          headerShown: false,
+          tabBarActiveTintColor: 'tomato',
+          tabBarInactiveTintColor: 'gray',
+          headerShown: false
         })}
       >
         <Tab.Screen name="Home" component={HomeScreen} />
@@ -109,12 +109,12 @@ export default function RootNavigator() {
 Next, let's add code snippets for screens. In `HomeScreen.js`, add the following code. For now, it only displays a `Text` component:
 
 ```js
-import React from "react";
-import { Text, View } from "react-native";
+import React from 'react';
+import { Text, View } from 'react-native';
 
 export default function HomeScreen() {
   return (
-    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
       <Text>Home</Text>
     </View>
   );
@@ -124,12 +124,12 @@ export default function HomeScreen() {
 Similarly, the `SettingsScreen.js` file will also display a `Text` component:
 
 ```js
-import React from "react";
-import { Text, View } from "react-native";
+import React from 'react';
+import { Text, View } from 'react-native';
 
 export default function SettingsScreen() {
   return (
-    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
       <Text>Settings!</Text>
     </View>
   );
@@ -139,9 +139,9 @@ export default function SettingsScreen() {
 Now, modify the `App.js` file to add the following code snippet:
 
 ```js
-import React from "react";
+import React from 'react';
 
-import RootNavigator from "./src/navigation/RootNavigator";
+import RootNavigator from './src/navigation/RootNavigator';
 
 export default function App() {
   return <RootNavigator />;
@@ -168,8 +168,8 @@ Inside `en/common.js` file, add the following snippet:
 
 ```js
 export default {
-  hello: "Hello",
-  languageSelector: "Select Your Language",
+  hello: 'Hello',
+  languageSelector: 'Select Your Language'
 };
 ```
 
@@ -177,8 +177,8 @@ Inside `en/navigate.js` file, add the following code snippet:
 
 ```js
 export default {
-  hello: "Bonjour",
-  languageSelector: "Sélecteur de langue",
+  hello: 'Bonjour',
+  languageSelector: 'Sélecteur de langue'
 };
 ```
 
@@ -228,17 +228,17 @@ Now that you have translation files ready and dependencies installed, let's conf
 All of this configuration will live inside `IMLocalize.js` file. Start by importing the following dependencies. Also, define a `LANGUAGES` object that requires each language file as an object and using JavaScript syntax of `Object.keys` convert the `LANGUAGES` object to an array.
 
 ```js
-import i18n from "i18next";
-import { initReactI18next } from "react-i18next";
-import AsyncStorage from "@react-native-async-storage/async-storage";
-import * as RNLocalize from "react-native-localize";
+import i18n from 'i18next';
+import { initReactI18next } from 'react-i18next';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import * as RNLocalize from 'react-native-localize';
 
-import en from "./translations/en";
-import fr from "./translations/fr";
+import en from './translations/en';
+import fr from './translations/fr';
 
 const LANGUAGES = {
   en,
-  fr,
+  fr
 };
 
 const LANG_CODES = Object.keys(LANGUAGES);
@@ -250,22 +250,22 @@ Create a `LANGUAGE_DETECTOR` configuration object:
 
 ```js
 const LANGUAGE_DETECTOR = {
-  type: "languageDetector",
+  type: 'languageDetector',
   async: true,
   detect: callback => {
-    AsyncStorage.getItem("user-language", (err, language) => {
+    AsyncStorage.getItem('user-language', (err, language) => {
       // if error fetching stored data or no language was stored
       // display errors when in DEV mode as console statements
       if (err || !language) {
         if (err) {
-          console.log("Error fetching Languages from asyncstorage ", err);
+          console.log('Error fetching Languages from asyncstorage ', err);
         } else {
-          console.log("No language is set, choosing English as fallback");
+          console.log('No language is set, choosing English as fallback');
         }
         const findBestAvailableLanguage =
           RNLocalize.findBestAvailableLanguage(LANG_CODES);
 
-        callback(findBestAvailableLanguage.languageTag || "en");
+        callback(findBestAvailableLanguage.languageTag || 'en');
         return;
       }
       callback(language);
@@ -273,8 +273,8 @@ const LANGUAGE_DETECTOR = {
   },
   init: () => {},
   cacheUserLanguage: language => {
-    AsyncStorage.setItem("user-language", language);
-  },
+    AsyncStorage.setItem('user-language', language);
+  }
 };
 ```
 
@@ -290,12 +290,12 @@ i18n
   .init({
     resources: LANGUAGES,
     react: {
-      useSuspense: false,
+      useSuspense: false
     },
     interpolation: {
-      escapeValue: false,
+      escapeValue: false
     },
-    defaultNS: "common",
+    defaultNS: 'common'
   });
 ```
 
@@ -305,7 +305,7 @@ Next, import the `IMLocalize` file in `App.js` file:
 
 ```js
 // after other import statements
-import "./src/constants/IMLocalize";
+import './src/constants/IMLocalize';
 ```
 
 ## Creating a Language Selector component
@@ -315,10 +315,10 @@ Since you have initialized the languages in the React Native app, the next step 
 Inside `LanguageSelector.js` file, start by importing the following libraries:
 
 ```js
-import React from "react";
-import { View, Text, StyleSheet, Pressable } from "react-native";
-import Ionicons from "react-native-vector-icons/dist/Ionicons";
-import { useTranslation } from "react-i18next";
+import React from 'react';
+import { View, Text, StyleSheet, Pressable } from 'react-native';
+import Ionicons from 'react-native-vector-icons/dist/Ionicons';
+import { useTranslation } from 'react-i18next';
 ```
 
 The `useTranslation` hook will allow accessing `i18n` instance inside this custom component which is used to change the language.
@@ -327,8 +327,8 @@ Next, define an array of `LANGUAGES`.
 
 ```js
 const LANGUAGES = [
-  { code: "en", label: "English" },
-  { code: "fr", label: "Français" },
+  { code: 'en', label: 'English' },
+  { code: 'fr', label: 'Français' }
 ];
 ```
 
@@ -340,8 +340,8 @@ This function component uses `Pressable` from React Native to change the languag
 
 ```js
 const LANGUAGES = [
-  { code: "en", label: "English" },
-  { code: "fr", label: "Français" },
+  { code: 'en', label: 'English' },
+  { code: 'fr', label: 'Français' }
 ];
 
 const Selector = () => {
@@ -383,32 +383,32 @@ const Selector = () => {
 const styles = StyleSheet.create({
   container: {
     paddingTop: 60,
-    paddingHorizontal: 16,
+    paddingHorizontal: 16
   },
   row: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between",
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between'
   },
   title: {
-    color: "#444",
+    color: '#444',
     fontSize: 28,
-    fontWeight: "600",
+    fontWeight: '600'
   },
   buttonContainer: {
-    marginTop: 10,
+    marginTop: 10
   },
   text: {
     fontSize: 18,
-    color: "#000",
-    paddingVertical: 4,
+    color: '#000',
+    paddingVertical: 4
   },
   selectedText: {
     fontSize: 18,
-    fontWeight: "600",
-    color: "tomato",
-    paddingVertical: 4,
-  },
+    fontWeight: '600',
+    color: 'tomato',
+    paddingVertical: 4
+  }
 });
 
 export default Selector;
@@ -417,14 +417,14 @@ export default Selector;
 Import the `Selector` component inside the `SettingsScreen.js` file:
 
 ```js
-import React from "react";
-import { View } from "react-native";
+import React from 'react';
+import { View } from 'react-native';
 
-import Selector from "../components/LanguageSelector";
+import Selector from '../components/LanguageSelector';
 
 export default function SettingsScreen() {
   return (
-    <View style={{ flex: 1, backgroundColor: "#fff" }}>
+    <View style={{ flex: 1, backgroundColor: '#fff' }}>
       <Selector />
     </View>
   );
@@ -452,7 +452,7 @@ const { t, i18n } = useTranslation();
 Next, modify the `Text` component contents used to define the title:
 
 ```js
-<Text style={styles.title}>{t("common:languageSelector")}</Text>
+<Text style={styles.title}>{t('common:languageSelector')}</Text>
 ```
 
 Here is the output. The default or the initial language in our case is English. When the next language is selected, it translates the title on the Settings screen.
@@ -464,15 +464,15 @@ You can also modify the text strings according to the previously defined namespa
 For an example, the `RootNavigator` will be modified as follows:
 
 ```js
-import * as React from "react";
-import { Text, View } from "react-native";
-import { NavigationContainer } from "@react-navigation/native";
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import Ionicons from "react-native-vector-icons/dist/Ionicons";
-import { useTranslation } from "react-i18next";
+import * as React from 'react';
+import { Text, View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import Ionicons from 'react-native-vector-icons/dist/Ionicons';
+import { useTranslation } from 'react-i18next';
 
-import HomeScreen from "../screens/HomeScreen";
-import SettingsScreen from "../screens/SettingsScreen";
+import HomeScreen from '../screens/HomeScreen';
+import SettingsScreen from '../screens/SettingsScreen';
 
 const Tab = createBottomTabNavigator();
 
@@ -485,28 +485,28 @@ export default function RootNavigator() {
           tabBarIcon: ({ focused, color, size }) => {
             let iconName;
 
-            if (route.name === "Home") {
-              iconName = focused ? "ios-home" : "ios-home-outline";
-            } else if (route.name === "Settings") {
-              iconName = focused ? "ios-settings" : "ios-settings-outline";
+            if (route.name === 'Home') {
+              iconName = focused ? 'ios-home' : 'ios-home-outline';
+            } else if (route.name === 'Settings') {
+              iconName = focused ? 'ios-settings' : 'ios-settings-outline';
             }
 
             return <Ionicons name={iconName} size={size} color={color} />;
           },
-          tabBarActiveTintColor: "tomato",
-          tabBarInactiveTintColor: "gray",
-          headerShown: false,
+          tabBarActiveTintColor: 'tomato',
+          tabBarInactiveTintColor: 'gray',
+          headerShown: false
         })}
       >
         <Tab.Screen
           name="Home"
           component={HomeScreen}
-          options={{ tabBarLabel: t("navigate:home") }}
+          options={{ tabBarLabel: t('navigate:home') }}
         />
         <Tab.Screen
           name="Settings"
           component={SettingsScreen}
-          options={{ tabBarLabel: t("navigate:settings") }}
+          options={{ tabBarLabel: t('navigate:settings') }}
         />
       </Tab.Navigator>
     </NavigationContainer>

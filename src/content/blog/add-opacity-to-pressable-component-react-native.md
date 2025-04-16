@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - react-native
-description: ""
+description: ''
 ---
 
 Pressable component was introduced in 2020 as a core component wrapper that can be used instead of existing touchable components in React Native. These touchable components are TouchableOpacity, TouchableHighlight, and TouchableWithoutFeedback. These components include styles and effects that sometimes do not meet the desired outcome on individual platforms (Android and iOS).
@@ -25,8 +25,8 @@ Start by creating a custom Pressable component with no styles of its own so it c
 ```jsx
 // Pressable.js
 
-import React, { useCallback } from "react";
-import { Pressable as RNPressable } from "react-native";
+import React, { useCallback } from 'react';
+import { Pressable as RNPressable } from 'react-native';
 
 function Pressable({ children, style, ...otherProps }) {
   const _style = useCallback(() => [style && style], [style]);
@@ -53,15 +53,15 @@ In this case, since the wrapper component, you are creating will only be respons
 To use the wrapper component in its current state, import it:
 
 ```jsx
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View } from 'react-native';
 
-import Pressable from "./Pressable";
+import Pressable from './Pressable';
 
 export default function App() {
   return (
     <View style={styles.container}>
       <Pressable
-        style={{ borderRadius: 4, backgroundColor: "#FF0063", padding: 8 }}
+        style={{ borderRadius: 4, backgroundColor: '#FF0063', padding: 8 }}
       >
         <Text style={styles.text}>Press me</Text>
       </Pressable>
@@ -72,14 +72,14 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center'
   },
   text: {
     fontSize: 24,
-    color: "#fff",
-  },
+    color: '#fff'
+  }
 });
 ```
 
@@ -102,8 +102,8 @@ In the wrapper component, add a new prop called `activeOpacity`. This prop accep
 When the component is not in a pressed state, the opacity value is `1`.
 
 ```jsx
-import React, { useCallback } from "react";
-import { Pressable as RNPressable } from "react-native";
+import React, { useCallback } from 'react';
+import { Pressable as RNPressable } from 'react-native';
 
 function Pressable({ children, style, activeOpacity, ...otherProps }) {
   const _style = useCallback(
@@ -130,7 +130,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Pressable
-        style={{ borderRadius: 4, backgroundColor: "#FF0063", padding: 8 }}
+        style={{ borderRadius: 4, backgroundColor: '#FF0063', padding: 8 }}
         activeOpacity={0.5}
       >
         <Text style={styles.text}>Press me</Text>

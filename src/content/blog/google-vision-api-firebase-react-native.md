@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - react-native
-description: ""
+description: ''
 ---
 
 ![cover](https://i.imgur.com/UIZsVjh.jpg)
@@ -64,34 +64,34 @@ Now, create a folder called `config` and inside it, create a new file called `en
 //environment.js
 var environments = {
   staging: {
-    FIREBASE_API_KEY: "XXXX",
-    FIREBASE_AUTH_DOMAIN: "XXXX",
-    FIREBASE_DATABASE_URL: "XXXX",
-    FIREBASE_PROJECT_ID: "XXXX",
-    FIREBASE_STORAGE_BUCKET: "XXXX",
-    FIREBASE_MESSAGING_SENDER_ID: "XXXX",
-    GOOGLE_CLOUD_VISION_API_KEY: "XXXX",
+    FIREBASE_API_KEY: 'XXXX',
+    FIREBASE_AUTH_DOMAIN: 'XXXX',
+    FIREBASE_DATABASE_URL: 'XXXX',
+    FIREBASE_PROJECT_ID: 'XXXX',
+    FIREBASE_STORAGE_BUCKET: 'XXXX',
+    FIREBASE_MESSAGING_SENDER_ID: 'XXXX',
+    GOOGLE_CLOUD_VISION_API_KEY: 'XXXX'
   },
   production: {
     // Warning: This file still gets included in
     // your native binary and is not a secure way to
     // store secrets if you build for the app stores.
     // Details: https://github.com/expo/expo/issues/83
-  },
+  }
 };
 
 function getReleaseChannel() {
   let releaseChannel = Expo.Constants.manifest.releaseChannel;
   if (releaseChannel === undefined) {
-    return "staging";
-  } else if (releaseChannel === "staging") {
-    return "staging";
+    return 'staging';
+  } else if (releaseChannel === 'staging') {
+    return 'staging';
   } else {
-    return "staging";
+    return 'staging';
   }
 }
 function getEnvironment(env) {
-  console.log("Release Channel: ", getReleaseChannel());
+  console.log('Release Channel: ', getReleaseChannel());
   return environments[env];
 }
 var Environment = getEnvironment(getReleaseChannel());
@@ -104,15 +104,15 @@ Then create another file called `firebase.js` inside the `config` directory. We 
 
 ```js
 // firebase.js
-import * as firebase from "firebase";
+import * as firebase from 'firebase';
 
 firebase.initializeApp({
-  apiKey: Environment["FIREBASE_API_KEY"],
-  authDomain: Environment["FIREBASE_AUTH_DOMAIN"],
-  databaseURL: Environment["FIREBASE_DATABASE_URL"],
-  projectId: Environment["FIREBASE_PROJECT_ID"],
-  storageBucket: Environment["FIREBASE_STORAGE_BUCKET"],
-  messagingSenderId: Environment["FIREBASE_MESSAGING_SENDER_ID"],
+  apiKey: Environment['FIREBASE_API_KEY'],
+  authDomain: Environment['FIREBASE_AUTH_DOMAIN'],
+  databaseURL: Environment['FIREBASE_DATABASE_URL'],
+  projectId: Environment['FIREBASE_PROJECT_ID'],
+  storageBucket: Environment['FIREBASE_STORAGE_BUCKET'],
+  messagingSenderId: Environment['FIREBASE_MESSAGING_SENDER_ID']
 });
 
 export default firebase;
@@ -157,7 +157,7 @@ That's it. Setting up the APIs is complete. We can now move on to work on the ap
 To get started, we need to install an npm package called `uuid` to create a unique blob for the image that is going to upload on the Firebase storage service. Run the command `npm install --save uuid`. Next, open `App.js` and paste the following code.
 
 ```js
-import React from "react";
+import React from 'react';
 import {
   ActivityIndicator,
   Button,
@@ -168,18 +168,18 @@ import {
   StyleSheet,
   Text,
   ScrollView,
-  View,
-} from "react-native";
-import { ImagePicker, Permissions } from "expo";
-import uuid from "uuid";
-import Environment from "./config/environment";
-import firebase from "./config/firebase";
+  View
+} from 'react-native';
+import { ImagePicker, Permissions } from 'expo';
+import uuid from 'uuid';
+import Environment from './config/environment';
+import firebase from './config/firebase';
 
 export default class App extends React.Component {
   state = {
     image: null,
     uploading: false,
-    googleResponse: null,
+    googleResponse: null
   };
 
   async componentDidMount() {
@@ -242,10 +242,10 @@ export default class App extends React.Component {
           style={[
             StyleSheet.absoluteFill,
             {
-              backgroundColor: "rgba(0,0,0,0.4)",
-              alignItems: "center",
-              justifyContent: "center",
-            },
+              backgroundColor: 'rgba(0,0,0,0.4)',
+              alignItems: 'center',
+              justifyContent: 'center'
+            }
           ]}
         >
           <ActivityIndicator color="#fff" animating size="large" />
@@ -266,7 +266,7 @@ export default class App extends React.Component {
           marginTop: 20,
           width: 250,
           borderRadius: 3,
-          elevation: 2,
+          elevation: 2
         }}
       >
         <Button
@@ -279,11 +279,11 @@ export default class App extends React.Component {
           style={{
             borderTopRightRadius: 3,
             borderTopLeftRadius: 3,
-            shadowColor: "rgba(0,0,0,1)",
+            shadowColor: 'rgba(0,0,0,1)',
             shadowOpacity: 0.2,
             shadowOffset: { width: 4, height: 4 },
             shadowRadius: 5,
-            overflow: "hidden",
+            overflow: 'hidden'
           }}
         >
           <Image source={{ uri: image }} style={{ width: 250, height: 250 }} />
@@ -318,20 +318,20 @@ export default class App extends React.Component {
   _share = () => {
     Share.share({
       message: JSON.stringify(this.state.googleResponse.responses),
-      title: "Check it out",
-      url: this.state.image,
+      title: 'Check it out',
+      url: this.state.image
     });
   };
 
   _copyToClipboard = () => {
     Clipboard.setString(this.state.image);
-    alert("Copied to clipboard");
+    alert('Copied to clipboard');
   };
 
   _takePhoto = async () => {
     let pickerResult = await ImagePicker.launchCameraAsync({
       allowsEditing: true,
-      aspect: [4, 3],
+      aspect: [4, 3]
     });
 
     this._handleImagePicked(pickerResult);
@@ -340,7 +340,7 @@ export default class App extends React.Component {
   _pickImage = async () => {
     let pickerResult = await ImagePicker.launchImageLibraryAsync({
       allowsEditing: true,
-      aspect: [4, 3],
+      aspect: [4, 3]
     });
 
     this._handleImagePicked(pickerResult);
@@ -356,7 +356,7 @@ export default class App extends React.Component {
       }
     } catch (e) {
       console.log(e);
-      alert("Upload failed, sorry :(");
+      alert('Upload failed, sorry :(');
     } finally {
       this.setState({ uploading: false });
     }
@@ -370,42 +370,42 @@ export default class App extends React.Component {
         requests: [
           {
             features: [
-              { type: "LABEL_DETECTION", maxResults: 10 },
-              { type: "LANDMARK_DETECTION", maxResults: 5 },
-              { type: "FACE_DETECTION", maxResults: 5 },
-              { type: "LOGO_DETECTION", maxResults: 5 },
-              { type: "TEXT_DETECTION", maxResults: 5 },
-              { type: "DOCUMENT_TEXT_DETECTION", maxResults: 5 },
-              { type: "SAFE_SEARCH_DETECTION", maxResults: 5 },
-              { type: "IMAGE_PROPERTIES", maxResults: 5 },
-              { type: "CROP_HINTS", maxResults: 5 },
-              { type: "WEB_DETECTION", maxResults: 5 },
+              { type: 'LABEL_DETECTION', maxResults: 10 },
+              { type: 'LANDMARK_DETECTION', maxResults: 5 },
+              { type: 'FACE_DETECTION', maxResults: 5 },
+              { type: 'LOGO_DETECTION', maxResults: 5 },
+              { type: 'TEXT_DETECTION', maxResults: 5 },
+              { type: 'DOCUMENT_TEXT_DETECTION', maxResults: 5 },
+              { type: 'SAFE_SEARCH_DETECTION', maxResults: 5 },
+              { type: 'IMAGE_PROPERTIES', maxResults: 5 },
+              { type: 'CROP_HINTS', maxResults: 5 },
+              { type: 'WEB_DETECTION', maxResults: 5 }
             ],
             image: {
               source: {
-                imageUri: image,
-              },
-            },
-          },
-        ],
+                imageUri: image
+              }
+            }
+          }
+        ]
       });
       let response = await fetch(
-        "https://vision.googleapis.com/v1/images:annotate?key=" +
-          Environment["GOOGLE_CLOUD_VISION_API_KEY"],
+        'https://vision.googleapis.com/v1/images:annotate?key=' +
+          Environment['GOOGLE_CLOUD_VISION_API_KEY'],
         {
           headers: {
-            Accept: "application/json",
-            "Content-Type": "application/json",
+            Accept: 'application/json',
+            'Content-Type': 'application/json'
           },
-          method: "POST",
-          body: body,
+          method: 'POST',
+          body: body
         }
       );
       let responseJson = await response.json();
       console.log(responseJson);
       this.setState({
         googleResponse: responseJson,
-        uploading: false,
+        uploading: false
       });
     } catch (error) {
       console.log(error);
@@ -421,10 +421,10 @@ async function uploadImageAsync(uri) {
     };
     xhr.onerror = function (e) {
       console.log(e);
-      reject(new TypeError("Network request failed"));
+      reject(new TypeError('Network request failed'));
     };
-    xhr.responseType = "blob";
-    xhr.open("GET", uri, true);
+    xhr.responseType = 'blob';
+    xhr.open('GET', uri, true);
     xhr.send(null);
   });
 
@@ -439,36 +439,36 @@ async function uploadImageAsync(uri) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
-    paddingBottom: 10,
+    backgroundColor: '#fff',
+    paddingBottom: 10
   },
   developmentModeText: {
     marginBottom: 20,
-    color: "rgba(0,0,0,0.4)",
+    color: 'rgba(0,0,0,0.4)',
     fontSize: 14,
     lineHeight: 19,
-    textAlign: "center",
+    textAlign: 'center'
   },
   contentContainer: {
-    paddingTop: 30,
+    paddingTop: 30
   },
 
   getStartedContainer: {
-    alignItems: "center",
-    marginHorizontal: 50,
+    alignItems: 'center',
+    marginHorizontal: 50
   },
 
   getStartedText: {
     fontSize: 17,
-    color: "rgba(96,100,109, 1)",
+    color: 'rgba(96,100,109, 1)',
     lineHeight: 24,
-    textAlign: "center",
+    textAlign: 'center'
   },
 
   helpContainer: {
     marginTop: 15,
-    alignItems: "center",
-  },
+    alignItems: 'center'
+  }
 });
 ```
 
@@ -483,10 +483,10 @@ async function uploadImageAsync(uri) {
     };
     xhr.onerror = function (e) {
       console.log(e);
-      reject(new TypeError("Network request failed"));
+      reject(new TypeError('Network request failed'));
     };
-    xhr.responseType = "blob";
-    xhr.open("GET", uri, true);
+    xhr.responseType = 'blob';
+    xhr.open('GET', uri, true);
     xhr.send(null);
   });
 

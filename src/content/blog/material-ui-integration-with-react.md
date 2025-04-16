@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - reactjs
-description: ""
+description: ''
 ---
 
 Material design was introduced by Google around 2014 as a design language and it still shares some popularity among web and mobile applications. One of the common ways to integrate and use this design system in React apps is through [MaterialUI](https://material-ui.com/getting-started/installation/) library.
@@ -67,7 +67,7 @@ Then go to the entry point of your React app (preferably, `./src/index.js` file)
 
 ```js
 // rest of the import statements
-import "typeface-roboto";
+import 'typeface-roboto';
 ```
 
 Alternatively, if you do not wish to install the above npm module for the font, you can also use the CDN version of the font and read about it [here](https://material-ui.com/components/typography/#roboto-font-cdn).
@@ -79,8 +79,8 @@ In this section let us build a navigation bar. Create a new file called `./src/c
 The `AppBar` component is used to display branding, screen titles, and navigation of the web app. That is what you are going to use it for. The `ToolBar` component is wrapper where you can place your components horizontally. The `Typography` component applies the Material UI theme that is available by default.
 
 ```js
-import React from "react";
-import { AppBar, Toolbar, Typography } from "@material-ui/core";
+import React from 'react';
+import { AppBar, Toolbar, Typography } from '@material-ui/core';
 ```
 
 Next, export a function component called `Navbar` with the following JSX.
@@ -102,8 +102,8 @@ In the code snippet above, notice the `variant` prop on the `Typography` compone
 Now, to see it in action, import the `Navbar` component in the `App.js` file.
 
 ```js
-import React from "react";
-import Navbar from "./components/Navbar";
+import React from 'react';
+import Navbar from './components/Navbar';
 
 function App() {
   return (
@@ -135,24 +135,24 @@ The other component `Paper` actually displays the physical properties of a paper
 Create a new component file called `./src/components/List.js` which is going to be used as a reusable component later. This presentational component is going to display a `Paper` component inside `Grid` with custom styles.
 
 ```js
-import React from "react";
-import { Grid, Paper, makeStyles } from "@material-ui/core";
+import React from 'react';
+import { Grid, Paper, makeStyles } from '@material-ui/core';
 
 const useStyles = makeStyles(theme => ({
   root: {
     marginTop: 100,
-    flexGrow: 1,
+    flexGrow: 1
   },
   paper: {
     height: 220,
     width: 340,
-    backgroundColor: "#ebebeb",
+    backgroundColor: '#ebebeb'
   },
   avatarImage: {
     width: 200,
     height: 200,
-    borderRadius: 100,
-  },
+    borderRadius: 100
+  }
 }));
 
 export default function List() {
@@ -178,7 +178,7 @@ You can modify the `App.js` file to include the `List` component.
 
 ```js
 // rest of the import statements
-import List from "./components/List";
+import List from './components/List';
 
 function App() {
   return (
@@ -201,7 +201,7 @@ To display data inside `List` component, let us use [https://randomuser.me/](htt
 To start, first, import the hooks from the `react` library.
 
 ```js
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
 ```
 
 After that create a state variable called `data` inside the `App` component. Along with the `data` variable, define two other state variables, `isLoading` to track the whether app is in loading mode (that is, the data is being fetched from the API) and `error` to track if there is an error while fetching the data. The loading state of the React app is going to be `true` by default.
@@ -210,7 +210,7 @@ After that create a state variable called `data` inside the `App` component. Alo
 function App() {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState("");
+  const [error, setError] = useState('');
 
   //rest of the code
 }
@@ -220,7 +220,7 @@ The `useEffect` hook is going to have a callback that is going to fetch the data
 
 ```js
 useEffect(() => {
-  fetch("https://randomuser.me/api/?results=5")
+  fetch('https://randomuser.me/api/?results=5')
     .then(res => res.json())
     .then(
       result => {

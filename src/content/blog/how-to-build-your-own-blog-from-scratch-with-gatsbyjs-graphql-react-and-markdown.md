@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - gatsby
-description: ""
+description: ''
 ---
 
 There are lots of quick and easy, no-code ways to get blog up and running — such as [Medium](https://blog.crowdbotics.com/should-you-use-medium-as-your-business-blog-platform-2019-update/) or Wordpress — but, whether it’s to customize, monetize, add security, or just learn, today, I’ll show you how to code your own blog from scratch.
@@ -121,14 +121,14 @@ I am using `yarn` because Gatsby uses it by default over `npm` as the package ma
 
 ```js
 plugins: [
-  "gatsby-transformer-remark",
+  'gatsby-transformer-remark',
   {
     resolve: `gatsby-source-filesystem`,
     options: {
       name: `pages`,
-      path: `${__dirname}/src/pages/`,
-    },
-  },
+      path: `${__dirname}/src/pages/`
+    }
+  }
 ];
 ```
 
@@ -157,8 +157,8 @@ Each Markdown file is parsed into a node of type `MarkdownRemark`. To query all 
 To display each post let us create a new template that will be consistent in style and getting **frontmatter** from GraphQL query we have just seen. Inside the `src` directory, create a new folder called `templates` and inside it, create a new file called `blogPost.js`.
 
 ```js
-import React from "react";
-import { graphql } from "gatsby";
+import React from 'react';
+import { graphql } from 'gatsby';
 
 const Template = ({ data }) => {
   const title = data.markdownRemark.frontmatter.title;
@@ -203,13 +203,13 @@ In above, I am fetching the title for each post and the HTML content. While rend
 We now have a template of how our blog post will look but we still haven’t configured a way to render and convert a blog post into HTML. That’s next. Open `gatsby-node.js` in the root of your project and add the following code.
 
 ```js
-const path = require("path");
+const path = require('path');
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
 
   return new Promise((resolve, reject) => {
-    const blogPostTemplate = path.resolve("src/templates/blogPost.js");
+    const blogPostTemplate = path.resolve('src/templates/blogPost.js');
     // Query for markdown nodes to use in creating pages.
     resolve(
       graphql(`
@@ -237,8 +237,8 @@ exports.createPages = ({ graphql, actions }) => {
             path,
             component: blogPostTemplate,
             context: {
-              pathSlug: path,
-            },
+              pathSlug: path
+            }
           });
           resolve();
         });
@@ -288,8 +288,8 @@ To represent the changes, I have added the date in italics just before the conte
 For this feature to work with our blog, we are going to make use Gatsby `Link` component. It is a wrapper around `@reach/router`’s Link component that adds enhancements specific to Gatsby and you can even use props such as `activeStyle` or `activeClassName` to add styling attributes to the rendered element when it matches the current URL. Just like how a normal routing component in React behaves. Open `blogPost.js` file and add this.
 
 ```js
-import React from "react";
-import { graphql, Link } from "gatsby";
+import React from 'react';
+import { graphql, Link } from 'gatsby';
 
 const Template = ({ data, pathContext }) => {
   const title = data.markdownRemark.frontmatter.title;
@@ -308,9 +308,9 @@ const Template = ({ data, pathContext }) => {
       <p>
         {prev && (
           <Link to={prev.frontmatter.path}>
-            {prev.frontmatter.title}{" "}
+            {prev.frontmatter.title}{' '}
             <span role="img" aria-label="point-left">
-              👈{" "}
+              👈{' '}
             </span>
             Previous
           </Link>
@@ -319,7 +319,7 @@ const Template = ({ data, pathContext }) => {
       <p>
         {next && (
           <Link to={next.frontmatter.path}>
-            Next{" "}
+            Next{' '}
             <span role="img" aria-label="point-right">
               👉
             </span>
@@ -345,8 +345,8 @@ posts.forEach(({ node }, index) => {
     context: {
       pathSlug: path,
       prev: index === 0 ? null : posts[index - 1].node,
-      next: index === posts.length - 1 ? null : posts[index + 1].node,
-    },
+      next: index === posts.length - 1 ? null : posts[index + 1].node
+    }
   });
   resolve();
 });
@@ -363,10 +363,10 @@ Visit the first post and you will get the following result.
 Since all of our markdown posts are getting rendered into HTML correctly, the next and previous post feature working too. So let us move ahead and display all the blog posts on the home page. Not the complete posts, but a link to each one.
 
 ```js
-import React from "react";
-import { graphql, Link } from "gatsby";
+import React from 'react';
+import { graphql, Link } from 'gatsby';
 
-import Layout from "../components/layout";
+import Layout from '../components/layout';
 
 const IndexPage = ({ data }) => {
   const { edges } = data.allMarkdownRemark;
@@ -381,7 +381,7 @@ const IndexPage = ({ data }) => {
               <Link to={frontmatter.path}>{frontmatter.title}</Link>
               &nbsp;
               <small>
-                {" "}
+                {' '}
                 <em>published on</em> {frontmatter.date}
               </small>
               <p>{frontmatter.excerpt}</p>

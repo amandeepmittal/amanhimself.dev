@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - javascript
-description: ""
+description: ''
 ---
 
 This article is about coding conventions. Everywhere I read articles about complex things in programming, links to other good/better/awesome articles, but nobody seems to talk about the basic things in programming.

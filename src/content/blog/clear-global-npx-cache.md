@@ -1,5 +1,5 @@
 ---
-title: "How to clear global npx cache"
+title: 'How to clear global npx cache'
 author: Aman Mittal
 pubDatetime: 2023-05-30T03:42:51Z
 slug: clear-global-npx-cache
@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - cli
-description: ""
+description: ''
 ---
 
 Recently, I've seen myself running into the following message whenever I'm using a certain CLI tool with `npx`.

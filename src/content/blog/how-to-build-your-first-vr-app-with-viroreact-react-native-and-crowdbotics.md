@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - react-native
-description: ""
+description: ''
 ---
 
 Virtual Reality (VR) is an immersive technology that has intentions to improve the experience by providing a three-dimensional realistic environment rendered for the individual to feel real. The applications of this technology are boundless. You will find totally immersive and entertaining gaming applications as well as examples of healthcare simulations used to save lives.
@@ -87,7 +87,7 @@ Once that is done, let us run the default sample testbed app that comes with eve
 
 ```js
 var sharedProps = {
-  apiKey: "API_KEY_HERE",
+  apiKey: 'API_KEY_HERE'
 };
 ```
 
@@ -140,7 +140,7 @@ The method `_getVRNavigator()` renders the scene navigator for the VR experience
 The `initialScene` props have a value of `InitialVRScene`. This value is actually a component that gets displayed initially by the scene navigator. In our case, it is the component `HelloWorldScene` for now.
 
 ```js
-var InitialVRScene = require("./js/HelloWorldScene");
+var InitialVRScene = require('./js/HelloWorldScene');
 ```
 
 ### Scenes and Text in a VR App
@@ -148,7 +148,7 @@ var InitialVRScene = require("./js/HelloWorldScene");
 Applications in Viro React consists of scenes that are represented by `ViroScene` component. Each scene is an equivalent of the `Views`. To create a basic scene all you have to do is modify the`<ViroScene>` component. Open `HelloWorldScene.js`. You will notice that `ViroScene` is being already imported.
 
 ```js
-import { ViroScene, ViroText, Viro360Image } from "react-viro";
+import { ViroScene, ViroText, Viro360Image } from 'react-viro';
 ```
 
 Next, let us modify the `render` function. Create a text-based scene of our own.
@@ -185,7 +185,7 @@ To enable 3D text, there is a prop called `extrusionDepth` which is given a valu
   textAlignVertical="center"
   color="#ffffff"
   extrusionDepth={8}
-  materials={["frontMaterial", "backMaterial", "sideMaterial"]}
+  materials={['frontMaterial', 'backMaterial', 'sideMaterial']}
 />
 ```
 
@@ -230,7 +230,7 @@ To add such an image, there is a component in Viro React API called `Viro360Imag
 
 ```js
 // import
-import { ViroScene, ViroText, Viro360Image, ViroMaterials } from "react-viro";
+import { ViroScene, ViroText, Viro360Image, ViroMaterials } from 'react-viro';
 ```
 
 This component uses a device’s gyroscope to display a 360 degrees view. Add the component inside `ViroScene` as below and before `ViroText`.

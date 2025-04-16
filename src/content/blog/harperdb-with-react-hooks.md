@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - reactjs
-description: ""
+description: ''
 ---
 
 ![cover](https://i.imgur.com/jN0o3ij.png)
@@ -89,7 +89,7 @@ Add the following import statement inside `src/index.js` file:
 
 ```js
 // ... other import statements
-import { HarperDBProvider } from "use-harperdb";
+import { HarperDBProvider } from 'use-harperdb';
 ```
 
 To execute any CRUD operation on the database instance, the provider requires the db instance URL, the username, and the password associated with that user. We are going to make use of environmental variables to add these values.
@@ -115,7 +115,7 @@ ReactDOM.render(
       <App />
     </HarperDBProvider>
   </React.StrictMode>,
-  document.getElementById("root")
+  document.getElementById('root')
 );
 ```
 
@@ -128,9 +128,9 @@ To query the data from the database instance in the React app, the `useHarperDB`
 Open the `App.js` file and import the hook from `use-harperdb`. Let's also set up a basic UI to display data when fetched.
 
 ```js
-import React from "react";
-import "./App.css";
-import { useHarperDB } from "use-harperdb";
+import React from 'react';
+import './App.css';
+import { useHarperDB } from 'use-harperdb';
 
 function App() {
   return (
@@ -138,12 +138,12 @@ function App() {
       <header className="App-header">
         <h2>Starbucks Outlets</h2>
         <table>
-          <thead style={{ marginBottom: "20px" }}>
+          <thead style={{ marginBottom: '20px' }}>
             <tr>
-              <td style={{ textTransform: "uppercase" }}>City</td>
-              <td style={{ textTransform: "uppercase" }}>Name</td>
-              <td style={{ textTransform: "uppercase" }}>Latitude</td>
-              <td style={{ textTransform: "uppercase" }}>Longitude</td>
+              <td style={{ textTransform: 'uppercase' }}>City</td>
+              <td style={{ textTransform: 'uppercase' }}>Name</td>
+              <td style={{ textTransform: 'uppercase' }}>Latitude</td>
+              <td style={{ textTransform: 'uppercase' }}>Longitude</td>
             </tr>
           </thead>
           <tbody>
@@ -171,7 +171,7 @@ Add the following snippet query in the `App.js` file to fetch all the data from 
 ```js
 function App() {
   const [data, loading, error, refresh] = useHarperDB({
-    query: { operation: "sql", sql: "select * from dev.outlets" },
+    query: { operation: 'sql', sql: 'select * from dev.outlets' }
     // interval: 5000
   });
 
@@ -200,12 +200,12 @@ function App() {
       <header className="App-header">
         <h2>Starbucks Outlets</h2>
         <table>
-          <thead style={{ marginBottom: "20px" }}>
+          <thead style={{ marginBottom: '20px' }}>
             <tr>
-              <td style={{ textTransform: "uppercase" }}>City</td>
-              <td style={{ textTransform: "uppercase" }}>Name</td>
-              <td style={{ textTransform: "uppercase" }}>Latitude</td>
-              <td style={{ textTransform: "uppercase" }}>Longitude</td>
+              <td style={{ textTransform: 'uppercase' }}>City</td>
+              <td style={{ textTransform: 'uppercase' }}>Name</td>
+              <td style={{ textTransform: 'uppercase' }}>Latitude</td>
+              <td style={{ textTransform: 'uppercase' }}>Longitude</td>
             </tr>
           </thead>
           <tbody>
@@ -247,9 +247,9 @@ The query can also be made using the `useHarperdb` hook with only the `data` arr
 ```js
 const [data2] = useHarperDB({
   query: {
-    operation: "sql",
-    sql: "select count(*) as totalOutlets from dev.outlets",
-  },
+    operation: 'sql',
+    sql: 'select count(*) as totalOutlets from dev.outlets'
+  }
 });
 ```
 

@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - nodejs
-description: ""
+description: ''
 ---
 
 > **UPDATE:** Up to date version of this post is at [How to use ES6 import syntax in Node.js](https://amanhimself.dev/blog/how-to-use-es6-import-syntax-in-node/).
@@ -72,13 +72,13 @@ npm install -S express
 Next, append the `index.js` file with the following code:
 
 ```js
-const express = require("express");
+const express = require('express');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-app.get("/", (req, res) => {
-  res.send("Hello from Nodejs!");
+app.get('/', (req, res) => {
+  res.send('Hello from Nodejs!');
 });
 
 app.listen(PORT, () => {
@@ -91,7 +91,7 @@ You can run the server by running the command `node index.js`. Visit URL `http:/
 This indicates that the code for the server is fine. Now modify the first line of `index.js` to:
 
 ```js
-import express from "express";
+import express from 'express';
 ```
 
 Run the same command `node index.js` and stay at the terminal window. This time the server does not start as there is an error in the process. It’s the same error I told you about at the start of this article. Nodejs cannot execute `import` statements by default.
@@ -131,13 +131,13 @@ The last step in the configuration process is to add a `dev` script in `package.
 To see it action make sure the following code to your `index.js` uses `import` statement like below.
 
 ```js
-import express from "express";
+import express from 'express';
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-app.get("/", (req, res) => {
-  res.send("Hello!");
+app.get('/', (req, res) => {
+  res.send('Hello!');
 });
 
 app.listen(PORT, () => {

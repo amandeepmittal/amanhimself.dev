@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - nodejs
-description: ""
+description: ''
 ---
 
 ![cover](https://i.imgur.com/kcItwPv.png)
@@ -270,8 +270,8 @@ You can take a look at the following image of all the dependencies I installed w
 Create a new file called `index.js` at the root of your project with the following code.
 
 ```js
-const express = require("express");
-const { ApolloServer, gql } = require("apollo-server-express");
+const express = require('express');
+const { ApolloServer, gql } = require('apollo-server-express');
 
 const typeDefs = gql`
   type Query {
@@ -281,8 +281,8 @@ const typeDefs = gql`
 
 const resolvers = {
   Query: {
-    hello: () => "Hello world!",
-  },
+    hello: () => 'Hello world!'
+  }
 };
 
 const server = new ApolloServer({ typeDefs, resolvers });
@@ -364,11 +364,11 @@ The last step in the configuration process is to add a `dev` `script` in `packag
 To see it action add the following code to your `index.js` and see if everything is working fine.
 
 ```js
-import express from "express";
+import express from 'express';
 
 const app = express();
 
-app.get("/", (req, res) => res.send("Babel Working!"));
+app.get('/', (req, res) => res.send('Babel Working!'));
 
 app.listen({ port: 4000 }, () =>
   console.log(`🚀 Server ready at http://localhost:4000`)
@@ -386,7 +386,7 @@ You can also visit `http://localhost:4000/` in a browser window to see it action
 We need a schema to start our GraphQL API. Let us create a new file called `api/schema.js` inside the directory `api`. Add the following the schema.
 
 ```js
-import { gql } from "apollo-server-express";
+import { gql } from 'apollo-server-express';
 
 const typeDefs = gql`
   type Person {
@@ -455,11 +455,11 @@ You have to export both resolvers and schema objects to use them with Apollo Ser
 Now that we have defined our schema and resolver, we will implement the server inside the file `index.js`. Start by importing Apollo Server from `apollo-server-express`. We also need to import our schema and resolvers object from the `api/` folder. Then, use GraphQL middleware from the Apollo Server Express library to instantiate the GraphQL API.
 
 ```js
-import express from "express";
-import { ApolloServer } from "apollo-server-express";
+import express from 'express';
+import { ApolloServer } from 'apollo-server-express';
 
-import typeDefs from "./api/schema";
-import resolvers from "./api/resolvers";
+import typeDefs from './api/schema';
+import resolvers from './api/resolvers';
 
 const app = express();
 
@@ -467,7 +467,7 @@ const PORT = 4000;
 
 const SERVER = new ApolloServer({
   typeDefs,
-  resolvers,
+  resolvers
 });
 
 SERVER.applyMiddleware({ app });
@@ -519,9 +519,9 @@ const SERVER = new ApolloServer({
   resolvers,
   playground: {
     settings: {
-      "editor.theme": "light",
-    },
-  },
+      'editor.theme': 'light'
+    }
+  }
 });
 ```
 

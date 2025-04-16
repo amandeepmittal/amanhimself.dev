@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - reactjs
-description: ""
+description: ''
 ---
 
 **This post has been updated in 2021. Please visit [this URL](https://jscrambler.com/blog/integrating-firebase-with-react-native) to view the new post.**
@@ -70,8 +70,8 @@ The `screen` directory will contain all the UI related components that we need t
 Let us create our first screen, Home screen, inside `screens/` with a new file `Home.js`.
 
 ```js
-import React, { Component } from "react";
-import { View, Text } from "react-native";
+import React, { Component } from 'react';
+import { View, Text } from 'react-native';
 
 export default class Home extends Component {
   render() {
@@ -87,8 +87,8 @@ export default class Home extends Component {
 Our next screen is going to be `Add Item`. Create a new file called `AddItem.js`.
 
 ```js
-import React, { Component } from "react";
-import { View, Text } from "react-native";
+import React, { Component } from 'react';
+import { View, Text } from 'react-native';
 
 export default class AddItem extends Component {
   render() {
@@ -104,8 +104,8 @@ export default class AddItem extends Component {
 Our last screen is going to be a List of items that we need to display. In the same directory, create a new file called `List.js`.
 
 ```js
-import React, { Component } from "react";
-import { View, Text } from "react-native";
+import React, { Component } from 'react';
+import { View, Text } from 'react-native';
 
 export default class List extends Component {
   render() {
@@ -151,18 +151,18 @@ react-native run-android
 Now, to see it in action, let us add the Home component as our first screen. Add the following code in `App.js`.
 
 ```js
-import React, { Component } from "react";
-import { createStackNavigator, createAppContainer } from "react-navigation";
-import Home from "./src/screens/Home";
+import React, { Component } from 'react';
+import { createStackNavigator, createAppContainer } from 'react-navigation';
+import Home from './src/screens/Home';
 
 // we will use these two screens later in our AppNavigator
-import AddItem from "./src/screens/AddItem";
-import List from "./src/screens/List";
+import AddItem from './src/screens/AddItem';
+import List from './src/screens/List';
 
 const AppNavigator = createStackNavigator({
   Home: {
-    screen: Home,
-  },
+    screen: Home
+  }
 });
 
 const AppContainer = createAppContainer(AppNavigator);
@@ -185,10 +185,10 @@ const AppNavigator = createStackNavigator(
   {
     Home,
     AddItem,
-    List,
+    List
   },
   {
-    initialRouteName: "Home",
+    initialRouteName: 'Home'
   }
 );
 ```
@@ -200,8 +200,8 @@ Now, our stack has three routes: a Home route, an AddItem route, and a ListItem 
 Previously, we defined a stack navigator with three routes but we didn't hook them up in order to navigate between them. Well, this is an easy task too. The `react-navigation` library provides us with a way to manage navigation from one screen to another and back. To make this work, we will modify the `Home.js`.
 
 ```js
-import React, { Component } from "react";
-import { Button, View, Text } from "react-native";
+import React, { Component } from 'react';
+import { Button, View, Text } from 'react-native';
 
 export default class Home extends Component {
   render() {
@@ -210,12 +210,12 @@ export default class Home extends Component {
         <Text>Home Screen</Text>
         <Button
           title="Add an Item"
-          onPress={() => this.props.navigation.navigate("AddItem")}
+          onPress={() => this.props.navigation.navigate('AddItem')}
         />
         <Button
           title="List of Items"
           color="green"
-          onPress={() => this.props.navigation.navigate("List")}
+          onPress={() => this.props.navigation.navigate('List')}
         />
       </View>
     );
@@ -238,14 +238,14 @@ Go to the [Firebase](https://firebase.google.com/) Console, log in from your Goo
 We will then add the database configuration in a new file inside `src/config.js`.
 
 ```js
-import Firebase from "firebase";
+import Firebase from 'firebase';
 let config = {
-  apiKey: "AIzaXXXXXXXXXXXXXXXXXXXXXXX",
-  authDomain: "rnfirebXXX-XXXX.firebaseapp.com",
-  databaseURL: "rnfirebXXX-XXXX.firebaseapp.com",
-  projectId: "rnfirebase-XXXX",
-  storageBucket: "rnfirebase-XXXX.appspot.com",
-  messagingSenderId: "XXXXXXX",
+  apiKey: 'AIzaXXXXXXXXXXXXXXXXXXXXXXX',
+  authDomain: 'rnfirebXXX-XXXX.firebaseapp.com',
+  databaseURL: 'rnfirebXXX-XXXX.firebaseapp.com',
+  projectId: 'rnfirebase-XXXX',
+  storageBucket: 'rnfirebase-XXXX.appspot.com',
+  messagingSenderId: 'XXXXXXX'
 };
 let app = Firebase.initializeApp(config);
 export const db = app.database();
@@ -264,37 +264,37 @@ The config object is where you fill in the details you get after creating a new 
 In this section, we will edit `AddItem.js` which represents an input field and a button. The user can add a item to the list and it will get saved to Firebase data.
 
 ```js
-import React, { Component } from "react";
+import React, { Component } from 'react';
 import {
   View,
   Text,
   TouchableHighlight,
   StyleSheet,
   TextInput,
-  AlertIOS,
-} from "react-native";
+  AlertIOS
+} from 'react-native';
 
-import { db } from "../config";
+import { db } from '../config';
 
 let addItem = item => {
-  db.ref("/items").push({
-    name: item,
+  db.ref('/items').push({
+    name: item
   });
 };
 
 export default class AddItem extends Component {
   state = {
-    name: "",
+    name: ''
   };
 
   handleChange = e => {
     this.setState({
-      name: e.nativeEvent.text,
+      name: e.nativeEvent.text
     });
   };
   handleSubmit = () => {
     addItem(this.state.name);
-    AlertIOS.alert("Item saved successfully");
+    AlertIOS.alert('Item saved successfully');
   };
 
   render() {
@@ -318,14 +318,14 @@ const styles = StyleSheet.create({
   main: {
     flex: 1,
     padding: 30,
-    flexDirection: "column",
-    justifyContent: "center",
-    backgroundColor: "#6565fc",
+    flexDirection: 'column',
+    justifyContent: 'center',
+    backgroundColor: '#6565fc'
   },
   title: {
     marginBottom: 20,
     fontSize: 25,
-    textAlign: "center",
+    textAlign: 'center'
   },
   itemInput: {
     height: 50,
@@ -333,27 +333,27 @@ const styles = StyleSheet.create({
     marginRight: 5,
     fontSize: 23,
     borderWidth: 1,
-    borderColor: "white",
+    borderColor: 'white',
     borderRadius: 8,
-    color: "white",
+    color: 'white'
   },
   buttonText: {
     fontSize: 18,
-    color: "#111",
-    alignSelf: "center",
+    color: '#111',
+    alignSelf: 'center'
   },
   button: {
     height: 45,
-    flexDirection: "row",
-    backgroundColor: "white",
-    borderColor: "white",
+    flexDirection: 'row',
+    backgroundColor: 'white',
+    borderColor: 'white',
     borderWidth: 1,
     borderRadius: 8,
     marginBottom: 10,
     marginTop: 10,
-    alignSelf: "stretch",
-    justifyContent: "center",
-  },
+    alignSelf: 'stretch',
+    justifyContent: 'center'
+  }
 });
 ```
 
@@ -370,21 +370,21 @@ To verify that the data is there in the database, go to your Firebase console.
 To fetch data from the Firebase database, we are going to use the same reference to `db` in `List.js`.
 
 ```js
-import React, { Component } from "react";
-import { View, Text, StyleSheet } from "react-native";
-import ItemComponent from "../components/ItemComponent";
+import React, { Component } from 'react';
+import { View, Text, StyleSheet } from 'react-native';
+import ItemComponent from '../components/ItemComponent';
 
-import { db } from "../config";
+import { db } from '../config';
 
-let itemsRef = db.ref("/items");
+let itemsRef = db.ref('/items');
 
 export default class List extends Component {
   state = {
-    items: [],
+    items: []
   };
 
   componentDidMount() {
-    itemsRef.on("value", snapshot => {
+    itemsRef.on('value', snapshot => {
       let data = snapshot.val();
       let items = Object.values(data);
       this.setState({ items });
@@ -407,22 +407,22 @@ export default class List extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "center",
-    backgroundColor: "#ebebeb",
-  },
+    justifyContent: 'center',
+    backgroundColor: '#ebebeb'
+  }
 });
 ```
 
 For the `ItemComponent`, we create a new file inside `components/ItemComponent.js`. This is a non-screen component. Only the `List` will use it to `map` and display each item.
 
 ```js
-import React, { Component } from "react";
-import { View, Text, StyleSheet } from "react-native";
-import PropTypes from "prop-types";
+import React, { Component } from 'react';
+import { View, Text, StyleSheet } from 'react-native';
+import PropTypes from 'prop-types';
 
 export default class ItemComponent extends Component {
   static propTypes = {
-    items: PropTypes.array.isRequired,
+    items: PropTypes.array.isRequired
   };
 
   render() {
@@ -443,14 +443,14 @@ export default class ItemComponent extends Component {
 const styles = StyleSheet.create({
   itemsList: {
     flex: 1,
-    flexDirection: "column",
-    justifyContent: "space-around",
+    flexDirection: 'column',
+    justifyContent: 'space-around'
   },
   itemtext: {
     fontSize: 24,
-    fontWeight: "bold",
-    textAlign: "center",
-  },
+    fontWeight: 'bold',
+    textAlign: 'center'
+  }
 });
 ```
 

@@ -1,5 +1,5 @@
 ---
-title: "Chat app with React Native (Part 1) - Build reusable UI form elements using react-native-paper"
+title: 'Chat app with React Native (Part 1) - Build reusable UI form elements using react-native-paper'
 author: Aman Mittal
 pubDatetime: 2020-04-06T03:42:51Z
 slug: chat-app-with-react-native-part-1
@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - react-native
-description: ""
+description: ''
 ---
 
 ![cover](https://i.imgur.com/ROYjoYo.jpg)
@@ -75,15 +75,15 @@ Inside this directory, create a new file called `FormInput.js`. This component i
 Start by importing the following statements.
 
 ```js
-import React from "react";
-import { StyleSheet, Dimensions } from "react-native";
-import { TextInput } from "react-native-paper";
+import React from 'react';
+import { StyleSheet, Dimensions } from 'react-native';
+import { TextInput } from 'react-native-paper';
 ```
 
 [`Dimensions`](https://reactnative.dev/docs/dimensions) from React Native core API, provides a way to get the screen width and height. Instead of giving the fix width and height to a text input field, let this API calculate it for us. You can get the application's screen and height by adding the following snippet.
 
 ```js
-const { width, height } = Dimensions.get("screen");
+const { width, height } = Dimensions.get('screen');
 ```
 
 Next, export the default function `FormInput` that is going to have some props.
@@ -111,8 +111,8 @@ const styles = StyleSheet.create({
     marginTop: 10,
     marginBottom: 10,
     width: width / 1.5,
-    height: height / 15,
-  },
+    height: height / 15
+  }
 });
 ```
 
@@ -123,11 +123,11 @@ It is also going to use the width and height of the screen using `Dimensions` fr
 Here is the complete code snippet:
 
 ```js
-import React from "react";
-import { StyleSheet, Dimensions, Text } from "react-native";
-import { Button } from "react-native-paper";
+import React from 'react';
+import { StyleSheet, Dimensions, Text } from 'react-native';
+import { Button } from 'react-native-paper';
 
-const { width, height } = Dimensions.get("screen");
+const { width, height } = Dimensions.get('screen');
 
 export default function FormButton({ title, modeValue, ...rest }) {
   return (
@@ -144,12 +144,12 @@ export default function FormButton({ title, modeValue, ...rest }) {
 
 const styles = StyleSheet.create({
   button: {
-    marginTop: 10,
+    marginTop: 10
   },
   buttonContainer: {
     width: width / 2,
-    height: height / 15,
-  },
+    height: height / 15
+  }
 });
 ```
 
@@ -179,11 +179,11 @@ The Login screen is going to have four main UI elements:
 Start by importing the following statements.
 
 ```js
-import React, { useState } from "react";
-import { View, StyleSheet } from "react-native";
-import { Title } from "react-native-paper";
-import FormInput from "../components/FormInput";
-import FormButton from "../components/FormButton";
+import React, { useState } from 'react';
+import { View, StyleSheet } from 'react-native';
+import { Title } from 'react-native-paper';
+import FormInput from '../components/FormInput';
+import FormButton from '../components/FormButton';
 ```
 
 Inside the `LoginScreen` functional component, define two state variables:
@@ -195,8 +195,8 @@ Both of these variables are going to be used with the `FormInput` component to o
 
 ```js
 export default function Login() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
   return (
     <View style={styles.container}>
@@ -238,21 +238,21 @@ Lastly, here are the styles.
 ```js
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "#f5f5f5",
+    backgroundColor: '#f5f5f5',
     flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
+    justifyContent: 'center',
+    alignItems: 'center'
   },
   titleText: {
     fontSize: 24,
-    marginBottom: 10,
+    marginBottom: 10
   },
   loginButtonLabel: {
-    fontSize: 22,
+    fontSize: 22
   },
   navButtonText: {
-    fontSize: 16,
-  },
+    fontSize: 16
+  }
 });
 ```
 
@@ -269,15 +269,15 @@ If the user is not registered to use the app but wants to make a new account to 
 Create a new file called `SignupScreen.js` inside `src/screens/` directory. It is going to be similar to the login screen that you created in the previous section in many ways. I am going to leave it to you to find similarities and differences between the two screens. Take a look at the code snippet for the signup screen below.
 
 ```js
-import React, { useState } from "react";
-import { View, StyleSheet } from "react-native";
-import { Title, IconButton } from "react-native-paper";
-import FormInput from "../components/FormInput";
-import FormButton from "../components/FormButton";
+import React, { useState } from 'react';
+import { View, StyleSheet } from 'react-native';
+import { Title, IconButton } from 'react-native-paper';
+import FormInput from '../components/FormInput';
+import FormButton from '../components/FormButton';
 
 export default function SignupScreen({ navigation }) {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
   return (
     <View style={styles.container}>
@@ -304,7 +304,7 @@ export default function SignupScreen({ navigation }) {
         size={30}
         style={styles.navButton}
         color="#6646ee"
-        onPress={() => navigation.navigate("Login")}
+        onPress={() => navigation.navigate('Login')}
       />
     </View>
   );
@@ -312,24 +312,24 @@ export default function SignupScreen({ navigation }) {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "#f5f5f5",
+    backgroundColor: '#f5f5f5',
     flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
+    justifyContent: 'center',
+    alignItems: 'center'
   },
   titleText: {
     fontSize: 24,
-    marginBottom: 10,
+    marginBottom: 10
   },
   loginButtonLabel: {
-    fontSize: 22,
+    fontSize: 22
   },
   navButtonText: {
-    fontSize: 18,
+    fontSize: 18
   },
   navButton: {
-    marginTop: 10,
-  },
+    marginTop: 10
+  }
 });
 ```
 
@@ -348,10 +348,10 @@ Inside this directory, create a new file called `AuthStack.js`. This file is goi
 Start by importing the following statements including both screen components.
 
 ```js
-import React from "react";
-import { createStackNavigator } from "@react-navigation/stack";
-import SignupScreen from "../screens/SignupScreen";
-import LoginScreen from "../screens/LoginScreen";
+import React from 'react';
+import { createStackNavigator } from '@react-navigation/stack';
+import SignupScreen from '../screens/SignupScreen';
+import LoginScreen from '../screens/LoginScreen';
 ```
 
 A **Stack Navigator** provides the React Native app to transit between different screens similar to how the navigation in a web browser works. It pushes or pops a screen when in the navigational state.
@@ -403,7 +403,7 @@ For example, in the login screen component, to navigate to sign up screen, add t
   modeValue="text"
   uppercase={false}
   labelStyle={styles.navButtonText}
-  onPress={() => navigation.navigate("Signup")}
+  onPress={() => navigation.navigate('Signup')}
 />
 ```
 
@@ -438,9 +438,9 @@ Both of our screen components are now configured for the navigation to work. In 
 Create a new file called `Routes.js` inside `src/navigation/` directory. This file is going to contain all the stacks that the app is going to have, but for now, the auth stack.
 
 ```js
-import React from "react";
-import { NavigationContainer } from "@react-navigation/native";
-import AuthStack from "./AuthStack";
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import AuthStack from './AuthStack';
 
 export default function Routes() {
   return (
@@ -460,9 +460,9 @@ Create a file called `index.js` inside `src/navigation/` directory.
 To make UI components from `react-native-paper` to work, you have to wrap all the routes inside `PaperProvider` as shown below.
 
 ```js
-import React from "react";
-import { Provider as PaperProvider } from "react-native-paper";
-import Routes from "./Routes";
+import React from 'react';
+import { Provider as PaperProvider } from 'react-native-paper';
+import Routes from './Routes';
 
 /**
  * Wrap all providers here
