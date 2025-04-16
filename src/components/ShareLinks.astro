@@ -3,6 +3,8 @@ import LinkButton from './LinkButton.astro';
 import socialIcons from '@assets/socialIcons';
 
 const URL = Astro.url;
+// Get the page title for LinkedIn sharing
+const pageTitle = Astro.props.title
 
 const shareLinks = [
   {
@@ -19,6 +21,11 @@ const shareLinks = [
     name: 'Bluesky',
     href: 'https://bsky.app/intent/compose?text=',
     linkTitle: `Share this post on Bluesky`
+  },
+  {
+    name: 'LinkedIn',
+    href: `https://www.linkedin.com/sharing/share-offsite/?url=`,
+    linkTitle: `Share this post on LinkedIn`
   }
 ] as const;
 ---
