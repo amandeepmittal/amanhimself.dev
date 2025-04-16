@@ -471,6 +471,7 @@ I usually switch between the following themes:
 
 ### VS Code extensions
 
+- [Astro](https://marketplace.visualstudio.com/items?itemName=astro-build.astro-vscode)
 - [Auto Close tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag)
 - [Auto Complete Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-complete-tag)
 - [Auto Rename Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag)
@@ -499,6 +500,7 @@ I usually switch between the following themes:
 - [Vale VSCode](https://marketplace.visualstudio.com/items?itemName=ChrisChinchilla.vale-vscode)
 - [WakaTime](https://marketplace.visualstudio.com/items?itemName=WakaTime.vscode-wakatime)
 - [Word Count](https://marketplace.visualstudio.com/items?itemName=ms-vscode.wordcount)
+- [YAML](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml)
 
 ## Conclusion
 
