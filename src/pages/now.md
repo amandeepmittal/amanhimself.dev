@@ -3,7 +3,7 @@ layout: ../layouts/GenericLayout.astro
 title: 'Now'
 ---
 
-_Last Update: January 28, 2025_
+_Last Update: April 16, 2025_
 
 ## What I am doing now?
 
@@ -15,12 +15,10 @@ _Location: New Delhi, India_
 - 📚 Reading: Check out my [Goodreads](https://www.goodreads.com/author/show/17657541.Aman_Mittal)
 - Trying to write every week in my free time so this blog doesn't get trivialize.
 
+> Looking for more information about me, or my past work experience? See the [About](/about) page.
+
 ## What is this page, anyways?
 
 According to [aboutideasnow](https://aboutideasnow.com/about), an "/about" page is to talk about past stuff including what you have done in your past life. In comparison, a "/now" page is more personal look at what a person is doing right now, and what they care about. A "/now" page is inspired by [Derek Sivers](https://sive.rs/now).
 
 You can find plethora of examples on [aboutideasnow](https://aboutideasnow.com/about) and [nownownow](https://nownownow.com/).
-
----
-
-> Looking for more information about me, or my past work experience? See the [About](/about) page.
