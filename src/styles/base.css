@@ -162,9 +162,9 @@
 }
 
 #carbonads {
-  --carbon-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', Helvetica, Arial,
-    sans-serif;
+  --carbon-font-family:
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu,
+    Cantarell, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   --carbon-font-size: 14px;
   --carbon-padding: 1.5ch;
   --carbon-max-char: 20ch;

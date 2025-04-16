@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - firebase
-description: ""
+description: ''
 ---
 
 The [Firebase JS SDK](https://github.com/firebase/firebase-js-sdk) is a library that provides a set of JavaScript APIs for interacting with Firebase services. I use it with some of the production React Native apps built with Expo, mainly for authentication, database, and storage. I also use it for an open-source template that I am currently maintaining called [expo-firebase-stater], which provides a head start when building a React Native app with Firebase.
@@ -19,8 +19,8 @@ For React Native apps, the Firebase SDK uses AsyncStorage under the hood to stor
 Typically, the Firebase Auth module is configured as shown below in a React Native app:
 
 ```js
-import { initializeApp } from "firebase/app";
-import { getAuth } from "firebase/auth";
+import { initializeApp } from 'firebase/app';
+import { getAuth } from 'firebase/auth';
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
@@ -56,12 +56,12 @@ Firebase SDK provides another method in its Auth module called `initializeAuth`.
 Start by importing `initializeAuth` and `getReactNativePersistence` from `firebase/auth/react-native`. To initialize `auth`, pass an object as the second argument to the `initializeAuth` method. This object has a `persistence` key that takes the value of which persistence layer to use.
 
 ```js
-import AsyncStorage from "@react-native-async-storage/async-storage";
-import { initializeApp } from "firebase/app";
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import { initializeApp } from 'firebase/app';
 import {
   initializeAuth,
-  getReactNativePersistence,
-} from "firebase/auth/react-native";
+  getReactNativePersistence
+} from 'firebase/auth/react-native';
 
 // add firebase config here
 
@@ -70,7 +70,7 @@ const app = initializeApp(firebaseConfig);
 
 // initialize auth
 const auth = initializeAuth(app, {
-  persistence: getReactNativePersistence(AsyncStorage),
+  persistence: getReactNativePersistence(AsyncStorage)
 });
 
 export { auth };

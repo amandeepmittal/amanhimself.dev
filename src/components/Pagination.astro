@@ -1,5 +1,5 @@
 ---
-import LinkButton from "./LinkButton.astro";
+import LinkButton from './LinkButton.astro';
 
 export interface Props {
   currentPage: number;
@@ -10,15 +10,15 @@ export interface Props {
 
 const { currentPage, totalPages, prevUrl, nextUrl } = Astro.props;
 
-const prev = currentPage > 1 ? "" : "disabled";
-const next = currentPage < totalPages ? "" : "disabled";
+const prev = currentPage > 1 ? '' : 'disabled';
+const next = currentPage < totalPages ? '' : 'disabled';
 ---
 
 {
   totalPages > 1 && (
     <nav class="pagination-wrapper" aria-label="Pagination">
       <LinkButton
-        disabled={prev === "disabled"}
+        disabled={prev === 'disabled'}
         href={prevUrl}
         className={`mr-4 select-none ${prev}`}
         ariaLabel="Previous"
@@ -30,7 +30,7 @@ const next = currentPage < totalPages ? "" : "disabled";
       </LinkButton>
       {currentPage} / {totalPages}
       <LinkButton
-        disabled={next === "disabled"}
+        disabled={next === 'disabled'}
         href={nextUrl}
         className={`ml-4 select-none ${next}`}
         ariaLabel="Next"

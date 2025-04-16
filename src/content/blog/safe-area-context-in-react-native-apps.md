@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - react-native
-description: ""
+description: ''
 ---
 
 Most devices nowadays come with a notch or some kind of status bar. Therefore, when building a mobile application using React Native, it is vital to ensure that the content of an app screen is rendered correctly across different types of devices.
@@ -21,14 +21,14 @@ The first approach will discuss `SafeAreaView` component from React Native compo
 When you are starting to build a screen in React Native app, you might add use the following code snippet to display text:
 
 ```js
-import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import React from 'react';
+import { StyleSheet, Text, View } from 'react-native';
 
 export const HomeScreen = () => {
   return (
     <View style={[styles.container]}>
-      <View style={{ backgroundColor: "blue" }}>
-        <Text style={{ fontSize: 28, color: "white" }}>Hello World</Text>
+      <View style={{ backgroundColor: 'blue' }}>
+        <Text style={{ fontSize: 28, color: 'white' }}>Hello World</Text>
       </View>
     </View>
   );
@@ -37,8 +37,8 @@ export const HomeScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "red",
-  },
+    backgroundColor: 'red'
+  }
 });
 ```
 
@@ -59,7 +59,7 @@ On an Android device, the behavior is exactly the same:
 One approach is to use [SafeAreaView component](https://reactnative.dev/docs/safeareaview) available in React Native.
 
 ```js
-import { SafeAreaView } from "react-native";
+import { SafeAreaView } from 'react-native';
 ```
 
 It can be used in the place of the top-level `View` component. It renders content within the safe area boundaries around the nested content and automatically applies padding.
@@ -67,14 +67,14 @@ It can be used in the place of the top-level `View` component. It renders conten
 Modify the previous code snippet:
 
 ```js
-import React from "react";
-import { StyleSheet, Text, View, SafeAreaView } from "react-native";
+import React from 'react';
+import { StyleSheet, Text, View, SafeAreaView } from 'react-native';
 
 export const HomeScreen = () => {
   return (
     <SafeAreaView style={[styles.container]}>
-      <View style={{ backgroundColor: "blue" }}>
-        <Text style={{ fontSize: 28, color: "white" }}>Hello World</Text>
+      <View style={{ backgroundColor: 'blue' }}>
+        <Text style={{ fontSize: 28, color: 'white' }}>Hello World</Text>
       </View>
     </SafeAreaView>
   );
@@ -109,10 +109,10 @@ This library provides a `SafeAreaProvider` that needs to wrap either your Root N
 For example, in the code snippet below, the `SafeAreaProvider` wraps the `HomeScreen` component since there is only one screen in the example app.
 
 ```js
-import React from "react";
-import { SafeAreaProvider } from "react-native-safe-area-context";
+import React from 'react';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 
-import { HomeScreen } from "./src/screens";
+import { HomeScreen } from './src/screens';
 
 export default function App() {
   return (
@@ -126,15 +126,15 @@ export default function App() {
 Now, you can import the `SafeAreaView` component from the `react-native-safe-area-context` library and replace it with the one from React Native.
 
 ```js
-import React from "react";
-import { StyleSheet, Text, View } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
+import React from 'react';
+import { StyleSheet, Text, View } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 export const HomeScreen = () => {
   return (
     <SafeAreaView style={[styles.container]}>
-      <View style={{ backgroundColor: "blue" }}>
-        <Text style={{ fontSize: 28, color: "white" }}>Hello World</Text>
+      <View style={{ backgroundColor: 'blue' }}>
+        <Text style={{ fontSize: 28, color: 'white' }}>Hello World</Text>
       </View>
     </SafeAreaView>
   );
@@ -143,8 +143,8 @@ export const HomeScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "red",
-  },
+    backgroundColor: 'red'
+  }
 });
 ```
 
@@ -171,7 +171,7 @@ It also comes with an `edges` prop that customizes safe area insets around diffe
 Another advantage of using this library is that it provides a hook called `useSafeAreaInsets`. It offers more flexibility. It also gives more control, and you can apply padding for each edge using a property from this hook. For example, a `View` component below uses only wants the padding to be applied at the top edge:
 
 ```js
-import { useSafeAreaInsets } from "react-native-safe-area-context";
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 export const HomeScreen = () => {
   const insets = useSafeAreaInsets();
@@ -179,7 +179,7 @@ export const HomeScreen = () => {
   return (
     <View
       style={{
-        paddingTop: insets.top,
+        paddingTop: insets.top
       }}
     >
       {children}

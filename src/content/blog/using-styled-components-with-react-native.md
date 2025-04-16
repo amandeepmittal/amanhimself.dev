@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - react-native
-description: ""
+description: ''
 ---
 
 ### Introduction
@@ -16,7 +16,7 @@ Whether you are a web developer or mobile app developer, you know that without t
 
 If you are getting into React Native or have already dipped your toes, you know that there are different ways you can style a React Native app. I have already discussed the basics and some of the different ways to style your React Native components in the article below. Such as, to create a new style object you use `**StyleSheet.create()**` method and encapsulating them. Go check it out 👇
 
-This tutorial is going to be about styling your React Native apps using [💅 Styled Components](https://www.styled-components.com/docs/basics "https://www.styled-components.com/docs/basics"). Yes, styled-components is a third party library. Using it is a matter of choice, but also another way to add styling to your app, and many might find it easy to use, especially if you have used this library before with other frameworks. One common use case is web apps built with React.
+This tutorial is going to be about styling your React Native apps using [💅 Styled Components](https://www.styled-components.com/docs/basics 'https://www.styled-components.com/docs/basics'). Yes, styled-components is a third party library. Using it is a matter of choice, but also another way to add styling to your app, and many might find it easy to use, especially if you have used this library before with other frameworks. One common use case is web apps built with React.
 
 ## Table of contents
 
@@ -29,12 +29,12 @@ In React Native, the styling of components is already done by creating JavaScrip
 React Native tends to follow a certain convention when it comes to styling your app. Such as all CSS property names should be in `camelCase` such as for `background-color` in React Native is:
 
 ```css
-backgroundcolor: "blue";
+backgroundcolor: 'blue';
 ```
 
 Occasionally, web developers get uncomfortable by these conventions. Using a third party library like styled components can give you wings. You do not have to switch between the context of conventions much, apart from the properties and React Native’s own Flexbox rules.
 
-Behind the scenes, styled components just converts the CSS text into a React Native stylesheet object. You can check how it does that [**here**](https://github.com/styled-components/css-to-react-native "https://github.com/styled-components/css-to-react-native")**.**
+Behind the scenes, styled components just converts the CSS text into a React Native stylesheet object. You can check how it does that [**here**](https://github.com/styled-components/css-to-react-native 'https://github.com/styled-components/css-to-react-native')**.**
 
 _Enough with story, let’s get to work!_
 
@@ -67,8 +67,8 @@ That’s it for installation.
 Open up `App.js` file and make some modifications.
 
 ```js
-import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import React from 'react';
+import { StyleSheet, Text, View } from 'react-native';
 
 export default class App extends React.Component {
   render() {
@@ -83,10 +83,10 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center'
+  }
 });
 ```
 
@@ -97,7 +97,7 @@ From your terminal, run the command: `npm run ios` if you are on macOS. For Linu
 Let’s make some changes to it and use our newly installed library. To get started, import the library like below.
 
 ```js
-import styled from "styled-components";
+import styled from 'styled-components';
 ```
 
 Make changes to the component’s render function like below. Replace both `View` and `Text` with `Container` and `Title`. These new elements are going to be custom using semantics from `styled-components`.
@@ -138,8 +138,8 @@ const Title = styled.Text`
 The complete code for `App.js` file after changes.
 
 ```js
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 export default class App extends React.Component {
   render() {
@@ -174,12 +174,12 @@ Often you will find yourself creating custom components for your apps. This does
 Inside this file, we are going to create a custom button that requires props such as `backgroundColor`, `textColor` and the text itself for the button. You are going to use `TouchableOpacity` and `Text` to create this custom button but without importing `react-native` library using a functional component `CustomButton`.
 
 ```js
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 const CustomButton = props => (
   <ButtonContainer
-    onPress={() => alert("Hi!")}
+    onPress={() => alert('Hi!')}
     backgroundColor={props.backgroundColor}
   >
     <ButtonText textColor={props.textColor}>{props.text}</ButtonText>
@@ -232,8 +232,8 @@ We will be using our knowledge of `styled-components` so let's get started! Open
 Inside `Titlebar`, it will contain three new elements. One is going to be an image `Avatar` and the other two are text: `Title`and `Name`.
 
 ```js
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 export default class App extends React.Component {
   render() {
@@ -295,13 +295,13 @@ const Container = styled.View`
 I am going to use an image that is stored in `assets` folder in the root of our project. You are free to use your own image but you can also download the assets for this project below.
 
 [**amandeepmittal/react-native-workspace**
-\_⚛️ + 📱 React Native Things. Contribute to amandeepmittal/react-native-workspace development by creating an account on…\_github.com](https://github.com/amandeepmittal/react-native-workspace/tree/master/03-RNgrocery-ui/assets "https://github.com/amandeepmittal/react-native-workspace/tree/master/03-RNgrocery-ui/assets")[](https://github.com/amandeepmittal/react-native-workspace/tree/master/03-RNgrocery-ui/assets)
+\_⚛️ + 📱 React Native Things. Contribute to amandeepmittal/react-native-workspace development by creating an account on…\_github.com](https://github.com/amandeepmittal/react-native-workspace/tree/master/03-RNgrocery-ui/assets 'https://github.com/amandeepmittal/react-native-workspace/tree/master/03-RNgrocery-ui/assets')[](https://github.com/amandeepmittal/react-native-workspace/tree/master/03-RNgrocery-ui/assets)
 
 To create an image with `styled-components`, you need the `Image` component. You can use the `source` props to reference the image based on where it is located.
 
 ```js
 <Titlebar>
-  <Avatar source={require("./assets/avatar.jpg")} />
+  <Avatar source={require('./assets/avatar.jpg')} />
   <Title>Welcome back,</Title>
   <Name>Aman</Name>
 </Titlebar>
@@ -364,7 +364,7 @@ Expo boilerplate comes with a set of different icon libraries such as Ionicons, 
 To use the library, all you have to do is write the import statement.
 
 ```js
-import { Ionicons } from "@expo/vector-icons";
+import { Ionicons } from '@expo/vector-icons';
 ```
 
 Inside the `Titlebar` view, add the icon.
@@ -387,7 +387,7 @@ To solve this, let us use the absolute positioning property as an inline style t
   name="md-cart"
   size={32}
   color="red"
-  style={{ position: "absolute", right: 20, top: 5 }}
+  style={{ position: 'absolute', right: 20, top: 5 }}
 />
 ```
 
@@ -400,8 +400,8 @@ Why an inline style? Because `Ionicons` is not generated using styled-components
 Inside `components/` folder create a new file called `Categories.js`. This file is going to render a list of category items for the Grocery UI app.
 
 ```js
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 const Categories = props => (
   <Container>
@@ -427,7 +427,7 @@ const Name = styled.Text`
 All the data is static right now. Import this component in `App.js` and place it after `Titlebar`.
 
 ```js
-import Categories from "./components/Categories";
+import Categories from './components/Categories';
 
 // ...
 
@@ -447,12 +447,12 @@ There can be a number of categories. To make the names of categories dynamic, we
 
 ```js
 const Items = [
-  { text: "Fruits" },
-  { text: "Bread" },
-  { text: "Drinks" },
-  { text: "Veggies" },
-  { text: "Meat" },
-  { text: "Paper Goods" },
+  { text: 'Fruits' },
+  { text: 'Bread' },
+  { text: 'Drinks' },
+  { text: 'Veggies' },
+  { text: 'Meat' },
+  { text: 'Paper Goods' }
 ];
 
 // Inside the render function replace <Categories /> with
@@ -475,7 +475,7 @@ const Categories = props => <Name>{props.name}</Name>;
 This list is right now not scrollable. To make it scrollable, let us place it inside a `ScrollView`. Open up `App.js` file place the categories inside a `ScrollView`, but first, import it from React Native core.
 
 ```js
-import { ScrollView } from "react-native";
+import { ScrollView } from 'react-native';
 
 // ...
 <ScrollView>
@@ -508,7 +508,7 @@ Let us add some inline styles to the `ScrollView`.
     padding: 20,
     paddingLeft: 12,
     paddingTop: 30,
-    flexDirection: "row",
+    flexDirection: 'row'
   }}
   showsHorizontalScrollIndicator={false}
 >
@@ -568,13 +568,13 @@ In this section, we are going to create a card component that will hold an item�
 Create a new component file called `Card.js` inside `components` directory. The structure of the `Card` component is going to be.
 
 ```js
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 const Card = props => (
   <Container>
     <Cover>
-      <Image source={require("../assets/pepper.jpg")} />
+      <Image source={require('../assets/pepper.jpg')} />
     </Cover>
     <Content>
       <Title>Pepper</Title>
@@ -642,7 +642,7 @@ If you are getting an image from the static resource as in our case, you use `so
 ```js
 <Image
   source={{
-    uri: "https://facebook.github.io/react-native/docs/assets/favicon.png",
+    uri: 'https://facebook.github.io/react-native/docs/assets/favicon.png'
   }}
 />
 ```

@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - react-native
-description: ""
+description: ''
 ---
 
 Performance is one of the few topics that change the overall perspective of using a framework like React Native in real-world mobile applications. React Native is fast by default. While working on a React Native app you can experience performance issues and do not assume it can be fixed by testing components. In this post, there is a list of suggestions that can be applied while building a React Native app.
@@ -50,7 +50,7 @@ const Parent = () => {
   const [count, setCount] = useState(0);
 
   return (
-    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
       <Button title="Press me" onPress={() => setCount(count + 1)} />
       <Child text="Placeholder text" />
     </View>

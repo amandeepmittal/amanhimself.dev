@@ -1,10 +1,17 @@
 ---
-import { SITE } from "@config";
-import Hr from "./Hr.astro";
-import LinkButton from "./LinkButton.astro";
+import { SITE } from '@config';
+import Hr from './Hr.astro';
+import LinkButton from './LinkButton.astro';
 
 export interface Props {
-  activeNav?: "blog" | "tags" | "about" | "search" | "links" | "now" | "slashes";
+  activeNav?:
+    | 'blog'
+    | 'tags'
+    | 'about'
+    | 'search'
+    | 'links'
+    | 'now'
+    | 'slashes';
 }
 
 const { activeNav } = Astro.props;
@@ -45,13 +52,13 @@ const { activeNav } = Astro.props;
         </button>
         <ul id="menu-items" class="display-none sm:flex">
           <li>
-            <a href="/blog/" class={activeNav === "blog" ? "active" : ""}>
+            <a href="/blog/" class={activeNav === 'blog' ? 'active' : ''}>
               Blog
             </a>
           </li>
 
           <li>
-            <a href="/now/" class={activeNav === "now" ? "active" : ""}>
+            <a href="/now/" class={activeNav === 'now' ? 'active' : ''}>
               Now
             </a>
           </li>
@@ -67,7 +74,7 @@ const { activeNav } = Astro.props;
             </a>
           </li>
           <li>
-            <a href="/slash/" class={activeNav === "slashes" ? "active" : ""}>
+            <a href="/slash/" class={activeNav === 'slashes' ? 'active' : ''}>
               Slashes
             </a>
           </li>
@@ -75,7 +82,7 @@ const { activeNav } = Astro.props;
             <LinkButton
               href="/search/"
               className={`focus-outline p-3 sm:p-1 ${
-                activeNav === "search" ? "active" : ""
+                activeNav === 'search' ? 'active' : ''
               } flex`}
               ariaLabel="search"
               title="Search"
@@ -193,24 +200,24 @@ const { activeNav } = Astro.props;
 <script>
   function toggleNav() {
     // Toggle menu
-    const menuBtn = document.querySelector(".hamburger-menu");
-    const menuIcon = document.querySelector(".menu-icon");
-    const menuItems = document.querySelector("#menu-items");
+    const menuBtn = document.querySelector('.hamburger-menu');
+    const menuIcon = document.querySelector('.menu-icon');
+    const menuItems = document.querySelector('#menu-items');
 
-    menuBtn?.addEventListener("click", () => {
-      const menuExpanded = menuBtn.getAttribute("aria-expanded") === "true";
-      menuIcon?.classList.toggle("is-active");
-      menuBtn.setAttribute("aria-expanded", menuExpanded ? "false" : "true");
+    menuBtn?.addEventListener('click', () => {
+      const menuExpanded = menuBtn.getAttribute('aria-expanded') === 'true';
+      menuIcon?.classList.toggle('is-active');
+      menuBtn.setAttribute('aria-expanded', menuExpanded ? 'false' : 'true');
       menuBtn.setAttribute(
-        "aria-label",
-        menuExpanded ? "Open Menu" : "Close Menu"
+        'aria-label',
+        menuExpanded ? 'Open Menu' : 'Close Menu'
       );
-      menuItems?.classList.toggle("display-none");
+      menuItems?.classList.toggle('display-none');
     });
   }
 
   toggleNav();
 
   // Runs on view transitions navigation
-  document.addEventListener("astro:after-swap", toggleNav);
+  document.addEventListener('astro:after-swap', toggleNav);
 </script>

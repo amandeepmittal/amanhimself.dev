@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - cli
-description: ""
+description: ''
 ---
 
 [ZSH](https://github.com/zsh-users/zsh) is the default shell in macOS. If you use [Oh my Zsh](https://ohmyz.sh/) to manage the ZSH configuration plugins and a theme to prettify the terminal, you can also use several built-in utilities.

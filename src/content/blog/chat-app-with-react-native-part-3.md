@@ -1,5 +1,5 @@
 ---
-title: "Chat app with React Native (Part 3) - Create Firestore collections to store chat rooms"
+title: 'Chat app with React Native (Part 3) - Create Firestore collections to store chat rooms'
 author: Aman Mittal
 pubDatetime: 2020-04-21T03:42:51Z
 slug: chat-app-with-react-native-part-3
@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - react-native
-description: ""
+description: ''
 ---
 
 ![cover](https://i.imgur.com/ROYjoYo.jpg)
@@ -32,12 +32,12 @@ export default function HomeStack() {
     <Stack.Navigator
       screenOptions={{
         headerStyle: {
-          backgroundColor: "#6646ee",
+          backgroundColor: '#6646ee'
         },
-        headerTintColor: "#ffffff",
+        headerTintColor: '#ffffff',
         headerTitleStyle: {
-          fontSize: 22,
-        },
+          fontSize: 22
+        }
       }}
     >
       <Stack.Screen name="Home" component={HomeScreen} />
@@ -63,13 +63,13 @@ Here's a flowchart to help visualize the navigation flow we're trying to achieve
 Start by creating a new screen file called `AddRoomScreen.js` inside `src/screens` directory with the following content.
 
 ```js
-import React from "react";
-import { View, Text } from "react-native";
-import FormButton from "../components/FormButton";
+import React from 'react';
+import { View, Text } from 'react-native';
+import FormButton from '../components/FormButton';
 
 export default function AddRoomScreen({ navigation }) {
   return (
-    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
       <Text>Create a new chat room</Text>
       <FormButton
         mode="contained"
@@ -86,11 +86,11 @@ Right now, focus adding this modal screen to the Home stack navigator rather tha
 Also, add a temporary button to open the modal screen in the `HomeScreen.js` file.
 
 ```js
-import React, { useContext } from "react";
-import { View, StyleSheet } from "react-native";
-import { Title } from "react-native-paper";
-import { AuthContext } from "../navigation/AuthProvider";
-import FormButton from "../components/FormButton";
+import React, { useContext } from 'react';
+import { View, StyleSheet } from 'react-native';
+import { Title } from 'react-native-paper';
+import { AuthContext } from '../navigation/AuthProvider';
+import FormButton from '../components/FormButton';
 
 export default function HomeScreen({ navigation }) {
   const { user, logout } = useContext(AuthContext);
@@ -108,7 +108,7 @@ export default function HomeScreen({ navigation }) {
       <FormButton
         modeValue="contained"
         title="Add Room"
-        onPress={() => navigation.navigate("AddRoom")}
+        onPress={() => navigation.navigate('AddRoom')}
       />
     </View>
   );
@@ -121,7 +121,7 @@ Start by importing the modal screen with the rest of the routes and create two n
 
 ```js
 // ... rest of the import statements
-import AddRoomScreen from "../screens/AddRoomScreen";
+import AddRoomScreen from '../screens/AddRoomScreen';
 
 // create two new instances
 const ChatAppStack = createStackNavigator();
@@ -136,12 +136,12 @@ function ChatApp() {
     <ChatAppStack.Navigator
       screenOptions={{
         headerStyle: {
-          backgroundColor: "#6646ee",
+          backgroundColor: '#6646ee'
         },
-        headerTintColor: "#ffffff",
+        headerTintColor: '#ffffff',
         headerTitleStyle: {
-          fontSize: 22,
-        },
+          fontSize: 22
+        }
       }}
     >
       <ChatAppStack.Screen name="Home" component={HomeScreen} />
@@ -181,7 +181,7 @@ Luckily, the `react-navigation` library provides props for us to implement this 
 
 ```js
 // rest of the imports
-import { IconButton } from "react-native-paper";
+import { IconButton } from 'react-native-paper';
 ```
 
 Then add an `options` prop with a function such that you are able to pass `navigation` prop reference. Add the following code to the `HomeScreen` route.
@@ -196,9 +196,9 @@ Then add an `options` prop with a function such that you are able to pass `navig
         icon="message-plus"
         size={28}
         color="#ffffff"
-        onPress={() => navigation.navigate("AddRoom")}
+        onPress={() => navigation.navigate('AddRoom')}
       />
-    ),
+    )
   })}
 />
 ```
@@ -216,11 +216,11 @@ Right now the modal screen just displays a line of text and a close button but t
 Open `AddRoomScreen.js` and start by modifying the import statements.
 
 ```js
-import React, { useState } from "react";
-import { View, StyleSheet } from "react-native";
-import { IconButton, Title } from "react-native-paper";
-import FormInput from "../components/FormInput";
-import FormButton from "../components/FormButton";
+import React, { useState } from 'react';
+import { View, StyleSheet } from 'react-native';
+import { IconButton, Title } from 'react-native-paper';
+import FormInput from '../components/FormInput';
+import FormButton from '../components/FormButton';
 ```
 
 Then, to add a chat room, define a state variable called `roomName` inside a functional component `AddRoomScreen`.
@@ -229,7 +229,7 @@ To modify the JSX returned from this component. Make sure to add a close button 
 
 ```js
 export default function AddRoomScreen({ navigation }) {
-  const [roomName, setRoomName] = useState("");
+  const [roomName, setRoomName] = useState('');
   // ... Firestore query will come here later
 
   return (
@@ -270,26 +270,26 @@ The corresponding styles of the above component are defined as below.
 ```js
 const styles = StyleSheet.create({
   rootContainer: {
-    flex: 1,
+    flex: 1
   },
   closeButtonContainer: {
-    position: "absolute",
+    position: 'absolute',
     top: 30,
     right: 0,
-    zIndex: 1,
+    zIndex: 1
   },
   innerContainer: {
     flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
+    justifyContent: 'center',
+    alignItems: 'center'
   },
   title: {
     fontSize: 24,
-    marginBottom: 10,
+    marginBottom: 10
   },
   buttonLabel: {
-    fontSize: 22,
-  },
+    fontSize: 22
+  }
 });
 ```
 
@@ -347,7 +347,7 @@ Start by importing `firestore` in the `AddRoomScreen.js` file.
 
 ```js
 // after other import statements
-import firestore from "@react-native-firebase/firestore";
+import firestore from '@react-native-firebase/firestore';
 ```
 
 Inside the functional component `AddHomeScreen` add a handler method called `handleButtonPress`.
@@ -383,12 +383,12 @@ After that, go to the Firebase database console and verify if the `THREADS` coll
 To display chat rooms from Firestore you are going to make use of `FlatList` form React Native. Start by adding the following the import statements inside the `src/screens/HomeScreen.js` file.
 
 ```js
-import React, { useState, useEffect } from "react";
-import { View, StyleSheet, FlatList } from "react-native";
-import { List, Divider } from "react-native-paper";
-import firestore from "@react-native-firebase/firestore";
+import React, { useState, useEffect } from 'react';
+import { View, StyleSheet, FlatList } from 'react-native';
+import { List, Divider } from 'react-native-paper';
+import firestore from '@react-native-firebase/firestore';
 
-import Loading from "../components/Loading";
+import Loading from '../components/Loading';
 ```
 
 Inside the functional component `HomeScreen`, define two state variables:
@@ -403,14 +403,14 @@ export default function HomeScreen() {
 
   useEffect(() => {
     const unsubscribe = firestore()
-      .collection("THREADS")
+      .collection('THREADS')
       .onSnapshot(querySnapshot => {
         const threads = querySnapshot.docs.map(documentSnapshot => {
           return {
             _id: documentSnapshot.id,
             // give defaults
-            name: "",
-            ...documentSnapshot.data(),
+            name: '',
+            ...documentSnapshot.data()
           };
         });
 
@@ -468,15 +468,15 @@ The [`Divider` component](https://callstack.github.io/react-native-paper/divider
 ```js
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "#f5f5f5",
-    flex: 1,
+    backgroundColor: '#f5f5f5',
+    flex: 1
   },
   listTitle: {
-    fontSize: 22,
+    fontSize: 22
   },
   listDescription: {
-    fontSize: 16,
-  },
+    fontSize: 16
+  }
 });
 ```
 

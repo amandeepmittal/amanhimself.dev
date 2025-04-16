@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - react-native
-description: ""
+description: ''
 ---
 
 Navigation plays an important role in mobile applications. Without navigation, there will be little use of an application. In this tutorial, we are going to learn how to implement Navigation in a React Native application from scratch. If you are familiar with web, or Reactjs as library, overall concept of navigation is same. It is used to navigate to different pages or screens (in our case). However, the implementation of a navigation library here is different from the web.
@@ -204,17 +204,17 @@ onPress={() => navigate('ScreenTwo', { screen: 'Screen Two' })}
 All of these methods and objects are made available to our components because of below configuration. To make use of these three screens, and see how Stack Navigation works in action, we will modify our `App.js` as:
 
 ```js
-import React from "react";
+import React from 'react';
 
-import { StackNavigator } from "react-navigation";
-import ScreenOne from "./src/stack/ScreenOne";
-import ScreenTwo from "./src/stack/ScreenTwo";
-import ScreenThree from "./src/stack/ScreenThree";
+import { StackNavigator } from 'react-navigation';
+import ScreenOne from './src/stack/ScreenOne';
+import ScreenTwo from './src/stack/ScreenTwo';
+import ScreenThree from './src/stack/ScreenThree';
 
 const App = StackNavigator({
   ScreenOne: { screen: ScreenOne },
   ScreenTwo: { screen: ScreenTwo },
-  ScreenThree: { screen: ScreenThree },
+  ScreenThree: { screen: ScreenThree }
 });
 
 export default App;
@@ -240,14 +240,14 @@ The way Tab Navigation work is different from Stack Navigator. The different scr
 
 ```js
 // App.js
-import React from "react";
-import { Text, View } from "react-native";
-import { createBottomTabNavigator } from "react-navigation";
+import React from 'react';
+import { Text, View } from 'react-native';
+import { createBottomTabNavigator } from 'react-navigation';
 
 class HomeScreen extends React.Component {
   render() {
     return (
-      <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
         <Text>Home!</Text>
       </View>
     );
@@ -257,7 +257,7 @@ class HomeScreen extends React.Component {
 class SettingsScreen extends React.Component {
   render() {
     return (
-      <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
         <Text>Settings!</Text>
       </View>
     );
@@ -266,7 +266,7 @@ class SettingsScreen extends React.Component {
 
 export default createBottomTabNavigator({
   Home: HomeScreen,
-  Settings: SettingsScreen,
+  Settings: SettingsScreen
 });
 ```
 
@@ -278,13 +278,13 @@ Of course, you can modularize it a bit by separating Home and Setting screen in 
 export default createBottomTabNavigator(
   {
     Home: HomeScreen,
-    Settings: SettingsScreen,
+    Settings: SettingsScreen
   },
   {
     tabBarOptions: {
-      activeTintColor: "red",
-      inactiveTintColor: "black",
-    },
+      activeTintColor: 'red',
+      inactiveTintColor: 'black'
+    }
   }
 );
 ```

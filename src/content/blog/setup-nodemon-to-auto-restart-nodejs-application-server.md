@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - nodejs
-description: ""
+description: ''
 ---
 
 Manually restarting Node.js application is a tiring and tedious job. [Nodemon](https://www.npmjs.com/package/nodemon) is the best solution available to autorestart a nodejs app server in development mode.
@@ -40,13 +40,13 @@ Add `express` or any other framework as dependency to bootstrap a minimal server
 Code for a minimal server:
 
 ```js
-"use strict";
+'use strict';
 
-const express = require("express");
+const express = require('express');
 const app = express();
 
-app.use("/", (req, res) => {
-  res.status(200).send("Hello World!");
+app.use('/', (req, res) => {
+  res.status(200).send('Hello World!');
 });
 
 app.listen(3000);
@@ -69,8 +69,8 @@ Hello World!
 Now if I change the response message, I have to restart the server to get the desired result:
 
 ```js
-app.use("/", (req, res) => {
-  res.status(200).send("Lorem Ipsum");
+app.use('/', (req, res) => {
+  res.status(200).send('Lorem Ipsum');
 });
 ```
 

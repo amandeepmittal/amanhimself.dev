@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - nodejs
-description: ""
+description: ''
 ---
 
 In this article, I am going to walk you through setting up your own [Node.js](http://crowdbotics.com/build/node-js) backend server for a [React application](https://crowdbotics.com/build/react). Both frameworks are often used together to build real time, fullstack web applications. A database, such as MySQL, Postgresql, or a NoSQL database such as MongoDB, is used to store information. For brevity’s sake, I will not use a database in this walkthrough.
@@ -33,23 +33,23 @@ npm install hapi --save
 After Express, Hapi is quite popular among teams and individuals who write the server side of their application using Node. Hapi is currently being used by organizations such as Walmart and Yahoo and has an active community. After the dependency is successfully installed, create a new file called `server.js`.
 
 ```js
-"use strict";
+'use strict';
 
-const Hapi = require("hapi");
+const Hapi = require('hapi');
 
 // Create a server with a host and port
 const server = Hapi.server({
-  host: "localhost",
-  port: 8000,
+  host: 'localhost',
+  port: 8000
 });
 
 // Add the route
 server.route({
-  method: "GET",
-  path: "/",
+  method: 'GET',
+  path: '/',
   handler: (request, h) => {
-    return "hello world";
-  },
+    return 'hello world';
+  }
 });
 
 // Start the server
@@ -61,7 +61,7 @@ async function start() {
     process.exit(1);
   }
 
-  console.log("Server running at:", server.info.uri);
+  console.log('Server running at:', server.info.uri);
 }
 
 start();
@@ -108,38 +108,38 @@ Webpack has a development server that uses a proxy to handle the API server or i
 Let us now test a route that sends the data from the Hapi backend server to React front-end side whenever a request comes from the client. Create a route /`mock`in `server.js` to serve the data the dummy data defined as an array `data` itself.
 
 ```js
-"use strict";
+'use strict';
 
-const Hapi = require("hapi");
+const Hapi = require('hapi');
 
 // mock data
 
 const data = [
-  { id: 1, name: "Alex", age: 21 },
-  { id: 2, name: "Alice", age: 23 },
+  { id: 1, name: 'Alex', age: 21 },
+  { id: 2, name: 'Alice', age: 23 }
 ];
 
 // Create a server with a host and port
 const server = Hapi.server({
-  host: "localhost",
-  port: 8000,
+  host: 'localhost',
+  port: 8000
 });
 
 // Add the route
 server.route({
-  method: "GET",
-  path: "/",
+  method: 'GET',
+  path: '/',
   handler: (request, h) => {
-    return "hello world";
-  },
+    return 'hello world';
+  }
 });
 
 server.route({
-  method: "GET",
-  path: "/mock",
+  method: 'GET',
+  path: '/mock',
   handler: (request, h) => {
     return { data };
-  },
+  }
 });
 
 // Start the server
@@ -151,7 +151,7 @@ async function start() {
     process.exit(1);
   }
 
-  console.log("Server running at:", server.info.uri);
+  console.log('Server running at:', server.info.uri);
 }
 
 start();
@@ -164,13 +164,13 @@ To test this route, let us use REST client like POSTMAN or Insomnia and see if t
 Now let us display this data in our front end. Traverse to `client/App.js` file and do the following.
 
 ```js
-import React, { Component } from "react";
-import logo from "./logo.svg";
-import "./App.css";
+import React, { Component } from 'react';
+import logo from './logo.svg';
+import './App.css';
 
 class App extends Component {
   state = {
-    data: [],
+    data: []
   };
 
   componentDidMount() {
@@ -180,7 +180,7 @@ class App extends Component {
   }
 
   fetchData = async () => {
-    const response = await fetch("/mock");
+    const response = await fetch('/mock');
     const body = response.json();
 
     return body;

@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - ionic
-description: ""
+description: ''
 ---
 
 Ionic makes it easy to create multiple pages navigation using `NavController` as the genesis of navigation stack. In this little application, I will try to make the concept clear to you.
@@ -37,18 +37,18 @@ I am naming the two new pages generic but you can name them anything you want. J
 To proceed, we need to add both the pages in our `app.module.ts`:
 
 ```ts
-import { BrowserModule } from "@angular/platform-browser";
-import { ErrorHandler, NgModule } from "@angular/core";
-import { IonicApp, IonicErrorHandler, IonicModule } from "ionic-angular";
-import { SplashScreen } from "@ionic-native/splash-screen";
-import { StatusBar } from "@ionic-native/status-bar";
+import { BrowserModule } from '@angular/platform-browser';
+import { ErrorHandler, NgModule } from '@angular/core';
+import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
+import { SplashScreen } from '@ionic-native/splash-screen';
+import { StatusBar } from '@ionic-native/status-bar';
 
-import { MyApp } from "./app.component";
-import { HomePage } from "../pages/home/home";
+import { MyApp } from './app.component';
+import { HomePage } from '../pages/home/home';
 
 // new pages to be added in declarations and entryComponents
-import { Page1Page } from "../pages/page1/page1";
-import { Page2Page } from "../pages/page2/page2";
+import { Page1Page } from '../pages/page1/page1';
+import { Page2Page } from '../pages/page2/page2';
 
 @NgModule({
   declarations: [MyApp, HomePage, Page1Page, Page2Page],
@@ -58,8 +58,8 @@ import { Page2Page } from "../pages/page2/page2";
   providers: [
     StatusBar,
     SplashScreen,
-    { provide: ErrorHandler, useClass: IonicErrorHandler },
-  ],
+    { provide: ErrorHandler, useClass: IonicErrorHandler }
+  ]
 })
 export class AppModule {}
 ```
@@ -92,23 +92,23 @@ As the `app.module.ts` is updated with our changes, the scope of the whole appli
 Let’s update `home.ts` as well.
 
 ```ts
-import { Component } from "@angular/core";
-import { NavController } from "ionic-angular";
+import { Component } from '@angular/core';
+import { NavController } from 'ionic-angular';
 
-import { Page1Page } from "../page1/page1";
-import { Page2Page } from "../page2/page2";
+import { Page1Page } from '../page1/page1';
+import { Page2Page } from '../page2/page2';
 
 @Component({
-  selector: "page-home",
-  templateUrl: "home.html",
+  selector: 'page-home',
+  templateUrl: 'home.html'
 })
 export class HomePage {
   constructor(public navCtrl: NavController) {}
 
   goTo(page) {
-    if (page === "page1") {
+    if (page === 'page1') {
       this.navCtrl.push(Page1Page);
-    } else if (page === "page2") {
+    } else if (page === 'page2') {
       this.navCtrl.push(Page2Page);
     }
   }
@@ -149,14 +149,14 @@ To continue to develop our demo application, we need to update our `Page1` and `
 ```
 
 ```ts
-import { Component } from "@angular/core";
-import { IonicPage, NavController, NavParams } from "ionic-angular";
-import { Page2Page } from "../page2/page2";
+import { Component } from '@angular/core';
+import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Page2Page } from '../page2/page2';
 
 @IonicPage()
 @Component({
-  selector: "page-page1",
-  templateUrl: "page1.html",
+  selector: 'page-page1',
+  templateUrl: 'page1.html'
 })
 export class Page1Page {
   constructor(
@@ -165,7 +165,7 @@ export class Page1Page {
   ) {}
 
   goTo(page) {
-    if (page === "page2") {
+    if (page === 'page2') {
       this.navCtrl.push(Page2Page);
     }
   }
@@ -177,7 +177,7 @@ export class Page1Page {
   }
 
   ionViewDidLoad() {
-    console.log("ionViewDidLoad Page1Page");
+    console.log('ionViewDidLoad Page1Page');
   }
 }
 ```
@@ -203,14 +203,14 @@ Similar for the `Page2`:
 ```
 
 ```ts
-import { Component } from "@angular/core";
-import { IonicPage, NavController, NavParams } from "ionic-angular";
-import { Page1Page } from "../page1/page1";
+import { Component } from '@angular/core';
+import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Page1Page } from '../page1/page1';
 
 @IonicPage()
 @Component({
-  selector: "page-page2",
-  templateUrl: "page2.html",
+  selector: 'page-page2',
+  templateUrl: 'page2.html'
 })
 export class Page2Page {
   constructor(
@@ -219,7 +219,7 @@ export class Page2Page {
   ) {}
 
   goTo(page) {
-    if (page === "page1") {
+    if (page === 'page1') {
       this.navCtrl.push(Page1Page);
     }
   }
@@ -231,7 +231,7 @@ export class Page2Page {
   }
 
   ionViewDidLoad() {
-    console.log("ionViewDidLoad Page2Page");
+    console.log('ionViewDidLoad Page2Page');
   }
 }
 ```

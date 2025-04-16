@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - react-native
-description: ""
+description: ''
 ---
 
 Relevant Push notifications are a great way to boost a user's engagement towards an application. According to some [analysis](http://info.localytics.com/blog/6-stats-that-prove-how-important-push-notifications-in-app-messaging-are-to-your-apps-success), push notifications increase app engagement by 88%. It’s also curious to see that the [click-through rate](https://clevertap.com/blog/mobile-marketing-stats-2019/) for push notifications in Android (4.06%) is much higher than in iOS (1.7%).
@@ -150,7 +150,7 @@ _Note:_ To use this library with Expo, you have to eject the Expo SDK app.
 In this section, you are going to write a configure function such that, when a button is pressed, a local notification is triggered. Create a new file inside `src/services/LocalPushController.js`. Start by importing `PushNotification` from the library you initialized in the previous step.
 
 ```js
-import PushNotification from "react-native-push-notification";
+import PushNotification from 'react-native-push-notification';
 ```
 
 Add `PushNotification.configure()` to the file. This accepts an object with a required method `onNotification`. This method handles what happens after the notification is opened or received. Since it is a required method, it has to be invoked whether the notification is local or remote. The demo application only invokes a `console` statement stating the properties of the local notification object used in the current demo app.
@@ -159,11 +159,11 @@ Add `PushNotification.configure()` to the file. This accepts an object with a re
 PushNotification.configure({
   // (required) Called when a remote or local notification is opened or received
   onNotification: function (notification) {
-    console.log("LOCAL NOTIFICATION ==>", notification);
+    console.log('LOCAL NOTIFICATION ==>', notification);
   },
 
   popInitialNotification: true,
-  requestPermissions: true,
+  requestPermissions: true
 });
 ```
 
@@ -174,15 +174,15 @@ export const LocalNotification = () => {
   PushNotification.localNotification({
     autoCancel: true,
     bigText:
-      "This is local notification demo in React Native app. Only shown, when expanded.",
-    subText: "Local Notification Demo",
-    title: "Local Notification Title",
-    message: "Expand me to see more",
+      'This is local notification demo in React Native app. Only shown, when expanded.',
+    subText: 'Local Notification Demo',
+    title: 'Local Notification Title',
+    message: 'Expand me to see more',
     vibrate: true,
     vibration: 300,
     playSound: true,
-    soundName: "default",
-    actions: '["Yes", "No"]',
+    soundName: 'default',
+    actions: '["Yes", "No"]'
   });
 };
 ```
@@ -192,9 +192,9 @@ export const LocalNotification = () => {
 Import this method in the `App.js` file. Import `LocalNotification` from the `src/services/LocalPushController.js` file. Then, inside the functional `App` component, add a handler method `handleButtonPress` to invoke only when the user presses the button.
 
 ```js
-import React from "react";
-import { Text, View, Button, StyleSheet } from "react-native";
-import { LocalNotification } from "./src/services/LocalPushController";
+import React from 'react';
+import { Text, View, Button, StyleSheet } from 'react-native';
+import { LocalNotification } from './src/services/LocalPushController';
 
 const App = () => {
   const handleButtonPress = () => {
@@ -205,7 +205,7 @@ const App = () => {
     <View style={styles.container}>
       <Text>Press a button to trigger the notification</Text>
       <View style={{ marginTop: 20 }}>
-        <Button title={"Local Push Notification"} onPress={handleButtonPress} />
+        <Button title={'Local Push Notification'} onPress={handleButtonPress} />
       </View>
     </View>
   );
@@ -214,12 +214,12 @@ const App = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
+    justifyContent: 'center',
+    alignItems: 'center'
   },
   buttonContainer: {
-    marginTop: 20,
-  },
+    marginTop: 20
+  }
 });
 
 export default App;
@@ -274,27 +274,27 @@ It also requires a mandatory Android property called `senderID`. This can be fet
 ![ss7](https://i.imgur.com/CbXvImG.png)
 
 ```js
-import React, { useEffect } from "react";
-import PushNotification from "react-native-push-notification";
+import React, { useEffect } from 'react';
+import PushNotification from 'react-native-push-notification';
 
 const RemotePushController = () => {
   useEffect(() => {
     PushNotification.configure({
       // (optional) Called when Token is generated (iOS and Android)
       onRegister: function (token) {
-        console.log("TOKEN:", token);
+        console.log('TOKEN:', token);
       },
 
       // (required) Called when a remote or local notification is opened or received
       onNotification: function (notification) {
-        console.log("REMOTE NOTIFICATION ==>", notification);
+        console.log('REMOTE NOTIFICATION ==>', notification);
 
         // process the notification here
       },
       // Android only: GCM or FCM Sender ID
-      senderID: "256218572662",
+      senderID: '256218572662',
       popInitialNotification: true,
-      requestPermissions: true,
+      requestPermissions: true
     });
   }, []);
 

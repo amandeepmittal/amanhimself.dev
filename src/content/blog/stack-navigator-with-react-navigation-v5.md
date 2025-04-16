@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - react-native
-description: ""
+description: ''
 ---
 
 [React Navigation](https://reactnavigation.org/) as the library released its 5th stable version recently, just being two years old. Without a doubt, it is one of the most popular navigation solutions in React Native apps that also has support for the Expo.
@@ -146,11 +146,11 @@ In this section, let us set up a basic Stack navigator. Start by creating a new 
 Now that you have an idea of what exactly a stack navigation pattern is, let us start by creating one. Inside the `src/navigation` directory, create a new file called `MainStackNavigator.js` and import the following statements:
 
 ```js
-import * as React from "react";
-import { NavigationContainer } from "@react-navigation/native";
-import { createStackNavigator } from "@react-navigation/stack";
+import * as React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 
-import Home from "../screens/Home";
+import Home from '../screens/Home';
 ```
 
 From the above snippet, the `NavigationContainer` is a component that manages the navigation tree. It also contains the navigation state and it has to wrap all navigators structure.
@@ -178,9 +178,9 @@ In the above snippet, there are two required props with each `Stack.Screen`. The
 Do not forget to export the `MainStackNavigator` since it is going to be imported in the root of the app, that is, inside `App.js` file as shown below.
 
 ```js
-import React from "react";
+import React from 'react';
 
-import MainStackNavigator from "./src/navigation/MainStackNavigator";
+import MainStackNavigator from './src/navigation/MainStackNavigator';
 
 export default function App() {
   return <MainStackNavigator />;
@@ -198,7 +198,7 @@ By default, it shows the title bar on the screen. However, you can set the title
 This is done by specifying the options on each screen as shown below. Open `MainStackNavigator.js` file and the prop `options` on `Stack.Screen` for `Home` component.
 
 ```js
-<Stack.Screen name="Home" component={Home} options={{ title: "Home Screen" }} />
+<Stack.Screen name="Home" component={Home} options={{ title: 'Home Screen' }} />
 ```
 
 The changes are instantly reflected in the Expo client.
@@ -211,7 +211,7 @@ In the current stack navigator structure, let us add the second screen component
 
 ```js
 // rest import statements remain same
-import Detail from "../screens/Detail";
+import Detail from '../screens/Detail';
 
 function MainStackNavigator() {
   return (
@@ -220,12 +220,12 @@ function MainStackNavigator() {
         <Stack.Screen
           name="Home"
           component={Home}
-          options={{ title: "Home Screen" }}
+          options={{ title: 'Home Screen' }}
         />
         <Stack.Screen
           name="Detail"
           component={Detail}
-          options={{ title: "Detail Screen" }}
+          options={{ title: 'Detail Screen' }}
         />
       </Stack.Navigator>
     </NavigationContainer>
@@ -254,8 +254,8 @@ Then, open `screen/Home.js` and a button component that is going to navigate to 
 Import `TouchableOpacity` from `react-native` core and make sure to utilize the `navigation` prop passed to the `Home` screen. This prop is passed to every screen that is a route wrapped by the Stack Navigator.
 
 ```js
-import React from "react";
-import { StyleSheet, View, Text, TouchableOpacity } from "react-native";
+import React from 'react';
+import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
 
 function Home(props) {
   const { navigation } = props;
@@ -264,7 +264,7 @@ function Home(props) {
       <Text style={styles.text}>Home Screen</Text>
       <TouchableOpacity
         style={styles.buttonContainer}
-        onPress={() => navigation.navigate("Detail")}
+        onPress={() => navigation.navigate('Detail')}
       >
         <Text style={styles.buttonText}>Go to Detail Screen</Text>
       </TouchableOpacity>
@@ -275,25 +275,25 @@ function Home(props) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "#ebebeb",
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#ebebeb'
   },
   text: {
-    color: "#101010",
+    color: '#101010',
     fontSize: 24,
-    fontWeight: "bold",
+    fontWeight: 'bold'
   },
   buttonContainer: {
-    backgroundColor: "#222",
+    backgroundColor: '#222',
     borderRadius: 5,
     padding: 10,
-    margin: 20,
+    margin: 20
   },
   buttonText: {
     fontSize: 20,
-    color: "#fff",
-  },
+    color: '#fff'
+  }
 });
 
 export default Home;
@@ -339,9 +339,9 @@ Add the following mock object for some data in `Home.js`.
 
 ```js
 const character = {
-  name: "Luke Skywalker",
-  home: "Tatooine",
-  species: "human",
+  name: 'Luke Skywalker',
+  home: 'Tatooine',
+  species: 'human'
 };
 ```
 
@@ -350,7 +350,7 @@ Then, in the same screen component file, modify the `TouchableOpacity` and pass 
 ```js
 <TouchableOpacity
   style={styles.buttonContainer}
-  onPress={() => navigation.navigate("Detail", { item: character })}
+  onPress={() => navigation.navigate('Detail', { item: character })}
 >
   <Text style={styles.buttonText}>Who is {character.name}?</Text>
 </TouchableOpacity>
@@ -363,8 +363,8 @@ Here is the output:
 Open `Detail.js` and add the following code snippet. Using `route.params` this screen component can read the parameters passed from the Home screen. Inside the `Detail` component, let us destructure the `route.params` and then display those values.
 
 ```js
-import React from "react";
-import { StyleSheet, View, Text } from "react-native";
+import React from 'react';
+import { StyleSheet, View, Text } from 'react-native';
 
 function Detail(props) {
   const { route } = props;
@@ -385,29 +385,29 @@ function Detail(props) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "#ebebeb",
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#ebebeb'
   },
   text: {
-    color: "#101010",
+    color: '#101010',
     fontSize: 24,
-    fontWeight: "bold",
+    fontWeight: 'bold'
   },
   card: {
     width: 350,
     height: 100,
     borderRadius: 10,
-    backgroundColor: "#101010",
+    backgroundColor: '#101010',
     margin: 10,
     padding: 10,
-    alignItems: "center",
+    alignItems: 'center'
   },
   cardText: {
     fontSize: 18,
-    color: "#ffd700",
-    marginBottom: 5,
-  },
+    color: '#ffd700',
+    marginBottom: 5
+  }
 });
 
 export default Detail;
@@ -428,7 +428,7 @@ This can be done by passing `route` as an object in options for Detail screen in
   name="Detail"
   component={Detail}
   options={({ route }) => ({
-    title: route.params.item.name,
+    title: route.params.item.name
   })}
 />
 ```
@@ -447,12 +447,12 @@ You can use the prop `screenOptions` to apply common styles to the header across
   screenOptions={{
     gestureEnabled: true,
     headerStyle: {
-      backgroundColor: "#101010",
+      backgroundColor: '#101010'
     },
     headerTitleStyle: {
-      fontWeight: "bold",
+      fontWeight: 'bold'
     },
-    headerTintColor: "#ffd700",
+    headerTintColor: '#ffd700'
   }}
 >
   {/* ... */}
@@ -481,13 +481,13 @@ To make an iOS app just to show the back button icon instead of the name of the 
   screenOptions={{
     gestureEnabled: true,
     headerStyle: {
-      backgroundColor: "#101010",
+      backgroundColor: '#101010'
     },
     headerTitleStyle: {
-      fontWeight: "bold",
+      fontWeight: 'bold'
     },
-    headerTintColor: "#ffd700",
-    headerBackTitleVisible: false,
+    headerTintColor: '#ffd700',
+    headerBackTitleVisible: false
   }}
 >
   {/* ... */}
@@ -516,13 +516,13 @@ In the section, let us make the header mode of the Android app behave in the sam
   screenOptions={{
     gestureEnabled: true,
     headerStyle: {
-      backgroundColor: "#101010",
+      backgroundColor: '#101010'
     },
     headerTitleStyle: {
-      fontWeight: "bold",
+      fontWeight: 'bold'
     },
-    headerTintColor: "#ffd700",
-    headerBackTitleVisible: false,
+    headerTintColor: '#ffd700',
+    headerBackTitleVisible: false
   }}
   headerMode="float"
 >
@@ -541,8 +541,8 @@ In this section, let us create a small demo on how you can leverage a helper met
 Start by creating a new file called `Settings.js` inside the `src/screens/` directory and the following component snippet.
 
 ```js
-import React from "react";
-import { StyleSheet, View, Text } from "react-native";
+import React from 'react';
+import { StyleSheet, View, Text } from 'react-native';
 
 function Settings() {
   return (
@@ -555,15 +555,15 @@ function Settings() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "#ebebeb",
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#ebebeb'
   },
   text: {
-    color: "#101010",
+    color: '#101010',
     fontSize: 24,
-    fontWeight: "bold",
-  },
+    fontWeight: 'bold'
+  }
 });
 
 export default Settings;
@@ -572,7 +572,7 @@ export default Settings;
 Next, modify the `MainStackNavigator.js` file and import a new screen.
 
 ```js
-import Settings from "../screens/Settings";
+import Settings from '../screens/Settings';
 ```
 
 Add this newly imported screen to the current `Stack.Navigator`.
@@ -581,15 +581,15 @@ Add this newly imported screen to the current `Stack.Navigator`.
 <Stack.Screen
   name="Settings"
   component={Settings}
-  options={{ title: "Settings" }}
+  options={{ title: 'Settings' }}
 />
 ```
 
 Open, `Detail.js` and modify it to add a button. When this button is pressed, the navigator leads to the Settings screen.
 
 ```js
-import React from "react";
-import { StyleSheet, View, Text, TouchableOpacity } from "react-native";
+import React from 'react';
+import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
 
 function Detail(props) {
   const { route, navigation } = props;
@@ -605,7 +605,7 @@ function Detail(props) {
       </View>
       <TouchableOpacity
         style={styles.buttonContainer}
-        onPress={() => navigation.navigate("Settings")}
+        onPress={() => navigation.navigate('Settings')}
       >
         <Text style={styles.buttonText}>Go to Settings</Text>
       </TouchableOpacity>
@@ -616,39 +616,39 @@ function Detail(props) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "#ebebeb",
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#ebebeb'
   },
   text: {
-    color: "#101010",
+    color: '#101010',
     fontSize: 24,
-    fontWeight: "bold",
+    fontWeight: 'bold'
   },
   card: {
     width: 350,
     height: 100,
     borderRadius: 10,
-    backgroundColor: "#101010",
+    backgroundColor: '#101010',
     margin: 10,
     padding: 10,
-    alignItems: "center",
+    alignItems: 'center'
   },
   cardText: {
     fontSize: 18,
-    color: "#ffd700",
-    marginBottom: 5,
+    color: '#ffd700',
+    marginBottom: 5
   },
   buttonContainer: {
-    backgroundColor: "#222",
+    backgroundColor: '#222',
     borderRadius: 5,
     padding: 10,
-    margin: 20,
+    margin: 20
   },
   buttonText: {
     fontSize: 20,
-    color: "#fff",
-  },
+    color: '#fff'
+  }
 });
 
 export default Detail;
@@ -663,8 +663,8 @@ However, using the helper method `navigation.popToTop()` without any arguments, 
 To accomplish this, modify the `Settings.js` file as below by adding a button. The `onPress` of this button is going to make use of the helper method.
 
 ```js
-import React from "react";
-import { StyleSheet, View, Text, TouchableOpacity } from "react-native";
+import React from 'react';
+import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
 
 function Settings(props) {
   const { navigation } = props;
@@ -684,25 +684,25 @@ function Settings(props) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "#ebebeb",
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#ebebeb'
   },
   text: {
-    color: "#101010",
+    color: '#101010',
     fontSize: 24,
-    fontWeight: "bold",
+    fontWeight: 'bold'
   },
   buttonContainer: {
-    backgroundColor: "#222",
+    backgroundColor: '#222',
     borderRadius: 5,
     padding: 10,
-    margin: 20,
+    margin: 20
   },
   buttonText: {
     fontSize: 20,
-    color: "#fff",
-  },
+    color: '#fff'
+  }
 });
 
 export default Settings;

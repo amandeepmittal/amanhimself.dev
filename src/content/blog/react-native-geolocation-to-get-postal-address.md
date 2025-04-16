@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - expo
-description: ""
+description: ''
 ---
 
 Geolocation in React Native applications is the ability to fetch the geographic position of the device when it is connected to the internet. It takes advantage of an API that provides the current location of the device in the form of Longitude and Latitude coordinates. It can be used to add features such as fetching simple location coordinates of a device or getting the current location of the device. Ultimately, Geolocation provides support to the development functionalities seen in delivery or ride-hailing applications.
@@ -52,14 +52,14 @@ After installing these dependencies, let's create two mock screens that are goin
 Add the following code snippet to this file:
 
 ```js
-import React, { useState, useEffect } from "react";
-import { StyleSheet, Text, View, Image } from "react-native";
+import React, { useState, useEffect } from 'react';
+import { StyleSheet, Text, View, Image } from 'react-native';
 
 const Welcome = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <View style={styles.contentContainer}>
-        <Image source={require("../assets/geo.png")} style={styles.image} />
+        <Image source={require('../assets/geo.png')} style={styles.image} />
         <Text style={styles.title}>What's your address?</Text>
       </View>
       <Text style={styles.text}>Mock Address</Text>
@@ -70,30 +70,30 @@ const Welcome = ({ navigation }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#070707",
-    alignItems: "center",
-    paddingTop: 130,
+    backgroundColor: '#070707',
+    alignItems: 'center',
+    paddingTop: 130
   },
   contentContainer: {
-    alignItems: "center",
-    marginBottom: 20,
+    alignItems: 'center',
+    marginBottom: 20
   },
   image: {
     width: 150,
     height: 150,
-    resizeMode: "contain",
-    marginBottom: 20,
+    resizeMode: 'contain',
+    marginBottom: 20
   },
   title: {
     fontSize: 22,
-    fontWeight: "700",
-    color: "#FD0139",
+    fontWeight: '700',
+    color: '#FD0139'
   },
   text: {
     fontSize: 20,
-    fontWeight: "400",
-    color: "#fff",
-  },
+    fontWeight: '400',
+    color: '#fff'
+  }
 });
 
 export default Welcome;
@@ -102,8 +102,8 @@ export default Welcome;
 Create the second screen file `Home.js` with the following code snippet:
 
 ```js
-import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import React from 'react';
+import { StyleSheet, Text, View } from 'react-native';
 
 const Home = ({ navigation }) => {
   return (
@@ -116,10 +116,10 @@ const Home = ({ navigation }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#070707",
-    alignItems: "center",
-    justifyContent: "center",
-  },
+    backgroundColor: '#070707',
+    alignItems: 'center',
+    justifyContent: 'center'
+  }
 });
 
 export default Home;
@@ -130,13 +130,13 @@ Let's hook up the stack navigation container in the `App.js` file since we do no
 Open up the `App.js` file and add the following:
 
 ```js
-import React from "react";
-import { NavigationContainer } from "@react-navigation/native";
-import { createStackNavigator } from "@react-navigation/stack";
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 
 // Custom screens
-import Welcome from "./screens/Welcome";
-import Home from "./screens/Home";
+import Welcome from './screens/Welcome';
+import Home from './screens/Home';
 
 const Stack = createStackNavigator();
 
@@ -167,14 +167,14 @@ The handler method is then called inside a `useEffect` React hook with no depend
 Modify the `Welcome.js` screen as shown below. Do note the placeholder message displayed in the place of the mock location address using a state variable called `displayCurrentAddress`. It will get an update once the current location of the device is found.
 
 ```js
-import React, { useState, useEffect } from "react";
-import { StyleSheet, Text, View, Image, Alert } from "react-native";
-import * as Location from "expo-location";
+import React, { useState, useEffect } from 'react';
+import { StyleSheet, Text, View, Image, Alert } from 'react-native';
+import * as Location from 'expo-location';
 
 const Welcome = ({ navigation }) => {
   const [locationServiceEnabled, setLocationServiceEnabled] = useState(false);
   const [displayCurrentAddress, setDisplayCurrentAddress] = useState(
-    "Wait, we are fetching you location..."
+    'Wait, we are fetching you location...'
   );
 
   useEffect(() => {
@@ -186,9 +186,9 @@ const Welcome = ({ navigation }) => {
 
     if (!enabled) {
       Alert.alert(
-        "Location Service not enabled",
-        "Please enable your location services to continue",
-        [{ text: "OK" }],
+        'Location Service not enabled',
+        'Please enable your location services to continue',
+        [{ text: 'OK' }],
         { cancelable: false }
       );
     } else {
@@ -199,7 +199,7 @@ const Welcome = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <View style={styles.contentContainer}>
-        <Image source={require("../assets/geo.png")} style={styles.image} />
+        <Image source={require('../assets/geo.png')} style={styles.image} />
         <Text style={styles.title}>What's your address?</Text>
       </View>
       <Text style={styles.text}>{displayCurrentAddress}</Text>
@@ -259,11 +259,11 @@ useEffect(() => {
 const GetCurrentLocation = async () => {
   let { status } = await Location.requestPermissionsAsync();
 
-  if (status !== "granted") {
+  if (status !== 'granted') {
     Alert.alert(
-      "Permission not granted",
-      "Allow the app to use location service.",
-      [{ text: "OK" }],
+      'Permission not granted',
+      'Allow the app to use location service.',
+      [{ text: 'OK' }],
       { cancelable: false }
     );
   }
@@ -274,7 +274,7 @@ const GetCurrentLocation = async () => {
     const { latitude, longitude } = coords;
     let response = await Location.reverseGeocodeAsync({
       latitude,
-      longitude,
+      longitude
     });
 
     for (let item of response) {
@@ -314,7 +314,7 @@ Add the following code snippet after the statement `setDisplayCurrentAddress(add
 ```js
 if (address.length > 0) {
   setTimeout(() => {
-    navigation.navigate("Home", { item: address });
+    navigation.navigate('Home', { item: address });
   }, 2000);
 }
 ```
@@ -322,8 +322,8 @@ if (address.length > 0) {
 Then, update the `Home.js` file to get the `item` object from `route.params` as well as its styles:
 
 ```js
-import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import React from 'react';
+import { StyleSheet, Text, View } from 'react-native';
 
 const Home = ({ route }) => {
   const { item } = route.params;
@@ -340,25 +340,25 @@ const Home = ({ route }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#070707",
-    alignItems: "center",
-    justifyContent: "center",
+    backgroundColor: '#070707',
+    alignItems: 'center',
+    justifyContent: 'center'
   },
   contentContainer: {
     paddingHorizontal: 20,
-    alignItems: "center",
+    alignItems: 'center'
   },
   title: {
     fontSize: 22,
-    fontWeight: "700",
-    color: "#FD0139",
-    paddingBottom: 10,
+    fontWeight: '700',
+    color: '#FD0139',
+    paddingBottom: 10
   },
   text: {
     fontSize: 20,
-    fontWeight: "400",
-    color: "#fff",
-  },
+    fontWeight: '400',
+    color: '#fff'
+  }
 });
 
 export default Home;

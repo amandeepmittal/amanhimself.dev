@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - react-native
-description: ""
+description: ''
 ---
 
 Styling is an important aspect of any mobile application. You cannot put enough emphasis on how important it is for a mobile app to have a pleasing design and good use of colors for the app users to use it in the long term.
@@ -23,7 +23,7 @@ Emotion is a flexible _CSS-in-JS_ library that somehow enforces developers to wr
 React Native tends to follow a certain convention when it comes to styling your app. Such as all CSS property names should be in camelCase such as for background-color in React Native is:
 
 ```css
-background-color: "papayawhip";
+background-color: 'papayawhip';
 ```
 
 Developers coming from a web background, do get uncomfortable by these conventions. Using a third party library like emotion-js can give help you. You do not have to switch between the context of conventions, apart from the properties and React Nativeâ€™s own `flexbox` rules.
@@ -92,9 +92,9 @@ Notice the `Container` is a React Native `View` and has styling attached to it. 
 Here is the complete code for `App.js` file.
 
 ```js
-import React from "react";
-import { StyleSheet, Text, View } from "react-native";
-import styled, { css } from "@emotion/native";
+import React from 'react';
+import { StyleSheet, Text, View } from 'react-native';
+import styled, { css } from '@emotion/native';
 
 export default class App extends React.Component {
   render() {
@@ -129,12 +129,12 @@ Often you will find yourself creating custom components for your apps. This does
 Inside this file, we are going to create a custom button that requires props such as `backgroundColor`, `textColor` and the `text` itself for the title of the button. You are going to use `TouchableOpacity` and `Text` to create this custom button but without importing `react-native` library and create a functional component `CustomButton`.
 
 ```js
-import React from "react";
-import styled, { css } from "@emotion/native";
+import React from 'react';
+import styled, { css } from '@emotion/native';
 
 const CustomButton = props => (
   <ButtonContainer
-    onPress={() => alert("You are using Emotion-JS!")}
+    onPress={() => alert('You are using Emotion-JS!')}
     backgroundColor={props.backgroundColor}
   >
     <ButtonText textColor={props.textColor}>{props.text}</ButtonText>
@@ -165,7 +165,7 @@ To see this custom button in action, import it to the `App.js` file as below.
 
 ```js
 // ... other imports
-import CustomButton from "./components/CustomButton";
+import CustomButton from './components/CustomButton';
 
 // ...
 
@@ -221,8 +221,8 @@ Open up App.js. Declare a new `ContainerView` using styled prop from emotion-js.
 Inside `Titlebar`, it will contain three new elements. One is going to be an image `Avatar` and the other two are text: `Title` and `Name`.
 
 ```js
-import React from "react";
-import styled, { css } from "@emotion/native";
+import React from 'react';
+import styled, { css } from '@emotion/native';
 
 export default class App extends React.Component {
   render() {
@@ -293,7 +293,7 @@ To create an image even with emotion-js, you need the `Image` component from Rea
 
 ```js
 <Titlebar>
-  <Avatar source={require("./assets/avatar.jpg")} />
+  <Avatar source={require('./assets/avatar.jpg')} />
   <Title>Welcome back,</Title>
   <Name>Aman</Name>
 </Titlebar>
@@ -349,8 +349,8 @@ In the case above, we use `top` and `left` and both are set to `0` pixels. You w
 Inside `components/` folder create a new file called `Categories.js`. This file is going to render a list of category items for the Grocery UI app.
 
 ```js
-import React from "react";
-import styled, { css } from "@emotion/native";
+import React from 'react';
+import styled, { css } from '@emotion/native';
 
 const Categories = props => (
   <Container>
@@ -378,7 +378,7 @@ All the data is static right now. Import this component in `App.js` and place it
 ```js
 <Container>
   <Titlebar>
-    <Avatar source={require("./assets/avatar.jpg")} />
+    <Avatar source={require('./assets/avatar.jpg')} />
     <Title>Welcome back,</Title>
     <Name>Aman</Name>
   </Titlebar>
@@ -394,12 +394,12 @@ There can be a number of categories. To make the names of categories dynamic, we
 
 ```js
 const items = [
-  { text: "Fruits" },
-  { text: "Bread" },
-  { text: "Drinks" },
-  { text: "Veggies" },
-  { text: "Meat" },
-  { text: "Paper Goods" },
+  { text: 'Fruits' },
+  { text: 'Bread' },
+  { text: 'Drinks' },
+  { text: 'Veggies' },
+  { text: 'Meat' },
+  { text: 'Paper Goods' }
 ];
 
 // ...
@@ -416,8 +416,8 @@ const items = [
 In the above snippet, you are using `map` function from JavaScript to iterate through an array render a list of items, in this category names. Adding a `key` prop is required. To make this work, also modify `Categories.js`.
 
 ```js
-import React from "react";
-import styled, { css } from "@emotion/native";
+import React from 'react';
+import styled, { css } from '@emotion/native';
 
 const Categories = props => <Name>{props.name}</Name>;
 
@@ -440,7 +440,7 @@ There is no change in the UI.
 This list is right now not scrollable. To make it scrollable, let us place it inside a `ScrollView`. Open up `App.js` file place the categories inside a `ScrollView`, but first, import it from React Native core.
 
 ```js
-import { ScrollView } from "react-native";
+import { ScrollView } from 'react-native';
 
 //...
 <ScrollView>
@@ -516,13 +516,13 @@ In this section, we are going to create a card component that will hold an itemâ
 Create a new component file called `Card.js` inside the `components` directory. The structure of the Card component is going to be.
 
 ```js
-import React from "react";
-import styled, { css } from "@emotion/native";
+import React from 'react';
+import styled, { css } from '@emotion/native';
 
 const Card = props => (
   <Container>
     <Cover>
-      <Image source={require("../assets/pepper.jpg")} />
+      <Image source={require('../assets/pepper.jpg')} />
     </Cover>
     <Content>
       <Title>Pepper</Title>
@@ -590,7 +590,7 @@ If you are getting an image from the static resource as in our case, you use `so
 ```js
 <Image
   source={{
-    uri: "https://facebook.github.io/react-native/docs/assets/favicon.png",
+    uri: 'https://facebook.github.io/react-native/docs/assets/favicon.png'
   }}
 />
 ```

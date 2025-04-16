@@ -1,21 +1,21 @@
 ---
 export interface Props {
   tag: string;
-  size?: "sm" | "lg";
+  size?: 'sm' | 'lg';
 }
 
-const { tag, size = "sm" } = Astro.props;
+const { tag, size = 'sm' } = Astro.props;
 ---
 
 <li
   class={`inline-block ${
-    size === "sm" ? "my-1 underline-offset-4" : "my-3 mx-1 underline-offset-8"
+    size === 'sm' ? 'my-1 underline-offset-4' : 'my-3 mx-1 underline-offset-8'
   }`}
 >
   <a
     href={`/tags/${tag}/`}
     transition:name={tag}
-    class={`${size === "sm" ? "text-sm" : "text-lg"} pr-2 group`}
+    class={`${size === 'sm' ? 'text-sm' : 'text-lg'} pr-2 group`}
   >
     #<span>{tag}</span>
   </a>

@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - nodejs
-description: ""
+description: ''
 ---
 
 Often at times, I find my self struggling with Sequelize to find a direct answer for my query. Recently, I have been working on a fullstack application in which there was a basic requirement of paginating results from backend (REST API) to the frontend. I struggled for two reasons. Firstly, coming from NoSQL background it’s hard to grasp SQL DBs. Second reason being is Sequelize documentation does not provide a clear and direct solution to this very basic abstraction. Lot of people assume things in the world of SQL databases.
@@ -19,28 +19,28 @@ Thus, in this post we will be talking about a basic paginating module using Sequ
 I am directly jumping on `user` model definition:
 
 ```js
-"use strict";
+'use strict';
 module.exports = function (sequelize, DataTypes) {
   var user = sequelize.define(
-    "user",
+    'user',
     {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
-        type: DataTypes.INTEGER,
+        type: DataTypes.INTEGER
       },
       username: DataTypes.INTEGER,
       first_name: DataTypes.STRING,
       last_name: DataTypes.STRING,
       date_of_birth: DataTypes.STRING,
       created: DataTypes.INTEGER,
-      updated: DataTypes.INTEGER,
+      updated: DataTypes.INTEGER
     },
     {
       timestamps: false,
       freezeTableName: true,
-      underscore: true,
+      underscore: true
     }
   );
   return user;
@@ -52,7 +52,7 @@ I am using that we a table that contains hundred of user records that we want to
 In the `api/user.js` I am defining an endpoint `/:page` that will fetch number of results we need from the database.
 
 ```js
-router.get("/:page", (req, res) => {
+router.get('/:page', (req, res) => {
   let limit = 50; // number of records per page
   let offset = 0;
   db.user
@@ -63,10 +63,10 @@ router.get("/:page", (req, res) => {
       offset = limit * (page - 1);
       db.user
         .findAll({
-          attributes: ["id", "first_name", "last_name", "date_of_birth"],
+          attributes: ['id', 'first_name', 'last_name', 'date_of_birth'],
           limit: limit,
           offset: offset,
-          $sort: { id: 1 },
+          $sort: { id: 1 }
         })
         .then(users => {
           res
@@ -75,7 +75,7 @@ router.get("/:page", (req, res) => {
         });
     })
     .catch(function (error) {
-      res.status(500).send("Internal Server Error");
+      res.status(500).send('Internal Server Error');
     });
 });
 ```

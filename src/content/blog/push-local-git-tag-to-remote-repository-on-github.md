@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - git
-description: ""
+description: ''
 ---
 
 After creating a git tag locally on a local project, I needed to push it on GitHub. The reason is that I'm hosting the project repository on GitHub.

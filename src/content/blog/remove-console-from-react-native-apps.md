@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - react-native
-description: ""
+description: ''
 ---
 
 <!-- ![cover_image](https://i.imgur.com/wTa1g5A.png) -->
@@ -32,9 +32,9 @@ module.exports = function () {
     // ... other project config such as presets and plugins
     env: {
       production: {
-        plugins: ["transform-remove-console"],
-      },
-    },
+        plugins: ['transform-remove-console']
+      }
+    }
   };
 };
 ```

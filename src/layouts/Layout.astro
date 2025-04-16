@@ -1,6 +1,6 @@
 ---
-import { LOCALE, SITE } from "@config";
-import "@styles/base.css";
+import { LOCALE, SITE } from '@config';
+import '@styles/base.css';
 // import { ViewTransitions } from "astro:transitions";
 
 const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
@@ -24,11 +24,11 @@ const {
   canonicalURL = new URL(Astro.url.pathname, Astro.site).href,
   pubDatetime,
   modDatetime,
-  scrollSmooth = false,
+  scrollSmooth = false
 } = Astro.props;
 
 const socialImageURL = new URL(
-  ogImage ?? SITE.ogImage ?? "og.png",
+  ogImage ?? SITE.ogImage ?? 'og.png',
   Astro.url.origin
 ).href;
 ---
@@ -36,7 +36,7 @@ const socialImageURL = new URL(
 <!doctype html>
 <html
   lang=`${LOCALE.lang ?? "en"}`
-  class={`${scrollSmooth && "scroll-smooth"}`}
+  class={`${scrollSmooth && 'scroll-smooth'}`}
 >
   <head>
     <meta charset="UTF-8" />

@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - nodejs
-description: ""
+description: ''
 ---
 
 > [Originally Published at Codeburst.io](https://codeburst.io/tips-for-creating-node-js-rest-apis-dfa0b2adb39c)
@@ -51,10 +51,10 @@ If using Express, most commonly framework used with Nodejs to create APIs, consi
 
 ```js
 // in case 5xx
-res.status(500).send({ error: "Internal Server Error." });
+res.status(500).send({ error: 'Internal Server Error.' });
 
 // in case 4xx, unauthorized
-res.status(401).send({ error: "Unauthorized. Please check." });
+res.status(401).send({ error: 'Unauthorized. Please check.' });
 ```
 
 ## Consider Creating an API Documentation

@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - react-native
-description: ""
+description: ''
 ---
 
 AWS Amplify is a fantastic framework that helps you develop your web or mobile applications quickly. Not only it enhances your current tech stack but actually has many features in-built that you don't have to worry about especially when your app is in the development process.
@@ -120,13 +120,13 @@ yarn add aws-amplify aws-amplify-react-native
 Both of these packages are required. The package `aws-amplify` allows you to make requests to the auth and API services provided by AWS. The other one is framework specific which contains ready-to-use UI components. After these dependencies are installed, open `App.js` file and add the following.
 
 ```js
-import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import React from 'react';
+import { StyleSheet, Text, View } from 'react-native';
 
 // --- This is the part to add
 
-import Amplify from "aws-amplify";
-import config from "./aws-exports";
+import Amplify from 'aws-amplify';
+import config from './aws-exports';
 
 Amplify.configure(config);
 
@@ -145,10 +145,10 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center'
+  }
 });
 ```
 
@@ -201,13 +201,13 @@ Enough with the configuration part. Let us work with some app code. For React Na
 Open up the file `App.js` and the following.
 
 ```js
-import React from "react";
-import { StyleSheet, Text, View } from "react-native";
-import Amplify from "aws-amplify";
-import config from "./aws-exports";
+import React from 'react';
+import { StyleSheet, Text, View } from 'react-native';
+import Amplify from 'aws-amplify';
+import config from './aws-exports';
 
 // New ----
-import { withAuthenticator } from "aws-amplify-react-native";
+import { withAuthenticator } from 'aws-amplify-react-native';
 
 Amplify.configure(config);
 
@@ -224,10 +224,10 @@ class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center'
+  }
 });
 
 // New ----

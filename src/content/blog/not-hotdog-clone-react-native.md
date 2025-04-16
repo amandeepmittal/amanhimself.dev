@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - expo
-description: ""
+description: ''
 ---
 
 If you're a fan of HBO's Silicon Valley, you'll remember when they launched a real AI-powered mobile app that classifies hotdogs from a given image (or not). Using Google's Vision API, let's try to recreate a working model of the application in React Native.
@@ -91,16 +91,16 @@ expo-image-picker uuid react-native-elements
 Now that the project is generated open the directory in your favorite text editor. Then create a new folder called `config` and inside it, a new file called `Firebase.js`. This file will be responsible for integrating Firebase with the Expo app.
 
 ```js
-import * as firebase from "firebase";
+import * as firebase from 'firebase';
 
 const firebaseConfig = {
-  apiKey: "XXXX",
-  authDomain: "XXXX",
-  databaseURL: "XXXX",
-  projectId: "XXXX",
-  storageBucket: "XXXX",
-  messagingSenderId: "XXXX",
-  appId: "XXXX",
+  apiKey: 'XXXX',
+  authDomain: 'XXXX',
+  databaseURL: 'XXXX',
+  projectId: 'XXXX',
+  storageBucket: 'XXXX',
+  messagingSenderId: 'XXXX',
+  appId: 'XXXX'
 };
 
 // Initialize Firebase
@@ -140,7 +140,7 @@ Now, go back to the **Dashboard** and go to **Credentials** to generate an API k
 Once it is done, save the API key in `App.js` file after all the import statements.
 
 ```js
-const VISION_API_KEY = "XXXX";
+const VISION_API_KEY = 'XXXX';
 ```
 
 The setup is complete. Let us move to the next section and start building the application.
@@ -154,7 +154,7 @@ Camera roll is used in a case where the user wants to upload an image. For iOS s
 Import the permissions module in `App.js` file.
 
 ```js
-import * as Permissions from "expo-permissions";
+import * as Permissions from 'expo-permissions';
 ```
 
 Next step is to set an initial state that will control the `View` in the `render` method by determining whether the user has granted the permission to your app to use Camera and Camera roll or not.
@@ -253,8 +253,8 @@ Using `react-native-elements` UI library for React Native, let us quickly create
 Import the `Header` component from the `react-native-elements` library.
 
 ```js
-import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
-import { Header, Icon } from "react-native-elements";
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { Header, Icon } from 'react-native-elements';
 ```
 
 The UI library has a pre-defined component called `Header` that you can use right away. This component accepts the icons on the left and right side. Since the app needs these icons to be clickable, use `TouchableOpacity` such that its `prop` can be later used to open the camera or the camera roll.
@@ -262,19 +262,19 @@ The UI library has a pre-defined component called `Header` that you can use righ
 ```js
 <View style={styles.container}>
   <Header
-    statusBarProps={{ barStyle: "light-content" }}
+    statusBarProps={{ barStyle: 'light-content' }}
     backgroundColor="black"
     leftComponent={
-      <TouchableOpacity onPress={() => alert("soon")}>
+      <TouchableOpacity onPress={() => alert('soon')}>
         <Icon name="photo-album" color="#fff" />
       </TouchableOpacity>
     }
     centerComponent={{
-      text: "Not Hotdog?",
-      style: { color: "#fff", fontSize: 20, fontWeight: "bold" },
+      text: 'Not Hotdog?',
+      style: { color: '#fff', fontSize: 20, fontWeight: 'bold' }
     }}
     rightComponent={
-      <TouchableOpacity onPress={() => alert("soon")}>
+      <TouchableOpacity onPress={() => alert('soon')}>
         <Icon name="camera-alt" color="#fff" />
       </TouchableOpacity>
     }
@@ -299,22 +299,22 @@ The next element to add in the initial state object is `uploading` with a value 
 ```js
 state = {
   //... rest,
-  uploading: false,
+  uploading: false
 };
 
 // also make sure to include deconstruct the state inside render()
 const {
   hasGrantedCameraPermission,
   hasGrantedCameraRollPermission,
-  uploading,
+  uploading
 } = this.state;
 ```
 
 Create a new file inside `components/UploadingOverlay.js`. This file is going to contain a presentational component with the same name as the filename. Using `ActivityIndicator` from `react-native` you can animate this component by using its prop called `animating`.
 
 ```js
-import React from "react";
-import { ActivityIndicator, StyleSheet, View } from "react-native";
+import React from 'react';
+import { ActivityIndicator, StyleSheet, View } from 'react-native';
 
 const UploadingOverlay = () => (
   <View style={[StyleSheet.absoluteFill, styles.overlay]}>
@@ -324,10 +324,10 @@ const UploadingOverlay = () => (
 
 const styles = StyleSheet.create({
   overlay: {
-    backgroundColor: "rgba(255,255,255,0.9)",
-    alignItems: "center",
-    justifyContent: "center",
-  },
+    backgroundColor: 'rgba(255,255,255,0.9)',
+    alignItems: 'center',
+    justifyContent: 'center'
+  }
 });
 
 export default UploadingOverlay;
@@ -340,7 +340,7 @@ For example, when asking permission to access the Camera, a dialog box appeared 
 Now, go back to `App.js` and add this component at the bottom of the `render()` section, just before the root `View` component is ending. Do not forget to import the component.
 
 ```js
-import UploadingOverlay from "./components/UploadingOverlay";
+import UploadingOverlay from './components/UploadingOverlay';
 
 // ... rest
 {
@@ -359,8 +359,8 @@ An endless spinner will continue to appear. Set the value of `uploading` back to
 In this section, you are going to add the functionality of accessing Camera and Camera Roll by defining three different handler functions in `App` component. Make sure you are inside the file `App.js`. First, import the following statement since this section is going to make use of Firebase's storage and `uuid` module to create a unique referent to each image.
 
 ```js
-import firebase from "./config/Firebase";
-import uuid from "uuid";
+import firebase from './config/Firebase';
+import uuid from 'uuid';
 ```
 
 Next, modify the initial state of the object to add the following for the final time.
@@ -371,14 +371,14 @@ state = {
   hasGrantedCameraRollPermission: false,
   uploading: false,
   image: null,
-  googleResponse: false,
+  googleResponse: false
 };
 ```
 
 To enable both of these functionalities in the current app, let us leverage another Expo module called `expo-image-picker`. First, import the module after the rest of the import statements.
 
 ```js
-import * as ImagePicker from "expo-image-picker";
+import * as ImagePicker from 'expo-image-picker';
 ```
 
 Expo documentation has the best definition of what this module is used for. Take a look.
@@ -391,7 +391,7 @@ That's all you need right now. Define the first function, `takePhoto` that is go
 takePhoto = async () => {
   let pickerResult = await ImagePicker.launchCameraAsync({
     allowsEditing: true,
-    aspect: [4, 3],
+    aspect: [4, 3]
   });
 
   this.handleImagePicked(pickerResult);
@@ -409,7 +409,7 @@ Similarly, `ImagePicker.launchImageLibraryAsync()` is used with the same set of 
 pickImage = async () => {
   let pickerResult = await ImagePicker.launchImageLibraryAsync({
     allowsEditing: true,
-    aspect: [16, 9],
+    aspect: [16, 9]
   });
 
   this.handleImagePicked(pickerResult);
@@ -429,7 +429,7 @@ handleImagePicked = async pickerResult => {
     }
   } catch (e) {
     console.log(e);
-    alert("Image Upload failed");
+    alert('Image Upload failed');
   } finally {
     this.setState({ uploading: false });
   }
@@ -449,10 +449,10 @@ async function uploadImageAsync(uri) {
     };
     xhr.onerror = function (e) {
       console.log(e);
-      reject(new TypeError("Network request failed"));
+      reject(new TypeError('Network request failed'));
     };
-    xhr.responseType = "blob";
-    xhr.open("GET", uri, true);
+    xhr.responseType = 'blob';
+    xhr.open('GET', uri, true);
     xhr.send(null);
   });
 
@@ -471,7 +471,7 @@ Now you can add both the functions, `pickImage` and `takePhoto` as the value of 
 
 ```js
 <Header
-  statusBarProps={{ barStyle: "light-content" }}
+  statusBarProps={{ barStyle: 'light-content' }}
   backgroundColor="#000"
   leftComponent={
     <TouchableOpacity onPress={this.pickImage}>
@@ -479,8 +479,8 @@ Now you can add both the functions, `pickImage` and `takePhoto` as the value of 
     </TouchableOpacity>
   }
   centerComponent={{
-    text: "Not Hotdog?",
-    style: styles.headerCenter,
+    text: 'Not Hotdog?',
+    style: styles.headerCenter
   }}
   rightComponent={
     <TouchableOpacity onPress={this.takePhoto}>
@@ -510,24 +510,24 @@ submitToGoogle = async () => {
     let body = JSON.stringify({
       requests: [
         {
-          features: [{ type: "LABEL_DETECTION", maxResults: 7 }],
+          features: [{ type: 'LABEL_DETECTION', maxResults: 7 }],
           image: {
             source: {
-              imageUri: image,
-            },
-          },
-        },
-      ],
+              imageUri: image
+            }
+          }
+        }
+      ]
     });
     let response = await fetch(
       `https://vision.googleapis.com/v1/images:annotate?key=${VISION_API_KEY}`,
       {
         headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
+          Accept: 'application/json',
+          'Content-Type': 'application/json'
         },
-        method: "POST",
-        body: body,
+        method: 'POST',
+        body: body
       }
     );
     let responseJson = await response.json();
@@ -536,13 +536,13 @@ submitToGoogle = async () => {
     );
 
     let result =
-      getLabel.includes("Hot dog") ||
-      getLabel.includes("hot dog") ||
-      getLabel.includes("Hot dog bun");
+      getLabel.includes('Hot dog') ||
+      getLabel.includes('hot dog') ||
+      getLabel.includes('Hot dog bun');
 
     this.setState({
       googleResponse: result,
-      uploading: false,
+      uploading: false
     });
   } catch (error) {
     console.log(error);
@@ -643,41 +643,41 @@ Here is complete source code for `StyleSheet` object.
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#cafafe",
+    backgroundColor: '#cafafe'
   },
   headerCenter: {
-    color: "#fff",
+    color: '#fff',
     fontSize: 20,
-    fontWeight: "bold",
+    fontWeight: 'bold'
   },
   renderImageContainer: {
     marginTop: 20,
-    alignItems: "center",
+    alignItems: 'center'
   },
   button: {
-    backgroundColor: "#97caef",
+    backgroundColor: '#97caef',
     borderRadius: 10,
     width: 150,
-    height: 50,
+    height: 50
   },
   buttonTitle: {
-    fontWeight: "600",
+    fontWeight: '600'
   },
   imageContainer: {
     margin: 25,
-    alignItems: "center",
+    alignItems: 'center'
   },
   imageDisplay: {
     width: 300,
-    height: 300,
+    height: 300
   },
   title: {
-    fontSize: 36,
+    fontSize: 36
   },
   hotdogEmoji: {
     marginTop: 20,
-    fontSize: 90,
-  },
+    fontSize: 90
+  }
 });
 
 export default App;

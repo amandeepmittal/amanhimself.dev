@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - ionic
-description: ""
+description: ''
 ---
 
 In this post, I will be showing you to change font in any Ionic 2/3 application. To start with, I will be setting up a new ionic project such that you can refer back to on Github.
@@ -38,8 +38,8 @@ Now since we want this font to be used at the global level of application, open 
 
 ```css
 @font-face {
-  font-family: "Revalia";
-  src: url("../assets/fonts/revalia.woff2") format("woff2");
+  font-family: 'Revalia';
+  src: url('../assets/fonts/revalia.woff2') format('woff2');
 }
 
 * {

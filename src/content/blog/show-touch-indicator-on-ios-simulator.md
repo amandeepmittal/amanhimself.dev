@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - xcode
-description: ""
+description: ''
 ---
 
 Sometimes it is necessary to highlight a single touch event on the iOS simulator's screen and show the tap that registers it. For example, this is useful when recording a video or a [gif](https://en.wikipedia.org/wiki/GIF) using the simulator.

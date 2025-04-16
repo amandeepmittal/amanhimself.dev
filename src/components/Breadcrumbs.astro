@@ -1,25 +1,25 @@
 ---
 // Remove current url path and remove trailing slash if exists
-const currentUrlPath = Astro.url.pathname.replace(/\/+$/, "");
+const currentUrlPath = Astro.url.pathname.replace(/\/+$/, '');
 
 // Get url array from path
 // eg: /tags/tailwindcss => ['tags', 'tailwindcss']
-const breadcrumbList = currentUrlPath.split("/").slice(1);
+const breadcrumbList = currentUrlPath.split('/').slice(1);
 
 // if breadcrumb is Home > Posts > 1 <etc>
 // replace Posts with Posts (page number)
-breadcrumbList[0] === "posts" &&
+breadcrumbList[0] === 'posts' &&
   breadcrumbList.splice(0, 2, `Posts (page ${breadcrumbList[1] || 1})`);
 
 // if breadcrumb is Home > Tags > [tag] > [page] <etc>
 // replace [tag] > [page] with [tag] (page number)
-breadcrumbList[0] === "tags" &&
+breadcrumbList[0] === 'tags' &&
   !isNaN(Number(breadcrumbList[2])) &&
   breadcrumbList.splice(
     1,
     3,
     `${breadcrumbList[1]} ${
-      Number(breadcrumbList[2]) === 1 ? "" : "(page " + breadcrumbList[2] + ")"
+      Number(breadcrumbList[2]) === 1 ? '' : '(page ' + breadcrumbList[2] + ')'
     }`
   );
 ---
@@ -35,7 +35,7 @@ breadcrumbList[0] === "tags" &&
         index + 1 === breadcrumbList.length ? (
           <li>
             <span
-              class={`${index > 0 ? "lowercase" : "capitalize"}`}
+              class={`${index > 0 ? 'lowercase' : 'capitalize'}`}
               aria-current="page"
             >
               {/* make the last part lowercase in Home > Tags > some-tag */}

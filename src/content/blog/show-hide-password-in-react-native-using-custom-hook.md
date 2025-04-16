@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - react-native
-description: ""
+description: ''
 ---
 
 > Updated on May 24, 2023
@@ -17,11 +17,11 @@ Building log-in and sign-up forms in a React Native app are fundamentally compos
 Take a look at an example of the `TextInput` component that is used to create a password field.
 
 ```js
-import { useState } from "react";
-import { StyleSheet, TextInput, View } from "react-native";
+import { useState } from 'react';
+import { StyleSheet, TextInput, View } from 'react-native';
 
 export default function App() {
-  const [password, setPassword] = useState("");
+  const [password, setPassword] = useState('');
 
   return (
     <View style={styles.container}>
@@ -46,25 +46,25 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#F5EEDC",
-    alignItems: "center",
-    justifyContent: "center",
-    paddingHorizontal: 12,
+    backgroundColor: '#F5EEDC',
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingHorizontal: 12
   },
   inputContainer: {
-    backgroundColor: "white",
-    width: "100%",
+    backgroundColor: 'white',
+    width: '100%',
     borderRadius: 8,
-    flexDirection: "row",
-    alignItems: "center",
+    flexDirection: 'row',
+    alignItems: 'center',
     borderWidth: 4,
-    borderColor: "#d7d7d7",
+    borderColor: '#d7d7d7'
   },
   inputField: {
     padding: 14,
     fontSize: 22,
-    width: "90%",
-  },
+    width: '90%'
+  }
 });
 ```
 
@@ -90,7 +90,7 @@ Then define a function called `useTogglePasswordVisibility`. Inside this functio
 ```js
 export const useTogglePasswordVisibility = () => {
   const [passwordVisibility, setPasswordVisibility] = useState(true);
-  const [rightIcon, setRightIcon] = useState("eye");
+  const [rightIcon, setRightIcon] = useState('eye');
 
   // ...
 };
@@ -101,14 +101,14 @@ Next, add a method called `handlePasswordVisibility` that will allow the app use
 ```js
 export const useTogglePasswordVisibility = () => {
   const [passwordVisibility, setPasswordVisibility] = useState(true);
-  const [rightIcon, setRightIcon] = useState("eye");
+  const [rightIcon, setRightIcon] = useState('eye');
 
   const handlePasswordVisibility = () => {
-    if (rightIcon === "eye") {
-      setRightIcon("eye-off");
+    if (rightIcon === 'eye') {
+      setRightIcon('eye-off');
       setPasswordVisibility(!passwordVisibility);
-    } else if (rightIcon === "eye-off") {
-      setRightIcon("eye");
+    } else if (rightIcon === 'eye-off') {
+      setRightIcon('eye');
       setPasswordVisibility(!passwordVisibility);
     }
   };
@@ -116,7 +116,7 @@ export const useTogglePasswordVisibility = () => {
   return {
     passwordVisibility,
     rightIcon,
-    handlePasswordVisibility,
+    handlePasswordVisibility
   };
 };
 ```
@@ -126,11 +126,11 @@ export const useTogglePasswordVisibility = () => {
 Start by updating import statements in the `App.js` file:
 
 ```js
-import { useState } from "react";
-import { StyleSheet, Pressable, TextInput, View } from "react-native";
-import { MaterialCommunityIcons } from "@expo/vector-icons";
+import { useState } from 'react';
+import { StyleSheet, Pressable, TextInput, View } from 'react-native';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 
-import { useTogglePasswordVisibility } from "./hook/useTogglePasswordVisibility";
+import { useTogglePasswordVisibility } from './hook/useTogglePasswordVisibility';
 ```
 
 Next, access the required variables and method from the `useTogglePasswordVisibility` hook. Add the following line at the top of the `App` component:
@@ -139,7 +139,7 @@ Next, access the required variables and method from the `useTogglePasswordVisibi
 export default function App() {
   const { passwordVisibility, rightIcon, handlePasswordVisibility } =
     useTogglePasswordVisibility();
-  const [password, setPassword] = useState("");
+  const [password, setPassword] = useState('');
 
   // ...
 }
@@ -172,16 +172,16 @@ That's all! Here is the output after this step:
 Here is the complete code for the `App.js` file:
 
 ```js
-import React, { useState } from "react";
-import { StyleSheet, Pressable, TextInput, View } from "react-native";
-import { MaterialCommunityIcons } from "@expo/vector-icons";
+import React, { useState } from 'react';
+import { StyleSheet, Pressable, TextInput, View } from 'react-native';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 
-import { useTogglePasswordVisibility } from "./hook/useTogglePasswordVisibility";
+import { useTogglePasswordVisibility } from './hook/useTogglePasswordVisibility';
 
 export default function App() {
   const { passwordVisibility, rightIcon, handlePasswordVisibility } =
     useTogglePasswordVisibility();
-  const [password, setPassword] = useState("");
+  const [password, setPassword] = useState('');
 
   return (
     <View style={styles.container}>
@@ -209,24 +209,24 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#F5EEDC",
-    alignItems: "center",
-    justifyContent: "center",
-    paddingHorizontal: 12,
+    backgroundColor: '#F5EEDC',
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingHorizontal: 12
   },
   inputContainer: {
-    backgroundColor: "white",
-    width: "100%",
+    backgroundColor: 'white',
+    width: '100%',
     borderRadius: 8,
-    flexDirection: "row",
-    alignItems: "center",
+    flexDirection: 'row',
+    alignItems: 'center',
     borderWidth: 4,
-    borderColor: "#d7d7d7",
+    borderColor: '#d7d7d7'
   },
   inputField: {
     padding: 14,
     fontSize: 22,
-    width: "90%",
-  },
+    width: '90%'
+  }
 });
 ```

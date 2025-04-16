@@ -1,5 +1,5 @@
 ---
-title: "What is Ionic"
+title: 'What is Ionic'
 author: Aman Mittal
 pubDatetime: 2017-10-12T03:42:51Z
 slug: what-is-ionic
@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - ionic
-description: ""
+description: ''
 ---
 
 Ionic is an open source, front-end SDK for developing Hybrid Mobile Applications using web technologies such as HTML, CSS and JavaScript. It provides mobile optimised web technology based components as well as native APIs using Cordova and Ionic Native.

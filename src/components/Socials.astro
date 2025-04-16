@@ -1,7 +1,7 @@
 ---
-import { SOCIALS } from "@config";
-import LinkButton from "./LinkButton.astro";
-import socialIcons from "@assets/socialIcons";
+import { SOCIALS } from '@config';
+import LinkButton from './LinkButton.astro';
+import socialIcons from '@assets/socialIcons';
 
 export interface Props {
   centered?: boolean;
@@ -10,7 +10,7 @@ export interface Props {
 const { centered = false } = Astro.props;
 ---
 
-<div class={`social-icons ${centered ? "flex" : ""}`}>
+<div class={`social-icons ${centered ? 'flex' : ''}`}>
   {
     SOCIALS.filter(social => social.active).map(social => (
       <LinkButton

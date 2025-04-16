@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - git
-description: ""
+description: ''
 ---
 
 Resolving merge conflicts can sometimes be difficult, and using the GitHub UI may not always be the most effective solution. As the complexity of the conflicts increases, it may be necessary to rely on tools on your local machine rather than the web interface provided by GitHub.

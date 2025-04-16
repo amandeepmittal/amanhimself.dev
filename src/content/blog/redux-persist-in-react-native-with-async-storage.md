@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - react-native
-description: ""
+description: ''
 ---
 
 [Redux persist](https://github.com/rt2zz/redux-persist) is a library that allows saving a Redux store in the local storage of an application. In React Native terms, [Asyncstorage](https://jscrambler.com/blog/how-to-use-react-native-asyncstorage) is a key value-based, unencrypted, asynchronous storage system that is global and can be used as the local storage for the app.
@@ -51,8 +51,8 @@ masked-view @react-native-async-storage/async-storage
 After installing these dependencies, let's create two mock screens that are going to be the core screens for the demo app. Create a new `screens/` directory and inside it, create the first screen file `BooksList.js` with the following code snippet:
 
 ```js
-import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import React from 'react';
+import { StyleSheet, Text, View } from 'react-native';
 
 export default function BooksListApp() {
   return (
@@ -65,18 +65,18 @@ export default function BooksListApp() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center'
+  }
 });
 ```
 
 Then create the second screen file `BookmarksList.js` with the following code snippet:
 
 ```js
-import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import React from 'react';
+import { StyleSheet, Text, View } from 'react-native';
 
 export default function BookmarksList() {
   return (
@@ -89,10 +89,10 @@ export default function BookmarksList() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center'
+  }
 });
 ```
 
@@ -103,7 +103,7 @@ Each book item shown on this screen is going to have a functionality for the end
 Since a Base URL is required to fetch the data, let's add it. Create a new directory called `config/` and inside it create a file called `index.js` and export the following Base URL:
 
 ```js
-export const BASE_URL = "https://example-data.draftbit.com/books?_limit=10";
+export const BASE_URL = 'https://example-data.draftbit.com/books?_limit=10';
 ```
 
 Now, this Base URL is ready to use to send HTTP requests.
@@ -113,14 +113,14 @@ Now, this Base URL is ready to use to send HTTP requests.
 In this section, let's create a custom tab navigator at the bottom for the app to display the two mock screens created in the previous section. Start by creating a `navigation/` directory and inside a new file called `RootNavigator.js`. Add the following import statements in this file:
 
 ```js
-import React from "react";
-import { NavigationContainer } from "@react-navigation/native";
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { MaterialCommunityIcons } from "@expo/vector-icons";
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 // Import mock screens
-import BooksList from "../screens/BooksList";
-import BookmarksList from "../screens/BookmarksList";
+import BooksList from '../screens/BooksList';
+import BookmarksList from '../screens/BookmarksList';
 
 const Tab = createBottomTabNavigator();
 ```
@@ -130,23 +130,23 @@ To customize the tab bar appearance, let's add some styling and custom icons fro
 ```js
 const tabBarOptions = {
   showLabel: false,
-  inactiveTintColor: "#2D3038",
-  activeTintColor: "#FFFFFF",
+  inactiveTintColor: '#2D3038',
+  activeTintColor: '#FFFFFF',
   style: {
-    height: "10%",
-    backgroundColor: "#1E1B26",
-  },
+    height: '10%',
+    backgroundColor: '#1E1B26'
+  }
 };
 
 const screenOptions = (route, color) => {
   let iconName;
 
   switch (route.name) {
-    case "BooksList":
-      iconName = "view-dashboard";
+    case 'BooksList':
+      iconName = 'view-dashboard';
       break;
-    case "BookmarksList":
-      iconName = "bookmark-multiple-outline";
+    case 'BookmarksList':
+      iconName = 'bookmark-multiple-outline';
       break;
     default:
       break;
@@ -168,7 +168,7 @@ const RootNavigator = () => {
         initialRouteName="BooksList"
         tabBarOptions={tabBarOptions}
         screenOptions={({ route }) => ({
-          tabBarIcon: ({ color }) => screenOptions(route, color),
+          tabBarIcon: ({ color }) => screenOptions(route, color)
         })}
       >
         <Tab.Screen name="BooksList" component={BooksList} />
@@ -184,9 +184,9 @@ export default RootNavigator;
 To see the `RootNavigator` in action, import it inside the `App.js` file and return it. Add the following code snippet to the `App.js` file:
 
 ```js
-import React from "react";
+import React from 'react';
 
-import RootNavigator from "./navigation/RootNavigator";
+import RootNavigator from './navigation/RootNavigator';
 
 export default function App() {
   return <RootNavigator />;
@@ -207,9 +207,9 @@ Let us begin by defining action types. Create a new directory called `redux/` an
 
 ```js
 // Define action types
-export const GET_BOOKS = "GET_BOOKS";
-export const ADD_TO_BOOKMARK_LIST = "ADD_TO_BOOKMARK_LIST";
-export const REMOVE_FROM_BOOKMARK_LIST = "REMOVE_FROM_BOOKMARK_LIST";
+export const GET_BOOKS = 'GET_BOOKS';
+export const ADD_TO_BOOKMARK_LIST = 'ADD_TO_BOOKMARK_LIST';
+export const REMOVE_FROM_BOOKMARK_LIST = 'REMOVE_FROM_BOOKMARK_LIST';
 ```
 
 Action types defined in the above file are self-explanatory. The first one, `GET_BOOKS`, is going to be used to make the HTTP request to fetch the data from the Base URL. The second, `ADD_TO_BOOKMARK_LIST`, is going to add each book item to the list of bookmarks. Similarly, the third action type `REMOVE_FROM_BOOKMARK_LIST` is going to remove the book from the list of bookmarks.
@@ -221,9 +221,9 @@ To fetch data, we will use a library called `axios`. It has an API of methods su
 To make the HTTP request to retrieve the data, a `BASE URL` of the API is required. Inside the `actions.js` file, import the `axios` library and the Base URL:
 
 ```js
-import axios from "axios";
+import axios from 'axios';
 
-import { BASE_URL } from "../config";
+import { BASE_URL } from '../config';
 ```
 
 After defining the action types, define a new action creator called `getBooks` that has the action type of `GET_BOOKS` with the following code snippet:
@@ -236,10 +236,10 @@ export const getBooks = () => {
       if (response.data) {
         dispatch({
           type: GET_BOOKS,
-          payload: response.data,
+          payload: response.data
         });
       } else {
-        console.log("Unable to fetch data from the API BASE URL!");
+        console.log('Unable to fetch data from the API BASE URL!');
       }
     };
   } catch (error) {
@@ -258,11 +258,11 @@ A reducer is a pure function that calculates the next state based on the initial
 Create a new file in the `redux/` directory called `reducers.js`. Import the action type `GET_BOOKS` and then define the initial state with two empty arrays. Then define a `booksReducer` function that takes `initialState` as the default value for the first argument, and `action` as the second argument.
 
 ```js
-import { GET_BOOKS } from "./actions";
+import { GET_BOOKS } from './actions';
 
 const initialState = {
   books: [],
-  bookmarks: [],
+  bookmarks: []
 };
 
 function booksReducer(state = initialState, action) {
@@ -290,10 +290,10 @@ The middleware function `thunk` allows a redux store to make asynchronous AJAX r
 Add the following code snippet to it:
 
 ```js
-import { createStore, combineReducers, applyMiddleware } from "redux";
-import thunk from "redux-thunk";
+import { createStore, combineReducers, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
 
-import booksReducer from "./reducers";
+import booksReducer from './reducers';
 
 const rootReducer = combineReducers({ booksReducer });
 
@@ -305,11 +305,11 @@ To bind this Redux store in the React Native app, open the entry point file `App
 Modify the `App.js` file as shown below:
 
 ```js
-import React from "react";
-import { Provider } from "react-redux";
+import React from 'react';
+import { Provider } from 'react-redux';
 
-import { store } from "./redux/store";
-import RootNavigator from "./navigation/RootNavigator";
+import { store } from './redux/store';
+import RootNavigator from './navigation/RootNavigator';
 
 export default function App() {
   return (
@@ -351,9 +351,9 @@ The `books` fetched from the API is an array and is passed as the value for the 
 
 ```js
 return (
-  <SafeAreaView style={{ flex: 1, backgroundColor: "#1E1B26" }}>
+  <SafeAreaView style={{ flex: 1, backgroundColor: '#1E1B26' }}>
     <View style={{ flex: 1, paddingHorizontal: 16 }}>
-      <Text style={{ color: "white", fontSize: 22 }}>Bestsellers</Text>
+      <Text style={{ color: 'white', fontSize: 22 }}>Bestsellers</Text>
       <View style={{ flex: 1, marginTop: 8 }}>
         <FlatList
           data={books}
@@ -382,7 +382,7 @@ Add the following `renderItem` just before the main `return` function.
 const renderItem = ({ item }) => {
   return (
     <View style={{ marginVertical: 12 }}>
-      <View style={{ flexDirection: "row", flex: 1 }}>
+      <View style={{ flexDirection: 'row', flex: 1 }}>
         {/* Book Cover */}
         <Image
           source={{ uri: item.image_url }}
@@ -393,16 +393,16 @@ const renderItem = ({ item }) => {
         <View style={{ flex: 1, marginLeft: 12 }}>
           {/* Book Title */}
           <View>
-            <Text style={{ fontSize: 22, paddingRight: 16, color: "white" }}>
+            <Text style={{ fontSize: 22, paddingRight: 16, color: 'white' }}>
               {item.title}
             </Text>
           </View>
           {/* Meta info */}
           <View
             style={{
-              flexDirection: "row",
+              flexDirection: 'row',
               marginTop: 10,
-              alignItems: "center",
+              alignItems: 'center'
             }}
           >
             <MaterialCommunityIcons
@@ -410,7 +410,7 @@ const renderItem = ({ item }) => {
               name="book-open-page-variant"
               size={20}
             />
-            <Text style={{ fontSize: 14, paddingLeft: 10, color: "#64676D" }}>
+            <Text style={{ fontSize: 14, paddingLeft: 10, color: '#64676D' }}>
               {item.num_pages}
             </Text>
             <MaterialCommunityIcons
@@ -419,24 +419,24 @@ const renderItem = ({ item }) => {
               size={20}
               style={{ paddingLeft: 16 }}
             />
-            <Text style={{ fontSize: 14, paddingLeft: 10, color: "#64676D" }}>
+            <Text style={{ fontSize: 14, paddingLeft: 10, color: '#64676D' }}>
               {item.rating}
             </Text>
           </View>
           {/* Buttons */}
           <View style={{ marginTop: 14 }}>
             <TouchableOpacity
-              onPress={() => console.log("Bookmarked!")}
+              onPress={() => console.log('Bookmarked!')}
               activeOpacity={0.7}
               style={{
-                flexDirection: "row",
+                flexDirection: 'row',
                 padding: 2,
-                backgroundColor: "#2D3038",
+                backgroundColor: '#2D3038',
                 borderRadius: 20,
-                alignItems: "center",
-                justifyContent: "center",
+                alignItems: 'center',
+                justifyContent: 'center',
                 height: 40,
-                width: 40,
+                width: 40
               }}
             >
               <MaterialCommunityIcons
@@ -465,14 +465,14 @@ In the `redux/action.js` file, let's add two more action creators that are going
 export const addBookmark = book => dispatch => {
   dispatch({
     type: ADD_TO_BOOKMARK_LIST,
-    payload: book,
+    payload: book
   });
 };
 
 export const removeBookmark = book => dispatch => {
   dispatch({
     type: REMOVE_FROM_BOOKMARK_LIST,
-    payload: book,
+    payload: book
   });
 };
 ```
@@ -483,12 +483,12 @@ The next step is to update the state of the redux store. Open `redux/reducers.js
 import {
   GET_BOOKS,
   ADD_TO_BOOKMARK_LIST,
-  REMOVE_FROM_BOOKMARK_LIST,
-} from "./actions";
+  REMOVE_FROM_BOOKMARK_LIST
+} from './actions';
 
 const initialState = {
   books: [],
-  bookmarks: [],
+  bookmarks: []
 };
 
 function booksReducer(state = initialState, action) {
@@ -500,9 +500,7 @@ function booksReducer(state = initialState, action) {
     case REMOVE_FROM_BOOKMARK_LIST:
       return {
         ...state,
-        bookmarks: state.bookmarks.filter(
-          book => book.id !== action.payload.id
-        ),
+        bookmarks: state.bookmarks.filter(book => book.id !== action.payload.id)
       };
     default:
       return state;
@@ -517,17 +515,17 @@ export default booksReducer;
 Import the following statements inside `redux/store.js` file to create a persisted reducer.
 
 ```js
-import AsyncStorage from "@react-native-async-storage/async-storage";
-import { persistStore, persistReducer } from "redux-persist";
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import { persistStore, persistReducer } from 'redux-persist';
 ```
 
 Then, add a `persistConfig` object with the following properties:
 
 ```js
 const persistConfig = {
-  key: "root",
+  key: 'root',
   storage: AsyncStorage,
-  whitelist: ["bookmarks"],
+  whitelist: ['bookmarks']
 };
 ```
 
@@ -541,7 +539,7 @@ Also, export the `persistor`. It is an object that is returned by `persistStore`
 
 ```js
 const rootReducer = combineReducers({
-  booksReducer: persistReducer(persistConfig, booksReducer),
+  booksReducer: persistReducer(persistConfig, booksReducer)
 });
 
 export const store = createStore(rootReducer, applyMiddleware(thunk));
@@ -554,10 +552,10 @@ Import the `PersistGate` from the `redux-persist` library and import `persistor`
 
 ```js
 // Add
-import { PersistGate } from "redux-persist/integration/react";
+import { PersistGate } from 'redux-persist/integration/react';
 
 // Modify to add persistor
-import { store, persistor } from "./redux/store";
+import { store, persistor } from './redux/store';
 
 // Then, modify the JSX returned from App component
 // Wrap the root component with PersistGate
@@ -580,7 +578,7 @@ Let's start by importing other action creators as well:
 
 ```js
 // Modify
-import { getBooks, addBookmark, removeBookmark } from "../redux/actions";
+import { getBooks, addBookmark, removeBookmark } from '../redux/actions';
 ```
 
 The `booksReducer` is used to access the state. Modify it to access the `bookmarks` array:
@@ -626,14 +624,14 @@ Modify the `TouchableOpacity` component to dynamically change the UI of the app 
   activeOpacity={0.7}
   style={{
     // rest remains same
-    backgroundColor: ifExists(item) ? "#F96D41" : "#2D3038",
+    backgroundColor: ifExists(item) ? '#F96D41' : '#2D3038'
     //
   }}
 >
   <MaterialCommunityIcons
-    color={ifExists(item) ? "white" : "#64676D"}
+    color={ifExists(item) ? 'white' : '#64676D'}
     size={24}
-    name={ifExists(item) ? "bookmark-outline" : "bookmark"}
+    name={ifExists(item) ? 'bookmark-outline' : 'bookmark'}
   />
 </TouchableOpacity>
 ```
@@ -645,19 +643,19 @@ Any book item that is bookmarked is going to be shown in the `BookmarksList.js` 
 Start by importing the following statements. This time, only import `removeBookmark` action creator.
 
 ```js
-import React from "react";
+import React from 'react';
 import {
   SafeAreaView,
   Text,
   View,
   FlatList,
   TouchableOpacity,
-  Image,
-} from "react-native";
-import { useSelector, useDispatch } from "react-redux";
-import { MaterialCommunityIcons } from "@expo/vector-icons";
+  Image
+} from 'react-native';
+import { useSelector, useDispatch } from 'react-redux';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 
-import { removeBookmark } from "../redux/actions";
+import { removeBookmark } from '../redux/actions';
 ```
 
 Using the `useSelector` hook allows us to access the `bookmarks` state. Then, using the `useDispatch` hook defines the action creator and handler function to remove a book from the bookmarks list.
@@ -689,7 +687,7 @@ export default function BookmarksList() {
   const renderItem = ({ item }) => {
     return (
       <View style={{ marginVertical: 12 }}>
-        <View style={{ flexDirection: "row", flex: 1 }}>
+        <View style={{ flexDirection: 'row', flex: 1 }}>
           {/* Book Cover */}
           <Image
             source={{ uri: item.image_url }}
@@ -700,16 +698,16 @@ export default function BookmarksList() {
           <View style={{ flex: 1, marginLeft: 12 }}>
             {/* Book Title */}
             <View>
-              <Text style={{ fontSize: 22, paddingRight: 16, color: "white" }}>
+              <Text style={{ fontSize: 22, paddingRight: 16, color: 'white' }}>
                 {item.title}
               </Text>
             </View>
             {/* Meta info */}
             <View
               style={{
-                flexDirection: "row",
+                flexDirection: 'row',
                 marginTop: 10,
-                alignItems: "center",
+                alignItems: 'center'
               }}
             >
               <MaterialCommunityIcons
@@ -717,7 +715,7 @@ export default function BookmarksList() {
                 name="book-open-page-variant"
                 size={20}
               />
-              <Text style={{ fontSize: 14, paddingLeft: 10, color: "#64676D" }}>
+              <Text style={{ fontSize: 14, paddingLeft: 10, color: '#64676D' }}>
                 {item.num_pages}
               </Text>
               <MaterialCommunityIcons
@@ -726,7 +724,7 @@ export default function BookmarksList() {
                 size={20}
                 style={{ paddingLeft: 16 }}
               />
-              <Text style={{ fontSize: 14, paddingLeft: 10, color: "#64676D" }}>
+              <Text style={{ fontSize: 14, paddingLeft: 10, color: '#64676D' }}>
                 {item.rating}
               </Text>
             </View>
@@ -736,14 +734,14 @@ export default function BookmarksList() {
                 onPress={() => handleRemoveBookmark(item)}
                 activeOpacity={0.7}
                 style={{
-                  flexDirection: "row",
+                  flexDirection: 'row',
                   padding: 2,
-                  backgroundColor: "#2D3038",
+                  backgroundColor: '#2D3038',
                   borderRadius: 20,
-                  alignItems: "center",
-                  justifyContent: "center",
+                  alignItems: 'center',
+                  justifyContent: 'center',
                   height: 40,
-                  width: 40,
+                  width: 40
                 }}
               >
                 <MaterialCommunityIcons
@@ -760,12 +758,12 @@ export default function BookmarksList() {
   };
 
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: "#1E1B26" }}>
+    <SafeAreaView style={{ flex: 1, backgroundColor: '#1E1B26' }}>
       <View style={{ flex: 1, paddingHorizontal: 16 }}>
-        <Text style={{ color: "white", fontSize: 22 }}>Bookmarks</Text>
+        <Text style={{ color: 'white', fontSize: 22 }}>Bookmarks</Text>
         <View style={{ flex: 1, marginTop: 8 }}>
           {bookmarks.length === 0 ? (
-            <Text style={{ color: "#64676D", fontSize: 18 }}>
+            <Text style={{ color: '#64676D', fontSize: 18 }}>
               Add a book to bookmark list.
             </Text>
           ) : (

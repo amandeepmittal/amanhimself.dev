@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - react-native
-description: ""
+description: ''
 ---
 
 > **Update:** This blog post was originally written on June 5, 2022. It is now up-to-date to include Expo Router relevant information.

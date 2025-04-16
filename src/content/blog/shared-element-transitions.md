@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - react-native
-description: ""
+description: ''
 ---
 
 ![cover_image](https://blog.logrocket.com/wp-content/uploads/2021/01/reactnavigationv5.png)
@@ -65,54 +65,54 @@ The transition in this example app is going to be between a home screen and a de
 ```js
 export const data = [
   {
-    id: "1",
-    title: "Manarola, Italy",
-    description: "The Cliffs of Cinque Terre",
+    id: '1',
+    title: 'Manarola, Italy',
+    description: 'The Cliffs of Cinque Terre',
     image_url:
-      "https://images.unsplash.com/photo-1516483638261-f4dbaf036963?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=633&q=80",
-    iconName: "location-pin",
+      'https://images.unsplash.com/photo-1516483638261-f4dbaf036963?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=633&q=80',
+    iconName: 'location-pin'
   },
 
   {
-    id: "2",
-    title: "Venezia, Italy",
-    description: "Rialto Bridge, Venezia, Italy",
+    id: '2',
+    title: 'Venezia, Italy',
+    description: 'Rialto Bridge, Venezia, Italy',
     image_url:
-      "https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=630&q=80",
-    iconName: "location-pin",
+      'https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=630&q=80',
+    iconName: 'location-pin'
   },
   {
-    id: "3",
-    title: "Prague, Czechia",
-    description: "Tram in Prague",
+    id: '3',
+    title: 'Prague, Czechia',
+    description: 'Tram in Prague',
     image_url:
-      "https://images.unsplash.com/photo-1513805959324-96eb66ca8713?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
-    iconName: "location-pin",
-  },
+      'https://images.unsplash.com/photo-1513805959324-96eb66ca8713?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80',
+    iconName: 'location-pin'
+  }
 ];
 ```
 
 After that create a new directory called `screens/` where the two app screens are going to live. Create a file inside it called `HomeScreen.js` and import the following statements.
 
 ```js
-import React from "react";
+import React from 'react';
 import {
   ScrollView,
   Text,
   View,
   TouchableOpacity,
   Image,
-  Dimensions,
-} from "react-native";
-import { StatusBar } from "expo-status-bar";
-import { SimpleLineIcons } from "@expo/vector-icons";
-import { data } from "../config/data";
+  Dimensions
+} from 'react-native';
+import { StatusBar } from 'expo-status-bar';
+import { SimpleLineIcons } from '@expo/vector-icons';
+import { data } from '../config/data';
 ```
 
 Using the `Dimensions` API from React Native, let's define the initial width and height of the image component. In the code snippet below, I am calculating both the width and the height using the `width` of the screen.
 
 ```js
-const { width } = Dimensions.get("screen");
+const { width } = Dimensions.get('screen');
 
 const ITEM_WIDTH = width * 0.9;
 const ITEM_HEIGHT = ITEM_WIDTH * 0.9;
@@ -213,33 +213,33 @@ The `DetailScreen` component is going to render the details for each image that 
 Create a new file called `DetailScreen.js` inside the `screens/` directory and add the following code snippet:
 
 ```js
-import React, { useRef } from "react";
+import React, { useRef } from 'react';
 import {
   StyleSheet,
   Text,
   View,
   ScrollView,
   Image,
-  Dimensions,
-} from "react-native";
+  Dimensions
+} from 'react-native';
 
-import { SimpleLineIcons, MaterialCommunityIcons } from "@expo/vector-icons";
+import { SimpleLineIcons, MaterialCommunityIcons } from '@expo/vector-icons';
 
-const { height } = Dimensions.get("window");
+const { height } = Dimensions.get('window');
 const ITEM_HEIGHT = height * 0.5;
 
 const DetailScreen = ({ navigation, route }) => {
   const { item } = route.params;
 
   return (
-    <View style={{ flex: 1, backgroundColor: "#0f0f0f" }}>
+    <View style={{ flex: 1, backgroundColor: '#0f0f0f' }}>
       <Image
         source={{ uri: item.image_url }}
         style={{
-          width: "100%",
+          width: '100%',
           height: ITEM_HEIGHT,
           borderBottomLeftRadius: 20,
-          borderBottomRightRadius: 20,
+          borderBottomRightRadius: 20
         }}
         resizeMode="cover"
       />
@@ -248,36 +248,36 @@ const DetailScreen = ({ navigation, route }) => {
         size={28}
         color="#fff"
         style={{
-          position: "absolute",
+          position: 'absolute',
           top: 40,
           right: 20,
-          zIndex: 2,
+          zIndex: 2
         }}
         onPress={() => {
           navigation.goBack();
         }}
       />
       <View
-        style={{ flexDirection: "row", marginTop: 10, paddingHorizontal: 20 }}
+        style={{ flexDirection: 'row', marginTop: 10, paddingHorizontal: 20 }}
       >
         <SimpleLineIcons size={40} color="white" name={item.iconName} />
-        <View style={{ flexDirection: "column", paddingLeft: 6 }}>
+        <View style={{ flexDirection: 'column', paddingLeft: 6 }}>
           <Text
             style={{
-              color: "white",
+              color: 'white',
               fontSize: 24,
-              fontWeight: "bold",
-              lineHeight: 28,
+              fontWeight: 'bold',
+              lineHeight: 28
             }}
           >
             {item.title}
           </Text>
           <Text
             style={{
-              color: "white",
+              color: 'white',
               fontSize: 16,
-              fontWeight: "bold",
-              lineHeight: 18,
+              fontWeight: 'bold',
+              lineHeight: 18
             }}
           >
             {item.description}
@@ -288,16 +288,16 @@ const DetailScreen = ({ navigation, route }) => {
         indicatorStyle="white"
         style={{
           paddingHorizontal: 20,
-          backgroundColor: "#0f0f0f",
+          backgroundColor: '#0f0f0f'
         }}
         contentContainerStyle={{ paddingVertical: 20 }}
       >
         <Text
           style={{
             fontSize: 18,
-            color: "#fff",
+            color: '#fff',
             lineHeight: 24,
-            marginBottom: 4,
+            marginBottom: 4
           }}
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -311,9 +311,9 @@ const DetailScreen = ({ navigation, route }) => {
         <Text
           style={{
             fontSize: 18,
-            color: "#fff",
+            color: '#fff',
             lineHeight: 24,
-            marginBottom: 4,
+            marginBottom: 4
           }}
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -339,12 +339,12 @@ To navigate from the home screen to the detail screen and back, the app needs to
 Create a new directory called `navigation/` and inside it create a new file called `RootNavigator.js`. Import the following statements and create an instance called `Stack` of the `createSharedElementStackNavigator` method. Then define the Root Navigator.
 
 ```js
-import * as React from "react";
-import { NavigationContainer } from "@react-navigation/native";
-import { createSharedElementStackNavigator } from "react-navigation-shared-element";
+import * as React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createSharedElementStackNavigator } from 'react-navigation-shared-element';
 
-import HomeScreen from "../screens/HomeScreen";
-import DetailScreen from "../screens/DetailScreen";
+import HomeScreen from '../screens/HomeScreen';
+import DetailScreen from '../screens/DetailScreen';
 
 const Stack = createSharedElementStackNavigator();
 
@@ -363,8 +363,8 @@ export default function RootNavigator() {
 To see it in action, modify the `App.js` file as shown below:
 
 ```js
-import React from "react";
-import RootNavigator from "./navigation/RootNavigator";
+import React from 'react';
+import RootNavigator from './navigation/RootNavigator';
 
 export default function App() {
   return <RootNavigator />;
@@ -382,7 +382,7 @@ The image component is going to be responsible to support a seamless back and fo
 Also, make sure to import the `<SharedElement>` component from the `react-navigation-shared-element` module.
 
 ```js
-import { SharedElement } from "react-navigation-shared-element";
+import { SharedElement } from 'react-navigation-shared-element';
 
 // Wrap the image component as
 return (
@@ -393,7 +393,7 @@ return (
       style={{
         borderRadius: 14,
         width: ITEM_WIDTH,
-        height: ITEM_HEIGHT,
+        height: ITEM_HEIGHT
       }}
       source={{ uri: item.image_url }}
       resizeMode="cover"
@@ -407,7 +407,7 @@ The `<SharedElement>` component accepts a prop called `id` that is the shared id
 To enable the shared element transitions, the above process has to be followed in `DetailScreen`.
 
 ```js
-import { SharedElement } from "react-navigation-shared-element";
+import { SharedElement } from 'react-navigation-shared-element';
 
 // Wrap the image component as
 return (
@@ -416,10 +416,10 @@ return (
     <Image
       source={{ uri: item.image_url }}
       style={{
-        width: "100%",
+        width: '100%',
         height: ITEM_HEIGHT,
         borderBottomLeftRadius: 20,
-        borderBottomRightRadius: 20,
+        borderBottomRightRadius: 20
       }}
       resizeMode="cover"
     />
@@ -437,9 +437,9 @@ DetailScreen.sharedElements = route => {
   return [
     {
       id: `item.${item.id}.image_url`,
-      animation: "move",
-      resize: "clip",
-    },
+      animation: 'move',
+      resize: 'clip'
+    }
   ];
 };
 ```
@@ -460,10 +460,10 @@ const options = {
   cardStyleInterpolator: ({ current: { progress } }) => {
     return {
       cardStyle: {
-        opacity: progress,
-      },
+        opacity: progress
+      }
     };
-  },
+  }
 };
 
 // Then add it to the DetailScreen
@@ -567,24 +567,24 @@ DetailScreen.sharedElements = route => {
   return [
     {
       id: `item.${item.id}.image_url`,
-      animation: "move",
-      resize: "clip",
+      animation: 'move',
+      resize: 'clip'
     },
     {
       id: `item.${item.id}.title`,
-      animation: "fade",
-      resize: "clip",
+      animation: 'fade',
+      resize: 'clip'
     },
     {
       id: `item.${item.id}.description`,
-      animation: "fade",
-      resize: "clip",
+      animation: 'fade',
+      resize: 'clip'
     },
     {
       id: `item.${item.id}.iconName`,
-      animation: "move",
-      resize: "clip",
-    },
+      animation: 'move',
+      resize: 'clip'
+    }
   ];
 };
 ```
@@ -600,7 +600,7 @@ Shared element transitions are a great way to support a smooth end-user experien
 Import it inside the `DetailScreen.js` file:
 
 ```js
-import * as Animatable from "react-native-animatable";
+import * as Animatable from 'react-native-animatable';
 ```
 
 The close button icon is going to be wrapped inside the `<Animatable.View>`. This component has a prop called `delay` that delays the animation. Using a prop called `duration` you can control the amount of time the animation will run. Values to both of these props are provided in milliseconds. Using a `ref` value, the `fadeOut` animation is applied on the icon. This animation method is asynchronous and thus, you can use the promise to navigate back to the home screen after the animation has successfully run. The argument passed to this animation method is in milliseconds.
@@ -622,10 +622,10 @@ const DetailScreen = ({ navigation, route }) => {
         size={28}
         color="#fff"
         style={{
-          position: "absolute",
+          position: 'absolute',
           top: 40,
           right: 20,
-          zIndex: 2,
+          zIndex: 2
         }}
         onPress={() => {
           buttonRef.current.fadeOut(100).then(() => {

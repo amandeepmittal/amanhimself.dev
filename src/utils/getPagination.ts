@@ -1,5 +1,5 @@
-import { SITE } from "@config";
-import getPageNumbers from "./getPageNumbers";
+import { SITE } from '@config';
+import getPageNumbers from './getPageNumbers';
 
 interface GetPaginationProps<T> {
   posts: T;
@@ -10,7 +10,7 @@ interface GetPaginationProps<T> {
 const getPagination = <T>({
   posts,
   page,
-  isIndex = false,
+  isIndex = false
 }: GetPaginationProps<T[]>) => {
   const totalPagesArray = getPageNumbers(posts.length);
   const totalPages = totalPagesArray.length;
@@ -28,7 +28,7 @@ const getPagination = <T>({
   return {
     totalPages,
     currentPage,
-    paginatedPosts,
+    paginatedPosts
   };
 };
 

@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - react-native
-description: ""
+description: ''
 ---
 
 > Originally published at [Jscrambler.com](https://jscrambler.com/blog/getting-started-with-react-navigation-v6-and-typescript-in-react-native/)
@@ -70,35 +70,35 @@ The `HomeScreen` component displays a list of characters from the [Star Wars API
 Add the following code snippet to the `HomeScreen.tsx`:
 
 ```tsx
-import { StyleSheet, View, Text, Pressable, FlatList } from "react-native";
-import { useNavigation } from "@react-navigation/native";
+import { StyleSheet, View, Text, Pressable, FlatList } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
 const DATA = [
   {
     id: 1,
-    name: "Luke Skywalker",
-    birth_year: "19BBY",
+    name: 'Luke Skywalker',
+    birth_year: '19BBY'
   },
   {
     id: 2,
-    name: "C-3PO",
-    birth_year: "112BBY",
+    name: 'C-3PO',
+    birth_year: '112BBY'
   },
   {
     id: 3,
-    name: "R2-D2",
-    birth_year: "33BBY",
+    name: 'R2-D2',
+    birth_year: '33BBY'
   },
   {
     id: 4,
-    name: "Darth Vader",
-    birth_year: "41.9BBY",
+    name: 'Darth Vader',
+    birth_year: '41.9BBY'
   },
   {
     id: 5,
-    name: "Leia Organa",
-    birth_year: "19BBY",
-  },
+    name: 'Leia Organa',
+    birth_year: '19BBY'
+  }
 ];
 
 const HomeScreen = () => {
@@ -108,9 +108,9 @@ const HomeScreen = () => {
     return (
       <Pressable
         onPress={() =>
-          navigation.navigate("Details", {
+          navigation.navigate('Details', {
             name: item.name,
-            birthYear: item.birth_year,
+            birthYear: item.birth_year
           })
         }
       >
@@ -122,7 +122,7 @@ const HomeScreen = () => {
         <View
           style={{
             borderWidth: StyleSheet.hairlineWidth,
-            borderColor: "#ccc",
+            borderColor: '#ccc'
           }}
         />
       </Pressable>
@@ -144,8 +144,8 @@ In the above code snippet, observe that the `onPress` prop on the `Pressable` co
 Add the following code snippet to the `DetailsScreen.tsx`:
 
 ```tsx
-import { View, Text } from "react-native";
-import { useRoute } from "@react-navigation/native";
+import { View, Text } from 'react-native';
+import { useRoute } from '@react-navigation/native';
 
 const DetailScreen = () => {
   const route = useRoute();
@@ -172,11 +172,11 @@ After setting up the screens, create the `navigation/` directory inside the `src
 Inside the `HomeStack.tsx` file, add the following code snippet:
 
 ```tsx
-import * as React from "react";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import * as React from 'react';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-import HomeScreen from "../screens/HomeScreen";
-import DetailsScreen from "../screens/DetailsScreen";
+import HomeScreen from '../screens/HomeScreen';
+import DetailsScreen from '../screens/DetailsScreen';
 
 const HomeStack = createNativeStackNavigator();
 
@@ -197,10 +197,10 @@ In the above code snippet, notice that the `name` prop on the `HomeStack.Screen`
 Next, add the following code snippet to the `index.tsx` file:
 
 ```tsx
-import * as React from "react";
-import { NavigationContainer } from "@react-navigation/native";
+import * as React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
 
-import HomeStackNavigator from "./HomeStack";
+import HomeStackNavigator from './HomeStack';
 
 const RootNavigator = () => {
   return (
@@ -270,7 +270,7 @@ After creating the mappings, you must let the stack navigator know about them. G
 
 ```tsx
 // rest of the import statements remain same
-import { HomeStackNavigatorParamList } from "./types";
+import { HomeStackNavigatorParamList } from './types';
 
 const HomeStack = createNativeStackNavigator<HomeStackNavigatorParamList>();
 
@@ -304,7 +304,7 @@ In this section, let's learn how to add type checking for the Home screen. It is
 To add type checking for a screen, the first step is to use a generic type to define types for the individual screens. Each navigator pattern in React Navigation library exposes its own generic type. For example, `NativeStackNavigationProp` is used for `@react-navigation/native-stack`. Import that in the `types.ts` file.
 
 ```ts
-import type { NativeStackNavigationProp } from "@react-navigation/native-stack";
+import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
 
 export type HomeStackNavigatorParamList = {
   Home: undefined;
@@ -316,7 +316,7 @@ export type HomeStackNavigatorParamList = {
 
 export type HomeScreenNavigationProp = NativeStackNavigationProp<
   HomeStackNavigatorParamList,
-  "Details"
+  'Details'
 >;
 ```
 
@@ -330,7 +330,7 @@ Now, open the `HomeScreen` file, import the `HomeScreeProps` type, and use it to
 // after other import statements
 
 // import HomeScreenNavigationProp
-import { HomeScreenNavigationProp } from "../navigation/types";
+import { HomeScreenNavigationProp } from '../navigation/types';
 
 // inside the HomeScreen, component modify the following line
 const HomeScreen = () => {
@@ -358,11 +358,11 @@ After importing it, create a type for the `Details` screen using the `HomeStackN
 
 ```ts
 // after other import statements
-import type { RouteProp } from "@react-navigation/native";
+import type { RouteProp } from '@react-navigation/native';
 
 export type DetailsScreenRouteProp = RouteProp<
   HomeStackNavigatorParamList,
-  "Details"
+  'Details'
 >;
 
 // rest of the code remains the same
@@ -372,7 +372,7 @@ Open the `DetailsScreen` file, import the `DetailsScreenRouteProp` type, and use
 
 ```tsx
 // after other import statements
-import { DetailsScreenRouteProp } from "../navigation/types";
+import { DetailsScreenRouteProp } from '../navigation/types';
 
 // inside the DetailsScreen, the component modify the following line
 
@@ -390,7 +390,7 @@ Let's continue the saga of adding type checks to the app screens by adding a Bot
 Let's add two more screens to the `src/screens/` directory. Inside it, create a new file `FeedScreen.tsx` and add the following code snippet:
 
 ```tsx
-import { View, Text } from "react-native";
+import { View, Text } from 'react-native';
 
 const FeedScreen = () => {
   return (
@@ -406,7 +406,7 @@ export default FeedScreen;
 Create another new file called `SettingsScreen.tsx` and add the following code snippet:
 
 ```tsx
-import { View, Text } from "react-native";
+import { View, Text } from 'react-native';
 
 const SettingsScreen = () => {
   return (
@@ -434,13 +434,13 @@ export type BottomTabNavigatorParamList = {
 Inside the `src/navigation/` directory, add a new file called `Tabs.tsx` with the following code snippet:
 
 ```tsx
-import * as React from "react";
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import * as React from 'react';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-import { BottomTabNavigatorParamList } from "./types";
-import HomeStackNavigator from "./HomeStack";
-import FeedScreen from "../screens/FeedScreen";
-import SettingsScreen from "../screens/SettingsScreen";
+import { BottomTabNavigatorParamList } from './types';
+import HomeStackNavigator from './HomeStack';
+import FeedScreen from '../screens/FeedScreen';
+import SettingsScreen from '../screens/SettingsScreen';
 
 const Tab = createBottomTabNavigator<BottomTabNavigatorParamList>();
 
@@ -467,7 +467,7 @@ Let's also modify the `src/navigation/index.tsx` file to replace the previous `H
 
 ```tsx
 // rest of the import statements remain same
-import BottomTabs from "./Tabs";
+import BottomTabs from './Tabs';
 
 const RootNavigator = () => {
   return (
@@ -496,17 +496,17 @@ Add a button above the `FlatList` in the `HomeScreen.tsx` file that allows an ap
 return (
   <View style={{ flex: 1, paddingTop: 10 }}>
     <Pressable
-      onPress={() => navigation.navigate("Feed")}
+      onPress={() => navigation.navigate('Feed')}
       style={{
         padding: 8,
         borderWidth: 1,
         borderRadius: 4,
-        borderColor: "red",
+        borderColor: 'red',
         margin: 12,
-        alignItems: "center",
+        alignItems: 'center'
       }}
     >
-      <Text style={{ fontSize: 16, fontWeight: "600" }}>Go to Feed screen</Text>
+      <Text style={{ fontSize: 16, fontWeight: '600' }}>Go to Feed screen</Text>
     </Pressable>
     <FlatList data={DATA} renderItem={renderListItems} />
   </View>
@@ -530,13 +530,13 @@ Modify the type `HomeScreenNavigationProp` as shown below:
 ```ts
 import type {
   CompositeNavigationProp,
-  RouteProp,
-} from "@react-navigation/native";
+  RouteProp
+} from '@react-navigation/native';
 // rest of the import statements remains same
 
 export type HomeScreenNavigationProp = CompositeNavigationProp<
-  NativeStackNavigationProp<HomeStackNavigatorParamList, "Details">,
-  BottomTabNavigationProp<BottomTabNavigatorParamList, "Feed">
+  NativeStackNavigationProp<HomeStackNavigatorParamList, 'Details'>,
+  BottomTabNavigationProp<BottomTabNavigatorParamList, 'Feed'>
 >;
 
 // rest of the code remains the same

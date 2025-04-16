@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - obsidian
-description: ""
+description: ''
 ---
 
 I've used Obsidian as my primary note-taking app for over six months. One thing I've found myself often doing (either work or personal) is using screenshots as images in my notes.

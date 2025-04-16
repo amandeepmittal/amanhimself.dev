@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - nodejs
-description: ""
+description: ''
 ---
 
 In this tutorial, we will create a Twitter Bot with Node.js that retweets or favorites based on hashtags, and replies to users if they follow the account.
@@ -123,31 +123,31 @@ Our next step is to search for the tweets based on our parameters. For this, we 
 // find latest tweet according the query 'q' in params
 var retweet = function () {
   var params = {
-    q: "#nodejs, #Nodejs", // REQUIRED
-    result_type: "recent",
-    lang: "en",
+    q: '#nodejs, #Nodejs', // REQUIRED
+    result_type: 'recent',
+    lang: 'en'
   };
   // for more parameters, see: https://dev.twitter.com/rest/reference/get/search/tweets
 
-  Twitter.get("search/tweets", params, function (err, data) {
+  Twitter.get('search/tweets', params, function (err, data) {
     // if there no errors
     if (!err) {
       // grab ID of tweet to retweet
       var retweetId = data.statuses[0].id_str;
       // Tell TWITTER to retweet
       Twitter.post(
-        "statuses/retweet/:id",
+        'statuses/retweet/:id',
         {
-          id: retweetId,
+          id: retweetId
         },
         function (err, response) {
           if (response) {
-            console.log("Retweeted!!!");
+            console.log('Retweeted!!!');
           }
           // if there was an error while tweeting
           if (err) {
             console.log(
-              "Something went wrong while RETWEETING... Duplication maybe..."
+              'Something went wrong while RETWEETING... Duplication maybe...'
             );
           }
         }
@@ -155,7 +155,7 @@ var retweet = function () {
     }
     // if unable to Search a tweet
     else {
-      console.log("Something went wrong while SEARCHING...");
+      console.log('Something went wrong while SEARCHING...');
     }
   });
 };
@@ -184,30 +184,30 @@ Similar to `retweet` bot we can define and initialise another function expressio
 // find a random tweet and 'favorite' it
 var favoriteTweet = function () {
   var params = {
-    q: "#nodejs, #Nodejs", // REQUIRED
-    result_type: "recent",
-    lang: "en",
+    q: '#nodejs, #Nodejs', // REQUIRED
+    result_type: 'recent',
+    lang: 'en'
   };
   // for more parameters, see: https://dev.twitter.com/rest/reference
 
   // find the tweet
-  Twitter.get("search/tweets", params, function (err, data) {
+  Twitter.get('search/tweets', params, function (err, data) {
     // find tweets
     var tweet = data.statuses;
     var randomTweet = ranDom(tweet); // pick a random tweet
 
     // if random tweet exists
-    if (typeof randomTweet != "undefined") {
+    if (typeof randomTweet != 'undefined') {
       // Tell TWITTER to 'favorite'
       Twitter.post(
-        "favorites/create",
+        'favorites/create',
         { id: randomTweet.id_str },
         function (err, response) {
           // if there was an error while 'favorite'
           if (err) {
-            console.log("CANNOT BE FAVORITE... Error");
+            console.log('CANNOT BE FAVORITE... Error');
           } else {
-            console.log("FAVORITED... Success!!!");
+            console.log('FAVORITED... Success!!!');
           }
         }
       );
@@ -232,8 +232,8 @@ The complete module: `bot.js` :
 
 ```js
 // Dependencies =========================
-var twit = require("twit"),
-  config = require("./config");
+var twit = require('twit'),
+  config = require('./config');
 
 var Twitter = new twit(config);
 
@@ -242,29 +242,29 @@ var Twitter = new twit(config);
 // find latest tweet according the query 'q' in params
 var retweet = function () {
   var params = {
-    q: "#nodejs, #Nodejs", // REQUIRED
-    result_type: "recent",
-    lang: "en",
+    q: '#nodejs, #Nodejs', // REQUIRED
+    result_type: 'recent',
+    lang: 'en'
   };
-  Twitter.get("search/tweets", params, function (err, data) {
+  Twitter.get('search/tweets', params, function (err, data) {
     // if there no errors
     if (!err) {
       // grab ID of tweet to retweet
       var retweetId = data.statuses[0].id_str;
       // Tell TWITTER to retweet
       Twitter.post(
-        "statuses/retweet/:id",
+        'statuses/retweet/:id',
         {
-          id: retweetId,
+          id: retweetId
         },
         function (err, response) {
           if (response) {
-            console.log("Retweeted!!!");
+            console.log('Retweeted!!!');
           }
           // if there was an error while tweeting
           if (err) {
             console.log(
-              "Something went wrong while RETWEETING... Duplication maybe..."
+              'Something went wrong while RETWEETING... Duplication maybe...'
             );
           }
         }
@@ -272,7 +272,7 @@ var retweet = function () {
     }
     // if unable to Search a tweet
     else {
-      console.log("Something went wrong while SEARCHING...");
+      console.log('Something went wrong while SEARCHING...');
     }
   });
 };
@@ -287,28 +287,28 @@ setInterval(retweet, 3000000);
 // find a random tweet and 'favorite' it
 var favoriteTweet = function () {
   var params = {
-    q: "#nodejs, #Nodejs", // REQUIRED
-    result_type: "recent",
-    lang: "en",
+    q: '#nodejs, #Nodejs', // REQUIRED
+    result_type: 'recent',
+    lang: 'en'
   };
   // find the tweet
-  Twitter.get("search/tweets", params, function (err, data) {
+  Twitter.get('search/tweets', params, function (err, data) {
     // find tweets
     var tweet = data.statuses;
     var randomTweet = ranDom(tweet); // pick a random tweet
 
     // if random tweet exists
-    if (typeof randomTweet != "undefined") {
+    if (typeof randomTweet != 'undefined') {
       // Tell TWITTER to 'favorite'
       Twitter.post(
-        "favorites/create",
+        'favorites/create',
         { id: randomTweet.id_str },
         function (err, response) {
           // if there was an error while 'favorite'
           if (err) {
-            console.log("CANNOT BE FAVORITE... Error");
+            console.log('CANNOT BE FAVORITE... Error');
           } else {
-            console.log("FAVORITED... Success!!!");
+            console.log('FAVORITED... Success!!!');
           }
         }
       );

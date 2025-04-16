@@ -5,7 +5,7 @@ pubDatetime: 2020-08-14T03:42:51Z
 slug: react-router-real-time-user-monitoring-react-apps
 tags:
   - reactjs
-description: ""
+description: ''
 ---
 
 React is often used for building single-page applications (SPAs). SPAs tend to have multiple page views so when navigating from one-page view to another, reloading the entire page view is tedious and inefficient. To work as it should, a SPA must render different parts of a view when required instead of reloading the entire page.
@@ -59,14 +59,14 @@ This is going to open the boilerplate React app screen at the URL `http://localh
 To create the first route in the React app, import the `Router` and `Route` from the `react-router-dom` library. Open `src/App.js` file and add the following import statement.
 
 ```js
-import React from "react";
-import { Router, Route } from "react-router-dom";
+import React from 'react';
+import { Router, Route } from 'react-router-dom';
 ```
 
 Let's also add a `history` object to use with navigation. Unlike `BrowserRouter`, the `Router` component is a low-level interface for all router components. This means that you have to manually pass the `history` object to make it work. Later, this `history` object is going to be used for the monitoring tool. Import `createBrowserHistory` as following:
 
 ```js
-import { createBrowserHistory as createHistory } from "history";
+import { createBrowserHistory as createHistory } from 'history';
 
 const history = createHistory();
 ```
@@ -86,7 +86,7 @@ function App() {
 The path is currently pointing towards the Home component which has the following UI logic. Create a `Home` component inside `src/components/Home.js` file.
 
 ```js
-import React from "react";
+import React from 'react';
 
 export default function Home() {
   return (
@@ -100,7 +100,7 @@ export default function Home() {
 Now, import this component inside the `App.js` file.
 
 ```js
-import Home from "./components/Home";
+import Home from './components/Home';
 ```
 
 Visit the web browser and see the Home component being rendered right now.
@@ -114,7 +114,7 @@ This is a bare minimum example. Now let us add another route with the same props
 Start by adding another component file inside `src/components` and name it `About.js`. Add the following code snippet to it.
 
 ```js
-import React from "react";
+import React from 'react';
 
 export default function About() {
   return (
@@ -129,7 +129,7 @@ Now add this function component as the second route, below the `Home` route in `
 
 ```js
 // After other import statements
-import About from "./components/About";
+import About from './components/About';
 
 // Add another route
 function App() {
@@ -162,7 +162,7 @@ The `Switch` component is a unique one since it renders the component at the `pa
 
 ```js
 // import the Switch component
-import { Router, Route, Switch } from "react-router-dom";
+import { Router, Route, Switch } from 'react-router-dom';
 
 // App component
 function App() {
@@ -184,7 +184,7 @@ To navigate between to web pages in HTML, there is an `<a href=""></a>` anchor t
 Let us try to create a navigation menu with this new knowledge. Import `NavLink` from `react-router-dom` in App.js file. Here is the modified snippet of App component.
 
 ```js
-import { Router, Route, Switch, NavLink } from "react-router-dom";
+import { Router, Route, Switch, NavLink } from 'react-router-dom';
 
 function App() {
   return (
@@ -219,8 +219,8 @@ The idea is to demonstrate a route as `/posts` which displays all the posts that
 To start, let us add a bunch of mock posts in the state inside a new component file called `components/Posts.js`. Import the following statements.
 
 ```js
-import React, { useState } from "react";
-import { Link, Route } from "react-router-dom";
+import React, { useState } from 'react';
+import { Link, Route } from 'react-router-dom';
 ```
 
 A `Link` component is similar to `NavLink` with the difference being that it can be used for other purposes rather than a navigation menu where an `anchor` tag is required.
@@ -231,16 +231,16 @@ Next, declare a static array of different posts.
 const POSTS = [
   {
     id: 1,
-    title: "Hello Blog World!",
+    title: 'Hello Blog World!'
   },
   {
     id: 2,
-    title: "My second post",
+    title: 'My second post'
   },
   {
     id: 3,
-    title: "What is React Router?",
-  },
+    title: 'What is React Router?'
+  }
 ];
 ```
 
@@ -281,7 +281,7 @@ export default function Posts() {
 Now, import the newly created component inside `App.js` where other routes already exist.
 
 ```js
-import Posts from "./components/Posts";
+import Posts from './components/Posts';
 
 function App() {
   return (
@@ -366,16 +366,16 @@ Go back to the React app and open the `public/index.html` file. Paste the first 
     if (
       window.PerformanceObserver &&
       window.PerformanceObserver.supportedEntryTypes &&
-      (PerformanceObserver.supportedEntryTypes.indexOf("longtask") >= 0 ||
-        PerformanceObserver.supportedEntryTypes.indexOf("element") >= 0)
+      (PerformanceObserver.supportedEntryTypes.indexOf('longtask') >= 0 ||
+        PerformanceObserver.supportedEntryTypes.indexOf('element') >= 0)
     ) {
       p = new PerformanceObserver(function (e) {
         e.getEntries().forEach(function (e) {
           switch (e.entryType) {
-            case "element":
+            case 'element':
               i.push(e);
               break;
-            case "longtask":
+            case 'longtask':
               o.push(e);
               break;
             default:
@@ -383,13 +383,13 @@ Go back to the React app and open the `public/index.html` file. Paste the first 
           }
         });
       });
-      p.observe({ entryTypes: ["longtask", "element"] });
+      p.observe({ entryTypes: ['longtask', 'element'] });
     }
-    e[s + "lt"] = {
+    e[s + 'lt'] = {
       longTasks: o,
       timingElements: i,
       inPageLoad: c,
-      observer: p,
+      observer: p
     };
     if (t) {
       var u = r.createElement(n);
@@ -398,12 +398,12 @@ Go back to the React app and open the `public/index.html` file. Paste the first 
       var f = r.getElementsByTagName(n)[0];
       f.parentNode.insertBefore(u, f);
     }
-  })(window, document, "script", "//cdn.sematext.com/rum.js", "strum");
+  })(window, document, 'script', '//cdn.sematext.com/rum.js', 'strum');
 </script>
 <script type="text/javascript">
-  strum("config", {
-    token: "e3451b53-a95f-45c6-ba8e-1368cb4f2407",
-    receiverUrl: "https://rum-receiver.sematext.com",
+  strum('config', {
+    token: 'e3451b53-a95f-45c6-ba8e-1368cb4f2407',
+    receiverUrl: 'https://rum-receiver.sematext.com'
   });
 </script>
 ```
@@ -414,8 +414,8 @@ Open the file `src/App.js` and paste the following after you have defined the `h
 
 ```js
 history.listen((location, action) => {
-  if (action !== "REPLACE") {
-    window.strum("routeChange", window.location.href);
+  if (action !== 'REPLACE') {
+    window.strum('routeChange', window.location.href);
   }
 });
 ```

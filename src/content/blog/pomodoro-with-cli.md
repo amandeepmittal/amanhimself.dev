@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - cli
-description: ""
+description: ''
 ---
 
 I often turn to the [Pomodoro Technique](https://en.wikipedia.org/wiki/Pomodoro_Technique) when I'm overwhelmed by my to-do list. This method involves working for a set period (X minutes), followed by a short break (Y minutes), promoting focused sessions.

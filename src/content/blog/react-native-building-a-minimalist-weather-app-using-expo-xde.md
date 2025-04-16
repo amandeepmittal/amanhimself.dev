@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - expo
-description: ""
+description: ''
 ---
 
 React Native is a great framework to develop cross-platform mobile applications for the platforms iOS and Android. In this, I am going to take you through the process of building a “minimalist” weather application using React Native by fetching real-time data. If you have never worked with React Native, you can use this walkthrough as kickstart in your journey of becoming a mobile application developer and will be a cool project for your portfolio.
@@ -63,8 +63,8 @@ And you will be able to see that our default app is running on the device:
 The message displayed here is the same code that is rendered by `App.js` in the root of our app.
 
 ```js
-import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import React from 'react';
+import { StyleSheet, Text, View } from 'react-native';
 
 export default class App extends React.Component {
   render() {
@@ -79,10 +79,10 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center'
+  }
 });
 ```
 
@@ -105,12 +105,12 @@ In this step, we will be developing our first screen, that is going to be loadin
 In your `App.js`, define a local state:
 
 ```js
-import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import React from 'react';
+import { StyleSheet, Text, View } from 'react-native';
 
 export default class App extends React.Component {
   state = {
-    isLoading: false,
+    isLoading: false
   };
 
   render() {
@@ -130,22 +130,22 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center'
+  }
 });
 ```
 
 The above code states that when our local state object `isLoading` is false, we will show the name of the application. This is what we are going to render. Later on, instead of displaying the name of application we will be showing the weather here once our API has successfully fetches the data. For now, I am sticking to this message because first, we are going to work on, what if our app is in the state of loading? Let's add a text message to indicate that the app is fetching the data.
 
 ```js
-import React from "react";
-import { StyleSheet, Text, View, Animated } from "react-native";
+import React from 'react';
+import { StyleSheet, Text, View, Animated } from 'react-native';
 
 export default class App extends React.Component {
   state = {
-    isLoading: true,
+    isLoading: true
   };
 
   render() {
@@ -167,10 +167,10 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center'
+  }
 });
 ```
 
@@ -185,8 +185,8 @@ We will define a new Weather component at `./components/Weather.js`. The boiler
 In Weather.js, we will start by defining two containers inside the main container: `headerContainer` and `bodyContainer`. Do note that we are defining `Weather` component not as a class but a function in order to receive props and since it will not be managing a state.
 
 ```js
-import React from "react";
-import { View, Text, Stylesheet } from "react-native";
+import React from 'react';
+import { View, Text, Stylesheet } from 'react-native';
 
 const Weather = () => {
   return (
@@ -199,10 +199,10 @@ const Weather = () => {
 
 const styles = StyleSheet({
   container: {
-    flex: 1,
+    flex: 1
   },
   headerContainer: {},
-  bodyContainer: {},
+  bodyContainer: {}
 });
 
 export default Weather;
@@ -211,15 +211,15 @@ export default Weather;
 We will be using `MatericalCommunityIcons` that comes with expo (one of the perks) as a sub-library of a humongous library called `vector-icons`.
 
 ```js
-import React from "react";
-import { View, Text, StyleSheet } from "react-native";
-import { MaterialCommunityIcons } from "@expo/vector-icons";
+import React from 'react';
+import { View, Text, StyleSheet } from 'react-native';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 const Weather = () => {
   return (
     <View style={styles.weatherContainer}>
       <View style={styles.headerContainer}>
-        <MaterialCommunityIcons size={48} name="weather-sunny" color={"#fff"} />
+        <MaterialCommunityIcons size={48} name="weather-sunny" color={'#fff'} />
         <Text style={styles.tempText}>Temperature˚</Text>
       </View>
       <View style={styles.bodyContainer}>
@@ -233,32 +233,32 @@ const Weather = () => {
 const styles = StyleSheet.create({
   weatherContainer: {
     flex: 1,
-    backgroundColor: "#f7b733",
+    backgroundColor: '#f7b733'
   },
   headerContainer: {
     flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
+    alignItems: 'center',
+    justifyContent: 'center'
   },
   tempText: {
     fontSize: 48,
-    color: "#fff",
+    color: '#fff'
   },
   bodyContainer: {
     flex: 2,
-    alignItems: "flex-start",
-    justifyContent: "flex-end",
+    alignItems: 'flex-start',
+    justifyContent: 'flex-end',
     paddingLeft: 25,
-    marginBottom: 40,
+    marginBottom: 40
   },
   title: {
     fontSize: 48,
-    color: "#fff",
+    color: '#fff'
   },
   subtitle: {
     fontSize: 24,
-    color: "#fff",
-  },
+    color: '#fff'
+  }
 });
 
 export default Weather;
@@ -275,25 +275,25 @@ To fetch real-time weather data I found [Open Weather Map API](https://openweath
 Go to the [API section](https://openweathermap.org/api) and you will see that our need is satisfied by the Current Weather data. I am going to store my API key in `./utils/WeatherAPIKey.js` file. I know not the best name for a file.
 
 ```js
-export const API_KEY = "YOUR_API_KEY HERE";
+export const API_KEY = 'YOUR_API_KEY HERE';
 ```
 
 The way the Open Weather API works is that we need to provide it coordinates using device’s location in terms of longitude and latitude. It will then fetch the data from its server which will be a JSON object. From the server, right now we need two things, the temperature, and the weather condition. We should have temperature and the weather condition stored in our local state in `App.js`.
 
 ```js
-import React from "react";
-import { StyleSheet, Text, View, Animated } from "react-native";
+import React from 'react';
+import { StyleSheet, Text, View, Animated } from 'react-native';
 
-import { API_KEY } from "./utils/WeatherAPIKey";
+import { API_KEY } from './utils/WeatherAPIKey';
 
-import Weather from "./components/Weather";
+import Weather from './components/Weather';
 
 export default class App extends React.Component {
   state = {
     isLoading: false,
     temperature: 0,
     weatherCondition: null,
-    error: null,
+    error: null
   };
 
   componentDidMount() {
@@ -303,7 +303,7 @@ export default class App extends React.Component {
       },
       error => {
         this.setState({
-          error: "Error Getting Weather Conditions",
+          error: 'Error Getting Weather Conditions'
         });
       }
     );
@@ -332,8 +332,8 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
-  },
+    backgroundColor: '#fff'
+  }
 });
 ```
 
@@ -366,7 +366,7 @@ const Weather = ({ weather, temperature }) => {
   return (
     <View style={styles.weatherContainer}>
       <View style={styles.headerContainer}>
-        <MaterialCommunityIcons size={48} name="weather-sunny" color={"#fff"} />
+        <MaterialCommunityIcons size={48} name="weather-sunny" color={'#fff'} />
         <Text style={styles.tempText}>{temperature}˚</Text>
       </View>
       <View style={styles.bodyContainer}>
@@ -389,79 +389,79 @@ Using `weatherCondition` we can define the background changes, title, subtitle a
 ```js
 export const weatherConditions = {
   Rain: {
-    color: "#005BEA",
-    title: "Raining",
-    subtitle: "Get a cup of coffee",
-    icon: "weather-rainy",
+    color: '#005BEA',
+    title: 'Raining',
+    subtitle: 'Get a cup of coffee',
+    icon: 'weather-rainy'
   },
   Clear: {
-    color: "#f7b733",
-    title: "So Sunny",
-    subtitle: "It is hurting my eyes",
-    icon: "weather-sunny",
+    color: '#f7b733',
+    title: 'So Sunny',
+    subtitle: 'It is hurting my eyes',
+    icon: 'weather-sunny'
   },
   Thunderstorm: {
-    color: "#616161",
-    title: "A Storm is coming",
-    subtitle: "Because Gods are angry",
-    icon: "weather-lightning",
+    color: '#616161',
+    title: 'A Storm is coming',
+    subtitle: 'Because Gods are angry',
+    icon: 'weather-lightning'
   },
   Clouds: {
-    color: "#1F1C2C",
-    title: "Clouds",
-    subtitle: "Everywhere",
-    icon: "weather-cloudy",
+    color: '#1F1C2C',
+    title: 'Clouds',
+    subtitle: 'Everywhere',
+    icon: 'weather-cloudy'
   },
 
   Snow: {
-    color: "#00d2ff",
-    title: "Snow",
-    subtitle: "Get out and build a snowman for me",
-    icon: "weather-snowy",
+    color: '#00d2ff',
+    title: 'Snow',
+    subtitle: 'Get out and build a snowman for me',
+    icon: 'weather-snowy'
   },
   Drizzle: {
-    color: "#076585",
-    title: "Drizzle",
-    subtitle: "Partially raining...",
-    icon: "weather-hail",
+    color: '#076585',
+    title: 'Drizzle',
+    subtitle: 'Partially raining...',
+    icon: 'weather-hail'
   },
   Haze: {
-    color: "#66A6FF",
-    title: "Haze",
-    subtitle: "Another name for Partial Raining",
-    icon: "weather-hail",
+    color: '#66A6FF',
+    title: 'Haze',
+    subtitle: 'Another name for Partial Raining',
+    icon: 'weather-hail'
   },
   Mist: {
-    color: "#3CD3AD",
-    title: "Mist",
+    color: '#3CD3AD',
+    title: 'Mist',
     subtitle: "Don't roam in forests!",
-    icon: "weather-fog",
-  },
+    icon: 'weather-fog'
+  }
 };
 ```
 
 These weather conditions are provided from Open Weather API [here](https://openweathermap.org/weather-conditions). Then, let’s import this file in our `Weather.js`. We will also define PropTypes now for the two props we are receiving from `App.js`. Take a look below, it is simple.
 
 ```js
-import React from "react";
-import { View, Text, StyleSheet } from "react-native";
-import { MaterialCommunityIcons } from "@expo/vector-icons";
-import PropTypes from "prop-types";
-import { weatherConditions } from "../utils/WeatherConditions";
+import React from 'react';
+import { View, Text, StyleSheet } from 'react-native';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
+import PropTypes from 'prop-types';
+import { weatherConditions } from '../utils/WeatherConditions';
 
 const Weather = ({ weather, temperature }) => {
   return (
     <View
       style={[
         styles.weatherContainer,
-        { backgroundColor: weatherConditions[weather].color },
+        { backgroundColor: weatherConditions[weather].color }
       ]}
     >
       <View style={styles.headerContainer}>
         <MaterialCommunityIcons
           size={72}
           name={weatherConditions[weather].icon}
-          color={"#fff"}
+          color={'#fff'}
         />
         <Text style={styles.tempText}>{temperature}˚</Text>
       </View>
@@ -477,38 +477,38 @@ const Weather = ({ weather, temperature }) => {
 
 Weather.propTypes = {
   temperature: PropTypes.number.isRequired,
-  weather: PropTypes.string,
+  weather: PropTypes.string
 };
 
 const styles = StyleSheet.create({
   weatherContainer: {
-    flex: 1,
+    flex: 1
   },
   headerContainer: {
     flex: 1,
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-around",
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-around'
   },
   tempText: {
     fontSize: 72,
-    color: "#fff",
+    color: '#fff'
   },
   bodyContainer: {
     flex: 2,
-    alignItems: "flex-start",
-    justifyContent: "flex-end",
+    alignItems: 'flex-start',
+    justifyContent: 'flex-end',
     paddingLeft: 25,
-    marginBottom: 40,
+    marginBottom: 40
   },
   title: {
     fontSize: 60,
-    color: "#fff",
+    color: '#fff'
   },
   subtitle: {
     fontSize: 24,
-    color: "#fff",
-  },
+    color: '#fff'
+  }
 });
 
 export default Weather;

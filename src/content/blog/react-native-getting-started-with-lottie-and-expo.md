@@ -1,5 +1,5 @@
 ---
-title: "React Native - Getting Started with Lottie and Expo"
+title: 'React Native - Getting Started with Lottie and Expo'
 author: Aman Mittal
 pubDatetime: 2018-03-09T03:42:51Z
 slug: react-native-getting-started-with-lottie-and-expo
@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - expo
-description: ""
+description: ''
 ---
 
 In this tutorial, we will be using [Lottie](https://www.lottiefiles.com/) with React Native. Lottie is an opensource library that renders Adobe Effects by providing easy to use animations just like static images. These animations are beautiful. Lottie is a mobile library developed by AirBnB. These animations are exported as JSON files using [Bodymovin](https://github.com/airbnb/lottie-web) to render the natively on mobile and in web applications.
@@ -35,7 +35,7 @@ Now open your favorite text editor/IDE because we are going to start writing cod
 Installing Lottie as a dependency in a project can a bit tricky but fortunately, Expo provides support for it. We do not have to install anything since we are using Expo. We directly import the dependency in our `App.js`:
 
 ```js
-import { DangerZone } from "expo";
+import { DangerZone } from 'expo';
 const { Lottie } = DangerZone;
 ```
 
@@ -45,7 +45,7 @@ Include a local state in our application called `animation`. We will call this h
 
 ```js
 state = {
-  animation: null,
+  animation: null
 };
 ```
 
@@ -113,21 +113,21 @@ We separately define styling for the overall container and the animation. To loa
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center'
   },
   animationContainer: {
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+    flex: 1
   },
   loadingAnimation: {
     width: 400,
     height: 400,
-    backgroundColor: "transparent",
-  },
+    backgroundColor: 'transparent'
+  }
 });
 ```
 
@@ -142,14 +142,14 @@ For alternative to Lottie, you can check [Facebook’s Keyframes](https://github
 Complete code of our demo application:
 
 ```js
-import React from "react";
-import { StyleSheet, Text, View } from "react-native";
-import { DangerZone } from "expo";
+import React from 'react';
+import { StyleSheet, Text, View } from 'react-native';
+import { DangerZone } from 'expo';
 const { Lottie } = DangerZone;
 
 export default class App extends React.Component {
   state = {
-    animation: null,
+    animation: null
   };
 
   componentWillMount() {
@@ -167,7 +167,7 @@ export default class App extends React.Component {
 
   _loadAnimationAsync = async () => {
     let result = await fetch(
-      "https://www.lottiefiles.com/storage/datafiles/a795e9d1bd5672fd901329d51661db5c/JSON/location.json"
+      'https://www.lottiefiles.com/storage/datafiles/a795e9d1bd5672fd901329d51661db5c/JSON/location.json'
     );
 
     this.setState(
@@ -198,21 +198,21 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center'
   },
   animationContainer: {
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+    flex: 1
   },
   loadingAnimation: {
     width: 400,
     height: 400,
-    backgroundColor: "transparent",
-  },
+    backgroundColor: 'transparent'
+  }
 });
 ```
 

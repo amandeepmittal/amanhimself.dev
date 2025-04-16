@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - react-native
-description: ""
+description: ''
 ---
 
 Using [`react-navigation`](https://reactnavigation.org/docs/en/getting-started.html) you can definitely nest different types of navigators. The term nesting navigators mean that rendering one navigator inside a screen of another navigator.
@@ -55,8 +55,8 @@ This package is going to allow the app to have a simple tab bar appear at the bo
 Even though the current app structure has three different screen components (_open `src/screens` to view them_), let us create another screen component called `Profile` that will act as the second tab. Create a new file called `src/screens/Profile.js` with the following code snippet:
 
 ```js
-import React from "react";
-import { StyleSheet, View, Text } from "react-native";
+import React from 'react';
+import { StyleSheet, View, Text } from 'react-native';
 
 function Profile(props) {
   return (
@@ -69,15 +69,15 @@ function Profile(props) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "#ebebeb",
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#ebebeb'
   },
   text: {
-    color: "#101010",
+    color: '#101010',
     fontSize: 24,
-    fontWeight: "bold",
-  },
+    fontWeight: 'bold'
+  }
 });
 
 export default Profile;
@@ -90,17 +90,17 @@ In this section, let us set up a basic Tab navigator. Start by renaming the file
 After the renaming, the routes config file, after other import statements, import the `createBottomTabNavigator` from `@react-navigation/bottom-tabs` as well as the `Profile` screen component.
 
 ```js
-import * as React from "react";
-import { NavigationContainer } from "@react-navigation/native";
-import { createStackNavigator } from "@react-navigation/stack";
+import * as React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 // add this after other import statements
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-import Home from "../screens/Home";
-import Detail from "../screens/Detail";
-import Settings from "../screens/Settings";
+import Home from '../screens/Home';
+import Detail from '../screens/Detail';
+import Settings from '../screens/Settings';
 // add this after other import statements
-import Profile from "../screens/Profile";
+import Profile from '../screens/Profile';
 ```
 
 Then create an instance of the `createBottomTabNavigator` called `Tab` as below:
@@ -134,10 +134,10 @@ Now, in the `MainStackNavigator()` instead of passing the `Home` screen, let us 
 Lastly, to make all of this work, open `App.js` file in the root of the project and modify the statement that imports the `MainStackNavigator` with the correct file name.
 
 ```js
-import React from "react";
+import React from 'react';
 
 // make sure this matches the file name of navigator config
-import MainStackNavigator from "./src/navigation/AppNavigator";
+import MainStackNavigator from './src/navigation/AppNavigator';
 
 export default function App() {
   return <MainStackNavigator />;
@@ -159,7 +159,7 @@ Add the following:
 ```js
 <Tab.Navigator
   tabBarOptions={{
-    activeTintColor: "#101010",
+    activeTintColor: '#101010'
   }}
 >
   {/* rest remains same */}
@@ -173,7 +173,7 @@ Go to the simulator device, you are going to notice that the active tab bar labe
 Let us add some icons to the tab bar. Start by importing the `Ionicons` from `@expo/vector-icons`.
 
 ```js
-import { Ionicons } from "@expo/vector-icons";
+import { Ionicons } from '@expo/vector-icons';
 ```
 
 Then, in each `Tab.Screen`, add an options prop that is going to have a property of `tabBarIcon`. This function returns the component `Ionicons`. Pass the arguments `color` and `size` you can maintain the active tint color.
@@ -181,7 +181,7 @@ Then, in each `Tab.Screen`, add an options prop that is going to have a property
 ```js
 <Tab.Navigator
   tabBarOptions={{
-    activeTintColor: "#101010",
+    activeTintColor: '#101010'
   }}
 >
   <Tab.Screen
@@ -190,7 +190,7 @@ Then, in each `Tab.Screen`, add an options prop that is going to have a property
     options={{
       tabBarIcon: ({ color, size }) => (
         <Ionicons name="ios-home" color={color} size={size} />
-      ),
+      )
     }}
   />
   <Tab.Screen
@@ -199,7 +199,7 @@ Then, in each `Tab.Screen`, add an options prop that is going to have a property
     options={{
       tabBarIcon: ({ color, size }) => (
         <Ionicons name="ios-person" size={size} color={color} />
-      ),
+      )
     }}
   />
 </Tab.Navigator>
@@ -214,10 +214,10 @@ You can even change the background of the tab bar by adding a `style` property t
 ```js
 <Tab.Navigator
   tabBarOptions={{
-    activeTintColor: "#101010",
+    activeTintColor: '#101010',
     style: {
-      backgroundColor: "#ffd700",
-    },
+      backgroundColor: '#ffd700'
+    }
   }}
 >
   {/* rest remains same */}
@@ -237,21 +237,21 @@ function MainTabNavigator() {
   return (
     <Tab.Navigator
       tabBarOptions={{
-        activeTintColor: "#101010",
+        activeTintColor: '#101010',
         style: {
-          backgroundColor: "#ffd700",
-        },
+          backgroundColor: '#ffd700'
+        }
       }}
       screenOptions={({ route }) => ({
         tabBarIcon: ({ color, size }) => {
           let iconName;
-          if (route.name == "Home") {
-            iconName = "ios-home";
-          } else if (route.name == "Profile") {
-            iconName = "ios-person";
+          if (route.name == 'Home') {
+            iconName = 'ios-home';
+          } else if (route.name == 'Profile') {
+            iconName = 'ios-person';
           }
           return <Ionicons name={iconName} color={color} size={size} />;
-        },
+        }
       })}
     >
       <Tab.Screen name="Home" component={Home} />
@@ -281,13 +281,13 @@ Add a function called `getHeaderTitle` in `AppNavigator.js` file.
 function getHeaderTitle(route) {
   const routeName = route.state
     ? route.state.routes[route.state.index].name
-    : route.params?.screen || "Home";
+    : route.params?.screen || 'Home';
 
   switch (routeName) {
-    case "Home":
-      return "Home";
-    case "Profile":
-      return "Profile";
+    case 'Home':
+      return 'Home';
+    case 'Profile':
+      return 'Profile';
   }
 }
 ```
@@ -299,7 +299,7 @@ Then, [as per the recommended way](https://reactnavigation.org/docs/en/screen-op
   name="Home"
   component={MainTabNavigator}
   options={({ route }) => ({
-    headerTitle: getHeaderTitle(route),
+    headerTitle: getHeaderTitle(route)
   })}
 />
 ```

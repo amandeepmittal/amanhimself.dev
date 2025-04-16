@@ -1,4 +1,4 @@
-import { slug as slugger } from "github-slugger";
+import { slug as slugger } from 'github-slugger';
 
 export const slugifyStr = (str: string) => slugger(str);
 

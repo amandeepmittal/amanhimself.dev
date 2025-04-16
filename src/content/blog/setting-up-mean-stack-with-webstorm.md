@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - nodejs
-description: ""
+description: ''
 ---
 
 Ever since I got interested in Node.js and started learning to program in JavaScript, both the programming language and the server side platform have been most relevant to me. Due them, I have made my first PR to an open source project on Github, heck, I even built one of my own using them (_see_ [_#100DaysOfCode_](https://github.com/freeCodeCamp/100DaysOfCode-twitter-bot)) which currently has more than 6 people actively contributing and enhancing it.

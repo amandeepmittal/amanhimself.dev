@@ -1,11 +1,11 @@
 ---
-title: "Gatsby.js - How to set up and use the React Static Site Generator"
+title: 'Gatsby.js - How to set up and use the React Static Site Generator'
 author: Aman Mittal
 pubDatetime: 2018-01-04T03:42:51Z
 slug: setting-up-and-getting-used-to-gatsby
 tags:
   - reactjs
-description: ""
+description: ''
 ---
 
 [Gatsby](https://www.gatsbyjs.org/) is a static site generator for React that released its first major version last month. It’s a tool that not only scaffolds projects (or websites) for you but claims that those sites are fast in performance. If you decide to use Gatsby you will be enjoying the power of the latest web technologies such as React.js, Webpack, and so on.
@@ -72,33 +72,33 @@ Inside the `src/` there are two sub-directories: `layouts/` and `pages/`.
 The `layouts/` contain further two files: `index.css` and `index.js`. These serve as the starting point of our application.
 
 ```js
-import React from "react";
-import PropTypes from "prop-types";
-import Link from "gatsby-link";
-import Helmet from "react-helmet";
+import React from 'react';
+import PropTypes from 'prop-types';
+import Link from 'gatsby-link';
+import Helmet from 'react-helmet';
 
-import "./index.css";
+import './index.css';
 
 const Header = () => (
   <div
     style={{
-      background: "rebeccapurple",
-      marginBottom: "1.45rem",
+      background: 'rebeccapurple',
+      marginBottom: '1.45rem'
     }}
   >
     <div
       style={{
-        margin: "0 auto",
+        margin: '0 auto',
         maxWidth: 960,
-        padding: "1.45rem 1.0875rem",
+        padding: '1.45rem 1.0875rem'
       }}
     >
       <h1 style={{ margin: 0 }}>
         <Link
           to="/"
           style={{
-            color: "white",
-            textDecoration: "none",
+            color: 'white',
+            textDecoration: 'none'
           }}
         >
           Gatsby
@@ -113,17 +113,17 @@ const TemplateWrapper = ({ children }) => (
     <Helmet
       title="My First Gatsby Site"
       meta={[
-        { name: "author", content: "amanhimself" },
-        { name: "keywords", content: "sample, something" },
+        { name: 'author', content: 'amanhimself' },
+        { name: 'keywords', content: 'sample, something' }
       ]}
     />
     <Header />
     <div
       style={{
-        margin: "0 auto",
+        margin: '0 auto',
         maxWidth: 960,
-        padding: "0px 1.0875rem 1.45rem",
-        paddingTop: 0,
+        padding: '0px 1.0875rem 1.45rem',
+        paddingTop: 0
       }}
     >
       {children()}
@@ -132,7 +132,7 @@ const TemplateWrapper = ({ children }) => (
 );
 
 TemplateWrapper.propTypes = {
-  children: PropTypes.func,
+  children: PropTypes.func
 };
 
 export default TemplateWrapper;
@@ -149,8 +149,8 @@ Do notice the `{children()}` prop. This is a function that executes within the J
 Our second concerned directory `pages/` contain rest of the pages that build up our application. They are plain React components. Let's take a look at the `index.js` file inside this directory which currently serves as the main page of our application.
 
 ```js
-import React from "react";
-import Link from "gatsby-link";
+import React from 'react';
+import Link from 'gatsby-link';
 
 const IndexPage = () => (
   <div>
@@ -173,8 +173,8 @@ It is same as the file name. We are also using `Link` tag from Gatsby to navigat
 Let’s add another page to our site. Inside the `pages` directory, create a new file `page-3.js`.
 
 ```js
-import React from "react";
-import Link from "gatsby-link";
+import React from 'react';
+import Link from 'gatsby-link';
 
 const ThirdPage = () => (
   <div>
@@ -192,8 +192,8 @@ export default ThirdPage;
 Now let’s add the link to our new page to the homepage. Open `index.js` file:
 
 ```js
-import React from "react";
-import Link from "gatsby-link";
+import React from 'react';
+import Link from 'gatsby-link';
 
 const IndexPage = () => (
   <div>
@@ -223,58 +223,58 @@ Open `layouts/index.js` and inside the `Header` component, add the following cod
 const Header = () => (
   <div
     style={{
-      background: "rebeccapurple",
-      marginBottom: "1.45rem",
+      background: 'rebeccapurple',
+      marginBottom: '1.45rem'
     }}
   >
     <div
       style={{
-        margin: "0 auto",
+        margin: '0 auto',
         maxWidth: 960,
-        padding: "1.45rem 1.0875rem",
+        padding: '1.45rem 1.0875rem'
       }}
     >
       <h1 style={{ margin: 0 }}>
         <Link
           to="/"
           style={{
-            color: "white",
-            textDecoration: "none",
+            color: 'white',
+            textDecoration: 'none'
           }}
         >
           Gatsby
         </Link>
-        <ul style={{ listStyle: "none", float: "right" }}>
-          <li style={{ display: "inline-block", marginRight: "1rem" }}>
+        <ul style={{ listStyle: 'none', float: 'right' }}>
+          <li style={{ display: 'inline-block', marginRight: '1rem' }}>
             <Link
               style={{
-                color: "white",
-                textDecoration: "none",
-                fontSize: "x-large",
+                color: 'white',
+                textDecoration: 'none',
+                fontSize: 'x-large'
               }}
               to="/"
             >
               Home
             </Link>
           </li>
-          <li style={{ display: "inline-block", marginRight: "1rem" }}>
+          <li style={{ display: 'inline-block', marginRight: '1rem' }}>
             <Link
               style={{
-                color: "white",
-                textDecoration: "none",
-                fontSize: "x-large",
+                color: 'white',
+                textDecoration: 'none',
+                fontSize: 'x-large'
               }}
               to="/page-2"
             >
               Page 2
             </Link>
           </li>
-          <li style={{ display: "inline-block", marginRight: "1rem" }}>
+          <li style={{ display: 'inline-block', marginRight: '1rem' }}>
             <Link
               style={{
-                color: "white",
-                textDecoration: "none",
-                fontSize: "x-large",
+                color: 'white',
+                textDecoration: 'none',
+                fontSize: 'x-large'
               }}
               to="/page-3"
             >
@@ -297,9 +297,9 @@ If you save the file, the results are reflected immediately on the homepage and 
 ```js
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
+    title: `Gatsby Default Starter`
   },
-  plugins: [`gatsby-plugin-react-helmet`],
+  plugins: [`gatsby-plugin-react-helmet`]
 };
 ```
 
@@ -330,10 +330,10 @@ In `gatsby.config.js` add the pathname prefix of the repo such:
 ```js
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
+    title: `Gatsby Default Starter`
   },
   pathPrefix: `/first-gatsby-site`,
-  plugins: [`gatsby-plugin-react-helmet`],
+  plugins: [`gatsby-plugin-react-helmet`]
 };
 ```
 

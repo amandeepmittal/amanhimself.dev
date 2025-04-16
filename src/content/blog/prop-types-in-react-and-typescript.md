@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - typescript
-description: ""
+description: ''
 ---
 
 [PropTypes](https://www.npmjs.com/package/prop-types) provide built-in typechecking capabilities when writing a React app. Checking the type of prop in a React component in a large application helps catch bugs at run-time.
@@ -15,8 +15,8 @@ description: ""
 Typically in a React app, you will need to install the package `yarn add prop-types`. Then, inside a component, explicitly define the type of a prop.
 
 ```js
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 
 // A component that accepts "color" prop
 function FavoriteColor({ color }) {
@@ -24,14 +24,14 @@ function FavoriteColor({ color }) {
 }
 
 FavoriteColor.propTypes = {
-  color: PropTypes.string,
+  color: PropTypes.string
 };
 
 // Parent component
 function App() {
   return (
     <div className="App">
-      <FavoriteColor color={"Red"} />
+      <FavoriteColor color={'Red'} />
     </div>
   );
 }
@@ -76,14 +76,14 @@ TypeScript is smart enough not to compile the code if a prop has a type of `any`
 To use `InferProps`, import it from the `prop-types` library and then define type declarations on the components prop.
 
 ```tsx
-import PropTypes, { InferProps } from "prop-types";
+import PropTypes, { InferProps } from 'prop-types';
 
 function FavoriteColor({ color }: InferProps<typeof FavoriteColor.propTypes>) {
   return <h2>My favorite Color is </h2>;
 }
 
 FavoriteColor.propTypes = {
-  color: PropTypes.string,
+  color: PropTypes.string
 };
 ```
 
