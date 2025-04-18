@@ -52,10 +52,6 @@ I’ve shared my knowledge at various events:
 - **2020:** Session on [writing consistently at Hashnode’s Technical Writing Bootcamp](https://www.youtube.com/watch?v=YIRxTUCY0NQ).
 - **2018:** [Podcast on setting up and getting used to Gatsby](https://dev.to/reactroundup/rru-006-setting-up-and-getting-used-to-gatsby-with-aman-mittal) with Charles Max Wood, Cory House, Tara Manicsic, and Kent C. Dodds.
 
-## Gear
-
-I work on a [M1 Macbook Pro 16” 2023](https://www.apple.com/in/shop/buy-mac/macbook-pro) and use any flat surface as my desk and chair.
-
 ## Awards and recognition
 
 I was awarded as the [Most Authentic Developer Advocate of the Year 2022](https://www.noonies.tech/2022/programming/2022-most-authentic-developer-advocate-of-the-year) at #Noonies2022 by Hackernoon.
