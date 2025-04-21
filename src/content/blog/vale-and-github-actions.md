@@ -65,7 +65,7 @@ It took me a while to go back and forth between the version I was using locally 
 
 There are two ways you can use Vale's CLI version locally. The easiest and lone-wolf approach is to install it in your development environment using one of the [available methods described in Vale's documentation](https://vale.sh/docs/install).
 
-If you are working in a team environment, I recommend using something like [`@vvago/vale`](https://www.npmjs.com/package/@vvago/vale), which can download Vale binary and allow you to run it. In my case, it's part of our lint scripts inside the `package.json` file:
+If you are working in a team environment, I recommend using something like [`@vvago/vale`](https://www.npmjs.com/package/@vvago/vale), which can download Vale binary and allow you to run it locally. In my case, it's part of our lint scripts inside the `package.json` file:
 
 ```json
 {
