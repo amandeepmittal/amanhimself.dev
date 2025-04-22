@@ -55,4 +55,4 @@ This line tells the Vale CLI to apply the rule to everything except the front ma
 
 ## Wrapping up
 
-Documentation tooling often requires careful configuration to match your specific workflow. What seems like a minor setting can have major implications or, sometimes, false positives. By understanding the context (prose vs. metadata in this case) and configuring tools accordingly, you can create an effective quality control system.
+Documentation tooling often requires careful configuration to match your specific workflow. What seems like a minor setting can have major implications or, sometimes, false positives. By understanding the context (prose versus metadata in this case) and configuring tools accordingly, you can create an effective quality control system.
