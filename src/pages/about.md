@@ -54,4 +54,4 @@ I’ve shared my knowledge at various events:
 
 ## Awards and recognition
 
-I was awarded as the [Most Authentic Developer Advocate of the Year 2022](https://www.noonies.tech/2022/programming/2022-most-authentic-developer-advocate-of-the-year) at #Noonies2022 by Hackernoon.
+I was awarded as the [Most Authentic Developer Advocate of the Year 2022](https://noonies.hackernoon.com/2022/programming/2022-most-authentic-developer-advocate-of-the-year) at #Noonies2022 by Hackernoon.
