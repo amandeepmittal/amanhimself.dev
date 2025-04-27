@@ -450,7 +450,8 @@ VS Code has supported ARM chips since March 13, 2021. Download the [installer fo
     "markdown": true,
     "scminput": false
   },
-  "redhat.telemetry.enabled": false
+  "redhat.telemetry.enabled": false,
+  "errorLens.enabledDiagnosticLevels": ["error", "warning"]
 }
 ```
 
