@@ -96,9 +96,6 @@ const nextPost =
       </div>
     </div>
     <article id="article" role="article" class="prose mx-auto mt-8 max-w-3xl">
-      <!-- <div class="flex items-center justify-center">
-        <div id="carbonads" />
-      </div> -->
       <Content />
     </article>
 
@@ -116,11 +113,10 @@ const nextPost =
         </svg>
         <span class="text-skin-accent text-opacity-80">Back to Top</span>
       </button>
-
+      <iframe src="https://github.com/sponsors/amandeepmittal/button" title="Buy me coffee" height="32" width="114" style="border: 0; border-radius: 6px;"></iframe>
       <ShareLinks />
     </div>
     <hr class="my-6 border-dashed" />
-
     <!-- Previous/Next Post Buttons -->
     <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
       {
@@ -195,14 +191,14 @@ const nextPost =
               <a href="/about" class="hover:underline">Aman Mittal</a>
               <span class="text-sm italic text-[#8A55F7]">author</span>
             </div>
-            <div class="flex space-x-2">
-              <a
+            <!-- <div class="flex space-x-2"> -->
+              <!-- <a
                 href="https://github.com/sponsors/amandeepmittal?frequency=one-time"
                 target="_blank"
                 class="text-xs font-bold text-[#8A55F7] hover:underline"
               >
                 Buy me coffee
-              </a>
+              </a> -->
               <!-- <a
                 href="https://github.com/amandeepmittal"
                 target="_blank"
@@ -217,7 +213,7 @@ const nextPost =
               >
                 X
               </a> -->
-            </div>
+            <!-- </div> -->
           </div>
           <p class="text-sm text-skin-base opacity-80">
             I'm a software developer and technical writer. On this blog, I share
@@ -354,21 +350,6 @@ const nextPost =
           });
       }
       backToTop();
-
-      /** Load Carbon Ads */
-      function loadCarbonAds() {
-        const carbon = document.getElementById('carbonads');
-        if (carbon) {
-          const script = document.createElement('script');
-          script.src =
-            'https://cdn.carbonads.com/carbon.js?serve=CEAIE2JY&placement=amanhimselfdev';
-          script.id = '_carbonads_js';
-          script.async = true;
-          script.type = 'text/javascript';
-          carbon.appendChild(script);
-        }
-      }
-      loadCarbonAds();
     </script>
   </main>
 </Layout>
