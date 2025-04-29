@@ -383,7 +383,7 @@ VS Code has supported ARM chips since March 13, 2021. Download the [installer fo
   "editor.fontSize": 13,
   "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
   "workbench.iconTheme": "catppuccin-latte",
-  "editor.fontFamily": "JetBrains Mono ",
+  "editor.fontFamily": "JetBrains Mono",
   "editor.fontWeight": "normal",
   // Markdown
   "[markdown]": {
