@@ -89,7 +89,7 @@ If you use the local version as a part of your docs app, you can easily verify i
 
 On CI, after you've pinned the version in the workflow job, you can easily verify the output when that workflow runs by checking the installed Vale CLI version:
 
-<img src="/images/github-actions-vale.png" alt="GitHub Actions Vale job log" class="mx-auto"/>
+<img src="/images/github-actions-vale.png" alt="GitHub Actions Vale job log." class="mx-auto"/>
 
 ## Wrapping up
 
