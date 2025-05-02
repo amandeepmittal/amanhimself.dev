@@ -12,7 +12,7 @@ description: ''
 
 ![cover_image](https://i.imgur.com/XHghbGg.jpg)
 
-> Your time is limited... - Steve Jobs
+> Your time is limited... &mdash; Steve Jobs
 
 A blog can be a useful piece for many reasons not only to you but to many others. Such it has been in my journey. Not only I have been able to generate leads (being a contract developer, it helps), it has been one of the most important things I have done in my career of being a dev. Sometimes, I do go back and read my blog posts when seeking information for a specific topic.
 
