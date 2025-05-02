@@ -142,7 +142,7 @@ Each markdown file is supposed to have some frontmatter fields that are used to 
 
 Similarly you can add the content to the second post.
 
-The content of these two Markdown files will be our first two blog posts. The block surrounded in dashes is referred to as _frontmatter_, and the contents of the block can be used to inject React components with the specified data, e.g. path, date, title, tags etc.
+The content of these two Markdown files will be our first two blog posts. The block surrounded in dashes is referred to as _frontmatter_, and the contents of the block can be used to inject React components with the specified data, such as path, date, title, tags, and so on.
 
 One important note is that path will be used when we dynamically create our pages to specify the URL to each blog to render the file. We’ll do this later.
 
