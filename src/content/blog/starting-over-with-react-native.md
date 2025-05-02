@@ -14,7 +14,7 @@ description: ''
 
 When 2018 arrived I decided to pick up a new framework called [React.js](https://reactjs.org/) to enhance my skillset and get more work done remotely. A day came when I was in the middle of React development that I got interested in [React Native](https://facebook.github.io/react-native/) which is used to develop cross-platform mobile applications and started playing around it. I wrote some articles on it, worked on a few mini projects, read about APIs in its official docs but then due to the load of work from my clients I had to stop in between for three months. I tried hard to continue to learn in my spare time but managing work along with a personal hobby blog (that is not a hobby anymore, I am professional book critic 😅 and it demands quite some hours in a week) I knew I was going to burn out.
 
-Not to interfere with my day job, I completely stopped reading or doing any React Native stuff. I even deleted my precious Trello board, where I had saved plenty of resources from awesome developers out there who have already mastered the art of React Native and contributing for the community by building courses, writing tutorials, etc.
+Not to interfere with my day job, I completely stopped reading or doing any React Native stuff. I even deleted my precious Trello board, where I had saved plenty of resources from awesome developers out there who have already mastered the art of React Native and contributing for the community by building courses, writing tutorials, and so on.
 
 > Lesson #1: Tech community runs because of these awesome people who spend countless hours in making things as understandable for a newbie or someone with intermediate skillset.
 
