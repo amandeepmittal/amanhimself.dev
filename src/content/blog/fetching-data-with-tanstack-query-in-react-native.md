@@ -8,6 +8,7 @@ draft: false
 tags:
   - react-native
   - expo
+  - react-query
 description: ''
 ---
 
