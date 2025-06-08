@@ -22,7 +22,7 @@ python3 —version
 Python 3.13.3
 ```
 
-However, considering the Stable Diffusion Web UI's requirements, it is recommended to install Python 3.10 because `torch`, a framework for building deep learning models, yet isn't supported in newer versions.
+However, considering the Stable Diffusion Web UI's requirements, it is recommended to install Python 3.10 because `torch`, a framework for building deep learning models, isn't supported in newer versions.
 
 <img src="/images/py/py1.png" />
 
@@ -30,7 +30,7 @@ However, considering the Stable Diffusion Web UI's requirements, it is recommend
 
 This is where using `conda` to manage packages and environments in Python projects comes in handy. It helps to install, manage, and update packages from Anaconda and other repositories, removing that extra layer of complexity.
 
-In this guide, I'll share installation steps to install `conda` using [Miniforge](https://github.com/conda-forge/miniforge), which is a lightweight, community driven `conda` installer. It does not install those extra dependencies when installing it. Whether you're setting up Stable Diffusion WebUI for the first time or spinning up Open WebUI for local AI chat, you'll have clean, reproducible environments that just work.
+In this guide, I'll share installation steps to install `conda` using [Miniforge](https://github.com/conda-forge/miniforge), which is a lightweight, community driven `conda` installer. Whether you're setting up Stable Diffusion WebUI for the first time or spinning up Open WebUI for local AI chat, you'll have clean, reproducible environments that just work.
 
 ## Download the shell script
 
