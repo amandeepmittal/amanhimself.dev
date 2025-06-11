@@ -4,6 +4,7 @@ import Header from '@components/Header.astro';
 import Footer from '@components/Footer.astro';
 import Tag from '@components/Tag.astro';
 import Datetime from '@components/Datetime';
+import BackToTopButton from "@components/BackToTopButton.astro";
 import type { CollectionEntry } from 'astro:content';
 import { slugifyStr } from '@utils/slugify';
 import ShareLinks from '@components/ShareLinks.astro';
@@ -102,7 +103,7 @@ const nextPost =
     <div
       class="flex flex-col-reverse items-center justify-between gap-6 sm:flex-row-reverse sm:items-end sm:gap-4"
     >
-      <button
+      <!-- <button
         id="back-to-top"
         class="focus-outline whitespace-nowrap py-1 hover:opacity-75"
       >
@@ -112,7 +113,8 @@ const nextPost =
           ></path>
         </svg>
         <span class="text-skin-accent text-opacity-80">Back to Top</span>
-      </button>
+      </button> -->
+      <BackToTopButton />
       <iframe src="https://github.com/sponsors/amandeepmittal/button" title="Buy me coffee" height="32" width="114" style="border: 0; border-radius: 6px;"></iframe>
       <ShareLinks />
     </div>
@@ -339,17 +341,17 @@ const nextPost =
       }
       attachCopyButtons();
 
-      /** Scrolls the document to the top when
-       * the "Back to Top" button is clicked. */
-      function backToTop() {
-        document
-          .querySelector('#back-to-top')
-          ?.addEventListener('click', () => {
-            document.body.scrollTop = 0; // For Safari
-            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-          });
-      }
-      backToTop();
+      // /** Scrolls the document to the top when
+      //  * the "Back to Top" button is clicked. */
+      // function backToTop() {
+      //   document
+      //     .querySelector('#back-to-top')
+      //     ?.addEventListener('click', () => {
+      //       document.body.scrollTop = 0; // For Safari
+      //       document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+      //     });
+      // }
+      // backToTop();
     </script>
   </main>
 </Layout>

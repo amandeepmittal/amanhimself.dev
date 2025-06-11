@@ -65,9 +65,13 @@ export default function SearchBar({ searchList }: Props) {
     if (inputVal.length > 0) {
       const searchParams = new URLSearchParams(window.location.search);
       searchParams.set('q', inputVal);
-      const newRelativePathQuery =
-        window.location.pathname + '?' + searchParams.toString();
-      history.replaceState(history.state, '', newRelativePathQuery);
+      try {
+        const newRelativePathQuery =
+          window.location.pathname + '?' + searchParams.toString();
+        history.replaceState(history.state, '', newRelativePathQuery);
+      } catch (error) {
+        console.error('Error updating URL with search params:', error);
+      }
     } else {
       history.replaceState(history.state, '', window.location.pathname);
     }

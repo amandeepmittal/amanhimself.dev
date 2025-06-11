@@ -36,7 +36,6 @@
     "@astrojs/tailwind": "^5.1.4",
     "@divriots/jampack": "^0.33.0",
     "@tailwindcss/typography": "^0.5.16",
-    "@types/github-slugger": "^2.0.0",
     "@types/react": "^19.0.12",
     "@typescript-eslint/parser": "^8.31.1",
     "astro-eslint-parser": "^1.2.2",
@@ -45,6 +44,14 @@
     "prettier": "^3.5.3",
     "prettier-plugin-astro": "^0.14.1",
     "prettier-plugin-tailwindcss": "^0.6.10",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "resolutions": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "overrides": {
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
   },

@@ -35,6 +35,12 @@ export interface Props {
 // }
 
 export default function Card({ href, frontmatter, secHeading = true }: Props) {
+  // Add defensive checks to prevent toString() errors on undefined values
+  if (!frontmatter || !frontmatter.title) {
+    console.warn('Card component received invalid frontmatter:', frontmatter);
+    return null;
+  }
+
   const { title, pubDatetime, modDatetime, description } = frontmatter;
 
   const headerProps = {
@@ -59,7 +65,7 @@ export default function Card({ href, frontmatter, secHeading = true }: Props) {
           <Datetime pubDatetime={pubDatetime} modDatetime={modDatetime} />
         </div>
       </div>
-      <p className="text-sm text-gray-500">{description}</p>
+      <p className="text-sm text-gray-500">{description || ''}</p>
     </li>
   );
 }

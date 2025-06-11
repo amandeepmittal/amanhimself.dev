@@ -16,6 +16,14 @@ export default function Datetime({
   size = 'sm',
   className
 }: Props) {
+  if (!pubDatetime) {
+    console.warn(
+      'Datetime component received invalid pubDatetime:',
+      pubDatetime
+    );
+    return null;
+  }
+
   return (
     <div className={`flex items-center space-x-2 opacity-80 ${className}`}>
       <svg
@@ -46,26 +54,43 @@ export default function Datetime({
 }
 
 const FormattedDatetime = ({ pubDatetime, modDatetime }: DatetimesProps) => {
-  const myDatetime = new Date(
-    modDatetime && modDatetime > pubDatetime ? modDatetime : pubDatetime
-  );
+  if (!pubDatetime) {
+    return <time>Invalid date</time>;
+  }
 
-  const date = myDatetime.toLocaleDateString(LOCALE.langTag, {
-    year: 'numeric',
-    month: 'short',
-    day: 'numeric'
-  });
+  try {
+    const myDatetime = new Date(
+      modDatetime && modDatetime > pubDatetime ? modDatetime : pubDatetime
+    );
 
-  const time = myDatetime.toLocaleTimeString(LOCALE.langTag, {
-    hour: '2-digit',
-    minute: '2-digit'
-  });
+    if (isNaN(myDatetime.getTime())) {
+      console.warn('Invalid date provided to FormattedDatetime:', {
+        pubDatetime,
+        modDatetime
+      });
+      return <time>Invalid date</time>;
+    }
 
-  return (
-    <>
-      <time dateTime={myDatetime.toISOString()}>{date}</time>
-      {/* <span className="sr-only">&nbsp;at&nbsp;</span> */}
-      {/* <span className="text-nowrap">{time}</span> */}
-    </>
-  );
+    const date = myDatetime.toLocaleDateString(LOCALE.langTag, {
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric'
+    });
+
+    const time = myDatetime.toLocaleTimeString(LOCALE.langTag, {
+      hour: '2-digit',
+      minute: '2-digit'
+    });
+
+    return (
+      <>
+        <time dateTime={myDatetime.toISOString()}>{date}</time>
+        {/* <span className="sr-only">&nbsp;at&nbsp;</span> */}
+        {/* <span className="text-nowrap">{time}</span> */}
+      </>
+    );
+  } catch (error) {
+    console.error('Error formatting datetime:', error);
+    return <time>Invalid date</time>;
+  }
 };
