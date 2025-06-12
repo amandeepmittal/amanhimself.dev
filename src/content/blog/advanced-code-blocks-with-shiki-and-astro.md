@@ -8,7 +8,7 @@ tags:
   - astro
   - blogging
   - javascript
-description: 'Learn how to enhance your Astro blog with advanced code blocks featuring language labels, and copy buttons using Shiki syntax highlighting.'
+description: 'Learn how to enhance your Astro blog with advanced code blocks featuring language labels and copy buttons using Shiki syntax highlighting.'
 ---
 
 Code blocks are the backbone of any technical blog. While basic syntax highlighting serves its purpose, readers expect more polished experiences. These experiences can be provided with small enhancements.
