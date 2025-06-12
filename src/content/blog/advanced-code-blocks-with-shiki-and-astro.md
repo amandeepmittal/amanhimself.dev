@@ -19,9 +19,9 @@ Recently, I started enhancing code blocks on my Astro blog to include language l
 
 ## Current state of a code block
 
-My blog uses Astro as its blog engine, which uses Shiki for syntax highlighting with a [dual theme support](/blog/dual-shiki-themes-with-astro/). The foundational configuration is provided by the `astro.config.ts` file which I’ll be going to use.
+My blog uses Astro as its blog engine, which uses Shiki for syntax highlighting with [dual theme support](/blog/dual-shiki-themes-with-astro/). The foundational configuration is provided by the astro.config.ts file, which I’ll be going to use.
 
-Shiki automatically adds `data-language` attribute to a code block. This is the key to extract language information for the header labels. Let’s take the following code block as an example.
+Shiki automatically adds a data-language attribute to a code block. This is the key to extracting language information for the header labels. Let’s take the following code block as an example.
 
 <img src="/images/astro-blog/blog-2.png" width="640" />
 
@@ -29,11 +29,11 @@ The above code block is rendered and has a `ts` language set in its markdown sou
 
 <img src="/images/astro-blog/blog-3.png" width="820" />
 
-Since this heavy lifting is done by Shiki, all that is needed is to render this information in a blog post without affecting the business logic behind it.
+Since Shiki does this heavy lifting, all that is needed is to render this information in a blog post without affecting the business logic behind it.
 
 ## Initial JavaScript implementation
 
-Using client-side JavaScript, you can easily detect code blocks and programmatically add headers. I have a layout file called `PostDetails.astro` which already had a the copy button functionality so it took a lot less guess work as to where the rendering of a code block’s language should go.
+Using client-side JavaScript, you can easily detect code blocks and programmatically add headers. I have a layout file called `PostDetails. Astro`, which already had a copy button functionality, so it took a lot less guesswork as to where the rendering of a code block's language should go.
 
 ```js
 function attachCopyButtons() {
@@ -49,7 +49,7 @@ function attachCopyButtons() {
 attachCopyButtons();
 ```
 
-This function creates a wrapper element for each code block. It begins by defining the button label text and querying for all `<pre>` elements, which Shiki uses to wrap code blocks. It then converts a list of notes into an array with `Array.from()` to provide an access to array manipulation. For each code block, a div is created with appropriate CSS classes.
+This function creates a wrapper element for each code block. It begins by defining the button label text and querying for all `<pre>` elements, which Shiki uses to wrap code blocks. It then converts a list of notes into an array with `Array.from()` to provide access to array manipulation. For each code block, a div is created with appropriate CSS classes.
 
 ## Language formatting
 
@@ -76,7 +76,7 @@ const formatLanguage = lang => {
 const displayLanguage = formatLanguage(language);
 ```
 
-You can also add more languages to the `languageMap` object or keep it small as per your needs. This mapping covers popular programming languages and provide a fallback that capitalizes the first letter. Here’s the complete code for what I am using on this blog:
+You can also add more languages to the `languageMap` object or keep it small as per your needs. This mapping covers popular programming languages and provides a fallback that capitalizes the first letter. Here’s the complete code for what I am using on this blog:
 
 ```js
 const languageMap = {
@@ -105,7 +105,7 @@ const languageMap = {
 
 ## Create a header bar structure
 
-The header bar is a visual container for both language label and the existing copy button. Create a flexbox container to appropriatelty position language label on the left and copy button on the right. The code block below also uses the CSS classes integrated with my blog’s theme system.
+The header bar is a visual container for both the language label and the existing copy button. Create a flexbox container to position the language label on the left appropriately and the copy button on the right. The code block below also uses the CSS classes integrated with my blog's theme system.
 
 ```js
 let headerBar = document.createElement('div');
@@ -115,7 +115,7 @@ headerBar.className =
 
 ## Build a language label
 
-To provide a clear identification of the code block’s programming language, you need to create language label provider:
+To provide clear identification of the code block's programming language, you need to create a language label provider:
 
 ```js
 let languageLabel = document.createElement('span');
@@ -125,11 +125,11 @@ languageLabel.setAttribute('aria-label', `Code language: ${displayLanguage}`);
 languageLabel.setAttribute('role', 'note');
 ```
 
-In above code block, the accessibility attributes provide context for screen readers, with the `aria-label` explaining the purpose and the role attribute marking it as informational content.
+In the above code block, the accessibility attributes provide context for screen readers, with the `aria-label` explaining the purpose and the role attribute marking it as informational content.
 
 ## Create a copy button
 
-The copy button is used to provide an interactive functionality for copying code to the clipboard. It uses a button element that includes hover effects and color transitions to reuse the existing theme system. Let’s also create a function to handle the actual copy functionality:
+The copy button is used to provide an interactive functionality for copying code to the clipboard. It utilizes a button element that incorporates hover effects and color transitions to leverage the existing theme system. Let’s also create a function to handle the actual copy functionality:
 
 ```js
 let copyButton = document.createElement('button');
@@ -155,7 +155,7 @@ async function copyCode(block, button) {
 }
 ```
 
-In `copyCode` function, the Clipboard API writes the text to the user's clipboard asynchronously. Visual feedback changes the button text temporarily to "Copied" before reverting after 700 milliseconds, providing clear confirmation that the action succeeded.
+In the `copyCode` function, the Clipboard API writes the text to the user's clipboard asynchronously. Visual feedback changes the button text to "Copied" temporarily before reverting after 700 milliseconds, providing clear confirmation that the action was successful.
 
 Here’s how the label and hover effect works on the label:
 
@@ -230,6 +230,6 @@ The improved code block now contains the language labels to provide immediate co
 
 <img src="/images/astro-blog/blog-6.png" width="640" />
 
-Using the existing theme system, the header bar is rendered correctly when switching the theme to dark:
+When switching to the dark theme, the header bar renders correctly:
 
 <img src="/images/astro-blog/blog-7.png" width="640" />
