@@ -10,7 +10,7 @@ tags:
 description: ''
 ---
 
-Covid-19 changed our way of life since the start of 2020 - a year some of us want to fast forward like a button on that TV remote. That said, self-isolating is the best thing you can do right now, and thus, isolating ourselves at Jscrambler, we came up with a fun, simple React Native app idea.
+Covid-19 changed our way of life since the start of 2020 &mdash; a year some of us want to fast forward like a button on that TV remote. That said, self-isolating is the best thing you can do right now, and thus, isolating ourselves at Jscrambler, we came up with a fun, simple React Native app idea.
 
 The app is all about how long you have been quarantining. As a user, you input the date when you started isolating and the app is going to display a fun message to tell you how far you have come in the quarantine “game”.
 
