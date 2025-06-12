@@ -1,7 +1,7 @@
 ---
 title: 'Advanced code blocks with language labels and copy buttons in Astro'
 author: 'Aman Mittal'
-pubDatetime: 2025-06-12T12:00:00Z
+pubDatetime: 2025-06-12T00:00:01Z
 featured: false
 draft: false
 tags:
