@@ -9,6 +9,8 @@ import type { CollectionEntry } from 'astro:content';
 import { slugifyStr } from '@utils/slugify';
 import ShareLinks from '@components/ShareLinks.astro';
 import { SITE } from '@config';
+import IconCopy from '@assets/icons/IconCopy.svg?raw';
+import IconCheck from '@assets/icons/IconCheck.svg?raw';
 
 export interface Props {
   post: CollectionEntry<'blog'>;
@@ -237,7 +239,7 @@ const nextPost =
       }
     </style>
 
-    <script is:inline>
+    <script is:inline define:vars={{ IconCopy, IconCheck }}>
       function createProgressBar() {
         const progressContainer = document.createElement('div');
         progressContainer.className =
@@ -283,7 +285,6 @@ const nextPost =
       addHeadingLinks();
 
       function attachCopyButtons() {
-        let copyButtonLabel = 'Copy';
         let codeBlocks = Array.from(document.querySelectorAll('pre'));
 
         for (let codeBlock of codeBlocks) {
@@ -316,14 +317,13 @@ const nextPost =
               kotlin: 'Kotlin',
             };
 
-
             return languageMap[lang.toLowerCase()] || lang.charAt(0).toUpperCase() + lang.slice(1);
           };
 
           const displayLanguage = formatLanguage(language);
           let headerBar = document.createElement('div');
           headerBar.className =
-            'code-header flex items-center justify-between bg-skin-card border-b border-skin-border px-4 py-2 rounded-t-md';
+            'code-header flex items-center justify-between bg-skin-card border-b border-skin-border px-2 py-0.3 rounded-t-md';
           let languageLabel = document.createElement('span');
           languageLabel.className =
             'language-label text-sm text-skin-base font-medium';
@@ -332,8 +332,23 @@ const nextPost =
           languageLabel.setAttribute('role', 'note');
           let copyButton = document.createElement('button');
           copyButton.className =
-            'copy-code text-sm text-skin-base hover:text-skin-accent transition-colors font-medium';
-          copyButton.innerHTML = copyButtonLabel;
+            'copy-code relative p-2 text-skin-base hover:text-skin-accent transition-all duration-200 ease-in-out hover:bg-skin-fill rounded-md';
+
+          let copyIcon = document.createElement('div');
+          copyIcon.className = 'copy-icon transition-all duration-200 ease-in-out';
+          copyIcon.innerHTML = IconCopy;
+          copyIcon.querySelector('svg').style.width = '16px';
+          copyIcon.querySelector('svg').style.height = '16px';
+
+          let checkIcon = document.createElement('div');
+          checkIcon.className = 'check-icon absolute inset-0 flex items-center justify-center opacity-0 scale-75 transition-all duration-200 ease-in-out';
+          checkIcon.innerHTML = IconCheck;
+          checkIcon.querySelector('svg').style.width = '16px';
+          checkIcon.querySelector('svg').style.height = '16px';
+
+          copyButton.appendChild(copyIcon);
+          copyButton.appendChild(checkIcon);
+
           copyButton.setAttribute('aria-label', `Copy ${displayLanguage} code to clipboard`);
           copyButton.setAttribute('title', 'Copy code to clipboard');
 
@@ -356,13 +371,20 @@ const nextPost =
           let text = code?.innerText;
 
           await navigator.clipboard.writeText(text ?? '');
+          const copyIcon = button.querySelector('.copy-icon');
+          const checkIcon = button.querySelector('.check-icon');
 
-
-          button.innerText = 'Copied';
+          copyIcon.style.opacity = '0';
+          copyIcon.style.transform = 'scale(0.75)';
+          checkIcon.style.opacity = '1';
+          checkIcon.style.transform = 'scale(1)';
 
           setTimeout(() => {
-            button.innerText = copyButtonLabel;
-          }, 700);
+            copyIcon.style.opacity = '1';
+            copyIcon.style.transform = 'scale(1)';
+            checkIcon.style.opacity = '0';
+            checkIcon.style.transform = 'scale(0.75)';
+          }, 1200);
         }
       }
       attachCopyButtons();
