@@ -40,7 +40,7 @@ React Native Vector Icons will be used for adding icons in the app. React Naviga
 The following libraries are going to be used for adding multi-language support to the app:
 
 - `i18next`: internationalization library.
-- `react-i18next`: provides binding for React and React Native projects using Hooks, High Order Components (HOCs), etc. We will use the `useTranslation` hook to translate the text within React Native function components.
+- `react-i18next`: provides binding for React and React Native projects using Hooks, High Order Components (HOCs), and so on. We will use the `useTranslation` hook to translate the text within React Native function components.
 - `react-native-localize`: provides helper functions to figure based on the device's localized language preference.
 - `@react-native-async-storage/async-storage`: is an unencrypted, asynchronous, persistent, key-value storage system that is global to the app. It is used to store the user's language preference such that it persists when the app restarts.
 
