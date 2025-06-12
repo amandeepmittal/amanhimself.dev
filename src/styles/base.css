@@ -152,4 +152,36 @@
   .focus-outline {
     @apply outline-2 outline-offset-1 outline-skin-fill focus-visible:no-underline focus-visible:outline-dashed;
   }
+
+  .code-header {
+    @apply select-none;
+    margin-bottom: 0 !important;
+  }
+
+  .language-label {
+    @apply select-none pointer-events-none;
+  }
+
+  .copy-code {
+    @apply cursor-pointer select-none;
+  }
+
+  .copy-code:hover {
+    @apply transform scale-105;
+  }
+
+  pre {
+    @apply mt-0 mb-4;
+    position: relative;
+    margin-top: 0 !important;
+  }
+
+  pre > code {
+    @apply pt-0;
+  }
+
+  .code-header + pre {
+    margin-top: 0 !important;
+    border-top: none;
+  }
 }

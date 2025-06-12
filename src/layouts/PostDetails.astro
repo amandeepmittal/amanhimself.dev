@@ -242,10 +242,7 @@ const nextPost =
     </style>
 
     <script is:inline>
-      /** Create a progress indicator
-       *  at the top */
       function createProgressBar() {
-        // Create the main container div
         const progressContainer = document.createElement('div');
         progressContainer.className =
           'progress-container fixed top-0 z-10 h-1 w-full bg-skin-fill';
@@ -254,17 +251,11 @@ const nextPost =
         const progressBar = document.createElement('div');
         progressBar.className = 'progress-bar h-1 w-0 bg-skin-accent';
         progressBar.id = 'myBar';
-
-        // Append the progress bar to the progress container
         progressContainer.appendChild(progressBar);
-
-        // Append the progress container to the document body or any other desired parent element
         document.body.appendChild(progressContainer);
       }
       createProgressBar();
 
-      /** Update the progress bar
-       *  when user scrolls */
       function updateScrollProgress() {
         const winScroll =
           document.body.scrollTop || document.documentElement.scrollTop;
@@ -281,8 +272,6 @@ const nextPost =
       }
       document.addEventListener('scroll', updateScrollProgress);
 
-      /** Attaches links to headings in the document,
-       *  allowing sharing of sections easily */
       function addHeadingLinks() {
         let headings = Array.from(
           document.querySelectorAll('h2, h3, h4, h5, h6')
@@ -299,8 +288,6 @@ const nextPost =
       }
       addHeadingLinks();
 
-      /** Attaches copy buttons to code blocks in the document,
-       * allowing users to copy code easily. */
       function attachCopyButtons() {
         let copyButtonLabel = 'Copy';
         let codeBlocks = Array.from(document.querySelectorAll('pre'));
@@ -308,16 +295,61 @@ const nextPost =
         for (let codeBlock of codeBlocks) {
           let wrapper = document.createElement('div');
           wrapper.style.position = 'relative';
+          wrapper.className = 'code-block-wrapper mt-6 mb-4';
+          let language = codeBlock.getAttribute('data-language') || 'text';
 
+          const formatLanguage = lang => {
+            const languageMap = {
+              ts: 'TypeScript',
+              js: 'JavaScript',
+              tsx: 'TSX',
+              jsx: 'JSX',
+              md: 'Markdown',
+              mdx: 'MDX',
+              sh: 'Shell',
+              bash: 'Bash',
+              json: 'JSON',
+              yaml: 'YAML',
+              yml: 'YAML',
+              toml: 'TOML',
+              css: 'CSS',
+              html: 'HTML',
+              xml: 'XML',
+              py: 'Python',
+              rb: 'Ruby',
+              cpp: 'C++',
+              swift: 'Swift',
+              kotlin: 'Kotlin',
+            };
+
+
+            return languageMap[lang.toLowerCase()] || lang.charAt(0).toUpperCase() + lang.slice(1);
+          };
+
+          const displayLanguage = formatLanguage(language);
+          let headerBar = document.createElement('div');
+          headerBar.className =
+            'code-header flex items-center justify-between bg-skin-card border-b border-skin-border px-4 py-2 rounded-t-md';
+          let languageLabel = document.createElement('span');
+          languageLabel.className =
+            'language-label text-sm text-skin-base font-medium';
+          languageLabel.innerHTML = displayLanguage;
+          languageLabel.setAttribute('aria-label', `Code language: ${displayLanguage}`);
+          languageLabel.setAttribute('role', 'note');
           let copyButton = document.createElement('button');
           copyButton.className =
-            'copy-code absolute right-3 -top-3 rounded bg-skin-card px-2 py-1 text-xs leading-4 text-skin-base font-medium';
+            'copy-code text-sm text-skin-base hover:text-skin-accent transition-colors font-medium';
           copyButton.innerHTML = copyButtonLabel;
-          codeBlock.setAttribute('tabindex', '0');
-          codeBlock.appendChild(copyButton);
+          copyButton.setAttribute('aria-label', `Copy ${displayLanguage} code to clipboard`);
+          copyButton.setAttribute('title', 'Copy code to clipboard');
 
-          // wrap codebock with relative parent element
+          headerBar.appendChild(languageLabel);
+          headerBar.appendChild(copyButton);
+          codeBlock.setAttribute('tabindex', '0');
+          codeBlock.className = (codeBlock.className || '') + ' rounded-t-none rounded-b-md';
+
           codeBlock?.parentNode?.insertBefore(wrapper, codeBlock);
+          wrapper.appendChild(headerBar);
           wrapper.appendChild(codeBlock);
 
           copyButton.addEventListener('click', async () => {
@@ -331,7 +363,7 @@ const nextPost =
 
           await navigator.clipboard.writeText(text ?? '');
 
-          // visual feedback that task is completed
+
           button.innerText = 'Copied';
 
           setTimeout(() => {
