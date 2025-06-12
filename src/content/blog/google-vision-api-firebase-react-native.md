@@ -30,7 +30,7 @@ Once the command line interface for Expo is installed in your local development 
 expo-cli init google-vision-rn-demo
 ```
 
-It will ask you for which template to use; choose the option **blank template** rather than tabs template. We only need a single screen in our application for the demonstration purposes. In the last step, you will be prompted to write the name of the project - simply type it and hit enter. Then, it will start installing dependencies. Once the project is created, traverse into the project directory. If you need any help with this setup, refer to the [Expo documentation](https://docs.expo.io/versions/v32.0.0/workflow/configuration/).
+It will ask you for which template to use; choose the option **blank template** rather than tabs template. We only need a single screen in our application for the demonstration purposes. In the last step, you will be prompted to write the name of the project &mdash; simply type it and hit enter. Then, it will start installing dependencies. Once the project is created, traverse into the project directory. If you need any help with this setup, refer to the [Expo documentation](https://docs.expo.io/versions/v32.0.0/workflow/configuration/).
 
 ## Setting Up Firebase
 

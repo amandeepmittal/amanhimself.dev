@@ -14,7 +14,7 @@ description: ''
 
 [Firebase](https://console.firebase.google.com/) is a Backend as a Service (BaaS) that provides a variety of services for web and mobile app development. Most of the mobile apps built using React Native and Expo require knowing the identity of a user. This allows an app to securely save user data in the cloud and provide more personalized functionalities.
 
-Firebase has an Authentication service that integrates well in a React Native and Expo app. It has a ready-to-use SDK and supports many authentication providers such as email/password, phone numbers, and federated providers (Google, Facebook, Twitter, etc.).
+Firebase has an Authentication service that integrates well in a React Native and Expo app. It has a ready-to-use SDK and supports many authentication providers such as email/password, phone numbers, and federated providers (Google, Facebook, Twitter, and so on).
 
 In this tutorial, let's take a look at how as a mobile developer building applications using Expo SDK, you can integrate and use Firebase Authentication. You are going to:
 
@@ -166,7 +166,7 @@ export default {
 };
 ```
 
-Now, all the keys inside the `extra` object are readable app-wide using `expo-constants`. This package allows reading values from `app.json` - or in this case, the `app.config.js` file.
+Now, all the keys inside the `extra` object are readable app-wide using `expo-constants`. This package allows reading values from `app.json` &mdash; or in this case, the `app.config.js` file.
 
 Open the Expo-generated project in your code editor, create a new directory in the root called `config/` and add a file called `firebase.js`. Edit the file as shown below:
 
@@ -759,7 +759,7 @@ In this section, you are going to create an authentication provider to check whe
 
 Create a new directory called `navigation/` and inside it, create a file called `AuthenticatedUserProvider.js`.
 
-When a user is authenticated using a sign-in method in Firebase, it returns a user object with various properties such as email, photo URL, UID, display name, etc. To create the auth flow in the example app we are building, we need a way of knowing whether this user object exists or not. Thus, we conditionally render two different stack navigators (we will create them in the next section). So, a user will only be able to log in and access `HomeScreen` if their respective user object exists.
+When a user is authenticated using a sign-in method in Firebase, it returns a user object with various properties such as email, photo URL, UID, display name, and so on. To create the auth flow in the example app we are building, we need a way of knowing whether this user object exists or not. Thus, we conditionally render two different stack navigators (we will create them in the next section). So, a user will only be able to log in and access `HomeScreen` if their respective user object exists.
 
 One way to share data that is considered global in a React app is to use the React Context API. When creating a context, we must pass a default value. This value is used when a component has a matching Provider.
 
