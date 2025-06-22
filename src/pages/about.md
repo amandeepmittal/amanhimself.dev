@@ -23,7 +23,7 @@ I’ve worn many hats over the years:
 - Heartbeat (a.k.a FritzAI) (React Native Technical Writer, 2019 &mdash; 2020)
 - Jscrambler (React Native Technical Writer, 2018 &mdash; 2022)
 
-## Open soucrce and me
+## Open source and me
 
 In 2018, I made my first open-source contribution by writing a Twitter Bot for freeCodeCamp’s [#100DaysOfCode](https://x.com/_100Daysofcode) campaign, which now has over 200k followers. Over the years I've made some contributions to some projects and organizations such as Node.js, Gatsbyjs and freeCodeCamp both as a contributor. and I was recognized among the [Top 200 Open Source Contributors](https://www.freecodecamp.org/news/announcing-our-freecodecamp-2018-top-contributor-award-winners-861da08a77e1/) by freeCodeCamp.org in 2018.
 

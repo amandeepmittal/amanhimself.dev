@@ -86,7 +86,7 @@ export const HomeScreen = () => {
 
 The `Box` component from NativeBase is a generic component. It comes with many props, a few of them are to apply SafeAreaView of the device. The prop `safeAreaTop` applies padding from the top of the device's screen. One advantage of using the NativeBase library is its built-in components provide props like handling safe area views.
 
-Most NativeBase components also use utility props for most commonly used styled properties such as `justifyContent`, `backgroundColor`, etc., and shorthands for these utility props such as `px` for padding horizontal.
+Most NativeBase components also use utility props for most commonly used styled properties such as `justifyContent`, `backgroundColor`, andmore. Shorthands for these utility props such as `px` for padding horizontal.
 
 ## Setting up providers
 
