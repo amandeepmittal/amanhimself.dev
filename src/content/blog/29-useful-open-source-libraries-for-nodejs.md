@@ -382,7 +382,7 @@ Another open source Content Management System for Nodejs application, Strapi has
 - Secure by default: Reusable policies, CSRF, CORS, P3P, Xframe, XSS
 - Plugins Oriented: Install auth system, content management, custom plugins, and more, in seconds
 - Powerful CLI: Scaffold projects and APIs on the fly
-- Front-end Agnostic: Use any front-end frameworks (React, Vue, Angular, etc.), mobile apps or even IoT
+- Front-end Agnostic: Use any front-end frameworks (React, Vue, Angular, and more.), mobile apps or even IoT
 - Blazing Fast: Built on top of Node.js, Strapi delivers amazing performances.
 
 [**strapi/strapi**](https://github.com/strapi/strapi)
