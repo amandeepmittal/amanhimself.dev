@@ -55,6 +55,13 @@ export default function SearchBar({ searchList }: Props) {
     }, 50);
   }, []);
 
+  // Auto-focus search input on component mount (especially useful for keyboard shortcut navigation)
+  useEffect(() => {
+    if (inputRef.current) {
+      inputRef.current.focus();
+    }
+  }, []);
+
   useEffect(() => {
     // Add search result only if
     // input value is more than one character
@@ -77,13 +84,6 @@ export default function SearchBar({ searchList }: Props) {
     }
   }, [inputVal]);
 
-  useEffect(() => {
-    // Focus on text input when search bar is displayed
-    if (inputRef.current) {
-      inputRef.current.focus();
-    }
-  }, [inputVal]);
-
   return (
     <>
       <label className="relative block">
@@ -96,7 +96,7 @@ export default function SearchBar({ searchList }: Props) {
         <input
           className="block w-full rounded border border-skin-fill
         border-opacity-40 bg-skin-fill py-3 pl-10
-        pr-3 placeholder:italic placeholder:text-opacity-75
+        pr-16 placeholder:italic placeholder:text-opacity-75
         focus:border-skin-accent focus:outline-none"
           placeholder="Search for anything..."
           type="text"
@@ -107,6 +107,11 @@ export default function SearchBar({ searchList }: Props) {
           // autoFocus
           ref={inputRef}
         />
+        <span className="absolute inset-y-0 right-0 flex items-center pr-3">
+          <kbd className="hidden sm:inline-block px-2 py-1 text-xs font-medium text-skin-base bg-skin-card border border-skin-fill rounded opacity-60">
+            ⌘ + k
+          </kbd>
+        </span>
       </label>
 
       {inputVal.length > 1 && (
