@@ -153,15 +153,6 @@
     @apply outline-2 outline-offset-1 outline-skin-fill focus-visible:no-underline focus-visible:outline-dashed;
   }
 
-  .code-header {
-    @apply select-none;
-    margin-bottom: 0 !important;
-  }
-
-  .language-label {
-    @apply select-none pointer-events-none;
-  }
-
   .copy-code {
     @apply cursor-pointer select-none;
   }
@@ -180,8 +171,40 @@
     @apply pt-0;
   }
 
+  /* Code block wrapper styling */
+  .code-block-wrapper {
+    @apply relative;
+  }
+
+  /* Code header styling */
+  .code-header {
+    @apply bg-skin-card border-skin-line text-skin-base;
+    margin-bottom: 0 !important;
+  }
+
+  /* Code blocks with headers should connect seamlessly */
   .code-header + pre {
+    @apply rounded-t-none mt-0;
     margin-top: 0 !important;
     border-top: none;
+  }
+
+  /* Copy button styling */
+  .copy-code {
+    z-index: 10;
+  }
+
+  /* Dark mode support */
+  html[data-theme='dark'] .code-header {
+    @apply bg-skin-card border-skin-line text-skin-base;
+  }
+
+  /* Prose content styling */
+  .prose .code-header {
+    @apply my-0;
+  }
+
+  .prose .code-header + pre {
+    @apply mt-0;
   }
 }

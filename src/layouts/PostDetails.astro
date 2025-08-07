@@ -288,104 +288,160 @@ const nextPost =
         let codeBlocks = Array.from(document.querySelectorAll('pre'));
 
         for (let codeBlock of codeBlocks) {
-          let wrapper = document.createElement('div');
-          wrapper.style.position = 'relative';
-          wrapper.className = 'code-block-wrapper mt-6 mb-4';
-          let language = codeBlock.getAttribute('data-language') || 'text';
+          const codeElement = codeBlock.querySelector('code');
+          if (!codeElement) continue;
 
-          const formatLanguage = lang => {
-            const languageMap = {
-              ts: 'TypeScript',
-              js: 'JavaScript',
-              tsx: 'TSX',
-              jsx: 'JSX',
-              md: 'Markdown',
-              mdx: 'MDX',
-              sh: 'Shell',
-              bash: 'Bash',
-              json: 'JSON',
-              yaml: 'YAML',
-              yml: 'YAML',
-              toml: 'TOML',
-              css: 'CSS',
-              html: 'HTML',
-              xml: 'XML',
-              py: 'Python',
-              rb: 'Ruby',
-              cpp: 'C++',
-              swift: 'Swift',
-              kotlin: 'Kotlin',
-              plain: 'Plain Text',
-            };
+          const codeText = codeElement.textContent || '';
+          const lines = codeText.split('\n');
+          let filename = null;
+          let filenameLineIndex = -1;
 
-            return languageMap[lang.toLowerCase()] || lang.charAt(0).toUpperCase() + lang.slice(1);
-          };
+          for (let i = 0; i < Math.min(3, lines.length); i++) {
+            const line = lines[i].trim();
 
-          const displayLanguage = formatLanguage(language);
-          let headerBar = document.createElement('div');
-          headerBar.className =
-            'code-header flex items-center justify-between bg-skin-card border-b border-skin-border px-2 py-0.3 rounded-t-md';
-          let languageLabel = document.createElement('span');
-          languageLabel.className =
-            'language-label text-sm text-skin-base font-medium';
-          languageLabel.innerHTML = displayLanguage;
-          languageLabel.setAttribute('aria-label', `Code language: ${displayLanguage}`);
-          languageLabel.setAttribute('role', 'note');
-          let copyButton = document.createElement('button');
-          copyButton.className =
-            'copy-code relative p-2 text-skin-base hover:text-skin-accent transition-all duration-200 ease-in-out hover:bg-skin-fill rounded-md';
+            const patterns = [
+              /^\/\/\s*(.+\.\w+)/,  // // filename.js
+              /^\/\*\s*(.+\.\w+)\s*\*\//,  // /* filename.css */
+              /^#\s*(.+\.\w+)/,     // # filename.py
+              /^<!--\s*(.+\.\w+)\s*-->/,  // <!-- filename.html -->
+            ];
 
-          let copyIcon = document.createElement('div');
-          copyIcon.className = 'copy-icon transition-all duration-200 ease-in-out';
-          copyIcon.innerHTML = IconCopy;
-          copyIcon.querySelector('svg').style.width = '16px';
-          copyIcon.querySelector('svg').style.height = '16px';
+            for (const pattern of patterns) {
+              const match = line.match(pattern);
+              if (match) {
+                filename = match[1];
+                filenameLineIndex = i;
+                break;
+              }
+            }
 
-          let checkIcon = document.createElement('div');
-          checkIcon.className = 'check-icon absolute inset-0 flex items-center justify-center opacity-0 scale-75 transition-all duration-200 ease-in-out';
-          checkIcon.innerHTML = IconCheck;
-          checkIcon.querySelector('svg').style.width = '16px';
-          checkIcon.querySelector('svg').style.height = '16px';
+            if (filename) break;
+          }
 
-          copyButton.appendChild(copyIcon);
-          copyButton.appendChild(checkIcon);
+          if (filename) {
+            const allTextNodes = [];
+            const walker = document.createTreeWalker(
+              codeElement,
+              NodeFilter.SHOW_TEXT,
+              null,
+              false
+            );
 
-          copyButton.setAttribute('aria-label', `Copy ${displayLanguage} code to clipboard`);
-          copyButton.setAttribute('title', 'Copy code to clipboard');
+            let node;
+            while (node = walker.nextNode()) {
+              allTextNodes.push(node);
+            }
 
-          headerBar.appendChild(languageLabel);
-          headerBar.appendChild(copyButton);
-          codeBlock.setAttribute('tabindex', '0');
-          codeBlock.className = (codeBlock.className || '') + ' rounded-t-none rounded-b-md';
+            let currentLineIndex = 0;
+            let currentLineText = '';
 
-          codeBlock?.parentNode?.insertBefore(wrapper, codeBlock);
-          wrapper.appendChild(headerBar);
-          wrapper.appendChild(codeBlock);
+            for (const textNode of allTextNodes) {
+              const text = textNode.textContent;
+              const newlineCount = (text.match(/\n/g) || []).length;
 
-          copyButton.addEventListener('click', async () => {
-            await copyCode(codeBlock, copyButton);
-          });
-        }
+              if (currentLineIndex === filenameLineIndex) {
+                let parent = textNode.parentElement;
+                while (parent && parent !== codeElement) {
+                  if (parent.tagName === 'SPAN') {
+                    parent.style.display = 'none';
+                    break;
+                  }
+                  parent = parent.parentElement;
+                }
 
-        async function copyCode(block, button) {
-          let code = block.querySelector('code');
-          let text = code?.innerText;
+                if (parent === codeElement) {
+                  const span = document.createElement('span');
+                  span.style.display = 'none';
+                  textNode.parentNode.insertBefore(span, textNode);
+                  span.appendChild(textNode);
+                }
+              }
 
-          await navigator.clipboard.writeText(text ?? '');
-          const copyIcon = button.querySelector('.copy-icon');
-          const checkIcon = button.querySelector('.check-icon');
+              currentLineIndex += newlineCount;
+              if (currentLineIndex > filenameLineIndex) break;
+            }
 
-          copyIcon.style.opacity = '0';
-          copyIcon.style.transform = 'scale(0.75)';
-          checkIcon.style.opacity = '1';
-          checkIcon.style.transform = 'scale(1)';
 
-          setTimeout(() => {
-            copyIcon.style.opacity = '1';
-            copyIcon.style.transform = 'scale(1)';
-            checkIcon.style.opacity = '0';
-            checkIcon.style.transform = 'scale(0.75)';
-          }, 1200);
+            const header = document.createElement('div');
+            header.className = 'code-header flex items-center justify-between bg-skin-card border border-skin-line rounded-t-md px-3 py-2 text-sm';
+            const leftSide = document.createElement('div');
+            leftSide.className = 'flex items-center gap-2';
+            const greenDot = document.createElement('div');
+            greenDot.className = 'w-2 h-2 bg-green-500 rounded-full';
+            const filenameSpan = document.createElement('span');
+            filenameSpan.className = 'font-medium text-skin-base';
+
+            filenameSpan.textContent = filename;
+            leftSide.appendChild(greenDot);
+            leftSide.appendChild(filenameSpan);
+
+            const copyButton = document.createElement('button');
+            copyButton.className = 'copy-code p-1 text-skin-base hover:text-skin-accent transition-all duration-200 ease-in-out hover:bg-skin-fill rounded';
+            copyButton.innerHTML = IconCopy;
+            copyButton.querySelector('svg').style.width = '16px';
+            copyButton.querySelector('svg').style.height = '16px';
+            copyButton.setAttribute('aria-label', 'Copy code to clipboard');
+            copyButton.setAttribute('title', 'Copy code to clipboard');
+
+            header.appendChild(leftSide);
+            header.appendChild(copyButton);
+
+            codeBlock.parentNode.insertBefore(header, codeBlock);
+
+            codeBlock.className = (codeBlock.className || '') + ' rounded-t-none mt-0';
+            codeBlock.style.borderTop = 'none';
+            codeBlock.style.marginTop = '0';
+
+            copyButton.addEventListener('click', async () => {
+              const originalCode = lines.join('\n');
+              await navigator.clipboard.writeText(originalCode);
+
+              const originalHTML = copyButton.innerHTML;
+              copyButton.innerHTML = IconCheck;
+              copyButton.querySelector('svg').style.width = '16px';
+              copyButton.querySelector('svg').style.height = '16px';
+
+              setTimeout(() => {
+                copyButton.innerHTML = originalHTML;
+                copyButton.querySelector('svg').style.width = '16px';
+                copyButton.querySelector('svg').style.height = '16px';
+              }, 1200);
+            });
+
+          } else {
+            let wrapper = document.createElement('div');
+            wrapper.style.position = 'relative';
+            wrapper.className = 'code-block-wrapper';
+
+            let copyButton = document.createElement('button');
+            copyButton.className = 'copy-code absolute top-3 right-3 p-2 text-skin-base hover:text-skin-accent transition-all duration-200 ease-in-out hover:bg-skin-card rounded-md opacity-70 hover:opacity-100';
+            copyButton.innerHTML = IconCopy;
+            copyButton.querySelector('svg').style.width = '16px';
+            copyButton.querySelector('svg').style.height = '16px';
+            copyButton.setAttribute('aria-label', 'Copy code to clipboard');
+            copyButton.setAttribute('title', 'Copy code to clipboard');
+
+            codeBlock?.parentNode?.insertBefore(wrapper, codeBlock);
+            wrapper.appendChild(codeBlock);
+            wrapper.appendChild(copyButton);
+
+            copyButton.addEventListener('click', async () => {
+              const code = codeBlock.querySelector('code');
+              const text = code?.innerText;
+              await navigator.clipboard.writeText(text ?? '');
+
+              const originalHTML = copyButton.innerHTML;
+              copyButton.innerHTML = IconCheck;
+              copyButton.querySelector('svg').style.width = '16px';
+              copyButton.querySelector('svg').style.height = '16px';
+
+              setTimeout(() => {
+                copyButton.innerHTML = originalHTML;
+                copyButton.querySelector('svg').style.width = '16px';
+                copyButton.querySelector('svg').style.height = '16px';
+              }, 1200);
+            });
+          }
         }
       }
       attachCopyButtons();

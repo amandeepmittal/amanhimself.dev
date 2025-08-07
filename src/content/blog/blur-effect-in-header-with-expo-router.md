@@ -24,6 +24,7 @@ Since Expo Router wraps the React Navigation library, you can use `Stack.Screen`
 In `app/_layout.tsx`, a `Stack` component is used to define the layout of the app. The `Stack.Screen` component is used to define the screen's layout and options. Currently, there's only one screen in the app, so it's the root screen (`app/index.tsx`). Update the `Stack.Screen` component with the `headerBlurEffect` and `headerTransparent` props:
 
 ```tsx
+// app/_layout.tsx
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { Stack } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
@@ -64,6 +65,7 @@ There's another problem with this approach. On Android, this effect does not wor
 To fix the issue from the previous section, you can use the [`useHeaderHeight` hook](https://reactnavigation.org/docs/use-header-height). This hook returns the height of the header, which you can use to offset the content in `app/index.tsx`.
 
 ```tsx
+// app/index.tsx
 import { useHeaderHeight } from '@react-navigation/elements';
 import { FlatList, Pressable, StyleSheet, Text, View } from 'react-native';
 
@@ -151,6 +153,7 @@ In the first section, you learned that the blur effect does not work on Android.
 To make sure the blur effect is applied only on iOS, you can use the `Platform` module from React Native. In `app\_layout.tsx`, import `Platform` from `react-native` and conditionally check if the platform is iOS to apply `headerBlurEffect` and `headerTransparent`:
 
 ```tsx
+// app/_layout.tsx
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { Stack } from 'expo-router';
 import { Platform } from 'react-native';
@@ -184,6 +187,7 @@ export default function RootLayout() {
 Then, in `app/index.tsx`, for `headerHeight` let's do the similar platform check:
 
 ```tsx
+// app/index.tsx
 <FlatList
   data={data}
   renderItem={({ item }) => (
@@ -211,6 +215,7 @@ Since Expo Router wraps React Navigation library underneath, all supported value
 For example, if you use `systemThinMaterialDark`, it will be applied to the iOS app, giving a different blur aesthetic that might better match a dark-themed application:
 
 ```tsx
+// app/_layout.tsx
 <Stack.Screen
   name="index"
   options={{
