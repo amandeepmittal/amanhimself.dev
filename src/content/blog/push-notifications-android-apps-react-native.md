@@ -41,7 +41,7 @@ cd RNnotifications
 yarn add react-native-push-notification
 ```
 
-For iOS devices, this library depends on the manual installation instructions mentioned at [PushNotificationIOS](https://github.com/react-native-community/react-native-push-notification-ios) - an API that is maintained by react-native-community.
+For iOS devices, this library depends on the manual installation instructions mentioned at [PushNotificationIOS](https://github.com/react-native-community/react-native-push-notification-ios) &mdash; an API that is maintained by react-native-community.
 
 For Android devices, you are going to make the following edits in the appropriate files mentioned below. First, open the file `android/build.gradle` and add the following:
 

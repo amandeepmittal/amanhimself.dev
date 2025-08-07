@@ -216,7 +216,7 @@ Action types defined in the above file are self-explanatory. The first one, `GET
 
 An action type is used to trigger the event to update the state stored using Redux. Each action type has action creators for this purpose. The first action creator required in the demo app is to fetch the data from the [Draftbit's Example API](https://example-data.draftbit.com/).
 
-To fetch data, we will use a library called `axios`. It has an API of methods such as `.get`, `.put`, etc. to make the appropriate HTTP requests.
+To fetch data, we will use a library called `axios`. It has an API of methods such as `.get`, `.put`, and so on. to make the appropriate HTTP requests.
 
 To make the HTTP request to retrieve the data, a `BASE URL` of the API is required. Inside the `actions.js` file, import the `axios` library and the Base URL:
 
@@ -795,6 +795,6 @@ And that's it! I hope you have found this tutorial helpful.
 
 ## Further Reading
 
-- [Deep Dive Into React - Separation of Concerns by Andrei Calazans](https://www.g2i.co/blog/react-separation-of-concerns)
+- [Deep Dive Into React &mdash; Separation of Concerns by Andrei Calazans](https://www.g2i.co/blog/react-separation-of-concerns)
 
 _Originally published at [Jscrambler.com](https://jscrambler.com/blog/how-to-use-redux-persist-in-react-native-with-asyncstorage)_
