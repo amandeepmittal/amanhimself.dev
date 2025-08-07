@@ -239,7 +239,7 @@ class App extends Component {
 }
 ```
 
-The `input` element must have the `type="file"` otherwise it would not be able to recognize what type we are using it for. It is similar to the values like `email`, `password`, etc.
+The `input` element must have the `type="file"` otherwise it would not be able to recognize what type we are using it for. It is similar to the values like `email`, `password`, and so on.
 
 The `handleUploadImage` method will take care of the API calls that we need to request to the server. If that call is successful, the local state of our React application will be set to let the user know that the upload was successful. Inside this function, to make the API call, we will be using `axios` library we installed when setting up our front end app.
 
