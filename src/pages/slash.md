@@ -1,6 +1,6 @@
 ---
 layout: ../layouts/GenericLayout.astro
-title: 'Slashes'
+title: 'Slashes a.k.a. Other pages'
 ---
 
 A collection of all **/slash** pages on this site.
@@ -10,6 +10,7 @@ A collection of all **/slash** pages on this site.
 - [**/blog**](/blog): An archive of all posts published on this site
 - [**/links**](/links): A page of all the web links that the author is present on
 - [**/now**](/now): What the author is doing right now
+- [**/support**](/support): Learn how to sponsor this site
 - [**/rss**](/rss.xml): A page listing RSS feed to subscribe this site's content
 - [**/stats**](https://app.usefathom.com/share/habfbpub/amanhimself.dev): A page that share this sites stats (weekly, monthly, yearly)
 - [**/search**](/search): A page to search any article on this blog

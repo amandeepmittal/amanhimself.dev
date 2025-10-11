@@ -10,17 +10,51 @@ import LinkButton from '@components/LinkButton.astro';
   <Header />
 
   <main id="main-content">
-    <div class="not-found-wrapper">
-      <h1 aria-label="404 Not Found">404</h1>
-      <span aria-hidden="true">¯\_(ツ)_/¯</span>
-      <p>Page Not Found</p>
-      <LinkButton
-        href="/blog"
-        className="my-6 text-lg underline decoration-dashed underline-offset-8"
-      >
-        Go back to blog
-      </LinkButton>
-    </div>
+    <section class="not-found">
+      <p class="not-found__tag">Oops, dead link!</p>
+      <h1 class="not-found__title" aria-label="404 Not Found">
+        <span>4</span>
+        <span>0</span>
+        <span>4</span>
+      </h1>
+      <p class="not-found__subtitle">
+        The page you're looking for either moved, never existed, or is hiding behind a typo.
+      </p>
+
+      <div class="not-found__actions">
+        <LinkButton
+          href="/"
+          className="focus-outline rounded-md bg-[#7F56D9] px-6 py-3 text-white shadow-lg shadow-[#7F56D9]/30 transition hover:-translate-y-0.5 hover:bg-[#6E40CF]"
+        >
+          Go home
+        </LinkButton>
+        <LinkButton
+          href="/search/"
+          className="focus-outline rounded-md border border-skin-line px-6 py-3 text-skin-base transition hover:-translate-y-0.5 hover:border-skin-accent hover:text-skin-accent"
+        >
+          Try the search
+        </LinkButton>
+      </div>
+
+      <div class="not-found__grid">
+        <div>
+          <h2>Popular spots</h2>
+          <ul>
+            <li><a href="/blog/">Latest blog posts</a></li>
+            <li><a href="/now/">What I’m doing now</a></li>
+            <li><a href="/links/">Where else you can find me</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Still lost?</h2>
+          <ul>
+            <li><a href="mailto:amanmittal.work@gmail.com">Say hi via email</a></li>
+            <li><a href="/support/">Support the site</a></li>
+            <li><a href="/rss.xml">Subscribe to the RSS feed</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
   </main>
 
   <Footer />
@@ -28,15 +62,39 @@ import LinkButton from '@components/LinkButton.astro';
 
 <style>
   #main-content {
-    @apply mx-auto flex max-w-3xl flex-1 items-center justify-center;
+    @apply mx-auto flex max-w-4xl flex-1 items-center justify-center px-4 sm:px-8;
   }
-  .not-found-wrapper {
-    @apply mb-14 flex flex-col items-center justify-center;
+  .not-found {
+    @apply mb-20 w-full rounded-3xl border border-skin-line bg-skin-card p-8 text-center shadow-xl sm:p-12;
   }
-  .not-found-wrapper h1 {
-    @apply text-9xl font-bold text-skin-accent;
+  .not-found__tag {
+    @apply mx-auto w-fit rounded-full bg-skin-accent/10 px-4 py-1 text-xs font-semibold uppercase tracking-widest text-skin-accent;
   }
-  .not-found-wrapper p {
-    @apply mt-4 text-2xl sm:text-3xl;
+  .not-found__title {
+    @apply mt-8 flex justify-center gap-4 text-[5rem] font-black tracking-tight text-transparent sm:text-[7rem];
+    background: linear-gradient(135deg, var(--color-accent), var(--color-text-base));
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+  .not-found__title span {
+    @apply drop-shadow-sm;
+  }
+  .not-found__subtitle {
+    @apply mx-auto mt-6 max-w-xl text-lg text-skin-base/80;
+  }
+  .not-found__actions {
+    @apply mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row;
+  }
+  .not-found__grid {
+    @apply mt-12 grid gap-8 text-left sm:grid-cols-2;
+  }
+  .not-found__grid h2 {
+    @apply mb-4 text-sm font-semibold uppercase tracking-wider text-skin-base/70;
+  }
+  .not-found__grid ul {
+    @apply space-y-3 text-base leading-relaxed text-skin-base/80;
+  }
+  .not-found__grid a {
+    @apply inline-flex items-center gap-2 transition hover:text-skin-accent hover:underline;
   }
 </style>
