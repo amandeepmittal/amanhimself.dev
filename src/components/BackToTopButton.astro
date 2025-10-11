@@ -1,5 +1,4 @@
 ---
-import IconChevronLeft from "@assets/icons/IconChevronLeft.svg";
 import IconArrowNarrowUp from "@assets/icons/IconArrowNarrowUp.svg";
 ---
 
@@ -12,21 +11,33 @@ import IconArrowNarrowUp from "@assets/icons/IconArrowNarrowUp.svg";
   ]}
 >
   <button
+    type="button"
     data-button="back-to-top"
+    aria-label="Back to top"
+    title="Back to top"
     class:list={[
       "group relative bg-background px-2 py-1",
       "size-14 rounded-full shadow-xl",
+      "transition-colors duration-200",
+      "focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent/60",
+      "hover:bg-accent/10 hover:shadow-lg",
       "md:h-8 md:w-fit md:rounded-md md:shadow-none",
       "md:bg-background/35 md:bg-clip-padding md:backdrop-blur-lg",
     ]}
   >
     <span
       id="progress-indicator"
-      class="absolute inset-0 -z-10 block size-14 scale-110 rounded-full bg-transparent md:hidden md:h-8 md:rounded-md"
+      aria-hidden="true"
+      class="absolute inset-0 -z-10 block size-14 scale-110 rounded-full bg-transparent transition-[background-image,opacity] duration-300 ease-out md:hidden md:h-8 md:rounded-md"
     ></span>
-    <IconChevronLeft class="inline-block rotate-90 md:hidden" />
-    <span class="sr-only text-sm group-hover:text-accent md:not-sr-only">
-      <IconArrowNarrowUp class="inline-block size-4" />
+    <span class="flex items-center justify-center md:hidden">
+      <IconArrowNarrowUp
+        class="size-5 transition-transform duration-200 group-hover:-translate-y-1"
+        aria-hidden="true"
+      />
+    </span>
+    <span class="sr-only text-sm group-hover:text-accent md:not-sr-only md:flex md:items-center md:gap-2">
+      <IconArrowNarrowUp class="inline-block size-4" aria-hidden="true" />
       Back To Top
     </span>
   </button>
@@ -37,6 +48,7 @@ import IconArrowNarrowUp from "@assets/icons/IconArrowNarrowUp.svg";
    * the "Back to Top" button is clicked. */
   function backToTop() {
     const rootElement = document.documentElement;
+    const scrollElement = document.scrollingElement || rootElement;
     const btnContainer = document.querySelector("#btt-btn-container");
     const backToTopBtn = document.querySelector("[data-button='back-to-top']");
     const progressIndicator = document.querySelector("#progress-indicator");
@@ -44,25 +56,52 @@ import IconArrowNarrowUp from "@assets/icons/IconArrowNarrowUp.svg";
     if (!rootElement || !btnContainer || !backToTopBtn || !progressIndicator)
       return;
 
+    const prefersReducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    );
+
     // Attach click event handler for back-to-top button
-    backToTopBtn.addEventListener("click", () => {
-      document.body.scrollTop = 0; // For Safari
-      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    backToTopBtn.addEventListener("click", (event) => {
+      event.preventDefault();
+      const behavior = prefersReducedMotion.matches ? "auto" : "smooth";
+
+      if ("scrollTo" in window) {
+        window.scrollTo({ top: 0, behavior });
+      } else {
+        document.body.scrollTop = 0; // Safari fallback
+        rootElement.scrollTop = 0;
+        scrollElement.scrollTop = 0;
+      }
     });
 
     // Handle button visibility according to scroll position
     let lastVisible = null;
     function handleScroll() {
-      const scrollTotal = rootElement.scrollHeight - rootElement.clientHeight;
-      const scrollTop = rootElement.scrollTop;
-      const scrollPercent = Math.floor((scrollTop / scrollTotal) * 100);
+      const scrollTotal =
+        scrollElement.scrollHeight - scrollElement.clientHeight;
+      const scrollTop = scrollElement.scrollTop;
+
+      if (scrollTotal <= 0) {
+        btnContainer.classList.add("opacity-0", "translate-y-14");
+        btnContainer.classList.remove("opacity-100", "translate-y-0");
+        progressIndicator.style.removeProperty("background-image");
+        progressIndicator.style.removeProperty("opacity");
+        lastVisible = false;
+        return;
+      }
+
+      const scrollPercent = Math.round((scrollTop / scrollTotal) * 100);
 
       progressIndicator.style.setProperty(
         "background-image",
         `conic-gradient(var(--accent), var(--accent) ${scrollPercent}%, transparent ${scrollPercent}%)`
       );
+      progressIndicator.style.setProperty(
+        "opacity",
+        scrollPercent > 0 ? "1" : "0"
+      );
 
-      const isVisible = scrollTop / scrollTotal > 0.3;
+      const isVisible = scrollTop / scrollTotal > 0.25;
 
       if (isVisible !== lastVisible) {
         btnContainer.classList.toggle("opacity-100", isVisible);
@@ -74,15 +113,29 @@ import IconArrowNarrowUp from "@assets/icons/IconArrowNarrowUp.svg";
     }
 
     let ticking = false;
-    document.addEventListener("scroll", () => {
-      if (!ticking) {
-        window.requestAnimationFrame(() => {
-          handleScroll();
-          ticking = false;
-        });
-        ticking = true;
-      }
-    });
+    function onScroll() {
+      if (ticking) return;
+      ticking = true;
+      window.requestAnimationFrame(() => {
+        handleScroll();
+        ticking = false;
+      });
+    }
+
+    document.addEventListener("scroll", onScroll, { passive: true });
+    handleScroll();
+
+    const onMotionPreferenceChange = (event) => {
+      if (!event.matches) return;
+      // Reset to avoid a stuck gradient when motion gets disabled mid-session
+      progressIndicator.style.removeProperty("background-image");
+    };
+
+    if (typeof prefersReducedMotion.addEventListener === "function") {
+      prefersReducedMotion.addEventListener("change", onMotionPreferenceChange);
+    } else if (typeof prefersReducedMotion.addListener === "function") {
+      prefersReducedMotion.addListener(onMotionPreferenceChange);
+    }
   }
   backToTop();
 </script>
