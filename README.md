@@ -1,5 +1,7 @@
 ## amanhimself.dev
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/5d645636-b61b-45fd-bf05-1c73352c7800/deploy-status)](https://app.netlify.com/projects/amanhimself/deploys)
+
 Personal website [amanhimself.dev](https://amanhimself.dev/) made with [Astro](https://astro.build/) and [AstroPaper](https://github.com/satnaing/astro-paper).
 
 ### Links
