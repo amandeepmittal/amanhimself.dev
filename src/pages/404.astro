@@ -18,13 +18,13 @@ import LinkButton from '@components/LinkButton.astro';
         <span>4</span>
       </h1>
       <p class="not-found__subtitle">
-        The page you’re looking for either moved, never existed, or is hiding behind a typo.
+        The page you're looking for either moved, never existed, or is hiding behind a typo.
       </p>
 
       <div class="not-found__actions">
         <LinkButton
           href="/"
-          className="focus-outline rounded-md bg-skin-accent px-6 py-3 text-skin-inverted shadow-lg shadow-accent/20 transition hover:-translate-y-0.5 hover:bg-skin-accent/90"
+          className="focus-outline rounded-md bg-[#7F56D9] px-6 py-3 text-white shadow-lg shadow-[#7F56D9]/30 transition hover:-translate-y-0.5 hover:bg-[#6E40CF]"
         >
           Go home
         </LinkButton>
@@ -62,10 +62,10 @@ import LinkButton from '@components/LinkButton.astro';
 
 <style>
   #main-content {
-    @apply mx-auto flex max-w-4xl flex-1 items-center justify-center px-4 sm:px-6 lg:px-6;
+    @apply mx-auto flex max-w-4xl flex-1 items-center justify-center px-4 sm:px-8;
   }
   .not-found {
-    @apply mb-20 w-full rounded-3xl border border-skin-line bg-gradient-to-br from-skin-card to-skin-fill/70 p-8 text-center shadow-2xl shadow-accent/10 backdrop-blur-md sm:p-12;
+    @apply mb-20 w-full rounded-3xl border border-skin-line bg-skin-card p-8 text-center shadow-xl sm:p-12;
   }
   .not-found__tag {
     @apply mx-auto w-fit rounded-full bg-skin-accent/10 px-4 py-1 text-xs font-semibold uppercase tracking-widest text-skin-accent;
