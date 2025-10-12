@@ -5,7 +5,6 @@ pubDatetime: 2025-06-12T00:00:01Z
 featured: false
 draft: false
 tags:
-  - astro
   - blogging
   - javascript
 description: 'Learn how to enhance your Astro blog with advanced code blocks featuring language labels and copy buttons using Shiki syntax highlighting.'

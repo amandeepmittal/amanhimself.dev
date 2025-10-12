@@ -6,7 +6,7 @@ slug: dual-shiki-themes-with-astro
 featured: false
 draft: false
 tags:
-  - astro
+  - blogging
 description: ''
 ---
 

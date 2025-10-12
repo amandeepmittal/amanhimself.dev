@@ -6,7 +6,6 @@ slug: vale-and-github-actions
 featured: false
 draft: false
 tags:
-  - docs-as-code
   - tech-writing
 description: ''
 ---

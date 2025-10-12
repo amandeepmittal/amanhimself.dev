@@ -6,7 +6,6 @@ slug: ignoring-jsx-components-in-vale
 featured: false
 draft: false
 tags:
-  - docs-as-code
   - tech-writing
 description: ''
 ---
