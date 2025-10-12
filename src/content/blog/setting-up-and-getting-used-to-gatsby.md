@@ -1,5 +1,5 @@
 ---
-title: 'Gatsby.js - How to set up and use the React Static Site Generator'
+title: 'Gatsby.js: How to set up and use the React Static Site Generator'
 author: Aman Mittal
 pubDatetime: 2018-01-04T03:42:51Z
 slug: setting-up-and-getting-used-to-gatsby
