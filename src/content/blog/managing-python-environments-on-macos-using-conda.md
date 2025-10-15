@@ -70,12 +70,12 @@ Then, either restart the terminal or run `source .zshrc`.
 To verify installation, I am using a new terminal window. I run the following commands:
 
 ```shell
-conda —version
+conda —-version
 
 # Output
 conda 25.3.0
 
-python —version
+python —-version
 
 # Output
 Python 3.12.10
