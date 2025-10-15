@@ -16,7 +16,7 @@ If you use your macOS for Python projects, especially for AI tools like Stable D
 For example, at the time of writing the guide, the default Python version on my machine is:
 
 ```shell
-python3 —version
+python3 --version
 
 # Output
 Python 3.13.3
