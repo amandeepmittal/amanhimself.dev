@@ -83,7 +83,7 @@ const { activeNav } = Astro.props;
               href="/search/"
               className={`focus-outline p-3 sm:p-1 ${
                 activeNav === 'search' ? 'active' : ''
-              } flex`}
+              } flex items-center no-underline-active`}
               ariaLabel="search"
               title="Search"
             >
@@ -95,6 +95,9 @@ const { activeNav } = Astro.props;
                 ></path>
               </svg>
               <span class="sr-only">Search</span>
+              <kbd class="hidden sm:inline-block ml-2 px-2 py-1 text-xs font-medium text-skin-base bg-skin-card border border-skin-fill rounded opacity-60">
+                ⌘ + k
+              </kbd>
             </LinkButton>
           </li>
           {
@@ -168,6 +171,11 @@ const { activeNav } = Astro.props;
   }
   nav a.active svg {
     @apply fill-skin-accent;
+  }
+
+  /* Do not underline the search link when active */
+  nav a.no-underline-active.active {
+    @apply no-underline;
   }
 
   nav button {

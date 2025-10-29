@@ -13,10 +13,16 @@ export interface Props {
 }
 
 const { frontmatter } = Astro.props;
+
+// Derive active nav item for pages using this layout
+let activeNav: 'now' | 'slashes' | undefined = undefined;
+const pathname = Astro.url.pathname;
+if (pathname.startsWith('/now')) activeNav = 'now';
+if (pathname.startsWith('/slash')) activeNav = 'slashes';
 ---
 
 <Layout title={`${frontmatter.title} | ${SITE.title}`}>
-  <Header />
+  <Header activeNav={activeNav} />
   <Breadcrumbs />
   <main id="main-content">
     <section id="about" class="prose mb-28 max-w-3xl prose-img:border-0">
