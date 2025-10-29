@@ -14,6 +14,7 @@ A collection of all **/slash** pages on this site.
 - [**/rss**](/rss.xml): A page listing RSS feed to subscribe this site's content
 - [**/stats**](https://app.usefathom.com/share/habfbpub/amanhimself.dev): A page that share this sites stats (weekly, monthly, yearly)
 - [**/search**](/search): A page to search any article on this blog
+- [**/llms.txt**](/llms.txt): A page that contains the text of all posts published on this site for LLMs
 
 ## What is a slash page, anyways?
 
