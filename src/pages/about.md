@@ -3,9 +3,13 @@ layout: ../layouts/AboutLayout.astro
 title: 'About'
 ---
 
-_Last Update: November 30, 2024_
+_Last Update: November 1, 2025_
 
-I’m Aman Mittal, a documentarian and developer. I love to explore and write about different technologies. My journey in the tech world started as a consultant and a Developer Advocate and has evolved through various roles in content development and technical writing.
+I’m Aman Mittal, a technical writer based in Delhi, India. I explore and write about different technologies.
+
+My journey in the tech world started as a consultant and a Developer Advocate and has evolved through roles in content development and technical writing.
+
+You can reach out to me by [email](mailto:amanmittal.work@gmail.com) or [LinkedIn](https://www.linkedin.com/in/aman-mittal-05a239117/).
 
 <div>
   <img src="/avatar.jpg" alt="Aman Mittal avatar" class="sm:w-1/3 mx-auto rounded-xl" />
@@ -15,7 +19,7 @@ I’m Aman Mittal, a documentarian and developer. I love to explore and write ab
 
 I’ve worn many hats over the years:
 
-- 🚀 Software consultant and documentation lead at Expo (2022 &mdash; Present)
+- 🚀 Consultant and technical writer at Expo (2022 &mdash; Present)
 - 📝 Senior Content Developer at Vercel (2022)
 - 🥑 Developer Advocate at Draftbit (2021 &mdash; 2022)
 - 💻 📝 Software consultant and Tech Writer for Crowdbotics (2018 &mdash; 2021)
