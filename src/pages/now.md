@@ -7,7 +7,7 @@ _Last Update: November 1, 2025_
 
 ## What I am doing now?
 
-- I'm currently working on writing and maintaining documentation for Expo. My work mostly resolves around managing the content side and docs-tools for [docs.expo.dev](https://docs.expo.dev), among other hats I wear at my day job.
+- I'm currently working on writing and maintaining documentation for Expo. My work mostly revolves around managing the content side and docs-tools for [docs.expo.dev](https://docs.expo.dev), among other hats I wear at my day job.
 - My interest in technology currently includes blogging, documentation-as-code, technical writing, and mobile apps.
 - 🕹️ Playing: N/A
 - 📚 Reading: Check out my [Goodreads](https://www.goodreads.com/author/show/17657541.Aman_Mittal)
