@@ -6,8 +6,8 @@ slug: large-header-title-in-expo-router
 featured: false
 draft: false
 tags:
-  - expo
   - react-native
+  - expo
 description: ''
 ---
 
