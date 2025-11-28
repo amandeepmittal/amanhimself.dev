@@ -13,13 +13,7 @@ The easiest way to support the work behind this site is through GitHub Sponsors.
 - Covering hosting and domain costs
 - Coffee
 
-<iframe
-  src="https://github.com/sponsors/amandeepmittal/button"
-  title="Sponsor Aman Mittal on GitHub"
-  height="32"
-  width="136"
-  style="border: 0; border-radius: 6px; margin-top: 1rem;"
-></iframe>
+[Support me on GitHub!](https://github.com/sponsors/amandeepmittal)
 
 ## Other ways to help
 
