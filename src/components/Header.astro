@@ -18,7 +18,7 @@ const { activeNav } = Astro.props;
 ---
 
 <header>
-  <a id="skip-to-content" href="#main-content">Skip to content</a>
+  <a id="skip-to-content" href="#main-content">Skip to main content</a>
   <div class="nav-container">
     <div class="top-nav-wrap">
       <a href="/" class="logo whitespace-nowrap">
@@ -129,7 +129,7 @@ const { activeNav } = Astro.props;
 
 <style>
   #skip-to-content {
-    @apply absolute -top-full left-16 z-50 bg-skin-accent px-3 py-2 text-skin-inverted transition-all focus:top-4;
+    @apply absolute -top-full left-16 z-50 bg-skin-accent px-3 py-2 text-skin-inverted transition-all focus-visible:top-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-skin-fill;
   }
   .nav-container {
     @apply mx-auto flex max-w-3xl flex-col items-center justify-between sm:flex-row;
