@@ -8,6 +8,7 @@ import BackToTopButton from "@components/BackToTopButton.astro";
 import type { CollectionEntry } from 'astro:content';
 import { slugifyStr } from '@utils/slugify';
 import ShareLinks from '@components/ShareLinks.astro';
+import SupportButton from '@components/SupportButton.astro';
 import { SITE } from '@config';
 import IconCopy from '@assets/icons/IconCopy.svg?raw';
 import IconCheck from '@assets/icons/IconCheck.svg?raw';
@@ -102,23 +103,12 @@ const nextPost =
       <Content />
     </article>
 
-    <div
-      class="flex flex-col-reverse items-center justify-between gap-6 sm:flex-row-reverse sm:items-end sm:gap-4"
-    >
-      <!-- <button
-        id="back-to-top"
-        class="focus-outline whitespace-nowrap py-1 hover:opacity-75"
-      >
-        <svg xmlns="http://www.w3.org/2000/svg" class="rotate-90">
-          <path
-            d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"
-          ></path>
-        </svg>
-        <span class="text-skin-accent text-opacity-80">Back to Top</span>
-      </button> -->
-      <BackToTopButton />
-      <iframe src="https://github.com/sponsors/amandeepmittal/button" title="Buy me coffee" height="32" width="114" style="border: 0; border-radius: 6px;"></iframe>
+    <div class="support-share-row">
       <ShareLinks />
+      <div class="flex items-center gap-4">
+        <SupportButton />
+        <BackToTopButton />
+      </div>
     </div>
     <hr class="my-6 border-dashed" />
     <!-- Previous/Next Post Buttons -->
@@ -236,6 +226,9 @@ const nextPost =
       }
       .post-title {
         @apply text-2xl font-semibold text-skin-accent;
+      }
+      .support-share-row {
+        @apply mt-8 flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between;
       }
     </style>
 

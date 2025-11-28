@@ -29,9 +29,8 @@ const shareLinks = [
 ---
 
 <div class={`social-icons`}>
-  <span class="mt-6 italic text-skin-accent">Liked it? Share this post on:</span
-  >
-  <div class="text-center">
+  <span class="italic text-skin-accent">Liked it? Share this post on:</span>
+  <div class="social-icons-list">
     {
       shareLinks.map(social => (
         <LinkButton
@@ -49,7 +48,10 @@ const shareLinks = [
 
 <style>
   .social-icons {
-    @apply flex flex-col flex-wrap items-center justify-center gap-1 sm:items-start;
+    @apply flex flex-col flex-wrap items-center justify-center gap-2 sm:flex-row sm:items-center sm:justify-start;
+  }
+  .social-icons-list {
+    @apply flex items-center gap-2 sm:gap-3;
   }
   .link-button {
     @apply scale-90 p-2 hover:rotate-6 sm:p-1;
