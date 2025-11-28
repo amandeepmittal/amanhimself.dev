@@ -1,7 +1,7 @@
 {
   "name": "amanhimself-blog",
   "description": "Personal website and blog. Running on Astro.",
-  "version": "10.2.11",
+  "version": "10.2.12",
   "author": "Aman Mittal <amandeepmittal@live.com>",
   "scripts": {
     "dev": "astro dev",
