@@ -1,0 +1,38 @@
+---
+export interface Props {
+  className?: string;
+}
+
+const { className = '' } = Astro.props;
+const SUPPORT_URL = 'https://github.com/sponsors/amandeepmittal';
+---
+
+<a
+  href={SUPPORT_URL}
+  target="_blank"
+  rel="noreferrer"
+  class={`support-link focus-outline ${className}`.trim()}
+  aria-label="Support me on GitHub Sponsors"
+>
+  <span>Support me</span>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    aria-hidden="true"
+  >
+    <path
+      d="M5 7.5A1.5 1.5 0 016.5 6h8.75A2.75 2.75 0 0118 8.75V10a4.75 4.75 0 01-4.75 4.75h-4A4.75 4.75 0 015 10V7.5Zm11.5 0H6.5V10A3.25 3.25 0 009.75 13.25h3.5A3.25 3.25 0 0016.5 10V7.5Zm1.75 2h1a2 2 0 010 4h-1v-1.5h1a.5.5 0 000-1h-1V9.5ZM8 17h6a1 1 0 010 2H8a1 1 0 010-2Z"
+      fill="currentColor"
+    />
+  </svg>
+</a>
+
+<style>
+  .support-link {
+    @apply inline-flex items-center gap-2 whitespace-nowrap rounded-md border border-skin-line px-3 py-1 text-sm font-semibold text-skin-accent transition-colors hover:border-skin-accent;
+  }
+
+  .support-link svg {
+    @apply h-5 w-5 fill-current;
+  }
+</style>
