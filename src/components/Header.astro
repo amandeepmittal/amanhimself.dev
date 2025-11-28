@@ -84,7 +84,7 @@ const { activeNav } = Astro.props;
               className={`focus-outline p-3 sm:p-1 ${
                 activeNav === 'search' ? 'active' : ''
               } flex items-center no-underline-active`}
-              ariaLabel="search"
+              ariaLabel="Open search"
               title="Search"
             >
               <svg
@@ -107,7 +107,7 @@ const { activeNav } = Astro.props;
                   id="theme-btn"
                   class="focus-outline"
                   title="Toggles light & dark"
-                  aria-label="auto"
+                  aria-label="Toggle light and dark mode"
                   aria-live="polite"
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" id="moon-svg">
