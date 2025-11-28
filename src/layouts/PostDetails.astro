@@ -9,6 +9,7 @@ import type { CollectionEntry } from 'astro:content';
 import { slugifyStr } from '@utils/slugify';
 import ShareLinks from '@components/ShareLinks.astro';
 import SupportButton from '@components/SupportButton.astro';
+import RelatedPosts from '@components/RelatedPosts.astro';
 import { SITE } from '@config';
 import IconCopy from '@assets/icons/IconCopy.svg?raw';
 import IconCheck from '@assets/icons/IconCheck.svg?raw';
@@ -102,6 +103,8 @@ const nextPost =
     <article id="article" role="article" class="prose mx-auto mt-8 max-w-3xl">
       <Content />
     </article>
+
+    <RelatedPosts currentSlug={post.slug} currentTags={tags} posts={posts} />
 
     <div class="support-share-row">
       <ShareLinks />
@@ -266,6 +269,9 @@ const nextPost =
           document.querySelectorAll('h2, h3, h4, h5, h6')
         );
         for (let heading of headings) {
+          if (heading.dataset?.noAnchor === 'true' || heading.classList.contains('no-anchor')) {
+            continue;
+          }
           heading.classList.add('group');
           let link = document.createElement('a');
           link.innerText = '#';

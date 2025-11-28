@@ -1,0 +1,93 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { LOCALE } from '@config';
+
+export interface Props {
+  currentSlug: string;
+  currentTags: string[];
+  posts: CollectionEntry<'blog'>[];
+}
+
+const { currentSlug, currentTags = [], posts = [] } = Astro.props;
+
+const cutoff = new Date();
+cutoff.setFullYear(cutoff.getFullYear() - 1);
+
+const tagSet = new Set(
+  currentTags.map(tag => String(tag).toLowerCase().trim()).filter(Boolean)
+);
+
+const formatter = new Intl.DateTimeFormat(LOCALE.langTag, {
+  year: 'numeric',
+  month: 'short',
+  day: 'numeric'
+});
+
+const relatedPool = posts.filter(({ slug, data }) => {
+  if (!data || slug === currentSlug) return false;
+  if (data.draft) return false;
+
+  const published = new Date(data.pubDatetime);
+  if (Number.isNaN(published.getTime())) return false;
+  if (published < cutoff) return false;
+
+  const postTags = (data.tags ?? [])
+    .map(tag => String(tag).toLowerCase().trim())
+    .filter(Boolean);
+
+  return postTags.some(tag => tagSet.has(tag));
+});
+
+// Shuffle to allow random ordering within the recent pool
+for (let i = relatedPool.length - 1; i > 0; i--) {
+  const j = Math.floor(Math.random() * (i + 1));
+  [relatedPool[i], relatedPool[j]] = [relatedPool[j], relatedPool[i]];
+}
+
+const relatedPosts = relatedPool.slice(0, 3);
+---
+
+{relatedPosts.length > 0 && (
+  <section class="related-posts" aria-labelledby="related-posts-title">
+    <h2 id="related-posts-title" class="related-title" data-no-anchor="true">
+      Related posts
+    </h2>
+    <ul>
+      {relatedPosts.map(({ slug, data }) => {
+        const published = new Date(data.pubDatetime);
+        return (
+          <li>
+            <a href={`/blog/${slug}/`}>{data.title}</a>
+            <span class="related-date">{formatter.format(published)}</span>
+          </li>
+        );
+      })}
+    </ul>
+  </section>
+)}
+
+<style>
+  .related-posts {
+    @apply mt-10 border-t border-skin-line pt-6;
+  }
+
+  .related-title {
+    @apply mb-4 text-xl font-semibold italic text-skin-base;
+  }
+
+  .related-posts ul {
+    @apply flex flex-col gap-3;
+  }
+
+  .related-posts li {
+    @apply flex items-baseline justify-between gap-3;
+  }
+
+  .related-posts a {
+    @apply font-medium text-skin-accent hover:underline;
+  }
+
+  .related-date {
+    @apply whitespace-nowrap text-xs text-skin-base/70;
+  }
+</style>
