@@ -1,0 +1,157 @@
+---
+import { getCollection } from 'astro:content';
+import Footer from '@components/Footer.astro';
+import Header from '@components/Header.astro';
+import { SITE } from '@config';
+import Layout from '@layouts/Layout.astro';
+import Main from '@layouts/Main.astro';
+import postFilter from '@utils/postFilter';
+
+const posts = (await getCollection('blog')).filter(postFilter);
+const totalPosts = posts.length;
+
+const counts = posts.reduce<Record<number, number>>((acc, post) => {
+  const year = new Date(post.data.pubDatetime).getFullYear();
+  acc[year] = (acc[year] ?? 0) + 1;
+  return acc;
+}, {});
+
+const yearly = Object.entries(counts)
+  .map(([year, count]) => ({ year: Number(year), count }))
+  .sort((a, b) => b.year - a.year);
+
+const maxCount = yearly.length ? Math.max(...yearly.map(item => item.count)) : 0;
+const palette = [
+  '#78DCE8',
+  '#A9DC76',
+  '#FFC801',
+  '#FC9867',
+  '#AB9DF2',
+  '#FF6188',
+  '#A1C9F1',
+  '#F585CE'
+];
+
+const bars = yearly.map((entry, idx) => {
+  const proportionalWidth = maxCount ? (entry.count / maxCount) * 100 : 0;
+  return {
+    ...entry,
+    width: Math.max(18, proportionalWidth),
+    color: palette[idx % palette.length]
+  };
+});
+---
+
+<Layout title={`Post counts | ${SITE.title}`}>
+  <Header />
+  <Main
+    pageTitle="Post counts"
+    pageDesc={`Currently ${totalPosts} published posts grouped by year.`}
+  >
+    <section class="chart">
+      <p class="total">Total posts: {totalPosts}</p>
+
+      {
+        bars.length ? (
+          <ul class="bar-list">
+            {
+              bars.map(bar => (
+                <li class="bar-row">
+                  <span class="year">{bar.year}</span>
+                  <div class="bar-track">
+                    <div class="bar" style={`width:${bar.width}%`}>
+                      <span class="bar-fill" style={`background:${bar.color}`}></span>
+                      <span class="count">{bar.count}</span>
+                    </div>
+                  </div>
+                </li>
+              ))
+            }
+          </ul>
+        ) : (
+          <p class="empty">No published posts yet.</p>
+        )
+      }
+    </section>
+  </Main>
+  <Footer />
+</Layout>
+
+<style>
+  .chart {
+    padding: 24px;
+  }
+
+  .total {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #c084fc;
+    margin-bottom: 12px;
+  }
+
+  .bar-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .bar-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .year {
+    width: 52px;
+    text-align: right;
+    font-weight: 700;
+  }
+
+  .bar-track {
+    flex: 1;
+  }
+
+  .bar {
+    position: relative;
+    height: 36px;
+    border: 1px solid rgba(var(--color-text-base), 0.15);
+    overflow: hidden;
+    max-width: 100%;
+    background: rgba(var(--color-fill), 0.8);
+  }
+
+  .bar-fill {
+    position: absolute;
+    inset: 0;
+  }
+
+  .count {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: 700;
+    color: #0f172a;
+  }
+
+  .empty {
+    opacity: 0.7;
+    font-style: italic;
+    margin-top: 8px;
+  }
+
+  @media (max-width: 640px) {
+    .chart {
+      padding: 18px;
+    }
+
+    .bar {
+      height: 32px;
+    }
+
+    .year {
+      width: 42px;
+      font-size: 0.95rem;
+    }
+  }
+</style>
