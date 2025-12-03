@@ -30,7 +30,7 @@ let totalPostsCount = posts.length;
     pageDesc=`This site is a collection of most of the posts (${totalPostsCount}) I've written.`
   >
     <ul>
-      {tags.map(({ tag }) => <Tag {tag} size="sm" />)}
+      {tags.map(({ tag, count }) => <Tag {tag} count={count} size="sm" />)}
     </ul>
     <ul>
       {
