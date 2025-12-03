@@ -21,6 +21,8 @@ However, this flexibility also comes with challenges. MDX files often contain co
 
 Using raw `.mdx` files on their own to add a feature such as a "copy as markdown" button on each page of your documentation site won't include the dynamic content stitched at runtime.
 
+> **Note:** This article is not a comprehensive guide to implementing the "copy as markdown" button. It is a high-level overview of the solution and implementation details for a Next.js based documentation site that I work on.
+
 ## Solution overview
 
 One way to solve this problem and implement the "copy as markdown" button is to identify the key tasks. In a typical MDX documentation site, the key tasks are:
