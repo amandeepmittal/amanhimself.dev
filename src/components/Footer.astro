@@ -31,6 +31,12 @@ const { noMarginTop = false } = Astro.props;
   </div>
 </footer>
 
+<div class="webring-small" aria-label="Static.Quest webring">
+  <a class="webring-arrow" href="https://static.quest/previous/?host=static.quest">&#8592;</a>
+  <a class="webring-title" href="https://static.quest">Static.Quest webring</a>
+  <a class="webring-arrow" href="https://static.quest/next/?host=static.quest">&#8594;</a>
+</div>
+
 <style>
   footer {
     @apply w-full;
@@ -49,5 +55,14 @@ const { noMarginTop = false } = Astro.props;
   }
   .separator {
     @apply hidden sm:inline;
+  }
+  .webring-small {
+    @apply mt-3 mb-8 flex items-center justify-center gap-3 text-xs font-normal tracking-tight text-neutral-700 opacity-80 dark:text-neutral-200;
+  }
+  .webring-title {
+    @apply underline decoration-1 underline-offset-4;
+  }
+  .webring-arrow {
+    @apply text-base no-underline;
   }
 </style>
