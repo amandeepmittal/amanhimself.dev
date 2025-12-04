@@ -8,14 +8,14 @@ A collection of all **/slash** pages on this site.
 - [**/about**](/about): Includes author's past work experience and other relevant information
 - [**/ai**](/ai): A page stating the generative stance of the author and relevance to this site
 - [**/blog**](/blog): An archive of all posts published on this site
+- [**/llms.txt**](/llms.txt): A page that contains the text of all posts published on this site for LLMs
 - [**/links**](/links): A page of all the web links that the author is present on
 - [**/now**](/now): What the author is doing right now
-- [**/support**](/support): Learn how to sponsor this site
-- [**/rss**](/rss.xml): A page listing RSS feed to subscribe this site's content
-- [**/stats**](https://app.usefathom.com/share/habfbpub/amanhimself.dev): A page that share this sites stats (weekly, monthly, yearly)
 - [**/posts-count**](/posts-count): A quick view of yearly post counts
+- [**/rss**](/rss.xml): A page listing RSS feed to subscribe this site's content
 - [**/search**](/search): A page to search any article on this blog
-- [**/llms.txt**](/llms.txt): A page that contains the text of all posts published on this site for LLMs
+- [**/stats**](https://app.usefathom.com/share/habfbpub/amanhimself.dev): A page that share this sites stats (weekly, monthly, yearly)
+- [**/support**](/support): Learn how to sponsor this site
 
 ## What is a slash page, anyways?
 
