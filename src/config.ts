@@ -25,12 +25,6 @@ export const LOGO_IMAGE = {
 
 export const SOCIALS: SocialObjects = [
   {
-    name: 'X',
-    href: 'https://x.com/amanhimself',
-    linkTitle: `${SITE.title} on X`,
-    active: true
-  },
-  {
     name: 'Github',
     href: 'https://github.com/amandeepmittal',
     linkTitle: ` ${SITE.title} on Github`,
@@ -46,6 +40,12 @@ export const SOCIALS: SocialObjects = [
     name: 'Mail',
     href: 'mailto:amanmittal.work@gmail.com',
     linkTitle: `Send an email to ${SITE.title}`,
+    active: true
+  },
+  {
+    name: 'X',
+    href: 'https://x.com/amanhimself',
+    linkTitle: `${SITE.title} on X`,
     active: true
   },
   {
