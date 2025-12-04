@@ -17,10 +17,10 @@
     "generate:llms": "node scripts/generate-llms.mjs"
   },
   "dependencies": {
-    "@astrojs/check": "^0.9.4",
-    "@astrojs/rss": "^4.0.11",
+    "@astrojs/check": "^0.9.6",
+    "@astrojs/rss": "^4.0.14",
     "@resvg/resvg-js": "^2.6.0",
-    "astro": "^5.14.4",
+    "astro": "^5.16.4",
     "fuse.js": "^7.1.0",
     "github-slugger": "^2.0.0",
     "mdast-util-to-string": "^4.0.0",
