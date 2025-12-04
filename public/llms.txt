@@ -2,7 +2,7 @@ amanhimself.dev
 Aman Mittal
 I'm Aman Mittal (@amanhimself). Software Developer and Tech Writer. Welcome to my blog!
 
-Generated on 2025-12-03T07:37:14.921Z
+Generated on 2025-12-04T09:23:24.909Z
 Contains the markdown content of each blog post.
 
 ---
