@@ -7,6 +7,7 @@ A collection of all **/slash** pages on this site.
 
 - [**/about**](/about): Includes author's past work experience and other relevant information
 - [**/ai**](/ai): A page stating the generative stance of the author and relevance to this site
+- [**/been**](/been): A list of countries the author has visited
 - [**/blog**](/blog): An archive of all posts published on this site
 - [**/llms.txt**](/llms.txt): A page that contains the text of all posts published on this site for LLMs
 - [**/links**](/links): A page of all the web links that the author is present on
