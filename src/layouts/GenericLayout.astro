@@ -3,12 +3,14 @@ import { SITE } from '@config';
 import Breadcrumbs from '@components/Breadcrumbs.astro';
 import Footer from '@components/Footer.astro';
 import Header from '@components/Header.astro';
+import SlashPagesLink from '@components/SlashPagesLink.astro';
 import Layout from './Layout.astro';
 
 export interface Props {
   frontmatter: {
     title: string;
     description?: string;
+    showSlashLink?: boolean;
   };
 }
 
@@ -28,6 +30,7 @@ if (pathname.startsWith('/slash')) activeNav = 'slashes';
     <section id="about" class="prose mb-28 max-w-3xl prose-img:border-0">
       <h1 class="text-2xl tracking-wider sm:text-3xl">{frontmatter.title}</h1>
       <slot />
+      {frontmatter.showSlashLink && <SlashPagesLink />}
     </section>
   </main>
   <Footer />

@@ -1,0 +1,16 @@
+---
+export interface Props {
+  className?: string;
+}
+
+const { className = '' } = Astro.props;
+---
+
+<div class={`not-prose ${className}`.trim()}>
+  <a
+    href="/slash/"
+    class="inline-block mt-8 text-purple-500 underline decoration-2 decoration-purple-300 underline-offset-4 hover:text-purple-700 hover:decoration-purple-500 transition-colors"
+  >
+    More slash pages
+  </a>
+</div>

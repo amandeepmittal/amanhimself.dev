@@ -6,6 +6,7 @@ import { SITE } from '@config';
 import Layout from '@layouts/Layout.astro';
 import Main from '@layouts/Main.astro';
 import postFilter from '@utils/postFilter';
+import SlashPagesLink from '@components/SlashPagesLink.astro';
 
 const posts = (await getCollection('blog')).filter(postFilter);
 const totalPosts = posts.length;
@@ -76,6 +77,7 @@ const bars = yearly.map((entry, idx) => {
     <p class="callout">
       *From 2016 to 2018, I used <a href="https://medium.com/@amanhimself" target="_blank" style="text-decoration: underline;">Medium.com</a> as my primary blog.
     </p>
+    <SlashPagesLink />
   </Main>
   <Footer />
 </Layout>

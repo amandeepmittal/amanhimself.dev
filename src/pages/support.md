@@ -2,6 +2,7 @@
 layout: ../layouts/GenericLayout.astro
 title: 'Support'
 description: 'Ways to support Aman Mittal and keep this site sustainable.'
+showSlashLink: true
 ---
 
 Hello! If you're enjoying the articles on this site, thank you for being here. Writing them takes time, attention, and a fair bit of coffee.

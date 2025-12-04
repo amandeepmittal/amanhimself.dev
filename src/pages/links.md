@@ -1,6 +1,7 @@
 ---
 layout: ../layouts/LinksLayout.astro
 title: 'All Links'
+showSlashLink: true
 ---
 
 Places to find me on the internet:

@@ -1,6 +1,7 @@
 ---
 layout: ../layouts/GenericLayout.astro
 title: 'Now'
+showSlashLink: true
 ---
 
 _Last Update: November 1, 2025_

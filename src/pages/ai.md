@@ -1,6 +1,7 @@
 ---
 layout: ../layouts/GenericLayout.astro
 title: 'AI'
+showSlashLink: true
 ---
 
 I have never used AI to generate text in place of my words. None of the posts published on this site ([amanhimself.dev](https://amanhimself.dev)) and other sites were written using an AI tool. Otherwise, where will be the fun in that and will defeat the purpose of having a blog.

@@ -2,6 +2,7 @@
 layout: ../layouts/GenericLayout.astro
 title: 'Been'
 description: 'A list of countries I have visited.'
+showSlashLink: true
 ---
 
 This is a `/been` page. It lists all the countries I have visited.
