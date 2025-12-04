@@ -1,6 +1,7 @@
 ---
 import Hr from './Hr.astro';
 import Socials from './Socials.astro';
+import { SITE } from '@config';
 
 const currentYear = new Date().getFullYear();
 
@@ -9,6 +10,7 @@ export interface Props {
 }
 
 const { noMarginTop = false } = Astro.props;
+const siteUrl = encodeURIComponent(SITE.website);
 ---
 
 <footer class={`${noMarginTop ? '' : 'mt-auto'}`}>
@@ -35,6 +37,12 @@ const { noMarginTop = false } = Astro.props;
   <a class="webring-arrow" href="https://static.quest/previous/?host=static.quest">&#8592;</a>
   <a class="webring-title" href="https://static.quest">Static.Quest webring</a>
   <a class="webring-arrow" href="https://static.quest/next/?host=static.quest">&#8594;</a>
+</div>
+
+<div class="webring-small" aria-label="Tech writing blog webring">
+  <a class="webring-arrow" href={`https://caseyrfsmith.github.io/webring/navigate.html?action=prev&site=${siteUrl}`}>&#8592;</a>
+  <a class="webring-title" href="https://caseyrfsmith.github.io/webring/">Tech writing blog webring</a>
+  <a class="webring-arrow" href={`https://caseyrfsmith.github.io/webring/navigate.html?action=next&site=${siteUrl}`}>&#8594;</a>
 </div>
 
 <style>
