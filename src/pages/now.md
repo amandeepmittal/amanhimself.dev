@@ -21,7 +21,7 @@ _Last Update: November 1, 2025_
 - 🎮 Nintendo Switch for Breath of the Wild and a Steam Deck.
 - 📖 I use a Kobo Libra Color for most of my non-fiction reading. It's also been used for fiction but I try to use mobile device with Kindle app for that.
 
-> Looking for more information about me, or my past work experience? See the [About](/about) page.
+> Looking for more information about me, or my past work experience? See the [About](/about) page or see my [LinkedIn](https://www.linkedin.com/in/aman-mittal-05a239117/) for a general summary of my employment history.
 
 ## What is this page, anyways?
 
