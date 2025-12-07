@@ -1,5 +1,5 @@
 ---
-title: Create a copy as markdown button for MDX documentation site
+title: Create a copy as markdown button for LLMs in an MDX documentation site
 author: Aman Mittal
 pubDatetime: 2025-12-03T00:00:01Z
 slug: create-a-copy-as-markdown-for-mdx-documentation
