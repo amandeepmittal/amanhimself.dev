@@ -11,7 +11,8 @@ export interface Props {
 
 const { noMarginTop = false } = Astro.props;
 const siteUrl = encodeURIComponent(SITE.website);
-const siteHost = encodeURIComponent(new URL(SITE.website).host);
+// Static.Quest expects the host value exactly as registered (see their config).
+const staticQuestHost = encodeURIComponent('amanhimself.dev/');
 ---
 
 <footer class={`${noMarginTop ? '' : 'mt-auto'}`}>
@@ -39,9 +40,9 @@ const siteHost = encodeURIComponent(new URL(SITE.website).host);
   <a class="webring-title" href="https://caseyrfsmith.github.io/webring/">Tech writing blog webring</a>
   <a class="webring-arrow" href={`https://caseyrfsmith.github.io/webring/navigate.html?action=next&site=${siteUrl}`}>&#8594;</a>
   <span> | </span>
-  <a class="webring-arrow" href={`https://static.quest/previous/?host=${siteHost}`}>&#8592;</a>
+  <a class="webring-arrow" href={`https://static.quest/previous/?host=${staticQuestHost}`}>&#8592;</a>
   <a class="webring-title" href="https://static.quest">Static.Quest webring</a>
-  <a class="webring-arrow" href={`https://static.quest/next/?host=${siteHost}`}>&#8594;</a>
+  <a class="webring-arrow" href={`https://static.quest/next/?host=${staticQuestHost}`}>&#8594;</a>
 </div>
 
 <style>
