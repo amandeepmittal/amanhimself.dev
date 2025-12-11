@@ -241,7 +241,7 @@ function transformSceneMdx(raw: string): string {
 
 Now when `prepareMarkdownForCopyAsync()` encounters `<Steps />`, it replaces it with this pre-rendered Markdown. You can apply this same pattern to other scene/custom components—the key is identifying what external content they load and fetching it during conversion.
 
-## Converting TypeDoc/JSDoc API Sections
+## Converting TypeDoc/JSDoc API sections
 
 API documentation is often the most complex content to convert. A documentation site can use TypeDoc/JSDoc to generate JSON from TypeScript/JavaScript source code, then render that JSON. Your MDX might include a component that renders the API classes, methods, types, and properties:
 
@@ -331,7 +331,7 @@ The TypeDoc conversion follows the same pattern as other components: detect the 
 
 TypeDoc's JSON is structured and predictable. Once you understand the schema (classes have children, methods have signatures, types have type fields), you can write straightforward transformation functions that handle each case.
 
-## The Pattern in Practice
+## The Pattern in practice
 
 At this point, you've seen concrete examples of the conversion pipeline in action:
 
