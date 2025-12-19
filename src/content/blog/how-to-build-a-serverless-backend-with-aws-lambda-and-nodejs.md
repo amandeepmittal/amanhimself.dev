@@ -302,7 +302,7 @@ Now, we can add our free sandbox to this project. It is called a cluster.
 
 <img src='https://cdn-images-1.medium.com/max/800/1*1PO22dNYhGRkSzuwEilmFg.png' />
 
-After all that, just add an admin user for the cluster and give him a really strong password. As you can see the price for this cluster will be `$0.00` forever. Your cluster will take a few minutes to deploy. While that is underway, let us finally start writing some code.
+After all that, just add an admin user for the cluster and give them a really strong password. As you can see the price for this cluster will be `$0.00` forever. Your cluster will take a few minutes to deploy. While that is underway, let us finally start writing some code.
 
 ### Building the API
 

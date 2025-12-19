@@ -119,7 +119,7 @@ _A big shout and a huge thanks to folks who [sponsored me on GitHub](https://git
 I did manage to go through some good books this year. Here are some of my picks that I enjoyed reading:
 
 - [First, We Make the Beast Beautiful by Sarah Wilson](https://www.goodreads.com/book/show/35847961-first-we-make-the-beast-beautiful): A beautifully written book about anxiety for anxious people without any fluff. Love the short chapters, and the writing style which is quite soothing.
-- [The Practice of Groundedness by Brad Stulberg](https://www.goodreads.com/book/show/57504944-the-practice-of-groundedness): I first heard Brad speaking about his book on a podcast. I don't remember what got me hooked in the first place. I remember picking this book after listening to that episode and I am glad I did. It talks a lot about patience.
+- [The Practice of Groundedness by Brad Stulberg](https://www.goodreads.com/book/show/57504944-the-practice-of-groundedness): I first heard Brad speaking about their book on a podcast. I don't remember what got me hooked in the first place. I remember picking this book after listening to that episode and I am glad I did. It talks a lot about patience.
 - [Four Thousand Weeks by Oliver Burkeman](https://www.goodreads.com/book/show/55742688-four-thousand-weeks): Having read "time hacks" books in the past, this book becomes a bit easier to read and understand the flaws with the former strategies (or hacks). I realized that those "hacks" work only until one gets burned out completely and gets put off track in life. The importance of flexibility, living one's life, being patient, and coming to a realization that work is a never-ending, spiral pit.
 
 ## Traveling
