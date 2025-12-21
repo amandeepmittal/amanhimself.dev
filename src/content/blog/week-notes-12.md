@@ -10,8 +10,6 @@ tags:
 description: ''
 ---
 
-<!-- Describe the week in a few sentences -->
-
 This week was good. I was able to complete a few tasks at work and I was able to spend some time reading the books I started earlier.
 
 - 📝 The first post is about adding a [yearly post count visual to an Astro blog](/blog/add-yearly-post-count-to-astro-blog/). It talks about the approach that pulls all posts at build time, groups them by year, and renders the totals as a simple chart so my publishing cadence is obvious at a glance. It stays fully static (no client JS needed), fast to load, and makes it easy to spot active years and gaps.
