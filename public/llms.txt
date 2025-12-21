@@ -2,7 +2,7 @@ amanhimself.dev
 Aman Mittal
 I'm Aman Mittal (@amanhimself). Software Developer and Tech Writer. Welcome to my blog!
 
-Generated on 2025-12-21T08:31:19.420Z
+Generated on 2025-12-21T08:39:40.495Z
 Contains the markdown content of each blog post.
 
 ---
@@ -50779,8 +50779,6 @@ This week was a bit fast and slow at the same time.
 
 ## Week notes 12
 Slug: week-notes-12
-
-<!-- Describe the week in a few sentences -->
 
 This week was good. I was able to complete a few tasks at work and I was able to spend some time reading the books I started earlier.
 
