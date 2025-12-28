@@ -7,6 +7,7 @@ featured: false
 draft: false
 tags:
   - tech-writing
+  - ai
 description: ''
 ---
 
