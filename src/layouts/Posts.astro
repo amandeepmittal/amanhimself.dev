@@ -10,6 +10,7 @@ import { SITE } from '@config';
 import { getCollection } from 'astro:content';
 import getUniqueTags from '@utils/getUniqueTags';
 import Tag from '@components/Tag.astro';
+import getPostsWithRT from '@utils/getPostsWithRT';
 
 export interface Props {
   currentPage: number;
@@ -21,6 +22,7 @@ const { currentPage, totalPages, paginatedPosts } = Astro.props;
 const posts = await getCollection('blog');
 let tags = getUniqueTags(posts);
 let totalPostsCount = posts.length;
+const paginatedPostsWithRT = await getPostsWithRT(paginatedPosts);
 ---
 
 <Layout title={`Blog | ${SITE.title}`}>
@@ -34,8 +36,8 @@ let totalPostsCount = posts.length;
     </ul>
     <ul>
       {
-        paginatedPosts.map(({ data, slug }) => (
-          <Card href={`/blog/${slug}/`} frontmatter={data} />
+        paginatedPostsWithRT.map(({ data, slug }) => (
+          <Card href={`/blog/${slug}/`} frontmatter={data} showReadingTime />
         ))
       }
     </ul>
