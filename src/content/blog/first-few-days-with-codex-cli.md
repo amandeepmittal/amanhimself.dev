@@ -7,6 +7,7 @@ featured: false
 draft: false
 tags:
   - ai
+  - obsidian
 description: 'Getting started with Codex CLI and creating first workflows.'
 ---
 
