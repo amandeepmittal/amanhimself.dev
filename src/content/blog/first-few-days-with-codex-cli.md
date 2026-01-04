@@ -189,7 +189,7 @@ Different projects need different rules. My Obsidian vault behaves nothing like 
 
 When I started using Codex in my vault, I ran `/init` to create an `AGENTS.md` file, then customized it with instructions about how I write, what style I prefer, and what Codex should focus on when editing my drafts.
 
-<img src="/images/codex-cli/cc11.png" width="640" />
+<img src="/images/codex-cli/cc11.png" width="480" />
 
 You can point Codex to specific files using `@filename` syntax for the correct file to read. (Yes, using `@`, you can refer to any file in your current project directory.) And keeping `AGENTS.md` at your project root means Codex checks it automatically at the start of each session.
 
