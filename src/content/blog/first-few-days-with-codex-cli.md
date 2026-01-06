@@ -8,7 +8,7 @@ draft: false
 tags:
   - ai
   - obsidian
-description: 'Getting started with Codex CLI and creating first workflows.'
+description: 'Using Codex CLI  beyond coding, for Obsidian note management, and building automated workflows with MCP servers.'
 ---
 
 There's something oddly satisfying about watching an AI agent read your messy notes and actually understand them.
