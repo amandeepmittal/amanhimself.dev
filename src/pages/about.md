@@ -23,7 +23,7 @@ I’ve worn many hats over the years:
 - 🚀 Consultant and technical writer at Expo (2022 &mdash; Present)
   <br/>
   <small>
-  Documentation engineer at Expo focused on developer education and product enablement. Wrote the Expo writing style guide, maintained SDK references, Expo and EAS guides, Expo and EAS tutorials, while shipping tooling for doc generation, TypeDoc/APISection updates, `llms.txt` pipelines, and integrating AI widgets pipelines. Partnered with product/engineering to keep docs accurate across releases, improved docs UX and discoverability (DocSearch), and turned community feedback into fixes that reduced friction for developers adopting Expo SDK and EAS. Also, helped Dev Success team at Expo in various ways, among wearing other hats.
+  Documentation engineer at Expo focused on developer education and product enablement. Wrote the Expo writing style guide, maintained SDK references, Expo and EAS guides, Expo and EAS tutorials, while shipping tooling for doc generation, TypeDoc/APISection updates, `llms.txt` pipelines, and integrating AI assistant pipelines. Partnered with product/engineering to keep docs accurate across releases, improved docs UX and discoverability (DocSearch), and turned community feedback into fixes that reduced friction for developers adopting Expo SDK and EAS. Also, helped Dev Success team at Expo in various ways, among wearing other hats.
   </small>
 - 📝 Senior Content Developer at Vercel (2022)
 - 🥑 Developer Advocate at Draftbit (2021 &mdash; 2022)
