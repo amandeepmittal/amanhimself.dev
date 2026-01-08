@@ -21,6 +21,10 @@ You can reach out to me by [email](mailto:amanmittal.work@gmail.com) or [LinkedI
 I’ve worn many hats over the years:
 
 - 🚀 Consultant and technical writer at Expo (2022 &mdash; Present)
+  <br/>
+  <small>
+  "Unofficial" documentation engineer at Expo focused on developer education and product enablement. Wrote the Expo writing style guide, maintained SDK references, Expo and EAS guides, Expo and EAS tutorials, while shipping tooling for doc generation, TypeDoc/APISection updates, `llms.txt` pipelines, and integrating AI widgets pipelines. Partnered with product/engineering to keep docs accurate across releases, improved docs UX and discoverability (DocSearch), and turned community feedback into fixes that reduced friction for developers adopting Expo SDK and EAS. Also, helped Dev Success team at Expo in various ways, among wearing other hats.
+  </small>
 - 📝 Senior Content Developer at Vercel (2022)
 - 🥑 Developer Advocate at Draftbit (2021 &mdash; 2022)
 - 💻 📝 Software consultant and Tech Writer for Crowdbotics (2018 &mdash; 2021)
