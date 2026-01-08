@@ -14,7 +14,7 @@ This week was good. I was able to complete a few tasks at work and I was able to
 
 - 📝 The first post is about adding a [yearly post count visual to an Astro blog](/blog/add-yearly-post-count-to-astro-blog/). It talks about the approach that pulls all posts at build time, groups them by year, and renders the totals as a simple chart so my publishing cadence is obvious at a glance. It stays fully static (no client JS needed), fast to load, and makes it easy to spot active years and gaps.
 
-- 📝 The second post is about adding a [Vale rule to check for smart quotes in the content](/blog/wait-there-are-smart-quotes-in-my-docs/). It talks about the issue of smart quotes in documentation and how to catch them using Vale.
+- 📝 The second post is about adding a [Vale rule to check for smart quotes in the content](/blog/smart-quotes-in-documentation/). It talks about the issue of smart quotes in documentation and how to catch them using Vale.
 
 - 📝 The third post is about the yearly [list of apps I use](/blog/default-apps-2025/) and rely on, throughout the year. I have been writing this list since last two years and some apps have stayed the same, while others have changed.
 
