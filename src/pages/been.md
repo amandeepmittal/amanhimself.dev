@@ -9,7 +9,7 @@ This is a `/been` page. It lists all the countries I have visited.
 
 - Austria
 - Belgium
-- Czech Republic
+- Czechia
 - Germany
 - Netherlands
 - Poland
