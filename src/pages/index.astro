@@ -9,8 +9,10 @@ import Card from '@components/Card';
 import Socials from '@components/Socials.astro';
 import getSortedPosts from '@utils/getSortedPosts';
 import { SOCIALS } from '@config';
+import { publishedPostFilter } from '@utils/postFilter';
 
 const posts = await getCollection('blog');
+const publishedPosts = posts.filter(publishedPostFilter);
 
 const sortedPosts = await getSortedPosts(posts);
 // const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
@@ -18,7 +20,7 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
 
 const socialCount = SOCIALS.filter(social => social.active).length;
 
-const totalPostsCount = sortedPosts.length;
+const totalPostsCount = publishedPosts.length;
 ---
 
 <Layout>

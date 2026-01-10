@@ -11,7 +11,7 @@ import { getCollection } from 'astro:content';
 import getUniqueTags from '@utils/getUniqueTags';
 import Tag from '@components/Tag.astro';
 import getPostsWithRT from '@utils/getPostsWithRT';
-import postFilter from '@utils/postFilter';
+import { publishedPostFilter } from '@utils/postFilter';
 
 export interface Props {
   currentPage: number;
@@ -21,9 +21,9 @@ export interface Props {
 
 const { currentPage, totalPages, paginatedPosts } = Astro.props;
 const posts = await getCollection('blog');
-const filteredPosts = posts.filter(postFilter);
-let tags = getUniqueTags(posts);
-let totalPostsCount = filteredPosts.length;
+const publishedPosts = posts.filter(publishedPostFilter);
+let tags = getUniqueTags(publishedPosts);
+let totalPostsCount = publishedPosts.length;
 const paginatedPostsWithRT = await getPostsWithRT(paginatedPosts);
 ---
 

@@ -49,6 +49,7 @@ export default function Card({
 
   const { title, pubDatetime, modDatetime, description, readingTime } =
     frontmatter;
+  const showDraftBadge = import.meta.env.DEV && Boolean(frontmatter.draft);
 
   const headerProps = {
     style: { viewTransitionName: slugifyStr(title) },
@@ -57,17 +58,24 @@ export default function Card({
 
   return (
     <li className="my-6">
-      <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center">
-        <a
-          href={href}
-          className="inline-block text-lg font-medium text-skin-accent decoration-dashed underline-offset-4 focus-visible:no-underline focus-visible:underline-offset-0"
-        >
-          {secHeading ? (
-            <h2 {...headerProps}>{title}</h2>
-          ) : (
-            <h3 {...headerProps}>{title}</h3>
+      <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+        <div className="flex flex-wrap items-center gap-2">
+          <a
+            href={href}
+            className="inline-block text-lg font-medium text-skin-accent decoration-dashed underline-offset-4 focus-visible:no-underline focus-visible:underline-offset-0"
+          >
+            {secHeading ? (
+              <h2 {...headerProps}>{title}</h2>
+            ) : (
+              <h3 {...headerProps}>{title}</h3>
+            )}
+          </a>
+          {showDraftBadge && (
+            <span className="rounded bg-amber-100 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-amber-800">
+              Draft
+            </span>
           )}
-        </a>
+        </div>
         <div className="sm:ml-4 sm:shrink-0">
           <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
             <Datetime

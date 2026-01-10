@@ -5,6 +5,7 @@ import getUniqueTags from '@utils/getUniqueTags';
 import getPostsByTag from '@utils/getPostsByTag';
 import getPageNumbers from '@utils/getPageNumbers';
 import getPagination from '@utils/getPagination';
+import { publishedPostFilter } from '@utils/postFilter';
 
 export interface Props {
   post: CollectionEntry<'blog'>;
@@ -14,8 +15,9 @@ export interface Props {
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog');
+  const publishedPosts = posts.filter(publishedPostFilter);
 
-  const tags = getUniqueTags(posts);
+  const tags = getUniqueTags(publishedPosts);
 
   return tags.flatMap(({ tag, tagName }) => {
     const tagPosts = getPostsByTag(posts, tag);

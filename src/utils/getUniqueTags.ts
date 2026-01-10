@@ -8,11 +8,14 @@ interface Tag {
   count: number;
 }
 
-const getUniqueTags = (posts: CollectionEntry<'blog'>[]) => {
+const getUniqueTags = (
+  posts: CollectionEntry<'blog'>[],
+  filter: (post: CollectionEntry<'blog'>) => boolean = postFilter
+) => {
   const tagsMap = new Map<string, Tag>();
 
   posts
-    .filter(postFilter)
+    .filter(filter)
     .forEach(post => {
       post.data.tags.forEach(tagName => {
         const tag = slugifyStr(tagName);

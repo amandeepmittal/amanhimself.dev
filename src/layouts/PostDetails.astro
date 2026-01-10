@@ -14,6 +14,7 @@ import { SITE } from '@config';
 import IconCopy from '@assets/icons/IconCopy.svg?raw';
 import IconCheck from '@assets/icons/IconCheck.svg?raw';
 import getUniqueTags from '@utils/getUniqueTags';
+import { publishedPostFilter } from '@utils/postFilter';
 
 export interface Props {
   post: CollectionEntry<'blog'>;
@@ -64,7 +65,10 @@ const nextPost =
   currentPostIndex !== allPosts.length ? allPosts[currentPostIndex + 1] : null;
 
 const tagCounts = new Map(
-  getUniqueTags(posts).map(({ tag, count }) => [tag, count])
+  getUniqueTags(posts, publishedPostFilter).map(({ tag, count }) => [
+    tag,
+    count
+  ])
 );
 ---
 

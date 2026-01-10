@@ -7,10 +7,12 @@ import Main from '@layouts/Main.astro';
 import Tag from '@components/Tag.astro';
 import getUniqueTags from '@utils/getUniqueTags';
 import { SITE } from '@config';
+import { publishedPostFilter } from '@utils/postFilter';
 
 const posts = await getCollection('blog');
+const publishedPosts = posts.filter(publishedPostFilter);
 
-let tags = getUniqueTags(posts);
+let tags = getUniqueTags(publishedPosts);
 ---
 
 <Layout title={`Tags | ${SITE.title}`}>

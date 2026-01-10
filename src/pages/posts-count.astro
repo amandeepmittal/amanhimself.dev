@@ -5,10 +5,10 @@ import Header from '@components/Header.astro';
 import { SITE } from '@config';
 import Layout from '@layouts/Layout.astro';
 import Main from '@layouts/Main.astro';
-import postFilter from '@utils/postFilter';
+import { publishedPostFilter } from '@utils/postFilter';
 import SlashPagesLink from '@components/SlashPagesLink.astro';
 
-const posts = (await getCollection('blog')).filter(postFilter);
+const posts = (await getCollection('blog')).filter(publishedPostFilter);
 const totalPosts = posts.length;
 
 const counts = posts.reduce<Record<number, number>>((acc, post) => {
