@@ -8,8 +8,8 @@ import Footer from '@components/Footer.astro';
 import SearchBar from '@components/Search';
 import getSortedPosts from '@utils/getSortedPosts';
 
-// Retrieve all published articles
-const posts = await getCollection('blog', ({ data }) => !data.draft);
+// Retrieve all posts (drafts included in dev)
+const posts = await getCollection('blog');
 const sortedPosts = getSortedPosts(posts);
 
 // List of items to search in

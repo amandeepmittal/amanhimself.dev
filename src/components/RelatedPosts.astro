@@ -25,7 +25,7 @@ const formatter = new Intl.DateTimeFormat(LOCALE.langTag, {
 
 const relatedPool = posts.filter(({ slug, data }) => {
   if (!data || slug === currentSlug) return false;
-  if (data.draft) return false;
+  if (data.draft && !import.meta.env.DEV) return false;
 
   const published = new Date(data.pubDatetime);
   if (Number.isNaN(published.getTime())) return false;

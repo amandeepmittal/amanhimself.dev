@@ -18,7 +18,7 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
 
 const socialCount = SOCIALS.filter(social => social.active).length;
 
-const totalPostsCount = posts.length;
+const totalPostsCount = sortedPosts.length;
 ---
 
 <Layout>
