@@ -10,7 +10,7 @@ interface Tag {
 
 const getUniqueTags = (
   posts: CollectionEntry<'blog'>[],
-  filter: (post: CollectionEntry<'blog'>) => boolean = postFilter
+  filter: typeof postFilter = postFilter
 ) => {
   const tagsMap = new Map<string, Tag>();
 

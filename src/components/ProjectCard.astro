@@ -1,0 +1,77 @@
+---
+import type { GithubRepo } from '@utils/github';
+
+export interface Props {
+  repo: GithubRepo;
+  featured?: boolean;
+}
+
+const { repo, featured = false } = Astro.props;
+
+const updatedAt = repo.pushed_at ?? repo.updated_at ?? repo.created_at;
+const updatedLabel = new Intl.DateTimeFormat('en-US', {
+  year: 'numeric',
+  month: 'short',
+  day: '2-digit'
+}).format(new Date(updatedAt));
+---
+
+<li class={`project ${featured ? 'project--featured' : ''}`}>
+  <div class="project__head">
+    <a
+      href={repo.html_url}
+      target="_blank"
+      rel="noreferrer"
+      class="project__name"
+    >
+      {repo.name}
+    </a>
+    {featured && <span class="project__badge">Featured</span>}
+  </div>
+
+  {repo.description && <p class="project__desc">{repo.description}</p>}
+
+  <div class="project__meta">
+    {repo.language && <span class="pill">{repo.language}</span>}
+    <span class="muted" title="Stars">
+      ★ {repo.stargazers_count.toLocaleString('en-US')}
+    </span>
+    <span class="muted" title="Forks">
+      ⑂ {repo.forks_count.toLocaleString('en-US')}
+    </span>
+    <span class="muted">Updated {updatedLabel}</span>
+  </div>
+</li>
+
+<style>
+  .project {
+    @apply rounded-lg border border-skin-line bg-skin-card p-4;
+  }
+  .project--featured {
+    @apply border-skin-accent/40;
+  }
+  .project__head {
+    @apply flex flex-wrap items-center gap-2;
+  }
+  .project__name {
+    @apply text-lg font-semibold text-skin-accent decoration-dashed underline-offset-4 hover:underline;
+  }
+  .project__badge {
+    @apply rounded bg-amber-100 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-amber-800;
+  }
+  .project__desc {
+    @apply mt-2 text-sm text-skin-base/80;
+  }
+  .project__meta {
+    @apply mt-3 flex flex-wrap items-center gap-x-3 gap-y-2 text-xs;
+  }
+  .muted {
+    @apply text-skin-base/60;
+  }
+  .pill {
+    @apply rounded-full border border-skin-line bg-skin-card px-2 py-1 text-xs text-skin-base/80 no-underline;
+  }
+  a.pill {
+    @apply hover:border-skin-accent/40 hover:text-skin-accent;
+  }
+</style>

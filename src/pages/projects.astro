@@ -1,0 +1,114 @@
+---
+import { SITE } from '@config';
+import Breadcrumbs from '@components/Breadcrumbs.astro';
+import Footer from '@components/Footer.astro';
+import Header from '@components/Header.astro';
+import ProjectCard from '@components/ProjectCard.astro';
+import SlashPagesLink from '@components/SlashPagesLink.astro';
+import Layout from '@layouts/Layout.astro';
+import { fetchGithubRepos } from '@utils/github';
+import type { GithubRepo } from '@utils/github';
+
+const GITHUB_USERNAME = 'amandeepmittal';
+
+const PROJECTS = [
+  'react-native-examples',
+  'mobilenet-tfjs-expo'
+] as const;
+
+const token = import.meta.env.GITHUB_TOKEN;
+
+const fallbackRepos: GithubRepo[] = PROJECTS.map((name, index) => ({
+  id: index,
+  name,
+  full_name: `${GITHUB_USERNAME}/${name}`,
+  description: null,
+  html_url: `https://github.com/${GITHUB_USERNAME}/${name}`,
+  homepage: null,
+  language: null,
+  fork: false,
+  archived: false,
+  stargazers_count: 0,
+  forks_count: 0,
+  open_issues_count: 0,
+  pushed_at: null,
+  updated_at: new Date().toISOString(),
+  created_at: new Date().toISOString()
+}));
+
+let repos: GithubRepo[] = [];
+let githubLoadError = '';
+
+try {
+  repos = await fetchGithubRepos({ username: GITHUB_USERNAME, token });
+} catch (err) {
+  githubLoadError = err instanceof Error ? err.message : String(err);
+  repos = fallbackRepos;
+}
+
+const byName = new Map(repos.map(repo => [repo.name, repo] as const));
+const selected = PROJECTS.map(name => byName.get(name)).filter(
+  (repo): repo is GithubRepo => Boolean(repo)
+);
+const missing = PROJECTS.filter(name => !byName.has(name));
+---
+
+<Layout
+  title={`Projects | ${SITE.title}`}
+  description="A selection of personal projects from GitHub."
+>
+  <Header />
+  <Breadcrumbs />
+  <main id="main-content">
+    <section class="wrap">
+      <h1 class="title">Projects</h1>
+      <p class="lede">
+        A snapshot of what I’ve been building, on my GitHub profile (
+        <a
+          href={`https://github.com/${GITHUB_USERNAME}`}
+          target="_blank"
+          rel="noreferrer"
+          >@{GITHUB_USERNAME}</a
+        >).
+      </p>
+
+      {githubLoadError && (
+        <p class="note">
+          Couldn’t load GitHub data at build time ({githubLoadError}). Showing a
+          small fallback list instead.
+        </p>
+      )}
+
+      {missing.length > 0 && (
+        <p class="note">Missing repositories: {missing.join(', ')}.</p>
+      )}
+
+      <ul class="projects-grid">
+        {selected.map(repo => (
+          <ProjectCard repo={repo} />
+        ))}
+      </ul>
+
+      <SlashPagesLink />
+    </section>
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  .wrap {
+    @apply mx-auto w-full max-w-3xl px-4 pb-28;
+  }
+  .title {
+    @apply mt-2 text-2xl font-semibold tracking-wider sm:text-3xl;
+  }
+  .lede {
+    @apply mt-2 text-skin-base/80;
+  }
+  .note {
+    @apply mt-4 rounded-md border border-amber-200 bg-amber-50 p-3 text-sm text-amber-900;
+  }
+  .projects-grid {
+    @apply mt-8 grid grid-cols-1 gap-4;
+  }
+</style>
