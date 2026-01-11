@@ -2,7 +2,7 @@ amanhimself.dev
 Aman Mittal
 I'm Aman Mittal (@amanhimself). Software Developer and Tech Writer. Welcome to my blog!
 
-Generated on 2026-01-09T07:08:57.967Z
+Generated on 2026-01-11T10:38:14.669Z
 Contains the markdown content of each blog post.
 
 ---
@@ -51393,6 +51393,22 @@ This week was good. I was able to complete a few tasks at work and I was able to
 - 📚 This month I have read two books:
   - I finally completed [Above the Shoulders](https://www.goodreads.com/book/show/233092967-above-the-shoulders) by Jason Nacey. I started this book in October and it took me a while to finish it. It argues that mental toughness is the real competitive advantage. Each battles starts in mind and resilience is deciding your response and moving forward even without confidence. It provides a mental mastery pyramid. I feel the core takeaway is to choose discomfort on purpose, repurpose negative spirals quickly, practical visualization, and repeated action to form habits.
   - The second book I completed was [HBR Guide to Your Professional Growth](https://www.goodreads.com/book/show/40944788-hbr-guide-to-your-professional-growth). It is a collection of articles from folks who have been featured in/contributed to Harvard Business Review. It emphasizes that your career is your responsibility and you need adopt an owner's mindset. It also highlights the importance of building self-awareness through honest feedback and leveling up is non-linear.
+
+---
+
+## Week notes 13
+Slug: week-notes-13
+
+Busy week with mix of publishing, drafting, and experimenting.
+
+- 📝 Published a post on sharing my initial experience on [using Codex CLI](/blog/first-few-days-with-codex-cli/) outside of coding and mostly with Obsidian.
+- 📝 Published a post called [2025 year in books](/blog/2025-year-in-books/). The idea of writing a full yearly review felt overwhelming, so I decided to break it down. Starting with books made it manageable.
+- Drafts completed this week are two more posts. Lessons from 10 years of blogging, a reflection on a decade of running and writing on this blog. And TIL `git shortlog`, a quick tip for the CLI section.
+- 💼 Many PRs this week for Expo docs &mdash; small improvements, major bug fixes, and some big changes.
+- 🧪 Tried using Codex CLI 5.2 to gather docs metrics from Google Analytics, Kapa, and other sources. It lost context twice (full context both times).
+  - Takeaways: need to create smaller, focused skills for this kind of task, and I should just take the screenshots myself.
+- 🧪 Also experimented with building a small iOS app using Expo and React Native and Codex CLI. The goal was to write zero code, but I ended up writing around 25% of it. The upside: tightened my existing `SKILL.md` files and added more resources to them
+- 📚 Started reading Seneca: A Life by Emily Wilson
 
 ---
 
