@@ -6,7 +6,7 @@ slug: 2025-blog-stats
 featured: false
 draft: false
 tags:
-  - blogging
+  - year-reviews
 description: ''
 ---
 
