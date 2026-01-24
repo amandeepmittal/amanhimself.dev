@@ -1,0 +1,179 @@
+---
+import Layout from '@layouts/Layout.astro';
+import Footer from '@components/Footer.astro';
+---
+
+<Layout
+  title="Support | Last Time I"
+  description="Get help with the Last Time I iOS app."
+>
+  <section class="support">
+    <div class="container">
+      <a href="/lasttimei" class="back-link">&larr; Back to Last Time I</a>
+
+      <h1>Support</h1>
+      <p class="subtitle">Need help? We're here for you.</p>
+
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq-item">
+        <h3>How do I add a new item to track?</h3>
+        <p>Tap the "+" button in the top right corner of the home screen. Enter a name for your task and select a category, then tap "Add Item".</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>How do reminders work?</h3>
+        <p>Open any item and scroll to the "Reminder" section. Choose how many days you want to wait before being reminded. You'll receive a notification if you haven't marked the item as done within that time period.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>What do the colors mean?</h3>
+        <p>Colors indicate how long it's been since you completed a task:</p>
+        <ul>
+          <li><strong>Green:</strong> Done within the last 7 days</li>
+          <li><strong>Yellow:</strong> Done 7-30 days ago</li>
+          <li><strong>Orange:</strong> Done 30-90 days ago</li>
+          <li><strong>Red:</strong> Done over 90 days ago or never</li>
+        </ul>
+      </div>
+
+      <div class="faq-item">
+        <h3>Where is my data stored?</h3>
+        <p>All your data is stored locally on your device. Nothing is sent to any server. If you delete the app, your data will be deleted as well.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Does this app require an internet connection?</h3>
+        <p>No. Last Time I works completely offline. There are no accounts, no cloud sync, and no servers. Everything runs on your device, so you can use the app anywhere, anytime - even in airplane mode.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>How do I delete an item?</h3>
+        <p>Open the item you want to delete and tap the "Delete" button at the bottom of the screen.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Can I recover deleted items?</h3>
+        <p>No, deleted items cannot be recovered. Please be careful when deleting items.</p>
+      </div>
+
+      <h2>Contact</h2>
+      <p>If you have questions, feedback, or need help with something not covered above, please reach out:</p>
+      <p><a href="mailto:amanmittal.work@gmail.com">amanmittal.work@gmail.com</a></p>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
+
+<style>
+  :global(body) {
+    background-color: #30D158 !important;
+  }
+
+  .support {
+    padding: 4rem 1.5rem;
+    background-color: #30D158;
+    color: white;
+    min-height: 80vh;
+  }
+
+  .container {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .back-link {
+    color: white;
+    opacity: 0.8;
+    text-decoration: none;
+    font-size: 0.95rem;
+    display: inline-block;
+    margin-bottom: 2rem;
+  }
+
+  .back-link:hover {
+    opacity: 1;
+    text-decoration: underline;
+  }
+
+  .support h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: white;
+  }
+
+  .support .subtitle {
+    color: white;
+    opacity: 0.8;
+    margin-bottom: 2.5rem;
+    font-size: 1.1rem;
+  }
+
+  .support h2 {
+    font-size: 1.35rem;
+    margin: 2.5rem 0 1rem 0;
+    color: white;
+  }
+
+  .support h3 {
+    font-size: 1.1rem;
+    margin: 0 0 0.5rem 0;
+    color: white;
+  }
+
+  .faq-item {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 1.25rem;
+    margin-bottom: 1rem;
+  }
+
+  .support p, .support li {
+    color: white;
+    line-height: 1.8;
+    font-size: 1.05rem;
+    opacity: 0.95;
+  }
+
+  .faq-item p, .faq-item li {
+    margin: 0;
+  }
+
+  .support ul {
+    padding-left: 1.5rem;
+    margin: 0.5rem 0 0 0;
+  }
+
+  .support li {
+    margin-bottom: 0.25rem;
+  }
+
+  .support a {
+    color: white;
+    text-decoration: underline;
+  }
+
+  .support a:hover {
+    opacity: 0.8;
+  }
+
+  :global(footer) {
+    background-color: #30D158 !important;
+    color: white !important;
+  }
+
+  :global(footer a), :global(footer span) {
+    color: white !important;
+  }
+
+  @media (max-width: 640px) {
+    .support {
+      padding: 2rem 1.5rem;
+    }
+
+    .support h1 {
+      font-size: 2rem;
+    }
+  }
+</style>

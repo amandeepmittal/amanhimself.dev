@@ -1,0 +1,283 @@
+---
+import Layout from '@layouts/Layout.astro';
+import Footer from '@components/Footer.astro';
+---
+
+<Layout
+  title="Last Time I | Track What Matters"
+  description="Track when you last did important tasks. A simple iOS app for remembering the things you tend to forget."
+>
+  <!-- Hero Section with App Color -->
+  <section class="hero">
+    <div class="hero-content">
+      <img
+        src="/lasttimei-icon.png"
+        alt="Last Time I... App Icon"
+        class="app-icon"
+      />
+      <h1>Last Time I</h1>
+      <p class="tagline">Track when you last did important tasks that are easy to forget.</p>
+
+      <a href="https://apps.apple.com/app/id0000000000" class="app-store-badge">
+        <img
+          src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+          alt="Download on the App Store"
+        />
+      </a>
+      <p class="coming-soon">Coming soon to the App Store</p>
+    </div>
+  </section>
+
+  <!-- Screenshots Section -->
+  <section class="screenshots">
+    <div class="container">
+      <h2>Screenshots</h2>
+      <div class="screenshot-scroll">
+        <div class="screenshot-container">
+          <img src="/lasttimei-screenshot-1.jpg" alt="Items list showing tracked tasks" class="screenshot" />
+          <img src="/lasttimei-screenshot-2.jpg" alt="Add new item screen" class="screenshot" />
+          <img src="/lasttimei-screenshot-3.jpg" alt="Item detail with history" class="screenshot" />
+          <img src="/lasttimei-screenshot-4.jpg" alt="Item detail with reminder options" class="screenshot" />
+          <img src="/lasttimei-screenshot-5.jpg" alt="Settings screen" class="screenshot" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features">
+    <div class="container">
+      <h2>Features</h2>
+      <div class="feature-grid">
+        <div class="feature">
+          <span class="feature-icon">📋</span>
+          <h3>Track What Matters</h3>
+          <p>Keep a list of tasks you want to remember — from changing air filters to calling family.</p>
+        </div>
+        <div class="feature">
+          <span class="feature-icon">🎨</span>
+          <h3>Visual Status</h3>
+          <p>Colors show what needs attention at a glance. Green means recent, red means overdue.</p>
+        </div>
+        <div class="feature">
+          <span class="feature-icon">🔔</span>
+          <h3>Gentle Reminders</h3>
+          <p>Set optional notifications to nudge you after a certain number of days.</p>
+        </div>
+        <div class="feature">
+          <span class="feature-icon">🔒</span>
+          <h3>Simple & Private</h3>
+          <p>All data stays on your device. No account required, no tracking.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Links Section -->
+  <section class="links">
+    <div class="container">
+      <a href="/lasttimei/support">Support</a>
+      <span class="divider">|</span>
+      <a href="/lasttimei/privacy">Privacy Policy</a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
+
+<style>
+  :global(body) {
+    background-color: #30D158 !important;
+  }
+
+  .hero {
+    background-color: #30D158;
+    color: white;
+    padding: 4rem 1.5rem;
+    text-align: center;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-content {
+    max-width: 600px;
+  }
+
+  .app-icon {
+    width: 120px;
+    height: 120px;
+    border-radius: 24px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    margin-bottom: 1.5rem;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0 0 0.75rem 0;
+    letter-spacing: -0.5px;
+  }
+
+  .tagline {
+    font-size: 1.25rem;
+    opacity: 0.95;
+    margin: 0 0 2rem 0;
+    line-height: 1.5;
+  }
+
+  .app-store-badge img {
+    height: 54px;
+    transition: transform 0.2s ease;
+  }
+
+  .app-store-badge:hover img {
+    transform: scale(1.05);
+  }
+
+  .coming-soon {
+    font-size: 0.875rem;
+    opacity: 0.8;
+    margin-top: 0.75rem;
+  }
+
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  .screenshots {
+    padding: 3rem 0;
+    background-color: #30D158;
+    overflow: hidden;
+  }
+
+  .screenshots h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: white;
+  }
+
+  .screenshot-scroll {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .screenshot-scroll::-webkit-scrollbar {
+    display: none;
+  }
+
+  .screenshot-container {
+    display: inline-flex;
+    gap: 1rem;
+    padding: 0 1.5rem 1rem 1.5rem;
+  }
+
+  .screenshot {
+    width: 200px;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    flex-shrink: 0;
+  }
+
+  .features {
+    padding: 4rem 1.5rem;
+    background-color: #30D158;
+    color: white;
+  }
+
+  .features h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+    color: white;
+  }
+
+  .feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+
+  .feature {
+    text-align: center;
+    padding: 1.5rem;
+  }
+
+  .feature-icon {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: 1rem;
+  }
+
+  .feature h3 {
+    font-size: 1.25rem;
+    margin: 0 0 0.5rem 0;
+    color: white;
+  }
+
+  .feature p {
+    color: white;
+    opacity: 0.9;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .links {
+    padding: 2rem 1.5rem;
+    background-color: #30D158;
+    text-align: center;
+  }
+
+  .links a {
+    color: white;
+    text-decoration: underline;
+    font-size: 1rem;
+    opacity: 0.9;
+  }
+
+  .links a:hover {
+    opacity: 1;
+  }
+
+  .links .divider {
+    color: white;
+    opacity: 0.5;
+    margin: 0 0.75rem;
+  }
+
+  :global(footer) {
+    background-color: #30D158 !important;
+    color: white !important;
+  }
+
+  :global(footer a), :global(footer span) {
+    color: white !important;
+  }
+
+  @media (max-width: 640px) {
+    .hero {
+      padding: 3rem 1.5rem;
+      min-height: 50vh;
+    }
+
+    .hero h1 {
+      font-size: 2rem;
+    }
+
+    .tagline {
+      font-size: 1.1rem;
+    }
+
+    .app-icon {
+      width: 100px;
+      height: 100px;
+    }
+  }
+</style>

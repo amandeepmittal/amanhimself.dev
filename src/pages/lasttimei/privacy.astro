@@ -1,0 +1,130 @@
+---
+import Layout from '@layouts/Layout.astro';
+import Footer from '@components/Footer.astro';
+---
+
+<Layout
+  title="Privacy Policy | Last Time I"
+  description="Privacy policy for the Last Time I iOS app."
+>
+  <section class="privacy">
+    <div class="container">
+      <a href="/lasttimei" class="back-link">← Back to Last Time I</a>
+
+      <h1>Privacy Policy</h1>
+      <p class="updated">Last updated: January 2026</p>
+
+      <p><strong>Last Time I</strong> does not collect, store, or share any personal data. All your data is stored locally on your device and never leaves it.</p>
+
+      <h2>Data Storage</h2>
+      <ul>
+        <li>All items and history are stored locally using on-device storage</li>
+        <li>No data is transmitted to external servers</li>
+        <li>No analytics or tracking is used</li>
+      </ul>
+
+      <h2>Notifications</h2>
+      <p>The app may request permission to send local notifications. These are used solely to remind you about tasks you have configured. Notification data never leaves your device.</p>
+
+      <h2>Third-Party Services</h2>
+      <p>This app does not use any third-party services, analytics, or advertising.</p>
+
+      <h2>Contact</h2>
+      <p>If you have questions about this privacy policy, contact: <a href="mailto:amanmittal.work@gmail.com">amanmittal.work@gmail.com</a></p>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
+
+<style>
+  :global(body) {
+    background-color: #30D158 !important;
+  }
+
+  .privacy {
+    padding: 4rem 1.5rem;
+    background-color: #30D158;
+    color: white;
+    min-height: 80vh;
+  }
+
+  .container {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .back-link {
+    color: white;
+    opacity: 0.8;
+    text-decoration: none;
+    font-size: 0.95rem;
+    display: inline-block;
+    margin-bottom: 2rem;
+  }
+
+  .back-link:hover {
+    opacity: 1;
+    text-decoration: underline;
+  }
+
+  .privacy h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: white;
+  }
+
+  .privacy .updated {
+    color: white;
+    opacity: 0.7;
+    margin-bottom: 2.5rem;
+  }
+
+  .privacy h2 {
+    font-size: 1.35rem;
+    margin: 2.5rem 0 0.75rem 0;
+    color: white;
+  }
+
+  .privacy p, .privacy li {
+    color: white;
+    line-height: 1.8;
+    font-size: 1.05rem;
+  }
+
+  .privacy ul {
+    padding-left: 1.5rem;
+  }
+
+  .privacy li {
+    margin-bottom: 0.5rem;
+  }
+
+  .privacy a {
+    color: white;
+    text-decoration: underline;
+  }
+
+  .privacy a:hover {
+    opacity: 0.8;
+  }
+
+  :global(footer) {
+    background-color: #30D158 !important;
+    color: white !important;
+  }
+
+  :global(footer a), :global(footer span) {
+    color: white !important;
+  }
+
+  @media (max-width: 640px) {
+    .privacy {
+      padding: 2rem 1.5rem;
+    }
+
+    .privacy h1 {
+      font-size: 2rem;
+    }
+  }
+</style>
