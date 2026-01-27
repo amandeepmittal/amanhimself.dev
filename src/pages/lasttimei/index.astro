@@ -5,7 +5,7 @@ import Footer from '@components/Footer.astro';
 
 <Layout
   title="Last Time I | Track What Matters"
-  description="Track when you last did important tasks. A simple iOS app for remembering the things you tend to forget."
+  description="Track when you last did important tasks. A simple app for iOS and Android for remembering the things you tend to forget."
 >
   <!-- Hero Section with App Color -->
   <section class="hero">
@@ -18,12 +18,21 @@ import Footer from '@components/Footer.astro';
       <h1>Last Time I</h1>
       <p class="tagline">Track when you last did important tasks that are easy to forget.</p>
 
-      <a href="https://apps.apple.com/app/id6758254177" class="app-store-badge">
-        <img
-          src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
-          alt="Download on the App Store"
-        />
-      </a>
+      <div class="store-badges">
+        <a href="https://apps.apple.com/app/id6758254177" class="app-store-badge">
+          <img
+            src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+            alt="Download on the App Store"
+          />
+        </a>
+        <div class="google-play-badge coming-soon">
+          <img
+            src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
+            alt="Get it on Google Play"
+          />
+          <span class="coming-soon-label">Coming Soon</span>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -126,6 +135,13 @@ import Footer from '@components/Footer.astro';
     line-height: 1.5;
   }
 
+  .store-badges {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
   .app-store-badge img {
     height: 54px;
     transition: transform 0.2s ease;
@@ -133,6 +149,41 @@ import Footer from '@components/Footer.astro';
 
   .app-store-badge:hover img {
     transform: scale(1.05);
+  }
+
+  .google-play-badge {
+    position: relative;
+    display: inline-block;
+  }
+
+  .google-play-badge img {
+    height: 80px;
+    transition: transform 0.2s ease;
+  }
+
+  .google-play-badge.coming-soon {
+    opacity: 0.7;
+    cursor: default;
+  }
+
+  .google-play-badge.coming-soon img {
+    filter: grayscale(30%);
+  }
+
+  .coming-soon-label {
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.75);
+    color: white;
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+    white-space: nowrap;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
   }
 
   .container {
