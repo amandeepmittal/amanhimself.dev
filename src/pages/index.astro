@@ -129,6 +129,21 @@ const totalPostsCount = publishedPosts.length;
           </svg>
         </LinkButton>
       </div>
+
+      <Hr />
+
+      <section id="projects">
+        <h2>Projects</h2>
+        <a href="/projects/" class="projects-card">
+          <img src="/lasttimei-icon.png" alt="Last Time I App" class="project-icon" />
+          <span class="projects-link-text">View all projects</span>
+          <svg xmlns="http://www.w3.org/2000/svg" class="arrow-icon"
+            ><path
+              d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"
+            ></path>
+          </svg>
+        </a>
+      </section>
     </section>
 
     <Footer />
@@ -177,6 +192,26 @@ const totalPostsCount = publishedPosts.length;
     }
     .all-posts-btn-wrapper {
       @apply my-8 text-center;
+    }
+
+    /* ===== Projects Section ===== */
+    #projects {
+      @apply pb-6 pt-12;
+    }
+    #projects h2 {
+      @apply text-2xl font-semibold tracking-wide;
+    }
+    .projects-card {
+      @apply mt-4 flex items-center gap-4 rounded-lg border border-skin-line bg-skin-card p-4 no-underline transition-all hover:border-skin-accent;
+    }
+    .project-icon {
+      @apply h-12 w-12 rounded-xl;
+    }
+    .projects-link-text {
+      @apply flex-1 font-medium text-skin-accent;
+    }
+    .arrow-icon {
+      @apply h-6 w-6 fill-skin-accent;
     }
   </style>
 </Layout>
