@@ -13,7 +13,7 @@ A collection of all **/slash** pages on this site.
 - [**/links**](/links): A page of all the web links that the author is present on
 - [**/now**](/now): What the author is doing right now
 - [**/posts-count**](/posts-count): A quick view of yearly post counts
-- [**/projects**](/projects): Personal projects pulled from GitHub
+- [**/projects**](/projects): Apps and open source projects
 - [**/rss**](/rss.xml): A page listing RSS feed to subscribe this site's content
 - [**/search**](/search): A page to search any article on this blog
 - [**/stats**](https://app.usefathom.com/share/habfbpub/amanhimself.dev): A page that share this sites stats (weekly, monthly, yearly)

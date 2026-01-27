@@ -55,7 +55,7 @@ const missing = PROJECTS.filter(name => !byName.has(name));
 
 <Layout
   title={`Projects | ${SITE.title}`}
-  description="A selection of personal projects from GitHub."
+  description="Apps and open source projects I've built."
 >
   <Header />
   <Breadcrumbs />
@@ -63,7 +63,28 @@ const missing = PROJECTS.filter(name => !byName.has(name));
     <section class="wrap">
       <h1 class="title">Projects</h1>
       <p class="lede">
-        A snapshot of what I’ve been building, on my GitHub profile (
+        Apps and open source projects I've built.
+      </p>
+
+      <!-- Apps Section -->
+      <h2 class="section-title">Apps</h2>
+      <ul class="apps-grid">
+        <li class="app-card">
+          <a href="/lasttimei" class="app-link">
+            <img src="/lasttimei-icon.png" alt="Last Time I App Icon" class="app-icon" />
+            <div class="app-info">
+              <h3 class="app-name">Last Time I</h3>
+              <p class="app-description">Track when you last did important tasks that are easy to forget.</p>
+              <span class="app-platform">iOS</span>
+            </div>
+          </a>
+        </li>
+      </ul>
+
+      <!-- Open Source Section -->
+      <h2 class="section-title">Open Source</h2>
+      <p class="section-lede">
+        Projects on my GitHub profile (
         <a
           href={`https://github.com/${GITHUB_USERNAME}`}
           target="_blank"
@@ -74,7 +95,7 @@ const missing = PROJECTS.filter(name => !byName.has(name));
 
       {githubLoadError && (
         <p class="note">
-          Couldn’t load GitHub data at build time ({githubLoadError}). Showing a
+          Couldn't load GitHub data at build time ({githubLoadError}). Showing a
           small fallback list instead.
         </p>
       )}
@@ -105,10 +126,40 @@ const missing = PROJECTS.filter(name => !byName.has(name));
   .lede {
     @apply mt-2 text-skin-base/80;
   }
+  .section-title {
+    @apply mt-10 text-xl font-semibold tracking-wide sm:text-2xl;
+  }
+  .section-lede {
+    @apply mt-2 text-skin-base/80;
+  }
   .note {
     @apply mt-4 rounded-md border border-amber-200 bg-amber-50 p-3 text-sm text-amber-900;
   }
+  .apps-grid {
+    @apply mt-6 grid grid-cols-1 gap-4;
+  }
+  .app-card {
+    @apply rounded-lg border border-skin-line bg-skin-card transition-all hover:border-skin-accent;
+  }
+  .app-link {
+    @apply flex items-center gap-4 p-4 no-underline;
+  }
+  .app-icon {
+    @apply h-16 w-16 flex-shrink-0 rounded-xl;
+  }
+  .app-info {
+    @apply flex flex-col;
+  }
+  .app-name {
+    @apply text-lg font-semibold text-skin-accent;
+  }
+  .app-description {
+    @apply mt-1 text-sm text-skin-base/80;
+  }
+  .app-platform {
+    @apply mt-2 inline-block w-fit rounded-full bg-skin-accent/10 px-2 py-0.5 text-xs font-medium text-skin-accent;
+  }
   .projects-grid {
-    @apply mt-8 grid grid-cols-1 gap-4;
+    @apply mt-6 grid grid-cols-1 gap-4;
   }
 </style>
