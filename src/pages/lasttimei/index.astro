@@ -25,13 +25,12 @@ import Footer from '@components/Footer.astro';
             alt="Download on the App Store"
           />
         </a>
-        <div class="google-play-badge coming-soon">
+        <a href="https://play.google.com/store/apps/details?id=com.amanhimself.lastimeiapp" class="google-play-badge">
           <img
             src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
             alt="Get it on Google Play"
           />
-          <span class="coming-soon-label">Coming Soon</span>
-        </div>
+        </a>
       </div>
     </div>
   </section>
@@ -161,29 +160,8 @@ import Footer from '@components/Footer.astro';
     transition: transform 0.2s ease;
   }
 
-  .google-play-badge.coming-soon {
-    opacity: 0.7;
-    cursor: default;
-  }
-
-  .google-play-badge.coming-soon img {
-    filter: grayscale(30%);
-  }
-
-  .coming-soon-label {
-    position: absolute;
-    bottom: 8px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.75);
-    color: white;
-    font-size: 0.7rem;
-    font-weight: 600;
-    padding: 0.25rem 0.75rem;
-    border-radius: 12px;
-    white-space: nowrap;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
+  .google-play-badge:hover img {
+    transform: scale(1.05);
   }
 
   .container {
