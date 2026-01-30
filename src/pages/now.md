@@ -4,15 +4,18 @@ title: 'Now'
 showSlashLink: true
 ---
 
-_Last Update: November 1, 2025_
+_Last Update: January 30, 2026_
 
 ## What I am doing now?
 
-- I'm currently working on writing and maintaining documentation for Expo. My work mostly revolves around managing the content side and docs-tools for [docs.expo.dev](https://docs.expo.dev), among other hats I wear at my day job.
-- My interest in technology currently includes blogging, documentation-as-code, technical writing, and mobile apps.
-- 🕹️ Playing: N/A
+- Working on [Expo docs](https://docs.expo.dev) as an independent contractor.
+- Focused on docs-as-code workflows and developer education.
+- Thinking more deliberately about the craft of technical writing. What makes documentation genuinely useful, how docs-as-code workflows should work, and how AI is changing the way we write and maintain docs.
 - 📚 Reading: Check out my [Goodreads](https://www.goodreads.com/author/show/17657541.Aman_Mittal)
-- Trying to write month in my free time so this blog doesn't get trivialize.
+
+## What I care about
+
+Developer documentation that respects the reader. API references that are accurate and navigable. SDK guides that meet developers where they are. Docs-as-code pipelines that make content maintainable. I believe documentation is product work, not an afterthought.
 
 ## What I am using?
 

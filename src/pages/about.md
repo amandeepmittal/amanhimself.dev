@@ -4,13 +4,15 @@ title: 'About'
 showSlashLink: true
 ---
 
-_Last Update: November 1, 2025_
+_Last Update: January 30, 2026_
 
-I’m Aman Mittal, a technical writer based in Delhi, India. I explore and write about different technologies.
+I'm Aman Mittal, a technical writer and documentation engineer based in Delhi, India. I specialize in developer documentation: API references, tutorials, docs-as-code workflows, and developer education.
 
-My journey in the tech world started as a consultant and a Developer Advocate and has evolved through roles in content development and technical writing.
+My journey in the tech world started as a consultant and a Developer Advocate and has evolved through roles in content development and technical writing. The through-line has always been the same: making complex technical concepts clear and accessible for developers.
 
-You can reach out to me by [email](mailto:amanmittal.work@gmail.com) or [LinkedIn](https://www.linkedin.com/in/aman-mittal-05a239117/).
+I care about documentation that treats developers as the audience, not an afterthought. That means well-structured API references, guides that meet developers where they are, and tooling that makes docs maintainable at scale.
+
+If you're working on something where documentation matters and want to talk, reach out by [email](mailto:amanmittal.work@gmail.com) or [LinkedIn](https://www.linkedin.com/in/aman-mittal-05a239117/).
 
 <div>
   <img src="/avatar.jpg" alt="Aman Mittal avatar" class="sm:w-1/3 mx-auto rounded-xl" />
@@ -40,12 +42,12 @@ In 2018, I made my first open-source contribution by writing a Twitter Bot for f
 
 ## Technical writing
 
-My journey in technical writing started on [Medium](https://medium.com/@amanhimself) in 2017. Since then, I’ve:
+My journey in technical writing started on [Medium](https://medium.com/@amanhimself) in 2017. Since then, I've:
 
 - Become an [AWS Amplify Community contributor](https://amplify.aws/community/contributors) in 2019.
 - Reached over 2 million views on [Medium](https://x.com/amanhimself/status/1285554115464982528) by July 2020.
 - Been recognized as a Distinguished Author and moderator by [Dev.to](https://dev.to/amanhimself) in December 2020.
-- Had my work featured as an official resource by Google’s [Dev Library](https://devlibrary.withgoogle.com/products/firebase) in 2021.
+- Had my work featured as an official resource by Google's [Dev Library](https://devlibrary.withgoogle.com/products/firebase) in 2021.
 - Written over 100 articles and tutorials for more than 30 organizations and tech publications by 2022.
 
 You can find my work in publications like [LogRocket](https://blog.logrocket.com/author/amanmittal/), [Jscrambler](https://jscrambler.com/blog/implementing-infinite-scroll-with-react-query-and-flatlist-in-react-native), [freeCodeCamp](https://www.freecodecamp.org/news/author/amanhimself/), [Expo.io](https://blog.expo.dev/building-a-minimalist-weather-app-with-react-native-and-expo-fe7066e02c09), [Sentry](https://blog.sentry.io/authors/aman-mittal), [AppSignal](https://blog.appsignal.com/authors/aman-mittal), [FlyCode](https://blog.flycode.com/how-to-use-flycode-to-update-your-react-apps-on-the-fly), [Crowdbotics](https://blog.crowdbotics.com/author/amanhimself/), [Educative Edpresso](https://www.educative.io/profile/view/4727790119157760), [Heartbeat.fritz.ai](https://heartbeat.fritz.ai/@amanhimself), [Draftbit](https://community.draftbit.com/u/amanhimself/activity/topics), [Dzone](https://dzone.com/users/4503532/amanhimself.html), [Open Replay](https://blog.openreplay.com/authors/aman-mittal), [HarperDB](https://harperdb.io/product/featured-projects/rest-api-with-node-js/?utm_source=amanmittal), [Hackernoon](https://hackernoon.com/u/amanhimself), [Alligator.io/Digital Ocean](https://www.digitalocean.com/community/tutorials/react-geolocation-react-native), [Newline.co](https://www.newline.co/@amandeepmittal/how-to-build-react-native-apps-with-graphql-and-apollo--d74eb12e), [Geek Culture](https://medium.com/geekculture/11-best-no-code-and-low-code-back-ends-for-2021-138066ca81f6), [JavaScript Plain English](https://javascript.plainenglish.io/create-a-custom-hook-for-show-hide-password-visibility-in-react-native-db184a48126e).
