@@ -207,20 +207,76 @@ const { activeNav } = Astro.props;
 
 <script>
   function toggleNav() {
-    // Toggle menu
     const menuBtn = document.querySelector('.hamburger-menu');
     const menuIcon = document.querySelector('.menu-icon');
     const menuItems = document.querySelector('#menu-items');
 
-    menuBtn?.addEventListener('click', () => {
-      const menuExpanded = menuBtn.getAttribute('aria-expanded') === 'true';
-      menuIcon?.classList.toggle('is-active');
-      menuBtn.setAttribute('aria-expanded', menuExpanded ? 'false' : 'true');
-      menuBtn.setAttribute(
-        'aria-label',
-        menuExpanded ? 'Open Menu' : 'Close Menu'
-      );
-      menuItems?.classList.toggle('display-none');
+    if (!menuBtn || !menuIcon || !menuItems) return;
+
+    function isMenuOpen() {
+      return menuBtn!.getAttribute('aria-expanded') === 'true';
+    }
+
+    function openMenu() {
+      menuIcon!.classList.add('is-active');
+      menuBtn!.setAttribute('aria-expanded', 'true');
+      menuBtn!.setAttribute('aria-label', 'Close Menu');
+      menuItems!.classList.remove('display-none');
+
+      // Move focus to the first menu link
+      const firstLink = menuItems!.querySelector('a');
+      firstLink?.focus();
+    }
+
+    function closeMenu() {
+      menuIcon!.classList.remove('is-active');
+      menuBtn!.setAttribute('aria-expanded', 'false');
+      menuBtn!.setAttribute('aria-label', 'Open Menu');
+      menuItems!.classList.add('display-none');
+
+      // Return focus to the hamburger button
+      menuBtn!.focus();
+    }
+
+    // Toggle on button click
+    menuBtn.addEventListener('click', () => {
+      isMenuOpen() ? closeMenu() : openMenu();
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && isMenuOpen()) {
+        closeMenu();
+      }
+    });
+
+    // Arrow key navigation + focus trapping within menu
+    menuItems.addEventListener('keydown', e => {
+      const links = [...menuItems!.querySelectorAll('a')];
+      const currentIndex = links.indexOf(document.activeElement as HTMLAnchorElement);
+
+      if (e.key === 'ArrowDown') {
+        e.preventDefault();
+        const next = (currentIndex + 1) % links.length;
+        links[next]?.focus();
+      }
+
+      if (e.key === 'ArrowUp') {
+        e.preventDefault();
+        const prev = (currentIndex - 1 + links.length) % links.length;
+        links[prev]?.focus();
+      }
+
+      // Trap Tab within the menu when open on mobile
+      if (e.key === 'Tab' && isMenuOpen()) {
+        if (e.shiftKey && currentIndex === 0) {
+          e.preventDefault();
+          links[links.length - 1]?.focus();
+        } else if (!e.shiftKey && currentIndex === links.length - 1) {
+          e.preventDefault();
+          links[0]?.focus();
+        }
+      }
     });
   }
 
