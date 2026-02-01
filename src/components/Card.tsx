@@ -18,7 +18,7 @@ export interface Props {
 //   };
 
 //   return (
-//     <li className="my-6">
+//     <li className="my-8">
 //       <a
 //         href={href}
 //         className="inline-block text-lg font-medium text-skin-accent decoration-dashed underline-offset-4 focus-visible:no-underline focus-visible:underline-offset-0"
@@ -57,7 +57,7 @@ export default function Card({
   };
 
   return (
-    <li className="my-6">
+    <li className="my-8">
       <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
         <div className="flex flex-wrap items-center gap-2">
           <a
