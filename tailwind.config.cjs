@@ -55,6 +55,7 @@ module.exports = {
       },
       fontFamily: {
         sans: ["Helvetica Neue", "Arial", "Hiragino Kaku Gothic ProN", "Hiragino Sans", "BIZ UDPGothic", "Meiryo", "sans-serif"],
+        serif: ["Source Serif 4", "Georgia", "Cambria", "Times New Roman", "Times", "serif"],
       },
 
       typography: {

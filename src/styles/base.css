@@ -5,20 +5,20 @@
 @layer base {
   :root,
   html[data-theme='light'] {
-    --color-fill: 250, 250, 250;
-    --color-text-base: 34, 34, 34;
-    --color-accent: 0, 0, 0;
-    --color-card: 243, 244, 246;
-    --color-card-muted: 248, 248, 248;
-    --color-border: 229, 229, 229;
+    --color-fill: 253, 250, 246;
+    --color-text-base: 55, 45, 40;
+    --color-accent: 55, 45, 40;
+    --color-card: 247, 243, 238;
+    --color-card-muted: 250, 247, 243;
+    --color-border: 228, 222, 215;
   }
   html[data-theme='dark'] {
-    --color-fill: 34, 34, 34;
-    --color-text-base: 255, 252, 249;
+    --color-fill: 35, 32, 30;
+    --color-text-base: 255, 248, 240;
     --color-accent: 255, 255, 255;
-    --color-card: 51, 51, 51;
-    --color-card-muted: 68, 68, 68;
-    --color-border: 85, 85, 85;
+    --color-card: 50, 45, 42;
+    --color-card-muted: 66, 60, 56;
+    --color-border: 82, 75, 70;
   }
   #sun-svg,
   html[data-theme='dark'] #moon-svg {
@@ -59,7 +59,7 @@
   .prose {
     @apply prose-headings:!mb-3 prose-headings:!text-skin-base
     prose-h3:italic prose-p:!text-skin-base
-    prose-a:!text-skin-base prose-a:!decoration-dashed prose-a:underline-offset-8
+    prose-a:!text-skin-base prose-a:!decoration-solid prose-a:underline-offset-8
     hover:prose-a:text-skin-accent prose-blockquote:!border-l-skin-accent
     prose-blockquote:border-opacity-50 prose-blockquote:opacity-80
     prose-figcaption:!text-skin-base prose-figcaption:opacity-70
