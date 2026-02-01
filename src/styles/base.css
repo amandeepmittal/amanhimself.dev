@@ -179,7 +179,7 @@
 
   /* Code header styling */
   .code-header {
-    @apply bg-skin-card border-skin-line text-skin-base;
+    @apply bg-skin-card border-skin-line border-opacity-50 text-skin-base;
     margin-bottom: 0 !important;
   }
 
@@ -197,7 +197,7 @@
 
   /* Dark mode support */
   html[data-theme='dark'] .code-header {
-    @apply bg-skin-card border-skin-line text-skin-base;
+    @apply bg-skin-card border-skin-line border-opacity-50 text-skin-base;
   }
 
   /* Prose content styling */
