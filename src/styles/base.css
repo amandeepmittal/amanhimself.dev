@@ -15,7 +15,7 @@
   html[data-theme='dark'] {
     --color-fill: 35, 32, 30;
     --color-text-base: 255, 248, 240;
-    --color-accent: 255, 255, 255;
+    --color-accent: 245, 235, 220;
     --color-card: 50, 45, 42;
     --color-card-muted: 66, 60, 56;
     --color-border: 82, 75, 70;
