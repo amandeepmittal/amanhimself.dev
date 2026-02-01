@@ -6,7 +6,6 @@ import remarkCollapse from 'remark-collapse';
 import sitemap from '@astrojs/sitemap';
 import { SITE } from './src/config';
 import { remarkReadingTime } from './src/utils/remark-reading-time.mjs';
-import nord from '@shikijs/themes/nord';
 
 // https://astro.build/config
 export default defineConfig({
@@ -31,8 +30,8 @@ export default defineConfig({
     ],
     shikiConfig: {
       themes: {
-        light: 'github-light',
-        dark: nord
+        light: 'vitesse-light',
+        dark: 'vitesse-dark'
       },
       wrap: true,
       transformers: []
