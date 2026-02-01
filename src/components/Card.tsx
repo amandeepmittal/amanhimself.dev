@@ -100,7 +100,7 @@ export default function Card({
           </div>
         </div>
       </div>
-      <p className="text-sm text-gray-500">{description || ''}</p>
+      <p className="text-sm text-skin-base opacity-70">{description || ''}</p>
     </li>
   );
 }
