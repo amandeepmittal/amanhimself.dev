@@ -2,7 +2,7 @@ amanhimself.dev
 Aman Mittal
 I'm Aman Mittal (@amanhimself). Software Developer and Tech Writer. Welcome to my blog!
 
-Generated on 2026-01-30T10:05:47.609Z
+Generated on 2026-02-07T20:09:20.363Z
 Contains the markdown content of each blog post.
 
 ---
@@ -34845,6 +34845,107 @@ References:
 
 ---
 
+## Migrating from Cursor to VS Code
+Slug: migrating-from-cursor-to-vscode
+
+I recently migrated from [Cursor](https://cursor.com) to VS Code. Cursor's agentic code integration was a huge part of my daily workflow.
+
+If you're switching from Cursor to VS Code, the migration is straightforward. There are a few steps to get it right.
+
+## Why move back to VS Code
+
+Claude Code runs in the terminal. It doesn't care which editor is open. That made Cursor redundant.
+
+Cursor is a VS Code fork with all the same capabilities. I used it for almost a year. Over the last month, I stopped using Cursor's agent integration and switched to [Claude Code](https://docs.anthropic.com/en/docs/claude-code/overview) in the terminal, and before that, Codex CLI. Claude and Codex extensions are also available in VS Code.
+
+## What to migrate from Cursor to VS Code
+
+Three things to migrate: settings, keybindings, and extensions. The key directories for both editors on macOS are:
+
+| What        | Cursor location                                              | VS Code location                                           |
+| ----------- | ------------------------------------------------------------ | ---------------------------------------------------------- |
+| Settings    | `~/Library/Application Support/Cursor/User/settings.json`    | `~/Library/Application Support/Code/User/settings.json`    |
+| Keybindings | `~/Library/Application Support/Cursor/User/keybindings.json` | `~/Library/Application Support/Code/User/keybindings.json` |
+| Extensions  | `~/.cursor/extensions/`                                      | `~/.vscode/extensions/`                                    |
+
+## Migration steps
+
+Close VS Code before you start. If it's running, extension installs can conflict with VS Code's internal updater and you'll get errors.
+
+If you've used VS Code before, clean out the old data first.
+
+```shell
+rm -rf ~/.vscode/extensions/
+
+# Remove old settings
+rm -f ~/.vscode/settings.json
+rm -f ~/Library/Application\ Support/Code/User/settings.json
+
+# Clear caches (optional, frees up space)
+cd ~/Library/Application\ Support/Code/
+rm -rf Backups blob_storage CachedData CachedExtensionVSIXs CachedProfilesData \
+  "Code Cache" Cookies Cookies-journal Crashpad DawnGraphiteCache DawnWebGPUCache \
+  GPUCache languagepacks.json "Local Storage" logs "Network Persistent State" \
+  Preferences "Service Worker" "Session Storage" "Shared Dictionary" shared_proto_db \
+  SharedStorage TransportSecurity "Trust Tokens" "Trust Tokens-journal" \
+  VideoDecodeStats WebStorage
+```
+
+Next, you need to copy the settings and keybindings:
+
+```shell
+cp ~/Library/Application\ Support/Cursor/User/settings.json \
+   ~/Library/Application\ Support/Code/User/settings.json
+
+cp ~/Library/Application\ Support/Cursor/User/keybindings.json \
+   ~/Library/Application\ Support/Code/User/keybindings.json
+```
+
+If you have any custom snippets in Cursor, don't forget to copy those as well:
+
+```shell
+cp ~/Library/Application\ Support/Cursor/User/snippets/ \
+    ~/Library/Application\ Support/Code/User/snippets/
+```
+
+Your `settings.json` will have Cursor-specific keys that VS Code doesn't understand. Anything prefixed with `cursor.`. Remove them before copying.
+
+```json
+{
+  "cursor.cpp.disabledLanguages": ["plaintext", "scminput"],
+  "cursor.cpp.enablePartialAccepts": true
+}
+```
+
+Next are extensions. Install them fresh in VS Code. This ensures VS Code gets the correct platform-specific versions:
+
+```shell
+ls ~/.cursor/extensions/ \
+  | grep -v extensions.json \
+  | sed -E 's/-[0-9]+\.[0-9]+\.[0-9]+.*$//' \
+  | sort -u \
+  | xargs -L 1 code --install-extension --force
+```
+
+Some extensions might be Cursor-only and won't exist on the VS Code marketplace. These include anything from `anysphere.*`. They'll fail to install with an error and that's expected.
+
+## Use a Claude Code plugin for migration
+
+After running through these steps manually, I turned them into a reusable Claude Code plugin. It includes helper scripts that handle JSONC parsing (for settings files with comments), Cursor-specific key stripping, and extension ID extraction with skip lists for Cursor-only extensions.
+
+You can install it in Claude Code:
+
+```shell
+/plugin marketplace add amandeepmittal/cursor-to-vscode-migration
+/plugin install cursor-to-vscode-migration
+```
+
+After restarting Claude Code, tell it to `migrate my setup from cursor to vscode`. The skill walks through each step and asks for confirmation before doing anything destructive.
+
+The plugin is open source: [github.com/amandeepmittal/cursor-to-vscode-migration](https://github.com/amandeepmittal/cursor-to-vscode-migration).
+
+---
+
 ## Migrating from Expressjs 4 to 5
 Slug: migrating-from-expressjs-4-to-5
 
@@ -48192,6 +48293,47 @@ The principle here is to design small modules in terms of code and in terms of a
 ---
 
 Another important aspect in the Node Philosophy is the dependency of each package. Writing a Node.js application, one tends to use a lot of packages (which is the genesis of Node.js Ecosystem: npm) and this might create a common problem known as: dependency hell. To overcome this conflict, Node.js manages dependencies of each installed package to have its own separate set of dependencies.
+
+---
+
+## TIL about git shortlog
+Slug: til-about-git-shortlog
+
+I have been using Git for all my career in the tech. I am habitual of the basic commands such as `git add`, `commit`, `status`, `log` and a few more that I use consistently. Yes, until last week, I had never once used or heard about `git shortlog`.
+
+Sometimes you want to know who actually did the stuff inside a repository. Or like me, at the end of each year at work, I have to compile a list of external contributors along with their contributions count.
+
+To make this happen, you don't need a fine-grained commit-by-commit archaeology, but look at the big picture. You can pipe log through `grep`and create a slightly complex pipeline. Or you could just use the tool that already exists on your system for exactly the purpose described previously:
+
+```shell
+git shortlog
+```
+
+The above command groups commits by author and lists of their commit messages. Readable? yes. Was I done? No.
+
+The command also have some useful flags that you can use. One of them is `-s`, which gives you a summary mode. It counts the amount of commits without any commit message.
+
+Then there's `-n`, which sorts the number of commits in a descending order. When both of these flags are used along with `git shortlog`, the output displayed to you looks like below:
+
+```text
+123 ABC
+23  EFG
+3   IJK
+```
+
+Instantly you can see the view that your stakeholder might have demanded. This goes beyond compiling a list and giving a shoutout to the contributors. When used in a new codebase, you can leverage this to understand it by talking to the top contributors who might know more about the project repository. Probably the person with over a thousand commits.
+
+You can scope it to a time range or between tags:
+
+```shell
+git shortlog -sn --since="2025-01-01"
+```
+
+The above command is particularly nice for generating contributor lists for release notes or end-of-year lists. No more manual scrolling through a git log that is long and will take plenty of your time.
+
+I think the reason I never discovered this command before is that I always reach out for `git log` first and then on a suggestion from a a colleague, started using `grep` when I needed to fulfill the release notes. However, Git has many commands like these under its umbrella, which might come handy in some situations.
+
+Anyway. `git shortlog -sn`. Burn it into your brain.
 
 ---
 
