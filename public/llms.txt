@@ -2,7 +2,7 @@ amanhimself.dev
 Aman Mittal
 I'm Aman Mittal (@amanhimself). Software Developer and Tech Writer. Welcome to my blog!
 
-Generated on 2026-02-13T10:41:20.743Z
+Generated on 2026-02-13T11:28:34.131Z
 Contains the markdown content of each blog post.
 
 ---
@@ -43599,7 +43599,7 @@ The selected level is passed via `-c model_reasoning_effort="<level>"`.
 Going through this prompt process, you might wonder what is the exact Codex command invoked here. Just for demonstration purpose, I invoked the `/run-codex` skill inside the open-source repository that I work on at work and this is the exact command:
 
 ```shell
-codex exec -m gpt-5.3-codex -c model_reasoning_effort="xhigh" --sandbox read-only --ephemeral "Review the code in the ui/components/ directory for bugs, quality…
+codex exec -c model="gpt-5.3-codex" -c model_reasoning_effort="xhigh" --sandbox read-only --ephemeral "Review the code in the ui/components/ directory for bugs, quality…
 ```
 
 An important thing to note here is the `--sandbox read-only --ephemeral`. The `--sandbox read-only` tells Codex to run in a sandbox where it can read files but cannot write, create, or delete. This is enforced at the OS level. Think of this as a guard that Codex can't do anything without your permission other than reading one or many files in your codebase.
