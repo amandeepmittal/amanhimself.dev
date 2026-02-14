@@ -40,17 +40,24 @@ import Layout from '@layouts/Layout.astro';
         </div>
         <div class="cta">
           <a class="btn primary" href="https://github.com/amandeepmittal/skillsbar/releases/latest">Download latest</a>
-          <a class="btn" href="https://github.com/amandeepmittal/skillsbar">
+          <a class="btn secondary" href="https://github.com/amandeepmittal/skillsbar">
             <svg class="gh-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
             View on GitHub
           </a>
         </div>
         <ul class="bullets">
           <li>Tabbed browsing with count badges for Claude Code and Codex skills.</li>
-          <li>Search, pin favorites, and track usage from session transcripts.</li>
-          <li>Detail view with metadata, trigger commands, and quick actions.</li>
+          <li>Search and filter skills by name or description.</li>
+          <li>Pin frequently used skills to the top of each tab.</li>
+          <li>Usage stats from Claude Code session transcripts.</li>
+          <li>"New" badge for skills modified in the last 24 hours.</li>
+          <li>Detail view with metadata, trigger command, and file listing.</li>
+          <li>Full content preview of raw SKILL.md body.</li>
+          <li>Right-click context menu for pin, open, copy, and delete.</li>
+          <li>Agent browsing for sub-agents with model and tools metadata.</li>
           <li>Global hotkey <code>Option+Shift+S</code> to toggle from anywhere.</li>
-          <li>Live updates via FSEvents, no Dock icon.</li>
+          <li>Live updates via FSEvents directory watcher.</li>
+          <li>No Dock icon, lives entirely in the menu bar.</li>
         </ul>
       </div>
       <figure class="hero-shot">
@@ -60,14 +67,20 @@ import Layout from '@layouts/Layout.astro';
     </div>
 
     <!-- Install card -->
-    <div class="details single">
-      <div class="card install-card">
-        <h3>Install</h3>
-        <p>
-          Download <code>SkillsBar.zip</code> from <a href="https://github.com/amandeepmittal/skillsbar/releases/latest">GitHub Releases</a>, unzip and move to Applications, then remove the quarantine flag:
-        </p>
-        <div class="install-cmd">
-          <code id="install-cmd">xattr -cr /Applications/SkillsBar.app</code>
+    <div class="install-card">
+      <h3>Install</h3>
+      <p>
+        Download <code>SkillsBar.zip</code> from <a href="https://github.com/amandeepmittal/skillsbar/releases/latest">GitHub Releases</a>, unzip and move to Applications, then remove the quarantine flag:
+      </p>
+      <div class="terminal">
+        <div class="terminal-bar">
+          <span class="terminal-dot red"></span>
+          <span class="terminal-dot yellow"></span>
+          <span class="terminal-dot green"></span>
+          <span class="terminal-title">Terminal</span>
+        </div>
+        <div class="terminal-body">
+          <code id="install-cmd"><span class="prompt">$</span> xattr -cr /Applications/SkillsBar.app</code>
           <button class="copy-btn" id="copy-install" aria-label="Copy to clipboard">Copy</button>
         </div>
       </div>
@@ -132,8 +145,8 @@ import Layout from '@layouts/Layout.astro';
 
 <script>
   document.getElementById('copy-install')?.addEventListener('click', () => {
-    const cmd = document.getElementById('install-cmd')?.textContent || '';
-    navigator.clipboard.writeText(cmd).then(() => {
+    const text = 'xattr -cr /Applications/SkillsBar.app';
+    navigator.clipboard.writeText(text).then(() => {
       const btn = document.getElementById('copy-install');
       if (btn) {
         btn.textContent = 'Copied!';
@@ -153,11 +166,7 @@ import Layout from '@layouts/Layout.astro';
   }
 
   body {
-    background:
-      radial-gradient(1100px 800px at 15% 10%, rgba(124, 109, 216, 0.14), transparent 58%),
-      radial-gradient(950px 780px at 85% 20%, rgba(91, 106, 191, 0.14), transparent 60%),
-      radial-gradient(900px 700px at 40% 95%, rgba(124, 109, 216, 0.06), transparent 60%),
-      #f8f8ff !important;
+    background: linear-gradient(180deg, #f0ecfb 0%, #f7f5fc 35%, #ffffff 100%) !important;
     overflow-x: hidden !important;
   }
 
@@ -175,24 +184,12 @@ import Layout from '@layouts/Layout.astro';
 </style>
 
 <style>
-  :root {
-    --sb-panel: rgba(255, 255, 255, 0.74);
-    --sb-panel-solid: #ffffff;
-    --sb-text: rgba(11, 16, 22, 0.92);
-    --sb-muted: rgba(56, 60, 80, 0.72);
-    --sb-line: rgba(11, 16, 22, 0.08);
-    --sb-accent: #7c6dd8;
-    --sb-shadow: rgba(11, 16, 22, 0.1);
-    --sb-radius: 18px;
-    --sb-radius-sm: 14px;
-  }
-
   .page-wrap {
     max-width: 860px;
     margin: 0 auto;
     padding: 40px 24px 30px;
-    font-family: ui-sans-serif, "Avenir Next", Avenir, "Segoe UI", "Helvetica Neue", sans-serif;
-    color: var(--sb-text);
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    color: #1d1d1f;
     overflow-x: hidden;
   }
 
@@ -200,181 +197,244 @@ import Layout from '@layouts/Layout.astro';
   .page-wrap a:hover { text-decoration: underline; }
   .page-wrap code {
     font-family: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
-    font-size: 0.9em;
+    font-size: 0.88em;
   }
 
-  /* Header */
+  /* ── Header ── */
   .top {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 16px;
-    margin-bottom: 24px;
+    margin-bottom: 28px;
   }
 
-  .brand-title { margin: 0; font-size: 20px; font-weight: 700; }
-  .brand-tagline { margin: 2px 0 0; color: var(--sb-muted); font-size: 13px; }
+  .brand-title {
+    margin: 0;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+  }
+  .brand-tagline { margin: 2px 0 0; color: #6e6e73; font-size: 13px; }
   .nav-links { display: flex; gap: 8px; }
 
-  /* Buttons */
+  /* ── Buttons ── */
   .btn {
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    padding: 9px 14px;
-    border-radius: 13px;
-    border: 0;
+    padding: 8px 16px;
+    border-radius: 10px;
+    border: 1px solid #d2d2d7;
     font-size: 14px;
-    font-weight: 500;
-    background: color-mix(in srgb, var(--sb-panel-solid) 32%, transparent);
-    box-shadow: 0 8px 24px var(--sb-shadow);
-    transition: transform 160ms ease, background 160ms ease;
+    font-weight: 600;
+    background: #fff;
+    color: #1d1d1f;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+    transition: all 150ms ease;
     white-space: nowrap;
     text-decoration: none !important;
+    cursor: pointer;
   }
-  .btn:hover { transform: translateY(-1px); background: color-mix(in srgb, var(--sb-panel-solid) 55%, transparent); }
+  .btn:hover { background: #f5f5f7; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); }
+
   .btn.primary {
-    background: linear-gradient(135deg, rgba(124, 109, 216, 0.6), rgba(91, 106, 191, 0.55));
-    box-shadow: 0 10px 28px color-mix(in srgb, var(--sb-accent) 20%, var(--sb-shadow));
+    background: #7c6dd8;
+    color: #fff;
+    border-color: #7c6dd8;
   }
-  .btn.ghost { background: transparent; box-shadow: none; color: color-mix(in srgb, var(--sb-text) 80%, var(--sb-muted)); }
-  .btn.ghost:hover { background: color-mix(in srgb, var(--sb-panel-solid) 28%, transparent); box-shadow: 0 8px 20px var(--sb-shadow); }
+  .btn.primary:hover { background: #6b5cc5; border-color: #6b5cc5; }
+
+  .btn.secondary {
+    background: #1d1d1f;
+    color: #fff;
+    border-color: #1d1d1f;
+  }
+  .btn.secondary:hover { background: #333; border-color: #333; }
+
+  .btn.ghost { background: transparent; border-color: transparent; box-shadow: none; color: #6e6e73; }
+  .btn.ghost:hover { background: rgba(0, 0, 0, 0.04); }
+
   .gh-icon { width: 16px !important; height: 16px !important; fill: currentColor !important; }
 
-  /* Hero */
+  /* ── Hero ── */
   .hero {
     display: grid;
     grid-template-columns: 1.15fr 0.85fr;
-    gap: 24px;
+    gap: 28px;
     align-items: center;
-    padding: 22px 24px;
-    border: 1px solid var(--sb-line);
-    border-radius: var(--sb-radius);
-    background: var(--sb-panel);
-    backdrop-filter: blur(12px);
-    box-shadow: 0 16px 50px var(--sb-shadow);
-    position: relative;
-    overflow: hidden;
+    padding: 28px;
+    border: 1px solid #d2d2d7;
+    border-radius: 16px;
+    background: #fff;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
   }
 
-  .hero::before {
-    content: "";
-    position: absolute;
-    inset: -1px;
-    background:
-      radial-gradient(550px 300px at 8% 12%, rgba(124, 109, 216, 0.14), transparent 55%),
-      radial-gradient(480px 280px at 90% 16%, rgba(91, 106, 191, 0.14), transparent 55%);
-    pointer-events: none;
-  }
-
-  .hero-copy { position: relative; z-index: 1; }
-
-  .badges { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
+  .badges { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
   .badge {
-    font-size: 11.5px;
-    padding: 5px 9px;
-    border-radius: 999px;
-    border: 1px solid var(--sb-line);
-    background: color-mix(in srgb, var(--sb-panel-solid) 14%, transparent);
-    color: color-mix(in srgb, var(--sb-text) 82%, var(--sb-muted));
-    letter-spacing: 0.15px;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    padding: 4px 10px;
+    border-radius: 6px;
+    border: 1px solid #e8e8ed;
+    background: #f5f5f7;
+    color: #6e6e73;
+    letter-spacing: 0.2px;
   }
 
   .hero-heading { display: flex; gap: 12px; align-items: flex-start; }
-  .hero-icon { width: 40px !important; height: 40px !important; border-radius: 12px; filter: drop-shadow(0 8px 18px rgba(0,0,0,0.2)); }
-  .hero-heading h2 { margin: 0 0 6px; font-size: 28px; font-weight: 700; letter-spacing: -0.3px; line-height: 1.15; }
-  .hero-heading p { margin: 0; color: var(--sb-muted); font-size: 14px; line-height: 1.5; }
+  .hero-icon { width: 40px !important; height: 40px !important; border-radius: 10px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12); }
+  .hero-heading h2 {
+    margin: 0 0 6px;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    line-height: 1.2;
+    color: #1d1d1f;
+  }
+  .hero-heading p { margin: 0; color: #6e6e73; font-size: 14px; line-height: 1.55; }
 
-  .cta { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 14px; position: relative; z-index: 1; }
+  .cta { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 16px; }
 
-  .bullets { margin: 12px 0 0; padding: 0 0 0 16px; color: var(--sb-muted); font-size: 13px; position: relative; z-index: 1; }
-  .bullets li { margin: 5px 0; }
+  .bullets { margin: 10px 0 0; padding: 0 0 0 18px; color: #6e6e73; font-size: 13px; line-height: 1.5; list-style: disc; }
+  .bullets li { margin: 3px 0; padding-left: 2px; }
   .bullets code {
-    background: color-mix(in srgb, var(--sb-panel-solid) 40%, transparent);
-    padding: 1px 5px;
+    background: #f5f5f7;
+    padding: 1px 6px;
     border-radius: 4px;
-    border: 1px solid var(--sb-line);
+    border: 1px solid #e8e8ed;
     font-size: 12px;
+    color: #1d1d1f;
   }
 
-  /* Hero screenshot - FLAT */
-  .hero-shot { margin: 0; position: relative; z-index: 1; justify-self: end; }
+  /* ── Hero screenshot ── */
+  .hero-shot { margin: 0; justify-self: end; }
   .hero-shot img {
     max-width: 280px;
     margin-left: auto;
     width: 100%;
     height: auto;
-    border-radius: var(--sb-radius-sm);
-    border: 1px solid var(--sb-line);
-    box-shadow: 0 12px 40px var(--sb-shadow);
-    background: color-mix(in srgb, var(--sb-panel-solid) 92%, transparent);
+    border-radius: 12px;
+    border: 1px solid #d2d2d7;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
   }
-  .hero-shot figcaption { max-width: 280px; margin: 8px 0 0 auto; text-align: center; color: var(--sb-muted); font-size: 12px; }
+  .hero-shot figcaption { max-width: 280px; margin: 8px 0 0 auto; text-align: center; color: #86868b; font-size: 12px; }
 
-  /* Cards */
-  .details { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 12px; }
-  .details.single { grid-template-columns: 1fr; }
-
-  .card {
-    border: 1px solid var(--sb-line);
-    border-radius: var(--sb-radius);
-    padding: 14px 14px 12px;
-    background: var(--sb-panel);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 12px 36px var(--sb-shadow);
-  }
-  .card h3 { margin: 0 0 5px; font-size: 12.5px; font-weight: 700; letter-spacing: 0.2px; text-transform: uppercase; color: color-mix(in srgb, var(--sb-text) 85%, var(--sb-muted)); }
-  .card p { margin: 0; color: var(--sb-muted); font-size: 13px; line-height: 1.5; }
-  .card a { text-decoration: underline; text-decoration-color: color-mix(in srgb, var(--sb-muted) 40%, transparent); }
-  .card code {
-    font-size: 12px;
-    background: color-mix(in srgb, var(--sb-panel-solid) 40%, transparent);
-    padding: 1px 5px;
-    border-radius: 4px;
-    border: 1px solid var(--sb-line);
-  }
-
-  /* Install card - prominent */
+  /* ── Install card ── */
   .install-card {
-    background: color-mix(in srgb, var(--sb-panel-solid) 85%, transparent);
+    margin-top: 16px;
+    padding: 20px 24px;
+    border: 1px solid #d2d2d7;
+    border-radius: 16px;
+    background: #fff;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+  }
+  .install-card h3 {
+    margin: 0 0 6px;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #1d1d1f;
+  }
+  .install-card p { margin: 0 0 12px; color: #6e6e73; font-size: 14px; line-height: 1.5; }
+  .install-card a { text-decoration: underline; text-underline-offset: 2px; }
+  .install-card code {
+    font-size: 12.5px;
+    background: #f5f5f7;
+    padding: 1px 6px;
+    border-radius: 4px;
+    border: 1px solid #e8e8ed;
   }
 
-  .install-cmd {
+  /* Terminal block */
+  .terminal {
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #3a3a3c;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  .terminal-bar {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 12px;
+    background: #3a3a3c;
+  }
+  .terminal-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
+  .terminal-dot.red { background: #ff5f57; }
+  .terminal-dot.yellow { background: #febc2e; }
+  .terminal-dot.green { background: #28c840; }
+  .terminal-title {
+    flex: 1;
+    text-align: center;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: #98989d;
+    margin-right: 36px; /* offset for dots centering */
+  }
+  .terminal-body {
     display: flex;
     align-items: center;
     gap: 8px;
-    margin-top: 8px;
-    padding: 6px 10px;
-    background: color-mix(in srgb, var(--sb-panel-solid) 40%, transparent);
-    border: 1px solid var(--sb-line);
-    border-radius: 8px;
+    padding: 14px 16px;
+    background: #1d1d1f;
   }
-
-  .install-cmd code {
+  .terminal-body code {
     flex: 1;
     font-size: 13px;
-    color: var(--sb-text);
+    color: #e5e5ea;
     background: none;
     border: none;
     padding: 0;
   }
+  .prompt { color: #28c840; margin-right: 6px; }
 
   .copy-btn {
     flex-shrink: 0;
-    padding: 3px 8px;
-    border: 1px solid var(--sb-line);
-    border-radius: 5px;
-    background: color-mix(in srgb, var(--sb-panel-solid) 30%, transparent);
-    color: var(--sb-muted);
+    padding: 4px 10px;
+    border: 1px solid #48484a;
+    border-radius: 6px;
+    background: #2c2c2e;
+    color: #98989d;
     cursor: pointer;
     font-family: 'IBM Plex Mono', monospace;
     font-size: 11px;
-    transition: all 160ms ease;
+    transition: all 150ms ease;
   }
-  .copy-btn:hover { background: color-mix(in srgb, var(--sb-panel-solid) 60%, transparent); color: var(--sb-text); border-color: color-mix(in srgb, var(--sb-accent) 30%, var(--sb-line)); }
+  .copy-btn:hover { background: #3a3a3c; color: #e5e5ea; border-color: #636366; }
 
-  /* Screenshots - scrollable */
-  .screenshots-section { margin-top: 12px; overflow: hidden; }
+  /* ── Detail cards ── */
+  .details { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 16px; }
+
+  .card {
+    border: 1px solid #d2d2d7;
+    border-radius: 12px;
+    padding: 16px;
+    background: #fff;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+  }
+  .card h3 {
+    margin: 0 0 6px;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    color: #1d1d1f;
+  }
+  .card p { margin: 0; color: #6e6e73; font-size: 13px; line-height: 1.55; }
+
+  /* ── Screenshots ── */
+  .screenshots-section { margin-top: 16px; overflow: hidden; }
   .screenshot-scroll {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
@@ -385,24 +445,23 @@ import Layout from '@layouts/Layout.astro';
   .screenshot-track {
     display: inline-flex;
     gap: 12px;
-    padding: 0 4px 8px;
+    padding: 4px 4px 8px;
   }
   .shot { margin: 0; text-align: center; flex-shrink: 0; }
   .shot img {
     width: 200px;
     height: auto;
-    border-radius: var(--sb-radius-sm);
-    border: 1px solid var(--sb-line);
-    box-shadow: 0 8px 28px var(--sb-shadow);
-    background: color-mix(in srgb, var(--sb-panel-solid) 92%, transparent);
+    border-radius: 12px;
+    border: 1px solid #d2d2d7;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
   }
-  .shot figcaption { margin-top: 6px; color: var(--sb-muted); font-size: 12px; }
+  .shot figcaption { margin-top: 6px; color: #86868b; font-size: 12px; }
 
-  /* Footer */
-  .foot { margin-top: 20px; text-align: center; color: var(--sb-muted); font-size: 12.5px; }
-  .foot a { text-decoration: underline; text-decoration-color: color-mix(in srgb, var(--sb-muted) 40%, transparent); }
+  /* ── Footer ── */
+  .foot { margin-top: 24px; text-align: center; color: #86868b; font-size: 12.5px; }
+  .foot a { text-decoration: underline; text-underline-offset: 2px; color: #6e6e73; }
 
-  /* Responsive */
+  /* ── Responsive ── */
   @media (max-width: 860px) {
     .top { flex-direction: column; align-items: flex-start; }
     .hero { grid-template-columns: 1fr; }
