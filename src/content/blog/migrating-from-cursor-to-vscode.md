@@ -105,3 +105,5 @@ You can install it in Claude Code:
 After restarting Claude Code, tell it to `migrate my setup from cursor to vscode`. The skill walks through each step and asks for confirmation before doing anything destructive.
 
 The plugin is open source: [github.com/amandeepmittal/cursor-to-vscode-migration](https://github.com/amandeepmittal/cursor-to-vscode-migration).
+
+<img src="/images/codex-skill-cursor-to-vscode.png" alt="Codex CLI skill for cursor to vscode migration" width="480" />
