@@ -7,299 +7,340 @@ import Footer from '@components/Footer.astro';
   title="Last Time I | Track What Matters"
   description="Track when you last did important tasks. A simple app for iOS and Android for remembering the things you tend to forget."
 >
-  <!-- Hero Section with App Color -->
-  <section class="hero">
-    <div class="hero-content">
-      <img
-        src="/lasttimei-icon.png"
-        alt="Last Time I... App Icon"
-        class="app-icon"
-      />
-      <h1>Last Time I</h1>
-      <p class="tagline">Track when you last did important tasks that are easy to forget.</p>
+  <main class="page-wrap">
+    <!-- Header -->
+    <header class="top">
+      <div class="brand">
+        <h1 class="brand-title">Last Time I</h1>
+        <p class="brand-tagline">Track what matters, forget nothing.</p>
+      </div>
+      <nav class="nav-links">
+        <a class="btn primary" href="https://apps.apple.com/app/id6758254177">
+          <svg class="store-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+          App Store
+        </a>
+        <a class="btn secondary" href="https://play.google.com/store/apps/details?id=com.amanhimself.lastimeiapp">
+          <svg class="store-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 01-.61-.92V2.734a1 1 0 01.609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.807 1.626a1 1 0 010 1.732l-2.808 1.626L15.206 12l2.492-2.492zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z"/></svg>
+          Google Play
+        </a>
+      </nav>
+    </header>
 
-      <div class="store-badges">
-        <a href="https://apps.apple.com/app/id6758254177" class="app-store-badge">
-          <img
-            src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
-            alt="Download on the App Store"
-          />
-        </a>
-        <a href="https://play.google.com/store/apps/details?id=com.amanhimself.lastimeiapp" class="google-play-badge">
-          <img
-            src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
-            alt="Get it on Google Play"
-          />
-        </a>
+    <!-- Hero -->
+    <div class="hero">
+      <div class="hero-copy">
+        <div class="badges">
+          <span class="badge">iOS & Android</span>
+          <span class="badge">Free</span>
+          <span class="badge">No account required</span>
+          <span class="badge">Offline-first</span>
+        </div>
+        <div class="hero-heading">
+          <img class="hero-icon" src="/lasttimei-icon.png" alt="" aria-hidden="true" width="48" height="48" />
+          <div>
+            <h2>Remember the things you forget.</h2>
+            <p>Track when you last did important tasks. From changing air filters to calling family, never wonder "when did I last do that?" again.</p>
+          </div>
+        </div>
+        <div class="cta">
+          <a class="btn primary" href="https://apps.apple.com/app/id6758254177">
+            <svg class="store-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+            Download for iOS
+          </a>
+          <a class="btn secondary" href="https://play.google.com/store/apps/details?id=com.amanhimself.lastimeiapp">
+            <svg class="store-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 01-.61-.92V2.734a1 1 0 01.609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.807 1.626a1 1 0 010 1.732l-2.808 1.626L15.206 12l2.492-2.492zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z"/></svg>
+            Get on Google Play
+          </a>
+        </div>
+        <ul class="bullets">
+          <li>Track tasks you want to remember with a simple tap.</li>
+          <li>Color-coded status: green means recent, red means overdue.</li>
+          <li>Set optional reminders to nudge you after a number of days.</li>
+          <li>View full history of when you completed each task.</li>
+          <li>All data stays on your device. No tracking, no sign-up.</li>
+          <li>Minimal and focused interface.</li>
+        </ul>
+      </div>
+      <figure class="hero-shot">
+        <img src="/lasttimei-screenshot-1.jpg" alt="Last Time I app showing tracked tasks list." />
+        <figcaption>Items list with color-coded status.</figcaption>
+      </figure>
+    </div>
+
+    <!-- Feature cards -->
+    <div class="details">
+      <div class="card">
+        <h3>Track what matters</h3>
+        <p>
+          Keep a list of tasks you want to remember. Add items in seconds and mark them done with a single tap.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Visual status</h3>
+        <p>
+          Colors show what needs attention at a glance. Green means recent, red means overdue.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Gentle reminders</h3>
+        <p>
+          Set optional notifications to nudge you after a certain number of days.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Simple & private</h3>
+        <p>
+          All data stays on your device. No account required, no tracking, no cloud sync.
+        </p>
       </div>
     </div>
-  </section>
 
-  <!-- Screenshots Section -->
-  <section class="screenshots">
-    <div class="container">
-      <h2>Screenshots</h2>
+    <!-- Screenshots -->
+    <div class="screenshots-section">
       <div class="screenshot-scroll">
-        <div class="screenshot-container">
-          <img src="/lasttimei-screenshot-1.jpg" alt="Items list showing tracked tasks" class="screenshot" />
-          <img src="/lasttimei-screenshot-2.jpg" alt="Add new item screen" class="screenshot" />
-          <img src="/lasttimei-screenshot-3.jpg" alt="Item detail with history" class="screenshot" />
-          <img src="/lasttimei-screenshot-4.jpg" alt="Item detail with reminder options" class="screenshot" />
-          <img src="/lasttimei-screenshot-5.jpg" alt="Settings screen" class="screenshot" />
+        <div class="screenshot-track">
+          <figure class="shot">
+            <img src="/lasttimei-screenshot-1.jpg" alt="Items list showing tracked tasks" />
+            <figcaption>Items list</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="/lasttimei-screenshot-2.jpg" alt="Add new item screen" />
+            <figcaption>Add item</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="/lasttimei-screenshot-3.jpg" alt="Item detail with history" />
+            <figcaption>Item history</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="/lasttimei-screenshot-4.jpg" alt="Item detail with reminder options" />
+            <figcaption>Reminders</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="/lasttimei-screenshot-5.jpg" alt="Settings screen" />
+            <figcaption>Settings</figcaption>
+          </figure>
         </div>
       </div>
     </div>
-  </section>
 
-  <!-- Features Section -->
-  <section class="features">
-    <div class="container">
-      <h2>Features</h2>
-      <div class="feature-grid">
-        <div class="feature">
-          <span class="feature-icon">📋</span>
-          <h3>Track What Matters</h3>
-          <p>Keep a list of tasks you want to remember — from changing air filters to calling family.</p>
-        </div>
-        <div class="feature">
-          <span class="feature-icon">🎨</span>
-          <h3>Visual Status</h3>
-          <p>Colors show what needs attention at a glance. Green means recent, red means overdue.</p>
-        </div>
-        <div class="feature">
-          <span class="feature-icon">🔔</span>
-          <h3>Gentle Reminders</h3>
-          <p>Set optional notifications to nudge you after a certain number of days.</p>
-        </div>
-        <div class="feature">
-          <span class="feature-icon">🔒</span>
-          <h3>Simple & Private</h3>
-          <p>All data stays on your device. No account required, no tracking.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Links Section -->
-  <section class="links">
-    <div class="container">
+    <!-- Links -->
+    <div class="page-links">
       <a href="/lasttimei/support">Support</a>
-      <span class="divider">|</span>
+      <span class="divider">&middot;</span>
       <a href="/lasttimei/privacy">Privacy Policy</a>
     </div>
-  </section>
-
+  </main>
   <Footer />
 </Layout>
 
+<style is:global>
+  .page-wrap section,
+  .page-wrap footer {
+    max-width: none !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin: 0 !important;
+  }
+
+  body {
+    background: linear-gradient(180deg, #d4f5dd 0%, #eefaf1 35%, #ffffff 100%) !important;
+    overflow-x: hidden !important;
+  }
+
+  .page-wrap svg:not(.store-icon) {
+    width: auto !important;
+    height: auto !important;
+    fill: none !important;
+  }
+  .page-wrap svg.store-icon {
+    width: 16px !important;
+    height: 16px !important;
+    fill: currentColor !important;
+    display: inline-block !important;
+  }
+</style>
+
 <style>
-  :global(body) {
-    background-color: #30D158 !important;
-  }
-
-  .hero {
-    background-color: #30D158;
-    color: white;
-    padding: 4rem 1.5rem;
-    text-align: center;
-    min-height: 60vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .hero-content {
-    max-width: 600px;
-  }
-
-  .app-icon {
-    width: 120px;
-    height: 120px;
-    border-radius: 24px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-    margin-bottom: 1.5rem;
-  }
-
-  .hero h1 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin: 0 0 0.75rem 0;
-    letter-spacing: -0.5px;
-  }
-
-  .tagline {
-    font-size: 1.25rem;
-    opacity: 0.95;
-    margin: 0 0 2rem 0;
-    line-height: 1.5;
-  }
-
-  .store-badges {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-  }
-
-  .app-store-badge img {
-    height: 54px;
-    transition: transform 0.2s ease;
-  }
-
-  .app-store-badge:hover img {
-    transform: scale(1.05);
-  }
-
-  .google-play-badge {
-    position: relative;
-    display: inline-block;
-  }
-
-  .google-play-badge img {
-    height: 80px;
-    transition: transform 0.2s ease;
-  }
-
-  .google-play-badge:hover img {
-    transform: scale(1.05);
-  }
-
-  .container {
-    max-width: 800px;
+  .page-wrap {
+    max-width: 860px;
     margin: 0 auto;
-    padding: 0 1.5rem;
+    padding: 40px 24px 30px;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    color: #1d1d1f;
+    overflow-x: hidden;
   }
 
-  .screenshots {
-    padding: 3rem 0;
-    background-color: #30D158;
-    overflow: hidden;
+  .page-wrap a { color: inherit; text-decoration: none; }
+  .page-wrap a:hover { text-decoration: underline; }
+
+  /* -- Header -- */
+  .top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 28px;
   }
 
-  .screenshots h2 {
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 2rem;
-    color: white;
+  .brand-title {
+    margin: 0;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+  }
+  .brand-tagline { margin: 2px 0 0; color: #6e6e73; font-size: 13px; }
+  .nav-links { display: flex; gap: 8px; }
+
+  /* -- Buttons -- */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
+    border-radius: 10px;
+    border: 1px solid #d2d2d7;
+    font-size: 14px;
+    font-weight: 600;
+    background: #fff;
+    color: #1d1d1f;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+    transition: all 150ms ease;
+    white-space: nowrap;
+    text-decoration: none !important;
+    cursor: pointer;
+  }
+  .btn:hover { background: #f5f5f7; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); }
+
+  .btn.primary {
+    background: #30D158;
+    color: #fff;
+    border-color: #30D158;
+  }
+  .btn.primary:hover { background: #28b84c; border-color: #28b84c; }
+
+  .btn.secondary {
+    background: #1d1d1f;
+    color: #fff;
+    border-color: #1d1d1f;
+  }
+  .btn.secondary:hover { background: #333; border-color: #333; }
+
+  /* -- Hero -- */
+  .hero {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 28px;
+    align-items: center;
+    padding: 28px;
+    border: 1px solid #d2d2d7;
+    border-radius: 16px;
+    background: #fff;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
   }
 
+  .badges { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+  .badge {
+    font-size: 11px;
+    font-weight: 500;
+    padding: 4px 10px;
+    border-radius: 6px;
+    border: 1px solid #e8e8ed;
+    background: #f5f5f7;
+    color: #6e6e73;
+    letter-spacing: 0.2px;
+  }
+
+  .hero-heading { display: flex; gap: 14px; align-items: flex-start; }
+  .hero-icon { width: 48px !important; height: 48px !important; border-radius: 12px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12); }
+  .hero-heading h2 {
+    margin: 0 0 6px;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+    line-height: 1.2;
+    color: #1d1d1f;
+  }
+  .hero-heading p { margin: 0; color: #6e6e73; font-size: 14px; line-height: 1.55; }
+
+  .cta { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 16px; }
+
+  .bullets { margin: 10px 0 0; padding: 0 0 0 18px; color: #6e6e73; font-size: 13px; line-height: 1.5; list-style: disc; }
+  .bullets li { margin: 3px 0; padding-left: 2px; }
+
+  /* -- Hero screenshot -- */
+  .hero-shot { margin: 0; justify-self: end; }
+  .hero-shot img {
+    max-width: 220px;
+    margin-left: auto;
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    border: 1px solid #d2d2d7;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  }
+  .hero-shot figcaption { max-width: 220px; margin: 8px 0 0 auto; text-align: center; color: #86868b; font-size: 12px; }
+
+  /* -- Detail cards -- */
+  .details { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 16px; }
+
+  .card {
+    border: 1px solid #d2d2d7;
+    border-radius: 12px;
+    padding: 16px;
+    background: #fff;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+  }
+  .card h3 {
+    margin: 0 0 6px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    color: #1d1d1f;
+  }
+  .card p { margin: 0; color: #6e6e73; font-size: 13px; line-height: 1.55; }
+
+  /* -- Screenshots -- */
+  .screenshots-section { margin-top: 16px; overflow: hidden; }
   .screenshot-scroll {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
     -ms-overflow-style: none;
   }
-
-  .screenshot-scroll::-webkit-scrollbar {
-    display: none;
-  }
-
-  .screenshot-container {
+  .screenshot-scroll::-webkit-scrollbar { display: none; }
+  .screenshot-track {
     display: inline-flex;
-    gap: 1rem;
-    padding: 0 1.5rem 1rem 1.5rem;
+    gap: 12px;
+    padding: 4px 4px 8px;
   }
-
-  .screenshot {
-    width: 200px;
+  .shot { margin: 0; text-align: center; flex-shrink: 0; }
+  .shot img {
+    width: 180px;
     height: auto;
-    border-radius: 16px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
-    flex-shrink: 0;
+    border-radius: 20px;
+    border: 1px solid #d2d2d7;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  }
+  .shot figcaption { margin-top: 6px; color: #86868b; font-size: 12px; }
+
+  /* -- Page links -- */
+  .page-links { margin-top: 24px; text-align: center; color: #86868b; font-size: 13px; }
+  .page-links a { text-decoration: underline; text-underline-offset: 2px; color: #6e6e73; }
+  .page-links .divider { margin: 0 8px; color: #d2d2d7; }
+
+  /* -- Responsive -- */
+  @media (max-width: 860px) {
+    .top { flex-direction: column; align-items: flex-start; }
+    .hero { grid-template-columns: 1fr; }
+    .hero-shot { justify-self: center; }
+    .hero-shot img { max-width: 200px; }
+    .details { grid-template-columns: repeat(2, 1fr); }
   }
 
-  .features {
-    padding: 4rem 1.5rem;
-    background-color: #30D158;
-    color: white;
-  }
-
-  .features h2 {
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 2.5rem;
-    color: white;
-  }
-
-  .feature-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-  }
-
-  .feature {
-    text-align: center;
-    padding: 1.5rem;
-  }
-
-  .feature-icon {
-    font-size: 2.5rem;
-    display: block;
-    margin-bottom: 1rem;
-  }
-
-  .feature h3 {
-    font-size: 1.25rem;
-    margin: 0 0 0.5rem 0;
-    color: white;
-  }
-
-  .feature p {
-    color: white;
-    opacity: 0.9;
-    line-height: 1.6;
-    margin: 0;
-  }
-
-  .links {
-    padding: 2rem 1.5rem;
-    background-color: #30D158;
-    text-align: center;
-  }
-
-  .links a {
-    color: white;
-    text-decoration: underline;
-    font-size: 1rem;
-    opacity: 0.9;
-  }
-
-  .links a:hover {
-    opacity: 1;
-  }
-
-  .links .divider {
-    color: white;
-    opacity: 0.5;
-    margin: 0 0.75rem;
-  }
-
-  :global(footer) {
-    background-color: #30D158 !important;
-    color: white !important;
-  }
-
-  :global(footer a), :global(footer span) {
-    color: white !important;
-  }
-
-  @media (max-width: 640px) {
-    .hero {
-      padding: 3rem 1.5rem;
-      min-height: 50vh;
-    }
-
-    .hero h1 {
-      font-size: 2rem;
-    }
-
-    .tagline {
-      font-size: 1.1rem;
-    }
-
-    .app-icon {
-      width: 100px;
-      height: 100px;
-    }
+  @media (max-width: 480px) {
+    .details { grid-template-columns: 1fr; }
+    .shot img { width: 160px; }
   }
 </style>
