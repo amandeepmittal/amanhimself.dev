@@ -1,0 +1,414 @@
+---
+import Layout from '@layouts/Layout.astro';
+---
+
+<Layout
+  title="SkillsBar - Browse Claude Code & Codex Skills from the Menu Bar"
+  description="A macOS menu bar app for browsing and managing your Claude Code and Codex CLI skills and agents. Search, pin, track usage, and manage skills without leaving your workflow."
+>
+  <main class="page-wrap">
+    <!-- Header -->
+    <header class="top">
+      <div class="brand">
+        <h1 class="brand-title">SkillsBar</h1>
+        <p class="brand-tagline">Claude Code and Codex CLI skills in the menu bar.</p>
+      </div>
+      <nav class="nav-links">
+        <a class="btn primary" href="https://github.com/amandeepmittal/skillsbar/releases/latest">Download</a>
+        <a class="btn ghost" href="https://github.com/amandeepmittal/skillsbar">
+          <svg class="gh-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
+          Source
+        </a>
+      </nav>
+    </header>
+
+    <!-- Hero -->
+    <div class="hero">
+      <div class="hero-copy">
+        <div class="badges">
+          <span class="badge">macOS 14+</span>
+          <span class="badge">SwiftUI</span>
+          <span class="badge">Free & open source</span>
+          <span class="badge">Carbon HotKey</span>
+        </div>
+        <div class="hero-heading">
+          <img class="hero-icon" src="/skillsbar-icon.png" alt="" aria-hidden="true" width="40" height="40" />
+          <div>
+            <h2>Your skills, always visible.</h2>
+            <p>Browse, search, pin, and track usage of your Claude Code and Codex CLI skills and agents from a lightweight menu bar popover.</p>
+          </div>
+        </div>
+        <div class="cta">
+          <a class="btn primary" href="https://github.com/amandeepmittal/skillsbar/releases/latest">Download latest</a>
+          <a class="btn" href="https://github.com/amandeepmittal/skillsbar">
+            <svg class="gh-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
+            View on GitHub
+          </a>
+        </div>
+        <ul class="bullets">
+          <li>Tabbed browsing with count badges for Claude Code and Codex skills.</li>
+          <li>Search, pin favorites, and track usage from session transcripts.</li>
+          <li>Detail view with metadata, trigger commands, and quick actions.</li>
+          <li>Global hotkey <code>Option+Shift+S</code> to toggle from anywhere.</li>
+          <li>Live updates via FSEvents, no Dock icon.</li>
+        </ul>
+      </div>
+      <figure class="hero-shot">
+        <img src="/skillsbar-list-view.png" alt="SkillsBar popover showing Claude Code skills and agents." />
+        <figcaption>Skills popover with tabbed browsing, search, and badges.</figcaption>
+      </figure>
+    </div>
+
+    <!-- Install card -->
+    <div class="details single">
+      <div class="card install-card">
+        <h3>Install</h3>
+        <p>
+          Download <code>SkillsBar.zip</code> from <a href="https://github.com/amandeepmittal/skillsbar/releases/latest">GitHub Releases</a>, unzip and move to Applications, then remove the quarantine flag:
+        </p>
+        <div class="install-cmd">
+          <code id="install-cmd">xattr -cr /Applications/SkillsBar.app</code>
+          <button class="copy-btn" id="copy-install" aria-label="Copy to clipboard">Copy</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Detail cards -->
+    <div class="details">
+      <div class="card">
+        <h3>Usage stats</h3>
+        <p>
+          Tracks skill invocations from Claude Code session transcripts with insights, ranked lists, and per-skill usage cards.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Agent browsing</h3>
+        <p>
+          Browse Claude Code sub-agents (user and plugin) with model, color, and tools metadata.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Quick actions</h3>
+        <p>
+          Open in VS Code, open in default editor, copy path, reveal in Finder, or delete directly from the list.
+        </p>
+      </div>
+    </div>
+
+    <!-- Screenshots -->
+    <div class="screenshots-section">
+      <div class="screenshot-scroll">
+        <div class="screenshot-track">
+          <figure class="shot">
+            <img src="/skillsbar-codex-tab.png" alt="Codex CLI skills tab" />
+            <figcaption>Codex tab</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="/skillsbar-dark-mode.png" alt="Dark mode" />
+            <figcaption>Dark mode</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="/skillsbar-detail-view.png" alt="Skill detail view" />
+            <figcaption>Detail view</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="/skillsbar-usage-stats.png" alt="Usage statistics" />
+            <figcaption>Usage stats</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="foot">
+      <p>
+        Built by <a href="https://amanhimself.dev">Aman Mittal</a> &middot;
+        <a href="https://github.com/amandeepmittal/skillsbar">Source</a> &middot;
+        Apache-2.0
+      </p>
+    </footer>
+  </main>
+</Layout>
+
+<script>
+  document.getElementById('copy-install')?.addEventListener('click', () => {
+    const cmd = document.getElementById('install-cmd')?.textContent || '';
+    navigator.clipboard.writeText(cmd).then(() => {
+      const btn = document.getElementById('copy-install');
+      if (btn) {
+        btn.textContent = 'Copied!';
+        setTimeout(() => { btn.textContent = 'Copy'; }, 1500);
+      }
+    });
+  });
+</script>
+
+<style is:global>
+  .page-wrap section,
+  .page-wrap footer {
+    max-width: none !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin: 0 !important;
+  }
+
+  body {
+    background:
+      radial-gradient(1100px 800px at 15% 10%, rgba(124, 109, 216, 0.14), transparent 58%),
+      radial-gradient(950px 780px at 85% 20%, rgba(91, 106, 191, 0.14), transparent 60%),
+      radial-gradient(900px 700px at 40% 95%, rgba(124, 109, 216, 0.06), transparent 60%),
+      #f8f8ff !important;
+    overflow-x: hidden !important;
+  }
+
+  .page-wrap svg:not(.gh-icon) {
+    width: auto !important;
+    height: auto !important;
+    fill: none !important;
+  }
+  .page-wrap svg.gh-icon {
+    width: 16px !important;
+    height: 16px !important;
+    fill: currentColor !important;
+    display: inline-block !important;
+  }
+</style>
+
+<style>
+  :root {
+    --sb-panel: rgba(255, 255, 255, 0.74);
+    --sb-panel-solid: #ffffff;
+    --sb-text: rgba(11, 16, 22, 0.92);
+    --sb-muted: rgba(56, 60, 80, 0.72);
+    --sb-line: rgba(11, 16, 22, 0.08);
+    --sb-accent: #7c6dd8;
+    --sb-shadow: rgba(11, 16, 22, 0.1);
+    --sb-radius: 18px;
+    --sb-radius-sm: 14px;
+  }
+
+  .page-wrap {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 40px 24px 30px;
+    font-family: ui-sans-serif, "Avenir Next", Avenir, "Segoe UI", "Helvetica Neue", sans-serif;
+    color: var(--sb-text);
+    overflow-x: hidden;
+  }
+
+  .page-wrap a { color: inherit; text-decoration: none; }
+  .page-wrap a:hover { text-decoration: underline; }
+  .page-wrap code {
+    font-family: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.9em;
+  }
+
+  /* Header */
+  .top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+
+  .brand-title { margin: 0; font-size: 20px; font-weight: 700; }
+  .brand-tagline { margin: 2px 0 0; color: var(--sb-muted); font-size: 13px; }
+  .nav-links { display: flex; gap: 8px; }
+
+  /* Buttons */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 9px 14px;
+    border-radius: 13px;
+    border: 0;
+    font-size: 14px;
+    font-weight: 500;
+    background: color-mix(in srgb, var(--sb-panel-solid) 32%, transparent);
+    box-shadow: 0 8px 24px var(--sb-shadow);
+    transition: transform 160ms ease, background 160ms ease;
+    white-space: nowrap;
+    text-decoration: none !important;
+  }
+  .btn:hover { transform: translateY(-1px); background: color-mix(in srgb, var(--sb-panel-solid) 55%, transparent); }
+  .btn.primary {
+    background: linear-gradient(135deg, rgba(124, 109, 216, 0.6), rgba(91, 106, 191, 0.55));
+    box-shadow: 0 10px 28px color-mix(in srgb, var(--sb-accent) 20%, var(--sb-shadow));
+  }
+  .btn.ghost { background: transparent; box-shadow: none; color: color-mix(in srgb, var(--sb-text) 80%, var(--sb-muted)); }
+  .btn.ghost:hover { background: color-mix(in srgb, var(--sb-panel-solid) 28%, transparent); box-shadow: 0 8px 20px var(--sb-shadow); }
+  .gh-icon { width: 16px !important; height: 16px !important; fill: currentColor !important; }
+
+  /* Hero */
+  .hero {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 24px;
+    align-items: center;
+    padding: 22px 24px;
+    border: 1px solid var(--sb-line);
+    border-radius: var(--sb-radius);
+    background: var(--sb-panel);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 16px 50px var(--sb-shadow);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: -1px;
+    background:
+      radial-gradient(550px 300px at 8% 12%, rgba(124, 109, 216, 0.14), transparent 55%),
+      radial-gradient(480px 280px at 90% 16%, rgba(91, 106, 191, 0.14), transparent 55%);
+    pointer-events: none;
+  }
+
+  .hero-copy { position: relative; z-index: 1; }
+
+  .badges { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
+  .badge {
+    font-size: 11.5px;
+    padding: 5px 9px;
+    border-radius: 999px;
+    border: 1px solid var(--sb-line);
+    background: color-mix(in srgb, var(--sb-panel-solid) 14%, transparent);
+    color: color-mix(in srgb, var(--sb-text) 82%, var(--sb-muted));
+    letter-spacing: 0.15px;
+  }
+
+  .hero-heading { display: flex; gap: 12px; align-items: flex-start; }
+  .hero-icon { width: 40px !important; height: 40px !important; border-radius: 12px; filter: drop-shadow(0 8px 18px rgba(0,0,0,0.2)); }
+  .hero-heading h2 { margin: 0 0 6px; font-size: 28px; font-weight: 700; letter-spacing: -0.3px; line-height: 1.15; }
+  .hero-heading p { margin: 0; color: var(--sb-muted); font-size: 14px; line-height: 1.5; }
+
+  .cta { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 14px; position: relative; z-index: 1; }
+
+  .bullets { margin: 12px 0 0; padding: 0 0 0 16px; color: var(--sb-muted); font-size: 13px; position: relative; z-index: 1; }
+  .bullets li { margin: 5px 0; }
+  .bullets code {
+    background: color-mix(in srgb, var(--sb-panel-solid) 40%, transparent);
+    padding: 1px 5px;
+    border-radius: 4px;
+    border: 1px solid var(--sb-line);
+    font-size: 12px;
+  }
+
+  /* Hero screenshot - FLAT */
+  .hero-shot { margin: 0; position: relative; z-index: 1; justify-self: end; }
+  .hero-shot img {
+    max-width: 280px;
+    margin-left: auto;
+    width: 100%;
+    height: auto;
+    border-radius: var(--sb-radius-sm);
+    border: 1px solid var(--sb-line);
+    box-shadow: 0 12px 40px var(--sb-shadow);
+    background: color-mix(in srgb, var(--sb-panel-solid) 92%, transparent);
+  }
+  .hero-shot figcaption { max-width: 280px; margin: 8px 0 0 auto; text-align: center; color: var(--sb-muted); font-size: 12px; }
+
+  /* Cards */
+  .details { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 12px; }
+  .details.single { grid-template-columns: 1fr; }
+
+  .card {
+    border: 1px solid var(--sb-line);
+    border-radius: var(--sb-radius);
+    padding: 14px 14px 12px;
+    background: var(--sb-panel);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 12px 36px var(--sb-shadow);
+  }
+  .card h3 { margin: 0 0 5px; font-size: 12.5px; font-weight: 700; letter-spacing: 0.2px; text-transform: uppercase; color: color-mix(in srgb, var(--sb-text) 85%, var(--sb-muted)); }
+  .card p { margin: 0; color: var(--sb-muted); font-size: 13px; line-height: 1.5; }
+  .card a { text-decoration: underline; text-decoration-color: color-mix(in srgb, var(--sb-muted) 40%, transparent); }
+  .card code {
+    font-size: 12px;
+    background: color-mix(in srgb, var(--sb-panel-solid) 40%, transparent);
+    padding: 1px 5px;
+    border-radius: 4px;
+    border: 1px solid var(--sb-line);
+  }
+
+  /* Install card - prominent */
+  .install-card {
+    background: color-mix(in srgb, var(--sb-panel-solid) 85%, transparent);
+  }
+
+  .install-cmd {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 8px;
+    padding: 6px 10px;
+    background: color-mix(in srgb, var(--sb-panel-solid) 40%, transparent);
+    border: 1px solid var(--sb-line);
+    border-radius: 8px;
+  }
+
+  .install-cmd code {
+    flex: 1;
+    font-size: 13px;
+    color: var(--sb-text);
+    background: none;
+    border: none;
+    padding: 0;
+  }
+
+  .copy-btn {
+    flex-shrink: 0;
+    padding: 3px 8px;
+    border: 1px solid var(--sb-line);
+    border-radius: 5px;
+    background: color-mix(in srgb, var(--sb-panel-solid) 30%, transparent);
+    color: var(--sb-muted);
+    cursor: pointer;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    transition: all 160ms ease;
+  }
+  .copy-btn:hover { background: color-mix(in srgb, var(--sb-panel-solid) 60%, transparent); color: var(--sb-text); border-color: color-mix(in srgb, var(--sb-accent) 30%, var(--sb-line)); }
+
+  /* Screenshots - scrollable */
+  .screenshots-section { margin-top: 12px; overflow: hidden; }
+  .screenshot-scroll {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .screenshot-scroll::-webkit-scrollbar { display: none; }
+  .screenshot-track {
+    display: inline-flex;
+    gap: 12px;
+    padding: 0 4px 8px;
+  }
+  .shot { margin: 0; text-align: center; flex-shrink: 0; }
+  .shot img {
+    width: 200px;
+    height: auto;
+    border-radius: var(--sb-radius-sm);
+    border: 1px solid var(--sb-line);
+    box-shadow: 0 8px 28px var(--sb-shadow);
+    background: color-mix(in srgb, var(--sb-panel-solid) 92%, transparent);
+  }
+  .shot figcaption { margin-top: 6px; color: var(--sb-muted); font-size: 12px; }
+
+  /* Footer */
+  .foot { margin-top: 20px; text-align: center; color: var(--sb-muted); font-size: 12.5px; }
+  .foot a { text-decoration: underline; text-decoration-color: color-mix(in srgb, var(--sb-muted) 40%, transparent); }
+
+  /* Responsive */
+  @media (max-width: 860px) {
+    .top { flex-direction: column; align-items: flex-start; }
+    .hero { grid-template-columns: 1fr; }
+    .hero-shot { justify-self: center; }
+    .hero-shot img { max-width: 260px; }
+    .details { grid-template-columns: 1fr; }
+    .shot img { width: 180px; }
+  }
+</style>
