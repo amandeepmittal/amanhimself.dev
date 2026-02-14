@@ -24,7 +24,7 @@ import LinkButton from '@components/LinkButton.astro';
       <div class="not-found__actions">
         <LinkButton
           href="/"
-          className="focus-outline rounded-md bg-[#7F56D9] px-6 py-3 text-white shadow-lg shadow-[#7F56D9]/30 transition hover:-translate-y-0.5 hover:bg-[#6E40CF]"
+          className="focus-outline rounded-md bg-amber-600 px-6 py-3 text-white shadow-lg shadow-amber-600/30 transition hover:-translate-y-0.5 hover:bg-amber-700"
         >
           Go home
         </LinkButton>
@@ -71,13 +71,13 @@ import LinkButton from '@components/LinkButton.astro';
     @apply mx-auto w-fit rounded-full bg-skin-accent/10 px-4 py-1 text-xs font-semibold uppercase tracking-widest text-skin-accent;
   }
   .not-found__title {
-    @apply mt-8 flex justify-center gap-4 text-[5rem] font-black tracking-tight text-transparent sm:text-[7rem];
-    background: linear-gradient(135deg, var(--color-accent), var(--color-text-base));
-    -webkit-background-clip: text;
-    background-clip: text;
+    @apply mt-8 flex justify-center gap-4 text-[5rem] font-black tracking-tight sm:text-[7rem];
   }
   .not-found__title span {
-    @apply drop-shadow-sm;
+    background: linear-gradient(135deg, #b45309, #f59e0b);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
   }
   .not-found__subtitle {
     @apply mx-auto mt-6 max-w-xl text-lg text-skin-base/80;
