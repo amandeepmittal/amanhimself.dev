@@ -80,3 +80,5 @@ When creating `/run-codex` skill, I use Claude Code's planning mode to figure ou
 You can build your skills that you expect to use again and that may contain executing a series of tasks. If you use both Claude Code and Codex and prefer Claude Code's interface, try to build one for your own use case or ask Claude Code to build a skill for one of the most repeatable tasks you do. Claude is usually really helpful in building initial skills. You can always tweak them as you use them. I am going to tweak the `/run-codex` next time I am using it.
 
 <img src="/images/headless-codex-cli/05.png" alt="SkillsBar app showing the run-codex skill's detail in macOS menu" width="380" />
+
+_The above screenshot is from [SkillsBar](https://github.com/amandeepmittal/skillsbar), a macOS menu bar app I built to browse and manage Claude Code skills._
