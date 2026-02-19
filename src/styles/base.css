@@ -3,22 +3,23 @@
 @tailwind utilities;
 
 @layer base {
+  /* === Option A: Promote existing warmth (amber/brown) === */
   :root,
   html[data-theme='light'] {
-    --color-fill: 253, 250, 246;
-    --color-text-base: 55, 45, 40;
-    --color-accent: 55, 45, 40;
-    --color-card: 247, 243, 238;
-    --color-card-muted: 250, 247, 243;
-    --color-border: 228, 222, 215;
+    --color-fill: 250, 248, 245;           /* #faf8f5 warm off-white */
+    --color-text-base: 44, 36, 24;         /* #2c2418 warm dark */
+    --color-accent: 180, 90, 43;           /* #b45a2b amber/brown */
+    --color-card: 240, 235, 228;           /* #f0ebe4 warm card */
+    --color-card-muted: 245, 240, 234;     /* #f5f0ea warm muted */
+    --color-border: 224, 216, 207;         /* #e0d8cf warm gray */
   }
   html[data-theme='dark'] {
-    --color-fill: 35, 32, 30;
-    --color-text-base: 255, 248, 240;
-    --color-accent: 245, 235, 220;
-    --color-card: 50, 45, 42;
-    --color-card-muted: 66, 60, 56;
-    --color-border: 82, 75, 70;
+    --color-fill: 30, 26, 22;             /* #1e1a16 warm dark bg */
+    --color-text-base: 240, 235, 228;     /* #f0ebe4 warm light text */
+    --color-accent: 212, 133, 74;         /* #d4854a warm amber */
+    --color-card: 42, 37, 32;             /* #2a2520 warm dark card */
+    --color-card-muted: 55, 48, 40;       /* #373028 warm dark muted */
+    --color-border: 78, 69, 58;           /* #4e453a warm dark border */
   }
   #sun-svg,
   html[data-theme='dark'] #moon-svg {
