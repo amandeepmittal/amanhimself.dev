@@ -11,6 +11,7 @@ export interface Props {
     | 'search'
     | 'links'
     | 'now'
+    | 'projects'
     | 'slashes';
 }
 
@@ -63,14 +64,8 @@ const { activeNav } = Astro.props;
             </a>
           </li>
           <li>
-            <a
-              target="_blank"
-              href="/rss.xml"
-              class="rss-link"
-              aria-label="rss feed"
-              title="RSS Feed"
-            >
-              RSS
+            <a href="/projects/" class={activeNav === 'projects' ? 'active' : ''}>
+              Projects
             </a>
           </li>
           <li>
