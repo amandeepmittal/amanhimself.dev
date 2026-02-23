@@ -10,6 +10,7 @@ import { slugifyStr } from '@utils/slugify';
 import ShareLinks from '@components/ShareLinks.astro';
 import SupportButton from '@components/SupportButton.astro';
 import RelatedPosts from '@components/RelatedPosts.astro';
+import SponsorBanner from '@components/SponsorBanner.astro';
 import { SITE } from '@config';
 import IconCopy from '@assets/icons/IconCopy.svg?raw';
 import IconCheck from '@assets/icons/IconCheck.svg?raw';
@@ -75,6 +76,7 @@ const tagCounts = new Map(
 
 <Layout {...layoutProps}>
   <Header />
+  <SponsorBanner />
 
   <!-- <div class="progress-container fixed top-0 z-10 h-1 w-full bg-skin-fill">
     <div class="progress-bar h-1 w-0 bg-skin-accent" id="myBar"></div>

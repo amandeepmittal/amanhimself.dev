@@ -1,0 +1,27 @@
+---
+import { ACTIVE_SPONSOR } from '../data/sponsor';
+
+const now = new Date();
+const sponsor = ACTIVE_SPONSOR
+  && new Date(ACTIVE_SPONSOR.startDate) <= now
+  && new Date(ACTIVE_SPONSOR.endDate) >= now
+  ? ACTIVE_SPONSOR
+  : null;
+---
+
+{sponsor && (
+  <div class="mx-auto mt-4 w-full max-w-3xl px-4">
+    <div class="rounded-md border border-skin-line bg-skin-card px-4 py-2 text-center text-sm italic text-skin-base">
+      Sponsored by{" "}
+      <a
+        href={sponsor.url}
+        target="_blank"
+        rel="noopener noreferrer sponsored"
+        class="font-medium text-skin-accent underline underline-offset-2 hover:opacity-75"
+      >
+        {sponsor.name}
+      </a>
+      {" "}&mdash; {sponsor.message}
+    </div>
+  </div>
+)}
