@@ -9,16 +9,17 @@ const outputPath = path.join(ROOT, 'public', 'llms.txt');
 const siteMeta = await readSiteMeta();
 
 const files = await readdir(contentDir);
-const markdownFiles = files.filter(file => file.endsWith('.md')).sort();
+const markdownFiles = files.filter(file => file.endsWith('.md'));
 
-const sections = [];
+const entries = [];
 
 for (const file of markdownFiles) {
   const filePath = path.join(contentDir, file);
   const raw = await readFile(filePath, 'utf-8');
 
-  let title = file.replace(/\.md$/, '');
-  let body = raw;
+  const slug = file.replace(/\.md$/, '');
+  let title = slug;
+  let pubDate = null;
 
   const frontMatterMatch = raw.match(/^---\s*\n([\s\S]*?)\n---\s*\n?/);
   if (frontMatterMatch) {
@@ -27,34 +28,48 @@ for (const file of markdownFiles) {
     if (titleMatch) {
       title = titleMatch[1];
     }
-    body = raw.slice(frontMatterMatch[0].length);
+    const dateMatch = frontMatter.match(/pubDatetime:\s*(.+)$/m);
+    if (dateMatch) {
+      pubDate = new Date(dateMatch[1].trim());
+    }
   }
 
-  sections.push(
-    [
-      `## ${title}`,
-      `Slug: ${file.replace(/\.md$/, '')}`,
-      '',
-      body.trim()
-    ].join('\n')
-  );
+  entries.push({ title, slug, pubDate });
 }
 
+entries.sort((a, b) => {
+  if (a.pubDate && b.pubDate) return b.pubDate - a.pubDate;
+  if (a.pubDate) return -1;
+  if (b.pubDate) return 1;
+  return a.slug.localeCompare(b.slug);
+});
+
+const links = entries.map(
+  ({ title, slug }) =>
+    `- [${title}](${siteMeta.website}blog/${slug}/)`
+);
+
 const header = [
-  siteMeta.title,
-  siteMeta.author,
-  siteMeta.desc,
+  `# ${siteMeta.title}`,
   '',
-  `Generated on ${new Date().toISOString()}`,
-  'Contains the markdown content of each blog post.'
+  `> ${siteMeta.desc}`,
 ].join('\n');
 
-const output = [header, ...sections].join('\n\n---\n\n');
+const socials = [
+  '',
+  '## Links',
+  '',
+  '- [GitHub](https://github.com/amandeepmittal)',
+  '- [X](https://x.com/amanhimself)',
+  '- [LinkedIn](https://www.linkedin.com/in/aman-mittal-05a239117/)',
+];
+
+const output = [header, '', ...links, ...socials].join('\n');
 
 await writeFile(outputPath, output, 'utf-8');
 
 console.log(
-  `llms.txt generated with ${sections.length} entries at ${path.relative(
+  `llms.txt generated with ${entries.length} entries at ${path.relative(
     ROOT,
     outputPath
   )}`
@@ -71,9 +86,9 @@ async function readSiteMeta() {
   }
   const siteBlock = siteMatch[1];
   const title = matchField(siteBlock, 'title');
-  const author = matchField(siteBlock, 'author');
   const desc = matchField(siteBlock, 'desc');
-  return { title, author, desc };
+  const website = matchField(siteBlock, 'website');
+  return { title, desc, website };
 }
 
 function matchField(block, field) {
