@@ -297,9 +297,7 @@ By now, you will need a primary web browser to set up and do some things further
 To configure an account on GitHub.com and use an SSH key, follow the steps from GitHub documentation:
 
 - [Generate a new SSH key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#generating-a-new-ssh-key)
-
 - [Add SSH key to ssh-agent](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#adding-your-ssh-key-to-the-ssh-agent)
-
 - [Add new SSH key to GitHub account](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account#adding-a-new-ssh-key-to-your-account)
 
 > **Note:** After configuring SSH key with GitHub, download GitHub desktop app and clone `dotfiles` repository because you will need the configuration files from it in the next few steps.
