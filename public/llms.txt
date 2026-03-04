@@ -2,6 +2,7 @@
 
 > I'm Aman Mittal (@amanhimself). Software Developer and Tech Writer. Welcome to my blog!
 
+- [Using Ghostty for the first time](https://amanhimself.dev/blog/using-ghostty/)
 - [Slash pages you need for your blog](https://amanhimself.dev/blog/slash-pages-you-need-for-your-blog/)
 - [Using images in Claude Code](https://amanhimself.dev/blog/using-images-in-claude-code/)
 - [Running headless Codex CLI inside Claude Code](https://amanhimself.dev/blog/running-headless-codex-cli-inside-claude-code/)
