@@ -10,18 +10,25 @@ const posts = await getCollection('blog');
 const publishedPosts = posts.filter(publishedPostFilter);
 const totalPosts = publishedPosts.length;
 
-// Build a slug -> title map for most read posts
-const slugToTitle = new Map(
-  publishedPosts.map(p => [p.slug, p.data.title])
+// Build a slug -> post data map for most read posts
+const slugToPost = new Map(
+  publishedPosts.map(p => [p.slug, p.data])
 );
 
+const thirtyDaysAgo = new Date();
+thirtyDaysAgo.setDate(thirtyDaysAgo.getDate() - 30);
+
 const mostRead = blogStats.mostRead
-  .filter(p => slugToTitle.has(p.slug))
-  .map(p => ({
-    slug: p.slug,
-    title: slugToTitle.get(p.slug)!,
-    views: p.views,
-  }));
+  .filter(p => slugToPost.has(p.slug))
+  .map(p => {
+    const data = slugToPost.get(p.slug)!;
+    return {
+      slug: p.slug,
+      title: data.title,
+      views: p.views,
+      isNew: new Date(data.pubDatetime) > thirtyDaysAgo,
+    };
+  });
 
 const excludedTags = new Set(['ionic']);
 const topTags = getUniqueTags(publishedPosts)
@@ -64,14 +71,21 @@ function formatNumber(num: number): string {
         {mostRead.map(post => (
           <li class="my-8">
             <div class="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
-              <a
-                href={`/blog/${post.slug}/`}
-                class="inline-block text-lg font-medium text-skin-accent decoration-solid underline-offset-4 focus-visible:no-underline focus-visible:underline-offset-0"
-              >
-                <h3 class="text-lg font-medium decoration-solid hover:underline">
-                  {post.title}
-                </h3>
-              </a>
+              <div class="flex flex-wrap items-center gap-2">
+                <a
+                  href={`/blog/${post.slug}/`}
+                  class="inline-block text-lg font-medium text-skin-accent decoration-solid underline-offset-4 focus-visible:no-underline focus-visible:underline-offset-0"
+                >
+                  <h3 class="text-lg font-medium decoration-solid hover:underline">
+                    {post.title}
+                  </h3>
+                </a>
+                {post.isNew && (
+                  <span class="rounded bg-green-100 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-green-800 dark:bg-green-900 dark:text-green-200">
+                    New
+                  </span>
+                )}
+              </div>
               <div class="sm:ml-4 sm:shrink-0">
                 <div class="flex items-center space-x-2 opacity-80">
                   <svg
