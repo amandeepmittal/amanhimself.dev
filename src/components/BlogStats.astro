@@ -1,6 +1,9 @@
 ---
 import { getCollection } from 'astro:content';
 import { publishedPostFilter } from '@utils/postFilter';
+import getUniqueTags from '@utils/getUniqueTags';
+import Tag from '@components/Tag.astro';
+import Hr from '@components/Hr.astro';
 import blogStats from '@data/blogStats.json';
 
 const posts = await getCollection('blog');
@@ -19,6 +22,12 @@ const mostRead = blogStats.mostRead
     title: slugToTitle.get(p.slug)!,
     views: p.views,
   }));
+
+const excludedTags = new Set(['ionic']);
+const topTags = getUniqueTags(publishedPosts)
+  .filter(t => !excludedTags.has(t.tag))
+  .sort((a, b) => b.count - a.count)
+  .slice(0, 10);
 
 function formatNumber(num: number): string {
   return num.toLocaleString('en-US');
@@ -84,6 +93,17 @@ function formatNumber(num: number): string {
       </ul>
     </section>
   )}
+
+  <Hr />
+
+  {topTags.length > 0 && (
+    <section class="top-tags">
+      <h2 class="top-tags-heading">Top Tags</h2>
+      <ul class="mt-4 flex flex-wrap gap-1">
+        {topTags.map(({ tag, count }) => <Tag {tag} count={count} size="sm" />)}
+      </ul>
+    </section>
+  )}
 </div>
 
 <style>
@@ -112,6 +132,12 @@ function formatNumber(num: number): string {
     @apply pb-8 pt-14;
   }
   .most-read-heading {
+    @apply font-serif text-2xl font-semibold tracking-wide;
+  }
+  .top-tags {
+    @apply pb-8 pt-6;
+  }
+  .top-tags-heading {
     @apply font-serif text-2xl font-semibold tracking-wide;
   }
 </style>
