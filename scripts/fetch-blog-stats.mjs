@@ -101,31 +101,41 @@ await page.goto(`${FATHOM_SHARE_URL}?range=last_90_days`, {
 });
 await page.waitForTimeout(5000);
 
-const mostRead = await page.evaluate(() => {
-  const text = document.body.innerText;
+// Scrape all page rows (including non-blog like "/" and "/blog/")
+function scrapeAllPages(text) {
   const lines = text.split('\n').map(l => l.trim()).filter(Boolean);
-
-  // Find the "Pages" table section. Fathom renders rows as:
-  // /blog/some-post/
-  // 4.3k        (visitors)
-  // 4.7k        (views)
-  const posts = [];
+  const pages = [];
   for (let i = 0; i < lines.length; i++) {
-    if (lines[i].startsWith('/blog/') && lines[i].endsWith('/')) {
-      const slug = lines[i].replace(/^\/blog\//, '').replace(/\/$/, '');
-      const viewsStr = lines[i + 2] || lines[i + 1] || '0';
-      posts.push({ slug, viewsStr });
+    if (lines[i].startsWith('/') && !lines[i].includes(' ')) {
+      pages.push({ path: lines[i], visitorsStr: lines[i + 1], viewsStr: lines[i + 2] });
     }
   }
-  return posts;
-});
+  return pages;
+}
 
-const mostReadParsed = mostRead
-  .map(({ slug, viewsStr }) => ({
-    slug,
-    views: parseStatNumber(viewsStr),
+// Click "Views" column header to sort by views (default is Page Visitors)
+console.log('Sorting by Views...');
+await page.evaluate(() => {
+  const all = Array.from(document.querySelectorAll('*'));
+  const el = all.find(
+    e => e.textContent.trim() === 'Views' && e.children.length === 0 && e.offsetParent !== null
+  );
+  if (el) el.click();
+});
+await page.waitForTimeout(3000);
+
+// Collect rows from the table
+const allPages = scrapeAllPages(await page.evaluate(() => document.body.innerText));
+
+// Filter to blog posts only, parse views, sort by views desc, take top 5
+const mostReadParsed = allPages
+  .filter(p => p.path.startsWith('/blog/') && p.path !== '/blog/')
+  .map(p => ({
+    slug: p.path.replace(/^\/blog\//, '').replace(/\/$/, ''),
+    views: parseStatNumber(p.viewsStr),
   }))
   .filter(p => p.views > 0)
+  .sort((a, b) => b.views - a.views)
   .slice(0, 5);
 
 console.log('Most read (last 90 days):');

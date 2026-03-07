@@ -1,5 +1,5 @@
 {
-  "pageviews": 824700,
+  "pageviews": 824800,
   "visitors": 643400,
   "mostRead": [
     {
@@ -19,8 +19,8 @@
       "views": 1300
     },
     {
-      "slug": "hide-unhide-files-or-directories-with-chflags",
-      "views": 469
+      "slug": "create-a-copy-as-markdown-for-mdx-documentation",
+      "views": 613
     }
   ],
   "updatedAt": "2026-03-07"
