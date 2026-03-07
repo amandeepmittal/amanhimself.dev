@@ -12,6 +12,7 @@ import getUniqueTags from '@utils/getUniqueTags';
 import Tag from '@components/Tag.astro';
 import getPostsWithRT from '@utils/getPostsWithRT';
 import { publishedPostFilter } from '@utils/postFilter';
+import blogStats from '@data/blogStats.json';
 
 export interface Props {
   currentPage: number;
@@ -31,7 +32,7 @@ const paginatedPostsWithRT = await getPostsWithRT(paginatedPosts);
   <Header activeNav="blog" />
   <Main
     pageTitle="Blog"
-    pageDesc=`This site is a collection of most of the posts (${totalPostsCount}) I've written.`
+    pageDesc=`${totalPostsCount} posts, ${blogStats.pageviews.toLocaleString('en-US')} reads, ${blogStats.visitors.toLocaleString('en-US')} visitors since 2019.`
   >
     <ul>
       {tags.map(({ tag, count }) => <Tag {tag} count={count} size="sm" />)}
