@@ -1,0 +1,57 @@
+---
+import { getCollection } from 'astro:content';
+import { publishedPostFilter } from '@utils/postFilter';
+import blogStats from '@data/blogStats.json';
+
+const posts = await getCollection('blog');
+const publishedPosts = posts.filter(publishedPostFilter);
+const totalPosts = publishedPosts.length;
+
+function formatNumber(num: number): string {
+  return num.toLocaleString('en-US');
+}
+---
+
+<a href="/blog/" class="blog-stats-card group">
+  <div class="blog-stats-content">
+    <h2 class="blog-stats-heading">Blog</h2>
+    <p class="blog-stats-text">
+      My <strong>{totalPosts}</strong> blog posts have been read <strong
+        >{formatNumber(blogStats.pageviews)}</strong
+      > times by <strong>{formatNumber(blogStats.visitors)}</strong> visitors since
+      2019. You'll find posts about React Native, Expo, docs tooling, tech writing, LLMs, and more.
+    </p>
+    <div class="blog-stats-cta">
+      <span>Start reading the blog</span>
+      <svg xmlns="http://www.w3.org/2000/svg" class="blog-stats-arrow"
+        ><path
+          d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"
+        ></path>
+      </svg>
+    </div>
+  </div>
+</a>
+
+<style>
+  .blog-stats-card {
+    @apply mt-4 flex rounded-lg border border-skin-line bg-skin-card p-6 no-underline transition-all hover:border-skin-accent;
+  }
+  .blog-stats-content {
+    @apply flex flex-col gap-3;
+  }
+  .blog-stats-heading {
+    @apply font-serif text-2xl font-semibold tracking-wide text-skin-base;
+  }
+  .blog-stats-text {
+    @apply text-skin-base opacity-80;
+  }
+  .blog-stats-text strong {
+    @apply font-bold text-skin-accent;
+  }
+  .blog-stats-cta {
+    @apply mt-2 flex items-center gap-2 font-medium text-skin-accent;
+  }
+  .blog-stats-arrow {
+    @apply h-6 w-6 fill-skin-accent transition-transform group-hover:translate-x-1;
+  }
+</style>

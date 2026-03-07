@@ -14,7 +14,8 @@
     "format": "prettier --write . --plugin=prettier-plugin-astro",
     "cz": "cz",
     "lint": "eslint .",
-    "llms": "node scripts/generate-llms.mjs"
+    "llms": "node scripts/generate-llms.mjs",
+    "stats": "node scripts/fetch-blog-stats.mjs"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.6",

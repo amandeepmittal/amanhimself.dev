@@ -3,24 +3,20 @@ import { getCollection } from 'astro:content';
 import Layout from '@layouts/Layout.astro';
 import Header from '@components/Header.astro';
 import Footer from '@components/Footer.astro';
-import LinkButton from '@components/LinkButton.astro';
 import Hr from '@components/Hr.astro';
+import BlogStats from '@components/BlogStats.astro';
 import Card from '@components/Card';
 import Socials from '@components/Socials.astro';
 import getSortedPosts from '@utils/getSortedPosts';
 import { SOCIALS } from '@config';
-import { publishedPostFilter } from '@utils/postFilter';
 
 const posts = await getCollection('blog');
-const publishedPosts = posts.filter(publishedPostFilter);
 
 const sortedPosts = await getSortedPosts(posts);
 // const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
 const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
 
 const socialCount = SOCIALS.filter(social => social.active).length;
-
-const totalPostsCount = publishedPosts.length;
 ---
 
 <Layout>
@@ -99,6 +95,8 @@ const totalPostsCount = publishedPosts.length;
         )
       } -->
 
+      <BlogStats />
+
       {
         recentPosts.length > 0 && (
           <section id="recent-posts">
@@ -118,17 +116,6 @@ const totalPostsCount = publishedPosts.length;
           </section>
         )
       }
-
-      <div class="all-posts-btn-wrapper">
-        <LinkButton href="/blog/">
-          See All {totalPostsCount} Posts
-          <svg xmlns="http://www.w3.org/2000/svg"
-            ><path
-              d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"
-            ></path>
-          </svg>
-        </LinkButton>
-      </div>
 
       <Hr />
 
@@ -191,10 +178,6 @@ const totalPostsCount = publishedPosts.length;
     #recent-posts h2 {
       @apply font-serif text-2xl font-semibold tracking-wide;
     }
-    .all-posts-btn-wrapper {
-      @apply my-8 text-center;
-    }
-
     /* ===== Projects Section ===== */
     #projects {
       @apply pb-8 pt-14;
