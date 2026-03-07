@@ -49,7 +49,7 @@ function formatNumber(num: number): string {
   {mostRead.length > 0 && (
     <section class="most-read">
       <h2 class="most-read-heading">
-        Most Read <span class="most-read-period">last 90 days</span>
+        Most Read <span class="text-sm font-normal opacity-60">last 90 days</span>
       </h2>
       <ul>
         {mostRead.map(post => (
@@ -103,8 +103,5 @@ function formatNumber(num: number): string {
   }
   .most-read-heading {
     @apply font-serif text-2xl font-semibold tracking-wide;
-  }
-  .most-read-period {
-    @apply text-sm font-normal opacity-60;
   }
 </style>
