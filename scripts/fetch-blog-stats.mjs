@@ -1,6 +1,9 @@
 #!/usr/bin/env node
 
-// Scrapes all-time pageviews and visitors from the public Fathom share page.
+// Scrapes blog stats from the public Fathom share page:
+// - All-time pageviews and visitors
+// - Most read blog posts from the last 90 days
+//
 // Requires Playwright in the npx cache. Run `npx playwright --version` first
 // to populate the cache if this script fails to find it.
 //
@@ -50,12 +53,11 @@ console.log('Launching browser...');
 const browser = await pw.chromium.launch({ headless: true });
 const page = await browser.newPage();
 
-console.log(`Navigating to ${FATHOM_SHARE_URL}`);
+// --- Step 1: All-time stats ---
+console.log('Fetching all-time stats...');
 await page.goto(FATHOM_SHARE_URL, { waitUntil: 'networkidle' });
 await page.waitForTimeout(3000);
 
-// Open date picker and select "All Time"
-console.log('Selecting "All Time" date range...');
 const dateRangeButton = page.locator('text=/\\w+ \\d+ to \\w+ \\d+/').first();
 await dateRangeButton.click();
 await page.waitForTimeout(1000);
@@ -69,7 +71,6 @@ try {
 
 await page.waitForTimeout(5000);
 
-// Parse stats from page text
 const bodyText = await page.evaluate(() => document.body.innerText);
 const lines = bodyText.split('\n').map(l => l.trim()).filter(Boolean);
 
@@ -85,19 +86,61 @@ for (let i = 0; i < lines.length; i++) {
   }
 }
 
-await browser.close();
-
 if (!visitors && !pageviews) {
-  console.error('Failed to extract stats from the page.');
+  console.error('Failed to extract all-time stats.');
+  await browser.close();
   process.exit(1);
 }
+
+console.log(`All-time: ${visitors} visitors, ${pageviews} pageviews`);
+
+// --- Step 2: Most read posts (last 90 days) ---
+console.log('Fetching most read posts (last 90 days)...');
+await page.goto(`${FATHOM_SHARE_URL}?range=last_90_days`, {
+  waitUntil: 'networkidle',
+});
+await page.waitForTimeout(5000);
+
+const mostRead = await page.evaluate(() => {
+  const text = document.body.innerText;
+  const lines = text.split('\n').map(l => l.trim()).filter(Boolean);
+
+  // Find the "Pages" table section. Fathom renders rows as:
+  // /blog/some-post/
+  // 4.3k        (visitors)
+  // 4.7k        (views)
+  const posts = [];
+  for (let i = 0; i < lines.length; i++) {
+    if (lines[i].startsWith('/blog/') && lines[i].endsWith('/')) {
+      const slug = lines[i].replace(/^\/blog\//, '').replace(/\/$/, '');
+      const viewsStr = lines[i + 2] || lines[i + 1] || '0';
+      posts.push({ slug, viewsStr });
+    }
+  }
+  return posts;
+});
+
+const mostReadParsed = mostRead
+  .map(({ slug, viewsStr }) => ({
+    slug,
+    views: parseStatNumber(viewsStr),
+  }))
+  .filter(p => p.views > 0)
+  .slice(0, 5);
+
+console.log('Most read (last 90 days):');
+for (const p of mostReadParsed) {
+  console.log(`  ${p.slug}: ${p.views} views`);
+}
+
+await browser.close();
 
 const stats = {
   pageviews,
   visitors,
+  mostRead: mostReadParsed,
   updatedAt: new Date().toISOString().split('T')[0],
 };
 
 await writeFile(outputPath, JSON.stringify(stats, null, 2) + '\n');
-console.log(`Stats written to ${path.relative(ROOT, outputPath)}`);
-console.log(JSON.stringify(stats, null, 2));
+console.log(`\nStats written to ${path.relative(ROOT, outputPath)}`);

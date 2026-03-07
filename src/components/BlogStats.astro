@@ -7,30 +7,74 @@ const posts = await getCollection('blog');
 const publishedPosts = posts.filter(publishedPostFilter);
 const totalPosts = publishedPosts.length;
 
+// Build a slug -> title map for most read posts
+const slugToTitle = new Map(
+  publishedPosts.map(p => [p.slug, p.data.title])
+);
+
+const mostRead = blogStats.mostRead
+  .filter(p => slugToTitle.has(p.slug))
+  .map(p => ({
+    slug: p.slug,
+    title: slugToTitle.get(p.slug)!,
+    views: p.views,
+  }));
+
 function formatNumber(num: number): string {
   return num.toLocaleString('en-US');
 }
 ---
 
-<a href="/blog/" class="blog-stats-card group">
-  <div class="blog-stats-content">
-    <h2 class="blog-stats-heading">Blog</h2>
-    <p class="blog-stats-text">
-      My <strong>{totalPosts}</strong> blog posts have been read <strong
-        >{formatNumber(blogStats.pageviews)}</strong
-      > times by <strong>{formatNumber(blogStats.visitors)}</strong> visitors since
-      2019. You'll find posts about React Native, Expo, docs tooling, tech writing, LLMs, and more.
-    </p>
-    <div class="blog-stats-cta">
-      <span>Start reading the blog</span>
-      <svg xmlns="http://www.w3.org/2000/svg" class="blog-stats-arrow"
-        ><path
-          d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"
-        ></path>
-      </svg>
+<div class="blog-stats-wrapper">
+  <a href="/blog/" class="blog-stats-card group">
+    <div class="blog-stats-content">
+      <h2 class="blog-stats-heading">Blog</h2>
+      <p class="blog-stats-text">
+        My <strong>{totalPosts}</strong> blog posts have been read <strong
+          >{formatNumber(blogStats.pageviews)}</strong
+        > times by <strong>{formatNumber(blogStats.visitors)}</strong> visitors since
+        2019. You'll find posts about React Native, Expo, docs tooling, tech writing, LLMs, and more.
+      </p>
+      <div class="blog-stats-cta">
+        <span>Start reading the blog</span>
+        <svg xmlns="http://www.w3.org/2000/svg" class="blog-stats-arrow"
+          ><path
+            d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"
+          ></path>
+        </svg>
+      </div>
     </div>
-  </div>
-</a>
+  </a>
+
+  {mostRead.length > 0 && (
+    <section class="most-read">
+      <h2 class="most-read-heading">
+        Most Read <span class="most-read-period">last 90 days</span>
+      </h2>
+      <ul>
+        {mostRead.map(post => (
+          <li class="my-8">
+            <div class="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+              <a
+                href={`/blog/${post.slug}/`}
+                class="inline-block text-lg font-medium text-skin-accent decoration-solid underline-offset-4 focus-visible:no-underline focus-visible:underline-offset-0"
+              >
+                <h3 class="text-lg font-medium decoration-solid hover:underline">
+                  {post.title}
+                </h3>
+              </a>
+              <div class="sm:ml-4 sm:shrink-0">
+                <span class="text-xs text-skin-base opacity-60">
+                  {formatNumber(post.views)} reads
+                </span>
+              </div>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </section>
+  )}
+</div>
 
 <style>
   .blog-stats-card {
@@ -53,5 +97,14 @@ function formatNumber(num: number): string {
   }
   .blog-stats-arrow {
     @apply h-6 w-6 fill-skin-accent transition-transform group-hover:translate-x-1;
+  }
+  .most-read {
+    @apply pb-8 pt-14;
+  }
+  .most-read-heading {
+    @apply font-serif text-2xl font-semibold tracking-wide;
+  }
+  .most-read-period {
+    @apply text-sm font-normal opacity-60;
   }
 </style>

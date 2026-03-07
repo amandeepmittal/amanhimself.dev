@@ -1,5 +1,27 @@
 {
   "pageviews": 824700,
   "visitors": 643400,
+  "mostRead": [
+    {
+      "slug": "first-few-days-with-codex-cli",
+      "views": 7500
+    },
+    {
+      "slug": "large-header-title-in-expo-router",
+      "views": 2300
+    },
+    {
+      "slug": "stash-changes-with-vscode",
+      "views": 1700
+    },
+    {
+      "slug": "running-headless-codex-cli-inside-claude-code",
+      "views": 1300
+    },
+    {
+      "slug": "hide-unhide-files-or-directories-with-chflags",
+      "views": 469
+    }
+  ],
   "updatedAt": "2026-03-07"
 }
