@@ -64,9 +64,19 @@ function formatNumber(num: number): string {
                 </h3>
               </a>
               <div class="sm:ml-4 sm:shrink-0">
-                <span class="text-xs text-skin-base opacity-60">
-                  {formatNumber(post.views)} reads
-                </span>
+                <div class="flex items-center space-x-2 opacity-80">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="inline-block h-6 w-6 scale-75 fill-skin-base"
+                    aria-hidden="true"
+                  >
+                    <path d="M12 9a3.02 3.02 0 0 0-3 3c0 1.66 1.34 3 3 3s3-1.34 3-3-1.34-3-3-3z"></path>
+                    <path d="M12 5c-7.633 0-9.927 6.617-9.948 6.684L1.946 12l.106.316C2.073 12.383 4.367 19 12 19s9.927-6.617 9.948-6.684l.106-.316-.106-.316C21.927 11.617 19.633 5 12 5zm0 12c-5.351 0-7.424-3.846-7.926-5C4.578 10.842 6.652 7 12 7c5.351 0 7.424 3.846 7.926 5-.504 1.158-2.578 5-7.926 5z"></path>
+                  </svg>
+                  <span class="text-xs italic text-skin-base opacity-60">
+                    {formatNumber(post.views)} reads
+                  </span>
+                </div>
               </div>
             </div>
           </li>
