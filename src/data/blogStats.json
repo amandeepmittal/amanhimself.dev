@@ -1,10 +1,10 @@
 {
-  "pageviews": 824800,
-  "visitors": 643400,
+  "pageviews": 825900,
+  "visitors": 644300,
   "mostRead": [
     {
       "slug": "first-few-days-with-codex-cli",
-      "views": 7500
+      "views": 7900
     },
     {
       "slug": "large-header-title-in-expo-router",
@@ -16,12 +16,12 @@
     },
     {
       "slug": "running-headless-codex-cli-inside-claude-code",
-      "views": 1300
+      "views": 1400
     },
     {
-      "slug": "create-a-copy-as-markdown-for-mdx-documentation",
-      "views": 613
+      "slug": "codex-tokens-usage",
+      "views": 579
     }
   ],
-  "updatedAt": "2026-03-07"
+  "updatedAt": "2026-03-10"
 }
