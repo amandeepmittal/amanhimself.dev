@@ -2,7 +2,7 @@
 
 // Scrapes blog stats from the public Fathom share page:
 // - All-time pageviews and visitors
-// - Most read blog posts from the last 90 days
+// - Most read blog posts from the last 90 days and 365 days
 //
 // Requires Playwright in the npx cache. Run `npx playwright --version` first
 // to populate the cache if this script fails to find it.
@@ -143,12 +143,47 @@ for (const p of mostReadParsed) {
   console.log(`  ${p.slug}: ${p.views} views`);
 }
 
+// --- Step 3: Most read posts (last 365 days) ---
+console.log('Fetching most read posts (last 365 days)...');
+await page.goto(`${FATHOM_SHARE_URL}?range=last_365_days`, {
+  waitUntil: 'networkidle',
+});
+await page.waitForTimeout(5000);
+
+console.log('Sorting by Views (365 days)...');
+await page.evaluate(() => {
+  const all = Array.from(document.querySelectorAll('*'));
+  const el = all.find(
+    e => e.textContent.trim() === 'Views' && e.children.length === 0 && e.offsetParent !== null
+  );
+  if (el) el.click();
+});
+await page.waitForTimeout(3000);
+
+const allPages365 = scrapeAllPages(await page.evaluate(() => document.body.innerText));
+
+const mostRead365Parsed = allPages365
+  .filter(p => p.path.startsWith('/blog/') && p.path !== '/blog/')
+  .map(p => ({
+    slug: p.path.replace(/^\/blog\//, '').replace(/\/$/, ''),
+    views: parseStatNumber(p.viewsStr),
+  }))
+  .filter(p => p.views > 0)
+  .sort((a, b) => b.views - a.views)
+  .slice(0, 5);
+
+console.log('Most read (last 365 days):');
+for (const p of mostRead365Parsed) {
+  console.log(`  ${p.slug}: ${p.views} views`);
+}
+
 await browser.close();
 
 const stats = {
   pageviews,
   visitors,
   mostRead: mostReadParsed,
+  mostRead365: mostRead365Parsed,
   updatedAt: new Date().toISOString().split('T')[0],
 };
 

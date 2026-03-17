@@ -18,17 +18,22 @@ const slugToPost = new Map(
 const thirtyDaysAgo = new Date();
 thirtyDaysAgo.setDate(thirtyDaysAgo.getDate() - 30);
 
-const mostRead = blogStats.mostRead
-  .filter(p => slugToPost.has(p.slug))
-  .map(p => {
-    const data = slugToPost.get(p.slug)!;
-    return {
-      slug: p.slug,
-      title: data.title,
-      views: p.views,
-      isNew: new Date(data.pubDatetime) > thirtyDaysAgo,
-    };
-  });
+function buildMostRead(entries: { slug: string; views: number }[]) {
+  return entries
+    .filter(p => slugToPost.has(p.slug))
+    .map(p => {
+      const data = slugToPost.get(p.slug)!;
+      return {
+        slug: p.slug,
+        title: data.title,
+        views: p.views,
+        isNew: new Date(data.pubDatetime) > thirtyDaysAgo,
+      };
+    });
+}
+
+const mostRead = buildMostRead(blogStats.mostRead);
+const mostRead365 = buildMostRead(blogStats.mostRead365 ?? []);
 
 const excludedTags = new Set(['ionic']);
 const topTags = getUniqueTags(publishedPosts)
@@ -62,13 +67,56 @@ function formatNumber(num: number): string {
     </div>
   </a>
 
-  {mostRead.length > 0 && (
+  {(mostRead.length > 0 || mostRead365.length > 0) && (
     <section class="most-read">
-      <h2 class="most-read-heading">
-        Most Read <span class="text-sm font-normal opacity-60">last 90 days</span>
-      </h2>
-      <ul>
+      <div class="flex items-center justify-between gap-4">
+        <h2 class="most-read-heading">Most Read</h2>
+        {mostRead.length > 0 && mostRead365.length > 0 && (
+          <div class="most-read-tabs" role="tablist">
+            <button role="tab" aria-selected="true" data-tab="90" class="most-read-tab most-read-tab-active">90 days</button>
+            <button role="tab" aria-selected="false" data-tab="365" class="most-read-tab">365 days</button>
+          </div>
+        )}
+      </div>
+      <ul id="most-read-90" role="tabpanel">
         {mostRead.map(post => (
+          <li class="my-8">
+            <div class="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+              <div class="flex flex-wrap items-center gap-2">
+                <a
+                  href={`/blog/${post.slug}/`}
+                  class="inline-block text-lg font-medium text-skin-accent decoration-solid underline-offset-4 focus-visible:no-underline focus-visible:underline-offset-0"
+                >
+                  <h3 class="text-lg font-medium decoration-solid hover:underline">
+                    {post.title}
+                  </h3>
+                </a>
+                {post.isNew && (
+                  <span class="rounded bg-green-100 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-green-800 dark:bg-green-900 dark:text-green-200">
+                    New
+                  </span>
+                )}
+              </div>
+              <div class="sm:ml-4 sm:shrink-0">
+                <div class="flex items-center space-x-2 opacity-80">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="inline-block h-6 w-6 scale-75 fill-skin-base opacity-60"
+                    aria-hidden="true"
+                  >
+                    <path d="m10 10.414 4 4 5.707-5.707L22 11V5h-6l2.293 2.293L14 11.586l-4-4-7.707 7.707 1.414 1.414z"></path>
+                  </svg>
+                  <span class="text-xs italic text-skin-base opacity-60">
+                    {formatNumber(post.views)} reads
+                  </span>
+                </div>
+              </div>
+            </div>
+          </li>
+        ))}
+      </ul>
+      <ul id="most-read-365" role="tabpanel" class="hidden">
+        {mostRead365.map(post => (
           <li class="my-8">
             <div class="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
               <div class="flex flex-wrap items-center gap-2">
@@ -147,6 +195,15 @@ function formatNumber(num: number): string {
   .most-read-heading {
     @apply font-serif text-2xl font-semibold tracking-wide;
   }
+  .most-read-tabs {
+    @apply flex shrink-0 gap-1 rounded-lg border border-skin-line p-1;
+  }
+  .most-read-tab {
+    @apply cursor-pointer rounded-md px-2.5 py-0.5 text-xs text-skin-base opacity-60 transition-all;
+  }
+  .most-read-tab-active {
+    @apply bg-skin-accent bg-opacity-10 font-medium opacity-100 text-skin-accent;
+  }
   .top-tags {
     @apply pb-8 pt-6;
   }
@@ -154,3 +211,19 @@ function formatNumber(num: number): string {
     @apply font-serif text-2xl font-semibold tracking-wide;
   }
 </style>
+
+<script is:inline data-astro-rerun>
+  document.querySelectorAll('.most-read-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      const range = tab.dataset.tab;
+      document.querySelectorAll('.most-read-tab').forEach(t => {
+        t.classList.remove('most-read-tab-active');
+        t.setAttribute('aria-selected', 'false');
+      });
+      tab.classList.add('most-read-tab-active');
+      tab.setAttribute('aria-selected', 'true');
+      document.getElementById('most-read-90').classList.toggle('hidden', range !== '90');
+      document.getElementById('most-read-365').classList.toggle('hidden', range !== '365');
+    });
+  });
+</script>
