@@ -14,25 +14,28 @@ const SUPPORT_URL = 'https://github.com/sponsors/amandeepmittal';
   class={`support-link focus-outline ${className}`.trim()}
   aria-label="Support me on GitHub Sponsors"
 >
-  <span>Sponsor</span>
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 24 24"
+    viewBox="0 0 16 16"
     aria-hidden="true"
   >
     <path
-      d="M5 7.5A1.5 1.5 0 016.5 6h8.75A2.75 2.75 0 0118 8.75V10a4.75 4.75 0 01-4.75 4.75h-4A4.75 4.75 0 015 10V7.5Zm11.5 0H6.5V10A3.25 3.25 0 009.75 13.25h3.5A3.25 3.25 0 0016.5 10V7.5Zm1.75 2h1a2 2 0 010 4h-1v-1.5h1a.5.5 0 000-1h-1V9.5ZM8 17h6a1 1 0 010 2H8a1 1 0 010-2Z"
+      fill-rule="evenodd"
+      d="M4.25 2.5c-1.336 0-2.75 1.164-2.75 3 0 2.15 1.58 4.144 3.365 5.682A20.565 20.565 0 008 13.393a20.561 20.561 0 003.135-2.211C12.92 9.644 14.5 7.65 14.5 5.5c0-1.836-1.414-3-2.75-3-1.373 0-2.609.986-3.029 2.456a.75.75 0 01-1.442 0C6.859 3.486 5.623 2.5 4.25 2.5z"
       fill="currentColor"
     />
   </svg>
+  <span>Sponsor</span>
 </a>
 
 <style>
   .support-link {
-    @apply inline-flex items-center gap-2 whitespace-nowrap rounded-md border border-skin-line px-3 py-1 text-sm font-semibold text-skin-accent transition-colors hover:border-skin-accent;
+    @apply inline-flex items-center gap-2 whitespace-nowrap rounded-lg px-4 py-2 text-sm font-semibold transition-opacity hover:opacity-80;
+    background-color: #EA4AAA;
+    color: #fff;
   }
 
   .support-link svg {
-    @apply h-5 w-5 fill-current;
+    @apply h-4 w-4 fill-current;
   }
 </style>

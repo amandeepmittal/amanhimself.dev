@@ -14,7 +14,6 @@ const BMC_URL = 'https://buymeacoffee.com/tfgf99ubc6';
   class={`bmc-link focus-outline ${className}`.trim()}
   aria-label="Buy me a coffee"
 >
-  <span>Buy me a coffee</span>
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 24 24"
@@ -25,11 +24,14 @@ const BMC_URL = 'https://buymeacoffee.com/tfgf99ubc6';
       fill="currentColor"
     />
   </svg>
+  <span>Buy me a coffee</span>
 </a>
 
 <style>
   .bmc-link {
-    @apply inline-flex items-center gap-2 whitespace-nowrap rounded-md border border-skin-line px-3 py-1 text-sm font-semibold text-skin-accent transition-colors hover:border-skin-accent;
+    @apply inline-flex items-center gap-2 whitespace-nowrap rounded-lg px-4 py-2 text-sm font-semibold transition-opacity hover:opacity-80;
+    background-color: #FFDD00;
+    color: #1a1a1a;
   }
 
   .bmc-link svg {

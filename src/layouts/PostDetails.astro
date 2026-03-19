@@ -122,13 +122,17 @@ const tagCounts = new Map(
 
     <RelatedPosts currentSlug={post.slug} currentTags={tags} posts={posts} />
 
-    <div class="support-share-row">
-      <ShareLinks />
+    <div class="support-cta">
+      <p class="support-cta-text">Enjoyed this post?</p>
       <div class="flex items-center gap-4">
         <SupportButton />
         <BuyMeCoffeeButton />
-        <BackToTopButton />
       </div>
+    </div>
+
+    <div class="support-share-row">
+      <ShareLinks />
+      <BackToTopButton />
     </div>
     <hr class="my-6 border-dashed" />
     <!-- Previous/Next Post Buttons -->
@@ -250,8 +254,14 @@ const tagCounts = new Map(
       #article > :global(p:first-of-type::first-letter) {
         @apply font-serif float-left text-5xl font-bold leading-none mr-2 mt-1 text-skin-accent;
       }
+      .support-cta {
+        @apply mt-8 flex flex-col items-center gap-3;
+      }
+      .support-cta-text {
+        @apply text-sm font-medium italic text-skin-base opacity-80;
+      }
       .support-share-row {
-        @apply mt-8 flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between;
+        @apply mt-6 flex flex-col items-center gap-6 sm:flex-row sm:justify-center;
       }
     </style>
 
