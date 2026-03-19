@@ -4,17 +4,17 @@ export interface Props {
 }
 
 const { className = '' } = Astro.props;
-const SUPPORT_URL = 'https://github.com/sponsors/amandeepmittal';
+const BMC_URL = 'https://buymeacoffee.com/tfgf99ubc6';
 ---
 
 <a
-  href={SUPPORT_URL}
+  href={BMC_URL}
   target="_blank"
   rel="noreferrer"
-  class={`support-link focus-outline ${className}`.trim()}
-  aria-label="Support me on GitHub Sponsors"
+  class={`bmc-link focus-outline ${className}`.trim()}
+  aria-label="Buy me a coffee"
 >
-  <span>Sponsor</span>
+  <span>Buy me a coffee</span>
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 24 24"
@@ -28,11 +28,11 @@ const SUPPORT_URL = 'https://github.com/sponsors/amandeepmittal';
 </a>
 
 <style>
-  .support-link {
+  .bmc-link {
     @apply inline-flex items-center gap-2 whitespace-nowrap rounded-md border border-skin-line px-3 py-1 text-sm font-semibold text-skin-accent transition-colors hover:border-skin-accent;
   }
 
-  .support-link svg {
+  .bmc-link svg {
     @apply h-5 w-5 fill-current;
   }
 </style>

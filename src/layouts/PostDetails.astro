@@ -9,6 +9,7 @@ import type { CollectionEntry } from 'astro:content';
 import { slugifyStr } from '@utils/slugify';
 import ShareLinks from '@components/ShareLinks.astro';
 import SupportButton from '@components/SupportButton.astro';
+import BuyMeCoffeeButton from '@components/BuyMeCoffeeButton.astro';
 import RelatedPosts from '@components/RelatedPosts.astro';
 import SponsorBanner from '@components/SponsorBanner.astro';
 import { SITE } from '@config';
@@ -125,6 +126,7 @@ const tagCounts = new Map(
       <ShareLinks />
       <div class="flex items-center gap-4">
         <SupportButton />
+        <BuyMeCoffeeButton />
         <BackToTopButton />
       </div>
     </div>
