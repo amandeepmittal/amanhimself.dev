@@ -2,6 +2,7 @@
 
 > I'm Aman Mittal (@amanhimself). Software Developer and Tech Writer. Welcome to my blog!
 
+- [My Starship prompt setup](https://amanhimself.dev/blog/starship-prompt-setup/)
 - [Color-coding my Claude Code sessions](https://amanhimself.dev/blog/color-coding-claude-code-sessions/)
 - [TIL Remotely accessing one MacBook from another MacBook](https://amanhimself.dev/blog/remotely-access-macbook-from-another-macbook/)
 - [Using Ghostty for the first time](https://amanhimself.dev/blog/using-ghostty/)
