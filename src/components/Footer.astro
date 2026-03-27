@@ -17,6 +17,38 @@ const staticQuestHost = encodeURIComponent('amanhimself.dev/');
 
 <footer class={`${noMarginTop ? '' : 'mt-auto'}`}>
   <Hr noPadding />
+
+  <nav class="footer-nav" aria-label="Footer navigation">
+    <a href="/about" class="footer-btn">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="footer-btn-icon" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><circle cx="12" cy="7" r="4"/><path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2"/></svg>
+      About
+    </a>
+    <a href="/now" class="footer-btn">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="footer-btn-icon" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+      Now
+    </a>
+    <a href="/blog" class="footer-btn">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="footer-btn-icon" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 20h4l10.5 -10.5a1.5 1.5 0 0 0 -4 -4l-10.5 10.5v4"/><line x1="13.5" y1="6.5" x2="17.5" y2="10.5"/></svg>
+      Blog
+    </a>
+    <a href="/projects" class="footer-btn">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="footer-btn-icon" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><polyline points="12 3 20 7.5 20 16.5 12 21 4 16.5 4 7.5 12 3"/><line x1="12" y1="12" x2="20" y2="7.5"/><line x1="12" y1="12" x2="12" y2="21"/><line x1="12" y1="12" x2="4" y2="7.5"/></svg>
+      Projects
+    </a>
+    <a href="/tags" class="footer-btn">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="footer-btn-icon" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><circle cx="8.5" cy="8.5" r="1" fill="currentColor"/><path d="M4 7v3.859c0 .537 .213 1.052 .593 1.432l8.116 8.116a2.025 2.025 0 0 0 2.864 0l4.834 -4.834a2.025 2.025 0 0 0 0 -2.864l-8.117 -8.116a2.025 2.025 0 0 0 -1.431 -.593h-3.859a3 3 0 0 0 -3 3z"/></svg>
+      Tags
+    </a>
+    <a href="/links" class="footer-btn">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="footer-btn-icon" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5"/><path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5"/></svg>
+      Links
+    </a>
+    <a href="/rss.xml" class="footer-btn" target="_blank">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="footer-btn-icon" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><circle cx="5" cy="19" r="1"/><path d="M4 4a16 16 0 0 1 16 16"/><path d="M4 11a9 9 0 0 1 9 9"/></svg>
+      RSS
+    </a>
+  </nav>
+
   <div class="footer-wrapper">
     <Socials centered />
     <div class="copyright-wrapper opacity-80 text-sm">
@@ -72,5 +104,22 @@ const staticQuestHost = encodeURIComponent('amanhimself.dev/');
   }
   .webring-arrow {
     @apply text-base no-underline;
+  }
+
+  /* Footer navigation buttons */
+  .footer-nav {
+    @apply flex flex-wrap items-center justify-center gap-3 py-8;
+  }
+  .footer-btn {
+    @apply inline-flex items-center gap-1.5 rounded-full border border-skin-line px-4 py-1.5 text-sm text-skin-base no-underline opacity-70 transition-all duration-200;
+  }
+  .footer-btn:hover {
+    @apply border-skin-accent bg-skin-accent text-skin-inverted opacity-100;
+  }
+  .footer-btn-icon {
+    @apply inline-block flex-shrink-0 fill-transparent stroke-current;
+    height: 18px;
+    width: 18px;
+    stroke-width: 1.5;
   }
 </style>
