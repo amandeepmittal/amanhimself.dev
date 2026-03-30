@@ -8,6 +8,7 @@ draft: false
 tags:
   - ai
   - cli
+  - claude-code
 description: ''
 ---
 

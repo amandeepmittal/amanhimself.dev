@@ -8,6 +8,7 @@ draft: false
 tags:
   - ai
   - obsidian
+  - codex
 description: 'Using Codex CLI  beyond coding, for Obsidian note management, and building automated workflows with MCP servers.'
 ---
 
