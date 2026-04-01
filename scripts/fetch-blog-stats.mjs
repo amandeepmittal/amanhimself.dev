@@ -74,20 +74,36 @@ await page.waitForTimeout(5000);
 const bodyText = await page.evaluate(() => document.body.innerText);
 const lines = bodyText.split('\n').map(l => l.trim()).filter(Boolean);
 
-let visitors = 0;
-let pageviews = 0;
-
-for (let i = 0; i < lines.length; i++) {
-  if (lines[i] === 'Site visitors' && i > 0) {
-    visitors = parseStatNumber(lines[i - 1]);
+// Search a window of lines around each label to find the stat number,
+// since Fathom UI rebuilds can shift the number above or below the label.
+function findStatNear(lines, label) {
+  for (let i = 0; i < lines.length; i++) {
+    if (lines[i].toLowerCase() === label.toLowerCase()) {
+      const window = 3;
+      for (let offset = 1; offset <= window; offset++) {
+        if (i - offset >= 0) {
+          const val = parseStatNumber(lines[i - offset]);
+          if (val > 0) return val;
+        }
+        if (i + offset < lines.length) {
+          const val = parseStatNumber(lines[i + offset]);
+          if (val > 0) return val;
+        }
+      }
+    }
   }
-  if (lines[i] === 'Pageviews' && i > 0) {
-    pageviews = parseStatNumber(lines[i - 1]);
-  }
+  return 0;
 }
 
-if (!visitors && !pageviews) {
-  console.error('Failed to extract all-time stats.');
+let visitors = findStatNear(lines, 'Site visitors');
+let pageviews = findStatNear(lines, 'Pageviews');
+
+if (!visitors || !pageviews) {
+  console.error(
+    `Failed to extract all-time stats (visitors=${visitors}, pageviews=${pageviews}).`
+  );
+  console.error('Debug: first 30 lines of page text:');
+  lines.slice(0, 30).forEach((l, i) => console.error(`  [${i}] ${l}`));
   await browser.close();
   process.exit(1);
 }
