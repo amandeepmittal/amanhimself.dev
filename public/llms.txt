@@ -2,6 +2,7 @@
 
 > I'm Aman Mittal (@amanhimself). Software Developer and Tech Writer. Welcome to my blog!
 
+- [Week notes 15](https://amanhimself.dev/blog/week-notes-15/)
 - [Week notes 14](https://amanhimself.dev/blog/week-notes-14/)
 - [Docs discoverability layers](https://amanhimself.dev/blog/docs-discoverability-layers/)
 - [My Starship prompt setup](https://amanhimself.dev/blog/starship-prompt-setup/)
