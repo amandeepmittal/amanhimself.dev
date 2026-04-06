@@ -78,7 +78,7 @@ JSON-LD adds semantic understanding to each indexed page. It doesn't help a page
   canonical URL         WebSite             llms.txt index
   robots rules          Organization        llms-full.txt
   meta description      TechArticle         per-page index.md
-  OG/Twitter            BreadcrumbList      Accept: text/markdown                                 ...
+  OG/Twitter            BreadcrumbList      Accept: text/markdown
 ```
 
 
