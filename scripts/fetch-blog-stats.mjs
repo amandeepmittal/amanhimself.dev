@@ -10,7 +10,7 @@
 // Usage: node scripts/fetch-blog-stats.mjs
 
 import { createRequire } from 'node:module';
-import { writeFile } from 'node:fs/promises';
+import { readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { execSync } from 'node:child_process';
 
@@ -194,6 +194,22 @@ for (const p of mostRead365Parsed) {
 }
 
 await browser.close();
+
+// Only update blogStats.json when all-time totals have increased.
+// Fathom revises historical data (bot filtering) and its abbreviated display
+// values (e.g. "834.3k") lose precision when scraped, so freshly scraped
+// totals can be lower than a previous run.
+let existing = { pageviews: 0, visitors: 0 };
+try {
+  existing = JSON.parse(await readFile(outputPath, 'utf-8'));
+} catch {}
+
+if (pageviews < existing.pageviews || visitors < existing.visitors) {
+  console.log(
+    `\nAll-time totals regressed (pageviews: ${existing.pageviews} -> ${pageviews}, visitors: ${existing.visitors} -> ${visitors}). Skipping update.`
+  );
+  process.exit(0);
+}
 
 const stats = {
   pageviews,
