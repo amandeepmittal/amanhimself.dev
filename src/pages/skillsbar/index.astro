@@ -3,15 +3,15 @@ import Layout from '@layouts/Layout.astro';
 ---
 
 <Layout
-  title="SkillsBar - Browse Claude Code & Codex Skills from the Menu Bar"
-  description="A macOS menu bar app for browsing and managing your Claude Code and Codex CLI skills and agents. Search, pin, track usage, and manage skills without leaving your workflow."
+  title="SkillsBar - Browse Claude Code, Codex, and Collections from the Menu Bar"
+  description="A macOS menu bar app for browsing and managing your Claude Code and Codex CLI skills, collections, and agents. Search, pin, group related skills, track usage, and manage everything without leaving your workflow."
 >
   <main class="page-wrap">
     <!-- Header -->
     <header class="top">
       <div class="brand">
         <h1 class="brand-title">SkillsBar</h1>
-        <p class="brand-tagline">Claude Code and Codex CLI skills in the menu bar.</p>
+        <p class="brand-tagline">Claude Code and Codex CLI skills, collections, and agents in the menu bar.</p>
       </div>
       <nav class="nav-links">
         <a class="btn primary" href="https://github.com/amandeepmittal/skillsbar/releases/latest">Download</a>
@@ -35,7 +35,7 @@ import Layout from '@layouts/Layout.astro';
           <img class="hero-icon" src="/skillsbar-icon.png" alt="" aria-hidden="true" width="40" height="40" />
           <div>
             <h2>Your skills, always visible.</h2>
-            <p>Browse, search, pin, and track usage of your Claude Code and Codex CLI skills and agents from a lightweight menu bar popover.</p>
+            <p>Browse, search, pin, group, and track usage of your Claude Code and Codex CLI skills and agents from a lightweight menu bar popover.</p>
           </div>
         </div>
         <div class="cta">
@@ -46,14 +46,15 @@ import Layout from '@layouts/Layout.astro';
           </a>
         </div>
         <ul class="bullets">
-          <li>Tabbed browsing with count badges for Claude Code and Codex skills.</li>
-          <li>Search and filter skills by name or description.</li>
+          <li>Tabbed browsing with count badges for Claude Code, Codex, and Collections.</li>
+          <li>Search and filter skills and collections by name or description.</li>
           <li>Pin frequently used skills to the top of each tab.</li>
+          <li>Create custom collections that mix Claude Code and Codex skills for repeatable workflows.</li>
           <li>Usage stats from Claude Code and Codex history.</li>
           <li>"New" badge for skills modified in the last 24 hours.</li>
-          <li>Detail view with metadata, trigger command, and file listing.</li>
+          <li>Detail view with metadata, collection membership, trigger command, and file listing.</li>
           <li>Full content preview of raw SKILL.md body.</li>
-          <li>Right-click context menu for pin, open, copy, and delete.</li>
+          <li>Right-click context menu for pin, add to collections, open, copy, and delete.</li>
           <li>Agent browsing for sub-agents with model and tools metadata.</li>
           <li>Global hotkey <code>Option+Shift+S</code> to toggle from anywhere.</li>
           <li>Live updates via FSEvents directory watcher.</li>
@@ -101,9 +102,9 @@ import Layout from '@layouts/Layout.astro';
         </p>
       </div>
       <div class="card">
-        <h3>Quick actions</h3>
+        <h3>Collections</h3>
         <p>
-          Open in VS Code, open in default editor, copy path, reveal in Finder, or delete directly from the list.
+          Create custom groups that mix Claude Code and Codex skills in one view for repeatable workflows like docs, releases, or debugging.
         </p>
       </div>
     </div>
@@ -117,16 +118,20 @@ import Layout from '@layouts/Layout.astro';
             <figcaption>Codex tab</figcaption>
           </figure>
           <figure class="shot">
-            <img src="/skillsbar-dark-mode.png" alt="Dark mode" />
-            <figcaption>Dark mode</figcaption>
-          </figure>
-          <figure class="shot">
             <img src="/skillsbar-detail-view.png" alt="Skill detail view" />
             <figcaption>Detail view</figcaption>
           </figure>
           <figure class="shot">
             <img src="/skillsbar-usage-stats.png" alt="Usage statistics" />
             <figcaption>Usage stats</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="/skillsbar-collections-2.png" alt="Collections tab showing a custom skill collection" />
+            <figcaption>Collections</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="/skillsbar-collections-3.png" alt="Collection view mixing Claude Code and Codex skills" />
+            <figcaption>Mixed collections</figcaption>
           </figure>
         </div>
       </div>
