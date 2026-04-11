@@ -6,6 +6,7 @@ slug: replacing-rm-with-trash-in-claude-code
 featured: false
 draft: false
 tags:
+  - ai
   - claude-code
 description: ''
 ---
