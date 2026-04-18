@@ -11,6 +11,8 @@ tags:
 description: 'A guide on setting up Apple Macbook for daily work.'
 ---
 
+> A new version of this post is available at [My Mac setup](/blog/mac-setup/).
+
 ## A brief history of this guide
 
 I documented my entire setup when I first switched to a MacBook Pro with Apple Silicon in 2020. Since then, I have upgraded to two different Macbooks and made some changes and adjustments to my personal setup by adopting new tools and leaving the old ones behind.
