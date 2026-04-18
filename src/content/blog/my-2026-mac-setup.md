@@ -536,6 +536,12 @@ Currently, I am using the following tools from different providers:
 - Codex desktop app
 - LM Studio
 
+I keep syncing my personal skills for Claude Code and Codex CLI from `dotskills` repository. To set that up, open the terminal window, navigate to the `dotskills` directory, and run:
+
+```shell
+bash setup.sh
+```
+
 ## Wrap up
 
 These configurations and tools are what I am currently using on my Mac. It is a work in progress as I expect to make adjustments and changes to it over time.
