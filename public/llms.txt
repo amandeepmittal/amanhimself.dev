@@ -2,6 +2,7 @@
 
 > I'm Aman Mittal (@amanhimself). Software Developer and Tech Writer. Welcome to my blog!
 
+- [Playwright to Chrome](https://amanhimself.dev/blog/playwright-to-chrome/)
 - [My Mac setup](https://amanhimself.dev/blog/my-2026-mac-setup/)
 - [Week notes 16](https://amanhimself.dev/blog/week-notes-16/)
 - [Replacing rm command with trash in Claude Code](https://amanhimself.dev/blog/replacing-rm-command-with-trash-in-claude-code/)
