@@ -43,23 +43,23 @@ const socialCount = SOCIALS.filter(social => social.active).length;
       </a>
       <div class="hero-intro">
         <p class="flex">
-          Currently, working on documentation at Expo.
+          Currently, working on <mark class="highlight">documentation</mark> at <a href="https://expo.dev" target="_blank" rel="noopener noreferrer" class="dotted-link">Expo</a>.
           <p>
             I love crafting documentation and writing about programming. I've
             been writing about cross-platform mobile and web development since
             2017, with over 150 articles for 30+ publications.
           </p>
           <p>
-            Previously, worked as Developer Advocate at Draftbit, and Senior
-            Content Developer at Vercel.
+            Previously, worked as Developer Advocate at <a href="https://draftbit.com" target="_blank" rel="noopener noreferrer" class="dotted-link">Draftbit</a>, and Senior
+            Content Developer at <a href="https://vercel.com" target="_blank" rel="noopener noreferrer" class="dotted-link">Vercel</a>.
           </p>
           <p>
             See what I'm up to on my <a
               href="/now"
-              class="text-skin-accent underline">"/now"</a
+              class="dotted-link">"/now"</a
             > page or learn more about me on my <a
               href="/about"
-              class="text-skin-accent underline">"/about"</a
+              class="dotted-link">"/about"</a
             > page.
           </p>
         </p>
@@ -167,7 +167,23 @@ const socialCount = SOCIALS.filter(social => social.active).length;
       @apply my-4 inline-block font-serif text-3xl font-bold sm:my-8 sm:text-4xl;
     }
     .hero-intro {
-      @apply text-base;
+      @apply text-lg leading-relaxed;
+    }
+    .highlight {
+      background-image: linear-gradient(
+        to top,
+        rgba(var(--color-accent), 0.35) 28%,
+        transparent 28%
+      );
+      color: inherit;
+      font-weight: inherit;
+      padding: 0 1px;
+    }
+    .dotted-link {
+      @apply text-skin-accent;
+      text-decoration: underline dotted;
+      text-underline-offset: 3px;
+      text-decoration-thickness: 1.5px;
     }
     #hero .rss-link {
       @apply mb-6;
