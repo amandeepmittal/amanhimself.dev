@@ -73,8 +73,6 @@ const socialCount = SOCIALS.filter(social => social.active).length;
         }
       </div>
 
-      <Hr />
-
       <!-- {
         featuredPosts.length > 0 && (
           <>
@@ -97,13 +95,11 @@ const socialCount = SOCIALS.filter(social => social.active).length;
 
       <BlogStats />
 
-      <Hr />
-
       {
         recentPosts.length > 0 && (
           <section id="recent-posts">
             <h2>Recent Posts</h2>
-            <ul>
+            <ul class="mt-6">
               {recentPosts.map(
                 ({ data, slug }, index) =>
                   index < 15 && (
@@ -118,8 +114,6 @@ const socialCount = SOCIALS.filter(social => social.active).length;
           </section>
         )
       }
-
-      <Hr />
 
       <section id="projects">
         <h2>Projects</h2>

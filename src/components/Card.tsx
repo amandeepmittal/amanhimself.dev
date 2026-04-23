@@ -1,106 +1,69 @@
 import { slugifyStr } from '@utils/slugify';
-import Datetime from './Datetime';
+import { LOCALE } from '@config';
 import type { CollectionEntry } from 'astro:content';
 
 export interface Props {
   href?: string;
   frontmatter: CollectionEntry<'blog'>['data'];
   secHeading?: boolean;
-  showReadingTime?: boolean;
 }
 
-// export default function Card({ href, frontmatter, secHeading = true }: Props) {
-//   const { title, pubDatetime, modDatetime, description } = frontmatter;
+function formatListDate(
+  pubDatetime: string | Date,
+  modDatetime?: string | Date | null
+) {
+  const source =
+    modDatetime && modDatetime > pubDatetime ? modDatetime : pubDatetime;
+  const date = new Date(source);
+  if (isNaN(date.getTime())) return '';
+  return date.toLocaleDateString(LOCALE.langTag, {
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric'
+  });
+}
 
-//   const headerProps = {
-//     style: { viewTransitionName: slugifyStr(title) },
-//     className: 'text-lg font-medium decoration-solid hover:underline'
-//   };
-
-//   return (
-//     <li className="my-8">
-//       <a
-//         href={href}
-//         className="inline-block text-lg font-medium text-skin-accent decoration-dashed underline-offset-4 focus-visible:no-underline focus-visible:underline-offset-0"
-//       >
-//         {secHeading ? (
-//           <h2 {...headerProps}>{title}</h2>
-//         ) : (
-//           <h3 {...headerProps}>{title}</h3>
-//         )}
-//       </a>
-//       <Datetime pubDatetime={pubDatetime} modDatetime={modDatetime} />
-//       <p>{description}</p>
-//     </li>
-//   );
-// }
-
-export default function Card({
-  href,
-  frontmatter,
-  secHeading = true,
-  showReadingTime = false
-}: Props) {
-  // Add defensive checks to prevent toString() errors on undefined values
+export default function Card({ href, frontmatter, secHeading = true }: Props) {
   if (!frontmatter || !frontmatter.title) {
     console.warn('Card component received invalid frontmatter:', frontmatter);
     return null;
   }
 
-  const { title, pubDatetime, modDatetime, description, readingTime } =
-    frontmatter;
+  const { title, pubDatetime, modDatetime } = frontmatter;
   const showDraftBadge = import.meta.env.DEV && Boolean(frontmatter.draft);
+  const formattedDate = formatListDate(pubDatetime, modDatetime);
+  const isoDate = new Date(pubDatetime).toISOString();
 
   const headerProps = {
     style: { viewTransitionName: slugifyStr(title) },
-    className: 'text-lg font-medium decoration-solid hover:underline'
+    className: 'text-base font-medium'
   };
 
   return (
-    <li className="my-8">
-      <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
-        <div className="flex flex-wrap items-center gap-2">
-          <a
-            href={href}
-            className="inline-block text-lg font-medium text-skin-accent decoration-solid underline-offset-4 focus-visible:no-underline focus-visible:underline-offset-0"
-          >
-            {secHeading ? (
-              <h2 {...headerProps}>{title}</h2>
-            ) : (
-              <h3 {...headerProps}>{title}</h3>
-            )}
-          </a>
+    <li className="border-b border-dashed border-skin-line">
+      <a
+        href={href}
+        className="grid grid-cols-[5.5rem_1fr] items-baseline gap-4 py-3 transition-colors hover:text-skin-accent sm:grid-cols-[7rem_1fr] sm:gap-6"
+      >
+        <time
+          dateTime={isoDate}
+          className="whitespace-nowrap font-mono text-xs tabular-nums text-skin-base opacity-50"
+        >
+          {formattedDate}
+        </time>
+        <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1">
+          {secHeading ? (
+            <h2 {...headerProps}>{title}</h2>
+          ) : (
+            <h3 {...headerProps}>{title}</h3>
+          )}
           {showDraftBadge && (
             <span className="rounded bg-skin-accent/15 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-skin-accent">
               Draft
             </span>
           )}
         </div>
-        <div className="sm:ml-4 sm:shrink-0">
-          <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
-            <Datetime
-              pubDatetime={pubDatetime}
-              modDatetime={modDatetime}
-              size="xs"
-              className="text-skin-base opacity-60"
-            />
-            {showReadingTime && readingTime && (
-              <>
-                <span
-                  aria-hidden="true"
-                  className="text-xs text-skin-base opacity-60"
-                >
-                  &bull;
-                </span>
-                <span className="text-xs italic text-skin-base opacity-60">
-                  {readingTime}
-                </span>
-              </>
-            )}
-          </div>
-        </div>
-      </div>
-      <p className="mt-1 text-sm text-skin-base opacity-60">{description || ''}</p>
+      </a>
     </li>
   );
 }

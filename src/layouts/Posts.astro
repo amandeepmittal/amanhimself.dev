@@ -37,10 +37,10 @@ const paginatedPostsWithRT = await getPostsWithRT(paginatedPosts);
     <ul>
       {tags.map(({ tag, count }) => <Tag {tag} count={count} size="sm" />)}
     </ul>
-    <ul>
+    <ul class="mt-8">
       {
         paginatedPostsWithRT.map(({ data, slug }) => (
-          <Card href={`/blog/${slug}/`} frontmatter={data} showReadingTime />
+          <Card href={`/blog/${slug}/`} frontmatter={data} />
         ))
       }
     </ul>
