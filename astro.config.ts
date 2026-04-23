@@ -30,8 +30,8 @@ export default defineConfig({
     ],
     shikiConfig: {
       themes: {
-        light: 'vitesse-light',
-        dark: 'vitesse-dark'
+        light: 'slack-ochin',
+        dark: 'poimandres'
       },
       wrap: true,
       transformers: []

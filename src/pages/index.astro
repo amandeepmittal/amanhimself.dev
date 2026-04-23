@@ -55,10 +55,10 @@ const socialCount = SOCIALS.filter(social => social.active).length;
           <p>
             See what I'm up to on my <a
               href="/now"
-              class="text-amber-700 dark:text-amber-500 underline">"/now"</a
+              class="text-skin-accent underline">"/now"</a
             > page or learn more about me on my <a
               href="/about"
-              class="text-amber-700 dark:text-amber-500 underline">"/about"</a
+              class="text-skin-accent underline">"/about"</a
             > page.
           </p>
         </p>
@@ -152,14 +152,14 @@ const socialCount = SOCIALS.filter(social => social.active).length;
       @apply mb-6;
     }
     #hero .rss-icon {
-      @apply mb-2 h-6 w-6 scale-110 fill-current text-[#ee802f] sm:mb-3 sm:scale-125;
+      @apply mb-2 h-6 w-6 scale-110 fill-skin-accent sm:mb-3 sm:scale-125;
     }
     #hero p {
       @apply my-2;
     }
     .username {
-      background-color: #b45a2b; /* Terracotta accent */
-      color: #ffffff; /* White text */
+      background-color: rgb(var(--color-accent));
+      color: #ffffff;
       padding: 5px 10px;
       display: inline-block;
       font-weight: bold;

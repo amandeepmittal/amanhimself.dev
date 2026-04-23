@@ -71,7 +71,7 @@ export default function Card({
             )}
           </a>
           {showDraftBadge && (
-            <span className="rounded bg-amber-100 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-amber-800">
+            <span className="rounded bg-skin-accent/15 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-skin-accent">
               Draft
             </span>
           )}
