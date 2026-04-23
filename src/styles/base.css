@@ -9,17 +9,17 @@
     --color-fill: 250, 249, 245;           /* #faf9f5 tolaria cream */
     --color-text-base: 26, 26, 24;         /* #1a1a18 tolaria text */
     --color-accent: 21, 93, 255;           /* #155dff saturated blue */
-    --color-card: 242, 240, 232;           /* #f2f0e8 card */
-    --color-card-muted: 246, 244, 237;     /* #f6f4ed muted */
-    --color-border: 230, 226, 214;         /* #e6e2d6 border */
+    --color-card: 232, 238, 250;           /* #e8eefa blue-tinted card */
+    --color-card-muted: 240, 244, 252;     /* #f0f4fc softer blue tint */
+    --color-border: 212, 222, 240;         /* #d4def0 cool border */
   }
   html[data-theme='dark'] {
     --color-fill: 34, 39, 46;             /* #22272e github dark dimmed */
     --color-text-base: 205, 217, 229;     /* #cdd9e5 dimmed text */
     --color-accent: 121, 156, 255;        /* #799cff softer blue for mid-dark */
-    --color-card: 45, 51, 59;             /* #2d333b card */
-    --color-card-muted: 55, 62, 71;       /* #373e47 muted */
-    --color-border: 68, 76, 86;           /* #444c56 border */
+    --color-card: 40, 49, 66;             /* #283142 blue-tinted card */
+    --color-card-muted: 50, 60, 78;       /* #323c4e deeper blue tint */
+    --color-border: 64, 78, 102;          /* #404e66 cool border */
   }
   #sun-svg,
   html[data-theme='dark'] #moon-svg {

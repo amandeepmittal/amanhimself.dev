@@ -159,7 +159,8 @@ const missing = PROJECTS.filter(name => !byName.has(name));
     @apply mt-6 grid grid-cols-1 gap-4;
   }
   .app-card {
-    @apply rounded-lg border border-skin-line bg-skin-card transition-all hover:border-skin-accent;
+    @apply rounded-lg border border-skin-line transition-all hover:border-skin-accent;
+    background-image: linear-gradient(to right, rgb(var(--color-card)) 0%, rgb(var(--color-fill)) 45%);
   }
   .app-link {
     @apply flex items-center gap-4 p-4 no-underline;

@@ -35,7 +35,8 @@ function formatNumber(num: number): string {
 
 <style>
   .blog-stats-card {
-    @apply mt-4 flex rounded-lg border border-skin-line bg-skin-card p-6 no-underline transition-all hover:border-skin-accent;
+    @apply mt-4 flex rounded-lg border border-skin-line p-6 no-underline transition-all hover:border-skin-accent;
+    background-image: linear-gradient(to right, rgb(var(--color-card)) 0%, rgb(var(--color-fill)) 45%);
   }
   .blog-stats-content {
     @apply flex flex-col gap-3;

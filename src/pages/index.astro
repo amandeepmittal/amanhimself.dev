@@ -216,7 +216,8 @@ const socialCount = SOCIALS.filter(social => social.active).length;
       @apply mt-6 grid list-none grid-cols-1 gap-3 p-0 sm:grid-cols-3;
     }
     .project-card {
-      @apply flex h-full items-center gap-3 rounded-lg border border-skin-line bg-skin-card px-4 py-3 no-underline transition-colors hover:border-skin-accent;
+      @apply flex h-full items-center gap-3 rounded-lg border border-skin-line px-4 py-3 no-underline transition-colors hover:border-skin-accent;
+      background-image: linear-gradient(to right, rgb(var(--color-card)) 0%, rgb(var(--color-fill)) 45%);
     }
     .project-icon {
       @apply h-10 w-10 shrink-0 rounded-[10px];
