@@ -42,26 +42,20 @@ const socialCount = SOCIALS.filter(social => social.active).length;
         <span class="sr-only">RSS Feed</span>
       </a>
       <div class="hero-intro">
-        <p class="flex">
+        <p>
           Currently, working on <mark class="highlight">documentation</mark> at <a href="https://expo.dev" target="_blank" rel="noopener noreferrer" class="dotted-link">Expo</a>.
-          <p>
-            I love crafting documentation and writing about programming. I've
-            been writing about cross-platform mobile and web development since
-            2017, with over 150 articles for 30+ publications.
-          </p>
-          <p>
-            Previously, worked as Developer Advocate at <a href="https://draftbit.com" target="_blank" rel="noopener noreferrer" class="dotted-link">Draftbit</a>, and Senior
-            Content Developer at <a href="https://vercel.com" target="_blank" rel="noopener noreferrer" class="dotted-link">Vercel</a>.
-          </p>
-          <p>
-            See what I'm up to on my <a
-              href="/now"
-              class="dotted-link">"/now"</a
-            > page or learn more about me on my <a
-              href="/about"
-              class="dotted-link">"/about"</a
-            > page.
-          </p>
+        </p>
+        <p>
+          I love crafting documentation and writing about programming. I've
+          been writing about cross-platform mobile and web development since
+          2017, with over 150 articles for 30+ publications.
+        </p>
+        <p>
+          Previously, worked as Developer Advocate at <a href="https://draftbit.com" target="_blank" rel="noopener noreferrer" class="dotted-link">Draftbit</a>, and Senior
+          Content Developer at <a href="https://vercel.com" target="_blank" rel="noopener noreferrer" class="dotted-link">Vercel</a>.
+        </p>
+        <p>
+          See what I'm up to on my <a href="/now" class="dotted-link">"/now"</a> page or learn more about me on my <a href="/about" class="dotted-link">"/about"</a> page.
         </p>
         {
           // only display if at least one social link is enabled
@@ -170,6 +164,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
       @apply text-lg leading-relaxed;
     }
     .highlight {
+      background-color: transparent;
       background-image: linear-gradient(
         to top,
         rgba(var(--color-accent), 0.35) 28%,
