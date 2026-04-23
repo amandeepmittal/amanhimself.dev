@@ -41,7 +41,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
         </svg>
         <span class="sr-only">RSS Feed</span>
       </a>
-      <div class="text-lg">
+      <div class="hero-intro">
         <p class="flex">
           Currently, working on documentation at Expo.
           <p>
@@ -166,6 +166,9 @@ const socialCount = SOCIALS.filter(social => social.active).length;
     #hero h1 {
       @apply my-4 inline-block font-serif text-3xl font-bold sm:my-8 sm:text-4xl;
     }
+    .hero-intro {
+      @apply text-base;
+    }
     #hero .rss-link {
       @apply mb-6;
     }
@@ -178,10 +181,12 @@ const socialCount = SOCIALS.filter(social => social.active).length;
     .username {
       background-color: rgb(var(--color-accent));
       color: #ffffff;
-      padding: 5px 10px;
+      padding: 3px 8px;
       display: inline-block;
-      font-weight: bold;
+      font-size: 1rem;
+      font-weight: 600;
       border-radius: 5px;
+      vertical-align: middle;
     }
     .social-wrapper {
       @apply mt-4 flex flex-col sm:flex-row sm:items-center;
