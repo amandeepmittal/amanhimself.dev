@@ -22,20 +22,20 @@ function formatNumber(num: number): string {
       2019. You'll find posts about React Native, Expo, docs tooling, tech writing,
       LLMs, and more.
     </p>
-    <div class="blog-stats-cta">
-      <span>Start reading the blog</span>
-      <svg xmlns="http://www.w3.org/2000/svg" class="blog-stats-arrow"
-        ><path
-          d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"
-        ></path>
-      </svg>
-    </div>
+  </div>
+  <div class="blog-stats-cta">
+    <span>Start reading the blog</span>
+    <svg xmlns="http://www.w3.org/2000/svg" class="blog-stats-arrow"
+      ><path
+        d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"
+      ></path>
+    </svg>
   </div>
 </a>
 
 <style>
   .blog-stats-card {
-    @apply mt-4 flex rounded-lg border border-skin-line p-6 no-underline transition-all hover:border-skin-accent;
+    @apply mt-14 flex flex-col items-start gap-5 rounded-lg border border-skin-line p-6 no-underline transition-all hover:border-skin-accent sm:flex-row sm:items-center sm:justify-between sm:gap-8;
     background-image: linear-gradient(to right, rgb(var(--color-card)) 0%, rgb(var(--color-fill)) 45%);
   }
   .blog-stats-content {
@@ -51,9 +51,9 @@ function formatNumber(num: number): string {
     @apply font-bold text-skin-accent;
   }
   .blog-stats-cta {
-    @apply mt-2 flex items-center gap-2 font-medium text-skin-accent;
+    @apply inline-flex shrink-0 items-center gap-2 rounded-full bg-skin-accent px-5 py-2.5 font-medium text-white transition-transform;
   }
   .blog-stats-arrow {
-    @apply h-6 w-6 fill-skin-accent transition-transform group-hover:translate-x-1;
+    @apply h-5 w-5 fill-white transition-transform group-hover:translate-x-1;
   }
 </style>
