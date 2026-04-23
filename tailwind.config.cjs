@@ -56,6 +56,7 @@ module.exports = {
       fontFamily: {
         sans: ["Helvetica Neue", "Arial", "Hiragino Kaku Gothic ProN", "Hiragino Sans", "BIZ UDPGothic", "Meiryo", "sans-serif"],
         serif: ["Source Serif 4", "Georgia", "Cambria", "Times New Roman", "Times", "serif"],
+        mono: ["IBM Plex Mono", "ui-monospace", "SFMono-Regular", "Menlo", "Monaco", "Consolas", "Liberation Mono", "Courier New", "monospace"],
       },
 
       typography: {

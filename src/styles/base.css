@@ -67,7 +67,7 @@
     prose-strong:!text-skin-base
 
     prose-code:rounded prose-code:bg-skin-card
-    prose-code:bg-opacity-75 prose-code:p-1
+    prose-code:bg-opacity-75 prose-code:p-1 prose-code:!font-mono prose-code:!font-normal
     prose-code:before:!content-none prose-code:after:!content-none
     prose-ol:!text-skin-base
     prose-ul:overflow-x-clip prose-ul:!text-skin-base prose-li:marker:!text-skin-accent
@@ -140,6 +140,13 @@
 
   code {
     font-size: 0.875em !important;
+    font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Monaco,
+      Consolas, "Liberation Mono", "Courier New", monospace !important;
+    font-weight: 400 !important;
+  }
+
+  pre code {
+    font-weight: inherit !important;
   }
 
   pre > code {
