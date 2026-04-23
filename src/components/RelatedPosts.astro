@@ -52,13 +52,20 @@ const relatedPosts = relatedPool.slice(0, 3);
     <h2 id="related-posts-title" class="related-title" data-no-anchor="true">
       Related posts
     </h2>
-    <ul>
+    <ul class="mt-6">
       {relatedPosts.map(({ slug, data }) => {
         const published = new Date(data.pubDatetime);
         return (
-          <li>
-            <a href={`/blog/${slug}/`}>{data.title}</a>
-            <span class="related-date">{formatter.format(published)}</span>
+          <li class="related-row">
+            <a href={`/blog/${slug}/`} class="related-link">
+              <time
+                datetime={published.toISOString()}
+                class="related-date"
+              >
+                {formatter.format(published)}
+              </time>
+              <span class="related-post-title">{data.title}</span>
+            </a>
           </li>
         );
       })}
@@ -75,19 +82,19 @@ const relatedPosts = relatedPool.slice(0, 3);
     @apply mb-4 text-xl font-semibold italic text-skin-base;
   }
 
-  .related-posts ul {
-    @apply flex flex-col gap-3;
+  .related-row {
+    @apply border-b border-dashed border-skin-line;
   }
 
-  .related-posts li {
-    @apply flex items-baseline justify-between gap-3;
-  }
-
-  .related-posts a {
-    @apply font-medium text-skin-accent hover:underline;
+  .related-link {
+    @apply grid grid-cols-[5.5rem_1fr] items-baseline gap-4 py-3 text-skin-base transition-colors hover:text-skin-accent sm:grid-cols-[7rem_1fr] sm:gap-6;
   }
 
   .related-date {
     @apply whitespace-nowrap font-mono text-xs tabular-nums text-skin-base opacity-50;
+  }
+
+  .related-post-title {
+    @apply text-base font-medium;
   }
 </style>
