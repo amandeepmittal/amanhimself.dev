@@ -6,7 +6,6 @@ interface DatetimesProps {
 }
 
 interface Props extends DatetimesProps {
-  size?: 'xs' | 'sm' | 'lg';
   className?: string;
 }
 

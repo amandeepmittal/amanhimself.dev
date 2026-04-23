@@ -101,12 +101,10 @@ const tagCounts = new Map(
       <Datetime
         pubDatetime={pubDatetime}
         modDatetime={modDatetime}
-        size="sm"
-        className="my-2"
       />
-      <span aria-hidden="true" class="text-skin-base opacity-80"> • </span>
-      <p class="text-sm text-skin-base opacity-80">{readingTime}</p>
-      <span aria-hidden="true" class="text-skin-base opacity-80"> • </span>
+      <span aria-hidden="true" class="font-mono text-xs text-skin-base opacity-50"> • </span>
+      <p class="font-mono text-xs tabular-nums text-skin-base opacity-50">{readingTime}</p>
+      <span aria-hidden="true" class="font-mono text-xs text-skin-base opacity-50"> • </span>
       <div class="text-sm text-skin-base opacity-80">
         <ul>
           {tags.map(tag => {
