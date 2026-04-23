@@ -36,7 +36,7 @@ function formatViews(views: number): string {
 <section class="activity-grid">
   {mostRead.length > 0 && (
     <div>
-      <h2 class="activity-heading">Most Read · Last 90 Days</h2>
+      <h2 class="activity-heading">Most Read <span class="activity-subheading">· Last 90 Days</span></h2>
       <ol class="activity-list">
         {mostRead.map((post, i) => (
           <li class="activity-item">
@@ -69,6 +69,9 @@ function formatViews(views: number): string {
   }
   .activity-heading {
     @apply mb-4 font-serif text-2xl font-semibold tracking-wide;
+  }
+  .activity-subheading {
+    @apply font-mono text-xs font-normal tracking-wide text-skin-base opacity-60;
   }
   .activity-list {
     @apply list-none p-0;
