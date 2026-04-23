@@ -119,18 +119,39 @@ const socialCount = SOCIALS.filter(social => social.active).length;
       <MostReadAndTopics />
 
       <section id="projects">
-        <h2>Projects</h2>
-        <a href="/projects/" class="projects-card">
-          <img src="/lasttimei-icon.png" alt="Last Time I App" class="project-icon" />
-          <img src="/skillsbar-icon.png" alt="SkillsBar App" class="project-icon" />
-          <img src="/muxbar-icon.png" alt="MuxBar App" class="project-icon" />
-          <span class="projects-link-text">View all projects</span>
-          <svg xmlns="http://www.w3.org/2000/svg" class="arrow-icon"
-            ><path
-              d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"
-            ></path>
-          </svg>
-        </a>
+        <div class="projects-header">
+          <h2>Projects</h2>
+          <a href="/projects/" class="all-projects-link">all projects →</a>
+        </div>
+        <ul class="projects-grid">
+          <li>
+            <a href="/lasttimei" class="project-card">
+              <img src="/lasttimei-icon.png" alt="Last Time I app icon" class="project-icon" />
+              <div class="project-meta">
+                <span class="project-name">Last Time I</span>
+                <span class="project-kind">iOS App</span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="/skillsbar" class="project-card">
+              <img src="/skillsbar-icon.png" alt="SkillsBar app icon" class="project-icon" />
+              <div class="project-meta">
+                <span class="project-name">SkillsBar</span>
+                <span class="project-kind">macOS Menubar</span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="/muxbar" class="project-card">
+              <img src="/muxbar-icon.png" alt="MuxBar app icon" class="project-icon" />
+              <div class="project-meta">
+                <span class="project-name">MuxBar</span>
+                <span class="project-kind">macOS Menubar</span>
+              </div>
+            </a>
+          </li>
+        </ul>
       </section>
     </section>
 
@@ -182,20 +203,32 @@ const socialCount = SOCIALS.filter(social => social.active).length;
     #projects {
       @apply pb-8 pt-14;
     }
+    .projects-header {
+      @apply flex items-baseline justify-between;
+    }
     #projects h2 {
       @apply font-serif text-2xl font-semibold tracking-wide;
     }
-    .projects-card {
-      @apply mt-4 flex items-center gap-4 rounded-lg border border-skin-line bg-skin-card p-4 no-underline transition-all hover:border-skin-accent;
+    .all-projects-link {
+      @apply font-mono text-xs text-skin-base opacity-60 transition-opacity hover:text-skin-accent hover:opacity-100;
+    }
+    .projects-grid {
+      @apply mt-6 grid list-none grid-cols-1 gap-3 p-0 sm:grid-cols-3;
+    }
+    .project-card {
+      @apply flex h-full items-center gap-3 rounded-lg border border-skin-line bg-skin-card px-4 py-3 no-underline transition-colors hover:border-skin-accent;
     }
     .project-icon {
-      @apply h-12 w-12 rounded-xl;
+      @apply h-10 w-10 shrink-0 rounded-[10px];
     }
-    .projects-link-text {
-      @apply flex-1 font-medium text-skin-accent;
+    .project-meta {
+      @apply flex min-w-0 flex-col;
     }
-    .arrow-icon {
-      @apply h-6 w-6 fill-skin-accent;
+    .project-name {
+      @apply font-serif text-base font-semibold text-skin-base;
+    }
+    .project-kind {
+      @apply font-mono text-[10px] uppercase tracking-widest text-skin-base opacity-50;
     }
   </style>
 </Layout>
