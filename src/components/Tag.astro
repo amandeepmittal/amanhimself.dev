@@ -8,29 +8,28 @@ export interface Props {
 const { tag, size = 'sm', count } = Astro.props;
 ---
 
-<li
-  class={`inline-block ${
-    size === 'sm' ? 'my-1 underline-offset-4' : 'my-3 mx-1 underline-offset-8'
-  }`}
->
+<li class="inline-block">
   <a
     href={`/tags/${tag}/`}
     transition:name={tag}
-    class={`${size === 'sm' ? 'text-sm' : 'text-lg'} pr-2 group`}
+    class={`tag-chip ${size === 'lg' ? 'tag-chip-lg' : ''}`}
   >
-    #<span>{tag}</span>
-    {typeof count === 'number' && <span class="count"> ({count})</span>}
+    <span class="tag-name">#{tag}</span>
+    {typeof count === 'number' && <span class="tag-count">{count}</span>}
   </a>
-
-  <style>
-    a {
-      @apply relative underline decoration-solid hover:-top-0.5 hover:text-skin-accent focus-visible:p-1;
-    }
-    a svg {
-      @apply -mr-5 h-6 w-6 scale-95 text-skin-base opacity-80 group-hover:fill-skin-accent;
-    }
-    .count {
-      @apply text-xs align-baseline opacity-75;
-    }
-  </style>
 </li>
+
+<style>
+  .tag-chip {
+    @apply inline-flex items-center gap-1.5 rounded-full border border-skin-line px-2.5 py-0.5 font-mono text-xs text-skin-base transition-colors hover:border-skin-accent hover:text-skin-accent;
+  }
+  .tag-chip-lg {
+    @apply px-3 py-1 text-sm;
+  }
+  .tag-name {
+    @apply tabular-nums;
+  }
+  .tag-count {
+    @apply tabular-nums opacity-50;
+  }
+</style>

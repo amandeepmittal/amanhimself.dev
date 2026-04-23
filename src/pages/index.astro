@@ -5,6 +5,7 @@ import Header from '@components/Header.astro';
 import Footer from '@components/Footer.astro';
 import Hr from '@components/Hr.astro';
 import BlogStats from '@components/BlogStats.astro';
+import MostReadAndTopics from '@components/MostReadAndTopics.astro';
 import Card from '@components/Card';
 import Socials from '@components/Socials.astro';
 import getSortedPosts from '@utils/getSortedPosts';
@@ -114,6 +115,8 @@ const socialCount = SOCIALS.filter(social => social.active).length;
           </section>
         )
       }
+
+      <MostReadAndTopics />
 
       <section id="projects">
         <h2>Projects</h2>

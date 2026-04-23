@@ -1,0 +1,94 @@
+---
+import { getCollection } from 'astro:content';
+import { publishedPostFilter } from '@utils/postFilter';
+import getUniqueTags from '@utils/getUniqueTags';
+import Tag from '@components/Tag.astro';
+import blogStats from '@data/blogStats.json';
+
+const posts = await getCollection('blog');
+const publishedPosts = posts.filter(publishedPostFilter);
+const slugToPost = new Map(publishedPosts.map(p => [p.slug, p.data]));
+
+const mostRead = (blogStats.mostRead ?? [])
+  .filter(p => slugToPost.has(p.slug))
+  .slice(0, 5)
+  .map(p => ({
+    slug: p.slug,
+    title: slugToPost.get(p.slug)!.title,
+    views: p.views
+  }));
+
+const excludedTags = new Set(['ionic']);
+const topTags = getUniqueTags(publishedPosts)
+  .filter(t => !excludedTags.has(t.tag))
+  .sort((a, b) => b.count - a.count)
+  .slice(0, 10);
+
+function formatViews(views: number): string {
+  if (views >= 1000) {
+    const k = views / 1000;
+    return `${k % 1 === 0 ? k.toFixed(0) : k.toFixed(1)}k`;
+  }
+  return views.toString();
+}
+---
+
+<section class="activity-grid">
+  {mostRead.length > 0 && (
+    <div>
+      <h2 class="activity-heading">Most Read · Last 90 Days</h2>
+      <ol class="activity-list">
+        {mostRead.map((post, i) => (
+          <li class="activity-item">
+            <a href={`/blog/${post.slug}/`} class="activity-row">
+              <span class="activity-index">{String(i + 1).padStart(2, '0')}</span>
+              <span class="activity-title">{post.title}</span>
+              <span class="activity-views">{formatViews(post.views)}</span>
+            </a>
+          </li>
+        ))}
+      </ol>
+    </div>
+  )}
+
+  {topTags.length > 0 && (
+    <div>
+      <h2 class="activity-heading">Topics</h2>
+      <ul class="topic-list">
+        {topTags.map(({ tag, count }) => (
+          <Tag tag={tag} count={count} size="sm" />
+        ))}
+      </ul>
+    </div>
+  )}
+</section>
+
+<style>
+  .activity-grid {
+    @apply grid grid-cols-1 gap-10 pb-8 pt-14 sm:grid-cols-[minmax(0,1.5fr)_minmax(0,1fr)] sm:gap-12;
+  }
+  .activity-heading {
+    @apply mb-4 font-mono text-xs uppercase tracking-widest text-skin-base opacity-60;
+  }
+  .activity-list {
+    @apply list-none p-0;
+  }
+  .activity-item {
+    @apply border-b border-dashed border-skin-line last:border-b-0;
+  }
+  .activity-row {
+    @apply grid grid-cols-[2rem_1fr_auto] items-baseline gap-3 py-3 text-skin-base transition-colors hover:text-skin-accent;
+  }
+  .activity-index {
+    @apply font-mono text-xs tabular-nums opacity-50;
+  }
+  .activity-title {
+    @apply font-serif text-base;
+  }
+  .activity-views {
+    @apply font-mono text-xs tabular-nums opacity-50;
+  }
+  .topic-list {
+    @apply flex flex-wrap gap-2 p-0;
+  }
+</style>
