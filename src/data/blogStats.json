@@ -1,14 +1,14 @@
 {
-  "pageviews": 844600,
-  "visitors": 658700,
+  "pageviews": 847000,
+  "visitors": 660300,
   "mostRead": [
     {
       "slug": "first-few-days-with-codex-cli",
-      "views": 10400
+      "views": 10200
     },
     {
       "slug": "running-headless-codex-cli-inside-claude-code",
-      "views": 3100
+      "views": 3200
     },
     {
       "slug": "stash-changes-with-vscode",
@@ -16,25 +16,25 @@
     },
     {
       "slug": "using-images-in-claude-code",
-      "views": 1400
+      "views": 1500
     },
     {
       "slug": "codex-tokens-usage",
-      "views": 1300
+      "views": 1400
     }
   ],
   "mostRead365": [
     {
-      "slug": "stash-changes-with-vscode",
-      "views": 11500
+      "slug": "first-few-days-with-codex-cli",
+      "views": 11700
     },
     {
-      "slug": "first-few-days-with-codex-cli",
+      "slug": "stash-changes-with-vscode",
       "views": 11200
     },
     {
       "slug": "running-headless-codex-cli-inside-claude-code",
-      "views": 3100
+      "views": 3200
     },
     {
       "slug": "macbook-setup-2024",
@@ -45,5 +45,5 @@
       "views": 2800
     }
   ],
-  "updatedAt": "2026-04-17"
+  "updatedAt": "2026-04-24"
 }
