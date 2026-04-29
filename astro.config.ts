@@ -30,7 +30,7 @@ export default defineConfig({
     ],
     shikiConfig: {
       themes: {
-        light: 'slack-ochin',
+        light: 'github-light',
         dark: 'poimandres'
       },
       wrap: true,
