@@ -4,14 +4,14 @@ import Layout from '@layouts/Layout.astro';
 
 <Layout
   title="SkillsBar - Browse Claude Code, Codex, Plugins, and Collections from the Menu Bar"
-  description="A macOS menu bar app for browsing and managing your Claude Code and Codex CLI skills, plugins, collections, and agents. Search, pin, group related skills, track usage, and customize the app without leaving your workflow."
+  description="A macOS menu bar app for browsing and managing your Claude Code and Codex skills, plugins, collections, and agents. Search, pin, group related skills, track usage across Claude Code, Codex CLI, and Codex Desktop, and open items in your preferred installed editor."
 >
   <main class="page-wrap">
     <!-- Header -->
     <header class="top">
       <div class="brand">
         <h1 class="brand-title">SkillsBar</h1>
-        <p class="brand-tagline">Claude Code and Codex CLI skills, plugins, collections, and agents in the menu bar.</p>
+        <p class="brand-tagline">Claude Code and Codex skills, plugins, collections, and agents in the menu bar.</p>
       </div>
       <nav class="nav-links">
         <a class="btn primary" href="https://github.com/amandeepmittal/skillsbar/releases/latest">Download</a>
@@ -34,8 +34,8 @@ import Layout from '@layouts/Layout.astro';
         <div class="hero-heading">
           <img class="hero-icon" src="/skillsbar-icon.png" alt="" aria-hidden="true" width="40" height="40" />
           <div>
-            <h2>Your AI CLI library, always visible.</h2>
-            <p>Browse, search, pin, group, and track usage of your Claude Code and Codex CLI skills, plugins, collections, and agents from a lightweight menu bar popover.</p>
+            <h2>Your AI skill library, always visible.</h2>
+            <p>Browse, search, pin, group, and track usage of your Claude Code and Codex skills, plugins, collections, and agents from a lightweight menu bar popover.</p>
           </div>
         </div>
         <div class="cta">
@@ -47,17 +47,19 @@ import Layout from '@layouts/Layout.astro';
         </div>
         <ul class="bullets">
           <li>Tabbed browsing with count badges for Claude Code, Codex, and Collections.</li>
-          <li>Search skills, plugins, collections, and agents by name, description, or trigger.</li>
+          <li>Search skills, plugins, agents, and collections by name, description, metadata, and collection trigger commands.</li>
           <li>Browse installed Codex plugins and the skills they contribute.</li>
           <li>Pin frequently used skills to the top of each tab.</li>
           <li>Create custom collections that mix Claude Code and Codex skills for repeatable workflows.</li>
-          <li>Usage stats from Claude Code and Codex history, including Codex plugin skills.</li>
+          <li>Usage stats from Claude Code history, Codex CLI history, and Codex Desktop session rollouts, including Codex plugin skills.</li>
           <li>What&apos;s New section for recently changed skills and plugins.</li>
-          <li>Settings for appearance, default sort, and showing or hiding What&apos;s New.</li>
+          <li>Settings for appearance, preferred installed editor, default sort, and showing or hiding What&apos;s New.</li>
           <li>"New" badge for skills modified in the last 24 hours.</li>
           <li>Detail views with metadata, collection membership, trigger command, included skills, and file listings.</li>
           <li>Full content preview of raw SKILL.md body.</li>
+          <li>Quick actions open skills, agents, plugins, and global instructions in your preferred editor.</li>
           <li>Right-click context menu for pin, add to collections, open, copy, and delete.</li>
+          <li>About screen shows watched directories, library counts, and quick Finder access.</li>
           <li>Agent browsing for sub-agents with model and tools metadata.</li>
           <li>Global hotkey <code>Option+Shift+S</code> to toggle from anywhere.</li>
           <li>Live updates via FSEvents directory watcher.</li>
@@ -95,7 +97,7 @@ import Layout from '@layouts/Layout.astro';
       <div class="card">
         <h3>Usage stats</h3>
         <p>
-          Tracks skill invocations from Claude Code and Codex CLI history with source-aware insights, summary breakdowns, ranked sections, and clearer stale-entry labels.
+          Tracks skill invocations from Claude Code history, Codex CLI history, and Codex Desktop session rollouts with source-aware insights, summary breakdowns, and ranked sections.
         </p>
       </div>
       <div class="card">
@@ -107,7 +109,7 @@ import Layout from '@layouts/Layout.astro';
       <div class="card">
         <h3>Settings</h3>
         <p>
-          Toggle What&apos;s New, choose system, light, or dark appearance, and control the default sort order right from the menu bar.
+          Toggle What&apos;s New, choose system, light, or dark appearance, pick an installed editor, and control the default sort order right from the menu bar.
         </p>
       </div>
     </div>
