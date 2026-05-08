@@ -1,49 +1,49 @@
 {
-  "pageviews": 849400,
-  "visitors": 662200,
+  "pageviews": 851700,
+  "visitors": 664000,
   "mostRead": [
     {
       "slug": "first-few-days-with-codex-cli",
-      "views": 10300
+      "views": 9800
     },
     {
       "slug": "running-headless-codex-cli-inside-claude-code",
-      "views": 3400
-    },
-    {
-      "slug": "stash-changes-with-vscode",
-      "views": 1800
+      "views": 3600
     },
     {
       "slug": "using-images-in-claude-code",
-      "views": 1600
+      "views": 1700
+    },
+    {
+      "slug": "stash-changes-with-vscode",
+      "views": 1700
     },
     {
       "slug": "codex-tokens-usage",
-      "views": 1500
+      "views": 1700
     }
   ],
   "mostRead365": [
     {
       "slug": "first-few-days-with-codex-cli",
-      "views": 12300
+      "views": 12900
     },
     {
       "slug": "stash-changes-with-vscode",
-      "views": 10900
+      "views": 10600
     },
     {
       "slug": "running-headless-codex-cli-inside-claude-code",
-      "views": 3400
+      "views": 3600
     },
     {
       "slug": "macbook-setup-2024",
-      "views": 3000
+      "views": 2900
     },
     {
       "slug": "large-header-title-in-expo-router",
-      "views": 2800
+      "views": 2900
     }
   ],
-  "updatedAt": "2026-05-01"
+  "updatedAt": "2026-05-08"
 }
