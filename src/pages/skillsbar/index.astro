@@ -32,7 +32,7 @@ import Layout from '@layouts/Layout.astro';
           <span class="badge">Carbon HotKey</span>
         </div>
         <div class="hero-heading">
-          <img class="hero-icon" src="/skillsbar-icon.png" alt="" aria-hidden="true" width="40" height="40" />
+          <img class="hero-icon" src="/skillsbar-icon.png" alt="" aria-hidden="true" width="56" height="56" />
           <div>
             <h2>Your AI skill library, always visible.</h2>
             <p>Browse, search, pin, group, and track usage of your Claude Code and Codex skills, plugins, project workspaces, collections, and agents from a lightweight menu bar popover.</p>
@@ -305,10 +305,10 @@ import Layout from '@layouts/Layout.astro';
   /* ── Hero ── */
   .hero {
     display: grid;
-    grid-template-columns: 1.15fr 0.85fr;
-    gap: 28px;
+    grid-template-columns: 1.3fr 0.7fr;
+    gap: 32px;
     align-items: start;
-    padding: 28px;
+    padding: 36px;
     border: 1px solid #d2d2d7;
     border-radius: 16px;
     background: #fff;
@@ -328,8 +328,8 @@ import Layout from '@layouts/Layout.astro';
     letter-spacing: 0.2px;
   }
 
-  .hero-heading { display: flex; gap: 12px; align-items: flex-start; }
-  .hero-icon { width: 40px !important; height: 40px !important; border-radius: 10px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12); }
+  .hero-heading { display: flex; gap: 16px; align-items: flex-start; }
+  .hero-icon { width: 56px !important; height: 56px !important; border-radius: 14px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.14); flex-shrink: 0; }
   .hero-heading h2 {
     margin: 0 0 14px;
     font-family: "Helvetica Neue", Arial, sans-serif;
@@ -341,7 +341,8 @@ import Layout from '@layouts/Layout.astro';
   }
   .hero-heading p { margin: 0; color: #6e6e73; font-size: 19px; line-height: 1.6; }
 
-  .cta { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 16px; }
+  .cta { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 20px; }
+  .cta .btn { padding: 12px 22px; font-size: 15px; border-radius: 12px; }
 
   .bullets {
     margin: 0;
