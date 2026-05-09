@@ -45,34 +45,39 @@ import Layout from '@layouts/Layout.astro';
             View on GitHub
           </a>
         </div>
-        <ul class="bullets">
-          <li>Tabbed browsing with count badges for Claude Code, Codex, and Collections.</li>
-          <li>Search skills, plugins, agents, and collections by name, description, metadata, collection trigger commands, and source tokens such as <code>source:project</code>.</li>
-          <li>Manage trusted project folders in a dedicated Project Skills screen.</li>
-          <li>Review project skills, project agents, instruction files, health, conflicts, recents, pins, names, and project order.</li>
-          <li>Detect project-local <code>CLAUDE.md</code>, <code>AGENTS.md</code>, and <code>.codex/AGENTS.md</code> files next to trusted projects.</li>
-          <li>Create collections from a project, open the project in Claude Code or Codex, and create <code>.claude/skills</code> with explicit consent.</li>
-          <li>Choose an installed editor such as VS Code, WebStorm, Cursor, Zed, or Xcode for opening skills, agents, plugins, and global instructions.</li>
-          <li>Create custom collections that mix Claude Code and Codex skills for repeatable workflows.</li>
-          <li>Browse installed Codex plugins with versions, publishers, capabilities, included skills, and quick open or reveal actions.</li>
-          <li>Track skill invocations from Claude Code history, Codex CLI history, and Codex Desktop session rollouts.</li>
-          <li>Show source-aware usage insights, summary breakdowns, and ranked per-skill usage sections.</li>
-          <li>Settings for What&apos;s New, appearance, default sort, preferred editor, and Start at Login.</li>
-          <li>"New" badge for skills modified in the last 24 hours and a What&apos;s New section for recently changed skills and plugins.</li>
-          <li>Detail views with metadata, collection membership, trigger commands, included skills, and file listings.</li>
-          <li>Full content preview of raw SKILL.md body.</li>
-          <li>Quick actions open skills, agents, plugins, and global instructions in your preferred editor.</li>
-          <li>Right-click context menu for pin, add to collections, open, copy, and delete.</li>
-          <li>Agent browsing for sub-agents with model and tools metadata.</li>
-          <li>Global hotkey <code>Option+Shift+S</code> to toggle from anywhere.</li>
-          <li>Live updates via FSEvents directory watcher.</li>
-          <li>No Dock icon, lives entirely in the menu bar.</li>
-        </ul>
       </div>
       <figure class="hero-shot">
         <img src="/skillsbar-codex-built-in.png" alt="SkillsBar popover showing Codex built-in skills with source filters." />
         <figcaption>Skills popover with tabbed browsing, source filters, and badges.</figcaption>
       </figure>
+    </div>
+
+    <!-- Features -->
+    <div class="features-card">
+      <h3>Features</h3>
+      <ul class="bullets">
+        <li>Tabbed browsing with count badges for Claude Code, Codex, and Collections.</li>
+        <li>Search skills, plugins, agents, and collections by name, description, metadata, collection trigger commands, and source tokens such as <code>source:project</code>.</li>
+        <li>Manage trusted project folders in a dedicated Project Skills screen.</li>
+        <li>Review project skills, project agents, instruction files, health, conflicts, recents, pins, names, and project order.</li>
+        <li>Detect project-local <code>CLAUDE.md</code>, <code>AGENTS.md</code>, and <code>.codex/AGENTS.md</code> files next to trusted projects.</li>
+        <li>Create collections from a project, open the project in Claude Code or Codex, and create <code>.claude/skills</code> with explicit consent.</li>
+        <li>Choose an installed editor such as VS Code, WebStorm, Cursor, Zed, or Xcode for opening skills, agents, plugins, and global instructions.</li>
+        <li>Create custom collections that mix Claude Code and Codex skills for repeatable workflows.</li>
+        <li>Browse installed Codex plugins with versions, publishers, capabilities, included skills, and quick open or reveal actions.</li>
+        <li>Track skill invocations from Claude Code history, Codex CLI history, and Codex Desktop session rollouts.</li>
+        <li>Show source-aware usage insights, summary breakdowns, and ranked per-skill usage sections.</li>
+        <li>Settings for What&apos;s New, appearance, default sort, preferred editor, and Start at Login.</li>
+        <li>"New" badge for skills modified in the last 24 hours and a What&apos;s New section for recently changed skills and plugins.</li>
+        <li>Detail views with metadata, collection membership, trigger commands, included skills, and file listings.</li>
+        <li>Full content preview of raw SKILL.md body.</li>
+        <li>Quick actions open skills, agents, plugins, and global instructions in your preferred editor.</li>
+        <li>Right-click context menu for pin, add to collections, open, copy, and delete.</li>
+        <li>Agent browsing for sub-agents with model and tools metadata.</li>
+        <li>Global hotkey <code>Option+Shift+S</code> to toggle from anywhere.</li>
+        <li>Live updates via FSEvents directory watcher.</li>
+        <li>No Dock icon, lives entirely in the menu bar.</li>
+      </ul>
     </div>
 
     <!-- Install card -->
@@ -302,7 +307,7 @@ import Layout from '@layouts/Layout.astro';
     display: grid;
     grid-template-columns: 1.15fr 0.85fr;
     gap: 28px;
-    align-items: center;
+    align-items: start;
     padding: 28px;
     border: 1px solid #d2d2d7;
     border-radius: 16px;
@@ -338,14 +343,42 @@ import Layout from '@layouts/Layout.astro';
 
   .cta { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 16px; }
 
-  .bullets { margin: 10px 0 0; padding: 0 0 0 18px; color: #6e6e73; font-size: 13px; line-height: 1.5; list-style: disc; }
-  .bullets li { margin: 3px 0; padding-left: 2px; }
+  .bullets {
+    margin: 0;
+    padding: 0 0 0 18px;
+    color: #6e6e73;
+    font-size: 13px;
+    line-height: 1.55;
+    list-style: disc;
+    columns: 2;
+    column-gap: 32px;
+  }
+  .bullets li { margin: 4px 0; padding-left: 2px; break-inside: avoid; }
   .bullets code {
     background: #f5f5f7;
     padding: 1px 6px;
     border-radius: 4px;
     border: 1px solid #e8e8ed;
     font-size: 12px;
+    color: #1d1d1f;
+  }
+
+  /* ── Features card ── */
+  .features-card {
+    margin-top: 16px;
+    padding: 20px 24px;
+    border: 1px solid #d2d2d7;
+    border-radius: 16px;
+    background: #fff;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+  }
+  .features-card h3 {
+    margin: 0 0 12px;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
     color: #1d1d1f;
   }
 
@@ -507,6 +540,7 @@ import Layout from '@layouts/Layout.astro';
     .hero-shot { justify-self: center; }
     .hero-shot img { max-width: 260px; }
     .details { grid-template-columns: 1fr; }
+    .bullets { columns: 1; }
     .shot img { width: 180px; }
   }
 </style>
