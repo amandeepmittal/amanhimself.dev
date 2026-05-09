@@ -3,15 +3,15 @@ import Layout from '@layouts/Layout.astro';
 ---
 
 <Layout
-  title="SkillsBar - Browse Claude Code, Codex, Plugins, and Collections from the Menu Bar"
-  description="A macOS menu bar app for browsing and managing your Claude Code and Codex skills, plugins, collections, and agents. Search, pin, group related skills, track usage across Claude Code, Codex CLI, and Codex Desktop, and open items in your preferred installed editor."
+  title="SkillsBar - Browse Claude Code, Codex, Plugins, Projects, and Collections from the Menu Bar"
+  description="A macOS menu bar app for browsing and managing your Claude Code and Codex skills, plugins, project skills, collections, and agents. Search by source, manage trusted project folders, track usage, and open items in your preferred installed editor."
 >
   <main class="page-wrap">
     <!-- Header -->
     <header class="top">
       <div class="brand">
         <h1 class="brand-title">SkillsBar</h1>
-        <p class="brand-tagline">Claude Code and Codex skills, plugins, collections, and agents in the menu bar.</p>
+        <p class="brand-tagline">Claude Code, Codex, project skills, plugins, collections, and agents in the menu bar.</p>
       </div>
       <nav class="nav-links">
         <a class="btn primary" href="https://github.com/amandeepmittal/skillsbar/releases/latest">Download</a>
@@ -35,7 +35,7 @@ import Layout from '@layouts/Layout.astro';
           <img class="hero-icon" src="/skillsbar-icon.png" alt="" aria-hidden="true" width="40" height="40" />
           <div>
             <h2>Your AI skill library, always visible.</h2>
-            <p>Browse, search, pin, group, and track usage of your Claude Code and Codex skills, plugins, collections, and agents from a lightweight menu bar popover.</p>
+            <p>Browse, search, pin, group, and track usage of your Claude Code and Codex skills, plugins, project workspaces, collections, and agents from a lightweight menu bar popover.</p>
           </div>
         </div>
         <div class="cta">
@@ -47,19 +47,22 @@ import Layout from '@layouts/Layout.astro';
         </div>
         <ul class="bullets">
           <li>Tabbed browsing with count badges for Claude Code, Codex, and Collections.</li>
-          <li>Search skills, plugins, agents, and collections by name, description, metadata, and collection trigger commands.</li>
-          <li>Browse installed Codex plugins and the skills they contribute.</li>
-          <li>Pin frequently used skills to the top of each tab.</li>
+          <li>Search skills, plugins, agents, and collections by name, description, metadata, collection trigger commands, and source tokens such as <code>source:project</code>.</li>
+          <li>Manage trusted project folders in a dedicated Project Skills screen.</li>
+          <li>Review project skills, project agents, instruction files, health, conflicts, recents, pins, names, and project order.</li>
+          <li>Detect project-local <code>CLAUDE.md</code>, <code>AGENTS.md</code>, and <code>.codex/AGENTS.md</code> files next to trusted projects.</li>
+          <li>Create collections from a project, open the project in Claude Code or Codex, and create <code>.claude/skills</code> with explicit consent.</li>
+          <li>Choose an installed editor such as VS Code, WebStorm, Cursor, Zed, or Xcode for opening skills, agents, plugins, and global instructions.</li>
           <li>Create custom collections that mix Claude Code and Codex skills for repeatable workflows.</li>
-          <li>Usage stats from Claude Code history, Codex CLI history, and Codex Desktop session rollouts, including Codex plugin skills.</li>
-          <li>What&apos;s New section for recently changed skills and plugins.</li>
-          <li>Settings for appearance, preferred installed editor, default sort, and showing or hiding What&apos;s New.</li>
-          <li>"New" badge for skills modified in the last 24 hours.</li>
-          <li>Detail views with metadata, collection membership, trigger command, included skills, and file listings.</li>
+          <li>Browse installed Codex plugins with versions, publishers, capabilities, included skills, and quick open or reveal actions.</li>
+          <li>Track skill invocations from Claude Code history, Codex CLI history, and Codex Desktop session rollouts.</li>
+          <li>Show source-aware usage insights, summary breakdowns, and ranked per-skill usage sections.</li>
+          <li>Settings for What&apos;s New, appearance, default sort, preferred editor, and Start at Login.</li>
+          <li>"New" badge for skills modified in the last 24 hours and a What&apos;s New section for recently changed skills and plugins.</li>
+          <li>Detail views with metadata, collection membership, trigger commands, included skills, and file listings.</li>
           <li>Full content preview of raw SKILL.md body.</li>
           <li>Quick actions open skills, agents, plugins, and global instructions in your preferred editor.</li>
           <li>Right-click context menu for pin, add to collections, open, copy, and delete.</li>
-          <li>About screen shows watched directories, library counts, and quick Finder access.</li>
           <li>Agent browsing for sub-agents with model and tools metadata.</li>
           <li>Global hotkey <code>Option+Shift+S</code> to toggle from anywhere.</li>
           <li>Live updates via FSEvents directory watcher.</li>
@@ -67,8 +70,8 @@ import Layout from '@layouts/Layout.astro';
         </ul>
       </div>
       <figure class="hero-shot">
-        <img src="/skillsbar-list-view.png" alt="SkillsBar popover showing Claude Code skills and agents." />
-        <figcaption>Skills popover with tabbed browsing, search, and badges.</figcaption>
+        <img src="/skillsbar-codex-built-in.png" alt="SkillsBar popover showing Codex built-in skills with source filters." />
+        <figcaption>Skills popover with tabbed browsing, source filters, and badges.</figcaption>
       </figure>
     </div>
 
@@ -95,21 +98,27 @@ import Layout from '@layouts/Layout.astro';
     <!-- Detail cards -->
     <div class="details">
       <div class="card">
-        <h3>Usage stats</h3>
+        <h3>Project skills</h3>
         <p>
-          Tracks skill invocations from Claude Code history, Codex CLI history, and Codex Desktop session rollouts with source-aware insights, summary breakdowns, and ranked sections.
+          Approve local project folders, inspect their skills, agents, instruction files, recents, conflicts, and launch the project in Claude Code, Codex, or your editor.
         </p>
       </div>
       <div class="card">
-        <h3>Plugins & agents</h3>
+        <h3>Plugins and agents</h3>
         <p>
           Browse installed Codex plugins with versions and included skills, plus Claude Code sub-agents with model, color, and tools metadata.
         </p>
       </div>
       <div class="card">
+        <h3>Usage stats</h3>
+        <p>
+          Track invocations from Claude Code history, Codex CLI history, and Codex Desktop session rollouts with source-aware insights and ranked sections.
+        </p>
+      </div>
+      <div class="card">
         <h3>Settings</h3>
         <p>
-          Toggle What&apos;s New, choose system, light, or dark appearance, pick an installed editor, and control the default sort order right from the menu bar.
+          Toggle What&apos;s New, choose system, light, or dark appearance, pick an installed editor, start at login, and control the default sort order.
         </p>
       </div>
     </div>
@@ -119,24 +128,44 @@ import Layout from '@layouts/Layout.astro';
       <div class="screenshot-scroll">
         <div class="screenshot-track">
           <figure class="shot">
-            <img src="/skillsbar-codex-tab.png" alt="Codex tab with plugins and plugin skills" />
-            <figcaption>Codex tab</figcaption>
+            <img src="/skillsbar-codex-built-in.png" alt="Codex built-in skills with source filters" />
+            <figcaption>Codex built-ins</figcaption>
           </figure>
           <figure class="shot">
-            <img src="/skillsbar-detail-view.png" alt="Skill detail view" />
-            <figcaption>Detail view</figcaption>
+            <img src="/skillsbar-project-skills.png" alt="Project Skills screen with an approved local project" />
+            <figcaption>Project Skills</figcaption>
           </figure>
           <figure class="shot">
-            <img src="/skillsbar-usage-stats.png" alt="Usage statistics" />
-            <figcaption>Usage stats</figcaption>
+            <img src="/skillsbar-project-overview.png" alt="Project overview with quick actions and recent project skills" />
+            <figcaption>Project overview</figcaption>
           </figure>
           <figure class="shot">
-            <img src="/skillsbar-collections-2.png" alt="Collections tab showing a custom skill collection" />
+            <img src="/skillsbar-project-items.png" alt="Project skills list with project-local skills and agents" />
+            <figcaption>Project items</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="/skillsbar-settings-view.png" alt="Settings view with appearance, editor, and sort controls" />
+            <figcaption>Settings</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="/skillsbar-collections-view.png" alt="Collections tab with source filter chips" />
             <figcaption>Collections</figcaption>
           </figure>
           <figure class="shot">
-            <img src="/skillsbar-collections-3.png" alt="Collection view mixing Claude Code and Codex skills" />
-            <figcaption>Mixed collections</figcaption>
+            <img src="/skillsbar-plugin-detail.png" alt="Codex plugin detail with metadata and included skills" />
+            <figcaption>Plugin detail</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="/skillsbar-skill-detail.png" alt="Project skill detail with validation preview and usage command" />
+            <figcaption>Project skill detail</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="/skillsbar-instructions-menu.png" alt="Global instructions menu" />
+            <figcaption>Instructions</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="/skillsbar-skill-context-menu.png" alt="Right-click menu for a skill" />
+            <figcaption>Context menu</figcaption>
           </figure>
         </div>
       </div>
@@ -423,7 +452,7 @@ import Layout from '@layouts/Layout.astro';
   .copy-btn:hover { background: #3a3a3c; color: #e5e5ea; border-color: #636366; }
 
   /* ── Detail cards ── */
-  .details { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 16px; }
+  .details { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 16px; }
 
   .card {
     border: 1px solid #d2d2d7;
