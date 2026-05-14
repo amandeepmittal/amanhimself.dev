@@ -2,6 +2,7 @@
 
 > I'm Aman Mittal (@amanhimself). Software Developer and Tech Writer. Welcome to my blog!
 
+- [Moving away from Oh My Zsh (OMZ)](https://amanhimself.dev/blog/moving-away-from-oh-my-zsh/)
 - [New blog theme again](https://amanhimself.dev/blog/new-blog-theme-again/)
 - [Week notes 17](https://amanhimself.dev/blog/week-notes-17/)
 - [Playwright to Chrome](https://amanhimself.dev/blog/playwright-to-chrome/)
