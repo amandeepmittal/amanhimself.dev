@@ -1,40 +1,40 @@
 {
-  "pageviews": 853900,
-  "visitors": 665700,
+  "pageviews": 857600,
+  "visitors": 668800,
   "mostRead": [
     {
       "slug": "first-few-days-with-codex-cli",
-      "views": 9000
+      "views": 8700
     },
     {
       "slug": "running-headless-codex-cli-inside-claude-code",
-      "views": 3600
-    },
-    {
-      "slug": "using-images-in-claude-code",
-      "views": 1800
+      "views": 3400
     },
     {
       "slug": "codex-tokens-usage",
-      "views": 1700
+      "views": 1900
     },
     {
-      "slug": "stash-changes-with-vscode",
-      "views": 1600
+      "slug": "using-images-in-claude-code",
+      "views": 1900
+    },
+    {
+      "slug": "color-coding-claude-code-sessions",
+      "views": 1700
     }
   ],
   "mostRead365": [
     {
       "slug": "first-few-days-with-codex-cli",
-      "views": 13400
+      "views": 14200
     },
     {
       "slug": "stash-changes-with-vscode",
-      "views": 10300
+      "views": 9900
     },
     {
       "slug": "running-headless-codex-cli-inside-claude-code",
-      "views": 3700
+      "views": 3900
     },
     {
       "slug": "large-header-title-in-expo-router",
@@ -45,5 +45,5 @@
       "views": 2800
     }
   ],
-  "updatedAt": "2026-05-15"
+  "updatedAt": "2026-05-22"
 }
