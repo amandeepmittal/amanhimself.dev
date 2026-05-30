@@ -23,7 +23,6 @@ const { activeNav } = Astro.props;
   <div class="nav-container">
     <div class="top-nav-wrap">
       <a href="/" class="logo whitespace-nowrap">
-        <span class="logo-dot" aria-hidden="true"></span>
         <span class="logo-text">{SITE.title}</span>
       </a>
       <nav id="nav-menu">
@@ -134,13 +133,7 @@ const { activeNav } = Astro.props;
     @apply relative flex w-full items-start justify-between p-4 sm:items-center sm:py-8;
   }
   .logo {
-    @apply absolute inline-flex items-center gap-2 py-1 text-skin-base sm:static;
-  }
-  .logo-dot {
-    @apply h-1.5 w-1.5 shrink-0 rounded-full bg-skin-accent sm:h-2 sm:w-2;
-    box-shadow:
-      0 0 0 3px rgba(var(--color-accent), 0.18),
-      0 0 0 6px rgba(var(--color-accent), 0.08);
+    @apply absolute inline-flex items-center py-1 text-skin-base sm:static;
   }
   .logo-text {
     @apply font-mono text-base font-medium sm:text-lg;
