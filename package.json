@@ -36,6 +36,7 @@
     "@astrojs/sitemap": "^3.7.0",
     "@astrojs/tailwind": "^6.0.2",
     "@divriots/jampack": "^0.34.0",
+    "@eslint/js": "^10.0.1",
     "@tailwindcss/typography": "^0.5.19",
     "@types/react": "^19.2.14",
     "@typescript-eslint/parser": "^8.56.1",
@@ -43,6 +44,7 @@
     "eslint": "^10.0.2",
     "eslint-plugin-astro": "^1.6.0",
     "globals": "^17.3.0",
+    "playwright": "^1.60.0",
     "prettier": "^3.8.1",
     "prettier-plugin-astro": "^0.14.1",
     "prettier-plugin-tailwindcss": "^0.6.14",
@@ -57,7 +59,7 @@
   "bugs": {
     "url": "https://github.com/amandeepmittal/amanhimself.dev/issues"
   },
-  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e",
+  "packageManager": "pnpm@11.5.0",
   "engines": {
     "node": ">=18.20.8"
   }

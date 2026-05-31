@@ -1,0 +1,15 @@
+# Build configuration for Netlify (amanhimself.dev).
+#
+# Netlify detects pnpm from pnpm-lock.yaml and installs with it automatically.
+# The pnpm version comes from the "packageManager" field (pnpm@11.5.0) via corepack.
+# Node is pinned to 24 to match local dev and the update-stats workflow.
+#
+# NOTE: settings here take precedence over the Netlify UI build command, but
+# confirm the dashboard has no leftover custom *install* command (e.g. an old
+# "yarn install") and is not pinned to an old build image without corepack.
+[build]
+  command = "pnpm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "24"

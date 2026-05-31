@@ -1,0 +1,10 @@
+# pnpm 11 blocks dependency build scripts by default. Allow these trusted
+# native packages to run their install/build scripts; without this,
+# `pnpm install` exits 1 with ERR_PNPM_IGNORED_BUILDS.
+#   - sharp:       image engine used by jampack in the post-build pass
+#   - esbuild:     used by Astro / Vite
+#   - '@swc/core': native transform binary pulled in transitively
+allowBuilds:
+  '@swc/core': true
+  esbuild: true
+  sharp: true
