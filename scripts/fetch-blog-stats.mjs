@@ -32,7 +32,9 @@ function findPlaywright() {
       const require = createRequire(import.meta.url);
       return require(path.join(npxDir, 'index.js'));
     }
-  } catch {}
+  } catch {
+    /* npx-installed playwright not resolvable; fall through to direct import below */
+  }
   return import('playwright').then(m => m.default || m);
 }
 
@@ -67,7 +69,9 @@ await page.waitForTimeout(1000);
 
 try {
   await page.locator('button:has-text("Apply")').click({ timeout: 2000 });
-} catch {}
+} catch {
+  /* "Apply" button may not be present; the range can already be applied */
+}
 
 await page.waitForTimeout(5000);
 
@@ -202,7 +206,9 @@ await browser.close();
 let existing = { pageviews: 0, visitors: 0 };
 try {
   existing = JSON.parse(await readFile(outputPath, 'utf-8'));
-} catch {}
+} catch {
+  /* no existing stats file or invalid JSON; keep the defaults above */
+}
 
 if (pageviews < existing.pageviews || visitors < existing.visitors) {
   console.log(
