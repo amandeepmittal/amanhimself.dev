@@ -20,6 +20,7 @@ const { tag, size = 'sm', count } = Astro.props;
 </li>
 
 <style>
+  @reference "../styles/base.css";
   .tag-chip {
     @apply inline-flex items-center gap-1.5 rounded-full border border-skin-line px-2.5 py-0.5 font-mono text-xs text-skin-base transition-colors hover:border-skin-accent hover:text-skin-accent;
   }

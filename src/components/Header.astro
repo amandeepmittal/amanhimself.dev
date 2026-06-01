@@ -51,7 +51,7 @@ const { activeNav } = Astro.props;
             <line x1="6" y1="6" x2="18" y2="18" class="close"></line>
           </svg>
         </button>
-        <ul id="menu-items" class="display-none sm:flex">
+        <ul id="menu-items">
           <li>
             <a href="/blog/" class={activeNav === 'blog' ? 'active' : ''}>
               Blog
@@ -90,7 +90,7 @@ const { activeNav } = Astro.props;
                 ></path>
               </svg>
               <span class="sr-only">Search</span>
-              <kbd class="hidden sm:inline-block ml-2 px-2 py-1 text-xs font-medium text-skin-base bg-skin-card border border-skin-fill rounded opacity-60">
+              <kbd class="hidden sm:inline-block ml-2 px-2 py-1 text-xs font-medium text-skin-base bg-skin-card border border-skin-base rounded opacity-60">
                 ⌘ + k
               </kbd>
             </LinkButton>
@@ -123,8 +123,9 @@ const { activeNav } = Astro.props;
 </header>
 
 <style>
+  @reference "../styles/base.css";
   #skip-to-content {
-    @apply absolute -top-full left-16 z-50 bg-skin-accent px-3 py-2 text-skin-inverted transition-all focus-visible:top-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-skin-fill;
+    @apply absolute -top-full left-16 z-50 bg-skin-accent px-3 py-2 text-skin-inverted transition-all focus-visible:top-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-skin-accent;
   }
   .nav-container {
     @apply mx-auto flex max-w-3xl flex-col items-center justify-between sm:flex-row;
@@ -148,8 +149,17 @@ const { activeNav } = Astro.props;
   nav {
     @apply flex w-full flex-col items-center sm:ml-2 sm:flex-row sm:justify-end sm:space-x-4 sm:py-0;
   }
+  /*
+   * Display lives entirely in this scoped (unlayered) rule. In Tailwind v4
+   * utility classes sit in @layer utilities and LOSE to unlayered scoped
+   * styles, so `display-none sm:flex` on the <ul> can't beat this rule —
+   * we own all three states here and toggle `.is-open` from the script.
+   */
   nav ul {
-    @apply mt-4 grid w-44 grid-cols-2 grid-rows-4 gap-x-2 gap-y-2 sm:ml-0 sm:mt-0 sm:w-auto sm:gap-x-5 sm:gap-y-0;
+    @apply mt-4 hidden w-44 grid-cols-2 grid-rows-4 gap-x-2 gap-y-2 sm:ml-0 sm:mt-0 sm:flex sm:w-auto sm:gap-x-5 sm:gap-y-0;
+  }
+  nav ul.is-open {
+    @apply grid sm:flex;
   }
   nav ul li {
     @apply col-span-2 flex items-center justify-center;
@@ -219,7 +229,7 @@ const { activeNav } = Astro.props;
       menuIcon!.classList.add('is-active');
       menuBtn!.setAttribute('aria-expanded', 'true');
       menuBtn!.setAttribute('aria-label', 'Close Menu');
-      menuItems!.classList.remove('display-none');
+      menuItems!.classList.add('is-open');
 
       // Move focus to the first menu link
       const firstLink = menuItems!.querySelector('a');
@@ -230,7 +240,7 @@ const { activeNav } = Astro.props;
       menuIcon!.classList.remove('is-active');
       menuBtn!.setAttribute('aria-expanded', 'false');
       menuBtn!.setAttribute('aria-label', 'Open Menu');
-      menuItems!.classList.add('display-none');
+      menuItems!.classList.remove('is-open');
 
       // Return focus to the hamburger button
       menuBtn!.focus();
