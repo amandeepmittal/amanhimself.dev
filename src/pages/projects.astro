@@ -36,7 +36,7 @@ const fallbackRepos: GithubRepo[] = PROJECTS.map((name, index) => ({
   created_at: new Date().toISOString()
 }));
 
-let repos: GithubRepo[] = [];
+let repos: GithubRepo[];
 let githubLoadError = '';
 
 try {
