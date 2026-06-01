@@ -2,7 +2,7 @@
 title: 'How I track my token maxxing'
 author: Aman Mittal
 pubDatetime: 2026-05-30T00:00:01Z
-slug: claude-code-tokens-usage
+slug: track-my-token-maxxing
 featured: false
 draft: false
 tags:
