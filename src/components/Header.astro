@@ -215,9 +215,9 @@ const { activeNav } = Astro.props;
 
 <script>
   function toggleNav() {
-    const menuBtn = document.querySelector('.hamburger-menu');
+    const menuBtn = document.querySelector<HTMLElement>('.hamburger-menu');
     const menuIcon = document.querySelector('.menu-icon');
-    const menuItems = document.querySelector('#menu-items');
+    const menuItems = document.querySelector<HTMLElement>('#menu-items');
 
     if (!menuBtn || !menuIcon || !menuItems) return;
 

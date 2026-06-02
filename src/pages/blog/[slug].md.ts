@@ -5,7 +5,7 @@ import postFilter from '@utils/postFilter';
 export async function getStaticPaths() {
   const posts = await getCollection('blog');
   return posts.filter(postFilter).map(post => ({
-    params: { slug: post.slug },
+    params: { slug: post.id },
     props: { post },
   }));
 }

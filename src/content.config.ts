@@ -1,8 +1,18 @@
 import { SITE } from '@config';
 import { defineCollection, z } from 'astro:content';
+import { glob } from 'astro/loaders';
 
 const blog = defineCollection({
-  type: 'content',
+  // Content Layer glob loader. `generateId` keeps the legacy content-collection
+  // behavior where a frontmatter `slug:` overrides the URL. Without it, every post
+  // that sets `slug:` (almost all of them) would fall back to a filename-based id
+  // and its URL would change.
+  loader: glob({
+    pattern: '**/*.md',
+    base: './src/content/blog',
+    generateId: ({ entry, data }) =>
+      typeof data.slug === 'string' ? data.slug : entry.replace(/\.mdx?$/, '')
+  }),
   schema: ({ image }) =>
     z.object({
       author: z.string().default(SITE.author),

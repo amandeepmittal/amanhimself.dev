@@ -7,7 +7,7 @@ import blogStats from '@data/blogStats.json';
 
 const posts = await getCollection('blog');
 const publishedPosts = posts.filter(publishedPostFilter);
-const slugToPost = new Map(publishedPosts.map(p => [p.slug, p.data]));
+const slugToPost = new Map(publishedPosts.map(p => [p.id, p.data]));
 
 const mostRead = (blogStats.mostRead ?? [])
   .filter(p => slugToPost.has(p.slug))

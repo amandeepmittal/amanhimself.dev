@@ -20,7 +20,7 @@
     "@astrojs/check": "^0.9.9",
     "@astrojs/rss": "^4.0.18",
     "@resvg/resvg-js": "^2.6.0",
-    "astro": "^5.18.0",
+    "astro": "^6.4.2",
     "fuse.js": "^7.4.0",
     "github-slugger": "^2.0.0",
     "mdast-util-to-string": "^4.0.0",
@@ -31,7 +31,7 @@
     "tailwindcss": "^4.3.0"
   },
   "devDependencies": {
-    "@astrojs/react": "^4.4.2",
+    "@astrojs/react": "^5.0.6",
     "@astrojs/sitemap": "^3.7.3",
     "@divriots/jampack": "^0.34.1",
     "@eslint/js": "^10.0.1",
@@ -61,6 +61,6 @@
   },
   "packageManager": "pnpm@11.5.0",
   "engines": {
-    "node": ">=18.20.8"
+    "node": ">=22.12.0"
   }
 }

@@ -5,7 +5,7 @@ import Footer from '@components/Footer.astro';
 import Tag from '@components/Tag.astro';
 import Datetime from '@components/Datetime';
 import BackToTopButton from "@components/BackToTopButton.astro";
-import type { CollectionEntry } from 'astro:content';
+import { render, type CollectionEntry } from 'astro:content';
 import { slugifyStr } from '@utils/slugify';
 import ShareLinks from '@components/ShareLinks.astro';
 import SupportButton from '@components/SupportButton.astro';
@@ -37,7 +37,7 @@ const {
   readingTime
 } = post.data;
 
-const { Content } = await post.render();
+const { Content } = await render(post);
 
 const ogImageUrl = typeof ogImage === 'string' ? ogImage : ogImage?.src;
 const ogUrl = new URL(
@@ -54,15 +54,15 @@ const layoutProps = {
   canonicalURL,
   ogImage: ogUrl,
   scrollSmooth: true,
-  alternateMarkdown: `/blog/${post.slug}.md`
+  alternateMarkdown: `/blog/${post.id}.md`
 };
 
 /* ========== Prev/Next Posts ========== */
-const allPosts = posts.map(({ data: { title }, slug }) => ({
-  slug,
+const allPosts = posts.map(({ data: { title }, id }) => ({
+  slug: id,
   title
 }));
-const currentPostIndex = allPosts.findIndex(a => a.slug === post.slug);
+const currentPostIndex = allPosts.findIndex(a => a.slug === post.id);
 const prevPost = currentPostIndex !== 0 ? allPosts[currentPostIndex - 1] : null;
 const nextPost =
   currentPostIndex !== allPosts.length ? allPosts[currentPostIndex + 1] : null;
@@ -118,7 +118,7 @@ const tagCounts = new Map(
       <Content />
     </article>
 
-    <RelatedPosts currentSlug={post.slug} currentTags={tags} posts={posts} />
+    <RelatedPosts currentSlug={post.id} currentTags={tags} posts={posts} />
 
     <div class="support-cta">
       <p class="support-cta-text">Enjoyed this post?</p>

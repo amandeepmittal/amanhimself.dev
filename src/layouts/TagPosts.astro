@@ -29,8 +29,8 @@ const { currentPage, totalPages, paginatedPosts, tag, tagName } = Astro.props;
     <h1 slot="title" transition:name={tag}>{`Tag:${tag}`}</h1>
     <ul class="mt-8">
       {
-        paginatedPosts.map(({ data, slug }) => (
-          <Card href={`/blog/${slug}/`} frontmatter={data} />
+        paginatedPosts.map(({ data, id }) => (
+          <Card href={`/blog/${id}/`} frontmatter={data} />
         ))
       }
     </ul>

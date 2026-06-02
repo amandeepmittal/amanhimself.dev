@@ -1,107 +1,70 @@
 {
-  "$ref": "#/definitions/blog",
-  "definitions": {
-    "blog": {
-      "type": "object",
-      "properties": {
-        "author": {
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "author": {
+      "default": "Aman Mittal",
+      "type": "string"
+    },
+    "pubDatetime": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "modDatetime": {
+      "anyOf": [
+        {
           "type": "string",
-          "default": "Aman Mittal"
+          "format": "date-time"
         },
-        "pubDatetime": {
-          "anyOf": [
-            {
-              "type": "string",
-              "format": "date-time"
-            },
-            {
-              "type": "string",
-              "format": "date"
-            },
-            {
-              "type": "integer",
-              "format": "unix-time"
-            }
-          ]
-        },
-        "modDatetime": {
-          "anyOf": [
-            {
-              "anyOf": [
-                {
-                  "not": {}
-                },
-                {
-                  "anyOf": [
-                    {
-                      "type": "string",
-                      "format": "date-time"
-                    },
-                    {
-                      "type": "string",
-                      "format": "date"
-                    },
-                    {
-                      "type": "integer",
-                      "format": "unix-time"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "null"
-            }
-          ]
-        },
-        "title": {
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "featured": {
+      "type": "boolean"
+    },
+    "draft": {
+      "type": "boolean"
+    },
+    "tags": {
+      "default": [
+        "others"
+      ],
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "ogImage": {
+      "anyOf": [
+        {
           "type": "string"
         },
-        "featured": {
-          "type": "boolean"
-        },
-        "draft": {
-          "type": "boolean"
-        },
-        "tags": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "default": [
-            "others"
-          ]
-        },
-        "ogImage": {
-          "anyOf": [
-            {
-              "type": "string"
-            },
-            {
-              "type": "string"
-            }
-          ]
-        },
-        "description": {
-          "type": "string"
-        },
-        "canonicalURL": {
-          "type": "string"
-        },
-        "readingTime": {
-          "type": "string"
-        },
-        "$schema": {
+        {
           "type": "string"
         }
-      },
-      "required": [
-        "pubDatetime",
-        "title",
-        "description"
-      ],
-      "additionalProperties": false
+      ]
+    },
+    "description": {
+      "type": "string"
+    },
+    "canonicalURL": {
+      "type": "string"
+    },
+    "readingTime": {
+      "type": "string"
+    },
+    "$schema": {
+      "type": "string"
     }
   },
-  "$schema": "http://json-schema.org/draft-07/schema#"
+  "required": [
+    "pubDatetime",
+    "title",
+    "description"
+  ]
 }

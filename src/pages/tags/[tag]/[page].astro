@@ -24,7 +24,7 @@ export async function getStaticPaths() {
     const totalPages = getPageNumbers(tagPosts.length);
 
     return totalPages.map(page => ({
-      params: { tag, page },
+      params: { tag, page: String(page) },
       props: { tag, tagName }
     }));
   });

@@ -26,7 +26,7 @@ export async function GET() {
   const sortedPosts = getSortedPosts(posts);
   const items = await Promise.all(
     sortedPosts.map(async post => {
-      const { data, slug } = post;
+      const { data, id } = post;
       const rendered = await render(post);
       const html =
         typeof rendered === 'string'
@@ -41,7 +41,7 @@ export async function GET() {
         data.description || extractDescription(post.body) || SITE.desc;
 
       return {
-        link: `blog/${slug}/`,
+        link: `blog/${id}/`,
         title: data.title,
         description,
         pubDate: new Date(data.pubDatetime),
