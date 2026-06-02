@@ -95,10 +95,10 @@ const socialCount = SOCIALS.filter(social => social.active).length;
             <h2>Recent Posts</h2>
             <ul class="mt-6">
               {recentPosts.map(
-                ({ data, slug }, index) =>
+                ({ data, id }, index) =>
                   index < 15 && (
                     <Card
-                      href={`/blog/${slug}/`}
+                      href={`/blog/${id}/`}
                       frontmatter={data}
                       secHeading={false}
                     />

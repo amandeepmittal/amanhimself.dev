@@ -23,8 +23,8 @@ const formatter = new Intl.DateTimeFormat(LOCALE.langTag, {
   day: 'numeric'
 });
 
-const relatedPool = posts.filter(({ slug, data }) => {
-  if (!data || slug === currentSlug) return false;
+const relatedPool = posts.filter(({ id, data }) => {
+  if (!data || id === currentSlug) return false;
   if (data.draft && !import.meta.env.DEV) return false;
 
   const published = new Date(data.pubDatetime);
@@ -53,11 +53,11 @@ const relatedPosts = relatedPool.slice(0, 3);
       Related posts
     </h2>
     <ul class="mt-6">
-      {relatedPosts.map(({ slug, data }) => {
+      {relatedPosts.map(({ id, data }) => {
         const published = new Date(data.pubDatetime);
         return (
           <li class="related-row">
-            <a href={`/blog/${slug}/`} class="related-link">
+            <a href={`/blog/${id}/`} class="related-link">
               <time
                 datetime={published.toISOString()}
                 class="related-date"
