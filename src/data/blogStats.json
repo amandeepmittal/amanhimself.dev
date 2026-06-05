@@ -1,18 +1,18 @@
 {
-  "pageviews": 859000,
-  "visitors": 669800,
+  "pageviews": 860500,
+  "visitors": 670800,
   "mostRead": [
     {
       "slug": "first-few-days-with-codex-cli",
-      "views": 7900
+      "views": 7200
     },
     {
       "slug": "running-headless-codex-cli-inside-claude-code",
-      "views": 3100
+      "views": 2700
     },
     {
       "slug": "color-coding-claude-code-sessions",
-      "views": 1800
+      "views": 1900
     },
     {
       "slug": "using-ghostty",
@@ -20,17 +20,17 @@
     },
     {
       "slug": "codex-tokens-usage",
-      "views": 1800
+      "views": 1600
     }
   ],
   "mostRead365": [
     {
       "slug": "first-few-days-with-codex-cli",
-      "views": 14500
+      "views": 14800
     },
     {
       "slug": "stash-changes-with-vscode",
-      "views": 9600
+      "views": 9200
     },
     {
       "slug": "running-headless-codex-cli-inside-claude-code",
@@ -42,8 +42,8 @@
     },
     {
       "slug": "macbook-setup-2024",
-      "views": 2800
+      "views": 2700
     }
   ],
-  "updatedAt": "2026-05-29"
+  "updatedAt": "2026-06-05"
 }
