@@ -3,7 +3,6 @@ import { getCollection } from 'astro:content';
 import Layout from '@layouts/Layout.astro';
 import Header from '@components/Header.astro';
 import Footer from '@components/Footer.astro';
-import BlogStats from '@components/BlogStats.astro';
 import MostReadAndTopics from '@components/MostReadAndTopics.astro';
 import Card from '@components/Card';
 import Socials from '@components/Socials.astro';
@@ -86,8 +85,6 @@ const socialCount = SOCIALS.filter(social => social.active).length;
           </>
         )
       } -->
-
-      <BlogStats />
 
       {
         recentPosts.length > 0 && (
@@ -179,6 +176,13 @@ const socialCount = SOCIALS.filter(social => social.active).length;
       text-decoration: underline dotted;
       text-underline-offset: 3px;
       text-decoration-thickness: 1.5px;
+    }
+    .dotted-link[href^='http']::after {
+      content: '↗';
+      display: inline-block;
+      margin-left: 0.1em;
+      font-size: 0.75em;
+      opacity: 0.6;
     }
     #hero .rss-link {
       @apply mb-6;

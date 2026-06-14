@@ -56,6 +56,20 @@
     --color-card-muted: 35, 39, 51;       /* #232733 muted neutral */
     --color-border: 42, 47, 58;           /* #2a2f3a hairline border */
   }
+  /* Cross-fade colors on theme switch. Gated on a class added after first
+     paint (so the initial load doesn't flash) and on reduced-motion. */
+  @media (prefers-reduced-motion: no-preference) {
+    html.theme-anim,
+    html.theme-anim *,
+    html.theme-anim *::before,
+    html.theme-anim *::after {
+      transition:
+        background-color 0.075s ease-out,
+        border-color 0.075s ease-out,
+        color 0.075s ease-out,
+        fill 0.075s ease-out;
+    }
+  }
   #sun-svg,
   html[data-theme='dark'] #moon-svg {
     display: none;
@@ -139,6 +153,36 @@
   }
   .prose h2#table-of-contents + p {
     @apply hidden;
+  }
+
+  /* ===== external links get a quiet "leaves the site" cue ===== */
+  .prose
+    a[href^='http']:not([href*='amanhimself.dev']):not(:has(img))::after {
+    content: '↗';
+    display: inline-block;
+    margin-left: 0.1em;
+    font-size: 0.8em;
+    opacity: 0.6;
+  }
+
+  /* ===== footnotes (GFM) ===== */
+  .prose .footnotes {
+    @apply mt-12 border-t border-skin-line pt-6 text-[0.9em] opacity-90;
+  }
+  .prose .footnotes li {
+    scroll-margin-top: 5rem;
+    border-radius: 0.375rem;
+    padding: 0.15rem 0.5rem;
+    transition: background-color 0.4s ease;
+  }
+  .prose .footnotes li:target {
+    background-color: rgba(var(--color-accent), 0.12);
+  }
+  .prose sup a[data-footnote-ref] {
+    @apply font-semibold !no-underline;
+  }
+  .prose .data-footnote-backref {
+    @apply !ml-1 !no-underline;
   }
 
   /* ===== scrollbar ===== */

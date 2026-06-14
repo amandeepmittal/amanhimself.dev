@@ -49,6 +49,14 @@ function reflectPreference() {
 // set early so no page flashes / CSS is made aware
 reflectPreference();
 
+// Enable color transitions only after the first paint, so toggling theme
+// cross-fades but the initial load never flashes from default to theme.
+window.requestAnimationFrame(() => {
+  window.requestAnimationFrame(() => {
+    document.documentElement.classList.add('theme-anim');
+  });
+});
+
 window.onload = () => {
   function setThemeFeature() {
     // set on load so screen readers can get the latest value on the button

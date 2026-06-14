@@ -83,7 +83,7 @@ const tagCounts = new Map(
     <div class="progress-bar h-1 w-0 bg-skin-accent" id="myBar"></div>
   </div> -->
 
-  <div class="mx-auto flex w-full max-w-[680px] justify-start px-2">
+  <div class="mx-auto flex w-full max-w-3xl justify-start px-2">
     <button
       class="focus-outline mb-2 mt-8 flex hover:opacity-75"
       onclick="(() => (history.length === 1) ? window.location = '/' : history.back())()"
@@ -97,7 +97,7 @@ const tagCounts = new Map(
   </div>
   <main id="main-content">
     <h1 transition:name={slugifyStr(title)} class="post-title">{title}</h1>
-    <div class="flex items-center gap-2">
+    <div class="flex max-w-[680px] items-center gap-2">
       <Datetime
         pubDatetime={pubDatetime}
         modDatetime={modDatetime}
@@ -114,7 +114,7 @@ const tagCounts = new Map(
         </ul>
       </div>
     </div>
-    <article id="article" role="article" class="prose mt-8 max-w-none">
+    <article id="article" role="article" class="prose mt-8 max-w-[680px]">
       <Content />
     </article>
 
@@ -242,11 +242,12 @@ const tagCounts = new Map(
     <style>
   @reference "../styles/base.css";
       main {
-        @apply mx-auto w-full max-w-[680px] px-4 pb-12;
+        @apply mx-auto w-full max-w-3xl px-4 pb-12;
       }
       .post-title {
-        @apply mt-4 mb-4 text-3xl font-bold tracking-tight text-skin-base sm:text-4xl;
+        @apply mt-4 mb-4 max-w-[680px] text-3xl font-bold tracking-tight text-skin-base sm:text-4xl;
         line-height: 1.15;
+        text-wrap: balance;
       }
       /* === Editorial reading experience === */
       #article {
@@ -258,6 +259,7 @@ const tagCounts = new Map(
       #article :global(:is(h1, h2, h3, h4, h5, h6)) {
         font-family: var(--font-sans);
         letter-spacing: -0.01em;
+        text-wrap: balance;
       }
       /* Roomier paragraph rhythm */
       #article :global(p),
@@ -265,6 +267,11 @@ const tagCounts = new Map(
       #article :global(ol) {
         margin-top: 1.15em;
         margin-bottom: 1.15em;
+      }
+      /* Avoid orphans / ragged last lines in body copy */
+      #article :global(p),
+      #article :global(li) {
+        text-wrap: pretty;
       }
       /* Stronger space above section headings to separate ideas */
       #article :global(h2) {
