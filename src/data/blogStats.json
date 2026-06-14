@@ -1,49 +1,5 @@
 {
   "pageviews": 861700,
   "visitors": 671900,
-  "mostRead": [
-    {
-      "slug": "first-few-days-with-codex-cli",
-      "views": 6800
-    },
-    {
-      "slug": "running-headless-codex-cli-inside-claude-code",
-      "views": 2400
-    },
-    {
-      "slug": "color-coding-claude-code-sessions",
-      "views": 2000
-    },
-    {
-      "slug": "using-ghostty",
-      "views": 1700
-    },
-    {
-      "slug": "codex-tokens-usage",
-      "views": 1600
-    }
-  ],
-  "mostRead365": [
-    {
-      "slug": "first-few-days-with-codex-cli",
-      "views": 15200
-    },
-    {
-      "slug": "stash-changes-with-vscode",
-      "views": 9000
-    },
-    {
-      "slug": "running-headless-codex-cli-inside-claude-code",
-      "views": 4000
-    },
-    {
-      "slug": "large-header-title-in-expo-router",
-      "views": 3000
-    },
-    {
-      "slug": "macbook-setup-2024",
-      "views": 2600
-    }
-  ],
   "updatedAt": "2026-06-12"
 }
