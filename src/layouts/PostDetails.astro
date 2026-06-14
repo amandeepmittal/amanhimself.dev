@@ -83,7 +83,7 @@ const tagCounts = new Map(
     <div class="progress-bar h-1 w-0 bg-skin-accent" id="myBar"></div>
   </div> -->
 
-  <div class="mx-auto flex w-full max-w-3xl justify-start px-2">
+  <div class="mx-auto flex w-full max-w-[680px] justify-start px-2">
     <button
       class="focus-outline mb-2 mt-8 flex hover:opacity-75"
       onclick="(() => (history.length === 1) ? window.location = '/' : history.back())()"
@@ -114,7 +114,7 @@ const tagCounts = new Map(
         </ul>
       </div>
     </div>
-    <article id="article" role="article" class="prose mx-auto mt-8 max-w-3xl !text-[17px]">
+    <article id="article" role="article" class="prose mt-8 max-w-none">
       <Content />
     </article>
 
@@ -242,13 +242,39 @@ const tagCounts = new Map(
     <style>
   @reference "../styles/base.css";
       main {
-        @apply mx-auto w-full max-w-3xl px-4 pb-12;
+        @apply mx-auto w-full max-w-[680px] px-4 pb-12;
       }
       .post-title {
-        @apply mt-4 mb-4 text-3xl font-semibold text-skin-accent;
+        @apply mt-4 mb-4 text-3xl font-bold tracking-tight text-skin-base sm:text-4xl;
+        line-height: 1.15;
+      }
+      /* === Editorial reading experience === */
+      #article {
+        font-family: var(--font-serif);
+        font-size: 18px;
+        line-height: 1.75;
+      }
+      /* Headings, code and UI stay in their own families */
+      #article :global(:is(h1, h2, h3, h4, h5, h6)) {
+        font-family: var(--font-sans);
+        letter-spacing: -0.01em;
+      }
+      /* Roomier paragraph rhythm */
+      #article :global(p),
+      #article :global(ul),
+      #article :global(ol) {
+        margin-top: 1.15em;
+        margin-bottom: 1.15em;
+      }
+      /* Stronger space above section headings to separate ideas */
+      #article :global(h2) {
+        margin-top: 2.6rem;
+      }
+      #article :global(h3) {
+        margin-top: 1.9rem;
       }
       #article > :global(p:first-of-type::first-letter) {
-        @apply font-serif float-left text-4xl font-semibold leading-none mr-2 mt-1 text-skin-accent;
+        @apply font-serif float-left text-5xl font-semibold leading-none mr-3 mt-1 text-skin-accent;
       }
       .support-cta {
         @apply mt-8 flex flex-col items-center gap-3;

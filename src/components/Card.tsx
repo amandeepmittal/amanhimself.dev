@@ -36,14 +36,15 @@ export default function Card({ href, frontmatter, secHeading = true }: Props) {
 
   const headerProps = {
     style: { viewTransitionName: slugifyStr(title) },
-    className: 'text-base font-medium'
+    className:
+      'text-base font-medium text-skin-base transition-colors group-hover:text-skin-accent'
   };
 
   return (
     <li className="border-b border-dashed border-skin-line">
       <a
         href={href}
-        className="grid grid-cols-[5.5rem_1fr] items-baseline gap-4 py-3 transition-colors hover:text-skin-accent sm:grid-cols-[7rem_1fr] sm:gap-6"
+        className="group grid grid-cols-[5.5rem_1fr] items-baseline gap-4 py-3 sm:grid-cols-[7rem_1fr] sm:gap-6"
       >
         <time
           dateTime={isoDate}
