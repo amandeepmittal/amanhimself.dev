@@ -38,23 +38,23 @@
 }
 
 @layer base {
-  /* === Tolaria-inspired: cream background + saturated blue accent === */
+  /* === Minimal: neutral base + refined classic blue accent === */
   :root,
   html[data-theme='light'] {
-    --color-fill: 250, 249, 245;           /* #faf9f5 tolaria cream */
-    --color-text-base: 26, 26, 24;         /* #1a1a18 tolaria text */
-    --color-accent: 21, 93, 255;           /* #155dff saturated blue */
-    --color-card: 232, 238, 250;           /* #e8eefa blue-tinted card */
-    --color-card-muted: 240, 244, 252;     /* #f0f4fc softer blue tint */
-    --color-border: 212, 222, 240;         /* #d4def0 cool border */
+    --color-fill: 253, 253, 253;          /* #fdfdfd near-white */
+    --color-text-base: 24, 24, 27;        /* #18181b near-black */
+    --color-accent: 37, 99, 235;          /* #2563eb classic blue */
+    --color-card: 243, 244, 246;          /* #f3f4f6 neutral card */
+    --color-card-muted: 233, 235, 239;    /* #e9ebef muted neutral */
+    --color-border: 228, 231, 236;        /* #e4e7ec hairline border */
   }
   html[data-theme='dark'] {
-    --color-fill: 34, 39, 46;             /* #22272e github dark dimmed */
-    --color-text-base: 205, 217, 229;     /* #cdd9e5 dimmed text */
-    --color-accent: 121, 156, 255;        /* #799cff softer blue for mid-dark */
-    --color-card: 40, 49, 66;             /* #283142 blue-tinted card */
-    --color-card-muted: 50, 60, 78;       /* #323c4e deeper blue tint */
-    --color-border: 64, 78, 102;          /* #404e66 cool border */
+    --color-fill: 15, 17, 23;             /* #0f1117 near-black */
+    --color-text-base: 230, 232, 236;     /* #e6e8ec soft off-white */
+    --color-accent: 122, 162, 247;        /* #7aa2f7 soft blue */
+    --color-card: 24, 27, 34;             /* #181b22 neutral card */
+    --color-card-muted: 35, 39, 51;       /* #232733 muted neutral */
+    --color-border: 42, 47, 58;           /* #2a2f3a hairline border */
   }
   #sun-svg,
   html[data-theme='dark'] #moon-svg {
