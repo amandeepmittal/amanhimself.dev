@@ -34,7 +34,7 @@ const paginatedPostsWithRT = await getPostsWithRT(paginatedPosts);
     pageTitle="Blog"
     pageDesc=`${totalPostsCount} posts, ${blogStats.pageviews.toLocaleString('en-US')} reads, ${blogStats.visitors.toLocaleString('en-US')} visitors since 2019.`
   >
-    <ul>
+    <ul class="flex flex-wrap gap-x-3.5 gap-y-2.5 p-0">
       {tags.map(({ tag, count }) => <Tag {tag} count={count} size="sm" />)}
     </ul>
     <ul class="mt-8">

@@ -106,7 +106,7 @@ const tagCounts = new Map(
       <p class="font-mono text-xs tabular-nums text-skin-base opacity-50">{readingTime}</p>
       <span aria-hidden="true" class="font-mono text-xs text-skin-base opacity-50"> • </span>
       <div class="text-sm text-skin-base opacity-80">
-        <ul>
+        <ul class="flex flex-wrap items-center gap-x-2 gap-y-1 p-0">
           {tags.map(tag => {
             const tagSlug = slugifyStr(tag);
             return <Tag tag={tagSlug} count={tagCounts.get(tagSlug)} />;
