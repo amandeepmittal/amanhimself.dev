@@ -22,7 +22,7 @@ Developer documentation that respects the reader. API references that are accura
 - 💻 16-inch MacBook Pro (2023) with M3 chip. This is on-the-go machine.
 - ⌨️ Keychron K3 Pro with Gateron Brown switches.
 - 🎮 Nintendo Switch for Breath of the Wild and a Steam Deck.
-- 📖 I use the Kindle app on my mobile device for most of my reading, both non-fiction and fiction.
+- 📖 I use the Kindle app on my mobile device for most of my reading.
 
 > Looking for more information about me, or my past work experience? See the [About](/about) page or see my [LinkedIn](https://www.linkedin.com/in/aman-mittal-05a239117/) for a general summary of my employment history.
 
