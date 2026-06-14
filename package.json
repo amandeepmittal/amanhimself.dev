@@ -13,8 +13,7 @@
     "format:check": "prettier --check . --plugin=prettier-plugin-astro",
     "format": "prettier --write . --plugin=prettier-plugin-astro",
     "lint": "eslint .",
-    "llms": "node scripts/generate-llms.mjs",
-    "stats": "node scripts/fetch-blog-stats.mjs"
+    "llms": "node scripts/generate-llms.mjs"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.9",

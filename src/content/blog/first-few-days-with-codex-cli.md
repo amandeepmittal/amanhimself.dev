@@ -3,7 +3,7 @@ title: First few days with Codex CLI
 author: Aman Mittal
 pubDatetime: 2026-01-04T00:00:05Z
 slug: first-few-days-with-codex-cli
-featured: false
+featured: true
 draft: false
 tags:
   - ai

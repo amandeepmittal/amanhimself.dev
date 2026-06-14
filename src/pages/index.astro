@@ -3,7 +3,6 @@ import { getCollection } from 'astro:content';
 import Layout from '@layouts/Layout.astro';
 import Header from '@components/Header.astro';
 import Footer from '@components/Footer.astro';
-import MostReadAndTopics from '@components/MostReadAndTopics.astro';
 import Card from '@components/Card';
 import Socials from '@components/Socials.astro';
 import getSortedPosts from '@utils/getSortedPosts';
@@ -12,7 +11,7 @@ import { SOCIALS } from '@config';
 const posts = await getCollection('blog');
 
 const sortedPosts = await getSortedPosts(posts);
-// const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
+const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
 const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
 
 const socialCount = SOCIALS.filter(social => social.active).length;
@@ -66,25 +65,18 @@ const socialCount = SOCIALS.filter(social => social.active).length;
         }
       </div>
 
-      <!-- {
+      {
         featuredPosts.length > 0 && (
-          <>
-            <section id="featured">
-              <h2>Featured</h2>
-              <ul>
-                {featuredPosts.map(({ data, slug }) => (
-                  <Card
-                    href={`/blog/${slug}/`}
-                    frontmatter={data}
-                    secHeading={false}
-                  />
-                ))}
-              </ul>
-            </section>
-            {recentPosts.length > 0 && <Hr />}
-          </>
+          <a href={`/blog/${featuredPosts[0].id}/`} class="featured-card">
+            <span class="featured-eyebrow">Featured</span>
+            <span class="featured-title">{featuredPosts[0].data.title}</span>
+            {featuredPosts[0].data.description && (
+              <span class="featured-desc">{featuredPosts[0].data.description}</span>
+            )}
+            <span class="featured-cta">Read post →</span>
+          </a>
         )
-      } -->
+      }
 
       {
         recentPosts.length > 0 && (
@@ -105,8 +97,6 @@ const socialCount = SOCIALS.filter(social => social.active).length;
           </section>
         )
       }
-
-      <MostReadAndTopics />
 
       <section id="projects">
         <div class="projects-header">
@@ -208,6 +198,30 @@ const socialCount = SOCIALS.filter(social => social.active).length;
     }
     .social-links {
       @apply mb-1 mr-2 whitespace-nowrap sm:mb-0;
+    }
+
+    /* ===== Featured post (single inverted accent panel) ===== */
+    .featured-card {
+      @apply mt-12 flex flex-col gap-1 rounded-lg bg-skin-accent p-6 text-skin-inverted no-underline transition-transform;
+    }
+    .featured-card:hover {
+      @apply -translate-y-0.5;
+    }
+    .featured-eyebrow {
+      @apply font-mono text-[10px] font-semibold uppercase tracking-widest opacity-70;
+    }
+    .featured-title {
+      @apply text-2xl font-semibold tracking-tight;
+    }
+    .featured-desc {
+      @apply text-sm opacity-80;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .featured-cta {
+      @apply mt-2 text-sm font-medium opacity-90;
     }
 
     /* ===== Featured & Recent Posts Sections ===== */

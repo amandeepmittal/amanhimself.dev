@@ -37,7 +37,13 @@ const {
   readingTime
 } = post.data;
 
-const { Content } = await render(post);
+const { Content, headings } = await render(post);
+
+// Section map for the margin TOC rail: h2s only, skipping the TOC heading itself.
+const tocItems = headings.filter(
+  h => h.depth === 2 && h.slug !== 'table-of-contents'
+);
+const hasRail = tocItems.length >= 3;
 
 const ogImageUrl = typeof ogImage === 'string' ? ogImage : ogImage?.src;
 const ogUrl = new URL(
@@ -95,7 +101,7 @@ const tagCounts = new Map(
       </svg><span>Go back</span>
     </button>
   </div>
-  <main id="main-content">
+  <main id="main-content" class:list={{ 'has-rail': hasRail }}>
     <h1 transition:name={slugifyStr(title)} class="post-title">{title}</h1>
     <div class="flex max-w-[680px] items-center gap-2">
       <Datetime
@@ -114,6 +120,20 @@ const tagCounts = new Map(
         </ul>
       </div>
     </div>
+    {hasRail && (
+      <nav id="toc-rail" aria-label="On this page">
+        <p class="toc-rail-title">On this page</p>
+        <ul>
+          {tocItems.map(h => (
+            <li>
+              <a href={`#${h.slug}`} data-toc-link={h.slug}>
+                {h.text}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    )}
     <article id="article" role="article" class="prose mt-8 max-w-[680px]">
       <Content />
     </article>
@@ -283,6 +303,55 @@ const tagCounts = new Map(
       #article > :global(p:first-of-type::first-letter) {
         @apply font-serif float-left text-5xl font-semibold leading-none mr-3 mt-1 text-skin-accent;
       }
+      /* Anchor jumps land a little below the viewport top */
+      #article :global(:is(h2, h3)) {
+        scroll-margin-top: 1.5rem;
+      }
+      /* ===== Margin TOC rail (wide screens only) ===== */
+      #toc-rail {
+        display: none;
+      }
+      .toc-rail-title {
+        @apply mb-3 font-mono text-[10px] font-semibold uppercase tracking-widest text-skin-base opacity-50;
+      }
+      #toc-rail ul {
+        @apply m-0 list-none space-y-2 p-0;
+      }
+      #toc-rail a {
+        @apply block text-skin-base no-underline transition-colors;
+        font-size: 0.78rem;
+        line-height: 1.35;
+        opacity: 0.5;
+        border-left: 2px solid transparent;
+        padding-left: 0.75rem;
+      }
+      #toc-rail a:hover {
+        @apply text-skin-accent;
+        opacity: 1;
+      }
+      #toc-rail a.active {
+        @apply text-skin-accent;
+        opacity: 1;
+        border-left-color: rgb(var(--color-accent));
+      }
+      @media (min-width: 1280px) {
+        .has-rail #toc-rail {
+          display: block;
+          position: fixed;
+          top: 8.5rem;
+          left: max(1.5rem, calc((100vw - 768px) / 2 - 13rem));
+          width: 11rem;
+          max-height: calc(100vh - 11rem);
+          overflow-y: auto;
+          overscroll-behavior: contain;
+        }
+        /* The rail replaces the in-article TOC on wide screens */
+        .has-rail #article :global(#table-of-contents),
+        .has-rail #article :global(#table-of-contents + p),
+        .has-rail #article :global(#table-of-contents + p + details) {
+          display: none;
+        }
+      }
       .support-cta {
         @apply mt-8 flex flex-col items-center gap-3;
       }
@@ -303,6 +372,50 @@ const tagCounts = new Map(
         document.body.appendChild(progressContainer);
       }
       createProgressBar();
+
+      function initTocRail() {
+        const rail = document.getElementById('toc-rail');
+        if (!rail) return;
+        const links = Array.from(rail.querySelectorAll('a[data-toc-link]'));
+        const headings = links
+          .map(a => document.getElementById(a.getAttribute('data-toc-link')))
+          .filter(Boolean);
+        if (!headings.length) return;
+        let activeId = null;
+        function setActive(id) {
+          if (id === activeId) return;
+          activeId = id;
+          for (const a of links) {
+            a.classList.toggle(
+              'active',
+              a.getAttribute('data-toc-link') === id
+            );
+          }
+        }
+        function update() {
+          let current = headings[0].id;
+          for (const h of headings) {
+            if (h.getBoundingClientRect().top <= 120) current = h.id;
+            else break;
+          }
+          setActive(current);
+        }
+        update();
+        let ticking = false;
+        document.addEventListener(
+          'scroll',
+          () => {
+            if (ticking) return;
+            ticking = true;
+            requestAnimationFrame(() => {
+              update();
+              ticking = false;
+            });
+          },
+          { passive: true }
+        );
+      }
+      initTocRail();
 
       function updateScrollProgress() {
         const winScroll =
