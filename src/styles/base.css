@@ -133,6 +133,9 @@
   .prose a {
     @apply break-words hover:!text-skin-accent;
   }
+  .prose :not(pre) > code {
+    color: rgb(var(--color-text-base)) !important;
+  }
   .prose thead th:first-child,
   tbody td:first-child,
   tfoot td:first-child {
