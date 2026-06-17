@@ -41,12 +41,13 @@
   /* === Minimal: neutral base + refined classic blue accent === */
   :root,
   html[data-theme='light'] {
-    --color-fill: 253, 253, 253;          /* #fdfdfd near-white */
-    --color-text-base: 24, 24, 27;        /* #18181b near-black */
-    --color-accent: 37, 99, 235;          /* #2563eb classic blue */
-    --color-card: 243, 244, 246;          /* #f3f4f6 neutral card */
-    --color-card-muted: 233, 235, 239;    /* #e9ebef muted neutral */
-    --color-border: 228, 231, 236;        /* #e4e7ec hairline border */
+    /* === Exact min-theme (light) palette by Miguel Solorio === */
+    --color-fill: 255, 255, 255;          /* #ffffff editor.background */
+    --color-text-base: 33, 33, 33;        /* #212121 editor.foreground */
+    --color-accent: 0, 0, 0;              /* #000000 textLink.foreground */
+    --color-card: 246, 246, 246;          /* #f6f6f6 sideBar/panel background */
+    --color-card-muted: 224, 224, 224;    /* #e0e0e0 hover/muted surface */
+    --color-border: 208, 208, 208;        /* #d0d0d0 focusBorder hairline */
   }
   html[data-theme='dark'] {
     --color-fill: 15, 17, 23;             /* #0f1117 near-black */
@@ -87,8 +88,19 @@
     text-decoration: var(--shiki-dark-text-decoration) !important;
   }
   body {
-    @apply flex min-h-[100svh] flex-col bg-skin-fill font-sans text-skin-base
+    @apply flex min-h-[100svh] flex-col bg-skin-fill font-mono text-skin-base
     selection:bg-skin-accent/70 selection:text-skin-inverted;
+  }
+  /* Mono-forward chrome headings (alexop.dev feel); article body stays sans.
+     Article-internal headings override back to sans in PostDetails. */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-mono);
+    letter-spacing: -0.02em;
   }
   section,
   footer {

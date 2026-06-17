@@ -271,13 +271,13 @@ const tagCounts = new Map(
       }
       /* === Editorial reading experience === */
       #article {
-        font-family: var(--font-serif);
-        font-size: 18px;
-        line-height: 1.75;
+        font-family: var(--font-mono);
+        font-size: 16px;
+        line-height: 1.7;
       }
       /* Headings, code and UI stay in their own families */
       #article :global(:is(h1, h2, h3, h4, h5, h6)) {
-        font-family: var(--font-sans);
+        font-family: var(--font-mono);
         letter-spacing: -0.01em;
         text-wrap: balance;
       }
@@ -301,7 +301,7 @@ const tagCounts = new Map(
         margin-top: 1.9rem;
       }
       #article > :global(p:first-of-type::first-letter) {
-        @apply font-serif float-left text-5xl font-semibold leading-none mr-3 mt-1 text-skin-accent;
+        @apply font-mono float-left text-5xl font-semibold leading-none mr-3 mt-1 text-skin-accent;
       }
       /* Anchor jumps land a little below the viewport top */
       #article :global(:is(h2, h3)) {
