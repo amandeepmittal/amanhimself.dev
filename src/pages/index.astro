@@ -81,7 +81,10 @@ const socialCount = SOCIALS.filter(social => social.active).length;
       {
         recentPosts.length > 0 && (
           <section id="recent-posts">
-            <h2>Recent Posts</h2>
+            <div class="section-head">
+              <h2>Recent Posts</h2>
+              <a href="/blog/" class="section-link">all posts →</a>
+            </div>
             <ul class="mt-6">
               {recentPosts.map(
                 ({ data, id }, index) =>
@@ -99,9 +102,9 @@ const socialCount = SOCIALS.filter(social => social.active).length;
       }
 
       <section id="projects">
-        <div class="projects-header">
+        <div class="section-head">
           <h2>Projects</h2>
-          <a href="/projects/" class="all-projects-link">all projects →</a>
+          <a href="/projects/" class="section-link">all projects →</a>
         </div>
         <ul class="projects-grid">
           <li>
@@ -145,17 +148,17 @@ const socialCount = SOCIALS.filter(social => social.active).length;
       @apply pb-8 pt-10;
     }
     #hero h1 {
-      @apply my-4 inline-block text-3xl font-bold sm:my-8 sm:text-4xl;
+      @apply my-4 inline-block text-2xl font-bold sm:my-6 sm:text-3xl;
     }
     .hero-intro {
-      @apply text-lg leading-relaxed;
+      @apply text-base leading-relaxed;
     }
     .highlight {
       background-color: transparent;
       background-image: linear-gradient(
         to top,
-        rgba(var(--color-accent), 0.35) 28%,
-        transparent 28%
+        rgba(var(--color-text-base), 0.16) 30%,
+        transparent 30%
       );
       color: inherit;
       font-weight: inherit;
@@ -183,15 +186,18 @@ const socialCount = SOCIALS.filter(social => social.active).length;
     #hero p {
       @apply my-2;
     }
+    /* @handle rendered as a quiet code token, not a solid slab */
     .username {
-      background-color: rgb(var(--color-accent));
-      color: rgb(var(--color-fill));
-      padding: 6px 18px;
+      background-color: rgb(var(--color-card));
+      color: rgb(var(--color-text-base));
+      border: 1px solid rgb(var(--color-border));
+      padding: 2px 12px;
       display: inline-block;
-      font-size: 1.5rem;
+      font-size: 1.25rem;
       font-weight: 500;
-      border-radius: 9999px;
+      border-radius: 6px;
       vertical-align: middle;
+      opacity: 0.9;
     }
     .social-wrapper {
       @apply mt-4 flex flex-col sm:flex-row sm:items-center;
@@ -200,28 +206,28 @@ const socialCount = SOCIALS.filter(social => social.active).length;
       @apply mb-1 mr-2 whitespace-nowrap sm:mb-0;
     }
 
-    /* ===== Featured post (single inverted accent panel) ===== */
+    /* ===== Featured post (quiet bordered callout, not a solid slab) ===== */
     .featured-card {
-      @apply mt-12 flex flex-col gap-1 rounded-lg bg-skin-accent p-6 text-skin-inverted no-underline transition-transform;
+      @apply mt-12 flex flex-col gap-1 rounded-lg border border-skin-line bg-skin-card/40 p-6 text-skin-base no-underline transition-colors;
     }
     .featured-card:hover {
-      @apply -translate-y-0.5;
+      @apply border-skin-base/40;
     }
     .featured-eyebrow {
-      @apply font-mono text-[10px] font-semibold uppercase tracking-widest opacity-70;
+      @apply text-[10px] font-semibold uppercase tracking-widest text-skin-accent;
     }
     .featured-title {
-      @apply text-2xl font-semibold tracking-tight;
+      @apply mt-1 text-xl font-semibold tracking-tight;
     }
     .featured-desc {
-      @apply text-sm opacity-80;
+      @apply text-sm text-skin-base opacity-60;
       display: -webkit-box;
       -webkit-line-clamp: 2;
       -webkit-box-orient: vertical;
       overflow: hidden;
     }
     .featured-cta {
-      @apply mt-2 text-sm font-medium opacity-90;
+      @apply mt-2 text-sm font-medium text-skin-accent;
     }
 
     /* ===== Featured & Recent Posts Sections ===== */
@@ -237,21 +243,20 @@ const socialCount = SOCIALS.filter(social => social.active).length;
     #projects {
       @apply pb-8 pt-14;
     }
-    .projects-header {
+    .section-head {
       @apply flex items-baseline justify-between;
     }
     #projects h2 {
       @apply text-2xl font-semibold tracking-tight;
     }
-    .all-projects-link {
-      @apply font-mono text-xs text-skin-base opacity-60 transition-opacity hover:text-skin-accent hover:opacity-100;
+    .section-link {
+      @apply text-xs text-skin-base opacity-60 transition-opacity hover:underline hover:opacity-100;
     }
     .projects-grid {
       @apply mt-6 grid list-none grid-cols-1 gap-3 p-0 sm:grid-cols-3;
     }
     .project-card {
-      @apply flex h-full items-center gap-3 rounded-lg border border-skin-line px-4 py-3 no-underline transition-colors hover:border-skin-accent;
-      background-image: linear-gradient(to right, rgb(var(--color-card)) 0%, rgb(var(--color-fill)) 45%);
+      @apply flex h-full items-center gap-3 rounded-lg border border-skin-line bg-skin-card/40 px-4 py-3 no-underline transition-colors hover:border-skin-base/40;
     }
     .project-icon {
       @apply h-10 w-10 shrink-0 rounded-[10px];
