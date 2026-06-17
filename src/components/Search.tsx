@@ -94,8 +94,8 @@ export default function SearchBar({ searchList }: Props) {
           <span className="sr-only">Search</span>
         </span>
         <input
-          className="block w-full rounded border border-skin-base/40 bg-skin-fill py-3 pl-10
-        pr-16 placeholder:italic placeholder:text-skin-base/75
+          className="block w-full rounded border border-skin-line bg-skin-fill py-3 pl-10
+        pr-16 placeholder:text-skin-base/50
         focus:border-skin-accent focus:outline-none"
           placeholder="Search for anything..."
           type="text"
@@ -107,7 +107,7 @@ export default function SearchBar({ searchList }: Props) {
           ref={inputRef}
         />
         <span className="absolute inset-y-0 right-0 flex items-center pr-3">
-          <kbd className="hidden sm:inline-block px-2 py-1 text-xs font-medium text-skin-base bg-skin-card border border-skin-base rounded opacity-60">
+          <kbd className="hidden sm:inline-block px-2 py-1 text-xs font-medium text-skin-base bg-skin-card border border-skin-line rounded opacity-60">
             ⌘ + k
           </kbd>
         </span>
