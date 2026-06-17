@@ -9,7 +9,6 @@ import { render, type CollectionEntry } from 'astro:content';
 import { slugifyStr } from '@utils/slugify';
 import ShareLinks from '@components/ShareLinks.astro';
 import RelatedPosts from '@components/RelatedPosts.astro';
-import SponsorBanner from '@components/SponsorBanner.astro';
 import { SITE } from '@config';
 import IconCopy from '@assets/icons/IconCopy.svg?raw';
 import IconCheck from '@assets/icons/IconCheck.svg?raw';
@@ -81,7 +80,6 @@ const tagCounts = new Map(
 
 <Layout {...layoutProps}>
   <Header />
-  <SponsorBanner />
 
   <!-- <div class="progress-container fixed top-0 z-10 h-1 w-full bg-skin-fill">
     <div class="progress-bar h-1 w-0 bg-skin-accent" id="myBar"></div>
@@ -139,20 +137,6 @@ const tagCounts = new Map(
     <RelatedPosts currentSlug={post.id} currentTags={tags} posts={posts} />
 
     <div class="post-support">
-      <p class="post-support-text">
-        Found this useful? You can
-        <a
-          href="https://github.com/sponsors/amandeepmittal"
-          target="_blank"
-          rel="noreferrer">sponsor my work</a
-        >
-        or
-        <a
-          href="https://buymeacoffee.com/amanh1mself"
-          target="_blank"
-          rel="noreferrer">buy me a coffee</a
-        >.
-      </p>
       <ShareLinks />
       <BackToTopButton />
     </div>
@@ -323,12 +307,6 @@ const tagCounts = new Map(
       }
       .post-support {
         @apply mt-10 flex flex-col items-center gap-4 text-center;
-      }
-      .post-support-text {
-        @apply text-sm text-skin-base opacity-80;
-      }
-      .post-support-text a {
-        @apply text-skin-accent underline decoration-dotted underline-offset-2 hover:opacity-70;
       }
       .author-card {
         @apply mt-8 rounded-md border border-skin-line bg-skin-card/40 p-4;
