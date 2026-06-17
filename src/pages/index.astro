@@ -39,19 +39,20 @@ const socialCount = SOCIALS.filter(social => social.active).length;
       </a>
       <div class="hero-intro">
         <p>
-          Currently, working on <mark class="highlight">documentation</mark> at <a href="https://expo.dev" target="_blank" rel="noopener noreferrer" class="dotted-link">Expo</a>.
+          Hi, I'm Aman. Right now, I write <mark class="highlight">documentation</mark> at <a href="https://expo.dev" target="_blank" rel="noopener noreferrer" class="dotted-link">Expo</a>, where I turn complicated things into docs that help people build.
         </p>
         <p>
-          I love crafting documentation and writing about programming. I've
-          been writing about cross-platform mobile and web development since
-          2017, with over 150 articles for 30+ publications.
+          I've been writing about programming since 2017, mostly cross-platform
+          mobile and web development. It started as a way to keep track of what
+          I was learning, and slowly grew into more than 150 articles across 30+
+          publications. Turns out I just really like explaining how things work.
         </p>
         <p>
-          Previously, worked as Developer Advocate at <a href="https://draftbit.com" target="_blank" rel="noopener noreferrer" class="dotted-link">Draftbit</a>, and Senior
-          Content Developer at <a href="https://vercel.com" target="_blank" rel="noopener noreferrer" class="dotted-link">Vercel</a>.
+          Before Expo, I was a Developer Advocate at <a href="https://draftbit.com" target="_blank" rel="noopener noreferrer" class="dotted-link">Draftbit</a> and a Senior
+          Content Developer at <a href="https://vercel.com" target="_blank" rel="noopener noreferrer" class="dotted-link">Vercel</a>, helping developers feel at home with their tools.
         </p>
         <p>
-          See what I'm up to on my <a href="/now" class="dotted-link">"/now"</a> page or learn more about me on my <a href="/about" class="dotted-link">"/about"</a> page.
+          This blog is where I write things down as I figure them out. See what I'm up to on my <a href="/now" class="dotted-link">/now</a> page, or learn more about me on my <a href="/about" class="dotted-link">/about</a> page.
         </p>
         {
           // only display if at least one social link is enabled
@@ -107,15 +108,6 @@ const socialCount = SOCIALS.filter(social => social.active).length;
               <img src="/skillsbar-icon.png" alt="SkillsBar app icon" class="project-icon" />
               <div class="project-meta">
                 <span class="project-name">SkillsBar</span>
-                <span class="project-kind">macOS Menubar</span>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="/muxbar" class="project-card">
-              <img src="/muxbar-icon.png" alt="MuxBar app icon" class="project-icon" />
-              <div class="project-meta">
-                <span class="project-name">MuxBar</span>
                 <span class="project-kind">macOS Menubar</span>
               </div>
             </a>
@@ -214,7 +206,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
       @apply text-xs text-skin-base opacity-60 transition-opacity hover:underline hover:opacity-100;
     }
     .projects-grid {
-      @apply mt-6 grid list-none grid-cols-1 gap-3 p-0 sm:grid-cols-3;
+      @apply mt-6 grid list-none grid-cols-1 gap-3 p-0 sm:grid-cols-2;
     }
     .project-card {
       @apply flex h-full items-center gap-3 rounded-lg border border-skin-line bg-skin-card/40 px-4 py-3 no-underline transition-colors hover:border-skin-base/40;

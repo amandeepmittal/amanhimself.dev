@@ -288,6 +288,17 @@
     border-top: none;
   }
 
+  /* Light mode: very light hairline around code blocks */
+  html[data-theme='light'] pre {
+    border: 1px solid rgb(var(--color-border));
+    border-radius: 0.375rem;
+  }
+  html[data-theme='light'] .code-header + pre {
+    border-top: none;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+
   /* Copy button styling */
   .copy-code {
     z-index: 10;

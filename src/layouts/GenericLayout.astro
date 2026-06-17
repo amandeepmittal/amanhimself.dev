@@ -27,7 +27,7 @@ if (pathname.startsWith('/slash')) activeNav = 'slashes';
   <Header activeNav={activeNav} />
   <Breadcrumbs />
   <main id="main-content">
-    <section id="about" class="prose mb-28 max-w-3xl prose-img:border-0">
+    <section id="about" class="prose mb-28 max-w-5xl prose-img:border-0">
       <h1 class="text-2xl tracking-wider sm:text-3xl">{frontmatter.title}</h1>
       <slot />
       {frontmatter.showSlashLink && <SlashPagesLink />}

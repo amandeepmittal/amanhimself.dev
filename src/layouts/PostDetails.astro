@@ -89,7 +89,7 @@ const tagCounts = new Map(
     <div class="progress-bar h-1 w-0 bg-skin-accent" id="myBar"></div>
   </div> -->
 
-  <div class="mx-auto flex w-full max-w-3xl justify-start px-2">
+  <div class="mx-auto flex w-full max-w-5xl justify-start px-2">
     <button
       class="focus-outline mb-2 mt-8 flex hover:opacity-75"
       onclick="(() => (history.length === 1) ? window.location = '/' : history.back())()"
@@ -103,7 +103,7 @@ const tagCounts = new Map(
   </div>
   <main id="main-content" class:list={{ 'has-rail': hasRail }}>
     <h1 transition:name={slugifyStr(title)} class="post-title">{title}</h1>
-    <div class="flex max-w-[680px] items-center gap-2">
+    <div class="flex items-center gap-2">
       <Datetime
         pubDatetime={pubDatetime}
         modDatetime={modDatetime}
@@ -134,7 +134,7 @@ const tagCounts = new Map(
         </ul>
       </nav>
     )}
-    <article id="article" role="article" class="prose mt-8 max-w-[680px]">
+    <article id="article" role="article" class="prose mt-8 max-w-none">
       <Content />
     </article>
 
@@ -262,10 +262,10 @@ const tagCounts = new Map(
     <style>
   @reference "../styles/base.css";
       main {
-        @apply mx-auto w-full max-w-3xl px-4 pb-12;
+        @apply mx-auto w-full max-w-5xl px-4 pb-12;
       }
       .post-title {
-        @apply mt-4 mb-4 max-w-[680px] text-3xl font-bold tracking-tight text-skin-base sm:text-4xl;
+        @apply mt-4 mb-4 text-3xl font-bold tracking-tight text-skin-base sm:text-4xl;
         line-height: 1.15;
         text-wrap: balance;
       }
@@ -334,12 +334,12 @@ const tagCounts = new Map(
         opacity: 1;
         border-left-color: rgb(var(--color-accent));
       }
-      @media (min-width: 1280px) {
+      @media (min-width: 1536px) {
         .has-rail #toc-rail {
           display: block;
           position: fixed;
           top: 8.5rem;
-          left: max(1.5rem, calc((100vw - 768px) / 2 - 13rem));
+          left: max(1.5rem, calc((100vw - 1024px) / 2 - 13rem));
           width: 11rem;
           max-height: calc(100vh - 11rem);
           overflow-y: auto;
