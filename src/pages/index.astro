@@ -11,8 +11,7 @@ import { SOCIALS } from '@config';
 const posts = await getCollection('blog');
 
 const sortedPosts = await getSortedPosts(posts);
-const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
-const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
+const recentPosts = sortedPosts;
 
 const socialCount = SOCIALS.filter(social => social.active).length;
 ---
@@ -64,19 +63,6 @@ const socialCount = SOCIALS.filter(social => social.active).length;
           )
         }
       </div>
-
-      {
-        featuredPosts.length > 0 && (
-          <a href={`/blog/${featuredPosts[0].id}/`} class="featured-card">
-            <span class="featured-eyebrow">Featured</span>
-            <span class="featured-title">{featuredPosts[0].data.title}</span>
-            {featuredPosts[0].data.description && (
-              <span class="featured-desc">{featuredPosts[0].data.description}</span>
-            )}
-            <span class="featured-cta">Read post →</span>
-          </a>
-        )
-      }
 
       {
         recentPosts.length > 0 && (
@@ -206,36 +192,11 @@ const socialCount = SOCIALS.filter(social => social.active).length;
       @apply mb-1 mr-2 whitespace-nowrap sm:mb-0;
     }
 
-    /* ===== Featured post (quiet bordered callout, not a solid slab) ===== */
-    .featured-card {
-      @apply mt-12 flex flex-col gap-1 rounded-lg border border-skin-line bg-skin-card/40 p-6 text-skin-base no-underline transition-colors;
-    }
-    .featured-card:hover {
-      @apply border-skin-base/40;
-    }
-    .featured-eyebrow {
-      @apply text-[10px] font-semibold uppercase tracking-widest text-skin-accent;
-    }
-    .featured-title {
-      @apply mt-1 text-xl font-semibold tracking-tight;
-    }
-    .featured-desc {
-      @apply text-sm text-skin-base opacity-60;
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-    }
-    .featured-cta {
-      @apply mt-2 text-sm font-medium text-skin-accent;
-    }
 
     /* ===== Featured & Recent Posts Sections ===== */
-    #featured,
     #recent-posts {
       @apply pb-8 pt-14;
     }
-    #featured h2,
     #recent-posts h2 {
       @apply text-2xl font-semibold tracking-tight;
     }
