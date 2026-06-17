@@ -8,8 +8,6 @@ import BackToTopButton from "@components/BackToTopButton.astro";
 import { render, type CollectionEntry } from 'astro:content';
 import { slugifyStr } from '@utils/slugify';
 import ShareLinks from '@components/ShareLinks.astro';
-import SupportButton from '@components/SupportButton.astro';
-import BuyMeCoffeeButton from '@components/BuyMeCoffeeButton.astro';
 import RelatedPosts from '@components/RelatedPosts.astro';
 import SponsorBanner from '@components/SponsorBanner.astro';
 import { SITE } from '@config';
@@ -140,12 +138,21 @@ const tagCounts = new Map(
 
     <RelatedPosts currentSlug={post.id} currentTags={tags} posts={posts} />
 
-    <div class="support-cta">
-      <p class="support-cta-text">Enjoyed this post?</p>
-      <div class="flex items-center gap-4">
-        <SupportButton />
-        <BuyMeCoffeeButton />
-      </div>
+    <div class="post-support">
+      <p class="post-support-text">
+        Found this useful? You can
+        <a
+          href="https://github.com/sponsors/amandeepmittal"
+          target="_blank"
+          rel="noreferrer">sponsor my work</a
+        >
+        or
+        <a
+          href="https://buymeacoffee.com/amanh1mself"
+          target="_blank"
+          rel="noreferrer">buy me a coffee</a
+        >.
+      </p>
       <ShareLinks />
       <BackToTopButton />
     </div>
@@ -210,52 +217,17 @@ const tagCounts = new Map(
       }
     </div>
     <hr class="my-6 border-dashed" />
-    <section
-      class="mt-4 flex items-center rounded-md border border-skin-accent p-2"
-    >
-      <div class="flex w-full justify-start">
-        <section class="flex w-full flex-col space-y-2 pt-2">
-          <div class="flex items-center justify-between">
-            <div class="text-md font-semibold text-skin-base opacity-80">
-              <a href="/about" class="hover:underline">Aman Mittal</a>
-              <span class="text-sm italic text-skin-accent">author</span>
-            </div>
-            <!-- <div class="flex space-x-2"> -->
-              <!-- <a
-                href="https://github.com/sponsors/amandeepmittal?frequency=one-time"
-                target="_blank"
-                class="text-xs font-bold text-[#8A55F7] hover:underline"
-              >
-                Buy me coffee
-              </a> -->
-              <!-- <a
-                href="https://github.com/amandeepmittal"
-                target="_blank"
-                class="text-xs font-bold text-purple-500 hover:underline"
-              >
-                GitHub
-              </a>
-              <a
-                href="https://x.com/amanhimself"
-                target="_blank"
-                class="text-xs font-bold text-purple-500 hover:underline"
-              >
-                X
-              </a> -->
-            <!-- </div> -->
-          </div>
-          <p class="text-sm text-skin-base opacity-80">
-            I'm a software developer and technical writer. On this blog, I share
-            my learnings about both fields. Recently, I have begun exploring
-            other topics, so don't be surprised if you find something new here.
-          </p>
-          <p
-            class="flex items-center space-x-2 text-sm text-skin-base opacity-80"
-          >
-            Currently, working on documentation at Expo.
-          </p>
-        </section>
-      </div>
+    <section class="author-card">
+      <p class="author-name">
+        <a href="/about" class="hover:underline">Aman Mittal</a>
+        <span class="author-role">author</span>
+      </p>
+      <p class="author-bio">
+        I'm a software developer and technical writer. On this blog, I share my
+        learnings about both fields. Recently, I have begun exploring other
+        topics, so don't be surprised if you find something new here.
+      </p>
+      <p class="author-bio">Currently, working on documentation at Expo.</p>
     </section>
     <Footer />
 
@@ -299,9 +271,6 @@ const tagCounts = new Map(
       }
       #article :global(h3) {
         margin-top: 1.9rem;
-      }
-      #article > :global(p:first-of-type::first-letter) {
-        @apply font-mono float-left text-5xl font-semibold leading-none mr-3 mt-1 text-skin-accent;
       }
       /* Anchor jumps land a little below the viewport top */
       #article :global(:is(h2, h3)) {
@@ -352,11 +321,26 @@ const tagCounts = new Map(
           display: none;
         }
       }
-      .support-cta {
-        @apply mt-8 flex flex-col items-center gap-3;
+      .post-support {
+        @apply mt-10 flex flex-col items-center gap-4 text-center;
       }
-      .support-cta-text {
-        @apply text-sm font-medium italic text-skin-base opacity-80;
+      .post-support-text {
+        @apply text-sm text-skin-base opacity-80;
+      }
+      .post-support-text a {
+        @apply text-skin-accent underline decoration-dotted underline-offset-2 hover:opacity-70;
+      }
+      .author-card {
+        @apply mt-8 rounded-md border border-skin-line bg-skin-card/40 p-4;
+      }
+      .author-name {
+        @apply text-sm font-semibold text-skin-base;
+      }
+      .author-role {
+        @apply ml-1 font-normal text-skin-base opacity-50;
+      }
+      .author-bio {
+        @apply mt-2 text-sm text-skin-base opacity-70;
       }
     </style>
 
