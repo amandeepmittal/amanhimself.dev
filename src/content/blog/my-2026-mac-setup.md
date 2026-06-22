@@ -334,7 +334,7 @@ source ~/.zshrc
 Install Node.js, bun, and pnpm:
 
 ```shell
-mise use --global node@22
+mise use --global node@lts
 mise use --global bun@latest
 mise use --global pnpm@latest
 ```
