@@ -60,7 +60,8 @@ Some of my blog articles and tutorials have featured in esteemed Newsletters: [N
 
 I’ve shared my knowledge at various events:
 
-- **2023:** [Workshop on developing and deploying React Native apps with Expo and EAS](https://x.com/appjsconf/status/1653746880738742272) at App.js 2023.
+- **2026:** [Workshop on Build and Ship Mobile Apps with Expo and EAS at Hackhazards 2026](https://www.youtube.com/watch?v=YLDwfsMgjKY).
+- **2023:** [Workshop on developing and deploying React Native apps with Expo and EAS at App.js 2023](https://x.com/appjsconf/status/1653746880738742272).
 - **2021:** Talks on [Build Low-Code Apps using Hasura & Draftbit](https://www.youtube.com/watch?v=WrhQKt5-QY8), [Building Attractive UIs with Draftbit at Explore Hacks](https://www.youtube.com/watch?v=h9kWdOyQrSw), [Getting Started with Drafitbit- Aman Mittal at Hack The Mountains 2.O](https://www.youtube.com/watch?v=bIXQYrBd1DE), [The Rise of No-Code and a Guide to Using Draftbit](https://www.youtube.com/watch?v=sSbAuEcjjJA).
 - **2020:** Session on [writing consistently at Hashnode’s Technical Writing Bootcamp](https://www.youtube.com/watch?v=YIRxTUCY0NQ).
 - **2018:** [Podcast on setting up and getting used to Gatsby](https://dev.to/reactroundup/rru-006-setting-up-and-getting-used-to-gatsby-with-aman-mittal) with Charles Max Wood, Cory House, Tara Manicsic, and Kent C. Dodds.
