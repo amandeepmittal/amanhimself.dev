@@ -11,10 +11,7 @@ import type { GithubRepo } from '@utils/github';
 
 const GITHUB_USERNAME = 'amandeepmittal';
 
-const PROJECTS = [
-  'react-native-examples',
-  'mobilenet-tfjs-expo'
-] as const;
+const PROJECTS = ['react-native-examples', 'mobilenet-tfjs-expo'] as const;
 
 const token = import.meta.env.GITHUB_TOKEN;
 
@@ -62,39 +59,55 @@ const missing = PROJECTS.filter(name => !byName.has(name));
   <main id="main-content">
     <section class="wrap">
       <h1 class="title">Projects</h1>
-      <p class="lede">
-        Apps and open source projects I've built.
-      </p>
+      <p class="lede">Apps and open source projects I've built.</p>
 
       <!-- Apps Section -->
       <h2 class="section-title">Apps</h2>
       <ul class="apps-grid">
         <li class="app-card">
+          <a href="/rht" class="app-link">
+            <img src="/rht-icon.png" alt="RHT App Icon" class="app-icon" />
+            <div class="app-info">
+              <h3 class="app-name">RHT: Reading Habit Tracker</h3>
+              <p class="app-description">
+                Build a daily reading habit with one tap a day. Streaks,
+                heatmaps, monthly recaps, and a simple shelf of what you're
+                reading.
+              </p>
+              <span class="app-platform">iOS & Android · Coming soon</span>
+            </div>
+          </a>
+        </li>
+        <li class="app-card">
           <a href="/lasttimei" class="app-link">
-            <img src="/lasttimei-icon.png" alt="Last Time I App Icon" class="app-icon" />
+            <img
+              src="/lasttimei-icon.png"
+              alt="Last Time I App Icon"
+              class="app-icon"
+            />
             <div class="app-info">
               <h3 class="app-name">Last Time I</h3>
-              <p class="app-description">Track when you last did important tasks that are easy to forget.</p>
+              <p class="app-description">
+                Track when you last did important tasks that are easy to forget.
+              </p>
               <span class="app-platform">iOS & Android</span>
             </div>
           </a>
         </li>
         <li class="app-card">
           <a href="/skillsbar" class="app-link">
-            <img src="/skillsbar-icon.png" alt="SkillsBar App Icon" class="app-icon" />
+            <img
+              src="/skillsbar-icon.png"
+              alt="SkillsBar App Icon"
+              class="app-icon"
+            />
             <div class="app-info">
               <h3 class="app-name">SkillsBar</h3>
-              <p class="app-description">A macOS menu bar app for browsing and managing Claude Code, Codex, project skills, plugins, collections, agents, and usage stats.</p>
-              <span class="app-platform">macOS</span>
-            </div>
-          </a>
-        </li>
-        <li class="app-card">
-          <a href="/muxbar" class="app-link">
-            <img src="/muxbar-icon.png" alt="MuxBar App Icon" class="app-icon" />
-            <div class="app-info">
-              <h3 class="app-name">MuxBar</h3>
-              <p class="app-description">A macOS menu bar app for creating, attaching to, and killing tmux sessions in the terminal emulator of your choice.</p>
+              <p class="app-description">
+                A macOS menu bar app for browsing and managing Claude Code,
+                Codex, project skills, plugins, collections, agents, and usage
+                stats.
+              </p>
               <span class="app-platform">macOS</span>
             </div>
           </a>
@@ -108,26 +121,27 @@ const missing = PROJECTS.filter(name => !byName.has(name));
         <a
           href={`https://github.com/${GITHUB_USERNAME}`}
           target="_blank"
-          rel="noreferrer"
-          >@{GITHUB_USERNAME}</a
+          rel="noreferrer">@{GITHUB_USERNAME}</a
         >).
       </p>
 
-      {githubLoadError && (
-        <p class="note">
-          Couldn't load GitHub data at build time ({githubLoadError}). Showing a
-          small fallback list instead.
-        </p>
-      )}
+      {
+        githubLoadError && (
+          <p class="note">
+            Couldn't load GitHub data at build time ({githubLoadError}). Showing
+            a small fallback list instead.
+          </p>
+        )
+      }
 
-      {missing.length > 0 && (
-        <p class="note">Missing repositories: {missing.join(', ')}.</p>
-      )}
+      {
+        missing.length > 0 && (
+          <p class="note">Missing repositories: {missing.join(', ')}.</p>
+        )
+      }
 
       <ul class="projects-grid">
-        {selected.map(repo => (
-          <ProjectCard repo={repo} />
-        ))}
+        {selected.map(repo => <ProjectCard repo={repo} />)}
       </ul>
 
       <SlashPagesLink />
@@ -161,7 +175,11 @@ const missing = PROJECTS.filter(name => !byName.has(name));
   }
   .app-card {
     @apply rounded-lg border border-skin-line transition-all hover:border-skin-accent;
-    background-image: linear-gradient(to right, rgb(var(--color-card)) 0%, rgb(var(--color-fill)) 45%);
+    background-image: linear-gradient(
+      to right,
+      rgb(var(--color-card)) 0%,
+      rgb(var(--color-fill)) 45%
+    );
   }
   .app-link {
     @apply flex items-center gap-4 p-4 no-underline;

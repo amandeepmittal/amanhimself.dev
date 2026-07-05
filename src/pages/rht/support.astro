@@ -1,0 +1,179 @@
+---
+import Layout from '@layouts/Layout.astro';
+import Footer from '@components/Footer.astro';
+---
+
+<Layout
+  title="Support | RHT: Reading Habit Tracker"
+  description="Get help with RHT, the Reading Habit Tracker mobile app."
+>
+  <main class="page-wrap">
+    <a href="/rht" class="back-link">&larr; Back to RHT</a>
+
+    <h1>Support</h1>
+    <p class="subtitle">Need help? We're here for you.</p>
+
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+      <h3>How do I log my reading?</h3>
+      <p>
+        Tap "I read today" on the Today screen. That's the whole loop: one tap
+        per day. Your streak, heatmap, and stats update from there.
+      </p>
+    </div>
+
+    <div class="faq-item">
+      <h3>I forgot to log a day. Can I fix it?</h3>
+      <p>
+        Yes. Go to Activity, switch to Month, and tap any past day to mark it as
+        read. Tap a marked day to remove it. Your history is always yours to
+        edit.
+      </p>
+    </div>
+
+    <div class="faq-item">
+      <h3>What are monthly recaps?</h3>
+      <p>
+        At the start of each month, RHT shows a recap of the month that ended:
+        days read, longest run, and books finished. Past recaps stay available
+        forever via "View recap" on each month card in Activity.
+      </p>
+    </div>
+
+    <div class="faq-item">
+      <h3>How do I add books?</h3>
+      <p>
+        Use the Search tab to find books via Open Library (this needs an
+        internet connection), then add them to your shelf. Everything else about
+        your shelf works offline.
+      </p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Where is my data stored?</h3>
+      <p>
+        All your reading data is stored locally on your device. There is no
+        account and no cloud sync. You can export everything as a JSON file from
+        Settings, and deleting the app deletes your data.
+      </p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Does the app work offline?</h3>
+      <p>
+        Yes. Logging, streaks, heatmaps, recaps, and your shelf all work
+        offline. Only book search and cover images need a connection.
+      </p>
+    </div>
+
+    <div class="faq-item">
+      <h3>How do app updates work?</h3>
+      <p>
+        Bug fixes arrive automatically. You can also pull the latest fixes
+        yourself: Settings, then "Get the latest bug fixes".
+      </p>
+    </div>
+
+    <h2>Contact</h2>
+    <p>
+      If you have questions, feedback, or need help with something not covered
+      above, please reach out:
+    </p>
+    <p>
+      <a href="mailto:amanmittal.work@gmail.com">amanmittal.work@gmail.com</a>
+    </p>
+  </main>
+  <Footer />
+</Layout>
+
+<style is:global>
+  body {
+    background: linear-gradient(
+      180deg,
+      #fce8c9 0%,
+      #fdf6eb 35%,
+      #ffffff 100%
+    ) !important;
+  }
+</style>
+
+<style>
+  .page-wrap {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 40px 24px 40px;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: #1d1d1f;
+  }
+
+  .back-link {
+    display: inline-block;
+    margin-bottom: 24px;
+    font-size: 14px;
+    color: #6e6e73;
+    text-decoration: none;
+  }
+  .back-link:hover {
+    text-decoration: underline;
+    color: #1d1d1f;
+  }
+
+  h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0 0 6px;
+    letter-spacing: -0.3px;
+  }
+
+  .subtitle {
+    color: #6e6e73;
+    font-size: 15px;
+    margin: 0 0 32px;
+  }
+
+  h2 {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 32px 0 12px;
+    color: #1d1d1f;
+  }
+
+  .faq-item {
+    border: 1px solid #ead9bd;
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin-bottom: 10px;
+    background: #fff;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+  }
+
+  .faq-item h3 {
+    font-size: 15px;
+    font-weight: 700;
+    margin: 0 0 6px;
+    color: #1d1d1f;
+  }
+
+  .faq-item p {
+    margin: 0;
+    color: #6e6e73;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  p {
+    color: #6e6e73;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  a {
+    color: #b45309;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  a:hover {
+    color: #92400e;
+  }
+</style>

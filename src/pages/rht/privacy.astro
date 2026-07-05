@@ -1,0 +1,172 @@
+---
+import Layout from '@layouts/Layout.astro';
+import Footer from '@components/Footer.astro';
+---
+
+<Layout
+  title="Privacy Policy | RHT: Reading Habit Tracker"
+  description="Privacy policy for RHT, the Reading Habit Tracker mobile app."
+>
+  <main class="page-wrap">
+    <a href="/rht" class="back-link">&larr; Back to RHT</a>
+
+    <h1>Privacy Policy</h1>
+    <p class="updated">Last updated: July 2026</p>
+
+    <p>
+      <strong>RHT: Reading Habit Tracker</strong> keeps your reading life on your
+      device. There are no accounts, no analytics, no ads, and no tracking. Your reading
+      data is never uploaded anywhere by us. The app makes exactly two kinds of network
+      requests, described below.
+    </p>
+
+    <h2>Your Reading Data</h2>
+    <ul>
+      <li>
+        Reading logs, streaks, books, and settings are stored in a local
+        database on your device
+      </li>
+      <li>Nothing is synced to a cloud and there is no account to create</li>
+      <li>
+        You can export everything as a JSON file from Settings at any time; the
+        export is created on demand and shared only where you choose to send it
+      </li>
+      <li>
+        Deleting the app deletes your data; Settings also offers a full reset
+      </li>
+    </ul>
+
+    <h2>Book Search (Open Library)</h2>
+    <p>
+      When you search for a book, the text of your search is sent to Open
+      Library (openlibrary.org, a project of the Internet Archive) to find
+      matches, and book covers are fetched from covers.openlibrary.org. Like any
+      web request, these include your IP address. They include nothing about you
+      or your reading history, and RHT attaches no identifiers. If you never use
+      search, no request is made. See the <a
+        href="https://archive.org/about/terms.php"
+        >Internet Archive's privacy policy</a
+      >.
+    </p>
+
+    <h2>App Updates</h2>
+    <p>
+      To deliver bug fixes between store releases, the app checks Expo's update
+      service (EAS Update, operated by Expo) for a newer version of its code,
+      automatically at launch and when you tap "Get the latest bug fixes" in
+      Settings. These requests include technical details needed to serve the
+      right update: platform, app runtime version, and update channel. They
+      include no personal data and none of your reading data. See <a
+        href="https://expo.dev/privacy">Expo's privacy policy</a
+      >.
+    </p>
+
+    <h2>Notifications</h2>
+    <p>
+      The optional daily reminder is a local notification scheduled entirely on
+      your device. Notification content never leaves your device.
+    </p>
+
+    <h2>Analytics and Advertising</h2>
+    <p>
+      None. RHT contains no analytics, no advertising, and no third-party
+      tracking of any kind.
+    </p>
+
+    <h2>Changes</h2>
+    <p>
+      If this policy changes, the updated version will be posted at this address
+      with a new date above.
+    </p>
+
+    <h2>Contact</h2>
+    <p>
+      If you have questions about this privacy policy, contact: <a
+        href="mailto:amanmittal.work@gmail.com">amanmittal.work@gmail.com</a
+      >
+    </p>
+  </main>
+  <Footer />
+</Layout>
+
+<style is:global>
+  body {
+    background: linear-gradient(
+      180deg,
+      #fce8c9 0%,
+      #fdf6eb 35%,
+      #ffffff 100%
+    ) !important;
+  }
+</style>
+
+<style>
+  .page-wrap {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 40px 24px 40px;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: #1d1d1f;
+  }
+
+  .back-link {
+    display: inline-block;
+    margin-bottom: 24px;
+    font-size: 14px;
+    color: #6e6e73;
+    text-decoration: none;
+  }
+  .back-link:hover {
+    text-decoration: underline;
+    color: #1d1d1f;
+  }
+
+  h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0 0 6px;
+    letter-spacing: -0.3px;
+  }
+
+  .updated {
+    color: #86868b;
+    font-size: 13px;
+    margin: 0 0 32px;
+  }
+
+  h2 {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 28px 0 10px;
+    color: #1d1d1f;
+  }
+
+  p {
+    color: #6e6e73;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0 0 12px;
+  }
+
+  ul {
+    margin: 0 0 12px;
+    padding-left: 18px;
+    list-style: disc;
+  }
+
+  li {
+    color: #6e6e73;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 4px;
+  }
+
+  a {
+    color: #b45309;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  a:hover {
+    color: #92400e;
+  }
+</style>
