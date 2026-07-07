@@ -42,21 +42,21 @@
   :root,
   html[data-theme='light'] {
     /* === Exact min-theme (light) palette by Miguel Solorio === */
-    --color-fill: 255, 255, 255;          /* #ffffff editor.background */
-    --color-text-base: 33, 33, 33;        /* #212121 editor.foreground */
-    --color-accent: 0, 0, 0;              /* #000000 textLink.foreground */
-    --color-card: 246, 246, 246;          /* #f6f6f6 sideBar/panel background */
-    --color-card-muted: 224, 224, 224;    /* #e0e0e0 hover/muted surface */
-    --color-border: 208, 208, 208;        /* #d0d0d0 focusBorder hairline */
+    --color-fill: 255, 255, 255; /* #ffffff editor.background */
+    --color-text-base: 33, 33, 33; /* #212121 editor.foreground */
+    --color-accent: 0, 0, 0; /* #000000 textLink.foreground */
+    --color-card: 246, 246, 246; /* #f6f6f6 sideBar/panel background */
+    --color-card-muted: 224, 224, 224; /* #e0e0e0 hover/muted surface */
+    --color-border: 208, 208, 208; /* #d0d0d0 focusBorder hairline */
   }
   html[data-theme='dark'] {
     /* === min-theme (dark) palette by Miguel Solorio === */
-    --color-fill: 31, 31, 31;             /* #1f1f1f editor.background */
-    --color-text-base: 204, 204, 204;     /* #cccccc readable min gray */
-    --color-accent: 248, 248, 248;        /* #f8f8f8 near-white links/active */
-    --color-card: 38, 38, 38;             /* #262626 panel surface */
-    --color-card-muted: 51, 51, 51;       /* #333333 button.background */
-    --color-border: 68, 68, 68;           /* #444444 focusBorder hairline */
+    --color-fill: 31, 31, 31; /* #1f1f1f editor.background */
+    --color-text-base: 204, 204, 204; /* #cccccc readable min gray */
+    --color-accent: 248, 248, 248; /* #f8f8f8 near-white links/active */
+    --color-card: 38, 38, 38; /* #262626 panel surface */
+    --color-card-muted: 51, 51, 51; /* #333333 button.background */
+    --color-border: 68, 68, 68; /* #444444 focusBorder hairline */
   }
   /* Cross-fade colors on theme switch. Gated on a class added after first
      paint (so the initial load doesn't flash) and on reduced-motion. */
@@ -172,8 +172,7 @@
   }
 
   /* ===== external links get a quiet "leaves the site" cue ===== */
-  .prose
-    a[href^='http']:not([href*='amanhimself.dev']):not(:has(img))::after {
+  .prose a[href^='http']:not([href*='amanhimself.dev']):not(:has(img))::after {
     content: '↗';
     display: inline-block;
     margin-left: 0.1em;
@@ -235,8 +234,9 @@
 
   code {
     font-size: 0.875em !important;
-    font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Monaco,
-      Consolas, "Liberation Mono", "Courier New", monospace !important;
+    font-family:
+      'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+      'Liberation Mono', 'Courier New', monospace !important;
     font-weight: 400 !important;
   }
 

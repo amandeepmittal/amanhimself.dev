@@ -54,7 +54,11 @@ const socialImageURL = new URL(
     <meta name="author" content={author} />
     <meta name="publisher" content={author} />
     <link rel="sitemap" href="/sitemap-index.xml" />
-    {alternateMarkdown && <link rel="alternate" type="text/markdown" href={alternateMarkdown} />}
+    {
+      alternateMarkdown && (
+        <link rel="alternate" type="text/markdown" href={alternateMarkdown} />
+      )
+    }
     <meta
       name="keywords"
       content="Aman Mittal, amanhimself, blog, developer, React Native, Expo, Reactjs, tech writer, documentation, technical writer, writer, documentation"
@@ -118,15 +122,20 @@ const socialImageURL = new URL(
     <script is:inline src="/toggle-theme.js"></script>
     <script is:inline>
       // Global keyboard shortcut for search (Cmd/Ctrl + K)
-      document.addEventListener('DOMContentLoaded', function() {
-        document.addEventListener('keydown', function(event) {
+      document.addEventListener('DOMContentLoaded', function () {
+        document.addEventListener('keydown', function (event) {
           // Check for Cmd+K (Mac) or Ctrl+K (Windows/Linux)
           if ((event.metaKey || event.ctrlKey) && event.key === 'k') {
             event.preventDefault();
 
             // If we're already on the search page, focus the search input
-            if (window.location.pathname === '/search/' || window.location.pathname === '/search') {
-              const searchInput = document.querySelector('input[name="search"]');
+            if (
+              window.location.pathname === '/search/' ||
+              window.location.pathname === '/search'
+            ) {
+              const searchInput = document.querySelector(
+                'input[name="search"]'
+              );
               if (searchInput) {
                 searchInput.focus();
                 return;
@@ -138,13 +147,19 @@ const socialImageURL = new URL(
           }
 
           // Escape key: if on search page and search input is focused, clear search or go back
-          if (event.key === 'Escape' && (window.location.pathname === '/search/' || window.location.pathname === '/search')) {
+          if (
+            event.key === 'Escape' &&
+            (window.location.pathname === '/search/' ||
+              window.location.pathname === '/search')
+          ) {
             const searchInput = document.querySelector('input[name="search"]');
             if (searchInput && document.activeElement === searchInput) {
               // If there's text in the search, clear it first
               if (searchInput.value) {
                 searchInput.value = '';
-                searchInput.dispatchEvent(new Event('input', { bubbles: true }));
+                searchInput.dispatchEvent(
+                  new Event('input', { bubbles: true })
+                );
               } else {
                 // If search is empty, go back to home
                 window.location.href = '/';

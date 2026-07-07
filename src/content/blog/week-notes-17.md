@@ -18,5 +18,5 @@ A heavy week on the docs side. Two things shipped that I had been chewing on for
 - 📚 Read Kepano's [stephango.com/vault](https://stephango.com/vault) post and compared his ideas to my vault's structure. Most of what I keep in the vault are personal notes, blog post drafts, projects and blog post ideas that are work in progress, some attachments, and work meeting notes. Recently, I have been using the vault as context management system for Claude, especially when I am exploring some idea or skill generation.
 - 🔗 Podcasts
   - Listened to
-[Agent-Harness.ipynb* with Vincent Warmerdam](https://www.youtube.com/watch?v=d4wGcjvXJh0) and found the discussion around keeping a physical notebook for jotting down thoughts and creating plans on how to steer an agentic task interesting.
+    [Agent-Harness.ipynb* with Vincent Warmerdam](https://www.youtube.com/watch?v=d4wGcjvXJh0) and found the discussion around keeping a physical notebook for jotting down thoughts and creating plans on how to steer an agentic task interesting.
   - Listened [How valuable are agent skills? Conversation with Larah Vasquez and Fabrizio Ferri-Benedetti](https://www.youtube.com/watch?v=L18_7I2A8h4) is an interesting discussion on the value of agent skills. I was also curious to hear on how other technical writers/docs engineers are creating/using skills with agentic tools.

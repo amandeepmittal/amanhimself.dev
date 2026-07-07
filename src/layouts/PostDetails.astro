@@ -4,7 +4,7 @@ import Header from '@components/Header.astro';
 import Footer from '@components/Footer.astro';
 import Tag from '@components/Tag.astro';
 import Datetime from '@components/Datetime';
-import BackToTopButton from "@components/BackToTopButton.astro";
+import BackToTopButton from '@components/BackToTopButton.astro';
 import { render, type CollectionEntry } from 'astro:content';
 import { slugifyStr } from '@utils/slugify';
 import ShareLinks from '@components/ShareLinks.astro';
@@ -100,36 +100,49 @@ const tagCounts = new Map(
   <main id="main-content" class:list={{ 'has-rail': hasRail }}>
     <h1 transition:name={slugifyStr(title)} class="post-title">{title}</h1>
     <div class="flex items-center gap-2">
-      <Datetime
-        pubDatetime={pubDatetime}
-        modDatetime={modDatetime}
-      />
-      <span aria-hidden="true" class="font-mono text-xs text-skin-base opacity-50"> • </span>
-      <p class="font-mono text-xs tabular-nums text-skin-base opacity-50">{readingTime}</p>
-      <span aria-hidden="true" class="font-mono text-xs text-skin-base opacity-50"> • </span>
+      <Datetime pubDatetime={pubDatetime} modDatetime={modDatetime} />
+      <span
+        aria-hidden="true"
+        class="font-mono text-xs text-skin-base opacity-50"
+      >
+        •
+      </span>
+      <p class="font-mono text-xs tabular-nums text-skin-base opacity-50">
+        {readingTime}
+      </p>
+      <span
+        aria-hidden="true"
+        class="font-mono text-xs text-skin-base opacity-50"
+      >
+        •
+      </span>
       <div class="text-sm text-skin-base opacity-80">
         <ul class="flex flex-wrap items-center gap-x-2 gap-y-1 p-0">
-          {tags.map(tag => {
-            const tagSlug = slugifyStr(tag);
-            return <Tag tag={tagSlug} count={tagCounts.get(tagSlug)} />;
-          })}
+          {
+            tags.map(tag => {
+              const tagSlug = slugifyStr(tag);
+              return <Tag tag={tagSlug} count={tagCounts.get(tagSlug)} />;
+            })
+          }
         </ul>
       </div>
     </div>
-    {hasRail && (
-      <nav id="toc-rail" aria-label="On this page">
-        <p class="toc-rail-title">On this page</p>
-        <ul>
-          {tocItems.map(h => (
-            <li>
-              <a href={`#${h.slug}`} data-toc-link={h.slug}>
-                {h.text}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </nav>
-    )}
+    {
+      hasRail && (
+        <nav id="toc-rail" aria-label="On this page">
+          <p class="toc-rail-title">On this page</p>
+          <ul>
+            {tocItems.map(h => (
+              <li>
+                <a href={`#${h.slug}`} data-toc-link={h.slug}>
+                  {h.text}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      )
+    }
     <article id="article" role="article" class="prose mt-8 max-w-none">
       <Content />
     </article>
@@ -216,7 +229,7 @@ const tagCounts = new Map(
     <Footer />
 
     <style>
-  @reference "../styles/base.css";
+      @reference "../styles/base.css";
       main {
         @apply mx-auto w-full max-w-5xl px-4 pb-12;
       }
@@ -400,7 +413,10 @@ const tagCounts = new Map(
           document.querySelectorAll('h2, h3, h4, h5, h6')
         );
         for (let heading of headings) {
-          if (heading.dataset?.noAnchor === 'true' || heading.classList.contains('no-anchor')) {
+          if (
+            heading.dataset?.noAnchor === 'true' ||
+            heading.classList.contains('no-anchor')
+          ) {
             continue;
           }
           heading.classList.add('group');
@@ -430,10 +446,10 @@ const tagCounts = new Map(
             const line = lines[i].trim();
 
             const patterns = [
-              /^\/\/\s*(.+\.\w+)/,  // // filename.js
-              /^\/\*\s*(.+\.\w+)\s*\*\//,  // /* filename.css */
-              /^#\s*(.+\.\w+)/,     // # filename.py
-              /^<!--\s*(.+\.\w+)\s*-->/,  // <!-- filename.html -->
+              /^\/\/\s*(.+\.\w+)/, // // filename.js
+              /^\/\*\s*(.+\.\w+)\s*\*\//, // /* filename.css */
+              /^#\s*(.+\.\w+)/, // # filename.py
+              /^<!--\s*(.+\.\w+)\s*-->/ // <!-- filename.html -->
             ];
 
             for (const pattern of patterns) {
@@ -458,7 +474,7 @@ const tagCounts = new Map(
             );
 
             let node;
-            while (node = walker.nextNode()) {
+            while ((node = walker.nextNode())) {
               allTextNodes.push(node);
             }
 
@@ -491,9 +507,9 @@ const tagCounts = new Map(
               if (currentLineIndex > filenameLineIndex) break;
             }
 
-
             const header = document.createElement('div');
-            header.className = 'code-header flex items-center justify-between bg-skin-card border border-skin-line rounded-t-md px-3 py-2 text-sm';
+            header.className =
+              'code-header flex items-center justify-between bg-skin-card border border-skin-line rounded-t-md px-3 py-2 text-sm';
             const leftSide = document.createElement('div');
             leftSide.className = 'flex items-center gap-2';
             const greenDot = document.createElement('div');
@@ -506,7 +522,8 @@ const tagCounts = new Map(
             leftSide.appendChild(filenameSpan);
 
             const copyButton = document.createElement('button');
-            copyButton.className = 'copy-code p-1 text-skin-base hover:text-skin-accent transition-all duration-200 ease-in-out hover:bg-skin-fill rounded';
+            copyButton.className =
+              'copy-code p-1 text-skin-base hover:text-skin-accent transition-all duration-200 ease-in-out hover:bg-skin-fill rounded';
             copyButton.innerHTML = IconCopy;
             copyButton.querySelector('svg').style.width = '16px';
             copyButton.querySelector('svg').style.height = '16px';
@@ -518,7 +535,8 @@ const tagCounts = new Map(
 
             codeBlock.parentNode.insertBefore(header, codeBlock);
 
-            codeBlock.className = (codeBlock.className || '') + ' rounded-t-none mt-0';
+            codeBlock.className =
+              (codeBlock.className || '') + ' rounded-t-none mt-0';
             codeBlock.style.borderTop = 'none';
             codeBlock.style.marginTop = '0';
 
@@ -537,14 +555,14 @@ const tagCounts = new Map(
                 copyButton.querySelector('svg').style.height = '16px';
               }, 1200);
             });
-
           } else {
             let wrapper = document.createElement('div');
             wrapper.style.position = 'relative';
             wrapper.className = 'code-block-wrapper';
 
             let copyButton = document.createElement('button');
-            copyButton.className = 'copy-code absolute top-3 right-3 p-2 text-skin-base hover:text-skin-accent transition-all duration-200 ease-in-out hover:bg-skin-card rounded-md opacity-70 hover:opacity-100';
+            copyButton.className =
+              'copy-code absolute top-3 right-3 p-2 text-skin-base hover:text-skin-accent transition-all duration-200 ease-in-out hover:bg-skin-card rounded-md opacity-70 hover:opacity-100';
             copyButton.innerHTML = IconCopy;
             copyButton.querySelector('svg').style.width = '16px';
             copyButton.querySelector('svg').style.height = '16px';

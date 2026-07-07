@@ -6,7 +6,7 @@ export async function getStaticPaths() {
   const posts = await getCollection('blog');
   return posts.filter(postFilter).map(post => ({
     params: { slug: post.id },
-    props: { post },
+    props: { post }
   }));
 }
 
@@ -24,10 +24,10 @@ export const GET: APIRoute = ({ props }) => {
     '',
     '---',
     '',
-    post.body,
+    post.body
   ].filter((line): line is string => line !== null);
 
   return new Response(lines.join('\n'), {
-    headers: { 'Content-Type': 'text/markdown; charset=utf-8' },
+    headers: { 'Content-Type': 'text/markdown; charset=utf-8' }
   });
 };

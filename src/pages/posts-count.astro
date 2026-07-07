@@ -21,7 +21,9 @@ const yearly = Object.entries(counts)
   .map(([year, count]) => ({ year: Number(year), count }))
   .sort((a, b) => b.year - a.year);
 
-const maxCount = yearly.length ? Math.max(...yearly.map(item => item.count)) : 0;
+const maxCount = yearly.length
+  ? Math.max(...yearly.map(item => item.count))
+  : 0;
 const palette = [
   '#78DCE8',
   '#A9DC76',
@@ -55,19 +57,17 @@ const bars = yearly.map((entry, idx) => {
       {
         bars.length ? (
           <ul class="bar-list">
-            {
-              bars.map(bar => (
-                <li class="bar-row">
-                  <span class="year">{bar.year}</span>
-                  <div class="bar-track">
-                    <div class="bar" style={`width:${bar.width}%`}>
-                      <span class="bar-fill" style={`background:${bar.color}`}></span>
-                      <span class="count">{bar.count}</span>
-                    </div>
+            {bars.map(bar => (
+              <li class="bar-row">
+                <span class="year">{bar.year}</span>
+                <div class="bar-track">
+                  <div class="bar" style={`width:${bar.width}%`}>
+                    <span class="bar-fill" style={`background:${bar.color}`} />
+                    <span class="count">{bar.count}</span>
                   </div>
-                </li>
-              ))
-            }
+                </div>
+              </li>
+            ))}
           </ul>
         ) : (
           <p class="empty">No published posts yet.</p>
@@ -75,7 +75,11 @@ const bars = yearly.map((entry, idx) => {
       }
     </section>
     <p class="callout">
-      *From 2016 to 2018, I used <a href="https://medium.com/@amanhimself" target="_blank" style="text-decoration: underline;">Medium.com</a> as my primary blog.
+      *From 2016 to 2018, I used <a
+        href="https://medium.com/@amanhimself"
+        target="_blank"
+        style="text-decoration: underline;">Medium.com</a
+      > as my primary blog.
     </p>
     <SlashPagesLink />
   </Main>

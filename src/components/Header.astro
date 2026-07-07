@@ -68,7 +68,10 @@ const { activeNav } = Astro.props;
             </a>
           </li>
           <li>
-            <a href="/projects/" class={activeNav === 'projects' ? 'active' : ''}>
+            <a
+              href="/projects/"
+              class={activeNav === 'projects' ? 'active' : ''}
+            >
               Projects
             </a>
           </li>
@@ -94,7 +97,9 @@ const { activeNav } = Astro.props;
                 ></path>
               </svg>
               <span class="sr-only">Search</span>
-              <kbd class="hidden sm:inline-block ml-2 px-2 py-1 text-xs font-medium text-skin-base bg-skin-card border border-skin-line rounded opacity-60">
+              <kbd
+                class="hidden sm:inline-block ml-2 px-2 py-1 text-xs font-medium text-skin-base bg-skin-card border border-skin-line rounded opacity-60"
+              >
                 ⌘ + k
               </kbd>
             </LinkButton>
@@ -265,7 +270,9 @@ const { activeNav } = Astro.props;
     // Arrow key navigation + focus trapping within menu
     menuItems.addEventListener('keydown', e => {
       const links = [...menuItems!.querySelectorAll('a')];
-      const currentIndex = links.indexOf(document.activeElement as HTMLAnchorElement);
+      const currentIndex = links.indexOf(
+        document.activeElement as HTMLAnchorElement
+      );
 
       if (e.key === 'ArrowDown') {
         e.preventDefault();

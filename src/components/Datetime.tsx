@@ -33,10 +33,7 @@ export default function Datetime({
       ) : (
         <span className="sr-only">Published:</span>
       )}
-      <FormattedDatetime
-        pubDatetime={pubDatetime}
-        modDatetime={modDatetime}
-      />
+      <FormattedDatetime pubDatetime={pubDatetime} modDatetime={modDatetime} />
     </span>
   );
 }

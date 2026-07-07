@@ -32,5 +32,5 @@ export default [
       }
     }
   },
-  ...astro.configs['flat/recommended']
+  ...astro.configs.recommended
 ];

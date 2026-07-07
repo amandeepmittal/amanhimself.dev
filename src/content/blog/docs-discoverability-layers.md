@@ -42,11 +42,11 @@ At my day job, all three layers are implemented and I have also implemented two 
 
 The blog uses metadata and has an LLM access layer using `.md` URLs. I think using structured data might be overkill for it. The [documentation site](https://docs.expo.dev) I work on is more of a complete case study. The following table describes each layer and its implementation status from the documentation site:
 
-| Layer               | Consumer                                        | What is implemented                                                                                         |
-| ------------------- | ----------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
-| Head metadata       | Search crawlers, social platforms               | Title, description, canonical URL, robots directives, Open Graph (OG) tags, Twitter Cards, dynamic OG images |
-| JSON-LD             | Schema parsers, Google rich results              | Schema types such as: Organization, WebSite, BreadcrumbList, TechArticle, FAQPage, VideoObject              |
-| llms.txt + markdown | AI agents (coding assistants, chat interfaces)   | llms.txt endpoints, per-page `/index.md`, Cloudflare worker that serves markdown when requested via HTTP headers |
+| Layer               | Consumer                                       | What is implemented                                                                                              |
+| ------------------- | ---------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| Head metadata       | Search crawlers, social platforms              | Title, description, canonical URL, robots directives, Open Graph (OG) tags, Twitter Cards, dynamic OG images     |
+| JSON-LD             | Schema parsers, Google rich results            | Schema types such as: Organization, WebSite, BreadcrumbList, TechArticle, FAQPage, VideoObject                   |
+| llms.txt + markdown | AI agents (coding assistants, chat interfaces) | llms.txt endpoints, per-page `/index.md`, Cloudflare worker that serves markdown when requested via HTTP headers |
 
 The layers are independent. You do not have to implement them all at once. You can add them incrementally and test the value each one provides.
 
@@ -66,7 +66,7 @@ JSON-LD adds semantic understanding to each indexed page. It doesn't help a page
 
 `llms.txt` provides the site-level overview that neither page-level layer can offer. It gives AI agents a curated map of the entire documentation. To actually consume individual pages, per-page `.md` URLs are efficient. Some sites also support serving Markdown when an AI agent requests it via the `Accept: text/markdown` HTTP header, so the same URL can return HTML for browsers and Markdown for agents.
 
-```md
+```txt
                      One docs page
                           |
         ---------------------------------------------
@@ -80,7 +80,6 @@ JSON-LD adds semantic understanding to each indexed page. It doesn't help a page
   meta description      TechArticle         per-page index.md
   OG/Twitter            BreadcrumbList      Accept: text/markdown
 ```
-
 
 ## Wrap up
 

@@ -14,19 +14,17 @@ const getUniqueTags = (
 ) => {
   const tagsMap = new Map<string, Tag>();
 
-  posts
-    .filter(filter)
-    .forEach(post => {
-      post.data.tags.forEach(tagName => {
-        const tag = slugifyStr(tagName);
-        const current = tagsMap.get(tag);
-        if (current) {
-          current.count += 1;
-        } else {
-          tagsMap.set(tag, { tag, tagName, count: 1 });
-        }
-      });
+  posts.filter(filter).forEach(post => {
+    post.data.tags.forEach(tagName => {
+      const tag = slugifyStr(tagName);
+      const current = tagsMap.get(tag);
+      if (current) {
+        current.count += 1;
+      } else {
+        tagsMap.set(tag, { tag, tagName, count: 1 });
+      }
     });
+  });
 
   return Array.from(tagsMap.values()).sort((a, b) =>
     a.tag.localeCompare(b.tag)
