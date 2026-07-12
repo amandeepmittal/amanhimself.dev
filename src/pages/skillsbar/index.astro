@@ -105,6 +105,11 @@ import Layout from '@layouts/Layout.astro';
           >.
         </li>
         <li>
+          Command Palette (<code>Cmd+K</code>) that searches skills, agents,
+          plugins, collections, projects, tool screens, and actions from one
+          place.
+        </li>
+        <li>
           Manage trusted project folders in a dedicated Project Skills screen.
         </li>
         <li>
@@ -114,6 +119,10 @@ import Layout from '@layouts/Layout.astro';
         <li>
           Detect project-local <code>CLAUDE.md</code>, <code>AGENTS.md</code>,
           and <code>.codex/AGENTS.md</code> files next to trusted projects.
+        </li>
+        <li>
+          Instructions Hub for global and project instruction files with Ready,
+          Missing, Empty, and Unreadable states plus open-or-create actions.
         </li>
         <li>
           Create collections from a project, open the project in Claude Code or
@@ -132,12 +141,16 @@ import Layout from '@layouts/Layout.astro';
           capabilities, included skills, and quick open or reveal actions.
         </li>
         <li>
-          Track skill invocations from Claude Code history, Codex CLI history,
-          and Codex Desktop session rollouts.
+          Track Claude Code, Codex CLI, and Codex Desktop skill invocations in
+          app-owned history with 30d, 7d, and All ranges.
         </li>
         <li>
-          Show source-aware usage insights, summary breakdowns, and ranked
-          per-skill usage sections.
+          Daily and monthly usage heatmaps, hover totals by source, and ranked
+          per-skill usage that still counts deleted skills.
+        </li>
+        <li>
+          Skill Health checkup that flags invalid frontmatter, missing
+          descriptions, duplicate triggers, unreadable folders, and stale pins.
         </li>
         <li>
           Settings for What&apos;s New, appearance, default sort, preferred
@@ -162,7 +175,9 @@ import Layout from '@layouts/Layout.astro';
         </li>
         <li>Agent browsing for sub-agents with model and tools metadata.</li>
         <li>
-          Global hotkey <code>Option+Shift+S</code> to toggle from anywhere.
+          Global hotkey <code>Option+Shift+S</code> to toggle from anywhere,
+          with arrow-key navigation, <code>Esc</code> back, and
+          <code>Cmd+Left</code> inside the popover.
         </li>
         <li>Live updates via FSEvents directory watcher.</li>
         <li>No Dock icon, lives entirely in the menu bar.</li>
@@ -218,9 +233,9 @@ import Layout from '@layouts/Layout.astro';
       <div class="card">
         <h3>Usage stats</h3>
         <p>
-          Track invocations from Claude Code history, Codex CLI history, and
-          Codex Desktop session rollouts with source-aware insights and ranked
-          sections.
+          Track Claude Code, Codex CLI, and Codex Desktop invocations with 30d,
+          7d, and All ranges, daily and monthly heatmaps, and ranked per-skill
+          usage.
         </p>
       </div>
       <div class="card">
@@ -246,6 +261,20 @@ import Layout from '@layouts/Layout.astro';
           </figure>
           <figure class="shot">
             <img
+              src="/skillsbar-command-palette.png"
+              alt="Command Palette searching skills, tools, and actions"
+            />
+            <figcaption>Command Palette</figcaption>
+          </figure>
+          <figure class="shot">
+            <img
+              src="/skillsbar-usage-stats.png"
+              alt="Usage stats with daily heatmap and ranked skills"
+            />
+            <figcaption>Usage stats</figcaption>
+          </figure>
+          <figure class="shot">
+            <img
               src="/skillsbar-project-skills.png"
               alt="Project Skills screen with an approved local project"
             />
@@ -254,7 +283,7 @@ import Layout from '@layouts/Layout.astro';
           <figure class="shot">
             <img
               src="/skillsbar-project-overview.png"
-              alt="Project overview with quick actions and recent project skills"
+              alt="Project overview with health metrics and quick actions"
             />
             <figcaption>Project overview</figcaption>
           </figure>
@@ -267,27 +296,6 @@ import Layout from '@layouts/Layout.astro';
           </figure>
           <figure class="shot">
             <img
-              src="/skillsbar-settings-view.png"
-              alt="Settings view with appearance, editor, and sort controls"
-            />
-            <figcaption>Settings</figcaption>
-          </figure>
-          <figure class="shot">
-            <img
-              src="/skillsbar-collections-view.png"
-              alt="Collections tab with source filter chips"
-            />
-            <figcaption>Collections</figcaption>
-          </figure>
-          <figure class="shot">
-            <img
-              src="/skillsbar-plugin-detail.png"
-              alt="Codex plugin detail with metadata and included skills"
-            />
-            <figcaption>Plugin detail</figcaption>
-          </figure>
-          <figure class="shot">
-            <img
               src="/skillsbar-skill-detail.png"
               alt="Project skill detail with validation preview and usage command"
             />
@@ -295,10 +303,31 @@ import Layout from '@layouts/Layout.astro';
           </figure>
           <figure class="shot">
             <img
-              src="/skillsbar-instructions-menu.png"
-              alt="Global instructions menu"
+              src="/skillsbar-collections-view.png"
+              alt="Collections tab with a custom Docs collection"
             />
-            <figcaption>Instructions</figcaption>
+            <figcaption>Collections</figcaption>
+          </figure>
+          <figure class="shot">
+            <img
+              src="/skillsbar-skill-health.png"
+              alt="Skill Health checkup with severity metrics and cleanup actions"
+            />
+            <figcaption>Skill Health</figcaption>
+          </figure>
+          <figure class="shot">
+            <img
+              src="/skillsbar-instructions-menu.png"
+              alt="Instructions Hub with global and project instruction files"
+            />
+            <figcaption>Instructions Hub</figcaption>
+          </figure>
+          <figure class="shot">
+            <img
+              src="/skillsbar-settings-view.png"
+              alt="Settings view with appearance, editor, and sort controls"
+            />
+            <figcaption>Settings</figcaption>
           </figure>
           <figure class="shot">
             <img
