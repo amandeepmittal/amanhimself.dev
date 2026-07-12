@@ -42,6 +42,9 @@ In 2018, I made my first open-source contribution by writing a Twitter Bot for f
 
 ## Technical writing
 
+<!-- Writing came before tech writing. For a few years, I ran a book blog where I reviewed books and interviewed authors, including [Andy Weir](https://web.archive.org/web/20151129090237/https://amandeepmittal.wordpress.com/2014/11/12/author-interview-andy-weir/) of The Martian fame.
+ -->
+
 My journey in technical writing started on [Medium](https://medium.com/@amanhimself) in 2017. Since then, I've:
 
 - Become an [AWS Amplify Community contributor](https://amplify.aws/community/contributors) in 2019.
