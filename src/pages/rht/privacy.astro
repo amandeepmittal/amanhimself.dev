@@ -16,7 +16,7 @@ import Footer from '@components/Footer.astro';
     <p>
       <strong>RHT: Reading Habit Tracker</strong> keeps your reading life on your
       device. There are no accounts, no analytics, no ads, and no tracking. Your reading
-      data is never uploaded anywhere by us. The app makes exactly two kinds of network
+      data is never uploaded anywhere by us. The app makes exactly three kinds of network
       requests, described below.
     </p>
 
@@ -36,7 +36,7 @@ import Footer from '@components/Footer.astro';
       </li>
     </ul>
 
-    <h2>Book Search (Open Library)</h2>
+    <h2>Book and Manga Search (Open Library and AniList)</h2>
     <p>
       When you search for a book, the text of your search is sent to Open
       Library (openlibrary.org, a project of the Internet Archive) to find
@@ -46,6 +46,16 @@ import Footer from '@components/Footer.astro';
       search, no request is made. See the <a
         href="https://archive.org/about/terms.php"
         >Internet Archive's privacy policy</a
+      >.
+    </p>
+    <p>
+      When you search or browse manga, the text of your search or the genre you
+      pick is sent to AniList (anilist.co) to find matches, and manga covers are
+      fetched from AniList's image servers. The same rules apply: your IP
+      address is included like any web request, nothing about you or your
+      reading history is sent, and RHT attaches no identifiers. If you never use
+      manga search, no request is made. See <a href="https://anilist.co/terms"
+        >AniList's terms and privacy policy</a
       >.
     </p>
 
