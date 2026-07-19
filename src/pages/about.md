@@ -27,6 +27,10 @@ I’ve worn many hats over the years:
   <small>
   Documentation engineer at Expo focused on developer education and product enablement. Wrote the Expo writing style guide, maintained SDK references, Expo and EAS guides, Expo and EAS tutorials, while shipping tooling for doc generation, TypeDoc/APISection updates, `llms.txt` pipelines, and integrating AI assistant pipelines. Partnered with product/engineering to keep docs accurate across releases, improved docs UX and discoverability (DocSearch), and turned community feedback into fixes that reduced friction for developers adopting Expo SDK and EAS. Also, helped Dev Success team at Expo in various ways, among wearing other hats.
   </small>
+  <br/><br/>
+  <small>
+  More recently, launched Japanese localization for the docs, building the locale routing, hreflang, and translation drift detection behind it along with the translated tutorial track. Turned the Expo style guide into something CI enforces: 24 Vale rules that block a merge, plus checks for broken asset references, insecure links, and missing alt text on every page. Rebuilt the agent-facing layer so the `llms.txt` index is 59% smaller and fits inside an agent's context window, wrote corrections for what models still get wrong about Expo, and gave agents a way to report doc bugs straight back to the team. Shipped the on-page AI assistant, including answer-level feedback and lazy loading that keeps it out of the shared bundle. Added structured data across the site and cleared the errors it surfaced in Google Search Console. Ran the docs side of multiple SDK releases, and rewrote the introduction page for every EAS product while splitting environment variables, Submit, and development builds into task-oriented guides.
+  </small>
 - 📝 Senior Content Developer at Vercel (2022)
 - 🥑 Developer Advocate at Draftbit (2021 &mdash; 2022)
 - 💻 📝 Software consultant and Tech Writer for Crowdbotics (2018 &mdash; 2021)
