@@ -5,7 +5,7 @@ import Footer from '@components/Footer.astro';
 
 <Layout
   title="RHT: Reading Habit Tracker"
-  description="Build a daily reading habit with one tap a day. Streaks, heatmaps, monthly recaps, and a simple shelf. Local-first, no account, for iOS and Android."
+  description="Build a daily reading habit with one tap a day. Streaks, heatmaps, monthly recaps, and a simple shelf. Local-first, no account. Now on Google Play, coming soon to the App Store."
 >
   <main class="page-wrap">
     <!-- Header -->
@@ -15,9 +15,25 @@ import Footer from '@components/Footer.astro';
         <p class="brand-tagline">One tap a day. A reading life you can see.</p>
       </div>
       <nav class="nav-links">
-        <span class="soon-pill"
-          >Coming soon to the App Store &amp; Google Play</span
+        <a
+          class="btn primary"
+          href="https://play.google.com/store/apps/details?id=com.amanhimself.readinghabittracker"
         >
+          <svg class="store-icon" viewBox="0 0 24 24" aria-hidden="true"
+            ><path
+              d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 01-.61-.92V2.734a1 1 0 01.609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.807 1.626a1 1 0 010 1.732l-2.808 1.626L15.206 12l2.492-2.492zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z"
+            ></path></svg
+          >
+          Google Play
+        </a>
+        <span class="soon-pill">
+          <svg class="store-icon" viewBox="0 0 24 24" aria-hidden="true"
+            ><path
+              d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"
+            ></path></svg
+          >
+          App Store soon
+        </span>
       </nav>
     </header>
 
@@ -48,6 +64,27 @@ import Footer from '@components/Footer.astro';
               what you're reading. No feeds, no pressure.
             </p>
           </div>
+        </div>
+        <div class="cta">
+          <a
+            class="btn primary"
+            href="https://play.google.com/store/apps/details?id=com.amanhimself.readinghabittracker"
+          >
+            <svg class="store-icon" viewBox="0 0 24 24" aria-hidden="true"
+              ><path
+                d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 01-.61-.92V2.734a1 1 0 01.609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.807 1.626a1 1 0 010 1.732l-2.808 1.626L15.206 12l2.492-2.492zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z"
+              ></path></svg
+            >
+            Get on Google Play
+          </a>
+          <span class="soon-pill">
+            <svg class="store-icon" viewBox="0 0 24 24" aria-hidden="true"
+              ><path
+                d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"
+              ></path></svg
+            >
+            App Store coming soon
+          </span>
         </div>
         <ul class="bullets">
           <li>One-tap daily check-in with streaks and gentle milestones.</li>
@@ -189,10 +226,16 @@ import Footer from '@components/Footer.astro';
     overflow-x: hidden !important;
   }
 
-  .page-wrap svg {
+  .page-wrap svg:not(.store-icon) {
     width: auto !important;
     height: auto !important;
     fill: none !important;
+  }
+  .page-wrap svg.store-icon {
+    width: 16px !important;
+    height: 16px !important;
+    fill: currentColor !important;
+    display: inline-block !important;
   }
 </style>
 
@@ -237,12 +280,54 @@ import Footer from '@components/Footer.astro';
   }
   .nav-links {
     display: flex;
+    flex-wrap: wrap;
     gap: 8px;
+  }
+
+  /* -- Buttons -- */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
+    border-radius: 10px;
+    border: 1px solid #ead9bd;
+    font-size: 14px;
+    font-weight: 600;
+    background: #fff;
+    color: #1d1d1f;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+    transition: all 150ms ease;
+    white-space: nowrap;
+    text-decoration: none !important;
+    cursor: pointer;
+  }
+  .btn:hover {
+    background: #faf5eb;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  }
+
+  .btn.primary {
+    background: #b45309;
+    color: #fff;
+    border-color: #b45309;
+  }
+  .btn.primary:hover {
+    background: #92400e;
+    border-color: #92400e;
+  }
+
+  .cta {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 16px;
   }
 
   .soon-pill {
     display: inline-flex;
     align-items: center;
+    gap: 6px;
     padding: 8px 16px;
     border-radius: 999px;
     border: 1px solid #f2d9ac;

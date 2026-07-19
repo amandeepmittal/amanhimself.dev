@@ -1,0 +1,19 @@
+{"message":"connected.","label":"vite","level":"info"}
+{"message":"Generated 0ms","label":"types","level":"info"}
+{"message":"connected.","label":"vite","level":"info"}
+{"message":"Syncing content","label":"content","level":"info"}
+{"message":"Astro config changed","label":"content","level":"info"}
+{"message":"Clearing content store","label":"content","level":"info"}
+{"message":"Synced content","label":"content","level":"info"}
+{"message":"Re-optimizing dependencies because vite config has changed","label":"vite","level":"info"}
+{"message":" astro  v7.0.6 ready in 5837 ms\n┃ Local    http://localhost:4321/\n┃ Network  use --host to expose","label":"SKIP_FORMAT","level":"info"}
+{"message":"watching for file changes...","label":null,"level":"info"}
+{"message":"[200] /rht 21ms","label":null,"level":"info"}
+{"message":"[200] /rht 1ms","label":null,"level":"info"}
+{"message":"[200] /rht 2ms","label":null,"level":"info"}
+{"message":"[200] /rht 2ms","label":null,"level":"info"}
+{"message":"[200] /rht 2ms","label":null,"level":"info"}
+{"message":"/src/styles/base.css, /src/pages/rht/index.astro?astro&type=style&index=0&lang.css, /src/pages/rht/index.astro?astro&type=style&index=1&lang.css","label":"watch","level":"info"}
+{"message":"[200] /rht 12ms","label":null,"level":"info"}
+{"message":"/src/pages/rht/index.astro?astro&type=style&index=0&lang.css, /src/pages/rht/index.astro?astro&type=style&index=1&lang.css","label":"watch","level":"info"}
+{"message":"[200] /rht 4ms","label":null,"level":"info"}
