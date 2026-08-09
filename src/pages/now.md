@@ -8,7 +8,7 @@ _Last Update: August 10, 2026_
 
 ## What I am doing now?
 
-- Working on [Expo docs](https://docs.expo.dev) as a full-time independent contractor.
+- Working on [Expo documentation](https://docs.expo.dev) as a full-time independent contractor.
 - Focused on docs-as-code workflows and developer education.
 - Thinking more deliberately about the craft of technical writing. What makes documentation genuinely useful, how docs-as-code workflows should work, and how AI is changing the way we write and maintain docs.
 - 📚 Reading: Check out my [Goodreads](https://www.goodreads.com/author/show/17657541.Aman_Mittal)
