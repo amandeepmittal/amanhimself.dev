@@ -4,11 +4,11 @@ title: 'Now'
 showSlashLink: true
 ---
 
-_Last Update: January 30, 2026_
+_Last Update: August 10, 2026_
 
 ## What I am doing now?
 
-- Working on [Expo docs](https://docs.expo.dev) as an independent contractor.
+- Working on [Expo docs](https://docs.expo.dev) as a full-time independent contractor.
 - Focused on docs-as-code workflows and developer education.
 - Thinking more deliberately about the craft of technical writing. What makes documentation genuinely useful, how docs-as-code workflows should work, and how AI is changing the way we write and maintain docs.
 - 📚 Reading: Check out my [Goodreads](https://www.goodreads.com/author/show/17657541.Aman_Mittal)
@@ -22,7 +22,7 @@ Developer documentation that respects the reader. API references that are accura
 - 💻 16-inch MacBook Pro (2023) with M3 chip. This is on-the-go machine.
 - ⌨️ Keychron K3 Pro with Gateron Brown switches.
 - 🎮 Nintendo Switch for Breath of the Wild and a Steam Deck.
-- 📖 I use the Kindle app on my mobile device for most of my reading.
+- 📖 I use the Kindle app on my mobile device for most of my reading. I like paperbacks as well.
 
 > Looking for more information about me, or my past work experience? See the [About](/about) page or see my [LinkedIn](https://www.linkedin.com/in/aman-mittal-05a239117/) for a general summary of my employment history.
 
