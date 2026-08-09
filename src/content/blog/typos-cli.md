@@ -23,7 +23,7 @@ Installing `typos-cli` as a command-line utility is straightforward. On macOS, i
 brew install typos-cli
 ```
 
-If you are familiar with Rust, you can also install it using `cargo`. For other platforms, refer to [`typos-cli` documentation]().
+If you are familiar with Rust, you can also install it using `cargo`. For other platforms, refer to [`typos-cli` documentation](<>).
 
 ## Detecting typos in the CLI
 
