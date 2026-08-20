@@ -58,6 +58,9 @@
     "readingTime": {
       "type": "string"
     },
+    "wordCount": {
+      "type": "number"
+    },
     "$schema": {
       "type": "string"
     }

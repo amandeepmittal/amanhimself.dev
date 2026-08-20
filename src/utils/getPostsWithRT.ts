@@ -14,10 +14,10 @@ export const getReadingTime = async () => {
   await Promise.all(
     globPostsValues.map(async globPost => {
       const { frontmatter } = await globPost();
-      mapFrontmatter.set(
-        slugifyStr(frontmatter.title),
-        frontmatter.readingTime
-      );
+      mapFrontmatter.set(slugifyStr(frontmatter.title), {
+        readingTime: frontmatter.readingTime,
+        wordCount: frontmatter.wordCount
+      });
     })
   );
 
@@ -27,7 +27,9 @@ export const getReadingTime = async () => {
 const getPostsWithRT = async (posts: CollectionEntry<'blog'>[]) => {
   const mapFrontmatter = await getReadingTime();
   return posts.map(post => {
-    post.data.readingTime = mapFrontmatter.get(slugifyStr(post.data.title));
+    const stats = mapFrontmatter.get(slugifyStr(post.data.title));
+    post.data.readingTime = stats?.readingTime;
+    post.data.wordCount = stats?.wordCount;
     return post;
   });
 };

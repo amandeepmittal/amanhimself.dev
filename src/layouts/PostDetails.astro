@@ -31,7 +31,8 @@ const {
   pubDatetime,
   modDatetime,
   tags,
-  readingTime
+  readingTime,
+  wordCount
 } = post.data;
 
 const { Content, headings } = await render(post);
@@ -99,7 +100,7 @@ const tagCounts = new Map(
   </div>
   <main id="main-content" class:list={{ 'has-rail': hasRail }}>
     <h1 transition:name={slugifyStr(title)} class="post-title">{title}</h1>
-    <div class="flex items-center gap-2">
+    <div class="flex flex-wrap items-center gap-x-2 gap-y-1">
       <Datetime pubDatetime={pubDatetime} modDatetime={modDatetime} />
       <span
         aria-hidden="true"
@@ -110,6 +111,21 @@ const tagCounts = new Map(
       <p class="font-mono text-xs tabular-nums text-skin-base opacity-50">
         {readingTime}
       </p>
+      {
+        wordCount && (
+          <>
+            <span
+              aria-hidden="true"
+              class="font-mono text-xs text-skin-base opacity-50"
+            >
+              •
+            </span>
+            <p class="font-mono text-xs tabular-nums text-skin-base opacity-50">
+              {wordCount.toLocaleString('en-US')} words
+            </p>
+          </>
+        )
+      }
       <span
         aria-hidden="true"
         class="font-mono text-xs text-skin-base opacity-50"
