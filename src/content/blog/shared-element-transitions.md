@@ -9,7 +9,7 @@ tags:
 description: ''
 ---
 
-![cover_image](https://blog.logrocket.com/wp-content/uploads/2021/01/reactnavigationv5.png)
+![](https://blog.logrocket.com/wp-content/uploads/2021/01/reactnavigationv5.png)
 
 > Originally Published at [Logrocket](https://blog.logrocket.com/how-to-use-shared-element-transition-with-react-navigation-v5/)
 

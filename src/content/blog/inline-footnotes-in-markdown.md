@@ -17,6 +17,6 @@ The example in the screenshot below shows a simple implementation of footnotes o
 
 Notice the return symbol (↩︎), which allows a reader to jump back to the reference point in your post.
 
-<img src="/images/inline-footnotes.png" width="480" />
+<img src="/images/inline-footnotes.png" width="480" alt="Footnote rendered on this blog with the return symbol linking back" />
 
 Footnotes are common in academic writing and on many blogs where additional content enhances credibility. I have personally not used them on this blog, but I think I have a use case in mind.

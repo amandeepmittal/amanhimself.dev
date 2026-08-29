@@ -9,7 +9,7 @@ tags:
 description: ''
 ---
 
-![cover_image](https://i.imgur.com/sRxXsyt.png)
+![](https://i.imgur.com/sRxXsyt.png)
 
 In React Native, the [FlatList component](https://reactnative.dev/docs/flatlist) works well to render a long list of data. It renders only the items are shown on the screen in a scrolling list and not all the data items at once.
 
@@ -92,7 +92,7 @@ The result of the above component will display a list of items without any error
 
 Here is the output on a device's screen from the above snippet:
 
-![ss2](https://i.imgur.com/ShoysNV.png)
+![FlatList rendering the item titles on a device screen](https://i.imgur.com/ShoysNV.png)
 
 ## Using the keyExtractor prop
 
@@ -100,7 +100,7 @@ By default, the `keyExtractor` prop checks for properties like `key` and `id` (i
 
 If none of them are provided, the `FlatList` component will throw a warning "VirtualizedList: missing keys for items ...":
 
-![ss1](https://i.imgur.com/0zN4FXy.png)
+![VirtualizedList warning about missing keys for items](https://i.imgur.com/0zN4FXy.png)
 
 Now, let's consider a scenario where array of data contains a unique key with each list item but the name of the unique key is neither `key` nor `id`. It contains a unique key property with the name of `userId`.
 

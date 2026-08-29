@@ -9,7 +9,7 @@ tags:
 description: ''
 ---
 
-![cover](https://i.imgur.com/hJ7W51N.jpg)
+![](https://i.imgur.com/hJ7W51N.jpg)
 
 > [I made updates to this post here](https://amanhimself.dev/blog/setup-macbook-m1/) with additions to setup a new Macbook Pro based on M1 chip in 2021!
 
@@ -34,7 +34,7 @@ The first thing I did was install themes that I saw all day. I like my editor to
 - Night Owl (just to try something new).
 - Material-Icon-Theme (for file icons).
 
-<img src='https://cdn-images-1.medium.com/max/800/1*7utI1vJayaK97t7lYhrv_A.jpeg' />
+<img src='https://cdn-images-1.medium.com/max/800/1*7utI1vJayaK97t7lYhrv_A.jpeg' alt="VS Code editor using the fairyFloss theme and Material file icons" />
 
 ## Configuring VS Code
 

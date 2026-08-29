@@ -9,7 +9,7 @@ tags:
 description: ''
 ---
 
-![cover_image](https://i.imgur.com/mztPVQI.png)
+![](https://i.imgur.com/mztPVQI.png)
 
 <blockquote>
 Photo by <a href="https://unsplash.com/@weirick?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Jake Weirick</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
@@ -41,7 +41,7 @@ import { ApolloServer, gql } from 'apollo-server';
 
 Run the Node.js server either by using `npm start` or `npm run dev` and you will encounter the following error:
 
-![ss1](https://i.imgur.com/lbHW7pl.png)
+![Node.js error thrown when running import syntax in a CommonJS file](https://i.imgur.com/lbHW7pl.png)
 
 The solution to this error is in the first line of the above error snippet and is now [a recommend way by Node.js](https://nodejs.org/api/esm.html#esm_enabling). Set the `"type": "module"` in `package.json` file.
 
@@ -53,7 +53,7 @@ The solution to this error is in the first line of the above error snippet and i
 
 This solution works for the latest Node.js versions (which is `15.4.x` at the time of writing) and versions above `14.x.x`.
 
-![ss2](https://i.imgur.com/Mm92hul.png)
+![Node.js server starting after adding type module to package.json](https://i.imgur.com/Mm92hul.png)
 
 ## What about environments using Node version lower than 14
 

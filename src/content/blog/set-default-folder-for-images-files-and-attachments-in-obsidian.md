@@ -25,4 +25,4 @@ I wanted a separate folder for images and attachments that could serve both fold
 - In the **Default location for new attachments**, in the dropdown, select **In the folder specified below**.
 - In the **Attachment folder path**, choose the path of the folder you want to save all images and other files.
 
-![ss1](https://i.imgur.com/D2AyGqt.png)
+![Obsidian Files and Links settings with the attachment folder path set](https://i.imgur.com/D2AyGqt.png)

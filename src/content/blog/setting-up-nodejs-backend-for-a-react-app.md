@@ -74,7 +74,7 @@ After that, we add a simple route that uses HTTP method `GET` and has a handler 
 
 The `async/await` requires you to add a `try/catch` block every time you want to catch the errors. We `console.log` in case any error occurs running the program and use Nodejs global `process` object to make sure that program exits gracefully in case of one. To see it in action, run `node server.js` and it will eventually run on port `8000`.
 
-<img src='https://cdn-images-1.medium.com/max/800/1*yR_UcIKCzTeNoN9HPYCNdQ.png' />
+<img src='https://cdn-images-1.medium.com/max/800/1*yR_UcIKCzTeNoN9HPYCNdQ.png' alt="Terminal running node server.js with the Hapi server on port 8000" />
 
 ### Setting up a React app
 
@@ -94,7 +94,7 @@ We want a setup that will make our React app and use the server URL as a global 
 
 Navigate to client directory and locate `package.json` file. Add the following configuration to it.
 
-<img src='https://cdn-images-1.medium.com/max/800/1*jEgu48E180zXD0Z3_NyuHA.png' />
+<img src='https://cdn-images-1.medium.com/max/800/1*jEgu48E180zXD0Z3_NyuHA.png' alt="Client package.json with the proxy configuration added" />
 
 And that’s it. This is all you need to do. _But wait! How is this even possible?_ The answer lies with the `create-react-app`.
 
@@ -158,7 +158,7 @@ start();
 
 To test this route, let us use REST client like POSTMAN or Insomnia and see if the data is being requested at the route `/mock`.
 
-<img src='https://cdn-images-1.medium.com/max/1200/1*ygiAUjIzThy-NHFfbi9Rsg.png' />
+<img src='https://cdn-images-1.medium.com/max/1200/1*ygiAUjIzThy-NHFfbi9Rsg.png' alt="REST client requesting data from the /mock route" />
 
 Now let us display this data in our front end. Traverse to `client/App.js` file and do the following.
 
@@ -209,7 +209,7 @@ We start by defining a local state that will contain the data coming from the ba
 
 Finally, we are able to see the data as below.
 
-<img src='https://cdn-images-1.medium.com/max/1200/1*79TNeMIHMbzT1Vcnh7ZNZw.png' />
+<img src='https://cdn-images-1.medium.com/max/1200/1*79TNeMIHMbzT1Vcnh7ZNZw.png' alt="React app displaying the data fetched from the /mock route" />
 
 _You can find the complete source code for the above article at_ [**_Github Repo_**](https://github.com/amandeepmittal/hapi-react-example)
 

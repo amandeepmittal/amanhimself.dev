@@ -9,7 +9,7 @@ tags:
 description: ''
 ---
 
-![cover_image](https://i.imgur.com/LUgTT2v.jpg)
+![](https://i.imgur.com/LUgTT2v.jpg)
 
 If you are interested in writing code for mobile applications using JavaScript, you are reading the right post. React Native, developed and maintained by Facebook, is an open-source framework to develop cross-platform mobile applications, using the programming language JavaScript.
 

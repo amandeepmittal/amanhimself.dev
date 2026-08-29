@@ -52,7 +52,7 @@ yarn run start
 
 This is going to open the boilerplate React app screen at the URL `http://localhost:3000/` in a browser window.
 
-![ss1](https://i.imgur.com/HtBY0g4.png)
+![Create React App boilerplate screen running at localhost 3000](https://i.imgur.com/HtBY0g4.png)
 
 ### Create the first route with React Router
 
@@ -105,7 +105,7 @@ import Home from './components/Home';
 
 Visit the web browser and see the Home component being rendered right now.
 
-![ss2](https://i.imgur.com/Q2IwXJ7.png)
+![Home Page heading rendered by the Home route](https://i.imgur.com/Q2IwXJ7.png)
 
 This is a bare minimum example. Now let us add another route with the same props as the Home. Call this route About with a similar rendering logic as Home.
 
@@ -144,7 +144,7 @@ function App() {
 
 Visit the URL `http://localhost:3000/about`. You will notice that both the components are being rendered right now on the path /about.
 
-![ss3](https://i.imgur.com/krpy60b.png)
+![Home and About components both rendering on the about path](https://i.imgur.com/krpy60b.png)
 
 The reason for this is that the regular expression engine that React Router uses internally considers both the routes that are being started with a forward slash `/` equal. To solve this issue, we can use another essential prop on the Home route called `exact`.
 
@@ -154,7 +154,7 @@ The reason for this is that the regular expression engine that React Router uses
 
 This `exact` prop is also known as a qualifier which states that the path must match exactly the `/` and nothing after it, such as `/about`. Now, if you visit the browser window at the URL `http://localhost:3000/about` you will notice that only the about component is getting rendered this time.
 
-![ss4](https://i.imgur.com/rTVSwFM.png)
+![Only the About component rendering after adding the exact prop](https://i.imgur.com/rTVSwFM.png)
 
 ## Wrapping routes with Switch
 
@@ -208,7 +208,7 @@ function App() {
 
 In the above snippet, notice that all the links are being added before all the `Route` components. The styling attributes inside `style` are optional for now. Go to the browser window, you are going to notice a navigation menu pops up at the top. Try clicking links to navigate between different components.
 
-![ss5](https://i.imgur.com/P0xZkiI.gif)
+![Navigation menu switching between the Home and About routes](https://i.imgur.com/P0xZkiI.gif)
 
 ## Adding Parameters to the Routes
 
@@ -309,13 +309,13 @@ function App() {
 
 Now, visit the URL `http://localhost:3000/posts` and you are going to see the list of posts.
 
-![ss6](https://i.imgur.com/79STiT7.png)
+![Posts list page showing the three mock post links](https://i.imgur.com/79STiT7.png)
 
 Clicking one of the posts is going to show the contents of that post.
 
-![ss7](https://i.imgur.com/LmscMwA.png)
+![Posts list with the id of the first selected post](https://i.imgur.com/LmscMwA.png)
 
-![ss8](https://i.imgur.com/a6np7at.png)
+![Posts list with the id of another selected post](https://i.imgur.com/a6np7at.png)
 
 ## Real user monitoring tool with Sematext
 
@@ -331,19 +331,19 @@ This tool can be a critical part of understanding how a user behaves when using 
 
 To follow further, you do require a [Sematext account](https://sematext.com/experience/) and do note that they have a 30 day trial period that you can leverage. If you are planning to use this in production, you can also leverage their pricing plan that is defined per app.
 
-![ss9](https://i.imgur.com/y8Nekfj.png)
+![Sematext Experience pricing plans and trial period details](https://i.imgur.com/y8Nekfj.png)
 
 Once you are logged in to your account, you are going to be welcomed by a dashboard screen that might look similar to below.
 
-![ss10](https://i.imgur.com/tuLIO58.png)
+![Sematext dashboard screen shown after logging in](https://i.imgur.com/tuLIO58.png)
 
 To start configuring Sematext Experience in the current demo React app, click on the `New App` button in the top right corner and then select `Experience`.
 
-![ss11](https://i.imgur.com/A40CG1G.png)
+![New App menu in Sematext with the Experience option](https://i.imgur.com/A40CG1G.png)
 
 Then, enter the name of the app in the modal screen as well as make sure to check the `About Website` option since the current React app is trying to simulate a SPA behavior. Click the button `Continue`.
 
-![ss12](https://i.imgur.com/sRIIczJ.png)
+![Sematext modal for naming the app and checking About Website](https://i.imgur.com/sRIIczJ.png)
 
 ## Installing monitoring scripts in React app
 
@@ -444,19 +444,19 @@ Once the React app is built and served, you can test it out by playing around wi
 
 The overview of the dashboard screen as shown below tells as the initial page loading time is excellent.
 
-![ss13](https://i.imgur.com/n7rIiE2.png)
+![Sematext Experience overview rating the initial page loading time excellent](https://i.imgur.com/n7rIiE2.png)
 
 It also goes in detail by determining the exact page load time.
 
-![ss14](https://i.imgur.com/cugGBau.png)
+![Sematext breakdown of the exact page load time](https://i.imgur.com/cugGBau.png)
 
 To check out the number of resources that are downloading for a particular URL, navigate to the `Resources` tab from the sidebar.
 
-![ss15](https://i.imgur.com/tnetw9K.png)
+![Resources tab listing the assets downloaded for a URL](https://i.imgur.com/tnetw9K.png)
 
 From the `Users` tab in the sidebar menu, you can monitor the user data such as the number of active users on the web app at a given time, the top browser being used, the maximum number of users located in which country and so on.
 
-![ss16](https://i.imgur.com/BPimzAR.png)
+![Users tab showing active users, top browsers, and countries](https://i.imgur.com/BPimzAR.png)
 
 ## Conclusion
 

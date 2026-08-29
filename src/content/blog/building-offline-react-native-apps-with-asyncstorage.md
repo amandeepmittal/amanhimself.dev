@@ -8,7 +8,7 @@ tags:
 description: ''
 ---
 
-![cover](https://i.imgur.com/5eoYxcI.png)
+![](https://i.imgur.com/5eoYxcI.png)
 
 > [Originally published at Heartbeat](https://heartbeat.fritz.ai/building-offline-react-native-apps-with-asyncstorage-dcb4b0657f93)
 
@@ -22,7 +22,7 @@ In the journey of building this application, you are going to use a UI component
 
 The outcome from following this tutorial is going to be a complete React Native application that works with realtime offline data from the storage of the device.
 
-<img src='https://cdn-images-1.medium.com/max/800/1*FBBSWT3Xztc0G9wAGnz1yA.gif' />
+<img src='https://cdn-images-1.medium.com/max/800/1*FBBSWT3Xztc0G9wAGnz1yA.gif' alt="Finished offline todo list app switching between Todo and Completed items" />
 
 ## Table of Contents
 
@@ -238,19 +238,19 @@ export default App
 
 Now to run the application, go to the terminal window and execute the command `expo start`. After that, you will see the following screen on the simulator.
 
-<img src='https://cdn-images-1.medium.com/max/800/1*92vU3B3f_FmUCXk8xKwtSg.png' />
+<img src='https://cdn-images-1.medium.com/max/800/1*92vU3B3f_FmUCXk8xKwtSg.png' alt="App screen showing an empty Hello with the input field below" />
 
 Since there is no data stored right now, the text after the word `Hello` is empty. Use the input field to save a string or a name or anything and then press the enter key. You will get the following output. Whatever input you entered, it will be displayed next to the word `Hello`.
 
-<img src='https://cdn-images-1.medium.com/max/800/1*twgilQew9SwvBq2YnEbIqg.png' />
+<img src='https://cdn-images-1.medium.com/max/800/1*twgilQew9SwvBq2YnEbIqg.png' alt="Saved name displayed next to Hello after submitting the input" />
 
 Even if you refresh the Expo client, the value stored does not go away. Only when pressing the button below `Hello` statement that says `Clear Storage` is the way to delete the stored value.
 
-<img src='https://cdn-images-1.medium.com/max/800/1*6yeaeFLns1JwU0wyeqMptQ.png' />
+<img src='https://cdn-images-1.medium.com/max/800/1*6yeaeFLns1JwU0wyeqMptQ.png' alt="Alert confirming the storage was successfully cleared" />
 
 Refresh the Expo client after you clear the storage to get the following output.
 
-<img src='https://cdn-images-1.medium.com/max/800/1*CRhOwbo1d-iTUOEb0v-MAQ.png' />
+<img src='https://cdn-images-1.medium.com/max/800/1*CRhOwbo1d-iTUOEb0v-MAQ.png' alt="Empty Hello again after refreshing the Expo client post clear" />
 
 This complete the section where you learned about how to utilize `AsyncStorage` API to save and fetch the data. From the next section onwards, you will be building the Todolist application.
 
@@ -260,7 +260,7 @@ Since a React Native application was already generated in the previous step, you
 
 You have already installed the necessary npm modules. This is the time to start utilizing them in order to build the offline todo list app. Before beginning with the development of the app, create the following folders and files inside them. This will give a structure to manage the app later or if you want to extend by adding new features to it.
 
-<img src='https://cdn-images-1.medium.com/max/800/1*kg7x_WrXqP6U13af4OBJsA.png' />
+<img src='https://cdn-images-1.medium.com/max/800/1*kg7x_WrXqP6U13af4OBJsA.png' alt="Project structure with components, navigation, and screens folders" />
 
 From the structure, notice that there are three new folders being created. This structure is the separation of concerns between the different aspect of a mobile app. Such as files or configuration related to navigation should be separated from the screens. The above structure is also a common pattern that many React Native developers have started to follow in their work.
 
@@ -362,7 +362,7 @@ export default AddTaskScreen;
 
 Now run the app using `expo start` command, and you will get the following result.
 
-<img src='https://cdn-images-1.medium.com/max/800/1*Mz6vFfwIwz7rWNIa9o-F4Q.png' />
+<img src='https://cdn-images-1.medium.com/max/800/1*Mz6vFfwIwz7rWNIa9o-F4Q.png' alt="Home screen placeholder rendered by the stack navigator" />
 
 This completes the navigation section.
 
@@ -465,11 +465,11 @@ The `AppLoading` method is a React component that tells Expo to keep the app loa
 
 Once the application has loaded all necessary fonts and icons, you will get the following result.
 
-<img src='https://cdn-images-1.medium.com/max/800/1*AJUj06CEsej1vn7YUtj-Ow.png' />
+<img src='https://cdn-images-1.medium.com/max/800/1*AJUj06CEsej1vn7YUtj-Ow.png' alt="Home screen with the floating action button once fonts load" />
 
 From the above snippet, take a look at the method `onPressFab` which is being passed to the `FloatingButton` component as the prop `actionOnPress`. This function utilizes a navigation method provided called `navigation.navigate()` with the value of the screen being passed as the argument: `AddTask`. Do note that, the value of the argument being passed should be the exact name of the screen defined earlier when configuring `StackNavigator`. Click on the button, and you will be directed to the next screen.
 
-<img src='https://cdn-images-1.medium.com/max/800/1*Zfx3sB6akHo9tEILTQbHQg.gif' />
+<img src='https://cdn-images-1.medium.com/max/800/1*Zfx3sB6akHo9tEILTQbHQg.gif' alt="Floating button opening the Add Task screen as a modal" />
 
 Did you notice the `back` button on the `AddTaskScreen`? This is again where `react-navigation` comes in handy. While working on a real-time React Native application, you often want to use the `react-navigation` library if it suits your requirements. It provides simple solutions out of the box.
 
@@ -521,7 +521,7 @@ Next, inside the `render()` method add the following before the omnipresent `Tex
 
 The rest of the code inside the `HomeScreen.js` file remains unchanged. The `StatusBar` is modified by defining the a value using its pre-defined prop `barStyle`. When using a Header component from Native Base UI library, the `StatusBar` from React Native comes after you define the JSX code for the header. Notice this in the above snippet. This is how it works with Native Base library. The following screen is what you get as the result of the above snippets.
 
-<img src='https://cdn-images-1.medium.com/max/800/1*5m9TTlsGA60IeijZz4OfzA.png' />
+<img src='https://cdn-images-1.medium.com/max/800/1*5m9TTlsGA60IeijZz4OfzA.png' alt="Custom blue Native Base header with a light content status bar" />
 
 ## Rendering a list of items using FlatList
 
@@ -611,7 +611,7 @@ Another new React Native component to notice in the above snippet is `Dimensions
 
 In the simulator, you will get the following result.
 
-<img src='https://cdn-images-1.medium.com/max/800/1*33XlaFACBb_SE4IsyLzIfg.png' />
+<img src='https://cdn-images-1.medium.com/max/800/1*33XlaFACBb_SE4IsyLzIfg.png' alt="FlatList rendering the three mock todo items on the home screen" />
 
 ## Reading Data using AsyncStorage API
 
@@ -892,7 +892,7 @@ Lastly, take a look at the method `onAddTask` which uses navigation state to sav
 
 On Clicking the Fab button, you get the following screen.
 
-<img src='https://cdn-images-1.medium.com/max/800/1*DZNwtEddDkxQz8ZCDwqB5w.png' />
+<img src='https://cdn-images-1.medium.com/max/800/1*DZNwtEddDkxQz8ZCDwqB5w.png' alt="Add Task screen with the input form for a new todo item" />
 
 ## Display each todo list item
 
@@ -999,7 +999,7 @@ In the above snippet, the key points to note are, using Native Base, you can use
 
 Save the component file, hop back on the simulator file, and try adding one or many items in this list.
 
-<img src='https://cdn-images-1.medium.com/max/800/1*dceKxEqQMGXk0h_-J75gFg.gif' />
+<img src='https://cdn-images-1.medium.com/max/800/1*dceKxEqQMGXk0h_-J75gFg.gif' alt="Adding several items that persist in the todo list after refresh" />
 
 See everything works. Even on refreshing the app, and the items do not disappear.
 
@@ -1084,7 +1084,7 @@ Lastly, change the value of the `data` prop on `FlatList` and set it to the item
 
 You will get the following result.
 
-<img src='https://cdn-images-1.medium.com/max/800/1*FBBSWT3Xztc0G9wAGnz1yA.gif' />
+<img src='https://cdn-images-1.medium.com/max/800/1*FBBSWT3Xztc0G9wAGnz1yA.gif' alt="Segment buttons filtering the list between pending and completed items" />
 
 ## Conclusion
 

@@ -9,7 +9,7 @@ tags:
 description: ''
 ---
 
-![cover_image](https://i.imgur.com/zeVnUHd.png)
+![](https://i.imgur.com/zeVnUHd.png)
 
 > Originally published at [Crowdbotics.com](https://blog.crowdbotics.com/add-search-bar-flatlist-react-native-apps)
 
@@ -17,7 +17,7 @@ There are few ways to create scrollable lists in React Native. Two of the common
 
 The final result you are going to achieve at the end of this tutorial is shown below.
 
-![ss8](https://i.imgur.com/a5FpiUm.gif)
+![Search bar filtering the FlatList of user names as you type](https://i.imgur.com/a5FpiUm.gif)
 
 ## Table of contents
 
@@ -81,7 +81,7 @@ expo start
 
 I am using an iOS simulator for the demo. Here is the output of the above code snippet.
 
-![ss1](https://i.imgur.com/TZ173Uv.png)
+![iOS simulator showing the UI Kitten HOME screen text](https://i.imgur.com/TZ173Uv.png)
 
 ## What is FlatList?
 
@@ -141,13 +141,13 @@ const HomeScreen = () => (
 
 If the Expo cli command to run the development server is still running, you are going to get the following result.
 
-![ss2](https://i.imgur.com/penUpT7.png)
+![FlatList rendering the mock data items in the simulator](https://i.imgur.com/penUpT7.png)
 
 ## Fetching data from Remote API in a FlatList
 
 You can even play around with it. Try to fetch data from a real-time remote API and display them in the list instead of mock data. For a start, you can use a public API URL such as [Randomuser.me API](https://randomuser.me/api/). The result to obtain at the end of this section is displayed below.
 
-![ss3](https://i.imgur.com/cAwKEaD.png)
+![List of users fetched from the Random User API](https://i.imgur.com/cAwKEaD.png)
 
 Open, `App.js` file and a state object with some properties to keep track of data from the Random User API. Also, do not forget to modify the import statements.
 
@@ -228,7 +228,7 @@ renderFooter = () => {
 
 Here is the output you are going to get when the loading indicator is shown.
 
-![ss5](https://i.imgur.com/FYDMKsp.png)
+![Activity indicator shown while the user list is loading](https://i.imgur.com/FYDMKsp.png)
 
 ## Adding a custom Separator to FlatList component
 
@@ -295,7 +295,7 @@ You can also use this prop to render other information at the bottom of all the 
 
 Here is the output so far.
 
-![ss4](https://i.imgur.com/eszTsxG.gif)
+![Scrolling the user list with separators and a footer loading indicator](https://i.imgur.com/eszTsxG.gif)
 
 ## Adding a Search bar
 
@@ -417,11 +417,11 @@ That's it to add a search bar to the FlatList component.
 
 To run the app, make sure the `expo start` command is running. Next, go to Expo client and you are going to be prompted by the following screen:
 
-![ss6](https://i.imgur.com/nUcoa0G.png)
+![searchbarFlatList app with the search bar above the user list](https://i.imgur.com/nUcoa0G.png)
 
 Next, try to add a user name from the list being rendered.
 
-![ss7](https://i.imgur.com/KCL5zYz.gif)
+![Typing a user name into the search bar to filter the list](https://i.imgur.com/KCL5zYz.gif)
 
 ## Add clear button to input text field
 
@@ -438,7 +438,7 @@ Let us add another prop called `clearButtonMode` that allows the input field to 
 
 Now go back to the Expo client and see it in action
 
-![ss8](https://i.imgur.com/fQvxr4j.gif)
+![Clear button appearing on the right of the search input](https://i.imgur.com/fQvxr4j.gif)
 
 ## Conclusion
 

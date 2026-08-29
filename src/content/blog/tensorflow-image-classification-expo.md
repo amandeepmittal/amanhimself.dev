@@ -95,11 +95,11 @@ Since the lifecycle method is asynchronous, it will only update the value of `is
 
 You can see the output in the simulator device as shown below.
 
-<img src='https://miro.medium.com/max/300/1*Qc2DyJWJztezFuQ8JltDlw.png' />
+<img src='https://miro.medium.com/max/300/1*Qc2DyJWJztezFuQ8JltDlw.png' alt="Simulator screen showing the TFJS ready status" />
 
 Or in the console, if using the `console` statement as the above snippet.
 
-<img src='https://miro.medium.com/max/319/1*0rmnFTDv6wAHCBdggIk8TA.png' />
+<img src='https://miro.medium.com/max/319/1*0rmnFTDv6wAHCBdggIk8TA.png' alt="Console output confirming that TFJS is ready" />
 
 ## Loading Tensorflow model
 
@@ -142,11 +142,11 @@ Lastly, the display on the screen when the loading of the model is complete.
 
 When the model is being loaded, it will display the following message.
 
-<img src='https://miro.medium.com/max/300/1*DIZZk1CMDLwnmq7XUq9TOA.png' />
+<img src='https://miro.medium.com/max/300/1*DIZZk1CMDLwnmq7XUq9TOA.png' alt="App screen showing Loading Model while MobileNet loads" />
 
 When the loading of the MobileNet model is complete, you will get the following output.
 
-<img src='https://miro.medium.com/max/300/1*hS5fFnGr4R_5Zuj9nHvtCg.png' />
+<img src='https://miro.medium.com/max/300/1*hS5fFnGr4R_5Zuj9nHvtCg.png' alt="App screen showing Model ready once MobileNet has loaded" />
 
 ## Asking user permissions
 
@@ -262,7 +262,7 @@ classifyImage = async () => {
 
 The results from the pre-trained model are yield in an array. An example is shown below.
 
-<img src='https://miro.medium.com/max/376/1*MIDSYfqejEkwyLO6SKkY9Q.png' />
+<img src='https://miro.medium.com/max/376/1*MIDSYfqejEkwyLO6SKkY9Q.png' alt="Array of predictions returned by the MobileNet model" />
 
 ## Allow user to pick the image
 
@@ -426,15 +426,15 @@ const styles = StyleSheet.create({
 
 Run the application by executing the `expo start` command from a terminal window. The first thing you’ll notice is that upon bootstrapping the app in the Expo client, it will ask for permissions.
 
-<img src='https://miro.medium.com/max/300/1*yI8SE6c25GMpfSoqgethYg.png' />
+<img src='https://miro.medium.com/max/300/1*yI8SE6c25GMpfSoqgethYg.png' alt="Expo client asking for camera roll permission on launch" />
 
 Then, once the model is ready, it will display the text **"Tap to choose image"** inside the box. Select an image to see the results.
 
-<img src='https://miro.medium.com/max/358/1*qxXtE5tU7yuuFKVKjQbIFg.gif' />
+<img src='https://miro.medium.com/max/358/1*qxXtE5tU7yuuFKVKjQbIFg.gif' alt="Tapping the box to choose an image from the camera roll" />
 
 Predicting results can take some time. Here are the results of the previously selected image.
 
-<img src='https://miro.medium.com/max/300/1*7yGIbTerLleJeSDUN5LW2A.png' />
+<img src='https://miro.medium.com/max/300/1*7yGIbTerLleJeSDUN5LW2A.png' alt="Classification results listed for the selected image" />
 
 ## Conclusion
 

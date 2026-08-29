@@ -64,7 +64,7 @@ react-native init HelloWorld
 cd HelloWorld
 ```
 
-<img src='https://cdn-images-1.medium.com/max/800/0*30ZgnW1lf7SY3UVM.png' />
+<img src='https://cdn-images-1.medium.com/max/800/0*30ZgnW1lf7SY3UVM.png' alt="Directory structure of the new HelloWorld React Native project" />
 
 Let us try running the app before making any changes. Since I am on a mac, I will be using command:
 
@@ -80,23 +80,23 @@ react-native run-android
 
 Since you are running any of the above command for the first time, it takes some minutes for the app show up in an emulator. Do not worry, if everything runs successfully, it will show up.
 
-<img src='https://cdn-images-1.medium.com/max/800/0*YczCUc-cdJpnJd_b.png' />
+<img src='https://cdn-images-1.medium.com/max/800/0*YczCUc-cdJpnJd_b.png' alt="HelloWorld app running in the iOS simulator" />
 
 The code you see above running is available in `App.js`:
 
-<img src='https://cdn-images-1.medium.com/max/800/0*qtqjP_V2kuuGEuku.png' />
+<img src='https://cdn-images-1.medium.com/max/800/0*qtqjP_V2kuuGEuku.png' alt="App.js code that renders the HelloWorld screen" />
 
 If you are familiar with Reactjs, you can easily understand this code. `<View>` stands for wrapper element such as `div` in HTML and `<Text>` stands for `<p>` in HTML.
 
 You will be prompted with a success message and in a new terminal window, _Metro Bundler (developed by Facebook)_ will be running until the application closes.
 
-<img src='https://cdn-images-1.medium.com/max/800/0*5EZJZ55baUagTXGM.png' />
+<img src='https://cdn-images-1.medium.com/max/800/0*5EZJZ55baUagTXGM.png' alt="Terminal showing the React Native build success message" />
 
-<img src='https://cdn-images-1.medium.com/max/800/0*CMeu3NOHz3Gcgpx3.png' />
+<img src='https://cdn-images-1.medium.com/max/800/0*CMeu3NOHz3Gcgpx3.png' alt="Metro Bundler running in a new terminal window" />
 
 The file that renders this `App` component is `index.js` in the root directory. You will see this code:
 
-<img src='https://cdn-images-1.medium.com/max/800/0*NsVZtz_ZooVZxt1F.png' />
+<img src='https://cdn-images-1.medium.com/max/800/0*NsVZtz_ZooVZxt1F.png' alt="index.js registering the App component with AppRegistry" />
 
 Do you notice something? There is no `react-dom` because there is no DOM in React Native. `AppRegistry` is the entry point to run a React Native application. `App` component or any other root component in the app should register by using `AppRegistry.registerComponent` such that a native system can load the bundle of the app and run the app by starting `AppRegistry.runApplication`.
 

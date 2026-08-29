@@ -11,7 +11,7 @@ description: ''
 
 The _RCTBridge required dispatch_sync to load RCTDevLoadingView_ has become a common occurrence when developing React Native apps with version `0.64` and `0.65`.
 
-![ss1](https://i.imgur.com/IqzhnvQ.png)
+![RCTBridge required dispatch_sync to load RCTDevLoadingView warning in the iOS simulator](https://i.imgur.com/IqzhnvQ.png)
 
 I came across this warning when installing packages like:
 

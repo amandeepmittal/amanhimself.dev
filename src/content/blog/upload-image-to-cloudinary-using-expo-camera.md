@@ -143,11 +143,11 @@ In the above code snippet, the two `if` statements are used either when:
 
 Here is how asking for permissions are prompted on an Android device:
 
-![ss1](https://i.imgur.com/5iOMbr1.png)
+![Camera permission prompt on an Android device](https://i.imgur.com/5iOMbr1.png)
 
 After the permission is granted, the Camera is now accessible on the device:
 
-![ss2](https://i.imgur.com/90zdXLT.png)
+![Camera view on the device after permission is granted](https://i.imgur.com/90zdXLT.png)
 
 ## Switching between Camera types
 
@@ -263,7 +263,7 @@ const styles = StyleSheet.create({
 
 Here is how the switch button is displayed:
 
-![ss3](https://i.imgur.com/aPslkxl.png)
+![Camera screen with the switch camera type button](https://i.imgur.com/aPslkxl.png)
 
 ## Take a picture from the Camera and preview it
 
@@ -356,7 +356,7 @@ const styles = StyleSheet.create({
 
 Here is how the capture button is shown. It can now take pictures.
 
-![ss4](https://i.imgur.com/RYAKlLf.png)
+![Camera screen with the round capture button in place](https://i.imgur.com/RYAKlLf.png)
 
 Add JSX code to trigger the `cancelPreview` method as an action on a `TouchableOpacity` component. It wraps an icon component from `AntDesign`. This is shown when the application is in image preview mode.
 
@@ -399,7 +399,7 @@ const styles = StyleSheet.create({
 
 After taking a picture, here is how the image preview mode is displayed:
 
-![ss5](https://i.imgur.com/dIyq9ce.png)
+![Image preview mode shown after taking a picture](https://i.imgur.com/dIyq9ce.png)
 
 ## Setup the Cloudinary service
 
@@ -407,7 +407,7 @@ Before starting with this section, make sure you have a Cloudinary account set u
 
 After logging in, you will be welcomed by a dashboard screen similar to below:
 
-![ss6](https://i.imgur.com/jIX6Yio.png)
+![Cloudinary dashboard screen after logging in](https://i.imgur.com/jIX6Yio.png)
 
 To upload an image to their service, two things are required.
 
@@ -426,7 +426,7 @@ The second parameter required is called `upload_preset`. It is created by follow
 - Enter the name of the upload preset. In the "Signing mode," select the value "Unsigned" from the drop-down menu.
 - Then click Save.
 
-![ss7](https://i.imgur.com/sfEYaDR.gif)
+![Adding an unsigned upload preset in Cloudinary settings](https://i.imgur.com/sfEYaDR.gif)
 
 ## Upload an image to Cloudinary
 
@@ -478,7 +478,7 @@ const onSnap = async () => {
 
 Take a picture and when it is successfully uploaded to the Cloudinary service, an alert message like below is displayed:
 
-![ss8](https://i.imgur.com/gEQe5wP.png)
+![Alert confirming the image uploaded to Cloudinary](https://i.imgur.com/gEQe5wP.png)
 
 ## Using Camera2 api for Android
 

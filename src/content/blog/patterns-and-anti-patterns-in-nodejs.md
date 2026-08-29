@@ -9,7 +9,7 @@ tags:
 description: ''
 ---
 
-![cover_image](https://blog.appsignal.com/_next/image?url=%2Fimages%2Fblog%2F2022-02%2Fpatterns.png&w=2048&q=50)
+![](https://blog.appsignal.com/_next/image?url=%2Fimages%2Fblog%2F2022-02%2Fpatterns.png&w=2048&q=50)
 
 > Originally posted at [AppSignal Blog](https://blog.appsignal.com/2022/02/23/patterns-and-anti-patterns-in-nodejs.html)
 

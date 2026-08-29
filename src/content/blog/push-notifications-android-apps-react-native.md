@@ -228,15 +228,15 @@ Now, from a terminal window, run `react-native run-android`. Make sure you have 
 
 The output of the above code snippet should look like this:
 
-![ss1](https://i.imgur.com/Pq3hR5P.png)
+![Android app screen with a Local Push Notification button](https://i.imgur.com/Pq3hR5P.png)
 
 When the button is pressed, it displays the notification, vibrates the device, and plays a default notification sound.
 
-![ss2](https://i.imgur.com/KKhYuLE.gif)
+![Pressing the button triggers a local notification on the Android device](https://i.imgur.com/KKhYuLE.gif)
 
 Expanding the notification displays the message from `bigText`. Pressing the notification results in triggering the console statement from `onNotification` method.
 
-![ss3](https://i.imgur.com/JSHRAXh.png)
+![Expanded notification showing the bigText message](https://i.imgur.com/JSHRAXh.png)
 
 You can add scheduled notifications by using the `PushNotification.localNotificationSchedule(details: Object)` method or you can repeat notifications after a particular time too. Read how to do this or add more customizations in the [module's official docs](https://github.com/zo0r/react-native-push-notification#readme).
 
@@ -248,11 +248,11 @@ From the main **Dashboard** page, go to **Project Settings**. In the **Your apps
 
 Next, it will ask you to register the application.
 
-![ss4](https://i.imgur.com/gcW6Giq.png)
+![Firebase console registering a new Android app](https://i.imgur.com/gcW6Giq.png)
 
 Download the file `google-services.json` and save it at the location `android/app/` inside your React Native project.
 
-![ss5](https://i.imgur.com/mTEX4G9.png)
+![google-services.json saved inside the project's android/app directory](https://i.imgur.com/mTEX4G9.png)
 
 Then, open the `android/app/build.gradle` file and add the following.
 
@@ -270,7 +270,7 @@ Next, create a new service file called `RemotePushController.js` inside the `src
 
 It also requires a mandatory Android property called `senderID`. This can be fetched form **Project Settings** > **Cloud Messaging**.
 
-![ss7](https://i.imgur.com/CbXvImG.png)
+![Sender ID in the Cloud Messaging tab of Firebase Project Settings](https://i.imgur.com/CbXvImG.png)
 
 ```js
 import React, { useEffect } from 'react';
@@ -305,7 +305,7 @@ export default RemotePushController;
 
 Also, the Cloud Messaging service works based on using a `Token` between the app and the notification service. The `onRegister` method registers the remote server and obtains this token. You can view this by adding a console statement.
 
-![ss6](https://i.imgur.com/EjCkPNd.png)
+![Console output logging the registration token from onRegister](https://i.imgur.com/EjCkPNd.png)
 
 The controller component returns `null` to avoid having any effects on the final layout. Add this method inside the `App.js` file as shown below:
 
@@ -320,15 +320,15 @@ import RemotePushController from './src/services/RemotePushController'
 
 To test it out, go to **Cloud Messaging** section and compose a notification.
 
-![ss8](https://i.imgur.com/VlclUtb.png)
+![Composing a notification in the Firebase Cloud Messaging section](https://i.imgur.com/VlclUtb.png)
 
 Click the button **Send test message**. You will have the following output.
 
-![ss9](https://i.imgur.com/uq1KGhW.gif)
+![Test message from Cloud Messaging arriving on the Android device](https://i.imgur.com/uq1KGhW.gif)
 
 The Log in the terminal is shown for the same notification.
 
-![ss10](https://i.imgur.com/1wZOjG7.png)
+![Terminal log of the remote notification payload](https://i.imgur.com/1wZOjG7.png)
 
 You can customize the title, message and another behavior of the Firebase Cloud Messaging service to send notifications at a particular time or date by composing the notification.
 

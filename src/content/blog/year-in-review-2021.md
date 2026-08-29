@@ -41,21 +41,21 @@ My personal blog is one of the most consistent things in my life. I didn't run e
 
 Overall, I got a pretty consistent readership this year with over 90k+ views:
 
-![ss1](https://i.imgur.com/0gGHK68.png)
+![Blog analytics showing over 90k views for the year](https://i.imgur.com/0gGHK68.png)
 
 It is also interesting to see that what’s driving most of the traffic is old articles:
 
-![ss3](https://i.imgur.com/msuWpjr.png)
+![Top pages report with older articles driving most traffic](https://i.imgur.com/msuWpjr.png)
 
 And, also that visitors are coming mostly through organic search:
 
-![ss4](https://i.imgur.com/xErLMj1.png)
+![Traffic sources breakdown with organic search in the lead](https://i.imgur.com/xErLMj1.png)
 
 I still cross-post stuff at times on [Medium](https://medium.com/@amanhimself), [Dev.to](https://dev.to/amanhimself) and ~~[Hashnode](https://amanhimself.hashnode.dev/)~~. Not as much as I would like to, but I am eager to explore Hashnode more next year.
 
 Dev.to has been my focus on cross-posting this year. I did manage to get 70k+ views and 15k followers.
 
-![ss2](https://i.imgur.com/B8tQxBN.png)
+![Dev.to stats with 70k views and 15k followers](https://i.imgur.com/B8tQxBN.png)
 
 ## I spoke at a few events 🗣
 
@@ -95,7 +95,7 @@ I did manage to go through some good books this year. Here are some of my picks 
 
 During the end of the year, I managed to get out of New Delhi for the first time in two years for a [weekend trip](https://www.instagram.com/p/CXsVqr9lJyY/):
 
-![ss5](https://i.imgur.com/qRBwCNO.jpg)
+![Weekend trip outside New Delhi at the end of the year](https://i.imgur.com/qRBwCNO.jpg)
 
 ## Wrapping up
 

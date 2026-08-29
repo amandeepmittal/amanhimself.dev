@@ -161,19 +161,19 @@ Here are some screenshots:
 
 Home Page:
 
-<img src='https://cdn-images-1.medium.com/max/800/0*eftZuH7QmZQqs4-Y.png' />
+<img src='https://cdn-images-1.medium.com/max/800/0*eftZuH7QmZQqs4-Y.png' alt="Home page with an empty color input and a submit button" />
 
 User Input being entered:
 
-<img src='https://cdn-images-1.medium.com/max/800/0*g25oMDTJV3TS7mTB.png' />
+<img src='https://cdn-images-1.medium.com/max/800/0*g25oMDTJV3TS7mTB.png' alt="Home page with a color typed into the input field" />
 
 Data passed form Home Page displayed on About Page:
 
-<img src='https://cdn-images-1.medium.com/max/800/0*ay_xx0zGGCDDuXXY.png' />
+<img src='https://cdn-images-1.medium.com/max/800/0*ay_xx0zGGCDDuXXY.png' alt="About page showing the color entered on the home page" />
 
 When nothing entered in the input field, a default text passed and displayed:
 
-<img src='https://cdn-images-1.medium.com/max/800/0*5lhp42R9R5pQVjSi.png' />
+<img src='https://cdn-images-1.medium.com/max/800/0*5lhp42R9R5pQVjSi.png' alt="About page showing the default text when no color was entered" />
 
 _To get the full code of this demo app, you can visit_ [**this Github Repository**](https://github.com/amandeepmittal/ionic-pass-data-pages).
 

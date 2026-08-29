@@ -17,7 +17,7 @@ Solution is to use Google Search Console's [disavow links tool](https://support.
 
 Recently, I encountered an interesting case where a (spammy looking) website linked to Expo documentation with a typo in the URL. Google Search Console reported this as a 5xx Page not indexed.
 
-![ss1](/images/disavow-1.png)
+![Google Search Console reporting a 5xx page not indexed error](/images/disavow-1.png)
 
 Now, even though the page exists, requesting a re-index validation in Google Search Console wouldn't solve this problem (I tried this and that's how I stumbled upon the solution).
 
@@ -52,7 +52,7 @@ domain:example.com
 3. Open Google Search Console's [disavow links tool page](https://search.google.com/search-console/disavow-links) and select your domain property under **Select property**
 4. Upload your disavow file and confirm the submission
 
-![ss2](/images/disavow-2.png)
+![Google Search Console disavow links tool with the file upload option](/images/disavow-2.png)
 
 ## Summary
 

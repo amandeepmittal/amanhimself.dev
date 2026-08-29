@@ -9,7 +9,7 @@ tags:
 description: ''
 ---
 
-![cover_image](https://i.imgur.com/SUVqOZ5.jpg)
+![](https://i.imgur.com/SUVqOZ5.jpg)
 
 Chatbots are a powerful way to provide conversational experiences for any software product. Each conversational experience depends on the implementation of the chatbot to either be a good or poor experience for the end user. The modern day world is living in the technology wave of Artificial Intelligence and bots are a huge part of it.
 
@@ -123,17 +123,17 @@ This is how easy to implement a chat interface in a React Native app. To run you
 
 See the current state of our application in action below.
 
-![](https://i.imgur.com/tBiBSef.png)
+![Gifted Chat interface showing the FAQ bot welcome message](https://i.imgur.com/tBiBSef.png)
 
 ## Google's Dialogflow Setup
 
 Dialogflow is an NLP service from Google. It has many integrations, SDKs for many languages and prebuilt agents. It works very straightforward with Google Assistant. Visit [the Dialogflow website](https://dialogflow.com/) and create a new account or log-in with your existing Google ID. Once you are logged in, you will be welcomed by a screen that consists of different **Agents**.
 
-![](https://i.imgur.com/50uiOOR.png)
+![Dialogflow console welcome screen listing available agents](https://i.imgur.com/50uiOOR.png)
 
 Click on the `Create Agent` button to make one. We are going to name our agent: **faq-bot**. Fill in the details like below.
 
-![](https://i.imgur.com/HDhFKLS.png)
+![Dialogflow create agent form filled in for faq-bot](https://i.imgur.com/HDhFKLS.png)
 
 After filling out the details, click on the button `Create`.
 
@@ -147,7 +147,7 @@ These _agents_ can understand the vast and varied nuances of human language and 
 
 An intent is the action or the response sent back to the user in the chatbot application. An intent can contain different types of responses or actions. The next step in the process is to create your first intent.
 
-![](https://i.imgur.com/8xUJ1vt.png)
+![Dialogflow intents page before any custom intent is created](https://i.imgur.com/8xUJ1vt.png)
 
 An intent can be a simple text response that is displayed back to the user or trained phrases to match a specific intent. There are also actions and parameters that extract parameters or information from user queries. Examples of this kind of information include dates, times, names, places, and more.
 
@@ -157,15 +157,15 @@ Right now, we do not have any intent created of our own. Let us create one in th
 
 Let us add our first intent which we are going to call `date.current`. The purpose of this intent is to return the current date back to the user when asked. We can add pre-defined common training phrases to identify what the user is asking to our bot. Take a look below at the following training phrases.
 
-![](https://i.imgur.com/xf0iubV.png)
+![Training phrases added to the date.current intent in Dialogflow](https://i.imgur.com/xf0iubV.png)
 
 Since “date” as a keyword is available in Dialogflow's API, it is automatically considered to be a parameter to take action on.
 
-![](https://i.imgur.com/oViXxwC.png)
+![Dialogflow action and parameters section listing the date parameter](https://i.imgur.com/oViXxwC.png)
 
 The Last step in this process is to add a text response for the user to receive.
 
-![](https://i.imgur.com/CO4Suon.png)
+![Text response added to the date.current intent](https://i.imgur.com/CO4Suon.png)
 
 Do not forget to click the `Save` button at the top.
 
@@ -173,11 +173,11 @@ Do not forget to click the `Save` button at the top.
 
 We need a few keys to use Dialogflow's npm package with our app. Right now, from the console window, go to Settings (it is an icon next to the agent's name).
 
-![](https://i.imgur.com/Gkm6tVn.png)
+![Dialogflow agent settings page with the service account value](https://i.imgur.com/Gkm6tVn.png)
 
 Then click on the value next to `Service Account`.
 
-![](https://i.imgur.com/L8vIgwg.png)
+![Google Cloud service accounts list for the Dialogflow project](https://i.imgur.com/L8vIgwg.png)
 
 Once in the service account, find the account that named `Dialogflow Integrations`, and scroll to the right until you see the three dots. Click on this menu, and click `Create Key`.
 

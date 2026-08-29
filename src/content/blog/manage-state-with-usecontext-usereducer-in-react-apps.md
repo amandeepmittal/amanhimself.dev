@@ -9,7 +9,7 @@ tags:
 description: ''
 ---
 
-![cover](https://i.imgur.com/Q0W4kzf.jpg)
+![](https://i.imgur.com/Q0W4kzf.jpg)
 
 Choosing a state management library to manage and handle a global state in a React app can be tricky and time-consuming. A lot depends on the scope of the React app and there are many options available.
 
@@ -329,11 +329,11 @@ export default function List() {
 
 All the components of the simple Expense Tracker app are complete. Now, let's run the app and see it as an action. On the initial render, the Rect app is going to look like below.
 
-![ss1](https://i.imgur.com/KrlTYS6.png)
+![Expense Tracker app on initial render with one expense item](https://i.imgur.com/KrlTYS6.png)
 
 It is going to display one expense item that is defined as the object in the initial state. Try adding a new item in the list and see if the list updates and form gets cleared or not.
 
-![ss2](https://i.imgur.com/92qztPT.gif)
+![Adding a new expense updates the list and clears the form](https://i.imgur.com/92qztPT.gif)
 
 ## Conclusion
 

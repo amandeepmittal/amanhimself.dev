@@ -9,7 +9,7 @@ tags:
 description: ''
 ---
 
-![cover](https://i.imgur.com/ROYjoYo.jpg)
+![](https://i.imgur.com/ROYjoYo.jpg)
 
 In [part 2](https://amanhimself.dev/blog/chat-app-with-react-native-part-2) of this series, we made progress with the chat app by adding email authentication using the real-time auth service from Firebase. This ensures that we have a system in place to authenticate users.
 
@@ -47,7 +47,7 @@ export default function HomeStack() {
 
 Go back to the simulator and you are going to get the following result.
 
-<img src='https://miro.medium.com/max/940/1*Jxk6KkKBzhv_rc9kXD6iMA.png' />
+<img src='https://miro.medium.com/max/940/1*Jxk6KkKBzhv_rc9kXD6iMA.png' alt="Home screen header styled by the shared screenOptions prop" />
 
 ## Add a separate stack navigator for modal screen
 
@@ -57,7 +57,7 @@ A _modal screen_ displays the content that temporarily blocks interactions with 
 
 Here's a flowchart to help visualize the navigation flow we're trying to achieve by the end of this section.
 
-<img src='https://miro.medium.com/max/1400/1*kU6S7zzWSrtwgkNI0eygiQ.jpeg' />
+<img src='https://miro.medium.com/max/1400/1*kU6S7zzWSrtwgkNI0eygiQ.jpeg' alt="Flowchart of the modal stack wrapping the chat app stack routes" />
 
 Start by creating a new screen file called `AddRoomScreen.js` inside `src/screens` directory with the following content.
 
@@ -164,17 +164,17 @@ export default function HomeStack() {
 
 Go to the simulator. You are going to find the `Add room` button on the home screen as shown below.
 
-<img src='https://miro.medium.com/max/940/1*pLjnE31zjSqkUwGiRS3ldA.png' />
+<img src='https://miro.medium.com/max/940/1*pLjnE31zjSqkUwGiRS3ldA.png' alt="Home screen with the temporary Add room button in the center" />
 
 Click on the button and notice the transition when the modal screen pops up.
 
-<img src='https://miro.medium.com/max/684/1*iwaMYjCAkCv1Gf0UcnEiag.gif' />
+<img src='https://miro.medium.com/max/684/1*iwaMYjCAkCv1Gf0UcnEiag.gif' alt="Modal screen sliding up when the Add room button is pressed" />
 
 ## How to add an icon in the header bar
 
 The modal stack is working as per the requirement. But the way the user would navigate from the home screen to modal is not by clicking a button in the center of the home screen. This action is going to be done by clicking an icon button from the header.
 
-<img src='https://miro.medium.com/max/636/1*nA9W978m4sziQwKeepKSow.png' />
+<img src='https://miro.medium.com/max/636/1*nA9W978m4sziQwKeepKSow.png' alt="Header bar with an icon button that opens the modal screen" />
 
 Luckily, the `react-navigation` library provides props for us to implement this action without any hassle. Import `IconButton` from `react-native-paper` UI library inside the file `src/navigation/HomeStack.js`.
 
@@ -206,7 +206,7 @@ Also, remove `FormButton` in `HomeScreen.js` you create in the previous section.
 
 Here is how the home screen in the simulator looks like after this step.
 
-<img src='https://miro.medium.com/max/940/1*x40CeNj7FEFO6Exg8mLa2Q.png' />
+<img src='https://miro.medium.com/max/940/1*x40CeNj7FEFO6Exg8mLa2Q.png' alt="Home screen after replacing the button with the header icon button" />
 
 ## Complete the modal screen
 
@@ -294,11 +294,11 @@ const styles = StyleSheet.create({
 
 If you go to the modal screen, you are going to get the following result.
 
-<img src='https://miro.medium.com/max/940/1*ylHD71PivqxothYaSrypfg.png' />
+<img src='https://miro.medium.com/max/940/1*ylHD71PivqxothYaSrypfg.png' alt="Add room modal with a room name input and a disabled Create button" />
 
 Here is the complete flow of the `HomeStack` navigator so far.
 
-<img src='https://miro.medium.com/max/684/1*7d5TY6H9ZznNmdJ5QRG1UQ.gif' />
+<img src='https://miro.medium.com/max/684/1*7d5TY6H9ZznNmdJ5QRG1UQ.gif' alt="Home stack flow from the home screen into the add room modal" />
 
 The **Create** button will remain disabled unless the user starts typing.
 
@@ -371,11 +371,11 @@ function handleButtonPress() {
 
 Go back to the simulator and try to create a new chat room.
 
-<img src='https://miro.medium.com/max/684/1*hJ5PwM-DWhfRpunWSX4fYg.gif' />
+<img src='https://miro.medium.com/max/684/1*hJ5PwM-DWhfRpunWSX4fYg.gif' alt="Creating a new chat room from the modal in the simulator" />
 
 After that, go to the Firebase database console and verify if the `THREADS` collection has a room called `Room 1` or not.
 
-<img src='https://miro.medium.com/max/1400/1*HHM2H9Y2e2yIsDdBCk-8bg.png' />
+<img src='https://miro.medium.com/max/1400/1*HHM2H9Y2e2yIsDdBCk-8bg.png' alt="Firestore THREADS collection holding the Room 1 document" />
 
 ## Display a list of chat rooms on the home screen
 
@@ -481,7 +481,7 @@ const styles = StyleSheet.create({
 
 Go back to the simulator device and you are going to get the following result.
 
-<img src='https://miro.medium.com/max/684/1*5owHh4tZ5mmOyVfsn9kOwA.gif' />
+<img src='https://miro.medium.com/max/684/1*5owHh4tZ5mmOyVfsn9kOwA.gif' alt="Chat rooms from Firestore listed on the home screen FlatList" />
 
 ## Conclusion
 

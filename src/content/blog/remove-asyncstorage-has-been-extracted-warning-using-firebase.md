@@ -31,13 +31,13 @@ Using this code snippet to initialize Firebase auth service in the app will caus
 AsyncStorage has been extracted from the react-native core and will be removed in a future release ...
 ```
 
-![ss1](https://i.imgur.com/pBiiXzY.png)
+![AsyncStorage has been extracted warning shown in a React Native app](https://i.imgur.com/pBiiXzY.png)
 
 Firebase SDK uses the AsyncStorage module from the `react-native` core. From React Native versions `0.59` and up, the AsyncStorage module has been moved to its own package: `@react-native-async-storage/async-storage`.
 
 [Here](https://github.com/firebase/firebase-js-sdk/blob/96ab56bac05ccaf506ed3a02ccad5ff7e01a07d0/packages/app/index.rn.ts#L27) is the line of code in Firebase JS SDK repo that imports AsyncStorage from `react-native` core:
 
-![ss2](https://i.imgur.com/uWt9gRQ.jpg)
+![Firebase JS SDK source line importing AsyncStorage from react-native core](https://i.imgur.com/uWt9gRQ.jpg)
 
 ## Remove the AsyncStorage warning
 

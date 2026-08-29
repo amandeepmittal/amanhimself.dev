@@ -249,11 +249,11 @@ $ ionic serve --lab
 
 The output shown can be best described in these screenshots:
 
-<img src='https://cdn-images-1.medium.com/max/800/0*sMnNW4P3ONmaUZCP.png' />
+<img src='https://cdn-images-1.medium.com/max/800/0*sMnNW4P3ONmaUZCP.png' alt="Ionic Multi Page App home page with buttons for Page1 and Page2" />
 
-<img src='https://cdn-images-1.medium.com/max/800/0*iPNMEzroixe-Dmlj.png' />
+<img src='https://cdn-images-1.medium.com/max/800/0*iPNMEzroixe-Dmlj.png' alt="Page 1 card with Page2 and Back buttons after pushing from home" />
 
-<img src='https://cdn-images-1.medium.com/max/800/0*7oSIkMCTVC0JOaQ5.png' />
+<img src='https://cdn-images-1.medium.com/max/800/0*7oSIkMCTVC0JOaQ5.png' alt="Page 2 card with Page1 and Back buttons in the navigation stack" />
 
 This is just a glimpse of how multi page navigation in Ionic might work that might help you to get started with development.
 

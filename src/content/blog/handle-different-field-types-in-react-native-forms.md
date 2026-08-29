@@ -128,7 +128,7 @@ The `Yup.ref('password')` here refers to the actual `password` field. Let us try
 
 I am going to add `pass` to the `password` field (_since it accepts four minimum characters_) and `passo` to the `confirmPassword` field.
 
-![1](https://i.imgur.com/p9CEa5H.gif)
+![Signup form showing the confirm password mismatch error message](https://i.imgur.com/p9CEa5H.gif)
 
 See the error message being displayed when both input fields do not match.
 
@@ -179,13 +179,13 @@ check: Yup.boolean().oneOf([true], 'Please check the agreement');
 
 See the below demonstration on how it works.
 
-![2](https://i.imgur.com/pj1wjhS.gif)
+![Checkbox field validating the terms and conditions agreement](https://i.imgur.com/pj1wjhS.gif)
 
 ## Bonus: Hide/Show Password fields
 
 In this section, you are going to add the ability to hide or show the password on the corresponding field. By the end of this section, the password input field is going to look like this.
 
-<img src='https://cdn-images-1.medium.com/max/800/1*1-32GyAIseC81jkInsRxSg.png' />
+<img src='https://cdn-images-1.medium.com/max/800/1*1-32GyAIseC81jkInsRxSg.png' alt="Password input field with an eye icon to toggle visibility" />
 
 To start, open `Login.js` file and import `TouchableOpacity` from `react-native` and `Ionicons` from expo's vector icons library which comes with Expo SDK.
 
@@ -229,7 +229,7 @@ rightIcon={
 
 This is the output you are going to get.
 
-<img src='https://cdn-images-1.medium.com/max/800/1*m5e8YiiykjcR2h9-PuqwqA.gif' />
+<img src='https://cdn-images-1.medium.com/max/800/1*m5e8YiiykjcR2h9-PuqwqA.gif' alt="Toggling password visibility in the login form with the eye icon" />
 
 ## Conclusion
 

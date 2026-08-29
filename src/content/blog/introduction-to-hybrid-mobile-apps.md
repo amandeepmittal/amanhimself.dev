@@ -33,7 +33,7 @@ The application on a specific mobile operating system runs via tool like [Cordov
 
 WebView communicates with Cordova’s APIs which then further communicates with mobile devices.
 
-<img src='https://cdn-images-1.medium.com/max/800/1*hdwWntqxD-qOL8vf87DmAQ.png' />
+<img src='https://cdn-images-1.medium.com/max/800/1*hdwWntqxD-qOL8vf87DmAQ.png' alt="WebView communicating with Cordova APIs and the mobile device" />
 
 WebViews are so common these days that you can build desktop applications using [Electron](http://electron.atom.io/).
 

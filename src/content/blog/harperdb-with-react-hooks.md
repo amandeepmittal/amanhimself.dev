@@ -9,7 +9,7 @@ tags:
 description: ''
 ---
 
-![cover](https://i.imgur.com/jN0o3ij.png)
+![](https://i.imgur.com/jN0o3ij.png)
 
 [HarperDB Cloud](https://harperdb.io/developers/get-started/?utm_source=amanmittal) is a database service that supports both SQL and NoSQL queries for CRUD operations. It needs minimal configuration to get started and its realm is not only limited to build REST APIs with a server-side technology such as Node.js.
 
@@ -30,7 +30,7 @@ On the right-hand side, you will find the data inside the table. Do notice the t
 - **createdtime**: to record the timestamp when data is inserted.
 - **updatedtime**: to record the timestamp when any data field is updated for the last time.
 
-![ss0](https://i.imgur.com/iqb3tFI.png)
+![HarperDB instance showing the dev schema and the outlets table data](https://i.imgur.com/iqb3tFI.png)
 
 Once you have set up the cloud instance, make sure to use a React project with the library's version `16.8.0+`.
 
@@ -50,7 +50,7 @@ yarn add use-harperdb@0.1.2
 
 Now you can start the development server to see the React app in action. Go to the terminal window and execute the command `yarn start`. You are going to get the following output in a browser window at URL: `http://localhost:3000/`.
 
-![ss1](https://i.imgur.com/VTDySVc.png)
+![Default Create React App page running at localhost:3000](https://i.imgur.com/VTDySVc.png)
 
 ## Creating a user with custom roles
 
@@ -60,23 +60,23 @@ The approach to resolve this is to create a new user that has the rights to only
 
 Start by opening your cloud instance and go to the tab `roles` [from the menu bar](https://harperdbhelp.zendesk.com/hc/en-us/articles/360051486534-Managing-Role-Permissions).
 
-![ss2](https://i.imgur.com/tnoRgYP.png)
+![HarperDB cloud instance with the roles tab open in the menu bar](https://i.imgur.com/tnoRgYP.png)
 
 Here you can define a new **standard role** to create a custom one. Let's this new role, `client_user`.
 
-![ss3](https://i.imgur.com/VFtacjy.png)
+![Adding a new standard role named client_user](https://i.imgur.com/VFtacjy.png)
 
 Once the new role is created, the instance prompts with the permissions we can assign to any user with this role. You are now allowed to configure the access to tables and schemas for this specific role. There is only one schema right now and inside it, there is only one data table. For this example, let's keep the default configuration and proceed by pressing the button **Update Role Permissions**.
 
-![ss4](https://i.imgur.com/L5XyeIP.png)
+![Role permissions for client_user on the dev schema and outlets table](https://i.imgur.com/L5XyeIP.png)
 
 Once the permissions are updated, go to the tab `users` next to the `roles` in the menu bar. This is used to add a new user with the custom role just created. From the drop-down menu, select the role `client_user`.
 
-![ss5](https://i.imgur.com/D3sXeLD.png)
+![Users tab with the client_user role selected from the drop-down menu](https://i.imgur.com/D3sXeLD.png)
 
 Click the **Add user** button to add the new user.
 
-![ss6](https://i.imgur.com/nvVVhq6.png)
+![New user added with the client_user role](https://i.imgur.com/nvVVhq6.png)
 
 Now, we can use this custom user in the client React app to query the data from the table `outlets`.
 
@@ -219,7 +219,7 @@ function App() {
 
 For a very brief moment, you may see the loading message being displayed.
 
-![ss7](https://i.imgur.com/D5YDC1J.gif)
+![Loading message shown briefly while the HarperDB query runs](https://i.imgur.com/D5YDC1J.gif)
 
 Also, if you are passing `interval` as the second property, you may notice that after every 5 seconds, the React app automatically refreshes the web page. To stop this behavior, you can remove the `interval` property.
 
@@ -239,7 +239,7 @@ Now using the JavaScript's `map` function, let's map over the array of `data` an
 
 Go back to the browser window and you will get the following result:
 
-![ss8](https://i.imgur.com/jJFQ9k3.png)
+![Starbucks Outlets table rendering rows fetched from HarperDB](https://i.imgur.com/jJFQ9k3.png)
 
 The query can also be made using the `useHarperdb` hook with only the `data` array. Add the following query to fetch the total number of outlets or records from the database.
 
@@ -263,7 +263,7 @@ To display the total count, add the modify the JSX rendered from `App` component
 
 Here is the output after this step:
 
-![ss9](https://i.imgur.com/jUY8J3T.png)
+![Starbucks Outlets page showing the total outlets count](https://i.imgur.com/jUY8J3T.png)
 
 ## Conclusion
 

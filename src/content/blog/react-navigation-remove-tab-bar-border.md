@@ -11,7 +11,7 @@ description: ''
 
 > Updated: May 2, 2022
 
-![cover_image](https://i.imgur.com/Tu5dv1l.png)
+![](https://i.imgur.com/Tu5dv1l.png)
 
 Navigation plays an important role in mobile applications and the React Navigation library does an awesome job in providing a completely customizable interface for utilizing different navigation patterns to React Native apps.
 
@@ -19,7 +19,7 @@ Having the liberty to customize tab bars with React Navigation, one customizable
 
 Here is an example of the border that is the default when the React Navigation Bottom Tabs library is utilized to create a tab bar.
 
-![ss1](https://i.imgur.com/ttIMI5V.png)
+![Default border above a React Navigation bottom tab bar](https://i.imgur.com/ttIMI5V.png)
 
 For the demonstration purpose, I am using an Expo project created using the `expo-cli` command-line tool. To create a similar new Expo project, you can execute the command and choose the `tabs` option.
 
@@ -52,7 +52,7 @@ To remove the border, add the `screenOptions` prop and inside it, add a `tabBarS
 
 Here is the output:
 
-![ss2](https://i.imgur.com/WqR3X9I.png)
+![Tab bar with the top border removed by borderTopWidth zero](https://i.imgur.com/WqR3X9I.png)
 
 Do note that this property can also be used to increase the width of the top border.
 
@@ -60,7 +60,7 @@ Do note that this property can also be used to increase the width of the top bor
 
 After applying this `tabBarStyle` property, the width of the top border is removed from an Android device. However, there is a shadow at the top border of the tab bar that remains.
 
-![ss3](https://i.imgur.com/ofnBBis.jpg)
+![Shadow still visible above the tab bar on an Android device](https://i.imgur.com/ofnBBis.jpg)
 
 To remove this shadow, set the `elevation` to `0`:
 
@@ -71,6 +71,6 @@ tabBarStyle: {
 }
 ```
 
-![ss4](https://i.imgur.com/3TEx5ib.jpg)
+![Android tab bar with the shadow removed by setting elevation to zero](https://i.imgur.com/3TEx5ib.jpg)
 
 [Source code available at GitHub](https://github.com/amandeepmittal/react-native-examples/tree/main/remove-tabbar-border)

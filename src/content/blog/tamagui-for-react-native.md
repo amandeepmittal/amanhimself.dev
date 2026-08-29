@@ -273,7 +273,7 @@ export default function App() {
 
 You can further define shorthands for properties like `margin`, `marginBottom`, and `padding` and use them as utility props on components, giving you more control over your styles and themes, as seen in the following example
 
-![ss1](https://i.imgur.com/kZX0PQk.png)
+![Tamagui app screen with Text components styled using shorthand props](https://i.imgur.com/kZX0PQk.png)
 
 ## Making Tamagui work on the web
 
@@ -330,7 +330,7 @@ module.exports = async function (env, argv) {
 After adding the configuration, execute the command `yarn web` or `expo start --web`.
 You’ll get the following output at `http://localhost:19006/`:
 
-![ss2](https://i.imgur.com/jlLUyaX.png)
+![Tamagui app running on the web at localhost:19006](https://i.imgur.com/jlLUyaX.png)
 
 ## Responsive styles using media queries
 
@@ -371,11 +371,11 @@ export default function App() {
 
 You can check out the following example:
 
-![ss3](https://i.imgur.com/LpckfEH.png).
+![Tamagui layout responding to a media query defined with useMedia](https://i.imgur.com/LpckfEH.png).
 
 Similarly, the `fontSize` property also changes based on the media query, as seen in the example:
 
-![ss4](https://i.imgur.com/InzeIX3.gif)
+![Text fontSize changing as the media query breakpoint changes](https://i.imgur.com/InzeIX3.gif)
 
 ## Conclusion
 

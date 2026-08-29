@@ -9,7 +9,7 @@ tags:
 description: ''
 ---
 
-<!-- ![cover_image](https://i.imgur.com/wTa1g5A.png) -->
+<!-- ![](https://i.imgur.com/wTa1g5A.png) -->
 
 For debugging purposes, I often use `console.log` statements in React Native and Expo applications.
 

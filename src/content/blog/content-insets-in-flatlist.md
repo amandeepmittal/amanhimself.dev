@@ -57,4 +57,4 @@ The `FlatList` component uses the same two props that `ScrollView` does: `conten
 
 You won't need to use `useHeaderHeight` hook anymore. The `contentInsetAdjustmentBehavior` and `automaticallyAdjustContentInsets` work together to ensure that the content starts at the appropriate position, accounting for the transparent header, without requiring manual height calculations. This change results in the same behavior as the previous approach:
 
-<img src="/images/react-native/manga-list-08.png" width="540" />
+<img src="/images/react-native/manga-list-08.png" alt="Trending Manga list starting below the transparent header on iOS" width="540" />

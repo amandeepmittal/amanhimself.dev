@@ -14,7 +14,7 @@ Modern mobile app interfaces go beyond opaque header bars. On iOS, a frosted-gla
 
 In this article, let's explore how to implement this effect in a React Native app using Expo Router. For demonstration, the following will be the final result:
 
-<img src="/images/react-native/manga-list-03.gif" width="480" />
+<img src="/images/react-native/manga-list-03.gif" width="480" alt="Manga list scrolling beneath a frosted glass header on iOS" />
 
 ## Using Stack.Screen options
 
@@ -51,13 +51,13 @@ export default function RootLayout() {
 
 It's important to note that adding `headerBlurEffect` alone will have no effect on the look and feel of the app. You have to set the header to transparent for the blur effect prop to work.
 
-<img src="/images/react-native/manga-list-04.png" width="260" />
+<img src="/images/react-native/manga-list-04.png" width="260" alt="Blurred transparent header on iOS with list content sitting behind it" />
 
 The header is now appears blurred. Though, as an app user, I haven't scrolled the screen yet, the content of the screen is already behind the header.
 
 There's another problem with this approach. On Android, this effect does not work and results in a bad experience:
 
-<img src="/images/react-native/manga-list-05.png" width="480" />
+<img src="/images/react-native/manga-list-05.png" width="480" alt="Android screen where the blur effect fails and content overlaps the header" />
 
 ## Using header height hook to add a safe area
 
@@ -137,7 +137,7 @@ const styles = StyleSheet.create({
 
 Result of the above code is:
 
-<img src="/images/react-native/manga-list-06.png" width="260" />
+<img src="/images/react-native/manga-list-06.png" width="260" alt="Manga list offset below the header using the useHeaderHeight hook" />
 
 Importing `useHeaderHeight` from React Navigation gets called to get the exacct header height (which can vary by the device's screen size). Then, the value of the height is applied as `paddingTop` to the `FlatList` component's `contentContainerStyle` to correctly offset the content and prevent it from appearing behind the transparent header.
 
@@ -147,7 +147,7 @@ A key insight here is that the `contentContainerStyle` with `paddingTop: headerH
 
 In the first section, you learned that the blur effect does not work on Android.
 
-<img src="/images/react-native/manga-list-07.png" width="540" />
+<img src="/images/react-native/manga-list-07.png" width="540" alt="Android app rendering the header without any blur effect" />
 
 To make sure the blur effect is applied only on iOS, you can use the `Platform` module from React Native. In `app\_layout.tsx`, import `Platform` from `react-native` and conditionally check if the platform is iOS to apply `headerBlurEffect` and `headerTransparent`:
 
@@ -205,7 +205,7 @@ Then, in `app/index.tsx`, for `headerHeight` let's do the similar platform check
 
 Using ternary operator on `contentContainerStyle` ensures that padding is added only on iOS. On Android, it has a regular opaque header that doesn't need this adjustment.
 
-<img src="/images/react-native/manga-list-08.png" width="540" />
+<img src="/images/react-native/manga-list-08.png" width="540" alt="Android app with a regular opaque header after the platform check" />
 
 ### Other types of blur properties
 
@@ -226,7 +226,7 @@ For example, if you use `systemThinMaterialDark`, it will be applied to the iOS 
 />
 ```
 
-<img src="/images/react-native/manga-list-09.png" width="260" />
+<img src="/images/react-native/manga-list-09.png" width="260" alt="iOS header using the systemThinMaterialDark blur effect" />
 
 ## Wrapping up
 

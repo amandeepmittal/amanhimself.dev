@@ -9,7 +9,7 @@ tags:
 description: ''
 ---
 
-![cover](https://i.imgur.com/ohg3d3s.png)
+![](https://i.imgur.com/ohg3d3s.png)
 
 > [Originally published at Crowdbotics](https://medium.com/crowdbotics/building-a-rest-api-with-koajs-417c276929e2)
 
@@ -85,7 +85,7 @@ If you are not prompted with an error, that means the server ran successfully.
 
 Right now, we are not getting anything exciting from the terminal. If you go to `http://localhost:3000` in your browser window, you should see a `Hello World` message greeting you!
 
-<img src='https://cdn-images-1.medium.com/max/800/1*vmF-dRrg83Uq4Zt6BbkAEg.png' />
+<img src='https://cdn-images-1.medium.com/max/800/1*vmF-dRrg83Uq4Zt6BbkAEg.png' alt="Browser showing the Hello World response at localhost:3000" />
 
 To understand more about what is happening, let’s import the Koa library into our `app.js` file.
 
@@ -241,7 +241,7 @@ app.listen(3000);
 
 Next step is to run the command: `npm run dev` and visit the url `http://localhost:3000/books` to see the following result.
 
-<img src='https://cdn-images-1.medium.com/max/800/1*d-GFucqnhOEIeORSytPH4w.png' />
+<img src='https://cdn-images-1.medium.com/max/800/1*d-GFucqnhOEIeORSytPH4w.png' alt="Browser showing the books array returned by the /books route" />
 
 > _Congratulations! 🎉 You just build your first route using Koa._
 
@@ -268,11 +268,11 @@ router.get('/:id', (ctx, next) => {
 
 Routing parameters are named segments that are used to capture the values specified in the URL. In our case, such as`:id`. Above, we define a routing middleware function that can handle incoming requests from URLs such as `http:localhost:3000/books/103`. Enter this URL in your browser window and you will get the following result.
 
-<img src='https://cdn-images-1.medium.com/max/800/1*-F6g2j_QsvwBjXUdrVsZhw.png' />
+<img src='https://cdn-images-1.medium.com/max/800/1*-F6g2j_QsvwBjXUdrVsZhw.png' alt="Browser showing a single book fetched from /books/103" />
 
 In case of when `id` does not exist or is invalid, you have to send an error message with an HTTP status of `404`.
 
-<img src='https://cdn-images-1.medium.com/max/800/1*BKDmJ80xYVoOsVQTNaMiKw.png' />
+<img src='https://cdn-images-1.medium.com/max/800/1*BKDmJ80xYVoOsVQTNaMiKw.png' alt="Book Not Found message returned for an id that does not exist" />
 
 ### Handling a POST request
 
@@ -307,7 +307,7 @@ The `/new` route is used for creating a new book and adding it to our `books` ar
 
 If everything is fine, this routing middleware accepts the data and returns a success message with the correct HTTP status of code for creating a new record. To run this URL, I am using `curl` command from my terminal but you can use any REST client such as Postman or Insomnia.
 
-<img src='https://cdn-images-1.medium.com/max/800/1*qbXL75_xqOrtgE0UTXEPPw.png' />
+<img src='https://cdn-images-1.medium.com/max/800/1*qbXL75_xqOrtgE0UTXEPPw.png' alt="Terminal using curl to POST a new book to the /books/new route" />
 
 For our all routes to be more descriptive and follow the REST API pattern, I have re-written every `ctx.body` object from each routing middleware function. Here is how the complete routing file looks so far.
 
@@ -387,7 +387,7 @@ router.post('/new', (ctx, next) => {
 module.exports = router;
 ```
 
-<img src='https://cdn-images-1.medium.com/max/800/1*R2_CY-WOiEM2pqE-bLQbRg.png' />
+<img src='https://cdn-images-1.medium.com/max/800/1*R2_CY-WOiEM2pqE-bLQbRg.png' alt="API response with the descriptive status and message fields" />
 
 This completes the basics of building a REST API using Koa as a Node.js framework. It’s a pretty minimal framework with all the necessary ways to tackle incoming requests and send the response back from the server. Koa also supports ready-made middleware functions to make use of logging, handling errors, testing, compression, and security.
 

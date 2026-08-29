@@ -9,7 +9,7 @@ tags:
 description: ''
 ---
 
-![cover](https://i.imgur.com/RSo1BSr.jpg)
+![](https://i.imgur.com/RSo1BSr.jpg)
 
 > [Originally published at Jscrambler](https://jscrambler.com/blog/changing-app-themes-using-react-native-styled-components-and-redux)
 
@@ -111,7 +111,7 @@ react-native run-android
 
 You will get the following result.
 
-![ss1](https://i.imgur.com/4IsQKiW.png)
+![Simulator running the default React Native starter screen](https://i.imgur.com/4IsQKiW.png)
 
 ## Define Themes
 
@@ -347,7 +347,7 @@ const ButtonText = styled.Text`
 
 Now, go to the simulator running and you will notice a new button with a text that says `Switch to ...` name of the next theme. If you have been following this tutorial, you will notice that the initial or current theme is the light mode. By pressing the button, you can switch to the dark mode.
 
-![ss2](https://i.imgur.com/W6offhJ.gif)
+![Pressing the switch button toggles the app between light and dark themes](https://i.imgur.com/W6offhJ.gif)
 
 ## Conclusion
 

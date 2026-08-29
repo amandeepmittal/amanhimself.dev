@@ -241,7 +241,7 @@ expo start --android
 
 Here is the output you will get after this step:
 
-![ss1](https://i.imgur.com/DhLWELt.gif)
+![Navigating from the Star Wars character list to the Details screen](https://i.imgur.com/DhLWELt.gif)
 
 ## Adding type checking for stack navigator
 
@@ -286,11 +286,11 @@ All the configurations in the previous section will enable type checking for the
 
 After the modification, you will see a red squiggly line appears on the `name` prop.
 
-![ss3](https://i.imgur.com/VtNtO6v.png)
+![Red squiggly line under the name prop in HomeStack.tsx](https://i.imgur.com/VtNtO6v.png)
 
 If you hover over the `name` prop, it will show a similar error message like the following:
 
-![ss4](https://i.imgur.com/ZUiHjsU.png)
+![Hover message showing the expected HomeStackNavigatorParamList route names](https://i.imgur.com/ZUiHjsU.png)
 
 The `HomeStack` navigator expects a `HomeStackNavigatorParamList` type with either `Home` or `Details`.
 
@@ -481,7 +481,7 @@ export default RootNavigator;
 
 Here is the output you get after this step:
 
-![ss5](https://i.imgur.com/YNAcmXn.png)
+![App with the Home, Feed, and Settings bottom tabs](https://i.imgur.com/YNAcmXn.png)
 
 ## Composing nested navigator types
 
@@ -514,11 +514,11 @@ return (
 
 Here is how the button looks on the Home screen:
 
-![ss6](https://i.imgur.com/ZG1ExAB.png)
+![Go to Feed screen button above the character list on the Home screen](https://i.imgur.com/ZG1ExAB.png)
 
 If you look closely at the JSX just added, a red squiggly line has appeared underneath `Feed`.
 
-![ss7](https://i.imgur.com/QWz4bPj.png)
+![Red squiggly line under Feed in the navigate call](https://i.imgur.com/QWz4bPj.png)
 
 The error states that the Feed screen is not part of the `HomeScreenNavigationProp`, which is true because the Feed screen is not part of the param list we defined for the Home stack navigator in the `src/navigation/types.tsx` file.
 

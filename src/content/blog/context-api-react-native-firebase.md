@@ -9,7 +9,7 @@ tags:
 description: ''
 ---
 
-![cover](https://i.imgur.com/tEzuwkP.png)
+![](https://i.imgur.com/tEzuwkP.png)
 
 The React Context API lets you avoid passing props from parent to child at every level of the component tree. Neither you have to unnecessarily increase the complexity of the codebase using state management libraries like Redux. Consuming something like Firebase authentication and storage services with the Context API in a React Native or Expo apps is a great use case to try.
 
@@ -59,15 +59,15 @@ To follow this tutorial, please make sure you following installed on your local 
 
 Create a new [Firebase project from Firebase Console](https://console.firebase.google.com).
 
-![1](https://i.imgur.com/7TSnVLL.png)
+![Creating a new project from the Firebase console](https://i.imgur.com/7TSnVLL.png)
 
 Next, fill in the suitable details regarding the Firebase project and click on **Create project** button.
 
-![2](https://i.imgur.com/oXFOQBd.png)
+![Firebase project details form with the Create project button](https://i.imgur.com/oXFOQBd.png)
 
 You will be re-directed towards the dashboard of the Firebase project. Go to **Project settings** from the sidebar menu and copy the `firebaseConfig` object. It has all the necessary API keys that we need in order to use a Firebase project as the backend for any React Native or Expo app.
 
-![3](https://i.imgur.com/XbVjdkB.png)
+![Project settings page showing the firebaseConfig object and API keys](https://i.imgur.com/XbVjdkB.png)
 
 Next, go inside the [Expo app](https://github.com/amandeepmittal/expo-firebase/releases/tag/0.5.0) and create a new directory called `config`. This folder will contain all the configuration files. Inside it, create `Firebase/firebaseConfig.js` file and paste the contents of the config object as below.
 
@@ -142,11 +142,11 @@ Cloud Firestore follows proper NoSQL terminology when it comes to storing data. 
 
 Go back to the Firebase console and in the Database section, choose the Cloud Firestore and click on the button **Create database**.
 
-![4](https://i.imgur.com/k7Ecql7.png)
+![Database section of the Firebase console with the Cloud Firestore Create database button](https://i.imgur.com/k7Ecql7.png)
 
 Then, choose the option Start in **test mode** and click the button **Next** as shown below.
 
-![5](https://i.imgur.com/jLWPy9K.png)
+![Firestore security rules dialog with Start in test mode selected](https://i.imgur.com/jLWPy9K.png)
 
 ## Add Context API
 
@@ -274,15 +274,15 @@ export default withFirebaseHOC(Signup);
 
 Let see how it works.
 
-![f1](https://i.imgur.com/r40CEuW.gif)
+![Registering a user and landing on the Home screen](https://i.imgur.com/r40CEuW.gif)
 
 Since it is going to the Home screen, means that use is getting registered. To verify this, visit the Database section from Firebase Console Dashboard. You will find a `users` collection have one document with the `uid`.
 
-![6](https://i.imgur.com/Q1aoXx2.png)
+![Firestore users collection holding one document named after the uid](https://i.imgur.com/Q1aoXx2.png)
 
 To verify the `uid`, visit **Authentication** section.
 
-![7](https://i.imgur.com/QXX3tXM.png)
+![Firebase Authentication section listing the registered user and their uid](https://i.imgur.com/QXX3tXM.png)
 
 ## Handle Real-time/Server Errors
 
@@ -338,7 +338,7 @@ Lastly, do display the error on the app screen, add an `ErrorMessage` just after
 
 Now go back to the Signup form in the app and try registering the user with the same email id used in the previous step.
 
-![f2](https://i.imgur.com/XXK3D7N.gif)
+![Error message shown when registering with an already used email](https://i.imgur.com/XXK3D7N.gif)
 
 _Voila!_ It works! The error message is shown and it does not submit the form.
 
@@ -503,7 +503,7 @@ export default withFirebaseHOC(Login);
 
 Let us see how it works. For a successful login, use registered credentials.
 
-![f3](https://i.imgur.com/DrqOjct.gif)
+![Logging in with registered credentials and reaching the Home screen](https://i.imgur.com/DrqOjct.gif)
 
 ## Add a signout button
 
@@ -549,7 +549,7 @@ export default withFirebaseHOC(Home);
 
 Here is out the output.
 
-![8](https://i.imgur.com/YLzeMt6.png)
+![Home screen of the Expo app with the Signout button below the text](https://i.imgur.com/YLzeMt6.png)
 
 Right now, this button doesn't do anything. You will have to add the `handleSignout` method as below.
 
@@ -566,7 +566,7 @@ handleSignOut = async () => {
 
 Go back to the home screen and login into the app. Once the home screen is displayed, click the button `Signout`.
 
-![f4](https://i.imgur.com/qo3v0BF.gif)
+![Pressing the Signout button returns to the login screen](https://i.imgur.com/qo3v0BF.gif)
 
 ## Check user auth state for automatic login
 
@@ -636,7 +636,7 @@ export default withFirebaseHOC(Initial);
 
 Let us see it in action. Even after refreshing the app, the authenticated user stays logged in.
 
-![f5](https://i.imgur.com/toxtKit.gif)
+![Authenticated user staying logged in after an app refresh](https://i.imgur.com/toxtKit.gif)
 
 ## Conclusion
 

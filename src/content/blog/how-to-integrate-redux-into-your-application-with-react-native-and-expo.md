@@ -9,7 +9,7 @@ tags:
 description: ''
 ---
 
-![cover](https://i.imgur.com/YqZC6zh.jpg)
+![](https://i.imgur.com/YqZC6zh.jpg)
 
 Redux is an important part of the React Native ecosystem. If your world revolves around JavaScript, you’ve probably heard about Redux. Before reading the rest of the tutorial and going further, just try to remember that you are only learning about Redux because it will make things easier for you, and not more difficult. Now let us learn why you need Redux in your application.
 
@@ -19,7 +19,7 @@ Building a React or React Native application in the real world can become comple
 
 State and Props are the only two ways to control data in a component. Props is short for **properties.** It is a simple rule to follow in the React world that we should not mutate or change the value of props. In React, the flow of data is unidirectional or one way. That is, the data can always be passed from a parent to a child component. Take a look below at this simple example:
 
-<img src='https://cdn-images-1.medium.com/max/800/1*PXT5wJ4ctcEANSAciWe6Iw.png' />
+<img src='https://cdn-images-1.medium.com/max/800/1*PXT5wJ4ctcEANSAciWe6Iw.png' alt="Parent and Child components passing a message down through props" />
 
 In the above example, we create two components (Parent and Child) in separate files. The Parent component consists of a view where the Child component is rendered. In the child component, the view renders a text message that is incoming from the props. The incoming message is available as the data in the state of the parent component.
 
@@ -27,7 +27,7 @@ This way, the child component can be reused with other parent components such th
 
 The state is there to mutate data. This is the only reason that the state exists within each component. Whenever we want to change the state, we use `this.setState()` method within a component. This method re-renders the component and all of its child components to reflect the changes. This works both in React and React Native similarly, but the internals are different.
 
-<img src='https://cdn-images-1.medium.com/max/800/1*YqjKCFCmuMikKf5n8kb_tw.png' />
+<img src='https://cdn-images-1.medium.com/max/800/1*YqjKCFCmuMikKf5n8kb_tw.png' alt="Component code calling this.setState to mutate its own state" />
 
 Since we can manage state and props so efficiently within a React Native app, why is Redux necessary? Well, the above example represents the bare minimum and not a real-time scenario. Imagine an application like Instagram or Twitter. You have different screens, and each screen may depend on a component or two like the Parent and the reusable Child components from our example. It would be hard to keep track of the state of each component.
 
@@ -49,41 +49,41 @@ The key to learning Redux is practice. I don’t want to share too much informat
 
 To build this application, I am going to use the latest tool introduced by the [Expo](https://medium.com/u/df61a4267d7a) team called [expo-cli](https://www.npmjs.com/package/expo-cli). Install it as a global dependency and then initialise a new React Native project using it.
 
-<img src='https://cdn-images-1.medium.com/max/800/1*WVhMAOBzQNl-4RpL0CThLw.png' />
+<img src='https://cdn-images-1.medium.com/max/800/1*WVhMAOBzQNl-4RpL0CThLw.png' alt="Terminal commands installing expo-cli and initializing the project" />
 
 To see if everything is working correctly at this initial state, run the following command.
 
-<img src='https://cdn-images-1.medium.com/max/800/1*qxzbx05hdPWwKy6zQGSS6g.png' />
+<img src='https://cdn-images-1.medium.com/max/800/1*qxzbx05hdPWwKy6zQGSS6g.png' alt="Terminal command that starts the Expo development server" />
 
 You will be prompted with the following interface. Take some time to go through it. If you have build applications using Expo XDE or Create-React-Native-App before, you will see that not much has changed, except that now Expo-CLI makes use of the Chrome browser.
 
-<img src='https://cdn-images-1.medium.com/max/800/1*PP7QE6q2zPf_Ge3OPAuYcg.png' />
+<img src='https://cdn-images-1.medium.com/max/800/1*PP7QE6q2zPf_Ge3OPAuYcg.png' alt="Expo developer tools in Chrome with the simulator and device options" />
 
 Choose a simulator or device that can run Expo Client as marked in the above image. If you get the below screen, that means our React Native project has been initialised without any difficulties.
 
-<img src='https://cdn-images-1.medium.com/max/800/1*BXZsSSnTpdxs38_dRcnb5w.png' />
+<img src='https://cdn-images-1.medium.com/max/800/1*BXZsSSnTpdxs38_dRcnb5w.png' alt="Default Expo starter screen running in the simulator" />
 
 With that, create the following files and folders inside the `components` directory. I will discuss why we are following this directory structure later. For now, our initial setup is complete and we can start building our application.
 
-<img src='https://cdn-images-1.medium.com/max/800/1*xVtf1meIsa4A0frjAsFsIw.png' />
+<img src='https://cdn-images-1.medium.com/max/800/1*xVtf1meIsa4A0frjAsFsIw.png' alt="Files and folders created inside the components directory" />
 
 #### Timer Component ⏱
 
 First, we will create a dumb Timer component and connect it with `App.js`. Add the following code to the `Timer/index.js`:
 
-<img src='https://cdn-images-1.medium.com/max/800/1*wQk1JSY-NaEmU1FbZKz29g.png' />
+<img src='https://cdn-images-1.medium.com/max/800/1*wQk1JSY-NaEmU1FbZKz29g.png' alt="Code for the dumb Timer component in Timer/index.js" />
 
 Next, modify the `App.js` file:
 
-<img src='https://cdn-images-1.medium.com/max/800/1*emdQmLUOWJ6yNmZ6ZYTI6w.png' />
+<img src='https://cdn-images-1.medium.com/max/800/1*emdQmLUOWJ6yNmZ6ZYTI6w.png' alt="Modified App.js that renders the Timer component" />
 
-<img src='https://cdn-images-1.medium.com/max/800/1*U1Cyur_BU0oqQYQ23oHNyg.png' />
+<img src='https://cdn-images-1.medium.com/max/800/1*U1Cyur_BU0oqQYQ23oHNyg.png' alt="Simulator rendering the Timer component from App.js" />
 
 We will now make a static Timer component to see how things fit in. We’ll start by modifying the `StatusBar`. Then we define two `Text` elements from the `react-native` library to specify where the actual timer will be displayed and where the buttons for starting and stopping the timer will be displayed. For now, both are text fields.
 
-<img src='https://cdn-images-1.medium.com/max/800/1*dtR7uZ3PaUrpcksPrVFWHQ.png' />
+<img src='https://cdn-images-1.medium.com/max/800/1*dtR7uZ3PaUrpcksPrVFWHQ.png' alt="Static Timer component code with a StatusBar and two Text elements" />
 
-<img src='https://cdn-images-1.medium.com/max/800/1*C4tNc0e_fqsuVfIu308BDQ.png' />
+<img src='https://cdn-images-1.medium.com/max/800/1*C4tNc0e_fqsuVfIu308BDQ.png' alt="Simulator showing the timer text above the button placeholder text" />
 
 #### Adding Buttons 🔘
 
@@ -91,7 +91,7 @@ In this section, we are going to replace the section that displays `Start and St
 
 We create a reusable component since we need two buttons: Start and Stop.
 
-<img src='https://cdn-images-1.medium.com/max/800/1*tj3HIFtHmaRMJC_XgokHyQ.png' />
+<img src='https://cdn-images-1.medium.com/max/800/1*tj3HIFtHmaRMJC_XgokHyQ.png' alt="Reusable Button component using TouchableOpacity and FontAwesome icons" />
 
 This is a stateless component, so it has no class — we only need it to represent the Button in the UI of our app. We also import FontAwesome icons from `@expo/vector-icons`, which is a fork of react-native-vector-icons and comes directly with the expo SDK. No need to install it as a separate dependency. To display an icon, we need to define its `size`.
 
@@ -101,15 +101,15 @@ In a mobile app, events are triggered by touch. To handle those events, we are g
 
 We will now require this `Button` component in our Timer component.
 
-<img src='https://cdn-images-1.medium.com/max/800/1*jy7fxGEmZ6XhFbQVKBsmNw.png' />
+<img src='https://cdn-images-1.medium.com/max/800/1*jy7fxGEmZ6XhFbQVKBsmNw.png' alt="Timer component importing and rendering the Button component" />
 
-<img src='https://cdn-images-1.medium.com/max/800/1*5YaPpg8mP6Nb95LIjifmdw.gif' />
+<img src='https://cdn-images-1.medium.com/max/800/1*5YaPpg8mP6Nb95LIjifmdw.gif' alt="Start and stop buttons fading as they respond to touches" />
 
 ### Integrating Redux 😍
 
 So far, our Timer application does not do anything other than display a bare minimum UI. To make it work, we start by adding some necessary Redux dependencies.
 
-<img src='https://cdn-images-1.medium.com/max/800/1*1wEzBipK4kL89Mt2d84sGQ.png' />
+<img src='https://cdn-images-1.medium.com/max/800/1*1wEzBipK4kL89Mt2d84sGQ.png' alt="Terminal command installing the redux and react-redux dependencies" />
 
 Now, let us start integrating Redux in our app.
 
@@ -119,13 +119,13 @@ In Redux, the state of the whole application is represented by one JavaScript ob
 
 Actions are like events in Redux. They can be triggered in the form of mouse clicks, key presses, timers or network requests. The nature of each event mentioned is mutable. An action is a JavaScript object. To define an action, there is one requirement: each action much have its own type property. We define these types in a file called `types.js`:
 
-<img src='https://cdn-images-1.medium.com/max/800/1*VKHREyQdGAXCvdmVFXfPBw.png' />
+<img src='https://cdn-images-1.medium.com/max/800/1*VKHREyQdGAXCvdmVFXfPBw.png' alt="Three action types defined as string constants in types.js" />
 
 Our application needs only three actions so far. The type of any action is a string value and is defined as a constant.
 
 In the file `actions.js`, we will require these types to define action creators. Action Creators are functions that create actions.
 
-<img src='https://cdn-images-1.medium.com/max/800/1*8ZO2qO4_ivFDAcuVkcyw8g.png' />
+<img src='https://cdn-images-1.medium.com/max/800/1*8ZO2qO4_ivFDAcuVkcyw8g.png' alt="Action creators defined in actions.js from the action types" />
 
 #### Reducers 🚜
 
@@ -133,7 +133,7 @@ The receiver of the action is known as a reducer. Whenever an action is triggere
 
 A reducer is a pure function that calculates the next state based on the initial or previous state. It always produces the same output if the state is unchanged. It takes two inputs, and state and action must return the default state.
 
-<img src='https://cdn-images-1.medium.com/max/800/1*52J8tvpIPftFQvxGjljioQ.png' />
+<img src='https://cdn-images-1.medium.com/max/800/1*52J8tvpIPftFQvxGjljioQ.png' alt="Reducer with the initial state and the timer helper functions" />
 
 In our initial state, we define three attributes: `isPlaying`, `elapsedTime` and `timerDuration`. The timer currently has a default value of 6 (seconds) for testing purposes, but the actual value we are going to change later is `25` (or 1500 seconds).
 
@@ -151,7 +151,7 @@ After that, we define our reducer function and export the same function. Observe
 
 With the help of the reducer and the initial state, we can create the store object.
 
-<img src='https://cdn-images-1.medium.com/max/800/1*FcpwQgHpKTaMvM_jjLlhKQ.png' />
+<img src='https://cdn-images-1.medium.com/max/800/1*FcpwQgHpKTaMvM_jjLlhKQ.png' alt="Redux store created from the reducer and the initial state" />
 
 A store is an object that brings and actions and reducers together. It provides and holds state at the application level instead of individual components. Redux is not an opinionated library in terms of which framework or library should use it or not.
 
@@ -161,23 +161,23 @@ We need to bind action creators with our Timer function in order to make it full
 
 First, we import the required dependencies to bind action creators.
 
-<img src='https://cdn-images-1.medium.com/max/800/1*1amB7kU23eYwjF-a8aGUiQ.png' />
+<img src='https://cdn-images-1.medium.com/max/800/1*1amB7kU23eYwjF-a8aGUiQ.png' alt="Imports needed to bind action creators inside the Timer component" />
 
 `bindActionCreators` maps action functions to an object using the names of the action functions. These functions automatically dispatch the action to the store when the function is called. To change the data, we need to dispatch an action. To enable this, we need two things: `mapStateToProps` and `mapDispatchToProps`, and we need to connect both of them with our component. This is the boilerplate code that you will be re-writing.
 
 We define these two functions and modify our `export default` statement after we define the styles for our React Native views.
 
-<img src='https://cdn-images-1.medium.com/max/800/1*RobgSa1MMNKK-J4RstCN9w.png' />
+<img src='https://cdn-images-1.medium.com/max/800/1*RobgSa1MMNKK-J4RstCN9w.png' alt="mapStateToProps and mapDispatchToProps connected to the Timer component" />
 
 `mapStateToProps` is an object that lives in the store whose keys are passed down to the component as props. The below is the complete code for the Timer component.
 
 ### Completing The App
 
-<img src='https://cdn-images-1.medium.com/max/800/1*LqWiY370yr3gXMPtiJC9wg.png' />)
+<img src='https://cdn-images-1.medium.com/max/800/1*LqWiY370yr3gXMPtiJC9wg.png' alt="Complete Timer component code including the formatTime helper" />)
 
 I have created a custom function called `formatTime` to display the time in the correct format, but you can make use of any timer library. Next, to increment the value of time, I use the React lifecycle method `componentWillReceiveProps`. I know it is going to deprecated soon, but for now it works. See our mini-app in action below:
 
-<img src='https://cdn-images-1.medium.com/max/800/1*kMPizExeDMG-6MrYNbw8ew.gif' />
+<img src='https://cdn-images-1.medium.com/max/800/1*kMPizExeDMG-6MrYNbw8ew.gif' alt="Pomodoro timer counting seconds as the start and stop buttons are pressed" />
 
 For the sake of brevity and this demo, I am using only seconds to display the timer. You can increase the value of the timer by editing the value of constant `TIMER_DURATION` in `reducers.js`.
 

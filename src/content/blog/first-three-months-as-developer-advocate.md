@@ -9,7 +9,7 @@ tags:
 description: ''
 ---
 
-![cover_image](https://i.imgur.com/TBebjua.jpg)
+![](https://i.imgur.com/TBebjua.jpg)
 
 <blockquote>
 Photo by <a href="https://unsplash.com/@x_prayer?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Prayer X</a> on <a href="https://unsplash.com/s/photos/galaxy?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>

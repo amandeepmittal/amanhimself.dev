@@ -153,7 +153,7 @@ export default function App() {
 
 Once the navigator is set, you can open up a terminal window and run the command `expo start`. You can either choose an iOS simulator or an Android emulator or the Expo Go client app to view the results so far. Here is current the state of the demo app in an iOS simulator:
 
-<img src="https://i.imgur.com/l0cuYI1.png" width="300" />
+<img src="https://i.imgur.com/l0cuYI1.png" width="300" alt="Welcome screen asking What's your address in the iOS simulator" />
 
 ## Check if the device's location service enabled
 
@@ -213,23 +213,23 @@ export default Welcome;
 
 To test it out in the iOS simulator, go to **Settings > Privacy > Location Services**.
 
-<img src="https://i.imgur.com/Q0yZjbv.png" width="300" />
+<img src="https://i.imgur.com/Q0yZjbv.png" width="300" alt="iOS Settings showing Location Services turned on under Privacy" />
 
 If it says on, as shown in the above image, tap it and make sure to switch off the **Location Services**.
 
-<img src="https://i.imgur.com/yic9jlo.gif" width="250" />
+<img src="https://i.imgur.com/yic9jlo.gif" width="250" alt="Switching off Location Services in the iOS simulator settings" />
 
 Now open the app and you will notice that the alert box appears.
 
-<img src="https://i.imgur.com/xzE8giE.gif" width="250" />
+<img src="https://i.imgur.com/xzE8giE.gif" width="250" alt="Location Service not enabled alert appearing when the app opens" />
 
 Similarly, on Android device, the location can be disabled from the following menu:
 
-<img src="https://i.imgur.com/TKFYDhq.png" width="300" />
+<img src="https://i.imgur.com/TKFYDhq.png" width="300" alt="Android settings menu used to disable the device location" />
 
 And the alert message will appear on the opening of the app:
 
-<img src="https://i.imgur.com/Mk9egWP.png" width="300" />
+<img src="https://i.imgur.com/Mk9egWP.png" width="300" alt="Location Service not enabled alert on an Android device" />
 
 Make sure to enable the location service again on the device before proceeding to the next section.
 
@@ -287,7 +287,7 @@ const GetCurrentLocation = async () => {
 
 Here is the output after this step:
 
-<img src="https://i.imgur.com/JW51WSR.gif" width="250" />
+<img src="https://i.imgur.com/JW51WSR.gif" width="250" alt="Welcome screen replacing the placeholder with the fetched postal address" />
 
 The complete postal address is an object in JSON format and has the following fields (some of them might be useful for various cases):
 
@@ -365,7 +365,7 @@ export default Home;
 
 Here is the final output:
 
-<img src="https://i.imgur.com/48csotO.gif" width="250" />
+<img src="https://i.imgur.com/48csotO.gif" width="250" alt="App navigating to the Home screen showing the delivery address" />
 
 ## Further Reading
 

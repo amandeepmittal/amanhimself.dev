@@ -9,7 +9,7 @@ tags:
 description: ''
 ---
 
-![cover_image](https://i.imgur.com/5QMLIPd.png)
+![](https://i.imgur.com/5QMLIPd.png)
 
 > [Originally published at Crowdbotics](https://medium.com/crowdbotics/build-a-react-native-app-with-react-hooks-5498e1d5fdf6)
 
@@ -53,7 +53,7 @@ In this section, you will be setting up a Crowdbotics project that has React Nat
 
 To follow along, setting up a new project using Crowdbotics app builder service is easy. Visit [app.crowdbotics.com](http://app.crowdbotics.com) dashboard. Once you are logged in, choose `Create a new application`.
 
-<img src='https://cdn-images-1.medium.com/max/800/1*9gollubzgEx8AyxPs_TjFw.png' />
+<img src='https://cdn-images-1.medium.com/max/800/1*9gollubzgEx8AyxPs_TjFw.png' alt="Crowdbotics dashboard with the Create a new application option" />
 
 On `Create an Application page`, choose `React Native` template under Mobile App. Lastly, choose the name of your template at the bottom of this page and then click the button `Create by app!` After a few moments, your Crowdbotics project will be created. Upon creation, it will redirect you to the app dashboard, where you can see a link to GitHub, Heroku, and Slack. Once your project is created, you will get an invitation from Crowdbotics to download your project or clone the repository from Github either on them email you logged in or as a notification if you chose Github authentication.
 
@@ -65,7 +65,7 @@ Once you installed \`react-native-cli\` you can begin by generating a React Nati
 
 Using this command, a new project folder will be generated, traverse inside it and you will be welcome by a slightly different file system (a new file that you might not have seen before is `metro.config.js`, which you can ignore it for now).
 
-<img src='https://cdn-images-1.medium.com/max/800/1*vk2tjcthKq5R5CI4CoSYhg.png' />
+<img src='https://cdn-images-1.medium.com/max/800/1*vk2tjcthKq5R5CI4CoSYhg.png' alt="File structure of the new React Native project including metro.config.js" />
 
 Also, note that `RNHooksTODOAPP` is the project and directory name, so in its place, you can enter anything. For more information on the current release candidate of React Native, you can visit their Github project.
 
@@ -144,11 +144,11 @@ react-native run-ios
 
 Once the build files are created, the simulator will show you a similar result like below.
 
-<img src='https://cdn-images-1.medium.com/max/800/1*_Ecf_sv3Sx1UyzlYHFHIbw.png' />
+<img src='https://cdn-images-1.medium.com/max/800/1*_Ecf_sv3Sx1UyzlYHFHIbw.png' alt="Simulator showing the counter example with a Click me button" />
 
 If you play around a bit and hit the button `Click me`, you will see the counter's value is increased.
 
-<img src='https://cdn-images-1.medium.com/max/800/1*GKTkcgsmsqdrIMoNWKAyhg.gif' />
+<img src='https://cdn-images-1.medium.com/max/800/1*GKTkcgsmsqdrIMoNWKAyhg.gif' alt="Counter value increasing on each tap of the Click me button" />
 
 As you know by now, that the `App` component is nothing but a function that has state. You can even refactor it like below by introducing another function to handle `Button` click event and it will still work.
 
@@ -249,7 +249,7 @@ The `flexbox` layout starts by creating a flex container with an element of `dis
 
 These axes can be changed as a result of property `flexDirection`. In the web, by default, it is a row. In React Native, by default, it is a column.
 
-<img src='https://cdn-images-1.medium.com/max/800/1*t9nPsrpaOMDMv-FIPzdc3g.png' />
+<img src='https://cdn-images-1.medium.com/max/800/1*t9nPsrpaOMDMv-FIPzdc3g.png' alt="Diagram of the main axis and cross axis in a flexbox layout" />
 
 To align an element along the horizontal axis or the cross axis in React Native you have to specify in the `StyleSheet` object with the property of `flexDirection: 'row'`. We have done the same in the above code for the `View` that contains `TextInput` field.
 
@@ -257,7 +257,7 @@ Flexbox is an algorithm that is designed to provide a consistent layout on diffe
 
 Back to our app. Right now, if you run it in a simulator, it will look like below.
 
-<img src='https://cdn-images-1.medium.com/max/800/1*yq7SnNuaSIdCyn7FehC6xg.png' />
+<img src='https://cdn-images-1.medium.com/max/800/1*yq7SnNuaSIdCyn7FehC6xg.png' alt="Todo List header above an empty text input field" />
 
 Let us add an icon to represent a button to add items to the todo list. Go to the terminal window right now and install `react-native-vector-icons`.
 
@@ -300,7 +300,7 @@ Next step is to add the `Icon` element inside `TouchableOpacity` next to the `Te
 
 Now if you go back to the simulator you will have the following screen.
 
-<img src='https://cdn-images-1.medium.com/max/800/1*Tt5Dqz4LZvxdFu8D5rd3wA.png' />
+<img src='https://cdn-images-1.medium.com/max/800/1*Tt5Dqz4LZvxdFu8D5rd3wA.png' alt="Text input with a plus icon button on the same row" />
 
 ### Adding Hooks to the App
 
@@ -487,7 +487,7 @@ return (
 
 The `ScrollView` is a component that renders all its child at once. A good case to use when you are not rendering a large amount of data or data coming from a third party API. Now, enter a new task (_like below_) and try adding it to the todo list.
 
-<img src='https://cdn-images-1.medium.com/max/800/1*yQ1-JAtWzgF8paZLnBbxxg.gif' />
+<img src='https://cdn-images-1.medium.com/max/800/1*yQ1-JAtWzgF8paZLnBbxxg.gif' alt="Adding a new task to the todo list with the plus button" />
 
 ### Completing and Deleting an Item
 
@@ -599,7 +599,7 @@ const styles = StyleSheet.create({
 
 Now run the app and see it in action.
 
-<img src='https://cdn-images-1.medium.com/max/800/1*wKSEa-PSOHjNXNbMQ-5WvQ.gif' />
+<img src='https://cdn-images-1.medium.com/max/800/1*wKSEa-PSOHjNXNbMQ-5WvQ.gif' alt="Checking off and deleting items from the todo list" />
 
 ### Conclusion
 

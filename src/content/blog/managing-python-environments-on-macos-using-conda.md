@@ -23,9 +23,9 @@ Python 3.13.3
 
 However, considering the Stable Diffusion Web UI's requirements, it is recommended to install Python 3.10 because `torch`, a framework for building deep learning models, isn't supported in newer versions.
 
-<img src="/images/py/py1.png" />
+<img src="/images/py/py1.png" alt="Stable Diffusion WebUI requirements recommending Python 3.10" />
 
-<img src="/images/py/py2.png" />
+<img src="/images/py/py2.png" alt="Note that torch is unsupported on newer Python versions" />
 
 This is where using `conda` to manage packages and environments in Python projects comes in handy. It helps to install, manage, and update packages from Anaconda and other repositories, removing that extra layer of complexity.
 
@@ -35,7 +35,7 @@ In this guide, I'll share installation steps to install `conda` using [Miniforge
 
 Miniforge recommends downloading `conda` using a shell script for Apple Silicon machines.
 
-<img src="/images/py/py3.png" />
+<img src="/images/py/py3.png" alt="Miniforge download page with the macOS arm64 Apple Silicon tile" />
 
 Visit https://conda-forge.org/download/.
 Download the latest version by clicking the macOS tile for `arm64 (Apple Silicon)`.
@@ -48,7 +48,7 @@ sh /Users/username/Downloads/Miniforge3-MacOSX-arm64.sh
 
 This will bring up the installation steps, such as reviewing the license and agreeing to it. Once you accept the license terms and accept the location to install it (I choose the default location so it installs under the `username` directory).
 
-<img src="/images/py/py4.png" />
+<img src="/images/py/py4.png" alt="Miniforge installer asking to accept the license terms and install location" />
 
 ## Activate conda's base environment
 
@@ -138,4 +138,4 @@ conda deactivate
 
 After running this command, you will be back into the conda's base environment, which was created by default.
 
-<img src="/images/py/py5.png" width="460" />
+<img src="/images/py/py5.png" width="460" alt="Terminal back in conda's base environment after running conda deactivate" />

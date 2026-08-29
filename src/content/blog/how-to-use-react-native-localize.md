@@ -202,11 +202,11 @@ react-native run-android
 
 When the app's build process is complete, it is going to run the English locales by default.
 
-<img src='https://miro.medium.com/max/350/1*3KLq-CScY5yMp1pPnf1qjg.png' />
+<img src='https://miro.medium.com/max/350/1*3KLq-CScY5yMp1pPnf1qjg.png' alt="Demo app showing the English locale strings and country code" />
 
 On changing the locale, the correct result is reflected in the app.
 
-<img src='https://miro.medium.com/max/377/1*cURVMx8splW7SgIaLd6y_g.gif' />
+<img src='https://miro.medium.com/max/377/1*cURVMx8splW7SgIaLd6y_g.gif' alt="App translations updating after changing the device locale" />
 
 ## Conclusion
 

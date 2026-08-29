@@ -101,29 +101,29 @@ codex
 
 Since this is your first time running the above command inside your project directory, you will see a prompt asking to take an action:
 
-<img src="/images/codex-cli/cc1.png" width="640" />
+<img src="/images/codex-cli/cc1.png" width="640" alt="Codex CLI first run prompting to choose a permissions mode" />
 
 The first time you run this, it asks about permissions. You can choose between "auto" mode (Codex does whatever it needs) or "ask me first" mode. I use full auto now, but if you're nervous, start with the approval mode. You can always change it later.
 
 Once you select an option, press <kbd>Enter</kbd> to continue. You will be welcomed by the start screen.
 
-<img src="/images/codex-cli/cc2.png" width="640" />
+<img src="/images/codex-cli/cc2.png" width="640" alt="Codex CLI start screen inside a project directory" />
 
 The default model is `gpt-5.2-codex` at medium reasoning. You can change both with `/model` and by adjusting reasoning settings.
 
-<img src="/images/codex-cli/cc3.png" width="640" />
+<img src="/images/codex-cli/cc3.png" width="640" alt="Model picker showing gpt-5.2-codex as the default model" />
 
 Its reasoning level is also set to medium:
 
-<img src="/images/codex-cli/cc4.png" width="640" />
+<img src="/images/codex-cli/cc4.png" width="640" alt="Reasoning level set to medium in the Codex settings" />
 
 Try asking something simple: "what is this folder about?" in natural language (you can even try [_Hinglish_ :D](https://en.wikipedia.org/wiki/Hinglish)). Depending on the model and reasoning level, you'll get anything from a brief summary to a detailed analysis of every file and subdirectory.
 
-<img src="/images/codex-cli/cc5.png" width="640" />
+<img src="/images/codex-cli/cc5.png" width="640" alt="Codex summarizing what the current folder is about" />
 
 If you set the reasoning to max, you may get a verbose answer back from Codex, as it will spend more time exploring your project files and folders.
 
-<img src="/images/codex-cli/cc6.png" width="640" />
+<img src="/images/codex-cli/cc6.png" width="640" alt="Verbose answer at max reasoning with the ls commands Codex ran" />
 
 In both of the last two screenshots, you will see the actual logs the Codex model used to reach a conclusion. This also includes the Bash commands (`ls`) to list all files and folders. I find it weirdly reassuring to watch Codex run `ls` commands and actually explore the directory structure. You can see exactly what it's doing to form its answer.
 
@@ -143,7 +143,7 @@ A session started with the `resume` option will contain the context of your conv
 
 Here's a fun fact I discovered: if you use the Codex extension in VS Code or Cursor, those sessions are the same files. You can start a conversation in your terminal and continue it in your editor, or vice versa.
 
-<img src="/images/codex-cli/cc7.png" width="640" />
+<img src="/images/codex-cli/cc7.png" width="640" alt="Session log files stored under the ~/.codex/sessions directory" />
 
 I thought this was genuinely thoughtful design when I found it.
 
@@ -151,9 +151,9 @@ I thought this was genuinely thoughtful design when I found it.
 
 Anytime you want to explore or run a Codex CLI system command, you can press <kbd>/</kbd> in your session. It will provide you with a list of commands it can run.
 
-<img src="/images/codex-cli/cc9.png" width="640" />
+<img src="/images/codex-cli/cc9.png" width="640" alt="List of slash commands available in a Codex session" />
 
-<img src="/images/codex-cli/cc10.png" width="640" />
+<img src="/images/codex-cli/cc10.png" width="640" alt="Output of /status with the session configuration and token usage" />
 
 For example, if you run `/status`, it will show the current session configuration and token usage.
 
@@ -180,7 +180,7 @@ To run a Bash command, prefix it with `!` and it runs immediately:
 !git status   # Check git state
 ```
 
-<img src="/images/codex-cli/cc8.png" width="640" />
+<img src="/images/codex-cli/cc8.png" width="640" alt="Bash command prefixed with ! running inline in a Codex session" />
 
 The output appears inline and stays in the conversation history. So instead of switching terminals to check git status and then describing what you see, just run it. Codex sees the output and can reference it. Small feature, big friction reducer.
 
@@ -190,7 +190,7 @@ Different projects need different rules. My Obsidian vault behaves nothing like 
 
 When I started using Codex in my vault, I ran `/init` to create an `AGENTS.md` file, then customized it with instructions about how I write, what style I prefer, and what Codex should focus on when editing my drafts.
 
-<img src="/images/codex-cli/cc11.png" width="480" />
+<img src="/images/codex-cli/cc11.png" width="480" alt="Customized AGENTS.md with writing style instructions for the vault" />
 
 You can point Codex to specific files using `@filename` syntax for the correct file to read. (Yes, using `@`, you can refer to any file in your current project directory.) And keeping `AGENTS.md` at your project root means Codex checks it automatically at the start of each session.
 
@@ -208,7 +208,7 @@ Project context files --------------/
 
 For example, while writing this blog post, midway through the first draft, I asked Codex to review this post. Here's the output:
 
-<img src="/images/codex-cli/cc12.png" width="640" />
+<img src="/images/codex-cli/cc12.png" width="640" alt="Codex review of the first draft of this blog post" />
 
 I have used Grammarly for years to catch typos in my initial drafts. After seeing results with Codex, it's sufficient for me to switch to Codex.
 
@@ -224,11 +224,11 @@ I keep all my work meeting notes in an Obsidian directory called `work-meetings`
 
 34 seconds later, I had a properly formatted index file with working links.
 
-<img src="/images/codex-cli/cc18.png" width="640" />
+<img src="/images/codex-cli/cc18.png" width="640" alt="Generated index.md linking to every 2025 meeting note" />
 
 I also use an `#idea/*` tag convention for blog post ideas. I asked Codex to find all those tags, then asked how it could help me develop them:
 
-<img src="/images/codex-cli/cc19.png" width="640" />
+<img src="/images/codex-cli/cc19.png" width="640" alt="Codex collecting blog post ideas tagged with the idea convention" />
 
 ## Example: Syncing from Linear to Obsidian
 
@@ -244,7 +244,7 @@ Requirements:
 
 Before diving into details about the skill, let's grasp the fact that Codex CLI can do things on your behalf. It's an agent. Here's an example query I asked Codex CLI: _open amanhimself.dev_. Running this query, Codex uses the default web browser set on my system and opens the link.
 
-<img src="/images/codex-cli/cc13.gif" />
+<img src="/images/codex-cli/cc13.gif" alt="Codex opening amanhimself.dev in the default browser on request" />
 
 #### Troubleshooting
 
@@ -252,13 +252,13 @@ If the above natural language instruction does not work for you, you need to ens
 
 To do so, within Codex CLI, run the slash command `/approval` and select the second option under **Select Approval Mode**:
 
-<img src="/images/codex-cli/cc14.png" width="640" />
+<img src="/images/codex-cli/cc14.png" width="640" alt="Select Approval Mode list with the Agent option highlighted" />
 
 ### Continue using Codex CLI agent
 
 The previous query was quite simple and a stepping stone. Let's use the Codex CLI agent to open the website, do a search, and then open that web link on the blog.
 
-<img src="/images/codex-cli/cc15.gif" />
+<img src="/images/codex-cli/cc15.gif" alt="Codex searching the blog but failing to open the result link" />
 
 It _kind of_ works. If you look at the above screen recording, in a web browser tab, it opens the blog, does a quick search for the blog post title, but _cannot_ open the link.
 
@@ -298,7 +298,7 @@ In the above configuration, `--extension` is important. It's a special argument 
 
 Back to the original query: open amanhimself.dev, click search, search for week notes 01, and open result. To run this, you need to run `codex` first and then run the query.
 
-<img src="/images/codex-cli/cc16.gif" />
+<img src="/images/codex-cli/cc16.gif" alt="Playwright MCP letting Codex search the blog and open the result" />
 
 ### Install Playwright MCP Bridge extension
 
@@ -313,7 +313,7 @@ To install this extension, you'll have to do it manually:
 
 After following the steps above, you will see the Playwright MCP Bridge in your browser's extension list.
 
-<img src="/images/codex-cli/cc17.png" width="640" />
+<img src="/images/codex-cli/cc17.png" width="640" alt="Playwright MCP Bridge listed on the browser extensions page" />
 
 Once installed, pin the extension in your browser and click on it. It will give you a `PLAYWRIGHT_MCP_EXTENSION_TOKEN`. Copy the variable name and its value into `~/.codex/config.toml`:
 
@@ -336,11 +336,11 @@ Open `https://linear.app/expo/my-issues/assigned`
 
 This flow gave me a reliable checklist in my vault. I had to tell Codex the location of the file to save the tasks inside the Obsidian vault.
 
-<img src="/images/codex-cli/cc20.png" width="480" />
+<img src="/images/codex-cli/cc20.png" width="480" alt="Linear Todo tasks saved as a checklist in the Obsidian vault" />
 
 I compared the result to my actual Linear view. Every task synced correctly.
 
-<img src="/images/codex-cli/cc21.png" width="640" />
+<img src="/images/codex-cli/cc21.png" width="640" alt="Linear assigned issues view used to check the synced tasks" />
 
 ### Making the workflow reusable with Skills
 
@@ -354,7 +354,7 @@ Obsidian doesn't let you create directories starting with a `.` character. Other
 
 So I put my skills in `LLMS/skills/`. Each skill gets its own subdirectory with a `SKILL.md` file. For the Linear-to-Obsidian workflow, I named the skill `linear-to-obsidian`. Now, anytime I ask Codex to run the skill, I can type `sync linear todo` in Codex CLI and it will update the `Tasks.md` file in my vault.
 
-<img src="/images/codex-cli/cc22.png" width="640" />
+<img src="/images/codex-cli/cc22.png" width="640" alt="Running the linear-to-obsidian skill to update Tasks.md" />
 
 To create your own skills, I'd highly recommend asking Codex to start the process and create the file with instructions. Then, you can edit them and tweak them as per your workflow's needs. Much faster. No need to write a `SKILL.md` from scratch.
 

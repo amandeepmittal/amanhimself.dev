@@ -9,7 +9,7 @@ tags:
 description: ''
 ---
 
-![cover_image](https://i.imgur.com/0xwhr2a.png)
+![](https://i.imgur.com/0xwhr2a.png)
 
 Mobile apps are made of screens that in number can vary depending on the app you are developing. Handling user navigation can be tricky to learn and do in mobile apps, but with dedicated open-source libraries like [`react-navigation`](https://reactnavigation.org) do make the process a lot easier.
 
@@ -88,7 +88,7 @@ After installing these dependencies, you can verify that they have been installe
 
 I like to arrange different setups and related files under the folder structure. Here is how it is going to look like at the end of this tutorial. It is also a good practice to organize or give structure to your project.
 
-![1](https://i.imgur.com/lkVcW5L.png)
+![Project folder structure with the navigation and screens folders](https://i.imgur.com/lkVcW5L.png)
 
 The three files inside the `screens` folder are going to be functional components for now, with some dummy text to display. Create these files with the following code snippets.
 
@@ -248,7 +248,7 @@ export default function App() {
 
 Now open your app in a simulator device by executing the command `expo start` from a terminal window. You will see that it shows only the `Login` screen.
 
-<img src='https://cdn-images-1.medium.com/max/800/1*AjWvmQ72BYHLrqCtmBsbiw.png' />
+<img src='https://cdn-images-1.medium.com/max/800/1*AjWvmQ72BYHLrqCtmBsbiw.png' alt="Simulator showing only the Login screen with an empty header space" />
 
 _Notice the empty space at the top of the screen?_ That is the header section. When using Stack Navigation pattern, each screen is assigned a header automatically. If you do not require to use it, you can set the `headerMode` property to the value of `none` to `createStackNavigator` function. Open `AuthNavigation.js` to edit.
 
@@ -297,7 +297,7 @@ export default class Login extends React.Component {
 
 Passing the name of the route as the first parameter to `navigation.navigate()` is necessary. Now go back to the simulator, and you will find a new button. Press the button, and it will take you to the `Signup` screen component.
 
-<img src='https://cdn-images-1.medium.com/max/800/1*1SAUNjPgkuXtC-QU8tioSg.gif' />
+<img src='https://cdn-images-1.medium.com/max/800/1*1SAUNjPgkuXtC-QU8tioSg.gif' alt="Tapping the button to navigate from Login to the Signup screen" />
 
 Similarly, you can add a way to navigate back to the login screen component from the signup.
 
@@ -319,7 +319,7 @@ export default class Signup extends React.Component {
 
 Here is the output.
 
-<img src='https://cdn-images-1.medium.com/max/800/1*dO_4EKaKWrv8HlNo3WPPJA.gif' />
+<img src='https://cdn-images-1.medium.com/max/800/1*dO_4EKaKWrv8HlNo3WPPJA.gif' alt="Navigating back from the Signup screen to the Login screen" />
 
 ## Managing Authentication Flow
 
@@ -431,7 +431,7 @@ The `onLogin` handler function allows the user to navigate to the `Home` screen 
 
 Look at the complete demo below.
 
-<img src='https://cdn-images-1.medium.com/max/800/1*mPCEThKI-qoYL6y1TgWzHw.gif' />
+<img src='https://cdn-images-1.medium.com/max/800/1*mPCEThKI-qoYL6y1TgWzHw.gif' alt="Complete demo logging in and switching to the Home screen" />
 
 ## Conclusion
 

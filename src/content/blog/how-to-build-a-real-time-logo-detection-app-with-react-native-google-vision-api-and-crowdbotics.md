@@ -31,15 +31,15 @@ You are going to learn how to connect Google Vision API with React Native and Ex
 
 In this section, you will be setting up a Crowdbotics project that has React Native plus Expo pre-defined template with stable and latest dependencies for you to leverage. Setting up a new project using Crowdbotics app builder service is easy. Visit [app.crowdbotics.com](https://app.crowdbotics.com/vue-dashboard) dashboard. Once you are logged in, choose `Create a new application`.
 
-<img src='https://cdn-images-1.medium.com/max/800/1*DK_PfPhWHLI4FQVQMzPGbQ.png' />
+<img src='https://cdn-images-1.medium.com/max/800/1*DK_PfPhWHLI4FQVQMzPGbQ.png' alt="Crowdbotics dashboard with the Create a new application option" />
 
 On the `Create Application` page, choose `React Native Expo` template under `Mobile App`.
 
-<img src='https://cdn-images-1.medium.com/max/800/1*109DBQGNLHmC8lel8OOYmg.png' />
+<img src='https://cdn-images-1.medium.com/max/800/1*109DBQGNLHmC8lel8OOYmg.png' alt="Create Application page with the React Native Expo template under Mobile App" />
 
 Lastly, choose the name of your template at the bottom of this page and then click the button `Create by app!`. After a few moments, you will get a similar window like below.
 
-<img src='https://cdn-images-1.medium.com/max/800/1*RSZ9UeCX-ZHM6etmnY5Yuw.png' />
+<img src='https://cdn-images-1.medium.com/max/800/1*RSZ9UeCX-ZHM6etmnY5Yuw.png' alt="Crowdbotics confirmation window shown after the app is created" />
 
 This will take you to the app dashboard, where you can see a link to GitHub, Heroku, and Slack. Once your project is created, you will get an invitation from Crowdbotics to download your project or clone the repository from [**Github**](https://github.com/crowdbotics-apps/rngooglevisionapi-1400) either on them email you logged in or as a notification if you chose Github authentication.
 
@@ -73,7 +73,7 @@ Android users, note that you must have an Android virtual device already running
 
 Using the Firebase project has a lot of advantages over a traditional server API model. It provides the database and the backend service and such that we do not have to write our own backend and host it. Visit [Firebase.com](http://www.console.firebase.com) and sign-in with your Google ID. Once logged in, click on a new project and enter a project name. Lastly, hit the **Create Project** button.
 
-<img src='https://cdn-images-1.medium.com/max/800/1*BDhg-K1-ekeYg4D2AAir3A.jpeg' />
+<img src='https://cdn-images-1.medium.com/max/800/1*BDhg-K1-ekeYg4D2AAir3A.jpeg' alt="Firebase console creating a new project with the Create Project button" />
 
 Make sure you set up Firebase real-time database rules to allow the app user to upload image files into the database. To change this setting a newly generated Firebase project, from the sidebar menu in the Firebase console, open Database tab and then choose Rules and modify them as below.
 
@@ -164,29 +164,29 @@ Then create another file called `firebase.js` inside the config directory. You a
 
 You need a Gmail account to access the API key for any cloud service provided by Google. Go to [cloud.google.com](https://cloud.google.com/vision/). After you are signed in visit [Google Cloud Console](https://console.cloud.google.com/) and create a new project.
 
-<img src='https://cdn-images-1.medium.com/max/800/1*564hjsW_Z7yQ1QPV5IaJDw.png' />
+<img src='https://cdn-images-1.medium.com/max/800/1*564hjsW_Z7yQ1QPV5IaJDw.png' alt="Google Cloud Console with the New Project form open" />
 
 From the dropdown menu center, select a project. You can click the button `New Project` in the screen below but since we have already generated a Firebase project, select that from the list available.
 
-<img src='https://cdn-images-1.medium.com/max/800/1*BVoAY6JXgqfbBRj0JSpJpg.png' />
+<img src='https://cdn-images-1.medium.com/max/800/1*BVoAY6JXgqfbBRj0JSpJpg.png' alt="Project selector listing the existing Firebase project to choose" />
 
 Once the project is created or selected, it will appear at the dropdown menu. Next step is to get the Vision API key. Right now you are at the screen called `Dashboard` inside the console. From the top left, click on the menu button and a sidebar menu will pop up. Select `APIs & Services` > `Dashboard`.
 
-<img src='https://cdn-images-1.medium.com/max/800/1*wqh5sg1lkr8mqVZqVbPEUQ.png' />
+<img src='https://cdn-images-1.medium.com/max/800/1*wqh5sg1lkr8mqVZqVbPEUQ.png' alt="Cloud Console sidebar menu with APIs and Services then Dashboard selected" />
 
 At the Dashboard, select the button Enable APIs and Services.
 
-<img src='https://cdn-images-1.medium.com/max/800/1*3SaO3iHEzg8sstWl4lL4og.jpeg' />
+<img src='https://cdn-images-1.medium.com/max/800/1*3SaO3iHEzg8sstWl4lL4og.jpeg' alt="API dashboard with the Enable APIs and Services button" />
 
 Then type `vision` in the search bar as shown below and then click Vision API.
 
-<img src='https://cdn-images-1.medium.com/max/800/1*0Wq-izllTVH_jO17AmSQqg.jpeg' />
+<img src='https://cdn-images-1.medium.com/max/800/1*0Wq-izllTVH_jO17AmSQqg.jpeg' alt="Searching vision in the API library and selecting Vision API" />
 
 Then, click the button `Enable` to enable the API. _Note that_ in order to complete this step of getting the API key, you are required to add billing information to your Google Cloud Platform account.
 
 The URL, in your case, on the dashboard will be similar to `https://console.cloud.google.com/apis/dashboard?project=FIREBASE-PROJECT-ID&folder&organizationId`. Click on the `Credentials` section from the left sidebar to create a new API key.
 
-<img src='https://cdn-images-1.medium.com/max/800/1*2WuMEpijqOASZQqUW_mkIQ.jpeg' />
+<img src='https://cdn-images-1.medium.com/max/800/1*2WuMEpijqOASZQqUW_mkIQ.jpeg' alt="Credentials page with the Create Credentials button for a new API key" />
 
 Click the button `Create Credentials`. Once you have created the API key, it is time to add it in the file `environment.js` in place of the key `GOOGLE_CLOUD_VISION_API_KEY`.
 
@@ -250,13 +250,13 @@ For more information on Permissions with Expo, you should take a look at the [of
 
 On iOS, asking permissions alert will look like below.
 
-<img src='https://cdn-images-1.medium.com/max/800/1*1IWny3GcKb4iZLQd9MyW0g.png' />
+<img src='https://cdn-images-1.medium.com/max/800/1*1IWny3GcKb4iZLQd9MyW0g.png' alt="iOS alert asking permission to access the camera roll" />
 
 On Android:
 
-<img src='https://cdn-images-1.medium.com/max/600/1*u9r_6MpkNUovKzGnRxbh1w.jpeg' />
+<img src='https://cdn-images-1.medium.com/max/600/1*u9r_6MpkNUovKzGnRxbh1w.jpeg' alt="Android dialog asking permission to access photos and media" />
 
-<img src='https://cdn-images-1.medium.com/max/600/1*OZYu6KqBNfmAn5soM0JqYA.jpeg' />
+<img src='https://cdn-images-1.medium.com/max/600/1*OZYu6KqBNfmAn5soM0JqYA.jpeg' alt="Android dialog asking permission to use the camera" />
 
 ### Uploading Images to Firebase
 
@@ -452,13 +452,13 @@ An example a POST body response in JSON format from the API is going to be simil
 
 Notice that it gives us back the complete object with a description of the logo’s name searched for. This can be viewed in the terminal window from the logs generated while the Expo CLI command is active.
 
-<img src='https://cdn-images-1.medium.com/max/800/1*EJ5MRzjxoBFElHT_1EHbXA.png' />
+<img src='https://cdn-images-1.medium.com/max/800/1*EJ5MRzjxoBFElHT_1EHbXA.png' alt="Expo CLI logs showing the logo annotation response from the Vision API" />
 
 See the application in working below. A real android device was used to demonstrate this. If you want to test yourself one a real device, just download the Expo client for your mobile OS, scan the QR code generated after starting expo CLI command and then click the button Take a photo while the application is running.
 
 If you visit the storage section in Firebase, you can notice that each image is stored with a name of base64 binary string.
 
-<img src='https://cdn-images-1.medium.com/max/800/1*jWeopMWFwK7KAoaNPL3dDw.jpeg' />
+<img src='https://cdn-images-1.medium.com/max/800/1*jWeopMWFwK7KAoaNPL3dDw.jpeg' alt="Firebase storage listing uploaded images named by base64 binary string" />
 
 ### Conclusion
 

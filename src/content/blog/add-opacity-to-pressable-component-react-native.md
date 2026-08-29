@@ -95,7 +95,7 @@ Make sure to add some styles to the `Text` and the `Pressable` components.
 
 Here is the output I get by running the code above. Notice that there is no visual feedback when I press the component on the app screen.
 
-![ss1](https://i.imgur.com/XcLXQbn.gif)
+![Press Me button showing no visual feedback when pressed](https://i.imgur.com/XcLXQbn.gif)
 
 I used the [Touch indicator on an iOS simulator](https://amanhimself.dev/blog/show-touch-indicator-on-ios-simulator/) to show that the button is pressed.
 
@@ -171,7 +171,7 @@ export default function Home() {
 
 The output after this step confirms that the opacity is changing as expected.
 
-![ss2](https://i.imgur.com/LDyiXIu.gif)
+![Press Me button fading to half opacity while it is pressed](https://i.imgur.com/LDyiXIu.gif)
 
 ## Conclusion
 
