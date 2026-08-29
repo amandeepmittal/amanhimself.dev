@@ -1,4 +1,12 @@
 ---
+import JsonLd from './JsonLd.astro';
+
+export interface Props {
+  current?: string;
+}
+
+const { current } = Astro.props;
+
 // Remove current url path and remove trailing slash if exists
 const currentUrlPath = Astro.url.pathname.replace(/\/+$/, '');
 
@@ -22,8 +30,32 @@ breadcrumbList[0] === 'tags' &&
       Number(breadcrumbList[2]) === 1 ? '' : '(page ' + breadcrumbList[2] + ')'
     }`
   );
+
+const lastIndex = breadcrumbList.length - 1;
+const crumbs = [
+  { name: 'Home', url: '/' },
+  ...breadcrumbList.map((breadcrumb, index) => ({
+    name:
+      index === lastIndex
+        ? (current ?? decodeURIComponent(breadcrumb))
+        : breadcrumb,
+    url: index === lastIndex ? Astro.url.pathname : `/${breadcrumb}/`
+  }))
+];
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: crumbs.map((crumb, index) => ({
+    '@type': 'ListItem',
+    position: index + 1,
+    name: crumb.name,
+    item: new URL(crumb.url, Astro.site).href
+  }))
+};
 ---
 
+<JsonLd data={breadcrumbSchema} />
 <nav class="breadcrumb" aria-label="breadcrumb">
   <ul>
     <li>
@@ -35,11 +67,11 @@ breadcrumbList[0] === 'tags' &&
         index + 1 === breadcrumbList.length ? (
           <li>
             <span
-              class={`${index > 0 ? 'lowercase' : 'capitalize'}`}
+              class={current ? '' : index > 0 ? 'lowercase' : 'capitalize'}
               aria-current="page"
             >
               {/* make the last part lowercase in Home > Tags > some-tag */}
-              {decodeURIComponent(breadcrumb)}
+              {current ?? decodeURIComponent(breadcrumb)}
             </span>
           </li>
         ) : (
