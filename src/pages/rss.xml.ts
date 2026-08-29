@@ -1,20 +1,38 @@
 import rss from '@astrojs/rss';
-import { getCollection, render } from 'astro:content';
+import { getCollection } from 'astro:content';
 import getSortedPosts from '@utils/getSortedPosts';
 import { postDescription } from '@utils/postDescription';
 import { SITE, LOCALE } from '@config';
 
+const extractDescription = (body?: string) => {
+  if (!body) return '';
+
+  const plainLines = body
+    .split('\n')
+    .map(line => line.trim())
+    .filter(line => line.length && !line.startsWith('<!--'));
+
+  const summary = plainLines.slice(0, 2).join(' ');
+
+  return summary
+    .replace(/!\[[^\]]*\]\([^)]*\)/g, '') // strip images
+    .replace(/\[(.*?)\]\([^)]*\)/g, '$1') // strip links, keep text
+    .replace(/[`*_>#~]/g, '') // strip basic markdown symbols
+    .replace(/\s+/g, ' ')
+    .trim();
+};
+
+const FEED_ITEMS = 30;
+
+const absoluteUrls = (html: string) =>
+  html.replace(/(href|src)="\/(?!\/)/g, `$1="${SITE.website}`);
+
 export async function GET() {
   const posts = await getCollection('blog');
-  const sortedPosts = getSortedPosts(posts);
-  const items = await Promise.all(
-    sortedPosts.map(async post => {
+  const items = getSortedPosts(posts)
+    .slice(0, FEED_ITEMS)
+    .map(post => {
       const { data, id } = post;
-      const rendered = await render(post);
-      const html =
-        typeof rendered === 'string'
-          ? rendered
-          : ((rendered as any).html ?? '');
       const updated =
         data.modDatetime && data.modDatetime !== data.pubDatetime
           ? new Date(data.modDatetime)
@@ -26,13 +44,12 @@ export async function GET() {
         description: postDescription(post) || SITE.desc,
         pubDate: new Date(data.pubDatetime),
         categories: data.tags ?? [],
-        content: html,
+        content: absoluteUrls(post.rendered?.html ?? ''),
         customData: updated
           ? `<atom:updated>${updated.toISOString()}</atom:updated>`
           : undefined
       };
-    })
-  );
+    });
 
   return rss({
     title: SITE.title,
