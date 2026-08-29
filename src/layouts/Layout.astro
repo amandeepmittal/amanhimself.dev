@@ -13,6 +13,7 @@ export interface Props {
   modDatetime?: Date | null;
   scrollSmooth?: boolean;
   alternateMarkdown?: string;
+  noindex?: boolean;
 }
 
 const {
@@ -23,7 +24,8 @@ const {
   pubDatetime,
   modDatetime,
   scrollSmooth = false,
-  alternateMarkdown
+  alternateMarkdown,
+  noindex = false
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site).href;
@@ -40,6 +42,7 @@ const socialImageURL = new URL(ogImage, Astro.url.origin).href;
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" href="/favicon.jpg" />
     <link rel="canonical" href={canonicalURL} />
+    {noindex && <meta name="robots" content="noindex" />}
     <meta name="generator" content={Astro.generator} />
 
     <!-- General Meta Tags -->
