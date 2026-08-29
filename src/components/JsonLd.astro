@@ -1,0 +1,10 @@
+---
+export interface Props {
+  data: Record<string, unknown>;
+}
+
+const { data } = Astro.props;
+const json = JSON.stringify(data).replace(/</g, '\\u003c');
+---
+
+<script type="application/ld+json" is:inline set:html={json} />

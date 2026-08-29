@@ -5,6 +5,7 @@ import Footer from '@components/Footer.astro';
 import Tag from '@components/Tag.astro';
 import Datetime from '@components/Datetime';
 import BackToTopButton from '@components/BackToTopButton.astro';
+import Breadcrumbs from '@components/Breadcrumbs.astro';
 import { render, type CollectionEntry } from 'astro:content';
 import { slugifyStr } from '@utils/slugify';
 import ShareLinks from '@components/ShareLinks.astro';
@@ -80,18 +81,7 @@ const tagCounts = new Map(
 <Layout {...layoutProps}>
   <Header />
 
-  <div class="mx-auto flex w-full max-w-5xl justify-start px-2">
-    <button
-      class="focus-outline mb-2 mt-8 flex hover:opacity-75"
-      onclick="(() => (history.length === 1) ? window.location = '/' : history.back())()"
-    >
-      <svg xmlns="http://www.w3.org/2000/svg"
-        ><path
-          d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"
-        ></path>
-      </svg><span>Go back</span>
-    </button>
-  </div>
+  <Breadcrumbs current={title} />
   <main id="main-content" class:list={{ 'has-rail': hasRail }}>
     <h1 transition:name={slugifyStr(title)} class="post-title">{title}</h1>
     <div class="flex flex-wrap items-center gap-x-2 gap-y-1">

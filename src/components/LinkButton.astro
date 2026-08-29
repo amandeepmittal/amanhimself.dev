@@ -5,6 +5,7 @@ export interface Props {
   ariaLabel?: string;
   title?: string;
   disabled?: boolean;
+  rel?: string;
   class?: string;
 }
 
@@ -16,6 +17,7 @@ const {
   ariaLabel,
   title,
   disabled = false,
+  rel,
   class: scopedClass
 } = Astro.props;
 ---
@@ -40,6 +42,7 @@ const {
       ]}
       aria-label={ariaLabel}
       title={title}
+      rel={rel}
     >
       <slot />
     </a>
