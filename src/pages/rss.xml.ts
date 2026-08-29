@@ -4,24 +4,6 @@ import getSortedPosts from '@utils/getSortedPosts';
 import { postDescription } from '@utils/postDescription';
 import { SITE, LOCALE } from '@config';
 
-const extractDescription = (body?: string) => {
-  if (!body) return '';
-
-  const plainLines = body
-    .split('\n')
-    .map(line => line.trim())
-    .filter(line => line.length && !line.startsWith('<!--'));
-
-  const summary = plainLines.slice(0, 2).join(' ');
-
-  return summary
-    .replace(/!\[[^\]]*\]\([^)]*\)/g, '') // strip images
-    .replace(/\[(.*?)\]\([^)]*\)/g, '$1') // strip links, keep text
-    .replace(/[`*_>#~]/g, '') // strip basic markdown symbols
-    .replace(/\s+/g, ' ')
-    .trim();
-};
-
 const FEED_ITEMS = 30;
 
 const absoluteUrls = (html: string) =>
