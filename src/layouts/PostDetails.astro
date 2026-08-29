@@ -44,7 +44,7 @@ const hasRail = tocItems.length >= 3;
 
 const ogImageUrl = typeof ogImage === 'string' ? ogImage : ogImage?.src;
 const ogUrl = new URL(
-  ogImageUrl ?? `/blog/${slugifyStr(title)}.png`,
+  ogImageUrl ?? `/blog/${post.id}/index.png`,
   Astro.url.origin
 ).href;
 
