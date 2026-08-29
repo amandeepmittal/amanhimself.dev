@@ -1,25 +1,8 @@
 import rss from '@astrojs/rss';
 import { getCollection, render } from 'astro:content';
 import getSortedPosts from '@utils/getSortedPosts';
+import { postDescription } from '@utils/postDescription';
 import { SITE, LOCALE } from '@config';
-
-const extractDescription = (body?: string) => {
-  if (!body) return '';
-
-  const plainLines = body
-    .split('\n')
-    .map(line => line.trim())
-    .filter(line => line.length && !line.startsWith('<!--'));
-
-  const summary = plainLines.slice(0, 2).join(' ');
-
-  return summary
-    .replace(/!\[[^\]]*\]\([^)]*\)/g, '') // strip images
-    .replace(/\[(.*?)\]\([^)]*\)/g, '$1') // strip links, keep text
-    .replace(/[`*_>#~]/g, '') // strip basic markdown symbols
-    .replace(/\s+/g, ' ')
-    .trim();
-};
 
 export async function GET() {
   const posts = await getCollection('blog');
@@ -37,13 +20,10 @@ export async function GET() {
           ? new Date(data.modDatetime)
           : null;
 
-      const description =
-        data.description || extractDescription(post.body) || SITE.desc;
-
       return {
         link: `blog/${id}/`,
         title: data.title,
-        description,
+        description: postDescription(post) || SITE.desc,
         pubDate: new Date(data.pubDatetime),
         categories: data.tags ?? [],
         content: html,
