@@ -3,7 +3,6 @@ title: Set up a Next.js project with ESLint, Prettier, Husky, and Lint Staged
 author: Aman Mittal
 pubDatetime: 2022-02-13T03:42:51Z
 slug: setup-nextjs-project-with-eslint-prettier-husky-lint-staged
-featured: false
 draft: false
 tags:
   - nextjs

@@ -3,7 +3,6 @@ title: JavaScript Code Conventions
 author: Aman Mittal
 pubDatetime: 2016-01-08T03:42:51Z
 slug: javascript-code-conventions
-featured: false
 draft: false
 tags:
   - javascript

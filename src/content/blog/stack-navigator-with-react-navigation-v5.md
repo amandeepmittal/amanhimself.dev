@@ -3,7 +3,6 @@ title: Getting Started with Stack Navigator using react-navigation 5 in React Na
 author: Aman Mittal
 pubDatetime: 2020-02-21T03:42:51Z
 slug: stack-navigator-with-react-navigation-v5
-featured: false
 draft: false
 tags:
   - react-native

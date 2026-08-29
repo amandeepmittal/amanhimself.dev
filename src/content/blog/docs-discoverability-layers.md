@@ -3,7 +3,6 @@ title: Docs discoverability layers
 author: Aman Mittal
 pubDatetime: 2026-03-28T00:00:01Z
 slug: docs-discoverability-layers
-featured: false
 draft: false
 tags:
   - tech-writing

@@ -3,7 +3,6 @@ title: 'RSS feed in an Astro blog'
 author: Aman Mittal
 pubDatetime: 2025-10-12T00:00:01Z
 slug: rss-feed-in-an-astro-blog
-featured: false
 draft: false
 tags:
   - blogging

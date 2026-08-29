@@ -3,7 +3,6 @@ title: 'Chat app with React Native (Part 4) - A guide to create Chat UI Screens 
 author: Aman Mittal
 pubDatetime: 2020-04-28T03:42:51Z
 slug: chat-app-with-react-native-part-4
-featured: false
 draft: false
 tags:
   - react-native

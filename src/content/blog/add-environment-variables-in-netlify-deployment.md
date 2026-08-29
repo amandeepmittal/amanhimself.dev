@@ -3,7 +3,6 @@ title: Add Environment Variables in a Netlify Deployment
 author: Aman Mittal
 pubDatetime: 2020-09-01T03:42:51Z
 slug: add-environment-variables-in-netlify-deployment
-featured: false
 draft: false
 tags:
   - nodejs

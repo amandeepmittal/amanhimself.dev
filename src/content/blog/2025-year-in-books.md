@@ -3,7 +3,6 @@ title: 2025 year in books
 author: Aman Mittal
 pubDatetime: 2026-01-09T00:00:01Z
 slug: 2025-year-in-books
-featured: false
 draft: false
 tags:
   - year-reviews

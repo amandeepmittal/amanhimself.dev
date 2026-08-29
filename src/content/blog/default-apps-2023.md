@@ -3,7 +3,6 @@ title: My default apps in 2023
 author: Aman Mittal
 pubDatetime: 2023-12-16T03:42:51Z
 slug: default-apps-2023
-featured: false
 draft: false
 tags:
   - notes

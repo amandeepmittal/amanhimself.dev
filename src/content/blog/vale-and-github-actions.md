@@ -3,7 +3,6 @@ title: Avoiding version conflicts with Vale and GitHub Actions
 author: Aman Mittal
 pubDatetime: 2025-04-20T00:00:01Z
 slug: vale-and-github-actions
-featured: false
 draft: false
 tags:
   - tech-writing

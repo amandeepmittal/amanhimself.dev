@@ -3,7 +3,6 @@ title: How to configure VS Code Bracket Pair Colors natively
 author: Aman Mittal
 pubDatetime: 2021-10-12T03:42:51Z
 slug: how-to-configure-vscode-bracket-colors-natively
-featured: false
 draft: false
 tags:
   - vscode

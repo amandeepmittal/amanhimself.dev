@@ -3,7 +3,6 @@ title: How to remove console statements from React Native apps
 author: Aman Mittal
 pubDatetime: 2022-06-19T03:42:51Z
 slug: remove-console-log-from-react-native-apps-in-production
-featured: false
 draft: false
 tags:
   - react-native

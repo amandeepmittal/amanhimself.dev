@@ -3,7 +3,6 @@ title: TIL Remotely accessing one MacBook from another MacBook
 author: Aman Mittal
 pubDatetime: 2026-03-11T00:00:01Z
 slug: remotely-access-macbook-from-another-macbook
-featured: false
 draft: false
 tags:
   - macos

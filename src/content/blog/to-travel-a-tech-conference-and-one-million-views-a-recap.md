@@ -3,7 +3,6 @@ title: 'To Travel, A Tech Conference and One Million views - a Recap'
 author: Aman Mittal
 pubDatetime: 2019-07-02T03:42:51Z
 slug: to-travel-a-tech-conference-and-one-million-views-a-recap
-featured: false
 draft: false
 tags:
   - notes

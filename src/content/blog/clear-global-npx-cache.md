@@ -3,7 +3,6 @@ title: 'How to clear global npx cache'
 author: Aman Mittal
 pubDatetime: 2023-05-30T03:42:51Z
 slug: clear-global-npx-cache
-featured: false
 draft: false
 tags:
   - cli

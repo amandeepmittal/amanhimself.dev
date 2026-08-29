@@ -3,7 +3,6 @@ title: Remove node_modules Recursively
 author: Aman Mittal
 pubDatetime: 2017-09-10T03:42:51Z
 slug: remove-node-modules-recursively
-featured: false
 draft: false
 tags:
   - nodejs

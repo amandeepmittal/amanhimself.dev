@@ -3,7 +3,6 @@ title: 'Large header title in Expo Router'
 author: Aman Mittal
 pubDatetime: 2025-11-02T00:00:01Z
 slug: large-header-title-in-expo-router
-featured: false
 draft: false
 tags:
   - react-native

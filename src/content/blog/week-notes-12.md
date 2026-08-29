@@ -3,7 +3,6 @@ title: Week notes 12
 author: Aman Mittal
 pubDatetime: 2025-12-21T00:00:12Z
 slug: week-notes-12
-featured: false
 draft: false
 tags:
   - notes

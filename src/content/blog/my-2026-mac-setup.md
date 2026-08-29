@@ -3,7 +3,6 @@ title: My Mac setup
 author: Aman Mittal
 pubDatetime: 2026-04-18T00:00:01Z
 slug: mac-setup
-featured: false
 draft: false
 tags:
   - macos

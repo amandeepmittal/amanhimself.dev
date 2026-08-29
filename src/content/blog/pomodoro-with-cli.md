@@ -3,7 +3,6 @@ title: Pomodoro technique with CLI on macOS
 author: Aman Mittal
 pubDatetime: 2023-12-18T03:42:51Z
 slug: pomodoro-with-cli
-featured: false
 draft: false
 tags:
   - cli

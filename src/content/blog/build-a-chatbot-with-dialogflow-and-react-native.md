@@ -3,7 +3,6 @@ title: 'Build a Chatbot with Dialogflow and React Native'
 author: Aman Mittal
 pubDatetime: 2019-03-26T03:42:51Z
 slug: build-a-chatbot-with-dialogflow-and-react-native
-featured: false
 draft: false
 tags:
   - react-native

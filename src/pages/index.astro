@@ -10,8 +10,7 @@ import { SOCIALS } from '@config';
 
 const posts = await getCollection('blog');
 
-const sortedPosts = await getSortedPosts(posts);
-const recentPosts = sortedPosts;
+const recentPosts = await getSortedPosts(posts);
 
 const socialCount = SOCIALS.filter(social => social.active).length;
 ---

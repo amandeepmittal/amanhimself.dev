@@ -3,7 +3,6 @@ title: Taking the terminal seriously in the age of AI coding agents
 author: Aman Mittal
 pubDatetime: 2026-08-28T00:00:01Z
 slug: taking-terminals-seriously
-featured: false
 draft: false
 tags:
   - cli

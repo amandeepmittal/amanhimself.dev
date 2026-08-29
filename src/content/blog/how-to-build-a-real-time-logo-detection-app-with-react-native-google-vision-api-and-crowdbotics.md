@@ -3,7 +3,6 @@ title: How to Build a Real Time Logo Detection App with React Native & Google Vi
 author: Aman Mittal
 pubDatetime: 2019-03-20T03:42:51Z
 slug: how-to-build-a-real-time-logo-detection-app-with-react-native-google-vision-api-and-crowdbotics
-featured: false
 draft: false
 tags:
   - react-native

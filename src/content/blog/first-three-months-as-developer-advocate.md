@@ -3,7 +3,6 @@ title: 'Life at Draftbit - First 3 Months as a Developer Advocate'
 author: Aman Mittal
 pubDatetime: 2021-05-25T03:42:51Z
 slug: first-three-months-as-developer-advocate
-featured: false
 draft: false
 tags:
   - notes

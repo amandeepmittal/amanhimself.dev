@@ -3,7 +3,6 @@ title: New blog theme
 author: Aman Mittal
 pubDatetime: 2025-01-31T00:00:01Z
 slug: new-blog-theme-and-colors
-featured: false
 draft: false
 tags:
   - blogging

@@ -3,7 +3,6 @@ title: How to configure ESLint and Prettier in an Expo project
 author: Aman Mittal
 pubDatetime: 2023-07-25T03:42:51Z
 slug: configure-eslint-prettier-expo-project
-featured: false
 draft: false
 tags:
   - expo

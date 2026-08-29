@@ -3,7 +3,6 @@ title: 'How to Build a Serverless Backend with AWS Lambda and Nodejs'
 author: Aman Mittal
 pubDatetime: 2018-11-13T03:42:51Z
 slug: how-to-build-a-serverless-backend-with-aws-lambda-and-nodejs
-featured: false
 draft: false
 tags:
   - nodejs

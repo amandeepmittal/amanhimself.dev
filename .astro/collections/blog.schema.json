@@ -24,9 +24,6 @@
     "title": {
       "type": "string"
     },
-    "featured": {
-      "type": "boolean"
-    },
     "draft": {
       "type": "boolean"
     },
@@ -50,9 +47,6 @@
       ]
     },
     "description": {
-      "type": "string"
-    },
-    "canonicalURL": {
       "type": "string"
     },
     "readingTime": {

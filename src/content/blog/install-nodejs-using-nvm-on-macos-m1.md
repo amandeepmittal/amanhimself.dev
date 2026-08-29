@@ -4,7 +4,6 @@ author: Aman Mittal
 pubDatetime: 2022-02-06T03:42:51Z
 modDatetime: 2024-12-07T14:51:31Z
 slug: install-nodejs-using-nvm-on-macos-m1
-featured: false
 draft: false
 tags:
   - nodejs

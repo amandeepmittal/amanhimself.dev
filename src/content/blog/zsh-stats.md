@@ -3,7 +3,6 @@ title: View most used commands with zsh_stats
 author: Aman Mittal
 pubDatetime: 2024-01-01T03:42:51Z
 slug: zsh-stats
-featured: false
 draft: false
 tags:
   - cli

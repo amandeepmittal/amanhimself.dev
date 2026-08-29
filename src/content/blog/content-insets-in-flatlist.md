@@ -3,7 +3,6 @@ title: 'Content insets with FlatList in React Native'
 author: Aman Mittal
 pubDatetime: 2025-07-18T00:00:01Z
 slug: content-insets-with-flatlist
-featured: false
 draft: false
 tags:
   - react-native

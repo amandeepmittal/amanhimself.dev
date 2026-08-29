@@ -4,7 +4,6 @@ author: Aman Mittal
 pubDatetime: 2024-04-05T03:42:51Z
 modDatetime: 2025-04-27T00:00:01Z
 slug: macbook-setup-2024
-featured: false
 draft: false
 tags:
   - macos

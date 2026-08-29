@@ -3,7 +3,6 @@ title: 'Changing app themes using React Native, Styled Components and Redux'
 author: Aman Mittal
 pubDatetime: 2019-10-02T03:42:51Z
 slug: create-app-themes-styled-components-redux
-featured: false
 draft: false
 tags:
   - react-native

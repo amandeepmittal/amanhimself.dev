@@ -3,7 +3,6 @@ title: Inline footnotes in Markdown
 author: Aman Mittal
 pubDatetime: 2025-05-12T00:00:01Z
 slug: inline-footnotes-in-markdown
-featured: false
 draft: false
 tags:
   - blogging

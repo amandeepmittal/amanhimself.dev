@@ -3,7 +3,6 @@ title: 2026 - half year in books
 author: Aman Mittal
 pubDatetime: 2026-08-05T00:00:01Z
 slug: 2026-half-year-in-books
-featured: false
 draft: false
 tags:
   - year-reviews

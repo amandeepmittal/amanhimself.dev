@@ -3,7 +3,6 @@ title: Using images in Claude Code
 author: Aman Mittal
 pubDatetime: 2026-02-18T00:00:05Z
 slug: using-images-in-claude-code
-featured: false
 draft: false
 tags:
   - ai

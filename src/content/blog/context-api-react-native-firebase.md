@@ -3,7 +3,6 @@ title: 'Using Context API with React Native'
 author: Aman Mittal
 pubDatetime: 2019-09-27T03:42:51Z
 slug: context-api-react-native-firebase
-featured: false
 draft: false
 tags:
   - react-native

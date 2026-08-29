@@ -3,7 +3,6 @@ title: Accessing Geo-location and App Permissions in React Native and Expo
 author: Aman Mittal
 pubDatetime: 2018-09-20T03:42:51Z
 slug: accessing-geo-location-and-app-permissions-in-react-native-and-expo
-featured: false
 draft: false
 tags:
   - expo

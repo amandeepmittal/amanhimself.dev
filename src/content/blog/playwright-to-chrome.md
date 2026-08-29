@@ -3,7 +3,6 @@ title: 'Playwright to Chrome'
 author: Aman Mittal
 pubDatetime: 2026-04-19T00:00:01Z
 slug: playwright-to-chrome
-featured: false
 draft: false
 tags:
   - claude-code

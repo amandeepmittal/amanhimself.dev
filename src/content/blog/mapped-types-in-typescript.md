@@ -3,7 +3,6 @@ title: Mapped types in TypeScript
 author: Aman Mittal
 pubDatetime: 2025-01-29T00:00:01Z
 slug: mapped-types-in-typescript
-featured: false
 draft: false
 tags:
   - typescript

@@ -3,10 +3,9 @@ import type { GithubRepo } from '@utils/github';
 
 export interface Props {
   repo: GithubRepo;
-  featured?: boolean;
 }
 
-const { repo, featured = false } = Astro.props;
+const { repo } = Astro.props;
 
 const updatedAt = repo.pushed_at ?? repo.updated_at ?? repo.created_at;
 const updatedLabel = new Intl.DateTimeFormat('en-US', {
@@ -16,7 +15,7 @@ const updatedLabel = new Intl.DateTimeFormat('en-US', {
 }).format(new Date(updatedAt));
 ---
 
-<li class={`project ${featured ? 'project--featured' : ''}`}>
+<li class="project">
   <div class="project__head">
     <a
       href={repo.html_url}
@@ -26,7 +25,6 @@ const updatedLabel = new Intl.DateTimeFormat('en-US', {
     >
       {repo.name}
     </a>
-    {featured && <span class="project__badge">Featured</span>}
   </div>
 
   {repo.description && <p class="project__desc">{repo.description}</p>}
@@ -53,17 +51,11 @@ const updatedLabel = new Intl.DateTimeFormat('en-US', {
       rgb(var(--color-fill)) 45%
     );
   }
-  .project--featured {
-    @apply border-skin-accent/40;
-  }
   .project__head {
     @apply flex flex-wrap items-center gap-2;
   }
   .project__name {
     @apply text-lg font-semibold text-skin-accent decoration-dashed underline-offset-4 hover:underline;
-  }
-  .project__badge {
-    @apply rounded bg-skin-accent/15 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-skin-accent;
   }
   .project__desc {
     @apply mt-2 text-sm text-skin-base/80;
@@ -76,8 +68,5 @@ const updatedLabel = new Intl.DateTimeFormat('en-US', {
   }
   .pill {
     @apply rounded-full border border-skin-line bg-skin-card px-2 py-1 text-xs text-skin-base/80 no-underline;
-  }
-  a.pill {
-    @apply hover:border-skin-accent/40 hover:text-skin-accent;
   }
 </style>

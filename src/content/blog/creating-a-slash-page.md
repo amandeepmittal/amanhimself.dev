@@ -3,7 +3,6 @@ title: Creating a /slash page
 author: Aman Mittal
 pubDatetime: 2024-12-17T00:00:01Z
 slug: creating-a-slash-page
-featured: false
 draft: false
 tags:
   - notes

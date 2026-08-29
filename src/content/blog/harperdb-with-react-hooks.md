@@ -3,7 +3,6 @@ title: How to use HarperDB instance with React Hooks
 author: Aman Mittal
 pubDatetime: 2020-10-07T03:42:51Z
 slug: harperdb-with-react-hooks
-featured: false
 draft: false
 tags:
   - reactjs

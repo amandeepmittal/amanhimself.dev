@@ -3,7 +3,6 @@ title: Introduction to Hybrid Mobile Apps
 author: Aman Mittal
 pubDatetime: 2017-10-05T03:42:51Z
 slug: introduction-to-hybrid-mobile-apps
-featured: false
 draft: false
 tags:
   - ionic

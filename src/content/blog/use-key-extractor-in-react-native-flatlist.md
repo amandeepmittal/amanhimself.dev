@@ -3,7 +3,6 @@ title: "When to use keyExtractor prop in React Native's FlatList"
 author: Aman Mittal
 pubDatetime: 2022-03-27T03:42:51Z
 slug: use-key-extractor-in-react-native-flatlist
-featured: false
 draft: false
 tags:
   - react-native

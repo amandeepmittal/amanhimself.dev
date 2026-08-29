@@ -3,7 +3,6 @@ title: Change cursor color in VS Code to use a linear gradient
 author: Aman Mittal
 pubDatetime: 2024-07-04T03:42:51Z
 slug: change-cursor-color-in-vscode
-featured: false
 draft: false
 tags:
   - vscode

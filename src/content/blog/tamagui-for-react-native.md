@@ -3,7 +3,6 @@ title: 'Tamagui for React Native: Create faster design systems'
 author: Aman Mittal
 pubDatetime: 2022-01-09T03:42:51Z
 slug: tamagui-for-react-native
-featured: false
 draft: false
 tags:
   - react-native

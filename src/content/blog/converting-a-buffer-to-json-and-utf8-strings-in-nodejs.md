@@ -3,7 +3,6 @@ title: 'Converting a Buffer to JSON and Utf8 Strings in Nodejs'
 author: Aman Mittal
 pubDatetime: 2017-08-10T03:42:51Z
 slug: converting-a-buffer-to-json-and-utf8-strings-in-nodejs
-featured: false
 draft: false
 tags:
   - nodejs

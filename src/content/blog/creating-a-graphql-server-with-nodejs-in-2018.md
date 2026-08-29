@@ -3,7 +3,6 @@ title: Creating a GraphQL server with Nodejs
 author: Aman Mittal
 pubDatetime: 2018-11-05T03:42:51Z
 slug: creating-a-graphql-server-with-nodejs-in-2018
-featured: false
 draft: false
 tags:
   - nodejs

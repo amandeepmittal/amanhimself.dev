@@ -3,7 +3,6 @@ title: Tracking notes created in Obsidian with Dataview
 author: Aman Mittal
 pubDatetime: 2024-08-08T03:42:51Z
 slug: tracking-notes-in-obsidian-with-dataview
-featured: false
 draft: false
 tags:
   - obsidian

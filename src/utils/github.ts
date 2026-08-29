@@ -16,32 +16,15 @@ export interface GithubRepo {
   created_at: string;
 }
 
-function withHttps(url: string): string {
-  if (/^https?:\/\//i.test(url)) return url;
-  return `https://${url}`;
-}
-
-export function getRepoHomepageUrl(repo: Pick<GithubRepo, 'homepage'>): string {
-  const homepage = repo.homepage?.trim();
-  if (!homepage) return '';
-  return withHttps(homepage);
-}
-
-export type FetchGithubReposOptions = {
-  username: string;
-  token?: string;
-  includeForks?: boolean;
-  includeArchived?: boolean;
-  maxPages?: number;
-};
+const MAX_PAGES = 3;
 
 export async function fetchGithubRepos({
   username,
-  token,
-  includeForks = false,
-  includeArchived = false,
-  maxPages = 3
-}: FetchGithubReposOptions): Promise<GithubRepo[]> {
+  token
+}: {
+  username: string;
+  token?: string;
+}): Promise<GithubRepo[]> {
   const headers = new Headers({
     Accept: 'application/vnd.github+json'
   });
@@ -49,7 +32,7 @@ export async function fetchGithubRepos({
 
   const repos: GithubRepo[] = [];
 
-  for (let page = 1; page <= maxPages; page += 1) {
+  for (let page = 1; page <= MAX_PAGES; page += 1) {
     const url = new URL(`https://api.github.com/users/${username}/repos`);
     url.searchParams.set('per_page', '100');
     url.searchParams.set('sort', 'pushed');
@@ -76,7 +59,5 @@ export async function fetchGithubRepos({
     if (pageRepos.length < 100) break;
   }
 
-  return repos
-    .filter(repo => (includeForks ? true : !repo.fork))
-    .filter(repo => (includeArchived ? true : !repo.archived));
+  return repos.filter(repo => !repo.fork && !repo.archived);
 }

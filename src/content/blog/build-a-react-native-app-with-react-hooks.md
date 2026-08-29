@@ -3,7 +3,6 @@ title: 'React Hooks Basics — Building a React Native App with React Hooks'
 author: Aman Mittal
 pubDatetime: 2019-04-19T03:42:51Z
 slug: build-a-react-native-app-with-react-hooks
-featured: false
 draft: false
 tags:
   - react-native

@@ -3,7 +3,6 @@ title: 'What is Ionic'
 author: Aman Mittal
 pubDatetime: 2017-10-12T03:42:51Z
 slug: what-is-ionic
-featured: false
 draft: false
 tags:
   - ionic

@@ -1,7 +1,6 @@
 ---
 import { LOCALE, SITE } from '@config';
 import '@styles/base.css';
-// import { ViewTransitions } from "astro:transitions";
 
 const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
 
@@ -10,7 +9,6 @@ export interface Props {
   author?: string;
   description?: string;
   ogImage?: string;
-  canonicalURL?: string;
   pubDatetime?: Date;
   modDatetime?: Date | null;
   scrollSmooth?: boolean;
@@ -22,17 +20,14 @@ const {
   author = SITE.author,
   description = SITE.desc,
   ogImage = SITE.ogImage,
-  canonicalURL = new URL(Astro.url.pathname, Astro.site).href,
   pubDatetime,
   modDatetime,
   scrollSmooth = false,
   alternateMarkdown
 } = Astro.props;
 
-const socialImageURL = new URL(
-  ogImage ?? SITE.ogImage ?? 'og.png',
-  Astro.url.origin
-).href;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site).href;
+const socialImageURL = new URL(ogImage, Astro.url.origin).href;
 ---
 
 <!doctype html>
@@ -116,8 +111,6 @@ const socialImageURL = new URL(
         />
       )
     }
-
-    <!-- <ViewTransitions /> -->
 
     <script is:inline src="/toggle-theme.js"></script>
     <script is:inline>

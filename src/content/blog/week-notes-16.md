@@ -3,7 +3,6 @@ title: Week notes 16
 author: Aman Mittal
 pubDatetime: 2026-04-12T00:00:01Z
 slug: week-notes-16
-featured: false
 draft: false
 tags:
   - notes

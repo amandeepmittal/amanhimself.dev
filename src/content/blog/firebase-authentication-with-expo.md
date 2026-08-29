@@ -3,7 +3,6 @@ title: 'How To Integrate Firebase Authentication With an Expo App'
 author: Aman Mittal
 pubDatetime: 2021-07-04T03:42:51Z
 slug: firebase-authentication-with-expo
-featured: false
 draft: false
 tags:
   - expo

@@ -3,7 +3,6 @@ title: Firebase config in a React app
 author: Aman Mittal
 pubDatetime: 2020-06-05T03:42:51Z
 slug: firebase-config-in-a-react-app
-featured: false
 draft: false
 tags:
   - reactjs

@@ -3,7 +3,6 @@ title: New blog theme again
 author: Aman Mittal
 pubDatetime: 2026-05-09T00:00:01Z
 slug: new-blog-theme-again
-featured: false
 draft: false
 tags:
   - blogging

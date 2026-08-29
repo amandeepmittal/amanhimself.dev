@@ -3,7 +3,6 @@ title: Tag gardening
 author: Aman Mittal
 pubDatetime: 2024-09-01T03:42:51Z
 slug: tag-gardening
-featured: false
 draft: false
 tags:
   - blogging

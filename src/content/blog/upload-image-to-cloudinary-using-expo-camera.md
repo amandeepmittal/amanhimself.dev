@@ -3,7 +3,6 @@ title: How to upload an image using Expo Camera to Cloudinary
 author: Aman Mittal
 pubDatetime: 2021-03-21T03:42:51Z
 slug: upload-image-to-cloudinary-using-expo-camera
-featured: false
 draft: false
 tags:
   - expo

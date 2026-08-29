@@ -3,7 +3,6 @@ title: How to use ESLint in Node.js Applications
 author: Aman Mittal
 pubDatetime: 2017-04-28T03:42:51Z
 slug: how-to-use-eslint-in-node-js-applications
-featured: false
 draft: false
 tags:
   - nodejs

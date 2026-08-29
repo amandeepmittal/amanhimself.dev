@@ -3,7 +3,6 @@ title: Passing Data Between Pages in an Ionic Application
 author: Aman Mittal
 pubDatetime: 2017-12-03T03:42:51Z
 slug: passing-data-between-pages-in-an-ionic-application
-featured: false
 draft: false
 tags:
   - ionic

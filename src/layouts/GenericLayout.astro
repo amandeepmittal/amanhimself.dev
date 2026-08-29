@@ -23,7 +23,10 @@ if (pathname.startsWith('/now')) activeNav = 'now';
 if (pathname.startsWith('/slash')) activeNav = 'slashes';
 ---
 
-<Layout title={`${frontmatter.title} | ${SITE.title}`}>
+<Layout
+  title={`${frontmatter.title} | ${SITE.title}`}
+  description={frontmatter.description}
+>
   <Header activeNav={activeNav} />
   <Breadcrumbs />
   <main id="main-content">

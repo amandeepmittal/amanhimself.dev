@@ -3,7 +3,6 @@ title: Building a REST API with Koajs
 author: Aman Mittal
 pubDatetime: 2018-10-16T03:42:51Z
 slug: building-a-rest-api-with-koajs
-featured: false
 draft: false
 tags:
   - nodejs

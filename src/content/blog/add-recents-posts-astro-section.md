@@ -3,7 +3,6 @@ title: How to add a recent posts section to your Astro blog
 author: Aman Mittal
 pubDatetime: 2025-11-28T00:00:01Z
 slug: add-recents-posts-astro-section
-featured: false
 draft: false
 tags:
   - blogging

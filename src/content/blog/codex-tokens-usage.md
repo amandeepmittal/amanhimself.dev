@@ -3,7 +3,6 @@ title: 'TIL about tracking your Codex tokens usage'
 author: Aman Mittal
 pubDatetime: 2026-02-08T00:00:01Z
 slug: codex-tokens-usage
-featured: false
 draft: false
 tags:
   - cli

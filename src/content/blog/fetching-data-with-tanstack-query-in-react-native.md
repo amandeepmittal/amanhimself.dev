@@ -3,7 +3,6 @@ title: 'Exploring React Native: Fetching Data with Tanstack Query'
 author: Aman Mittal
 pubDatetime: 2025-05-29T00:00:01Z
 slug: fetching-data-with-tanstack-query-in-react-native
-featured: false
 draft: false
 tags:
   - react-native

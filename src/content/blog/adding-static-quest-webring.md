@@ -3,7 +3,6 @@ title: Adding Static Quest webring
 author: Aman Mittal
 pubDatetime: 2025-12-27T00:00:01Z
 slug: adding-static-quest-webring
-featured: false
 draft: false
 tags:
   - notes

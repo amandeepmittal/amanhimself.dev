@@ -3,7 +3,6 @@ title: My default apps in 2025
 author: Aman Mittal
 pubDatetime: 2025-12-10T00:00:10Z
 slug: default-apps-2025
-featured: false
 draft: false
 tags:
   - notes

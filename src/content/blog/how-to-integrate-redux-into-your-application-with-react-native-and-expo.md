@@ -3,7 +3,6 @@ title: How to integrate Redux into your application with React Native and Expo
 author: Aman Mittal
 pubDatetime: 2018-08-10T03:42:51Z
 slug: how-to-integrate-redux-into-your-application-with-react-native-and-expo
-featured: false
 draft: false
 tags:
   - react-native

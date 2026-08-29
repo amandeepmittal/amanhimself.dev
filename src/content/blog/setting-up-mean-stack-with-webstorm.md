@@ -3,7 +3,6 @@ title: Setting up MEAN Stack with Webstorm
 author: Aman Mittal
 pubDatetime: 2017-07-02T03:42:51Z
 slug: setting-up-mean-stack-with-webstorm
-featured: false
 draft: false
 tags:
   - nodejs

@@ -3,7 +3,6 @@ title: How to Offer Multi-language Support in a React Native App
 author: Aman Mittal
 pubDatetime: 2021-08-16T03:42:51Z
 slug: multi-language-support-in-react-native-with-react-i18next
-featured: false
 draft: false
 tags:
   - react-native

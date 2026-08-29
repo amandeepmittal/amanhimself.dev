@@ -3,7 +3,6 @@ title: Migrating from Cursor to VS Code
 author: Aman Mittal
 pubDatetime: 2026-02-07T00:00:01Z
 slug: migrating-from-cursor-to-vscode
-featured: false
 draft: false
 tags:
   - vscode

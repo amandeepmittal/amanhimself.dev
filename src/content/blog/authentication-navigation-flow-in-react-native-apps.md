@@ -3,7 +3,6 @@ title: 'How Authentication Flow works in React Native apps using React Navigatio
 author: Aman Mittal
 pubDatetime: 2019-09-10T03:42:51Z
 slug: authentication-navigation-flow-in-react-native-apps
-featured: false
 draft: false
 tags:
   - react-native

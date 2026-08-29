@@ -3,7 +3,6 @@ title: 'How to create custom wavy headers with react-native-svg'
 author: Aman Mittal
 pubDatetime: 2020-05-06T03:42:51Z
 slug: create-custom-headers-with-react-native-svg
-featured: false
 draft: false
 tags:
   - react-native

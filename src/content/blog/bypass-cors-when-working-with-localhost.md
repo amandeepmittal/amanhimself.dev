@@ -3,7 +3,6 @@ title: 'Bypass CORS to fetch files when working with localhost'
 author: Aman Mittal
 pubDatetime: 2023-05-24T03:42:51Z
 slug: bypass-cors-when-working-with-localhost
-featured: false
 draft: false
 tags:
   - cli

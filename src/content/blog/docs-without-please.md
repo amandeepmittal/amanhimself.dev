@@ -3,7 +3,6 @@ title: 'Docs without please'
 author: Aman Mittal
 pubDatetime: 2025-01-13T00:00:01Z
 slug: docs-without-please
-featured: false
 draft: false
 tags:
   - tech-writing

@@ -3,7 +3,6 @@ title: How to implement Forgot Password feature in React Native with Firebase
 author: Aman Mittal
 pubDatetime: 2019-10-25T03:42:51Z
 slug: implement-forgot-password-firebase-react-native
-featured: false
 draft: false
 tags:
   - react-native

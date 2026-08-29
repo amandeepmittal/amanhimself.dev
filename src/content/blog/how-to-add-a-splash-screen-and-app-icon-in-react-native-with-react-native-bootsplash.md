@@ -3,7 +3,6 @@ title: How to add Splash Screen and an App Icon in React Native
 author: Aman Mittal
 pubDatetime: 2021-10-01T03:42:51Z
 slug: how-to-add-a-splash-screen-and-app-icon-in-react-native-with-react-native-bootsplash
-featured: false
 draft: false
 tags:
   - react-native

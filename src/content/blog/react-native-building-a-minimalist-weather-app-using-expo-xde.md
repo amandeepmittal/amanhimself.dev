@@ -3,7 +3,6 @@ title: 'React Native: Building a Minimalist Weather App using Expo XDE'
 author: Aman Mittal
 pubDatetime: 2018-03-27T03:42:51Z
 slug: react-native-building-a-minimalist-weather-app-using-expo-xde
-featured: false
 draft: false
 tags:
   - expo

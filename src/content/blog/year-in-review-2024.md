@@ -3,7 +3,6 @@ title: 2024 - A year in review
 author: Aman Mittal
 pubDatetime: 2024-12-30T00:00:01Z
 slug: year-in-review-2024
-featured: false
 draft: false
 tags:
   - year-reviews

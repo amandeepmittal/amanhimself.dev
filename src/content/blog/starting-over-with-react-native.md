@@ -3,7 +3,6 @@ title: Starting Over with React Native
 author: Aman Mittal
 pubDatetime: 2018-07-07T03:42:51Z
 slug: starting-over-with-react-native
-featured: false
 draft: false
 tags:
   - react-native

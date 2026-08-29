@@ -3,7 +3,6 @@ title: Detecting typos with typos-cli
 author: Aman Mittal
 pubDatetime: 2025-01-23T00:00:01Z
 slug: typos-cli
-featured: false
 draft: false
 tags:
   - tech-writing

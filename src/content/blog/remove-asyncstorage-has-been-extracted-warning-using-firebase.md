@@ -3,7 +3,6 @@ title: How to remove AsyncStorage warning when using Firebase JS SDK with React 
 author: Aman Mittal
 pubDatetime: 2022-05-28T03:42:51Z
 slug: remove-asyncstorage-has-been-extracted-warning-using-firebase
-featured: false
 draft: false
 tags:
   - firebase

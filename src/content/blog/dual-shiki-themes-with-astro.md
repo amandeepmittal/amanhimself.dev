@@ -3,7 +3,6 @@ title: 'How to change light and dark Shiki themes when using Astro'
 author: Aman Mittal
 pubDatetime: 2025-02-12T00:00:01Z
 slug: dual-shiki-themes-with-astro
-featured: false
 draft: false
 tags:
   - blogging

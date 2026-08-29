@@ -3,7 +3,6 @@ title: 2025 blog stats
 author: Aman Mittal
 pubDatetime: 2026-01-24T00:00:01Z
 slug: 2025-blog-stats
-featured: false
 draft: false
 tags:
   - year-reviews

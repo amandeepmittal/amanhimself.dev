@@ -3,7 +3,6 @@ title: 'Convert png to jpg using ffmpeg'
 author: Aman Mittal
 pubDatetime: 2023-04-01T03:42:51Z
 slug: convert-png-to-jpg-using-ffmpeg
-featured: false
 draft: false
 tags:
   - cli

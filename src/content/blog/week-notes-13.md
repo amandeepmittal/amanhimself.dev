@@ -3,7 +3,6 @@ title: Week notes 13
 author: Aman Mittal
 pubDatetime: 2026-01-11T00:00:01Z
 slug: week-notes-13
-featured: false
 draft: false
 tags:
   - notes

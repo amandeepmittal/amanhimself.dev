@@ -3,7 +3,6 @@ title: Ionic 2/3 CLI Reference
 author: Aman Mittal
 pubDatetime: 2017-12-19T03:42:51Z
 slug: ionic-2-3-cli-reference
-featured: false
 draft: false
 tags:
   - ionic

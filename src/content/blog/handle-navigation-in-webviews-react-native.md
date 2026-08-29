@@ -3,7 +3,6 @@ title: How to handle navigation in WebViews in a React Native app
 author: Aman Mittal
 pubDatetime: 2020-02-07T03:42:51Z
 slug: handle-navigation-in-webviews-react-native
-featured: false
 draft: false
 tags:
   - react-native

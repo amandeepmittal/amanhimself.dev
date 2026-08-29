@@ -3,7 +3,6 @@ title: 'Keep homebrew up to date'
 author: Aman Mittal
 pubDatetime: 2023-04-01T03:42:51Z
 slug: keep-homebrew-up-to-date
-featured: false
 draft: false
 tags:
   - cli

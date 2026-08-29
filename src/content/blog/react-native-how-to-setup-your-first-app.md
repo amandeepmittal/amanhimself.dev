@@ -3,7 +3,6 @@ title: 'React Native: How to Setup Your First App'
 author: Aman Mittal
 pubDatetime: 2018-07-13T03:42:51Z
 slug: react-native-how-to-setup-your-first-app
-featured: false
 draft: false
 tags:
   - react-native

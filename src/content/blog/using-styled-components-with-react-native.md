@@ -3,7 +3,6 @@ title: Using Styled Components with React Native
 author: Aman Mittal
 pubDatetime: 2019-03-19T03:42:51Z
 slug: using-styled-components-with-react-native
-featured: false
 draft: false
 tags:
   - react-native

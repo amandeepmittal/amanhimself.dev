@@ -1,12 +1,4 @@
----
-export interface Props {
-  className?: string;
-}
-
-const { className = '' } = Astro.props;
----
-
-<div class={`not-prose ${className}`.trim()}>
+<div class="not-prose">
   <a
     href="/slash/"
     class="inline-block mt-8 text-skin-accent underline decoration-2 decoration-skin-accent/60 underline-offset-4 hover:decoration-skin-accent transition-colors"

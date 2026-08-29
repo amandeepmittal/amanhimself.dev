@@ -3,7 +3,6 @@ title: 'Build a Progressive Web App using React'
 author: Aman Mittal
 pubDatetime: 2018-02-01T03:42:51Z
 slug: build-a-progressive-web-app-using-react
-featured: false
 draft: false
 tags:
   - reactjs

@@ -3,7 +3,6 @@ title: Implementing Infinite Scroll with React Query and FlatList in React Nativ
 author: Aman Mittal
 pubDatetime: 2022-01-30T03:42:51Z
 slug: infinite-scroll-with-react-query-and-flatlist-in-react-native
-featured: false
 draft: false
 tags:
   - react-native

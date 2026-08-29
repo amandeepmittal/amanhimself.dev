@@ -3,7 +3,6 @@ title: Setup Macbook M1 for Web and React Native development
 author: Aman Mittal
 pubDatetime: 2023-05-23T03:42:51Z
 slug: setup-macbook-m1
-featured: false
 draft: false
 tags:
   - macos

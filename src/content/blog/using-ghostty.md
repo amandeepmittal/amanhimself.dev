@@ -3,7 +3,6 @@ title: Using Ghostty for the first time
 author: Aman Mittal
 pubDatetime: 2026-03-04T00:00:01Z
 slug: using-ghostty
-featured: false
 draft: false
 tags:
   - cli

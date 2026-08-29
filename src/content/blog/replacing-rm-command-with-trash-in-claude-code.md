@@ -3,7 +3,6 @@ title: 'Replacing rm command with trash in Claude Code'
 author: Aman Mittal
 pubDatetime: 2026-04-11T00:00:01Z
 slug: replacing-rm-with-trash-in-claude-code
-featured: false
 draft: false
 tags:
   - ai

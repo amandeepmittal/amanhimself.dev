@@ -3,7 +3,6 @@ title: 'Exploring React Native: Header blur effect in Expo Router'
 author: Aman Mittal
 pubDatetime: 2025-06-22T00:00:01Z
 slug: blur-effect-in-header-with-expo-router
-featured: false
 draft: false
 tags:
   - react-native

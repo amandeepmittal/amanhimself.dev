@@ -3,7 +3,6 @@ title: How to add a Search bar in a FlatList in React Native apps
 author: Aman Mittal
 pubDatetime: 2020-04-16T03:42:51Z
 slug: add-search-bar-to-a-flatlist-in-react-native
-featured: false
 draft: false
 tags:
   - react-native

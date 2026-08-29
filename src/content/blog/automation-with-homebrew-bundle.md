@@ -3,7 +3,6 @@ title: Automate installing apps and utilities with Homebrew bundle
 author: Aman Mittal
 pubDatetime: 2024-10-05T20:51:31Z
 slug: automation-with-homebrew-bundle
-featured: false
 draft: false
 tags:
   - macos

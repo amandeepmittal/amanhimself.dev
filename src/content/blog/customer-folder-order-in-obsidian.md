@@ -3,7 +3,6 @@ title: How to set a custom folder order in Obsidian
 author: Aman Mittal
 pubDatetime: 2026-07-15T00:00:01Z
 slug: custom-folder-order-in-obsidian
-featured: false
 draft: false
 tags:
   - obsidian

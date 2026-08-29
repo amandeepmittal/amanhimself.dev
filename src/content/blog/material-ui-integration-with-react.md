@@ -3,7 +3,6 @@ title: How to integrate Material UI library in React apps
 author: Aman Mittal
 pubDatetime: 2020-05-24T03:42:51Z
 slug: material-ui-integration-with-react
-featured: false
 draft: false
 tags:
   - reactjs

@@ -3,39 +3,16 @@
 // Scrapes all-time pageviews and visitors from the public Fathom share page
 // and writes them to src/data/blogStats.json (shown on the /blog page).
 //
-// Requires Playwright in the npx cache. Run `npx playwright --version` first
-// to populate the cache if this script fails to find it.
-//
 // Usage: node scripts/fetch-blog-stats.mjs
 
-import { createRequire } from 'node:module';
 import { readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
-import { execSync } from 'node:child_process';
+import { chromium } from 'playwright';
 
 const ROOT = process.cwd();
 const outputPath = path.join(ROOT, 'src', 'data', 'blogStats.json');
 const FATHOM_SHARE_URL =
   'https://app.usefathom.com/share/habfbpub/amanhimself.dev';
-
-// Resolve playwright from npx cache since it's not a project dependency.
-function findPlaywright() {
-  try {
-    const npxDir = execSync(
-      'find ~/.npm/_npx -name playwright -type d 2>/dev/null',
-      { encoding: 'utf-8' }
-    )
-      .trim()
-      .split('\n')[0];
-    if (npxDir) {
-      const require = createRequire(import.meta.url);
-      return require(path.join(npxDir, 'index.js'));
-    }
-  } catch {
-    /* npx-installed playwright not resolvable; fall through to direct import below */
-  }
-  return import('playwright').then(m => m.default || m);
-}
 
 function parseStatNumber(str) {
   if (!str) return 0;
@@ -48,10 +25,8 @@ function parseStatNumber(str) {
   return Math.round(num * mult);
 }
 
-const pw = await findPlaywright();
-
 console.log('Launching browser...');
-const browser = await pw.chromium.launch({ headless: true });
+const browser = await chromium.launch({ headless: true });
 const page = await browser.newPage();
 
 // --- All-time stats ---

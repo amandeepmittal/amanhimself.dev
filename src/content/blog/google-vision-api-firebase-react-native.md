@@ -3,7 +3,6 @@ title: Create a React Native Image Recognition App with Google Vision API
 author: Aman Mittal
 pubDatetime: 2019-02-13T03:42:51Z
 slug: google-vision-api-firebase-react-native
-featured: false
 draft: false
 tags:
   - react-native

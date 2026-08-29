@@ -3,7 +3,6 @@ title: How to use Import statements in Nodejs
 author: Aman Mittal
 pubDatetime: 2018-11-01T03:42:51Z
 slug: how-to-use-import-statements-in-nodejs
-featured: false
 draft: false
 tags:
   - nodejs

@@ -3,7 +3,6 @@ title: How to use React Native Geolocation to get Postal Address
 author: Aman Mittal
 pubDatetime: 2021-02-25T03:42:51Z
 slug: react-native-geolocation-to-get-postal-address
-featured: false
 draft: false
 tags:
   - expo

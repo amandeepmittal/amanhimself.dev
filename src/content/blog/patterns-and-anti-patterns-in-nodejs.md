@@ -3,7 +3,6 @@ title: Patterns and Anti-patterns in Node.js
 author: Aman Mittal
 pubDatetime: 2022-04-03T03:42:51Z
 slug: patterns-and-anti-patterns-in-nodejs
-featured: false
 draft: false
 tags:
   - nodejs

@@ -3,7 +3,6 @@ title: Styling The React Native Way
 author: Aman Mittal
 pubDatetime: 2020-06-04T03:42:51Z
 slug: styling-the-react-native-way
-featured: false
 draft: false
 tags:
   - expo

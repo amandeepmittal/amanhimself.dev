@@ -3,7 +3,6 @@ title: Implement Push notifications for Android apps with React Native
 author: Aman Mittal
 pubDatetime: 2019-11-19T03:42:51Z
 slug: push-notifications-android-apps-react-native
-featured: false
 draft: false
 tags:
   - react-native

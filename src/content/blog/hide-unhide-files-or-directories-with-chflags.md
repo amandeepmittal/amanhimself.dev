@@ -3,7 +3,6 @@ title: Hide and unhide files or directories visibility with chflags on macOS
 author: Aman Mittal
 pubDatetime: 2023-12-25T03:42:51Z
 slug: hide-unhide-files-or-directories-with-chflags
-featured: false
 draft: false
 tags:
   - macos

@@ -3,7 +3,6 @@ title: 'GET Request params with Axios'
 author: Aman Mittal
 pubDatetime: 2021-08-11T03:42:51Z
 slug: get-request-params-with-axios
-featured: false
 draft: false
 tags:
   - javascript

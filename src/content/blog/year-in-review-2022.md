@@ -3,7 +3,6 @@ title: '2022 - A year in review'
 author: Aman Mittal
 pubDatetime: 2023-01-01T03:42:51Z
 slug: year-in-review-2022
-featured: false
 draft: false
 tags:
   - year-reviews

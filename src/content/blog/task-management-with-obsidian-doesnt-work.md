@@ -3,7 +3,6 @@ title: Obsidian as a task manager doesn't work for me
 author: Aman Mittal
 pubDatetime: 2024-12-02T03:42:51Z
 slug: task-management-with-obsidian-doesnt-work
-featured: false
 draft: false
 tags:
   - obsidian

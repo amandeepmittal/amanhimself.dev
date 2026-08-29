@@ -3,7 +3,6 @@ title: How to manage state in React apps with useReducer and useContext hooks
 author: Aman Mittal
 pubDatetime: 2020-11-06T03:42:51Z
 slug: manage-state-with-usecontext-usereducer-in-react-apps
-featured: false
 draft: false
 tags:
   - reactjs

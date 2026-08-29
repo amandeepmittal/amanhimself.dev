@@ -3,7 +3,6 @@ title: Integrating Firebase with React Native
 author: Aman Mittal
 pubDatetime: 2018-12-05T03:42:51Z
 slug: integrating-firebase-with-react-native
-featured: false
 draft: false
 tags:
   - reactjs

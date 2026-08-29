@@ -3,7 +3,6 @@ title: How to Build an Audio Player in React Native
 author: Aman Mittal
 pubDatetime: 2019-08-28T03:42:51Z
 slug: build-an-audio-player-in-react-native
-featured: false
 draft: false
 tags:
   - react-native

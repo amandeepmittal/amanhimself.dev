@@ -3,7 +3,6 @@ title: My Starship prompt setup
 author: Aman Mittal
 pubDatetime: 2026-03-22T00:00:01Z
 slug: my-starship-prompt-setup
-featured: false
 draft: false
 tags:
   - cli

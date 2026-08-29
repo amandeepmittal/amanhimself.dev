@@ -3,7 +3,6 @@ title: Add a yearly post-count visual to your Astro blog
 author: Aman Mittal
 pubDatetime: 2025-12-19T00:00:01Z
 slug: add-yearly-post-count-to-astro-blog
-featured: false
 draft: false
 tags:
   - blogging

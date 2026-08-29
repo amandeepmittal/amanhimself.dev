@@ -3,7 +3,6 @@ title: How To Build a REST API With Nodejs and PostgreSQL
 author: Aman Mittal
 pubDatetime: 2018-12-10T03:42:51Z
 slug: how-to-build-a-rest-api-with-nodejs-and-postgresql
-featured: false
 draft: false
 tags:
   - nodejs

@@ -3,7 +3,6 @@ title: 'How to create a custom hook to change status bar styles for every screen
 author: Aman Mittal
 pubDatetime: 2020-03-13T03:42:51Z
 slug: create-custom-status-bar-hook-react-navigation
-featured: false
 draft: false
 tags:
   - react-native

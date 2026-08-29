@@ -3,7 +3,6 @@ title: Managing python environments on macOS using conda-forge
 author: Aman Mittal
 pubDatetime: 2025-06-08T00:00:01Z
 slug: managing-python-environments-on-macos-using-conda
-featured: false
 draft: false
 tags:
   - python

@@ -3,7 +3,6 @@ title: How to Create a Custom Image Gallery in React Native
 author: Aman Mittal
 pubDatetime: 2021-05-17T03:42:51Z
 slug: custom-preview-image-gallery-in-react-native
-featured: false
 draft: false
 tags:
   - react-native

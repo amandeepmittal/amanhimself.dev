@@ -3,7 +3,6 @@ title: 'How to Upload a File with Reactjs and Nodejs'
 author: Aman Mittal
 pubDatetime: 2018-06-23T03:42:51Z
 slug: connecting-a-node-js-and-reactjs-example
-featured: false
 draft: false
 tags:
   - nodejs

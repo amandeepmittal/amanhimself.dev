@@ -4,7 +4,6 @@ author: Aman Mittal
 pubDatetime: 2022-08-04T03:42:51Z
 modDatetime: 2025-04-16T00:00:01Z
 slug: add-opacity-to-pressable-component-react-native
-featured: false
 draft: false
 tags:
   - react-native

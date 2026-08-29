@@ -3,7 +3,6 @@ title: 'From plan mode to auto mode in Claude Code'
 author: Aman Mittal
 pubDatetime: 2026-08-09T00:00:01Z
 slug: from-plan-mode-to-auto-mode-claude-code
-featured: false
 draft: false
 tags:
   - claude-code

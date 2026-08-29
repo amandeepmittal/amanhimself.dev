@@ -3,7 +3,6 @@ title: Notes that can never be atomic
 author: Aman Mittal
 pubDatetime: 2026-07-22T00:00:01Z
 slug: notes-that-can-never-be-atomic
-featured: false
 draft: false
 tags:
   - obsidian

@@ -3,7 +3,6 @@ title: Simple Recipe to Build a Theme App in React Native
 author: Aman Mittal
 pubDatetime: 2018-09-11T03:42:51Z
 slug: simple-recipe-to-build-a-theme-app-in-react-native
-featured: false
 draft: false
 tags:
   - react-native

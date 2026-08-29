@@ -3,7 +3,6 @@ title: How to push local git tag to remote repository on GitHub
 author: Aman Mittal
 pubDatetime: 2022-06-26T03:42:51Z
 slug: push-local-git-tag-to-remote-repository-on-github
-featured: false
 draft: false
 tags:
   - git

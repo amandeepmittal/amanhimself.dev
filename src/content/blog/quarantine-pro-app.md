@@ -3,7 +3,6 @@ title: 'Creating Quarantine Pro — A Fun Learning Experiment in React Native'
 author: Aman Mittal
 pubDatetime: 2020-05-14T03:42:51Z
 slug: quarantine-pro-app
-featured: false
 draft: false
 tags:
   - expo

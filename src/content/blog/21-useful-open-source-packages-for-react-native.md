@@ -3,7 +3,6 @@ title: '21 Useful Open Source Packages for React Native'
 author: Aman Mittal
 pubDatetime: 2019-01-08T03:42:51Z
 slug: 21-useful-open-source-packages-for-react-native
-featured: false
 draft: false
 tags:
   - react-native

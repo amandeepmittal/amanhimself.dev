@@ -3,7 +3,6 @@ title: 'Adding Content-Signal to a docs site'
 author: Aman Mittal
 pubDatetime: 2026-08-24T00:00:01Z
 slug: adding-content-signal-to-docs-site
-featured: false
 draft: false
 tags:
   - ai

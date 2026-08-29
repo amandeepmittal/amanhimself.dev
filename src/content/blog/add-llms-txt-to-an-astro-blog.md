@@ -3,7 +3,6 @@ title: How I added llms.txt to my Astro blog
 author: Aman Mittal
 pubDatetime: 2025-12-24T00:00:01Z
 slug: add-llms-txt-to-an-astro-blog
-featured: false
 draft: false
 tags:
   - blogging

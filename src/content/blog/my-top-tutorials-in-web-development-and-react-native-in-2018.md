@@ -3,7 +3,6 @@ title: My Top Tutorials in Web Development and React Native in 2018
 author: Aman Mittal
 pubDatetime: 2018-12-31T03:42:51Z
 slug: my-top-tutorials-in-web-development-and-react-native-2018
-featured: false
 draft: false
 tags:
   - react-native

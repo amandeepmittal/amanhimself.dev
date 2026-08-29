@@ -3,7 +3,6 @@ title: How to paginate records in MySQL using Sequelize and Nodejs
 author: Aman Mittal
 pubDatetime: 2017-06-20T03:42:51Z
 slug: paginate-records-in-mysql-using-sequelize-and-nodejs
-featured: false
 draft: false
 tags:
   - nodejs

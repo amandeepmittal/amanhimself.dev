@@ -3,7 +3,6 @@ title: Getting Started with React Native in 2019 - Build Your First App
 author: Aman Mittal
 pubDatetime: 2019-01-04T03:42:51Z
 slug: getting-started-with-react-native-in-2019-build-your-first-app
-featured: false
 draft: false
 tags:
   - react-native

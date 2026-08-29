@@ -3,7 +3,6 @@ title: 'Getting Started with Sequelize for Nodejs Applications'
 author: Aman Mittal
 pubDatetime: 2017-05-30T03:42:51Z
 slug: getting-started-with-sequelize-for-nodejs
-featured: false
 draft: false
 tags:
   - nodejs

@@ -3,7 +3,6 @@ title: How to avoid notches with Safe Area Context in React Native apps
 author: Aman Mittal
 pubDatetime: 2021-10-14T03:42:51Z
 slug: safe-area-context-in-react-native-apps
-featured: false
 draft: false
 tags:
   - react-native

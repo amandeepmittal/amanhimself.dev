@@ -3,7 +3,6 @@ title: My default apps in 2024
 author: Aman Mittal
 pubDatetime: 2024-11-30T03:42:51Z
 slug: default-apps-2024
-featured: false
 draft: false
 tags:
   - notes

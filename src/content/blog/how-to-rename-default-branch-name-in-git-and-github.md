@@ -3,7 +3,6 @@ title: How to rename default branch in Git and GitHub
 author: Aman Mittal
 pubDatetime: 2022-01-10T03:42:51Z
 slug: how-to-rename-default-branch-name-in-git-and-github
-featured: false
 draft: false
 tags:
   - git

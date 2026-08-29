@@ -3,7 +3,6 @@ title: 'Creating and Validating React Native Forms with Formik'
 author: Aman Mittal
 pubDatetime: 2020-10-16T03:42:51Z
 slug: creating-and-validating-react-native-form-with-formik
-featured: false
 draft: false
 tags:
   - react-native

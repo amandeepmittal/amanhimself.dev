@@ -3,7 +3,6 @@ title: 'Build a Custom Modal with the Animated API in React Native'
 author: Aman Mittal
 pubDatetime: 2019-06-13T03:42:51Z
 slug: build-a-custom-modal-with-the-animated-api-in-react-native
-featured: false
 draft: false
 tags:
   - react-native

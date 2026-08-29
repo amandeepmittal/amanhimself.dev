@@ -3,7 +3,6 @@ title: Build a REST API with Node.js and HarperDB
 author: Aman Mittal
 pubDatetime: 2020-07-23T03:42:51Z
 slug: build-rest-api-with-nodejs-harperdb
-featured: false
 draft: false
 tags:
   - nodejs

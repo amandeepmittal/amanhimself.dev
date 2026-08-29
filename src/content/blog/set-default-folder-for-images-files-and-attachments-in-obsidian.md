@@ -3,7 +3,6 @@ title: Set default location for images, files and attachments in Obsidian
 author: Aman Mittal
 pubDatetime: 2023-05-02T03:42:51Z
 slug: set-default-folder-for-images-files-and-attachments-in-obsidian
-featured: false
 draft: false
 tags:
   - obsidian

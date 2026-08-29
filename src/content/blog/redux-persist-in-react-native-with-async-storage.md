@@ -3,7 +3,6 @@ title: How to use redux-persist in React Native with Asyncstorage
 author: Aman Mittal
 pubDatetime: 2021-01-08T03:42:51Z
 slug: redux-persist-in-react-native-with-async-storage
-featured: false
 draft: false
 tags:
   - react-native

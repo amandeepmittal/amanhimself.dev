@@ -3,7 +3,6 @@ title: The Node.js system
 author: Aman Mittal
 pubDatetime: 2016-04-22T03:42:51Z
 slug: nodejs-system
-featured: false
 draft: false
 tags:
   - nodejs

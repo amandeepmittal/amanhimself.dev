@@ -3,7 +3,6 @@ title: React Native Performance Do and Dont
 author: Aman Mittal
 pubDatetime: 2021-02-13T03:42:51Z
 slug: react-native-performance-do-and-dont
-featured: false
 draft: false
 tags:
   - react-native

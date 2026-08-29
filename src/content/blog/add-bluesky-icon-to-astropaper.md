@@ -3,7 +3,6 @@ title: Adding Bluesky icon to my Astro blog
 author: Aman Mittal
 pubDatetime: 2024-11-22T03:42:51Z
 slug: add-bluesky-icon-to-astropaper
-featured: false
 draft: false
 tags:
   - blogging

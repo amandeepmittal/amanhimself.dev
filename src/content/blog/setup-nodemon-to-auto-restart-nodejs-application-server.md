@@ -3,7 +3,6 @@ title: Setup Nodemon to auto restart Nodejs application server
 author: Aman Mittal
 pubDatetime: 2017-09-10T03:42:51Z
 slug: setup-nodemon-to-auto-restart-nodejs-application-server
-featured: false
 draft: false
 tags:
   - nodejs

@@ -3,7 +3,6 @@ title: User Authentication with Amplify in a React Native and Expo app
 author: Aman Mittal
 pubDatetime: 2019-05-22T03:42:51Z
 slug: user-authentication-with-amplify-in-a-react-native-and-expo-app
-featured: false
 draft: false
 tags:
   - react-native

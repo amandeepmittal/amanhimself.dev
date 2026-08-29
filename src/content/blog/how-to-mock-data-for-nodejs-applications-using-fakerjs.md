@@ -3,7 +3,6 @@ title: How to Mock Data for Node.js Applications using faker.js
 author: Aman Mittal
 pubDatetime: 2017-04-01T03:42:51Z
 slug: how-to-mock-data-for-nodejs-applications-using-fakerjs
-featured: false
 draft: false
 tags:
   - nodejs

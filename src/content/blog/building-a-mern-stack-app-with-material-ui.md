@@ -3,7 +3,6 @@ title: Building an authenticated MERN Stack App Using Material UI
 author: Aman Mittal
 pubDatetime: 2018-11-16T03:42:51Z
 slug: building-a-mern-stack-app-with-material-ui
-featured: false
 draft: false
 tags:
   - nodejs

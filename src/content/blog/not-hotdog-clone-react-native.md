@@ -3,7 +3,6 @@ title: Build a Not Hotdog clone with React Native
 author: Aman Mittal
 pubDatetime: 2019-08-27T03:42:51Z
 slug: not-hotdog-clone-react-native
-featured: false
 draft: false
 tags:
   - expo

@@ -3,7 +3,6 @@ title: Ignoring JSX components in Vale
 author: Aman Mittal
 pubDatetime: 2025-02-27T00:00:01Z
 slug: ignoring-jsx-components-in-vale
-featured: false
 draft: false
 tags:
   - tech-writing

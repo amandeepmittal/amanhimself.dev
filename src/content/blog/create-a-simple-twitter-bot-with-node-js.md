@@ -3,7 +3,6 @@ title: 'Create a Simple Twitter Bot with Node.js'
 author: Aman Mittal
 pubDatetime: 2016-11-23T03:42:51Z
 slug: create-a-simple-twitter-bot-with-node-js
-featured: false
 draft: false
 tags:
   - nodejs

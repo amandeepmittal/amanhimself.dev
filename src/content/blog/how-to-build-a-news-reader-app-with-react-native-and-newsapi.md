@@ -3,7 +3,6 @@ title: How To Build a News Reader App with React Native and NewsAPI
 author: Aman Mittal
 pubDatetime: 2019-02-12T03:42:51Z
 slug: how-to-build-a-news-reader-app-with-react-native-and-newsapi
-featured: false
 draft: false
 tags:
   - react-native

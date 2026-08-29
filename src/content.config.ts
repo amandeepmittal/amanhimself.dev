@@ -19,7 +19,6 @@ const blog = defineCollection({
       pubDatetime: z.date(),
       modDatetime: z.date().optional().nullable(),
       title: z.string(),
-      featured: z.boolean().optional(),
       draft: z.boolean().optional(),
       tags: z.array(z.string()).default(['others']),
       ogImage: image()
@@ -29,7 +28,6 @@ const blog = defineCollection({
         .or(z.string())
         .optional(),
       description: z.string(),
-      canonicalURL: z.string().optional(),
       readingTime: z.string().optional(),
       wordCount: z.number().optional()
     })

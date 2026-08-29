@@ -3,7 +3,6 @@ title: Multi Page Navigation in an Ionic App
 author: Aman Mittal
 pubDatetime: 2017-11-19T03:42:51Z
 slug: multi-page-navigation-in-an-ionic-app
-featured: false
 draft: false
 tags:
   - ionic

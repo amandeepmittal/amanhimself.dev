@@ -3,7 +3,6 @@ title: How to use React Native Localize in React Native apps
 author: Aman Mittal
 pubDatetime: 2020-01-01T03:42:51Z
 slug: how-to-use-react-native-localize
-featured: false
 draft: false
 tags:
   - react-native

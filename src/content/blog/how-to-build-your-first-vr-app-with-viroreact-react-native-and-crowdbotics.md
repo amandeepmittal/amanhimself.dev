@@ -3,7 +3,6 @@ title: How To Build Your First VR App with ViroReact, React Native, and Crowdbot
 author: Aman Mittal
 pubDatetime: 2019-03-28T03:42:51Z
 slug: how-to-build-your-first-vr-app-with-viroreact-react-native-and-crowdbotics
-featured: false
 draft: false
 tags:
   - react-native

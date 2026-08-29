@@ -3,7 +3,6 @@ title: Fine-tuning front matter scope in Vale CLI
 author: Aman Mittal
 pubDatetime: 2025-04-22T00:00:01Z
 slug: front-matter-scope-in-vale
-featured: false
 draft: false
 tags:
   - tech-writing

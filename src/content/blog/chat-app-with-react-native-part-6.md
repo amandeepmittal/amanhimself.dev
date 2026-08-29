@@ -3,7 +3,6 @@ title: 'Chat app with React Native (Part 6) - Create a custom hook to change sta
 author: Aman Mittal
 pubDatetime: 2020-05-18T03:42:51Z
 slug: chat-app-with-react-native-part-6
-featured: false
 draft: false
 tags:
   - react-native

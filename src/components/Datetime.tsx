@@ -5,15 +5,7 @@ interface DatetimesProps {
   modDatetime: string | Date | undefined | null;
 }
 
-interface Props extends DatetimesProps {
-  className?: string;
-}
-
-export default function Datetime({
-  pubDatetime,
-  modDatetime,
-  className
-}: Props) {
+export default function Datetime({ pubDatetime, modDatetime }: DatetimesProps) {
   if (!pubDatetime) {
     console.warn(
       'Datetime component received invalid pubDatetime:',
@@ -25,9 +17,7 @@ export default function Datetime({
   const isUpdated = Boolean(modDatetime && modDatetime > pubDatetime);
 
   return (
-    <span
-      className={`whitespace-nowrap font-mono text-xs tabular-nums text-skin-base opacity-50 ${className ?? ''}`}
-    >
+    <span className="whitespace-nowrap font-mono text-xs tabular-nums text-skin-base opacity-50">
       {isUpdated ? (
         <span className="mr-1">Updated:</span>
       ) : (
@@ -65,8 +55,6 @@ const FormattedDatetime = ({ pubDatetime, modDatetime }: DatetimesProps) => {
     return (
       <>
         <time dateTime={myDatetime.toISOString()}>{date}</time>
-        {/* <span className="sr-only">&nbsp;at&nbsp;</span> */}
-        {/* <span className="text-nowrap">{time}</span> */}
       </>
     );
   } catch (error) {

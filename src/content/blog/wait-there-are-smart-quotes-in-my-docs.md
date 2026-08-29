@@ -3,7 +3,6 @@ title: Wait, there are smart quotes in my docs
 author: Aman Mittal
 pubDatetime: 2025-12-15T00:00:01Z
 slug: smart-quotes-in-documentation
-featured: false
 draft: false
 tags:
   - tech-writing

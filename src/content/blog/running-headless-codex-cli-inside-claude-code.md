@@ -3,7 +3,6 @@ title: Running headless Codex CLI inside Claude Code
 author: Aman Mittal
 pubDatetime: 2026-02-13T00:00:05Z
 slug: running-headless-codex-cli-inside-claude-code
-featured: false
 draft: false
 tags:
   - ai

@@ -3,7 +3,6 @@ title: 'React Native: Getting Started with Lottie and Expo'
 author: Aman Mittal
 pubDatetime: 2018-03-09T03:42:51Z
 slug: react-native-getting-started-with-lottie-and-expo
-featured: false
 draft: false
 tags:
   - expo

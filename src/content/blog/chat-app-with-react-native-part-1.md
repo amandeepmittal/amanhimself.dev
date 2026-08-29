@@ -3,7 +3,6 @@ title: 'Chat app with React Native (Part 1) - Build reusable UI form elements us
 author: Aman Mittal
 pubDatetime: 2020-04-06T03:42:51Z
 slug: chat-app-with-react-native-part-1
-featured: false
 draft: false
 tags:
   - react-native

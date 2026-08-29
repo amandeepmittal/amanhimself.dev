@@ -3,7 +3,6 @@ title: '2021 - A year in review'
 author: Aman Mittal
 pubDatetime: 2021-12-31T03:42:51Z
 slug: year-in-review-2021
-featured: false
 draft: false
 tags:
   - year-reviews

@@ -3,7 +3,6 @@ title: A minimal Obsidian vault structure that sticks
 author: Aman Mittal
 pubDatetime: 2026-07-08T00:00:01Z
 slug: minimal-obsidian-vault-structure
-featured: false
 draft: false
 tags:
   - obsidian

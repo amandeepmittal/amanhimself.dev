@@ -3,7 +3,6 @@ title: 'How to use ES6 import syntax in Node.js'
 author: Aman Mittal
 pubDatetime: 2021-04-07T03:42:51Z
 slug: how-to-use-es6-import-syntax-in-node
-featured: false
 draft: false
 tags:
   - nodejs

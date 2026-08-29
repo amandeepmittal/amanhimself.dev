@@ -3,7 +3,6 @@ title: How to use Font Awesome in an Ionic Application
 author: Aman Mittal
 pubDatetime: 2017-10-18T03:42:51Z
 slug: how-to-use-font-awesome-in-an-ionic-application
-featured: false
 draft: false
 tags:
   - ionic

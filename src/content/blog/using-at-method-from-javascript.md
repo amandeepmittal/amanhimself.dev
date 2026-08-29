@@ -3,7 +3,6 @@ title: Using at() method in JavaScript to get the last item from an array
 author: Aman Mittal
 pubDatetime: 2025-02-05T00:00:01Z
 slug: using-at-method-from-javascript
-featured: false
 draft: false
 tags:
   - javascript

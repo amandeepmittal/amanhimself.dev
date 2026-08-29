@@ -3,7 +3,6 @@ title: Getting Started with React Native and Expo using Hooks in 2020
 author: Aman Mittal
 pubDatetime: 2020-01-17T03:42:51Z
 slug: getting-started-with-react-native-and-expo-using-hooks-in-2020
-featured: false
 draft: false
 tags:
   - expo

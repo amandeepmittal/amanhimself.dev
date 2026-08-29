@@ -3,7 +3,6 @@ title: Image Classification on React Native with TensorFlow.js and MobileNet
 author: Aman Mittal
 pubDatetime: 2019-10-17T03:42:51Z
 slug: tensorflow-image-classification-expo
-featured: false
 draft: false
 tags:
   - react-native

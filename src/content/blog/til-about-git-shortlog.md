@@ -3,7 +3,6 @@ title: TIL about git shortlog
 author: Aman Mittal
 pubDatetime: 2026-02-01T03:42:51Z
 slug: til-about-git-shortlog
-featured: false
 draft: false
 tags:
   - git

@@ -3,7 +3,6 @@ title: 'What’s New in npm 5?'
 author: Aman Mittal
 pubDatetime: 2017-08-24T03:42:51Z
 slug: whats-new-in-npm-5
-featured: false
 draft: false
 tags:
   - nodejs

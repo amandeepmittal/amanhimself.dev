@@ -3,7 +3,6 @@ title: How to solve RCTBridge required dispatch_sync to load warning on iOS for 
 author: Aman Mittal
 pubDatetime: 2021-09-04T03:42:51Z
 slug: rctbridge-required-dispatch-sync-to-load-warning
-featured: false
 draft: false
 tags:
   - react-native

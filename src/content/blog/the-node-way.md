@@ -3,7 +3,6 @@ title: 'The Node way - Philosophy of a Platform'
 author: Aman Mittal
 pubDatetime: 2016-03-10T03:42:51Z
 slug: the-node-way
-featured: false
 draft: false
 tags:
   - nodejs

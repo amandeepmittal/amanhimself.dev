@@ -3,7 +3,6 @@ title: Uninstall a Node.js version using Volta on macOS
 author: Aman Mittal
 pubDatetime: 2024-12-11T03:42:51Z
 slug: uninstall-nodejs-version-using-volta
-featured: false
 draft: false
 tags:
   - nodejs

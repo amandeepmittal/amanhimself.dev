@@ -3,7 +3,6 @@ title: 'Top open source libraries for Node.js'
 author: Aman Mittal
 pubDatetime: 2019-01-31T03:01:50Z
 slug: useful-open-source-libraries-for-nodejs
-featured: false
 draft: false
 tags:
   - nodejs

@@ -3,7 +3,6 @@ title: Setting up Nodejs Backend for a React App
 author: Aman Mittal
 pubDatetime: 2018-10-18T03:42:51Z
 slug: setting-up-nodejs-backend-for-a-react-app
-featured: false
 draft: false
 tags:
   - nodejs

@@ -3,7 +3,6 @@ title: 'How to create a custom scrollbar with React Native Animated API'
 author: Aman Mittal
 pubDatetime: 2020-12-10T03:42:51Z
 slug: custom-scroll-bar-indicator-with-react-native-animated-api
-featured: false
 draft: false
 tags:
   - react-native

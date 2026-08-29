@@ -3,7 +3,6 @@ title: How to use the Geolocation API in a React Native app
 author: Aman Mittal
 pubDatetime: 2019-08-16T03:42:51Z
 slug: how-to-use-the-geolocation-api-in-a-react-native-app
-featured: false
 draft: false
 tags:
   - react-native

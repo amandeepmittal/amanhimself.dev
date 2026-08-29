@@ -3,7 +3,6 @@ title: 'How to use multiple iOS simulators at once with Expo CLI'
 author: Aman Mittal
 pubDatetime: 2025-11-08T00:00:01Z
 slug: switch-between-ios-simulators
-featured: false
 draft: false
 tags:
   - react-native

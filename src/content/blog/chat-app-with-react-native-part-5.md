@@ -3,7 +3,6 @@ title: 'Chat app with React Native (Part 5) - Create and Fetch Real-Time Message
 author: Aman Mittal
 pubDatetime: 2020-05-11T03:42:51Z
 slug: chat-app-with-react-native-part-5
-featured: false
 draft: false
 tags:
   - react-native

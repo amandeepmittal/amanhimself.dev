@@ -3,7 +3,6 @@ title: Handle different field types in React Native forms with formik and yup
 author: Aman Mittal
 pubDatetime: 2019-10-26T03:42:51Z
 slug: handle-different-field-types-in-react-native-forms
-featured: false
 draft: false
 tags:
   - expo

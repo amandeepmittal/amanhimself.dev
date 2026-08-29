@@ -3,7 +3,6 @@ title: Open any folder from the Terminal app in a Finder on macOS
 author: Aman Mittal
 pubDatetime: 2022-07-21T03:42:51Z
 slug: how-to-open-any-folder-from-terminal-in-finder-on-mac
-featured: false
 draft: false
 tags:
   - cli

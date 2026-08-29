@@ -3,7 +3,6 @@ title: 'Using mas with homebrew for a streamlined macOS setup '
 author: Aman Mittal
 pubDatetime: 2025-05-02T00:00:01Z
 slug: using-mas-with-homebrew
-featured: false
 draft: false
 tags:
   - cli

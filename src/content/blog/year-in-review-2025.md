@@ -3,7 +3,6 @@ title: 2025 - A year in review
 author: Aman Mittal
 pubDatetime: 2026-01-30T00:00:01Z
 slug: year-in-review-2025
-featured: false
 draft: false
 tags:
   - year-reviews

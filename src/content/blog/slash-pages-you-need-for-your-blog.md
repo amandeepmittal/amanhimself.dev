@@ -3,7 +3,6 @@ title: Slash pages you need for your blog
 author: Aman Mittal
 pubDatetime: 2026-02-28T00:00:05Z
 slug: slash-pages-you-need-for-your-blog
-featured: false
 draft: false
 tags:
   - blogging

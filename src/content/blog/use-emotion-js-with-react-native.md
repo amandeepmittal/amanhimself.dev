@@ -3,7 +3,6 @@ title: Building Stylistic UIs with Emotion-JS for React Native
 author: Aman Mittal
 pubDatetime: 2019-06-04T03:42:51Z
 slug: use-emotion-js-with-react-native
-featured: false
 draft: false
 tags:
   - react-native

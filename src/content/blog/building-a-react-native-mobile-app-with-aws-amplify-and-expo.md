@@ -3,7 +3,6 @@ title: Building a React Native Mobile App with AWS Amplify and Expo
 author: Aman Mittal
 pubDatetime: 2019-05-09T03:42:51Z
 slug: building-a-react-native-mobile-app-with-aws-amplify-and-expo
-featured: false
 draft: false
 tags:
   - react-native

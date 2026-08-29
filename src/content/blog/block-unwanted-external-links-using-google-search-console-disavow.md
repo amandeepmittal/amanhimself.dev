@@ -3,7 +3,6 @@ title: Block unwanted external links using Google Search Console's Disavow
 author: Aman Mittal
 pubDatetime: 2024-12-12T03:42:51Z
 slug: block-unwanted-external-links-using-google-search-console-disavow
-featured: false
 draft: false
 tags:
   - notes

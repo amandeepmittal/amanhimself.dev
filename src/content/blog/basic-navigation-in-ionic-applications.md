@@ -3,7 +3,6 @@ title: 'Basic Navigation in Ionic Applications'
 author: Aman Mittal
 pubDatetime: 2017-10-31T03:42:51Z
 slug: basic-navigation-in-ionic-applications
-featured: false
 draft: false
 tags:
   - ionic

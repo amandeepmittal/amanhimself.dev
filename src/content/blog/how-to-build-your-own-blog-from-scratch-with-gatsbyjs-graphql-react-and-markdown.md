@@ -3,7 +3,6 @@ title: How To Build A Blog From Scratch With React, Markdown, GraphQL and Gatsby
 author: Aman Mittal
 pubDatetime: 2018-11-21T03:42:51Z
 slug: how-to-build-your-own-blog-from-scratch-with-gatsbyjs-graphql-react-and-markdown
-featured: false
 draft: false
 tags:
   - gatsby

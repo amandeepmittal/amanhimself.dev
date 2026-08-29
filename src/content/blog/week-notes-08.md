@@ -3,7 +3,6 @@ title: Week notes 08
 author: Aman Mittal
 pubDatetime: 2025-02-16T00:00:01Z
 slug: week-notes-08
-featured: false
 draft: false
 tags:
   - notes

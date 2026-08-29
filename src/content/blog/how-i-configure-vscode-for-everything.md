@@ -3,7 +3,6 @@ title: How I Configure VS Code for Everything
 author: Aman Mittal
 pubDatetime: 2019-04-22T03:42:51Z
 slug: how-i-configure-vscode-for-everything
-featured: false
 draft: false
 tags:
   - vscode

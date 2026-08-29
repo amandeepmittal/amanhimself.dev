@@ -3,7 +3,7 @@ import { useEffect, useRef, useState, useMemo, type FormEvent } from 'react';
 import Card from '@components/Card';
 import type { CollectionEntry } from 'astro:content';
 
-export type SearchItem = {
+type SearchItem = {
   title: string;
   description: string;
   data: CollectionEntry<'blog'>['data'];
@@ -103,7 +103,6 @@ export default function SearchBar({ searchList }: Props) {
           value={inputVal}
           onChange={handleChange}
           autoComplete="off"
-          // autoFocus
           ref={inputRef}
         />
         <span className="absolute inset-y-0 right-0 flex items-center pr-3">

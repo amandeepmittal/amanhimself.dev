@@ -3,7 +3,6 @@ title: 'Chat app with React Native (Part 3) - Create Firestore collections to st
 author: Aman Mittal
 pubDatetime: 2020-04-21T03:42:51Z
 slug: chat-app-with-react-native-part-3
-featured: false
 draft: false
 tags:
   - react-native

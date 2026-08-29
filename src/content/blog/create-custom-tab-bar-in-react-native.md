@@ -3,7 +3,6 @@ title: How to Create a Custom Tab Bar in React Native
 author: Aman Mittal
 pubDatetime: 2021-05-07T03:42:51Z
 slug: create-custom-tab-bar-in-react-native
-featured: false
 draft: false
 tags:
   - react-native

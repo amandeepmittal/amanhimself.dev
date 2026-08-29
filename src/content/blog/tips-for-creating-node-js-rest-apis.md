@@ -3,7 +3,6 @@ title: Tips for Creating Nodejs REST APIs
 author: Aman Mittal
 pubDatetime: 2017-11-22T03:42:51Z
 slug: tips-for-creating-node-js-rest-apis
-featured: false
 draft: false
 tags:
   - nodejs

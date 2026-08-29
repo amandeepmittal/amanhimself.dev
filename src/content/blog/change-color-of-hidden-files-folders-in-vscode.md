@@ -3,7 +3,6 @@ title: Change the color of hidden files and folders in VS Code
 author: Aman Mittal
 pubDatetime: 2022-09-04T03:42:51Z
 slug: change-color-hidden-file-folder-name-in-vscode
-featured: false
 draft: false
 tags:
   - vscode

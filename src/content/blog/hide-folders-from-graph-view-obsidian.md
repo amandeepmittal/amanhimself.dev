@@ -3,7 +3,6 @@ title: How to permanently hide folders from graph view in Obsidian
 author: Aman Mittal
 pubDatetime: 2024-07-11T03:42:51Z
 slug: hide-folders-from-graph-view-obsidian
-featured: false
 draft: false
 tags:
   - obsidian

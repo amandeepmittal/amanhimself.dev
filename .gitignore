@@ -44,4 +44,4 @@ dist/
 .jampack
 
 # astro dev server state
-.astro/dev.json
+.astro/

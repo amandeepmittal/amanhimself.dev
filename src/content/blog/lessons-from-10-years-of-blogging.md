@@ -3,7 +3,6 @@ title: Lessons from 10 years of blogging
 author: Aman Mittal
 pubDatetime: 2026-01-17T00:00:01Z
 slug: lessons-from-10-years-of-blogging
-featured: false
 draft: false
 tags:
   - blogging

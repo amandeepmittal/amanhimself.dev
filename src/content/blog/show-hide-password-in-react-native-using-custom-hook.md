@@ -3,7 +3,6 @@ title: Create a custom hook to Show/Hide Password Visibility in React Native
 author: Aman Mittal
 pubDatetime: 2021-12-11T03:42:51Z
 slug: show-hide-password-in-react-native-using-custom-hook
-featured: false
 draft: false
 tags:
   - react-native

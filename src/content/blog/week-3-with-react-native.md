@@ -3,7 +3,6 @@ title: 'Week 3 with React Native - Why use Expo?'
 author: Aman Mittal
 pubDatetime: 2018-07-26T03:42:51Z
 slug: week-3-with-react-native
-featured: false
 draft: false
 tags:
   - notes

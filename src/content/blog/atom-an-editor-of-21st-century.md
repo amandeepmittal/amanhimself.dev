@@ -3,7 +3,6 @@ title: 'Atom: An Editor of 21st Century'
 author: Aman Mittal
 pubDatetime: 2016-07-14T03:42:51Z
 slug: atom-an-editor-of-21st-century
-featured: false
 draft: false
 tags:
   - notes

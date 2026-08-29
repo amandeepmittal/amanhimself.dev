@@ -3,7 +3,6 @@ title: Nesting Tab and Stack navigators in React Native and Expo apps
 author: Aman Mittal
 pubDatetime: 2020-02-26T03:42:51Z
 slug: nested-navigators-in-react-native
-featured: false
 draft: false
 tags:
   - react-native

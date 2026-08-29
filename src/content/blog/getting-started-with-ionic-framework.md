@@ -3,7 +3,6 @@ title: 'Getting Started with Ionic Framework'
 author: Aman Mittal
 pubDatetime: 2017-02-26T03:42:51Z
 slug: getting-started-with-ionic-framework
-featured: false
 draft: false
 tags:
   - ionic

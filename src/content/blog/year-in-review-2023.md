@@ -3,7 +3,6 @@ title: 2023 - A year in review
 author: Aman Mittal
 pubDatetime: 2024-02-02T03:42:51Z
 slug: year-in-review-2023
-featured: false
 draft: false
 tags:
   - year-reviews

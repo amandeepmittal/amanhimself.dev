@@ -3,7 +3,6 @@ title: Change PICO-8 cart storage location on macOS
 author: Aman Mittal
 pubDatetime: 2025-02-19T00:00:01Z
 slug: change-pico-8-cart-storage-location
-featured: false
 draft: false
 tags:
   - macos

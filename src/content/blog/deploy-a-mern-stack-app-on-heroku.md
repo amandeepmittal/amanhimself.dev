@@ -3,7 +3,6 @@ title: 'Deploy a MERN stack app on Heroku'
 author: Aman Mittal
 pubDatetime: 2018-10-12T03:42:51Z
 slug: deploy-a-mern-stack-app-on-heroku
-featured: false
 draft: false
 tags:
   - nodejs

@@ -3,7 +3,6 @@ title: Writing a Node.js Twitter Bot Part 2
 author: Aman Mittal
 pubDatetime: 2016-12-25T03:42:51Z
 slug: node-js-twitter-bot-tutorial-part-2
-featured: false
 draft: false
 tags:
   - nodejs

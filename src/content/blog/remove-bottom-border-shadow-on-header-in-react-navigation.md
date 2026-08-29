@@ -3,7 +3,6 @@ title: Remove bottom border or shadow on header in React Navigation or Expo Rout
 author: Aman Mittal
 pubDatetime: 2023-09-24T03:42:51Z
 slug: remove-bottom-border-shadow-on-header-in-react-navigation
-featured: false
 draft: false
 tags:
   - react-native

@@ -3,7 +3,6 @@ title: How to use shared element transitions in React Native
 author: Aman Mittal
 pubDatetime: 2021-01-19T03:42:51Z
 slug: shared-element-transitions
-featured: false
 draft: false
 tags:
   - react-native

@@ -3,7 +3,6 @@ title: Color-coding my Claude Code sessions
 author: Aman Mittal
 pubDatetime: 2026-03-14T00:00:01Z
 slug: color-coding-claude-code-sessions
-featured: false
 draft: false
 tags:
   - ai

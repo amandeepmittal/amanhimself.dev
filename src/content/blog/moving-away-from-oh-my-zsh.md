@@ -3,7 +3,6 @@ title: Moving away from Oh My Zsh (OMZ)
 author: Aman Mittal
 pubDatetime: 2026-05-14T00:00:01Z
 slug: moving-away-from-oh-my-zsh
-featured: false
 draft: false
 tags:
   - macos

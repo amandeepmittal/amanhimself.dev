@@ -3,7 +3,6 @@ title: How to build a xylophone app with Audio API, React Native, and Expo
 author: Aman Mittal
 pubDatetime: 2019-07-22T03:42:51Z
 slug: how-to-use-emotion-js-with-react-native
-featured: false
 draft: false
 tags:
   - react-native

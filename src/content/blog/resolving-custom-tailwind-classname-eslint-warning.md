@@ -3,7 +3,6 @@ title: Resolving invalid custom Tailwind classname ESLint warning
 author: Aman Mittal
 pubDatetime: 2025-03-30T00:00:01Z
 slug: resolving-custom-tailwind-classname-eslint-warning
-featured: false
 draft: false
 tags:
   - reactjs

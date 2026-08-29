@@ -17,8 +17,11 @@ export interface Props {
 const { frontmatter } = Astro.props;
 ---
 
-<Layout title={`${frontmatter.title} | ${SITE.title}`}>
-  <Header activeNav="links" />
+<Layout
+  title={`${frontmatter.title} | ${SITE.title}`}
+  description={frontmatter.description}
+>
+  <Header />
   <Breadcrumbs />
   <main id="main-content">
     <section id="links" class="prose mb-28 max-w-5xl prose-img:border-0">

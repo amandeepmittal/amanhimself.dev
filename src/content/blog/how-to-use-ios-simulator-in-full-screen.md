@@ -3,7 +3,6 @@ title: How to use iOS simulator in full-screen
 author: Aman Mittal
 pubDatetime: 2021-09-15T03:42:51Z
 slug: how-to-use-ios-simulator-in-full-screen
-featured: false
 draft: false
 tags:
   - xcode

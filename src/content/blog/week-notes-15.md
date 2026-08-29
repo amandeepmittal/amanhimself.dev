@@ -3,7 +3,6 @@ title: Week notes 15
 author: Aman Mittal
 pubDatetime: 2026-04-05T00:00:01Z
 slug: week-notes-15
-featured: false
 draft: false
 tags:
   - notes

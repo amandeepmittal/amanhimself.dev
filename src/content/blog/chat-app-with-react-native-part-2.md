@@ -3,7 +3,6 @@ title: 'Chat app with React Native (Part 2) - Firebase Email Authentication with
 author: Aman Mittal
 pubDatetime: 2020-04-16T03:42:51Z
 slug: chat-app-with-react-native-part-2
-featured: false
 draft: false
 tags:
   - react-native

@@ -3,7 +3,6 @@ title: '3 Steps to learn React Native in 2019'
 author: Aman Mittal
 pubDatetime: 2019-01-04T03:42:51Z
 slug: 3-steps-to-learn-react-native-in-2019
-featured: false
 draft: false
 tags:
   - react-native

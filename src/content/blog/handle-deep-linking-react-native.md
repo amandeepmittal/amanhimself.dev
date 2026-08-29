@@ -3,7 +3,6 @@ title: How to handle Deep Linking in a React Native app
 author: Aman Mittal
 pubDatetime: 2022-03-29T03:42:51Z
 slug: handle-deep-linking-react-native
-featured: false
 draft: false
 tags:
   - react-native

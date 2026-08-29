@@ -3,7 +3,6 @@ title: How to use React Navigation in a React Native App
 author: Aman Mittal
 pubDatetime: 2018-09-28T03:42:51Z
 slug: navigation-in-a-react-native-app
-featured: false
 draft: false
 tags:
   - react-native

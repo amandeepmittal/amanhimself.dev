@@ -3,7 +3,6 @@ title: Prop types in React and TypeScript
 author: Aman Mittal
 pubDatetime: 2021-06-28T03:42:51Z
 slug: prop-types-in-react-and-typescript
-featured: false
 draft: false
 tags:
   - typescript

@@ -3,7 +3,6 @@ title: Getting Started with React Navigation v6 and TypeScript in React Native
 author: Aman Mittal
 pubDatetime: 2022-06-11T03:42:51Z
 slug: react-navigation-v6-and-typescript-in-react-native
-featured: false
 draft: false
 tags:
   - react-native

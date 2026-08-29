@@ -3,7 +3,6 @@ title: 'My impressions after using Claude Code for six months'
 author: Aman Mittal
 pubDatetime: 2026-08-17T00:00:01Z
 slug: impressions-after-using-claude-code-for-six-months
-featured: false
 draft: false
 tags:
   - cli

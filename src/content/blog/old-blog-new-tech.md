@@ -3,7 +3,6 @@ title: Old blog, new tech
 author: Aman Mittal
 pubDatetime: 2025-01-06T00:00:01Z
 slug: old-blog-new-tech
-featured: false
 draft: false
 tags:
   - blogging

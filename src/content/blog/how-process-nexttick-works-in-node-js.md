@@ -3,7 +3,6 @@ title: 'How process.nextTick() works in Node.js?'
 author: Aman Mittal
 pubDatetime: 2016-06-25T03:42:51Z
 slug: how-process-nexttick-works-in-node-js
-featured: false
 draft: false
 tags:
   - nodejs

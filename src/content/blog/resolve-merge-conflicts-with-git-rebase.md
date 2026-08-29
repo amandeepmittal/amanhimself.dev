@@ -3,7 +3,6 @@ title: Resolve merge conflicts with git rebase
 author: Aman Mittal
 pubDatetime: 2023-06-23T03:42:51Z
 slug: resolve-merge-conflicts-with-git-rebase
-featured: false
 draft: false
 tags:
   - git

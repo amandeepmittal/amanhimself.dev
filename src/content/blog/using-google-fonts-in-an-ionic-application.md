@@ -3,7 +3,6 @@ title: Using Google Fonts in an Ionic Application
 author: Aman Mittal
 pubDatetime: 2017-11-09T03:42:51Z
 slug: using-google-fonts-in-an-ionic-application
-featured: false
 draft: false
 tags:
   - ionic

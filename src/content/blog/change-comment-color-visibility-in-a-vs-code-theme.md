@@ -3,7 +3,6 @@ title: 'Change comment color visibility in a VS Code theme'
 author: Aman Mittal
 pubDatetime: 2023-12-21T03:42:51Z
 slug: change-comment-color-visibility-in-a-vs-code-theme
-featured: false
 draft: false
 tags:
   - vscode

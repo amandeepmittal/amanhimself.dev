@@ -3,7 +3,6 @@ title: Week notes 03
 author: Aman Mittal
 pubDatetime: 2025-01-12T00:00:01Z
 slug: week-notes-03
-featured: false
 draft: false
 tags:
   - notes
