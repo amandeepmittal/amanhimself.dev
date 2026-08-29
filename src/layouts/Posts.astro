@@ -26,9 +26,10 @@ const publishedPosts = posts.filter(publishedPostFilter);
 let tags = getUniqueTags(publishedPosts);
 let totalPostsCount = publishedPosts.length;
 const paginatedPostsWithRT = await getPostsWithRT(paginatedPosts);
+const pageSuffix = currentPage > 1 ? `, page ${currentPage}` : '';
 ---
 
-<Layout title={`Blog | ${SITE.title}`}>
+<Layout title={`Blog${pageSuffix} | ${SITE.title}`}>
   <Header activeNav="blog" />
   <Main
     pageTitle="Blog"
