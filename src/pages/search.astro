@@ -22,7 +22,7 @@ const searchList = sortedPosts.map(post => ({
 }));
 ---
 
-<Layout title={`Search | ${SITE.title}`}>
+<Layout title={`Search | ${SITE.title}`} noindex>
   <Header activeNav="search" />
   <Main pageTitle="Search" pageDesc="Search any article ...">
     <SearchBar client:load searchList={searchList} />

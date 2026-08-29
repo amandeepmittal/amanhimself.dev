@@ -23,9 +23,11 @@ export async function getStaticPaths() {
     props: { post }
   }));
 
-  const pagePaths = getPageNumbers(filteredPosts.length).map(pageNum => ({
-    params: { slug: String(pageNum) }
-  }));
+  const pagePaths = getPageNumbers(filteredPosts.length)
+    .filter(pageNum => pageNum > 1)
+    .map(pageNum => ({
+      params: { slug: String(pageNum) }
+    }));
 
   return [...postResult, ...pagePaths];
 }
