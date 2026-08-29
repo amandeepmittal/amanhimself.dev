@@ -1,6 +1,7 @@
 import rss from '@astrojs/rss';
 import { getCollection } from 'astro:content';
 import getSortedPosts from '@utils/getSortedPosts';
+import { postDescription } from '@utils/postDescription';
 import { SITE, LOCALE } from '@config';
 
 const extractDescription = (body?: string) => {
@@ -37,13 +38,10 @@ export async function GET() {
           ? new Date(data.modDatetime)
           : null;
 
-      const description =
-        data.description || extractDescription(post.body) || SITE.desc;
-
       return {
         link: `blog/${id}/`,
         title: data.title,
-        description,
+        description: postDescription(post) || SITE.desc,
         pubDate: new Date(data.pubDatetime),
         categories: data.tags ?? [],
         content: absoluteUrls(post.rendered?.html ?? ''),
