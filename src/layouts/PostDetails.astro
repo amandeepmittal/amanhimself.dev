@@ -14,6 +14,7 @@ import IconCopy from '@assets/icons/IconCopy.svg?raw';
 import IconCheck from '@assets/icons/IconCheck.svg?raw';
 import getUniqueTags from '@utils/getUniqueTags';
 import { publishedPostFilter } from '@utils/postFilter';
+import { postDescription } from '@utils/postDescription';
 
 export interface Props {
   post: CollectionEntry<'blog'>;
@@ -25,7 +26,6 @@ const { post, posts } = Astro.props;
 const {
   title,
   author,
-  description,
   ogImage,
   pubDatetime,
   modDatetime,
@@ -51,7 +51,7 @@ const ogUrl = new URL(
 const layoutProps = {
   title: `${title} | ${SITE.title}`,
   author,
-  description,
+  description: postDescription(post),
   pubDatetime,
   modDatetime,
   ogImage: ogUrl,

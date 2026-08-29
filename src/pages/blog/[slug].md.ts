@@ -1,6 +1,7 @@
 import type { APIRoute } from 'astro';
 import { type CollectionEntry, getCollection } from 'astro:content';
 import postFilter from '@utils/postFilter';
+import { postDescription } from '@utils/postDescription';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog');
@@ -12,7 +13,8 @@ export async function getStaticPaths() {
 
 export const GET: APIRoute = ({ props }) => {
   const { post } = props as { post: CollectionEntry<'blog'> };
-  const { title, description, pubDatetime, tags } = post.data;
+  const { title, pubDatetime, tags } = post.data;
+  const description = postDescription(post);
 
   const lines = [
     `# ${title}`,
