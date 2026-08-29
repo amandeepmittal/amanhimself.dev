@@ -57,7 +57,7 @@ It’s a runtime engine[ developed by Google for Chrome browser for JavaScript](
 
 This is a JavaScript library that implements high-level Node.js API (a.k.a. node-core).
 
-<img src='https://miro.medium.com/max/451/1*dTYKv5fII4doUAqJSA51Qg.png' />
+<img src='https://miro.medium.com/max/451/1*dTYKv5fII4doUAqJSA51Qg.png' alt="Node.js system stack with V8, libuv, bindings, and core library" />
 
 The image borrowed above clarifies and represents a complete Node.js System. I hope this article has made things more clear as it did to me.
 

@@ -9,7 +9,7 @@ tags:
 description: ''
 ---
 
-![cover](https://i.imgur.com/0ARGlWV.png)
+![](https://i.imgur.com/0ARGlWV.png)
 
 > [Originally published at Crowdbotics](https://medium.com/crowdbotics/how-to-build-a-rest-api-with-nodejs-and-postgresql-828c7ec1e8b1)
 
@@ -49,7 +49,7 @@ brew services start postgresql
 
 After starting this service, you will get a success message like below.
 
-<img src='https://cdn-images-1.medium.com/max/800/1*oAV6fVIGxkjj5VD4nRCM1g.png' />
+<img src='https://cdn-images-1.medium.com/max/800/1*oAV6fVIGxkjj5VD4nRCM1g.png' alt="Terminal output confirming the postgresql service started successfully" />
 
 **Note**: Later on, when you need to stop the `postresql` service, you can run the command `brew services stop postgresql`.
 
@@ -73,7 +73,7 @@ npm install -S express
 
 Create a `server.js` file which is going to be the entry point for our server. At the top, we are going to require the `express` module and add some configuration middleware functions to handle `req.body` data. To run the server, type the command `node index.js` and go to URL `http://localhost:4000/` in a browser window and you will get the following result.
 
-<img src='https://cdn-images-1.medium.com/max/800/1*hkctm5kI-r_XA_Ksg6fQAw.png' />
+<img src='https://cdn-images-1.medium.com/max/800/1*hkctm5kI-r_XA_Ksg6fQAw.png' alt="Browser showing the Express server response at localhost port 4000" />
 
 With that working, we need a way to restart the server every time we change something in our code. I am going to use `nodemon` which will automatically watch for changes in any `.js` file we make in our demo app. To install run `npm i -D nodemon` and add the following to your `package.json` file.
 
@@ -116,11 +116,11 @@ sequelize init
 
 When you run the above command successfully, you will get the following result.
 
-<img src='https://cdn-images-1.medium.com/max/800/1*Nx7Ck_TlesGm552IzEVF5Q.png' />
+<img src='https://cdn-images-1.medium.com/max/800/1*Nx7Ck_TlesGm552IzEVF5Q.png' alt="Terminal output after running the sequelize init command" />
 
 You will also find changes made to your project directory like below. New files and folders created from the `.sequelizerc` file.
 
-<img src='https://cdn-images-1.medium.com/max/800/1*OiyN1jTzSb9wPQed6YHd6w.png' />
+<img src='https://cdn-images-1.medium.com/max/800/1*OiyN1jTzSb9wPQed6YHd6w.png' alt="Project directory with new config, models, seeders, and migrations folders" />
 
 ## Making Database Connection
 
@@ -226,7 +226,7 @@ sequelize model:create --name Todo --attributes title:string
 
 The above command will generate a new file inside `models/todo.js`. You can verify that the above command runs successfully with below image.
 
-<img src='https://cdn-images-1.medium.com/max/800/1*Du48q0ycr2EH7UTMQnkjBA.png' />
+<img src='https://cdn-images-1.medium.com/max/800/1*Du48q0ycr2EH7UTMQnkjBA.png' alt="Terminal output after generating the Todo model and its migration file" />
 
 As you can see, another file is created in `migrations/` directory. Our concern at this time is the model file itself which looks like this.
 
@@ -418,7 +418,7 @@ sequelize db:migrate
 
 You will get a result like below indicating the success of the above command.
 
-<img src='https://cdn-images-1.medium.com/max/800/1*XT_pFJozGEeytKP22F8Awg.png' />
+<img src='https://cdn-images-1.medium.com/max/800/1*XT_pFJozGEeytKP22F8Awg.png' alt="Terminal output confirming the sequelize db:migrate command succeeded" />
 
 **Please Note** if the above command throws an error such as `ERROR: role "root" does not exist`. This means you do not have a username created already for `postgres`. You will have to run the following command and can follow the official documentation [**here**](https://www.postgresql.org/docs/10/app-createuser.html) for information.
 
@@ -492,11 +492,11 @@ module.exports = app;
 
 To see if everything is working, let’s run the server by running `npm run start` and open your favorite REST API client like Postman [Abhinav Asthana](https://medium.com/u/94144f041644) or [Insomnia REST Client](https://medium.com/u/f5d2e9d5d710) to test the new routes. When you run the URL `http://localhost:4000/api` you will get the success message like below.
 
-<img src='https://cdn-images-1.medium.com/max/1200/1*mw85LS3bjGLqyy4-nG1oHg.png' />
+<img src='https://cdn-images-1.medium.com/max/1200/1*mw85LS3bjGLqyy4-nG1oHg.png' alt="REST client showing the welcome message returned by the api route" />
 
 Next step is to create a new todo item. Run the URL `http://localhost:4000/api/todos`.
 
-<img src='https://cdn-images-1.medium.com/max/1200/1*eEigERbZHWQLKXEeKEcsxw.png' />
+<img src='https://cdn-images-1.medium.com/max/1200/1*eEigERbZHWQLKXEeKEcsxw.png' alt="REST client response after posting a new todo list" />
 
 So far so good. Let us create a new controller and a route that will list all the to-do lists in our database. Open `controllers/todos.js`. Add the below after `create()` function.
 
@@ -517,7 +517,7 @@ app.get('/api/todos', todosController.list);
 
 Open the REST client and visit the URL `http://localhost:4000/api/todos](http://localhost:4000/api/todos`.
 
-<img src='https://cdn-images-1.medium.com/max/1200/1*70TGcibYiHPQ_jMGbHfEPw.png' />
+<img src='https://cdn-images-1.medium.com/max/1200/1*70TGcibYiHPQ_jMGbHfEPw.png' alt="REST client listing every todo list stored in the database" />
 
 ## API for Todo Items
 
@@ -560,7 +560,7 @@ module.exports = app => {
 
 The last step is to test this API endpoint. Run the URL `http://localhost:4000/api/todos/2/items`. Do note that the `2` in this URL is the `id` of the list that will associate this todo item to a todo list. From earlier images, you can note that I had three lists with `IDs`: `2`, `9` and `10`. If everything is going right for you, this may differ. You will have `IDs` starting from `1`.
 
-<img src='https://cdn-images-1.medium.com/max/1200/1*6ni8M5l4R3BN7Kz7xUZQtQ.png' />
+<img src='https://cdn-images-1.medium.com/max/1200/1*6ni8M5l4R3BN7Kz7xUZQtQ.png' alt="REST client response after adding a todo item to a list" />
 
 Now let us modify the `list` function in `controllers/todos.js` such that it returns the todo item along with the list name.
 
@@ -593,7 +593,7 @@ module.exports = {
 
 To test this, run the URL `http://localhost:4000/api/todos` and you will get similar result like below.
 
-<img src='https://cdn-images-1.medium.com/max/1200/1*06TUB4RzVdfsCoAoTJyHrg.png' />
+<img src='https://cdn-images-1.medium.com/max/1200/1*06TUB4RzVdfsCoAoTJyHrg.png' alt="REST client listing todo lists with their nested todoItems array" />
 
 Notice how the below snippet is added. This is done through the association methods we defined earlier when creating both of our models.
 
@@ -640,11 +640,11 @@ app.delete('/api/todos/:todoId', todosController.destroy);
 
 When you run the URL `http://localhost:4000/api/todos/2` with HTTP `DELETE` request it will respond back like below.
 
-<img src='https://cdn-images-1.medium.com/max/1200/1*6xehAdlL-W2HpJMb3ytdCg.png' />
+<img src='https://cdn-images-1.medium.com/max/1200/1*6xehAdlL-W2HpJMb3ytdCg.png' alt="REST client response confirming the todo list was deleted successfully" />
 
 This can also be verified by running `http://localhost:4000/api/todos`. In response, you will not see the same todo list we just deleted.
 
-<img src='https://cdn-images-1.medium.com/max/1200/1*x5U82BBpx__Cq8FCQZ9PRw.png' />
+<img src='https://cdn-images-1.medium.com/max/1200/1*x5U82BBpx__Cq8FCQZ9PRw.png' alt="REST client listing todo lists without the deleted list" />
 
 ## Conclusion
 

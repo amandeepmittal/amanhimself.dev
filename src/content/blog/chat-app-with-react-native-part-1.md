@@ -9,7 +9,7 @@ tags:
 description: ''
 ---
 
-![cover](https://i.imgur.com/ROYjoYo.jpg)
+![](https://i.imgur.com/ROYjoYo.jpg)
 
 This year, the React Native community has seen a lot of changes. Starting from community adaption of React Hooks, the official documentation having [new domain](http://reactnative.dev/), one of the most popular library `react-navigation` adopting a more dynamic and component-based approach to add routes to your apps and lastly, `react-native-firebase` the go-to package to use Firebase SDK, released its sixth version with some improvements.
 
@@ -166,7 +166,7 @@ To being implementing screens in the current app, start by creating the most ess
 
 Here is a demo of the screen you are going to achieve in this section.
 
-<img src='https://miro.medium.com/max/700/1*IGoOjbiB5pWNogRPqfl7rA.png' />
+<img src='https://miro.medium.com/max/700/1*IGoOjbiB5pWNogRPqfl7rA.png' alt="Login screen with email and password fields and a login button" />
 
 Inside `src/`, create another directory called `screens/`. In this directory, we are going to store all screen components. Inside it, also create `LoginScreen.js`.
 
@@ -263,7 +263,7 @@ The way you have defined styles by creating an object is the preferred way. Not 
 
 If the user is not registered to use the app but wants to make a new account to get authorized, this where the signup screen becomes useful.
 
-<img src='https://miro.medium.com/max/700/1*a_LZfux_VkejnIgdZ0MjIQ.png' />
+<img src='https://miro.medium.com/max/700/1*a_LZfux_VkejnIgdZ0MjIQ.png' alt="Signup screen with credential fields and a back icon button" />
 
 Create a new file called `SignupScreen.js` inside `src/screens/` directory. It is going to be similar to the login screen that you created in the previous section in many ways. I am going to leave it to you to find similarities and differences between the two screens. Take a look at the code snippet for the signup screen below.
 
@@ -494,7 +494,7 @@ npx react-native run-android
 
 Then, go to the simulator and you are going to get the following result.
 
-<img src='https://miro.medium.com/max/684/1*7UqfiUWxFDtSyR2_CQoigQ.gif' />
+<img src='https://miro.medium.com/max/684/1*7UqfiUWxFDtSyR2_CQoigQ.gif' alt="Navigating between the login and signup screens in the simulator" />
 
 ---
 

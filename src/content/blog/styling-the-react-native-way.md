@@ -50,7 +50,7 @@ export default function App() {
 
 The result of the above code of snippet is following.
 
-![ss1](https://i.imgur.com/GHvCHh4.png)
+![App screen with white Some Text centered on a blue background](https://i.imgur.com/GHvCHh4.png)
 
 In the post [**Getting Started with React Native in 2019**](https://amanhimself.dev/getting-started-with-react-native-in-2019-build-your-first-app/), I've described about `StyleSheet` object. It is the second way.
 
@@ -89,13 +89,13 @@ This snippet of code will have the same effect on rendering on a mobile device. 
 
 Another difference comes with **inline** styling is that an inline style property name, if misspelled, does not work and there is no error thrown for the misspelling.
 
-![ss2](https://i.imgur.com/065jq9Y.png)
+![Misspelled inline style property ignored without throwing an error](https://i.imgur.com/065jq9Y.png)
 
 However there is a valid style property check when styles are defined using `StyleSheet.create()`.
 
-![ss3](https://i.imgur.com/pM0LktI.png)
+![Style property validation when styles come from StyleSheet.create](https://i.imgur.com/pM0LktI.png)
 
-![ss4](https://i.imgur.com/0iAFAvZ.png)
+![Valid style property check with StyleSheet.create example](https://i.imgur.com/0iAFAvZ.png)
 
 ## Encapsulation of Styles
 
@@ -176,7 +176,7 @@ const styles = StyleSheet.create({
 
 The following is the result for the above snippet.
 
-![ss5](https://i.imgur.com/GHvCHh4.png)
+![App screen where the last style passed overrides the duplicate color](https://i.imgur.com/GHvCHh4.png)
 
 Do notice that, the last style passed in overrides the previous style when there is a duplicate `color` property.
 
@@ -271,7 +271,7 @@ By defining the state, you can declare the default value of the dark theme to be
 
 You can see this in action below.
 
-![ss6](https://i.imgur.com/uEQLG9f.gif)
+![Tapping the button to toggle the app between light and dark mode](https://i.imgur.com/uEQLG9f.gif)
 
 - You can find the complete code for the example at [this Expo Snack](https://snack.expo.io/@amanhimself/38e20d).
 - A big thank you to [Catalin Miron](https://x.com/mironcatalin) for proof reading it 🤗

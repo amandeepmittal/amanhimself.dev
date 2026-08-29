@@ -13,7 +13,7 @@ description: ''
 
 > 🕑 This article was originally written on March 14, 2021. Since then, it has been updated many times to reflect my setup process. In 2023, I decided to re-write this article from scratch.
 
-![cover_image](https://i.imgur.com/tAJjTOU.png)
+![](https://i.imgur.com/tAJjTOU.png)
 
 It's 2023, and I am still coming back to this article. I wrote this originally in 2021 to keep track of what I need to start when setting up a new laptop. Since then, I have had two Macbook Pros using an Apple Silicon processor (M1). I try to keep this article up to date.
 
@@ -33,7 +33,7 @@ xcode-select --install && sudo xcodebuild -license
 
 After installing Xcode and command line tools, open the app. Then, from the menu bar, open **Xcode > Preferences > Locations** and make sure that **Command Line Tools** point towards the current Xcode app.
 
-![ss3](https://i.imgur.com/ZXS88QM.png)
+![Xcode Preferences Locations tab with Command Line Tools selected](https://i.imgur.com/ZXS88QM.png)
 
 ## 2: Install Warp terminal
 
@@ -85,7 +85,7 @@ echo "source ${(q-)PWD}/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> 
 
 On iterm2, after installing the syntax highlight plugin, it starts to recognize the commands:
 
-![ss4](https://i.imgur.com/UxRzm98.png)
+![iTerm2 recognizing commands after installing the zsh syntax highlighting plugin](https://i.imgur.com/UxRzm98.png)
 
 ### Only for iterm2: Install a theme
 
@@ -243,7 +243,7 @@ npx npm-check -gu
 
 VS Code and VS Code Insiders are currently supported on ARM chips (March 13, 2021). Download the installer for Insiders edition from [here](https://code.visualstudio.com/insiders/) and for VS Code [here](https://code.visualstudio.com/download).
 
-![ss5](https://i.imgur.com/Yd4wQ10.png)
+![VS Code example](https://i.imgur.com/Yd4wQ10.png)
 
 I am using the following VS Code configuration:
 

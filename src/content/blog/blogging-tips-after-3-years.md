@@ -9,7 +9,7 @@ tags:
 description: ''
 ---
 
-![cover_image](https://i.imgur.com/XHghbGg.jpg)
+![](https://i.imgur.com/XHghbGg.jpg)
 
 > Your time is limited... &mdash; Steve Jobs
 

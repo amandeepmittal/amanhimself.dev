@@ -19,16 +19,16 @@ defaults write com.apple.iphonesimulator AllowFullscreenMode -bool YES
 
 With the latest version of Xcode and each new macOS version trying to outperform its previous one, it has never been easy to enable full-screen mode for an iOS simulator.
 
-![ss1](https://i.imgur.com/mvSX1u2.png)
+![VS Code editor on the left and the iOS simulator on the right](https://i.imgur.com/mvSX1u2.png)
 
 In the above image, observe that [VS Code editor](setup-macbook-m1) is on the left and the iOS simulator is on the right.
 
 To enter the full-screen mode, click on the resize window icon (green icon) on the application (iOS simulator and the editor/IDE of your choice).
 
-![ss2](https://i.imgur.com/nhkQdNs.png)
+![Green resize window icon on the iOS simulator window](https://i.imgur.com/nhkQdNs.png)
 
 Then, you can position one application on the left and another on the right.
 
-![ss3](https://i.imgur.com/ZjU2UUi.gif)
+![Positioning the simulator and editor side by side in full-screen mode](https://i.imgur.com/ZjU2UUi.gif)
 
 It's already challenging to keep distractions at bay. But, sometimes, a little bit of focus can go a long way.

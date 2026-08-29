@@ -70,7 +70,7 @@ react-native run-android
 
 If the app opens without any error, that means the configuration we have done so far is good to go.
 
-<img src='https://miro.medium.com/max/350/1*eYqHih1QsrZsxfiHsYnfPQ.png' />
+<img src='https://miro.medium.com/max/350/1*eYqHih1QsrZsxfiHsYnfPQ.png' alt="React Native boilerplate app running in the iOS simulator" />
 
 ## Implementing a simple WebView
 
@@ -109,7 +109,7 @@ export default App;
 
 To view this in action, make sure you build the React Native app for the first time using either of the command specified below from a terminal window. For Android users, if you are using a real device or a simulator, make sure it is running first. You are going to see a similar output as below:
 
-<img src='https://miro.medium.com/max/350/1*l6ZpJ0_d8j58uJRMC-XLSQ.png' />
+<img src='https://miro.medium.com/max/350/1*l6ZpJ0_d8j58uJRMC-XLSQ.png' alt="WebView component rendering the Heartbeat web page inside the app" />
 
 ## Add a loading spinner
 
@@ -151,7 +151,7 @@ Add both of these props to `WebView` in `App.js`:
 
 Take a look at how it works on the below screen.
 
-<img src='https://miro.medium.com/max/377/1*m3pKSlirL8gqEXUHmlZc-A.gif' />
+<img src='https://miro.medium.com/max/377/1*m3pKSlirL8gqEXUHmlZc-A.gif' alt="ActivityIndicator spinner showing while the web page loads in the WebView" />
 
 ## Handle navigation when using WebViews
 
@@ -276,11 +276,11 @@ const styles = StyleSheet.create({
 
 To see it in action, go back to the simulator/device of your choice and the first thing you are going to notice is the bottom tab bar on the screen.
 
-<img src='https://miro.medium.com/max/350/1*5g5rXbyg4k1_J02DKL3QIA.png' />
+<img src='https://miro.medium.com/max/350/1*5g5rXbyg4k1_J02DKL3QIA.png' alt="Bottom tab bar with Back and Forward buttons below the WebView" />
 
 Here is the complete demo in action with back and forward buttons working.
 
-<img src='https://miro.medium.com/max/377/1*r2li3qWatN2JM_Pl9nhGBA.gif' />
+<img src='https://miro.medium.com/max/377/1*r2li3qWatN2JM_Pl9nhGBA.gif' alt="Back and Forward buttons moving through the WebView URL history" />
 
 ## Conclusion
 

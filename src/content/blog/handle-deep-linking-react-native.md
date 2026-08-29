@@ -9,7 +9,7 @@ tags:
 description: ''
 ---
 
-![cover](https://i.imgur.com/cHaZZW8.jpg)
+![](https://i.imgur.com/cHaZZW8.jpg)
 
 > Originally published at [Jscrambler](https://jscrambler.com/blog/how-to-handle-deep-linking-in-a-react-native-app)
 

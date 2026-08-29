@@ -9,7 +9,7 @@ tags:
 description: ''
 ---
 
-![cover_image](https://i.imgur.com/tZtGF2K.png)
+![](https://i.imgur.com/tZtGF2K.png)
 
 In this post, let's generate an app icon and learn how to add it to an Android app build with React Native.
 

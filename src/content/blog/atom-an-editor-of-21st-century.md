@@ -19,7 +19,7 @@ It is inspiring to open-source community as well. Few months back, Facebook rele
 
 Atom is mature in terms of plugins when comes to keeping the pace with newer technologies. When I started out with Node.js, I tried to stick with Webstorm IDE but soon Atom lured me for its support of frameworks like Ionic (a plugin called Ionic-Preview and I am still exploring) thanks to the community plugins and the other matter of fact that it’s open source.
 
-![1](https://i.imgur.com/a5Ziwot.jpg)
+![Atom editor window with a project file open](https://i.imgur.com/a5Ziwot.jpg)
 
 ## Packages
 
@@ -43,7 +43,7 @@ There may come a period of time when your Atom might behave sluggishly. What wil
 - or there isn’t much use of that particular package and you can do without it,
 - or it was there just for fun. But before removing the packages, one must know which package is consuming how much startup time. You might want some of those unnecessary packages to stay with you if you know they are not the real culprits who are slowing down your development environment.
 
-![2](https://i.imgur.com/HEqlVPv.png)
+![Atom startup time breakdown showing how long each package takes](https://i.imgur.com/HEqlVPv.png)
 
 I have seen (mostly on online forums) some developers groan about this kind of sluggishness but I haven’t met it yet.
 
@@ -71,6 +71,6 @@ The main advantage of an editor like Atom is that you can highly customize it. Y
 
 ## Lastly
 
-![3](https://i.imgur.com/HIgoDE2.jpg)
+![Closing illustration for the Atom editor post](https://i.imgur.com/HIgoDE2.jpg)
 
 _Note: At the time of writing this post, Webstorm IDE did not have support for frameworks like Ionic and the latest Atom Version is 1.8.0._

@@ -25,7 +25,7 @@ This format consists of shapes rather than pixels which can further be concluded
 
 In this post, let us learn how to use `react-native-svg` in React Native and Expo apps and create some custom examples such as wavy header shown below.
 
-<img src='https://miro.medium.com/max/598/1*aivsFUf_OF6mYBSfOCGrTQ.gif' />
+<img src='https://miro.medium.com/max/598/1*aivsFUf_OF6mYBSfOCGrTQ.gif' alt="App screens with wavy SVG header backgrounds" />
 
 ## Requirements
 
@@ -55,7 +55,7 @@ That's it for installing this library. The `react-native-svg` library contains c
 
 In the next few sections, let us try to create a custom header background that has a bottom border with the form of a wave as shown below.
 
-<img src='https://miro.medium.com/max/700/1*mf6AmpW-7j4nS1nixMDiVQ.png' />
+<img src='https://miro.medium.com/max/700/1*mf6AmpW-7j4nS1nixMDiVQ.png' alt="Custom header background with a wave shaped bottom border" />
 
 Start by creating a new screen component inside `src/screens/ScreenOne.js` file that displays a heading on the screen. (_Create the directory if it doesn't exist._)
 
@@ -113,7 +113,7 @@ export default function App() {
 
 Lastly, to see this simple header text on a device's screen, from the terminal window, execute the command `expo start`. You should results similar to the screenshot below:
 
-<img src='https://miro.medium.com/max/700/1*kwennRzVGQSDL0fASGCC5g.png' />
+<img src='https://miro.medium.com/max/700/1*kwennRzVGQSDL0fASGCC5g.png' alt="ScreenOne showing the plain Custom Header heading text" />
 
 ## Create a custom header component with waves
 
@@ -123,7 +123,7 @@ The SVG component that we intend to create is going to wrap the path drawing pri
 
 To generate the SVG background as you have seen in the previous section, I am going to make use of [getwaves.io](https://getwaves.io/). This web tool allows you to generate custom wave patterns in SVG format. Check out their website, it is simple and fulfils the purpose. You can create different patterns using this tool.
 
-<img src='https://miro.medium.com/max/984/1*NzoVM40QM6VUNSGyCQLZ7g.gif' />
+<img src='https://miro.medium.com/max/984/1*NzoVM40QM6VUNSGyCQLZ7g.gif' alt="Generating a wave pattern and copying its SVG path on getwaves.io" />
 
 Make sure to copy the values of properties such as `viewbox` and `d` as shown above.
 
@@ -212,7 +212,7 @@ From the snippet, you can notice that using the `Dimensions` API from `react-nat
 
 The final result is going to be as the following.
 
-<img src='https://miro.medium.com/max/700/1*mf6AmpW-7j4nS1nixMDiVQ.png' />
+<img src='https://miro.medium.com/max/700/1*mf6AmpW-7j4nS1nixMDiVQ.png' alt="ScreenOne with the WavyHeader background behind the heading" />
 
 ## Make WavyHeader component reusable
 
@@ -277,15 +277,15 @@ export default function ScreenOne() {
 
 You won’t see a difference in the result on the device’s screen unless you change the values of these props.
 
-<img src='https://miro.medium.com/max/700/1*mf6AmpW-7j4nS1nixMDiVQ.png' />
+<img src='https://miro.medium.com/max/700/1*mf6AmpW-7j4nS1nixMDiVQ.png' alt="Same wavy header result after WavyHeader accepts custom props" />
 
 ## Conclusion
 
 You can try adding more custom screens to have different wave patterns and try to use the `WavyHeader` component as reusable for different screens. Here is an example below that displays two different screens with different wave patterns as well as background color and height.
 
-<img src='https://miro.medium.com/max/700/1*ZmqxTfYO5jfv24ktveRzxg.png' />
+<img src='https://miro.medium.com/max/700/1*ZmqxTfYO5jfv24ktveRzxg.png' alt="Two screens with different wave patterns, colors and header heights" />
 
-<img src='https://miro.medium.com/max/598/1*aivsFUf_OF6mYBSfOCGrTQ.gif' />
+<img src='https://miro.medium.com/max/598/1*aivsFUf_OF6mYBSfOCGrTQ.gif' alt="Navigating between two screens that reuse the WavyHeader component" />
 
 - [Source code](https://github.com/amandeepmittal/wavySVGExample).
 - Or try using an Expo client [here](https://expo.io/@amanhimself/rnwavysvg).

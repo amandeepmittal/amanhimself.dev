@@ -128,7 +128,7 @@ export default function AppTabs() {
 
 Go to the terminal window and trigger the command `expo start`. You are going to get the following output in a simulator.
 
-![ss3](https://i.imgur.com/h4ZpdMF.gif)
+![Switching between Home and Settings tabs with a dark status bar on both](https://i.imgur.com/h4ZpdMF.gif)
 
 As you can notice from the above demo that on each the tab screen the color of the status bar is dark. On the second tab, since it has a darker background than the first tab, there should be a way to change the status bar for each screen component as it is mounted.
 
@@ -181,7 +181,7 @@ function SettingsScreen() {
 
 Go back to the simulator or Expo client and you are going to notice the changes now.
 
-![ss4](https://i.imgur.com/EuVkbSG.gif)
+![Status bar style changing per tab after applying the useStatusBar hook](https://i.imgur.com/EuVkbSG.gif)
 
 For a better transition between two tabs, you can pass on another parameter called `animate` with a default value of boolean `true` in the `useStatusBar` custom hook.
 
@@ -199,7 +199,7 @@ export const useStatusBar = (style, animated = true) => {
 
 Now, go back to the Expo client to see the changes.
 
-![ss5](https://i.imgur.com/sS9ASUg.gif)
+![Animated status bar transition between the two tab screens](https://i.imgur.com/sS9ASUg.gif)
 
 ## Conclusion
 

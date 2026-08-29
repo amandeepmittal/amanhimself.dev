@@ -22,11 +22,11 @@ To see it live, open the **Settings** app on your iOS device and scroll through 
 
 Here's an example of a large header title enabled for a screen on iOS 26 Simulator:
 
-<img src="/images/large-header-titles/ss17.png" width="260" />
+<img src="/images/large-header-titles/ss17.png" width="260" alt="Large header title on a screen in the iOS 26 Simulator" />
 
 For list views, these large header titles can collapse into a regular headers when you scroll through the list:
 
-<img src="/images/large-header-titles/ss18.gif" width="260" />
+<img src="/images/large-header-titles/ss18.gif" width="260" alt="Large header title collapsing into a regular header while scrolling a list" />
 
 ## Prerequisites
 
@@ -150,7 +150,7 @@ The `contentInsetAdjustmentBehavior` prop is essential. It tells the ScrollView 
 
 Result of this configuration so far is the expected result. On an iOS Simulator running 26 version, you will see the large header title enabled for the home screen and smoothly collapsing into a regular title:
 
-<img src="/images/large-header-titles/ss18.gif" width="260" />
+<img src="/images/large-header-titles/ss18.gif" width="260" alt="Home screen large title collapsing into a regular title on iOS 26" />
 
 ## The iOS 18 problem
 
@@ -178,7 +178,7 @@ export default function HomeLayout() {
 
 On running the app on an iOS 18, you will see the blur effect applied behind the regular title:
 
-<img src="/images/large-header-titles/ss19.gif" width="260" />
+<img src="/images/large-header-titles/ss19.gif" width="260" alt="Blur effect behind the regular title on iOS 18 with headerBlurEffect" />
 
 > Note: I've set the text string color to `red` in `/(home)/index.tsx` for an easier demonstration of the blur effect in the header.
 
@@ -186,7 +186,7 @@ On running the app on an iOS 18, you will see the blur effect applied behind the
 
 After applying the `headerBlurEffect` prop on the home screen, when you go back to the iOS 26 Simulator, you will notice that the large header title is disappearing behind the blur effect explicitly applied. Not exactly the behavior you want.
 
-<img src="/images/large-header-titles/ss20.png" width="260" />
+<img src="/images/large-header-titles/ss20.png" width="260" alt="Large header title disappearing behind the blur effect on iOS 26" />
 
 Since iOS 26 can handle applying blur effect automatically, you can use the following approach:
 
@@ -228,7 +228,7 @@ export default function HomeLayout() {
 
 This change will satisfy both iOS versions:
 
-<img src="/images/large-header-titles/ss21.gif" width="360" />
+<img src="/images/large-header-titles/ss21.gif" width="360" alt="Home screen header working on both iOS 18 and iOS 26 Simulators" />
 
 ## Don't forget Android
 
@@ -254,7 +254,7 @@ export default function HomeLayout() {
 
 Result on Android:
 
-<img src="/images/large-header-titles/ss22.png" width="260" />
+<img src="/images/large-header-titles/ss22.png" width="260" alt="Home screen header on Android with headerTransparent limited to iOS" />
 
 ## Wrapping up
 

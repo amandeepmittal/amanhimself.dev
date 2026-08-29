@@ -121,7 +121,7 @@ The `Text` component is in many ways just like the `View` component, except that
 
 To see the default app in action, start the development server from the terminal window `expo start`. Either using a simulator or a real device (make sure it has an Expo client installed from the app store) you can test the app.
 
-<img src='https://miro.medium.com/max/509/1*9xg5D_74gvTYRyt89JL_KA.png' />
+<img src='https://miro.medium.com/max/509/1*9xg5D_74gvTYRyt89JL_KA.png' alt="Default Expo app showing the Open up App.js message" />
 
 ## Setting up a stack navigation
 
@@ -208,7 +208,7 @@ export default function App() {
 
 Make sure the development server is running. You are going to get the following output in an Expo client.
 
-<img src='https://miro.medium.com/max/509/1*yVurLxAGaVp5CiEynWKl5w.png' />
+<img src='https://miro.medium.com/max/509/1*yVurLxAGaVp5CiEynWKl5w.png' alt="ViewNotes screen showing the You do not have any notes message" />
 
 ## Adding the second screen to the stack navigator
 
@@ -332,11 +332,11 @@ const styles = StyleSheet.create({
 
 In the Expo client you are going to get the following output:
 
-<img src='https://miro.medium.com/max/509/1*o_Sco68X5QLpboYqHkg8kw.png' />
+<img src='https://miro.medium.com/max/509/1*o_Sco68X5QLpboYqHkg8kw.png' alt="ViewNotes screen with the Add new note floating action button" />
 
 Also, when you click the FAB button, it will navigate you to the `AddNotes` screen.
 
-<img src='https://miro.medium.com/max/378/1*G1YJr6IgxikVul-JVhNhsQ.gif' />
+<img src='https://miro.medium.com/max/378/1*G1YJr6IgxikVul-JVhNhsQ.gif' alt="Tapping the floating action button to open the AddNotes modal screen" />
 
 This is done by navigation props from `react-navigation`. Using `navigation.navigate` as the value of the button press prop `onPress`, the app will navigate to the screen with its name passed as the second parameter.
 
@@ -418,7 +418,7 @@ function ViewNotes({ navigation }) {
 
 The following is going to be the output.
 
-<img src='https://miro.medium.com/max/509/1*PbKVolX0GTycuojptMpSBQ.png' />
+<img src='https://miro.medium.com/max/509/1*PbKVolX0GTycuojptMpSBQ.png' alt="ViewNotes screen with the Simple Note Taker custom header" />
 
 Similarly, modify the `AddNotes.js` file.
 
@@ -443,7 +443,7 @@ function AddNotes() {
 
 Here is the output:
 
-<img src='https://miro.medium.com/max/509/1*WBDEbWvNeRd-QMWRPvqxXQ.png' />
+<img src='https://miro.medium.com/max/509/1*WBDEbWvNeRd-QMWRPvqxXQ.png' alt="AddNotes modal screen with the Add a new note header" />
 
 ## Implementing Hooks
 
@@ -657,13 +657,13 @@ export default AddNote;
 
 Here is the output you are going to get when navigating to the `AddNotes` screen.
 
-<img src='https://miro.medium.com/max/509/1*bwq4b8Y-YilTgZkWO2YCEA.png' />
+<img src='https://miro.medium.com/max/509/1*bwq4b8Y-YilTgZkWO2YCEA.png' alt="AddNotes screen with title and note input fields and a save button" />
 
 ## Running the app
 
 The demo app is complete and ready to be tested. In the Expo client image below, and you can find a demo for adding a note and rendering the note.
 
-<img src='https://miro.medium.com/max/378/1*hcV-c1jFreqaSOkHORxoMA.gif' />
+<img src='https://miro.medium.com/max/378/1*hcV-c1jFreqaSOkHORxoMA.gif' alt="Adding a note and rendering it in the notes list" />
 
 ## Conclusion
 

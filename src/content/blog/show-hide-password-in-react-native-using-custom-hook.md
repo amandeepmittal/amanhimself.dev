@@ -69,7 +69,7 @@ const styles = StyleSheet.create({
 
 It uses the `secureTextEntry` prop such that when a text value is entered in the input field, it is not visible as to what is being entered in that field. Here is the output of the above snippet on a device:
 
-![ss1](https://i.imgur.com/kn0yv9z.gif)
+![Password field hiding the entered value using the secureTextEntry prop](https://i.imgur.com/kn0yv9z.gif)
 
 However, giving an option to a user to let them see the current value they enter leads to a good experience and might be necessary in most cases.
 
@@ -166,7 +166,7 @@ Inside the `View` component that wraps the `TextInput`, add a button using the `
 
 That's all! Here is the output after this step:
 
-![ss2](https://i.imgur.com/rTNH2Ud.gif)
+![Tapping the eye icon to toggle password visibility in the input field](https://i.imgur.com/rTNH2Ud.gif)
 
 Here is the complete code for the `App.js` file:
 

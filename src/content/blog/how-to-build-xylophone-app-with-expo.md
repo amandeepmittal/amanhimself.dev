@@ -13,7 +13,7 @@ React Native when used with Expo as a toolchain eases out the common pain to man
 
 That being said, let us dive into one of the Expo's API. In this tutorial, you are going to build an application using Expo's Audio API. You are going to develop the following app (_a toy xylophone app_) step-by-step.
 
-<img src='https://miro.medium.com/max/350/1*YE5sb3gX_ValSM48QGT1eQ.png' />
+<img src='https://miro.medium.com/max/350/1*YE5sb3gX_ValSM48QGT1eQ.png' alt="Finished toy xylophone app running in the simulator" />
 
 **Table of Contents**
 
@@ -141,7 +141,7 @@ const styles = StyleSheet.create({
 
 To see the current state of the application in action, go back to the terminal window and run the command `yarn start` or `expo start` if you do not have yarn installed. In the simulator screen, you are going to be welcomed, as shown in the below image.
 
-<img src='https://miro.medium.com/max/350/1*jzwOoqsEJkTUSMMEKCwOPg.png' />
+<img src='https://miro.medium.com/max/350/1*jzwOoqsEJkTUSMMEKCwOPg.png' alt="Simulator showing the first version of the xylophone app screen" />
 
 ## Adding the Audio functionality
 
@@ -323,7 +323,7 @@ const styles = StyleSheet.create({
 
 Now run the application in the simulator, and you will get the following screen.
 
-<img src='https://miro.medium.com/max/350/1*YE5sb3gX_ValSM48QGT1eQ.png' />
+<img src='https://miro.medium.com/max/350/1*YE5sb3gX_ValSM48QGT1eQ.png' alt="Completed xylophone app with colored note bars in the simulator" />
 
 ## Conclusion
 

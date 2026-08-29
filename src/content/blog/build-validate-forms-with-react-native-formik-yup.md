@@ -8,7 +8,7 @@ tags:
 description: ''
 ---
 
-![cover](https://i.imgur.com/JK4oQuJ.png)
+![](https://i.imgur.com/JK4oQuJ.png)
 
 > [Originally published at Heartbeat](https://heartbeat.fritz.ai/build-and-validate-forms-in-react-native-using-formik-and-yup-6489e2dff6a2)
 
@@ -242,7 +242,7 @@ const styles = StyleSheet.create({
 
 Notice, inside the `SafeAreaView` there are two `FormInput` fields and two buttons, out of which, one is the custom button previously created. The properties on input fields such as `secureTextEntry` and `autoCapitalize` are unique to each input field. Thus, this where the `rest` parameter syntax comes in handy. Also, notice how the type of both buttons will make a UI difference in the output below.
 
-<img src='https://miro.medium.com/max/300/1*K-r4nW6kke_tsxLgp_BvKA.png' />
+<img src='https://miro.medium.com/max/300/1*K-r4nW6kke_tsxLgp_BvKA.png' alt="Login screen with email and password fields above two buttons" />
 
 ## Add Formik to the login form
 
@@ -369,7 +369,7 @@ onSubmit={values => { alert(JSON.stringify(values))}}
 
 Go back to the login screen and fill both input fields and click the login button. You will get a dialog box stating the values of both `email` and `password`.
 
-<img src='https://miro.medium.com/max/342/1*u5tfp9wdSzcC1C_yXVOpXA.gif' />
+<img src='https://miro.medium.com/max/342/1*u5tfp9wdSzcC1C_yXVOpXA.gif' alt="Dialog box listing the submitted email and password values" />
 
 ## Handle Form Submission
 
@@ -391,7 +391,7 @@ handleSubmit = values => {
 
 The logic is still the same as it was when you started building this login form. The user can only log in to the app if the `email` and `password` fields are not empty. The only difference that the values for both fields were derived from the initial state of the component before.
 
-<img src='https://miro.medium.com/max/342/1*V7tcVyD4usE5LHxmBjWYfQ.gif' />
+<img src='https://miro.medium.com/max/342/1*V7tcVyD4usE5LHxmBjWYfQ.gif' alt="Logging in with filled fields and entering the home screen" />
 
 The custom input component does not need the `value` prop to be passed on separately.
 
@@ -498,11 +498,11 @@ After each input field, you will have to add a `Text` element to display the err
 
 Try to click the login button without entering details in any input field.
 
-<img src='https://miro.medium.com/max/342/1*expc7TVHGfERe5bAzqRQyg.gif' />
+<img src='https://miro.medium.com/max/342/1*expc7TVHGfERe5bAzqRQyg.gif' alt="Error messages shown after submitting the empty login form" />
 
 Notice, how both the custom error message for the `email` field and a default message for `password` is displayed. Now, try to enter an invalid string in the email and a password of fewer than four characters and then submit the login button.
 
-<img src='https://miro.medium.com/max/342/1*ZwUTsbRc712QZ5EKAHfJ5A.gif' />
+<img src='https://miro.medium.com/max/342/1*ZwUTsbRc712QZ5EKAHfJ5A.gif' alt="Validation errors for an invalid email and a short password" />
 
 Notice that the error messages change and the correct error message is displayed.
 
@@ -559,7 +559,7 @@ Next, go back to the `Login.js` file, import this component. Below each input fi
 
 The error messages are now properly aligned with the input fields.
 
-<img src='https://miro.medium.com/max/300/1*KwAE5I4ur3B8qaktUhT40Q.png' />
+<img src='https://miro.medium.com/max/300/1*KwAE5I4ur3B8qaktUhT40Q.png' alt="Error messages aligned under each input field" />
 
 ## Disable Button when form is not valid
 
@@ -584,17 +584,17 @@ Formik provides a quicker way to disable the submit button until there is no err
 
 Notice that how the colour of the button is changed to grey and it is not clickable at all.
 
-<img src='https://miro.medium.com/max/300/1*Qy20v8rNAxUXAfTiGuEF3Q.png' />
+<img src='https://miro.medium.com/max/300/1*Qy20v8rNAxUXAfTiGuEF3Q.png' alt="Greyed out login button while the form is invalid" />
 
 But entering values for input fields it comes back to life.
 
-<img src='https://miro.medium.com/max/300/1*5dqPrzK-Kt1jEIZC1GE_UA.png' />
+<img src='https://miro.medium.com/max/300/1*5dqPrzK-Kt1jEIZC1GE_UA.png' alt="Login button enabled once both fields hold valid values" />
 
 ## Show errors only if touch for specific field
 
 If you have noticed that the current state of the form shows errors for both fields even when the user is entering the first field and hasn't yet seen what is required in the second field.
 
-<img src='https://miro.medium.com/max/342/1*C0h4mvUsoWFROF2g46g27A.gif' />
+<img src='https://miro.medium.com/max/342/1*C0h4mvUsoWFROF2g46g27A.gif' alt="Errors showing for both fields while the first one is typed" />
 
 To fix this, let us use two `touched` and `handleBlur` from `formikProps`.
 
@@ -613,7 +613,7 @@ To fix this, let us use two `touched` and `handleBlur` from `formikProps`.
 
 The`handleBlur` is passed as the value to the `onBlur` prop on the input field. This prop is used to track whether an input field has been touched by the user or not — the `touched` tracks what fields have been touched. Using the combination of both, you can get the following behavior.
 
-<img src='https://miro.medium.com/max/342/1*RFD3xPeXNZrcRmBfgYG6bA.gif' />
+<img src='https://miro.medium.com/max/342/1*RFD3xPeXNZrcRmBfgYG6bA.gif' alt="Error appearing only after an input field is touched" />
 
 Here is the code snippet on how to do this. On each input field, add the `onBlur` prop with the corresponding value passed to `handleBlur` method.
 
@@ -657,7 +657,7 @@ handleSubmit = values => {
 
 Now observe how the button gets disabled when it is touched.
 
-<img src='https://miro.medium.com/max/342/1*kIE7F1iAyhq7UGQGajeDnw.gif' />
+<img src='https://miro.medium.com/max/342/1*kIE7F1iAyhq7UGQGajeDnw.gif' alt="Login button disabled while the form is submitting" />
 
 You can add a loading indicator to the button, thanks to the prop with the same name available in `react-native-elements`.
 
@@ -665,7 +665,7 @@ You can add a loading indicator to the button, thanks to the prop with the same 
 loading = { isSubmitting };
 ```
 
-<img src='https://miro.medium.com/max/342/1*BTJ51fiAMYUwO91C3n3xWQ.gif' />
+<img src='https://miro.medium.com/max/342/1*BTJ51fiAMYUwO91C3n3xWQ.gif' alt="Loading indicator inside the login button while submitting" />
 
 ## A challenge for you 💪
 
@@ -680,7 +680,7 @@ The challenge here is to make sure both fields: `password` and `confirmPassword`
 
 Here is a teaser:
 
-<img src='https://miro.medium.com/max/342/1*rzA-V867nUz7llMUWP26Yw.gif' />
+<img src='https://miro.medium.com/max/342/1*rzA-V867nUz7llMUWP26Yw.gif' alt="Signup form with name, email, password and confirm password fields" />
 
 ## Conclusion
 

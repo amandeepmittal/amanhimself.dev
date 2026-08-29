@@ -9,7 +9,7 @@ tags:
 description: ''
 ---
 
-![cover_image](https://i.imgur.com/nbq2XcZ.png)
+![](https://i.imgur.com/nbq2XcZ.png)
 
 We live in the world of a variety, yet mobile devices are dominated by two major platforms, iOS and Android. It is a two-horse race, but that doesn’t make mobile app development _easy_. For iOS you write code using Objective-C or Swift. For Android, you use Java. In addition to different programming languages, the tool chains are entirely different too for both of these mobile platforms.
 

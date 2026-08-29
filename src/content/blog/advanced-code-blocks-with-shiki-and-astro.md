@@ -13,7 +13,7 @@ Code blocks are the backbone of any technical blog. While basic syntax highlight
 
 Recently, I started enhancing code blocks on my Astro blog to include language labels with a clean header bar on top of each code block. Before this change, this is how a code block would render on my blog:
 
-<img src="/images/astro-blog/blog-1.png" width="640" />
+<img src="/images/astro-blog/blog-1.png" alt="Code block rendered without a language label or header bar" width="640" />
 
 ## Current state of a code block
 
@@ -21,11 +21,11 @@ My blog uses Astro as its blog engine, which uses Shiki for syntax highlighting 
 
 Shiki automatically adds a data-language attribute to a code block. This is the key to extracting language information for the header labels. Let’s take the following code block as an example.
 
-<img src="/images/astro-blog/blog-2.png" width="640" />
+<img src="/images/astro-blog/blog-2.png" alt="Rendered code block whose markdown source sets the ts language" width="640" />
 
 The above code block is rendered and has a `ts` language set in its markdown source file. Inspecting developer tools in a browser, the same `ts` language is passed down as a value to the `data-language` attribute.
 
-<img src="/images/astro-blog/blog-3.png" width="820" />
+<img src="/images/astro-blog/blog-3.png" alt="Browser developer tools showing the data-language attribute set to ts" width="820" />
 
 Since Shiki does this heavy lifting, all that is needed is to render this information in a blog post without affecting the business logic behind it.
 
@@ -157,7 +157,7 @@ In the `copyCode` function, the Clipboard API writes the text to the user's clip
 
 Here’s how the label and hover effect works on the label:
 
-<img src="/images/astro-blog/blog-4.gif" width="320" />
+<img src="/images/astro-blog/blog-4.gif" alt="Copy button label changing to Copied on hover and click" width="320" />
 
 ## Add the language label and copy button to the header
 
@@ -224,10 +224,10 @@ In code block styles, ensure that the header bar and the actual code block appea
 
 The improved code block now contains the language labels to provide immediate context about what kind of code a reader is looking at:
 
-<img src="/images/astro-blog/blog-5.png" width="640" />
+<img src="/images/astro-blog/blog-5.png" alt="Improved code block with a language label in the header bar" width="640" />
 
-<img src="/images/astro-blog/blog-6.png" width="640" />
+<img src="/images/astro-blog/blog-6.png" alt="Another code block header showing its language label and copy button" width="640" />
 
 When switching to the dark theme, the header bar renders correctly:
 
-<img src="/images/astro-blog/blog-7.png" width="640" />
+<img src="/images/astro-blog/blog-7.png" alt="Code block header bar rendered in the dark theme" width="640" />

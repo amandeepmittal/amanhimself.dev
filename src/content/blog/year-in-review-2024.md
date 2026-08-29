@@ -44,15 +44,15 @@ Occupied in personal and professional life, finding time to write more blog post
 
 The analytics from Fathom show some interesting trends this year. With over 100k page views, the blog has maintained a steady readership.
 
-<img src="/images/year-2024/01.png" width="640" />
+<img src="/images/year-2024/01.png" alt="Fathom analytics chart showing over 100k page views in 2024" width="640" />
 
 What's particularly interesting is how certain technical guides continue to provide value long after publication:
 
-<img src="/images/year-2024/02.png" width="480" />
+<img src="/images/year-2024/02.png" alt="Top technical guides still drawing readers years after publication" width="480" />
 
 Also, most visitors are coming through search engines:
 
-<img src="/images/year-2024/03.png" width="480" />
+<img src="/images/year-2024/03.png" alt="Traffic sources chart with search engines leading" width="480" />
 
 This year, I also made analytics more transparent by creating "/slash" pages and making the stats public at [/stats/](https://app.usefathom.com/share/habfbpub/amanhimself.dev). This allows readers to explore the data and aligns with my belief in open metrics.
 
@@ -64,7 +64,7 @@ A couple of years back, I started to maintain a [single repository](https://git
 
 My role at Expo continues to be a major driver of my GitHub activity. The dense contribution graph reflects me working on Expo's documentation among other things:
 
-<img src="/images/year-2024/04.png" width="640" />
+<img src="/images/year-2024/04.png" alt="GitHub contribution graph for 2024" width="640" />
 
 _A big shout and a huge thanks to folks who [sponsored me on GitHub](https://github.com/sponsors/amandeepmittal) this year!_
 
@@ -72,7 +72,7 @@ _A big shout and a huge thanks to folks who [sponsored me on GitHub](https://gi
 
 I didn't travel to my liking and only managed to escape on a couple of occasions.
 
-<img src="/images/year-2024/05.jpg" width="360" />
+<img src="/images/year-2024/05.jpg" alt="Travel photo from 2024" width="360" />
 
 ### App.js conf 2024
 
@@ -80,11 +80,11 @@ This year's [App.js conference](https://appjs.co/) was a good one. There are so
 
 I'm extremely thankful that I got the opportunity to visit this year. This was my 4th time visiting the conference. Meeting people you work with in person was the highlight of the conference for me this year.
 
-<img src="/images/year-2024/06.jpg" width="360" />
+<img src="/images/year-2024/06.jpg" alt="Photo from App.js Conf 2024 in Krakow" width="360" />
 
 Everything from the venue, the beautiful city of Krakow, and quality talks was a great experience. Kudos to the organizers for hosting it!
 
-<img src="/images/year-2024/07.jpg" width="360" />
+<img src="/images/year-2024/07.jpg" alt="Another moment from App.js Conf 2024" width="360" />
 
 ## Reading
 
@@ -121,4 +121,4 @@ If you are curious about the previous year-in-review posts or how long I have be
 
 Onwards to 2025.
 
-<img src="/images/year-2024/08.jpg" width="360" />
+<img src="/images/year-2024/08.jpg" alt="Closing photo for the 2024 year in review" width="360" />

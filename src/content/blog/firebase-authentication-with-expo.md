@@ -69,29 +69,29 @@ expo install firebase dotenv expo-constants react-native-gesture-handler react-n
 
 To get started, you’re going to need a Firebase app. Once you’ve created a new account with Firebase and logged in, create a new project by clicking on the **Add Project** button.
 
-![ss2](https://i.imgur.com/QRL6R6K.png)
+![Firebase console with the Add Project button](https://i.imgur.com/QRL6R6K.png)
 
 Next, add the name of the new Firebase project and then click **Continue**.
 
-![ss3](https://i.imgur.com/679tjgf.png)
+![Naming the new Firebase project before clicking Continue](https://i.imgur.com/679tjgf.png)
 
 You can disable Google Analytics as it won't be used in this example. Then click **Create Project**
 
-![ss4](https://i.imgur.com/PQZ6MYx.png)
+![Google Analytics toggled off on the Create Project step](https://i.imgur.com/PQZ6MYx.png)
 
 Expo Managed workflow apps can run inside a client app Expo Go (in development mode). The Expo Go app currently supports Firebase JS SDK and not the react-native-firebase library. More information in [official Expo documentation](https://docs.expo.io/guides/using-firebase/).
 
 On the Dashboard screen, in the left side menu, click the settings icon, and then go to the _Project Settings_ page and then look for the section _General > Your apps_. If it's a new project, there won't be any apps.
 
-![ss5](https://i.imgur.com/s5o5gsj.png)
+![Project Settings page with an empty Your apps section](https://i.imgur.com/s5o5gsj.png)
 
 Click the Web button. It will prompt you to enter the details of your app. Enter the app’s nickname, and then click the _Register app_ button.
 
-![ss6](https://i.imgur.com/PRJmfvH.png)
+![Registering a web app by entering its nickname in Firebase](https://i.imgur.com/PRJmfvH.png)
 
 Then, Firebase will provide configuration objects with API keys and other keys that are required to use different Firebase services.
 
-![ss7](https://i.imgur.com/ZY40Mh4.png)
+![Firebase config object with the API keys for the web app](https://i.imgur.com/ZY40Mh4.png)
 
 These API keys can be included in your React Native app as they are not used to access Firebase services’ backend resources. [That can only be done by Firebase security rules](https://firebase.google.com/docs/projects/api-keys).
 
@@ -101,7 +101,7 @@ Let's enable the email/password sign-in method. From the left side menu, go to t
 
 Then, in the _Sign-in method_ tab, click the status of _Email/Password_, enable it, and then click _Save_.
 
-![ss8](https://i.imgur.com/SQlngt6.png)
+![Email/Password enabled in the Firebase Sign-in method tab](https://i.imgur.com/SQlngt6.png)
 
 ## Using Environment Variables
 
@@ -427,7 +427,7 @@ The sole focus of this tutorial is to integrate Firebase SDK and not to teach ho
 
 Let's start by creating the structure of the screens directory. Once you have opened the Expo project in your preferred code editor, you will be welcomed by the default directory structure as shown below:
 
-![ss1](https://i.imgur.com/rqcklse.png)
+![Default directory structure of a new Expo project in the editor](https://i.imgur.com/rqcklse.png)
 
 Create a new directory called `/screens` and add the following screen files:
 
@@ -931,11 +931,11 @@ Also, modify the `App.js` file to return `Routes`.
 
 Here is the demo of the complete authentication flow you will get after this step:
 
-![ss9](https://i.imgur.com/aEN728J.gif)
+![Signing up, logging in and signing out through the auth flow](https://i.imgur.com/aEN728J.gif)
 
 If you head over to the Firebase console and go to the **Users** tab on the Authentication page, you will see the details of the signed up user.
 
-![ss10](https://i.imgur.com/NEiqR2O.png)
+![Users tab of the Firebase Authentication page listing the signed up user](https://i.imgur.com/NEiqR2O.png)
 
 ## Conclusion
 

@@ -20,14 +20,14 @@ There's a better way. Expo CLI has a built-in option that makes this trivial. It
 
 When you run the `npx expo start` command, you must have seen the familiar developer server output:
 
-<img src="/images/ios-simulators/ss1.png" width="480" />
+<img src="/images/ios-simulators/ss1.png" alt="Expo CLI development server output after running npx expo start" width="480" />
 
 Pressing `i` from the keyboard opens your most recently used iOS simulator. But here's the trick I was missing. Pressing `?` will bring all available options. Once those options are exposed in the terminal window, you'll notice `shift + i` lets you selected a specific behavior:
 
-<img src="/images/ios-simulators/ss2.png" width="480" />
+<img src="/images/ios-simulators/ss2.png" alt="Expo CLI terminal options list highlighting the shift plus i shortcut" width="480" />
 
 Press `shift + i`, and Expo CLI presents a searchable list of every simulator you have configured:
 
-<img src="/images/ios-simulators/ss3.png" width="480" />
+<img src="/images/ios-simulators/ss3.png" alt="Expo CLI searchable list of configured iOS simulators" width="480" />
 
 Select your target device, and Expo CLI will launch it and install your app automatically. No manual steps necessary.

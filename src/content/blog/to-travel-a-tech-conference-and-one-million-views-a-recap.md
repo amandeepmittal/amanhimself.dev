@@ -51,7 +51,7 @@ The reason I am stating that is again come from a recent and dear personal exper
 
 Twitter is quite famous in the dev world. Many thrive to make connections, many achieve that too. You can get to know almost any new framework being released, and learn it as well through Twitter. You might also be able to make good connections. Get to know people from an unconditional point of view for a long period of time. Open a new website or business. All that is good in my honest opinion.
 
-<img src='https://cdn-images-1.medium.com/max/800/1*7SYuZvH2pZnM0H79V4ttPg.jpeg' />
+<img src='https://cdn-images-1.medium.com/max/800/1*7SYuZvH2pZnM0H79V4ttPg.jpeg' alt="App.js Conf in Krakow, Poland" />
 
 But attending a tech conference in person is a bit intentional. It will help you reach people on a personal level. I would say, if you are lucky enough to have awesome meetups or a conference happening in your area or city you live in, try attending a few. You never know what lies behind that door.
 

@@ -42,7 +42,7 @@ Ionic includes a copy script file that is called during the build process when t
 
 The location of this script file is under `node_modules` folder:
 
-<img src='https://cdn-images-1.medium.com/max/800/0*samQXT4FoWTgUXK1.png' />
+<img src='https://cdn-images-1.medium.com/max/800/0*samQXT4FoWTgUXK1.png' alt="Location of the Ionic copy script file inside the node_modules folder" />
 
 Copy this file and paste in inside a new directory called `config` under the root directory of your Ionic application. Open the file and add fontawesome entries at the bottom of this file.
 
@@ -96,7 +96,7 @@ To implement FontAwesome in this or any Ionic application after the above config
 </ion-content>
 ```
 
-<img src='https://cdn-images-1.medium.com/max/800/0*RnPachma2AAxR_SY.png' />
+<img src='https://cdn-images-1.medium.com/max/800/0*RnPachma2AAxR_SY.png' alt="Ionic home page listing battery level items with FontAwesome icons" />
 
 There are more than 675 icons available in FontAwesome and I think a combination of both Ionicons and FontAwesome will be enough for some the applications out there. You can even style them, change their `font-size` and color as per your needs.
 

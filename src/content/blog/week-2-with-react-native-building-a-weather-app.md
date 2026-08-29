@@ -36,8 +36,8 @@ This tool is completely open source and saves a lot of my time and yours will to
 
 Next thing I worked on was a small application that I built to fetch weather of city using a third party API and display a set of data in the form of a card. This is how it looks like.
 
-![](https://i.imgur.com/XPIOrxO.png)
-![](https://i.imgur.com/5rz4eNi.png)
+![Weather card showing data fetched for a city](https://i.imgur.com/XPIOrxO.png)
+![Weather card with a background image matching the weather](https://i.imgur.com/5rz4eNi.png)
 
 The main elements that I used in building this application are the following:
 

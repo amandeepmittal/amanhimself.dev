@@ -9,7 +9,7 @@ tags:
 description: ''
 ---
 
-![cover_image](https://i.imgur.com/XFvTGys.jpg)
+![](https://i.imgur.com/XFvTGys.jpg)
 
 Learning React Native development revolves around some common interface patterns that you should practice. One common UI built-in mobile application is an audio player.
 
@@ -28,7 +28,7 @@ You will find the complete code for this tutorial at [this GitHub repository](ht
 
 The end result of this React Native tutorial is to have an audio player that can play tracks from remote audio files. For the demonstration, the app is going to use audio files related to a play written by William Shakespeare from **[Librivox](https://librivox.org/hamlet-by-william-shakespeare/)**. All these audio files are available under the public domain, so you do not have to worry about copyright issues.
 
-![](https://i.imgur.com/euXYG6Z.png)
+![Finished audio player showing the audiobook cover and playback controls](https://i.imgur.com/euXYG6Z.png)
 
 ## Requirements
 
@@ -65,7 +65,7 @@ expo start
 
 The following screen will welcome you:
 
-![ss1](https://i.imgur.com/dxJdAeg.png)
+![Default Expo boilerplate screen after starting the project](https://i.imgur.com/dxJdAeg.png)
 
 Since the app will be consuming a bunch of audio files from a remote resource, it is better if you create an array that will contain details related to each of the audio files and their resource in the form of a URI. Open `App.js` and add the following array before the `App` component.
 
@@ -249,7 +249,7 @@ To provide styles to your React Native components, there are no classes or IDs i
 
 Execute the command `expo start` from a terminal window, if you haven't already, and you will get the following result.
 
-![](https://i.imgur.com/V15bamY.png)
+![Audiobook cover image above the three player control buttons](https://i.imgur.com/V15bamY.png)
 
 ## Exploring the Audio API
 
@@ -474,7 +474,7 @@ render() {
 
 Now, run the application, and you will get the following result.
 
-![](https://i.imgur.com/sF49I90.gif)
+![Audio player playing a track and skipping to the next one](https://i.imgur.com/sF49I90.gif)
 
 ## Conclusion
 

@@ -27,7 +27,7 @@ After running the command, if the iOS simulator is already running, close and re
 
 To test it out, open the simulator and tap on the screen.
 
-![ss1](https://i.imgur.com/h31kDO1.gif)
+![iOS simulator showing the single touch indicator on each tap](https://i.imgur.com/h31kDO1.gif)
 
 ## Disable Touch Indicator on iOS simulator
 

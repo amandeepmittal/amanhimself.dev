@@ -187,7 +187,7 @@ const styles = StyleSheet.create({
 
 After running `npx expo start`, I get the list of mangas displayed on the home screen:
 
-<img src="/images/react-native/manga-list-01.png" width="320" />
+<img src="/images/react-native/manga-list-01.png" width="320" alt="Home screen listing manga titles fetched with useQuery" />
 
 ## Fetching data for a single item
 
@@ -400,7 +400,7 @@ const styles = StyleSheet.create({
 
 After running `npx expo start`, I get the list of mangas displayed on the home screen and then I can navigate to the detail screen by tapping on an item.
 
-<img src="/images/react-native/manga-list-02.gif" width="320" />
+<img src="/images/react-native/manga-list-02.gif" width="320" alt="Tapping a manga in the list opens its detail screen" />
 
 ## Wrapping up
 

@@ -9,7 +9,7 @@ tags:
 description: ''
 ---
 
-![cover](https://i.imgur.com/X7ju8yL.jpg)
+![](https://i.imgur.com/X7ju8yL.jpg)
 
 > [Originally this article was published on Zeolearn.com](https://www.zeolearn.com/magazine/connecting-reactjs-frontend-with-nodejs-backend)
 
@@ -40,7 +40,7 @@ cd server
 
 When changing the current directory to the project `express` command just scaffolded, we can observe the following structure and files:
 
-<img src='https://cdn-images-1.medium.com/max/800/0*x6livl3bk3Wc8OX6.png' />
+<img src='https://cdn-images-1.medium.com/max/800/0*x6livl3bk3Wc8OX6.png' alt="Project structure and files scaffolded by express-generator" />
 
 To run this backend server on default configuration, we have to install the dependencies mentioned in `package.json` first.
 
@@ -162,7 +162,7 @@ npm start
 
 If you get the screen below by navigation on port `http://localhost:3000`, it means that our server is running.
 
-<img src='https://cdn-images-1.medium.com/max/800/0*Tgeuf8qKcqzzwfSZ.png' />
+<img src='https://cdn-images-1.medium.com/max/800/0*Tgeuf8qKcqzzwfSZ.png' alt="Default Express welcome page running on localhost:3000" />
 
 Before we move to generate our front-end application, we need to change to port for our backend since front-end application generated using `create-react-app` will also be running on port `3000`. Open `bin/www` file and edit:
 
@@ -273,7 +273,7 @@ constructor(props) {
 
 The FormData object lets you compile a set of key/value pairs to send using XMLHttpRequest. It is primarily intended for use in sending form data but can be used independently from forms in order to transmit keyed data. To build a FormData object, instantiating it then appending fields to it by calling its `append()` method like we did above.
 
-<img src='https://cdn-images-1.medium.com/max/800/0*Xa5qBk-hqFkJsTIW.png' />
+<img src='https://cdn-images-1.medium.com/max/800/0*Xa5qBk-hqFkJsTIW.png' alt="Unstyled FileUpload form with a file input, name field, and Upload button" />
 
 Since we are not using any styling, our form looks bare minimum and ugly. But you can go ahead and make it look more professional. For brevity, I am going to keep things simple. I recommend you to always enter a file uname, other wise it will store the file on the with `undefined.jpg` name.
 
@@ -312,6 +312,6 @@ GET /public/abc.jpg 200 6.231 ms - 60775
 
 At the same time, the client is requesting to view the file on the front-end with a `GET` HTTP method. That means the route `/upload` from the browser is successfully called and everything is working fine. Once the file is uploaded on the server and it will be sent back to the client to reflect that the user has successfully uploaded the file.
 
-<img src='https://cdn-images-1.medium.com/max/800/0*cWOzuejEhEOtSQV8.png' />
+<img src='https://cdn-images-1.medium.com/max/800/0*cWOzuejEhEOtSQV8.png' alt="Uploaded image displayed back in the React app after a successful upload" />
 
 You can find the complete code for this example at [**FileUpload-Example**](https://github.com/amandeepmittal/fileupload-example) Github Repository.

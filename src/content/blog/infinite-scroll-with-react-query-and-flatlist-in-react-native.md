@@ -121,7 +121,7 @@ The `QueryClientProvider` component provides an instance in the form of `QueryCl
 
 After modifying `App.js`, you will get the following output on a device:
 
-![ss1](https://i.imgur.com/aFep48m.png)
+![Home screen showing the Explore Games title and a divider](https://i.imgur.com/aFep48m.png)
 
 ## Add a Base URL to use RAWG REST API
 
@@ -214,7 +214,7 @@ In the above snippet, take a note that React Query comes with the implementation
 
 Here is the output after this step:
 
-![ss2](https://i.imgur.com/jSX1Aqu.gif)
+![Spinner while loading, then the first page of games in the FlatList](https://i.imgur.com/jSX1Aqu.gif)
 
 ## Adding pagination to the API request
 
@@ -301,7 +301,7 @@ Modify the `FlatList` component as shown below:
 
 Here is the output after this step. Notice the scroll indicator on the right-hand side of the screen. As soon as it reaches a little below half of the list, it repositions itself. This repositioning indicates that the data from the next page is fetched by the `useInfiniteQuery` hook.
 
-![ss3](https://i.imgur.com/IiJMVA7.gif)
+![Scroll indicator repositioning as the next page of games loads](https://i.imgur.com/IiJMVA7.gif)
 
 The default value of the threshold is `0.5`. This means that the `loadMore` will get triggered at the half-visible length of the list. To modify this value, you can add another prop, `onEndReachedThreshold`. It accepts a value between 0 and 1, where 0 is the end of the list.
 
@@ -392,7 +392,7 @@ export const HomeScreen = () => {
 
 Here is the output:
 
-![ss4](https://i.imgur.com/uLmbrjC.gif)
+![Footer spinner appearing while the next page of games is fetched](https://i.imgur.com/uLmbrjC.gif)
 
 ## Wrapping up
 

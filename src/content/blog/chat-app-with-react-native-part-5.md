@@ -9,7 +9,7 @@ tags:
 description: ''
 ---
 
-![cover](https://i.imgur.com/ROYjoYo.jpg)
+![](https://i.imgur.com/ROYjoYo.jpg)
 
 In [part 4](https://amanhimself.dev/blog/chat-app-with-react-native-part-4), we built the foundation of creating a chat app by adding UI screens that are focused on sending, receiving and displaying chat messages. We used `react-native-gifted-chat` an amazing open source library and dived deep to use its "out of the box" props to add features to the chat app.
 
@@ -105,21 +105,21 @@ useEffect(() => {
 
 There are two ways to check the output of console statements in a React Native app. First, a console statement triggers, in the terminal window, the will be a `LOG` entry like below with desired result.
 
-<img src='https://miro.medium.com/max/1400/1*vgS3rCFKAkxb6WHHbESkvA.png' />
+<img src='https://miro.medium.com/max/1400/1*vgS3rCFKAkxb6WHHbESkvA.png' alt="Terminal LOG entry printed by the console statement" />
 
 However, for better complete control over [debugging](https://reactnative.dev/docs/debugging), you can use Chrome dev tools. This can be done by opening the in-app developer menu, either by shaking the device or if you are using an iOS simulator press `command + d`. On Android, you have to press `command + m` on mac (for windows, press `control + m`).
 
 A developer menu like below will popup.
 
-<img src='https://miro.medium.com/max/700/1*eQVIYyJTWubyIp20NSTpiQ.png' />
+<img src='https://miro.medium.com/max/700/1*eQVIYyJTWubyIp20NSTpiQ.png' alt="In-app developer menu with the Debug option in the simulator" />
 
 Select the option `Debug`. In your default Chrome browser, it is going to open like below.
 
-<img src='https://miro.medium.com/max/1066/1*t-56v6dq-N4T955hoj28cw.png' />
+<img src='https://miro.medium.com/max/1066/1*t-56v6dq-N4T955hoj28cw.png' alt="React Native debugger page opened in the Chrome browser" />
 
 Go to **Console** tab. Enter a chat room from the app. If you do not have to created a chat room yet, create one. On the Console tab, you are going to get the following result.
 
-<img src='https://miro.medium.com/max/1400/1*rl94NSCpjYETiy0HAKYk4A.png' />
+<img src='https://miro.medium.com/max/1400/1*rl94NSCpjYETiy0HAKYk4A.png' alt="Chrome Console tab logging the current user object and email" />
 
 That's it. Now, from the above image, you can definitely verify that a user is logged in and their email credentials can be verified.
 
@@ -174,15 +174,15 @@ async function handleSend(messages) {
 
 Go back to the simulator, create a new room, and send a message.
 
-<img src='https://miro.medium.com/max/684/1*Bw1kO21guUat419nn5Gd-A.gif' />
+<img src='https://miro.medium.com/max/684/1*Bw1kO21guUat419nn5Gd-A.gif' alt="Creating a room and sending a message from the simulator" />
 
 In Firebase console, you are going to notice that the inside the `THREADS` collection, a sub-collection called `MESSAGES` is created as shown below.
 
-<img src='https://miro.medium.com/max/1400/1*88BW7XRZjeFhSrUqvaxA0A.png' />
+<img src='https://miro.medium.com/max/1400/1*88BW7XRZjeFhSrUqvaxA0A.png' alt="MESSAGES sub-collection created inside a THREADS document" />
 
 Ignore the `latestMessage` field, we will cover that in the next section. The image below displays that the messages are being stored with correct information.
 
-<img src='https://miro.medium.com/max/1400/1*t-vcelQcGA_HI9cvutPZ_g.png' />
+<img src='https://miro.medium.com/max/1400/1*t-vcelQcGA_HI9cvutPZ_g.png' alt="Message document storing the text, timestamp, and user fields" />
 
 ## Display the latest message for each chat room on home screen
 
@@ -270,7 +270,7 @@ async function handleSend(messages) {
 
 The messages in chat room are going to be displayed as the following.
 
-<img src='https://miro.medium.com/max/700/1*WDL3DnVJPQPUNMIpD0NHTg.png' />
+<img src='https://miro.medium.com/max/700/1*WDL3DnVJPQPUNMIpD0NHTg.png' alt="Messages fetched from Firestore displayed inside the chat room" />
 
 In order to make all this work, make sure to modify the following two props in return statement.
 
@@ -323,13 +323,13 @@ function handleButtonPress() {
 
 Now, when you create a new room through the app, here is the complete overview of how it gets reflected in Firestore.
 
-<img src='https://miro.medium.com/max/1400/1*-P8qzzB9hQZjHljwfBym6w.png' />
+<img src='https://miro.medium.com/max/1400/1*-P8qzzB9hQZjHljwfBym6w.png' alt="New thread document in Firestore with its latestMessage field" />
 
-<img src='https://miro.medium.com/max/1400/1*FqFGH5woXMLdH0MnlNLUtg.png' />
+<img src='https://miro.medium.com/max/1400/1*FqFGH5woXMLdH0MnlNLUtg.png' alt="MESSAGES sub-collection holding the system generated first message" />
 
 And here is the system message displayed in the new chat room.
 
-<img src='https://miro.medium.com/max/700/1*eGiETDWsXMKgnczQ6nAUfA.png' />
+<img src='https://miro.medium.com/max/700/1*eGiETDWsXMKgnczQ6nAUfA.png' alt="Default system message shown in a newly created chat room" />
 
 ## Customizing the system message in react-native-gifted-chat
 
@@ -387,7 +387,7 @@ return (
 
 Here is the output you are going to get after this step.
 
-<img src='https://miro.medium.com/max/700/1*k8b2ObpU4FoiMfRVmXwvQw.png' />
+<img src='https://miro.medium.com/max/700/1*k8b2ObpU4FoiMfRVmXwvQw.png' alt="System message restyled with a custom background and text style" />
 
 ## How to display latest message on home screen?
 
@@ -434,15 +434,15 @@ description={item.latestMessage.text}
 
 Go back to the simulator and you are going to see the latest message displayed.
 
-<img src='https://miro.medium.com/max/940/1*wc1bhW2LavbuiM3dw0QCXA.png' />
+<img src='https://miro.medium.com/max/940/1*wc1bhW2LavbuiM3dw0QCXA.png' alt="Home screen rooms showing the latest message as the description" />
 
 Try sending a new message and that is going to be the latest message displayed on the home screen for the chat room.
 
-<img src='https://miro.medium.com/max/684/1*JKTyv7WO-_TOtOcHPmlfBw.gif' />
+<img src='https://miro.medium.com/max/684/1*JKTyv7WO-_TOtOcHPmlfBw.gif' alt="Sending a message updates the latest message on the home screen" />
 
 There is a benefit of ordering the chat rooms according to the latest message for each room. Now the home screen is going to display that chat room on top which received it the most recent message according the timestamp (createdAt)that is associated with the message.
 
-<img src='https://miro.medium.com/max/684/1*nDaN1lXF75iWEWg6X-0sqQ.gif' />
+<img src='https://miro.medium.com/max/684/1*nDaN1lXF75iWEWg6X-0sqQ.gif' alt="Chat rooms reordered so the most recently active room is on top" />
 
 ## What's Next?
 

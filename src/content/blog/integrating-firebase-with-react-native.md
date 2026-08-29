@@ -46,7 +46,7 @@ react-native run-android
 
 This command will run the default screen as shown below in an iOS simulator or Android emulator but it will take a few moments since we are running it for the first time.
 
-![ss1](https://i.imgur.com/mBobZpT.png)
+![Default React Native welcome screen in the simulator](https://i.imgur.com/mBobZpT.png)
 
 ## Adding Firebase
 
@@ -58,11 +58,11 @@ yarn add firebase
 
 When we open the project in a code editor, its structure looks like this:
 
-![ss2](https://i.imgur.com/TdKzipp.png)
+![File structure of the rnFirebaseDemo project in a code editor](https://i.imgur.com/TdKzipp.png)
 
 We need to make some modifications before we can really start building our app. Create an `src` directory inside the root folder. This is where our app components and screens will live. Further, within the `src` directory, we will create two folders: `screens` and `components`.
 
-![ss3](https://i.imgur.com/N9m3Y83.png)
+![src directory holding the screens and components folders](https://i.imgur.com/N9m3Y83.png)
 
 The `screen` directory will contain all the UI related components that we need to display to the end user, whereas the `components` folder will contain any other component that will be used or re-used to display the user interface.
 
@@ -175,7 +175,7 @@ export default class App extends Component {
 
 At this stage, if we go to the simulator, we will see the following result:
 
-![ss4](https://i.imgur.com/IMXVJ9n.png)
+![Home screen rendered by the stack navigator](https://i.imgur.com/IMXVJ9n.png)
 
 The Home Screen is showing up. We will add two other screens as routes to `AppNavigator` in order to navigate to them through the Home Screen.
 
@@ -226,13 +226,13 @@ In the code above, we are adding a `Button` component from the `react-native` AP
 
 You can also customize the back button manually with your own styling on both screens `AddItem` and `List` but, for our demonstration, we are going to use the default.
 
-![ss5](https://i.imgur.com/oB1OSRS.gif)
+![Navigating from the Home screen to the AddItem and List screens](https://i.imgur.com/oB1OSRS.gif)
 
 ## Creating a Database with Firebase
 
 Go to the [Firebase](https://firebase.google.com/) Console, log in from your Google Account and a create a new project.
 
-![ss6](https://i.imgur.com/kB6UcyI.png)
+![Firebase console creating a new project](https://i.imgur.com/kB6UcyI.png)
 
 We will then add the database configuration in a new file inside `src/config.js`.
 
@@ -256,7 +256,7 @@ The config object is where you fill in the details you get after creating a new 
 { "rules": { ".read": true, ".write": true } }
 ```
 
-![ss7](https://i.imgur.com/JyNyFqS.png)
+![Realtime Database rules set to allow read and write](https://i.imgur.com/JyNyFqS.png)
 
 ## Adding Data from the App to Firebase
 
@@ -358,7 +358,7 @@ const styles = StyleSheet.create({
 
 In the code above, we are adding a Firebase database instance from `config.js` and `db` and then pushing any item that the user adds through `addItem` and `handleSubmit()`. You will get an alert message when you press the button **Add** to add the item from the input value as shown below.
 
-![ss8](https://imgur.com/qi5UQec.gif)
+![Alert message shown after adding an item from the input field](https://imgur.com/qi5UQec.gif)
 
 To verify that the data is there in the database, go to your Firebase console.
 
@@ -455,7 +455,7 @@ const styles = StyleSheet.create({
 
 This step concludes the integration of a Firebase database with our React Native app. You can now add the new data items and fetch them from the database as shown below.
 
-![ss9](https://i.imgur.com/0Nr4d4J.gif)
+![Adding new items and fetching them back from the database](https://i.imgur.com/0Nr4d4J.gif)
 
 ## Conclusion
 

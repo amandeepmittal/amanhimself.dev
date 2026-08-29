@@ -11,7 +11,7 @@ description: ''
 
 > Updated on: August 4, 2021
 
-![cover](https://i.imgur.com/ateUlTf.png)
+![](https://i.imgur.com/ateUlTf.png)
 
 A `ScrollView` is a component that enables to view the content on a device's screen that is not able to be displayed in one screen. Using a scroll view component, the content can either be scrolled vertically or horizontally. This depends a lot on the design of the mobile application.
 

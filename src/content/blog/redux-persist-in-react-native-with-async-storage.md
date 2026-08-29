@@ -196,7 +196,7 @@ To run the application, execute the command `yarn start` from the terminal windo
 
 Here is the output after this step:
 
-![ss1](https://i.imgur.com/BPjPOgp.png)
+![Empty BooksList and BookmarksList tabs in the custom bottom tab bar](https://i.imgur.com/BPjPOgp.png)
 
 ## Add action types and creators
 
@@ -454,7 +454,7 @@ const renderItem = ({ item }) => {
 
 Here is the output you are going to get after this step:
 
-![ss2](https://i.imgur.com/x0meApG.png)
+![Bestsellers list with book covers, page counts, ratings, and bookmark buttons](https://i.imgur.com/x0meApG.png)
 
 ## Add action creators and update the reducer
 
@@ -784,11 +784,11 @@ export default function BookmarksList() {
 
 Go to the simulator or the real device where you are running the Expo client, and you can test the functionality by adding or removing the bookmark to an item. Also, notice the dynamic UI changes of the bookmark button in the first tab.
 
-![ss3](https://i.imgur.com/ckD9Pcc.gif)
+![Adding and removing bookmarks while the bookmark button changes color](https://i.imgur.com/ckD9Pcc.gif)
 
 Make sure to close the Expo client and then start it to see if the state from the Redux store persists or not.
 
-![ss4](https://i.imgur.com/tP4SSP5.gif)
+![Bookmarks still listed after closing and reopening the Expo client](https://i.imgur.com/tP4SSP5.gif)
 
 And that's it! I hope you have found this tutorial helpful.
 

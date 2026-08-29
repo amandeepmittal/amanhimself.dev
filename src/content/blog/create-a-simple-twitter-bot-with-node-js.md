@@ -13,7 +13,7 @@ description: ''
 
 How about a Twitter Bot that retweets, favorites, on the basis of hashtags and replies to other users if they follow it? I made a similar kind of a Twitter Bot [(@nodejstweet)](https://x.com/nodejstweet) that feeds me the latest or the ongoing news/articles/how-to’s on a set of hashtags such as #Nodejs, #MongoDB, #AngularJS, #IonicFramework, et cetera. At the time I never expected it having more followers than me but that has been surpassed.
 
-<img src='https://cdn-images-1.medium.com/max/800/1*DcLASOdtPlO8p86oUg86JA.png' />
+<img src='https://cdn-images-1.medium.com/max/800/1*DcLASOdtPlO8p86oUg86JA.png' alt="Twitter profile of the @nodejstweet bot with its follower count" />
 
 ### What this bot will do?
 

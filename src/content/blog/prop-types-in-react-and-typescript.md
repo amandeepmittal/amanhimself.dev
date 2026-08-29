@@ -40,7 +40,7 @@ export default App;
 
 Above code snippet will run fine, and there no errors or warnings yet. If you use VS Code, hover over the prop `color` in the `App` component. You will see the expected data type on the prop.
 
-![s1](https://res.cloudinary.com/amanmittal/image/upload/v1624823701/s1_beblnm.png)
+![Hovering over the color prop shows the expected data type in VS Code](https://res.cloudinary.com/amanmittal/image/upload/v1624823701/s1_beblnm.png)
 
 But what if in the `App` component, the value of prop `color` is changed to a number by mistake. The component will still render in the web browser.
 
@@ -56,7 +56,7 @@ function App() {
 
 But if you open the browser's Developer Tools and go to console, you will see the error.
 
-![s2](https://res.cloudinary.com/amanmittal/image/upload/v1624823701/s2_p9h3mq.png)
+![Browser console warning from prop-types about an invalid prop type](https://res.cloudinary.com/amanmittal/image/upload/v1624823701/s2_p9h3mq.png)
 
 The `prop-types` package provide validation at run-time. Not a great developer experience (imagine large applications). Using TypeScript in a React application can make the developer experience better.
 
@@ -64,7 +64,7 @@ The `prop-types` package provide validation at run-time. Not a great developer e
 
 Take the previous code snippet, copy it in a `.tsx` file. Here is how the components will look. Notice the red squiggly line beneath the prop `color`.
 
-![s3](https://res.cloudinary.com/amanmittal/image/upload/v1624823702/s3_okboft.png)
+![Red squiggly line under the color prop in a tsx file](https://res.cloudinary.com/amanmittal/image/upload/v1624823702/s3_okboft.png)
 
 TypeScript is smart enough not to compile the code if a prop has a type of `any`.
 
@@ -104,7 +104,7 @@ function FavoriteColor({ color }: Props) {
 
 The VS Code IntelliSense will detect the type of `color` prop in the `App` component. It will allow you to provide anything other than a `string` value for this prop.
 
-![s4](https://res.cloudinary.com/amanmittal/image/upload/v1624823701/s4_fyz6bw.png)
+![IntelliSense showing the color prop typed as string](https://res.cloudinary.com/amanmittal/image/upload/v1624823701/s4_fyz6bw.png)
 
 ## Props are required in TypeScript
 
@@ -112,7 +112,7 @@ Another difference to notice here is that, with TypeScript, all props required b
 
 With TypeScript, that is not the case.
 
-![s5](https://res.cloudinary.com/amanmittal/image/upload/v1624823702/s5_m36cnq.png)
+![TypeScript error when a required prop is not provided](https://res.cloudinary.com/amanmittal/image/upload/v1624823702/s5_m36cnq.png)
 
 ## Optional props in TypeScript
 

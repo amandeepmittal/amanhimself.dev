@@ -9,7 +9,7 @@ tags:
 description: ''
 ---
 
-![cover](https://i.imgur.com/ROYjoYo.jpg)
+![](https://i.imgur.com/ROYjoYo.jpg)
 
 In [part 3](https://amanhimself.dev/blog/chat-app-with-react-native-part-3), we completed the task of integrating the Firestore to the current React Native app. The database now stores a chat room name. A new chat room can be created using a modal stack, only if the user is authenticated.
 
@@ -228,11 +228,11 @@ const styles = StyleSheet.create({
 
 Go to the simulator window and you are going to get the following result.
 
-<img src='https://miro.medium.com/max/684/1*us9hK50YmGKMfhLHR62RjQ.gif' />
+<img src='https://miro.medium.com/max/684/1*us9hK50YmGKMfhLHR62RjQ.gif' alt="Opening a chat room from the list to reach the room screen" />
 
 Great! The chat UI for each room is now accessible. Try to send a message, of course, it won't get saved since there is no database connected yet.
 
-<img src='https://miro.medium.com/max/684/1*Z90LuoopOAmDJ6XEDNMouA.gif' />
+<img src='https://miro.medium.com/max/684/1*Z90LuoopOAmDJ6XEDNMouA.gif' alt="Sending a message that is lost after leaving the chat room" />
 
 Once the user exits the room and comes back later, only the mock message is displayed. Do notice that the system message `New room created` is displayed as well.
 
@@ -264,7 +264,7 @@ When using the `react-navigation` library for routing, each screen component is 
 
 Here is the output you are going to get on the device.
 
-<img src='https://miro.medium.com/max/684/1*EU5dtN80Hfm9DkVcrptWxw.gif' />
+<img src='https://miro.medium.com/max/684/1*EU5dtN80Hfm9DkVcrptWxw.gif' alt="Chat room header showing the full room name from route params" />
 
 ## Modifying the Chat screen UI: Changing the chat bubble
 
@@ -272,7 +272,7 @@ Gifted chat module gives an advantage for creating a Chat UI in a React Native a
 
 Right now the chat bubble appears as shown below.
 
-<img src='https://miro.medium.com/max/222/1*HDpbiswqzzq-7gWbeaUG3Q.png' />
+<img src='https://miro.medium.com/max/222/1*HDpbiswqzzq-7gWbeaUG3Q.png' alt="Default gifted chat message bubble before styling" />
 
 Let us change the background color of this bubble to reflect the same color as in the header bar (which is used at many instances in the app). This is going to be done in the following steps:
 
@@ -323,7 +323,7 @@ export default function RoomScreen() {
 
 With that done, here is the output you are going to get.
 
-<img src='https://miro.medium.com/max/177/1*k-uFSzdbiXLtwEyg6CCYGw.png' />
+<img src='https://miro.medium.com/max/177/1*k-uFSzdbiXLtwEyg6CCYGw.png' alt="Message bubble using the same purple color as the header bar" />
 
 ## Adding other modifications to Chat UI
 
@@ -341,11 +341,11 @@ You can modify the placeholder text using the prop `placeholder` as shown below.
 
 Previously the placeholder text says:
 
-<img src='https://miro.medium.com/max/636/1*2lsV60N_T2aPPFeRTmEYcA.png' />
+<img src='https://miro.medium.com/max/636/1*2lsV60N_T2aPPFeRTmEYcA.png' alt="Message input showing the default gifted chat placeholder text" />
 
 After adding the `placeholder` prop, it looks like:
 
-<img src='https://miro.medium.com/max/654/1*JaJ8K1w8W2pbud6i9Tj7qw.png' />
+<img src='https://miro.medium.com/max/654/1*JaJ8K1w8W2pbud6i9Tj7qw.png' alt="Message input with the custom Type your message here placeholder" />
 
 You can add the prop `showUserAvatar` to always display the user avatar of the current user.
 
@@ -360,7 +360,7 @@ You can add the prop `showUserAvatar` to always display the user avatar of the c
 />
 ```
 
-<img src='https://miro.medium.com/max/744/1*ZmQvR95wG7tAGdPtbdtNtg.png' />
+<img src='https://miro.medium.com/max/744/1*ZmQvR95wG7tAGdPtbdtNtg.png' alt="Chat thread with the current user avatar shown beside messages" />
 
 Right now, the send button only appears when the user is typing a message. Add the prop `alwaysShowSend` to always show the send button to the current user.
 
@@ -376,7 +376,7 @@ Right now, the send button only appears when the user is typing a message. Add t
 />
 ```
 
-<img src='https://miro.medium.com/max/748/1*390BD7LTZ5G2Ew_h8BYQrw.png' />
+<img src='https://miro.medium.com/max/748/1*390BD7LTZ5G2Ew_h8BYQrw.png' alt="Send button always visible next to the empty message input" />
 
 ## Add a custom send button
 
@@ -436,13 +436,13 @@ const styles = StyleSheet.create({
 
 Here is the output you are going to get after this step.
 
-<img src='https://miro.medium.com/max/742/1*qol2YSd4FJH13CP_NWep1g.png' />
+<img src='https://miro.medium.com/max/742/1*qol2YSd4FJH13CP_NWep1g.png' alt="Custom send icon button rendered by the renderSend helper" />
 
 ## Add a scroll to the bottom button
 
 Right now, in the Chat UI, there is no way for the current user to scroll to the latest message. They have to manually scroll down to see the latest message in the thread. Here is a demo of the problem.
 
-<img src='https://miro.medium.com/max/684/1*XSF9AJNiqT08s1mBiJxvDQ.gif' />
+<img src='https://miro.medium.com/max/684/1*XSF9AJNiqT08s1mBiJxvDQ.gif' alt="Scrolling the thread manually to reach the latest message" />
 
 This can be solved by adding prop `scrollToBottom`.
 
@@ -462,7 +462,7 @@ This can be solved by adding prop `scrollToBottom`.
 
 Take a look at the down caret sign at the right side of the app shown below.
 
-<img src='https://miro.medium.com/max/700/1*5wo3Pu65wxWdATlsTxqs3A.png' />
+<img src='https://miro.medium.com/max/700/1*5wo3Pu65wxWdATlsTxqs3A.png' alt="Default scroll to bottom caret button at the right of the thread" />
 
 This is not pleasing at all with the current background of the screen. Let us modify this button with a custom background. This can be done in three simple steps.
 
@@ -512,7 +512,7 @@ const styles = StyleSheet.create({
 
 Here is the output.
 
-<img src='https://miro.medium.com/max/684/1*dDTq0Wpr_aFMyN_RWttPIg.gif' />
+<img src='https://miro.medium.com/max/684/1*dDTq0Wpr_aFMyN_RWttPIg.gif' alt="Custom scroll to bottom button jumping the thread to the latest message" />
 
 ## Add a loading spinner when the room screen initializes
 
@@ -570,7 +570,7 @@ const styles = StyleSheet.create({
 
 On the current screen you might see a loading indicator when you refresh the app for the first time or when the screen initializes for the first time.
 
-<img src='https://miro.medium.com/max/684/1*Ztwt_qL30dreUv_JMvhhwg.gif' />
+<img src='https://miro.medium.com/max/684/1*Ztwt_qL30dreUv_JMvhhwg.gif' alt="Loading spinner shown while the chat room screen initializes" />
 
 ## What's Next?
 

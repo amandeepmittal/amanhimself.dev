@@ -39,7 +39,7 @@ git remote set-head origin main
 
 Now, go to the GitHub repo. Open Settings > Branches. Under Default Branch, click the edit button to switch to the `main` branch.
 
-![ss1](https://i.imgur.com/T9Mm8g5.png)
+![GitHub branch settings with main selected as the default branch](https://i.imgur.com/T9Mm8g5.png)
 
 Now, go back to the terminal window and run the following command to delete the previous default branch name.
 

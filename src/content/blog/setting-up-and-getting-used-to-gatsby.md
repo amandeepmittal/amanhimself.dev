@@ -45,15 +45,15 @@ gatsby new first-gatsby-site
 
 You can name your project anything you like, I named that just for the brevity.
 
-<img src='https://cdn-images-1.medium.com/max/800/0*D0A60lp-sDgjvHi1.png' />
+<img src='https://cdn-images-1.medium.com/max/800/0*D0A60lp-sDgjvHi1.png' alt="Terminal output after running gatsby new first-gatsby-site" />
 
 Finish the installation and set up of the project. Then change the directory into the newly created folder. Run `gatsby develop` from the command line to see your site running live at http://localhost:8000.
 
-<img src='https://cdn-images-1.medium.com/max/800/0*jAK-XXvfqorbpKcv.png' />
+<img src='https://cdn-images-1.medium.com/max/800/0*jAK-XXvfqorbpKcv.png' alt="Terminal running gatsby develop with the site served at localhost:8000" />
 
 In your browser window, the default Gatsby.js application looks like this:
 
-<img src='https://cdn-images-1.medium.com/max/800/0*_ajd3MY423FW8PO6.png' />
+<img src='https://cdn-images-1.medium.com/max/800/0*_ajd3MY423FW8PO6.png' alt="Default Gatsby.js starter site in the browser window" />
 
 Leave the command running since it enables Hot Reloading. Now any change we make to our project will be reflected directly, without refreshing the page.
 
@@ -61,7 +61,7 @@ Currently, our application contains two pages. Hence, the bare minimum routing i
 
 ### Diving deep in the Project Structure
 
-<img src='https://cdn-images-1.medium.com/max/800/0*9eiAcl39nN1Uj08q.png' />
+<img src='https://cdn-images-1.medium.com/max/800/0*9eiAcl39nN1Uj08q.png' alt="Gatsby project structure with the src directory and gatsby-config.js" />
 
 Every Gatsby project contains at least these files. You might be familiar with some such as `node_modules,` `public` directory, which is served when deployed. It also contains `package.json,` which contains the metadata of any modern Javascript application.
 
@@ -166,7 +166,7 @@ export default IndexPage;
 
 Similarly, you will find the code in `page-2.js`. If in our browser window, we try to navigate to the second page, notice the URL of the site when the second page loads.
 
-<img src='https://cdn-images-1.medium.com/max/800/0*6-NTcYa0m_ZMiJmx.png' />
+<img src='https://cdn-images-1.medium.com/max/800/0*6-NTcYa0m_ZMiJmx.png' alt="Second page loaded in the browser with its URL matching the file name" />
 
 It is same as the file name. We are also using `Link` tag from Gatsby to navigate back to the homepage.
 
@@ -209,7 +209,7 @@ const IndexPage = () => (
 export default IndexPage;
 ```
 
-<img src='https://cdn-images-1.medium.com/max/800/0*y_FCYqu-Zne_IfXH.png' />
+<img src='https://cdn-images-1.medium.com/max/800/0*y_FCYqu-Zne_IfXH.png' alt="Homepage rendering the new link to page 3" />
 
 This renders correctly on our page. Do notice the `404.js` file in the directory. This file is rendered when no desired URL is found. More info can be read in [official Gatsby docs](https://www.gatsbyjs.org/docs/add-404-page/).
 
@@ -290,7 +290,7 @@ const Header = () => (
 
 If you save the file, the results are reflected immediately on the homepage and on every page.
 
-<img src='https://cdn-images-1.medium.com/max/800/0*0ZgP3U6tQtz1rIyz.png' />
+<img src='https://cdn-images-1.medium.com/max/800/0*0ZgP3U6tQtz1rIyz.png' alt="Updated header reflected on the homepage after saving the file" />
 
 ### Configuration File
 

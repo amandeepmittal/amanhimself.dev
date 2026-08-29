@@ -9,7 +9,7 @@ tags:
 description: ''
 ---
 
-![cover image](https://res.cloudinary.com/practicaldev/image/fetch/s--lgaAXnJK--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/r84rtekdnk3qd4r4v31e.png)
+![](https://res.cloudinary.com/practicaldev/image/fetch/s--lgaAXnJK--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/r84rtekdnk3qd4r4v31e.png)
 
 With an [update in August 2021](https://code.visualstudio.com/updates/v1_60#_high-performance-bracket-pair-colorization), VS Code started supporting Bracket pair colorization natively. It means there is no need to use the [Bracket Pair Colorizer](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer) extension (_which I love_).
 
@@ -17,7 +17,7 @@ In their official announcement, the VS Code team states they chose to implement 
 
 I recently uninstalled the extension and thought, let's try to use the editor without any bracket color extension. I cannot. I've been using the extension [as long as I remember](https://amanhimself.dev/blog/how-i-configure-vscode-for-everything/) and I cannot go back to plain, colorless brackets.
 
-![ss1](https://i.imgur.com/JBOVcnV.png)
+![Nested brackets shown in different colors in the VS Code editor](https://i.imgur.com/JBOVcnV.png)
 
 To enable this setting, open the `settings.json` file for the VS Code editor and add the following:
 
@@ -39,6 +39,6 @@ To enable this setting, open the `settings.json` file for the VS Code editor and
 
 And tweak the colors according to your style!
 
-![ss2](https://i.imgur.com/tSgx02e.png)
+![Bracket pairs colorized with the Dracula theme palette in VS Code](https://i.imgur.com/tSgx02e.png)
 
 By the way, the above colors are from [Dracula theme's 🧛‍♂️ color palette](https://draculatheme.com/contribute) to match the overall editor theme I am currently using.

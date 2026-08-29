@@ -55,7 +55,7 @@ The application on a specific mobile operating system runs via tool like [Cordov
 
 WebView communicates with Cordova’s APIs which then further communicates with mobile devices.
 
-<img src='https://cdn-images-1.medium.com/max/800/1*hdwWntqxD-qOL8vf87DmAQ.png' />
+<img src='https://cdn-images-1.medium.com/max/800/1*hdwWntqxD-qOL8vf87DmAQ.png' alt="WebView communicating with Cordova APIs and the native mobile device" />
 
 WebViews are so common these days that you can build desktop applications using [Electron](http://electron.atom.io/).
 
@@ -97,7 +97,7 @@ To get a list of all Ionic templates available type in terminal:
 
 `ionic start` is the command that is used to scaffold an Ionic application.
 
-<img src='https://cdn-images-1.medium.com/max/800/1*zYrkeFhqj6-YCDaF0LcWMg.png' />
+<img src='https://cdn-images-1.medium.com/max/800/1*zYrkeFhqj6-YCDaF0LcWMg.png' alt="Terminal output of ionic start -l listing the available Ionic templates" />
 
 #### Scaffolding an Ionic Application
 
@@ -128,11 +128,11 @@ $ ionic serve
 
 It will open a browser window in the default web browser and you will see similar to this:
 
-<img src='https://cdn-images-1.medium.com/max/800/1*JNQywRjia3Z98oF1cdwByA.png' />
+<img src='https://cdn-images-1.medium.com/max/800/1*JNQywRjia3Z98oF1cdwByA.png' alt="Blank Ionic starter app running in a browser window" />
 
 `ionic serve --lab` will run the app locally showing two instances of the app for iOS & Android.
 
-<img src='https://cdn-images-1.medium.com/max/800/1*LMFf8hdbrt1zPB1EAfoNPg.png' />
+<img src='https://cdn-images-1.medium.com/max/800/1*LMFf8hdbrt1zPB1EAfoNPg.png' alt="ionic serve --lab showing the app side by side for iOS and Android" />
 
 To run the application deliberately on a different port number: `ionic serve -p 8080`
 
@@ -140,7 +140,7 @@ To run the application deliberately on a different port number: `ionic serve -p 
 
 Following is the root structure of an Ionic Project after scaffolding:
 
-<img src='https://cdn-images-1.medium.com/max/800/1*k9wGw8Kg_lr2yjaGWIefPA.png' />
+<img src='https://cdn-images-1.medium.com/max/800/1*k9wGw8Kg_lr2yjaGWIefPA.png' alt="Root folder structure of a scaffolded Ionic project" />
 
 I will start describing what each folder/file in the root folder of the app contains, from top to bottom.
 

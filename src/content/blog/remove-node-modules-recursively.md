@@ -15,7 +15,7 @@ Each day `npm` registry is getting around [350 million downloads](https://x.com/
 
 Here’s Laurie Voss [(@seldo)](https://x.com/seldo) [tweet](https://x.com/seldo/status/864298310785310720), sharing the aforementioned details:
 
-<img src='https://cdn-images-1.medium.com/max/800/0*HHMm699bdI2QMoOy.jpg' />
+<img src='https://cdn-images-1.medium.com/max/800/0*HHMm699bdI2QMoOy.jpg' alt="Laurie Voss tweet on daily npm registry download numbers" />
 
 Nonetheless, after all your efforts are paid of and everything is deployed and is over cloud, either Github or some deployment service you or your client prefers, I think it will be generous to remove `node_modules` that take useful space on our local machines (especially, Mac users with limited GigaBytes of SSD).
 

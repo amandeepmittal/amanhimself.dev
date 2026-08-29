@@ -9,7 +9,7 @@ tags:
 description: ''
 ---
 
-![cover](https://i.imgur.com/UIZsVjh.jpg)
+![](https://i.imgur.com/UIZsVjh.jpg)
 
 > [Originally published at Jscrambler](https://jscrambler.com/blog/create-a-react-native-image-recognition-app-with-google-vision-api)
 
@@ -37,7 +37,7 @@ In this section, we are going to set up a new Firebase project. It will provide 
 
 Visit [Firebase](https://console.firebase.google.com/) and sign-in with your Google ID. Once signed-in, click on a new project and enter a name. Lastly, hit the **Create Project** button.
 
-![ss1](https://i.imgur.com/aQYciDd.png)
+![Firebase console with the Create Project form and project name field](https://i.imgur.com/aQYciDd.png)
 
 The next step is to make sure we set up Firebase database rules to allow us to upload image files through the app. From the left-hand side menu in the Firebase console, open `Database` tab and then choose `Rules` and modify them as follows.
 
@@ -121,31 +121,31 @@ export default firebase;
 
 To use a Google Cloud Platform service, you need a Gmail account. Once you are signed-in from your Gmail ID, you can visit the [Google Cloud Console](https://console.cloud.google.com/). The next step is to create a new project.
 
-![ss6](https://i.imgur.com/29hfyJ7.png)
+![Google Cloud Console with the project drop-down menu open](https://i.imgur.com/29hfyJ7.png)
 
 Click `select a project` from the drop-down menu and then `click new project`. Enter the name of your project and then click `Create`. Once you’ve created the project, we are placed back into the main console page again and then need to select our newly created project.
 
 The next step in this process is to get your API key. This you can get by clicking on the console and moving over to `Dashboard` section and under that choose `Enable APIs and Services`.
 
-![ss7](https://i.imgur.com/hlCljun.png)
+![Cloud Console dashboard with the Enable APIs and Services option](https://i.imgur.com/hlCljun.png)
 
 Then type **vision** in the search on the page as shown below.
 
-![ss8](https://i.imgur.com/LuLN3o0g.png)
+![Searching for vision in the API library search field](https://i.imgur.com/LuLN3o0g.png)
 
 And then click `Vision API`.
 
-![ss9](https://i.imgur.com/8folZ3J.png)
+![Vision API result selected from the API library search results](https://i.imgur.com/8folZ3J.png)
 
 Lastly, click `Enable` like below
 
-![ss10](https://i.imgur.com/087P0go.png)
+![Cloud Vision API page with the Enable button](https://i.imgur.com/087P0go.png)
 
 In order to complete this process of enabling Vision API services, you are required to add billing information (if you haven't done already) to your Google Cloud Platform account.
 
 Your URL in the dashboard will look like this: `https://console.cloud.google.com/apis/dashboard?project=FIREBASE-PROJECT-ID&folder&organizationId`. Once you are at the below screen, click on the `Credentials` section from the left-hand side menu and create a new API key if there isn't any by clicking on the button `Create Credentials` and then `API Key`.
 
-![ss2](https://i.imgur.com/y36eTeJ.png)
+![Credentials section with the Create Credentials and API Key options](https://i.imgur.com/y36eTeJ.png)
 
 Once you have created your API key, it is time to add it in the file `environment.js` for the key `GOOGLE_CLOUD_VISION_API_KEY`.
 
@@ -625,11 +625,11 @@ You can change the value of `maxResults` for every category. The response from t
 
 The above result can be viewed in the terminal from Expo logs. You can see how the application works with a short demo done on iOS simulator below.
 
-![demo](https://i.imgur.com/z0i8Tpi.gif)
+![Picking an image in the iOS simulator and getting Vision API labels back](https://i.imgur.com/z0i8Tpi.gif)
 
 If you visit the storage section in Firebase, you can notice that each image is stored with a name of base64 binary string.
 
-![ss5](https://i.imgur.com/lPrHrQUg.png)
+![Firebase storage listing uploaded images named by base64 binary string](https://i.imgur.com/lPrHrQUg.png)
 
 If you have a real device, just download the Expo client, scan the QR code and then you can try the `Take a photo` feature inside the application.
 

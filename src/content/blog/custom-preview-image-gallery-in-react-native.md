@@ -114,7 +114,7 @@ To initialize the development server for iOS, please execute the command `npx re
 
 Here is the app running after this step on an iOS simulator:
 
-<img src='https://miro.medium.com/max/880/0*kS7PBYWOT71qfQ-g.png' />
+<img src='https://miro.medium.com/max/880/0*kS7PBYWOT71qfQ-g.png' alt="iOS simulator showing the empty Custom Gallery screen" />
 
 ## Add a carousel view with react-native-snap-carousel
 
@@ -164,7 +164,7 @@ return (
 
 In the simulator you are going to get the following result:
 
-<img src='https://miro.medium.com/max/536/0*9-RZy5PEztyt-lEF.gif' />
+<img src='https://miro.medium.com/max/536/0*9-RZy5PEztyt-lEF.gif' alt="Swiping through images in the snap carousel view" />
 
 ## Add a dot indicator
 
@@ -219,7 +219,7 @@ Now, add a prop to the `Carousel` component called `onSnapToItem`. It accepts a 
 
 In the simulator, you will get the following result. The dot indicator now syncs with the Carousel item.
 
-<img src='https://miro.medium.com/max/588/0*hE8I2aJxoFp5UnDu.gif' />
+<img src='https://miro.medium.com/max/588/0*hE8I2aJxoFp5UnDu.gif' alt="Dot indicator staying in sync with the carousel item on swipe" />
 
 Let's add another view component below the `View` that wraps the carousel to display the total number of images and the current image index number.
 
@@ -245,7 +245,7 @@ Let's add another view component below the `View` that wraps the carousel to dis
 
 Here is the result after this step:
 
-<img src='https://miro.medium.com/max/800/0*9h1KAqUOt9LzOORL.png' />
+<img src='https://miro.medium.com/max/800/0*9h1KAqUOt9LzOORL.png' alt="Carousel with the current image index and total count below it" />
 
 Awesome! The configuration for the Carousel component is now complete. Let's see how to sync it with a custom FlatList component in the next section.
 
@@ -289,7 +289,7 @@ Add the following code snippet after Carousel's View:
 
 The list of thumbnails renders as shown below:
 
-<img src='https://miro.medium.com/max/800/0*JyzPZ5toA-v8mg3k.png' />
+<img src='https://miro.medium.com/max/800/0*JyzPZ5toA-v8mg3k.png' alt="Horizontal FlatList of thumbnails with the first one selected" />
 
 In the previous image, you will see that the first image is selected. You cannot change the currently selected image yet in the FlatList.
 
@@ -340,7 +340,7 @@ Next, add an `onPress` prop on the `TouchableOpacity` component:
 
 Here is the output after this step:
 
-<img src='https://miro.medium.com/max/582/0*TdtJeFSTFtRUV5L_.gif' />
+<img src='https://miro.medium.com/max/582/0*TdtJeFSTFtRUV5L_.gif' alt="Tapping a thumbnail changes the carousel image and the selection" />
 
 The selection sync works do you notice there is a problem with the `FlatList` component? It doesn't scroll on its own when an image from the Carousel is selected that is not in the current view on the screen.
 
@@ -382,7 +382,7 @@ const onSelect = indexSelected => {
 
 Here is the output after this step:
 
-<img src='https://miro.medium.com/max/584/0*YVetWmnrP5zLKCi5.gif' />
+<img src='https://miro.medium.com/max/584/0*YVetWmnrP5zLKCi5.gif' alt="Thumbnail list scrolling itself to the image selected in the carousel" />
 
 ## Conclusion
 

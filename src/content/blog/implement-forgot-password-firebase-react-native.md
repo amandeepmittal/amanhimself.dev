@@ -109,11 +109,11 @@ Next, add the a `Button` component after the `Signup` button. The value of the `
 
 Now, open a simulator or a real device with an Expo client installed and run the command `expo start` from a terminal window. You will be welcomed by the following screen.
 
-![ss1](https://i.imgur.com/U7hRwYl.png)
+![Login screen with the new Forgot Password button](https://i.imgur.com/U7hRwYl.png)
 
 Clicking on the button `Forgot Password ?` will lead you to the new screen.
 
-![ss2](https://i.imgur.com/UrH4dJY.png)
+![Empty Forgot Password screen after navigating from the login screen](https://i.imgur.com/UrH4dJY.png)
 
 ## Add a method to send a password reset email
 
@@ -242,7 +242,7 @@ export default withFirebaseHOC(ForgotPassword);
 
 Now go back to the simulator and you will get the following screen.
 
-![ss3](https://i.imgur.com/2ry1EAn.png)
+![Forgot Password screen with the email field and reset button](https://i.imgur.com/2ry1EAn.png)
 
 ## Handle Password Reset
 
@@ -266,25 +266,25 @@ handlePasswordReset = async (values, actions) => {
 
 The above snippet signifies that if the email provided as the input is valid, it will send the request to reset the password. On success, a message on Expo's console will be displayed as shown below.
 
-![ss4](https://i.imgur.com/zDL0Pfg.png)
+![Expo console logging that the password reset email was sent](https://i.imgur.com/zDL0Pfg.png)
 
 Also, on success, it will navigate the user back to the login screen. On errors, the code inside the `catch` block will be triggered.
 
 To try it out, register a user with a valid email address such that you can receive an email. On registering a new user, right now, the app will log you in. Sign out from the app which will take you back to the login screen. Next, go the `Forgot Password` screen and enter the valid email.
 
-![ss8](https://i.imgur.com/YwJ191G.png)
+![Entering a registered email on the Forgot Password screen](https://i.imgur.com/YwJ191G.png)
 
 You will receive an email like the below. It uses the default Firebase template. To demonstrate, I am using my personal Gmail address.
 
-![ss5](https://i.imgur.com/kmgey8U.png)
+![Password reset email using the default Firebase template](https://i.imgur.com/kmgey8U.png)
 
 Click on the link and it will redirect you to a webpage like below.
 
-![ss6](https://i.imgur.com/vhuApsk.png)
+![Firebase webpage asking for a new password](https://i.imgur.com/vhuApsk.png)
 
 Upon successful password change, it will prompt with the following message to the user.
 
-![ss7](https://i.imgur.com/rLPkUeE.png)
+![Confirmation message shown after the password is changed](https://i.imgur.com/rLPkUeE.png)
 
 ## Conclusion
 

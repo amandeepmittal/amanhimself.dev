@@ -45,13 +45,13 @@ The above code snippet has a parent `View` component with a background color of 
 
 This will display the content of the app screen on an iOS device as shown below:
 
-![ss1](https://i.imgur.com/Qfizjpr.png)
+![Hello World text hidden behind the notch on an iOS device](https://i.imgur.com/Qfizjpr.png)
 
 The contents of the nested `View` component hides behind the status bar and the notch on the iOS device.
 
 On an Android device, the behavior is exactly the same:
 
-![ss2](https://i.imgur.com/RY1tEfz.png)
+![Same text hidden behind the status bar on an Android device](https://i.imgur.com/RY1tEfz.png)
 
 ## How to Use the SafeAreaView component from React Native
 
@@ -82,7 +82,7 @@ export const HomeScreen = () => {
 
 It works perfectly on iOS:
 
-![ss3](https://i.imgur.com/Mve0Nhu.png)
+![Text below the notch on iOS using React Native SafeAreaView](https://i.imgur.com/Mve0Nhu.png)
 
 In React Native, this component is only applicable to iOS devices with iOS version 11 or later. Unfortunately, that means it doesn't work for Android devices as the screen's content is still behind the status bar.
 
@@ -149,7 +149,7 @@ const styles = StyleSheet.create({
 
 It works both for iOS and Android:
 
-![ss4](https://i.imgur.com/lfOTL3J.png)
+![Safe area context SafeAreaView working on both iOS and Android](https://i.imgur.com/lfOTL3J.png)
 
 If you give the nested `View` component, a property of `flex: 1` as:
 
@@ -159,7 +159,7 @@ If you give the nested `View` component, a property of `flex: 1` as:
 
 You can observe the safe are edges for iOS:
 
-![ss5](https://i.imgur.com/86uwW7N.png)
+![Safe area edges on iOS with the nested View set to flex one](https://i.imgur.com/86uwW7N.png)
 
 The `SafeAreaView` acts like a regular `View` component from React Native and includes additional padding to position the content after the notch or the status bar of a device.
 

@@ -52,7 +52,7 @@ Here are some of the posts that I wrote this year:
 
 My personal blog has been the most consistent thing over course of these 12 months in my life. It deserves more credit than I give it. Also, I never planned to have a self-hosted blog until a friend of mine, [Valentin](https://x.com/RadValentin), casually suggested its importance. I started writing on [Medium](https://medium.com/@amanhimself) when I was getting into web development back in late 2016 and early 2017. At that time, I did not think much about pursuing writing posts or the importance of sharing via creating content. It was all new to me. I was just exploring horizons and wanted to document the good things about it.
 
-![ss4](/images/2020-1.png)
+![The blog after moving back to Gatsby](/images/2020-1.png)
 
 Three years forward, in 2020, I did not give much emphasis on Medium this year as my primary blog publishing platform. Even though I did reach an exploding [2 million views](https://x.com/amanhimself/status/1285554115464982528), I do not like how some publications (that I think have an impact in terms of audience) are forcing down to have a payment wall associated with a post published under their publication. I am not against getting the original author paid for their work but as a popular publication with a significant audience, it should not force a contributing writer and be open about it. That said, some publications are not forcing down and are still enjoyable to write for.
 
@@ -67,7 +67,7 @@ Not focusing on Medium enough, also gave me the opportunity to explore two aweso
 
 I started cross-posting on Dev.to [last year](https://dev.to/amanhimself/getting-started-with-react-native-in-2019-build-your-first-app-542d) and in this year I have managed to get around 100k+ views.
 
-![ss1](/images/2020-2.png))
+![Dev.to profile stats after a year of cross-posting](/images/2020-2.png))
 
 I am excited to publish more on Hashnode. Only in the month of December, I started publishing there. I think it is different from a usual blogging platform and one thing that excites me is how community-driven it is. Developers and the whole at Hashnode are always closely listening to the wants and needs of their users and this is something I have not seen much of. It's like building in public. The ability to have a hosted newsletter and use your own domain is somewhat unusual for a platform. I like where they are going with it and would be love to see how it happens. It's a high time we need a consistent platform that could be the "YouTube" for technical writers and publications (it might sound ambitious but it is not!).
 
@@ -93,11 +93,11 @@ This happened by just a Twitter DM. I never expected that I would be able to spe
 
 Personally, this statistic does not matter but the GitHub's commit graph is fun. It is also great to see that I have less green or empty blocks on weekends which is a good sign.
 
-![ss2](/images/2020-3.png)
+![GitHub contribution graph with 1541 commits in 2020](/images/2020-3.png)
 
 In 2019, I made 939 commits. What changed this year? I started using GitHub at my day job for some projects.
 
-![ss3](/images/2020-4.png)
+![GitHub commit stats for 2020](/images/2020-4.png)
 
 ### Highlights from my GitHub 🙀
 

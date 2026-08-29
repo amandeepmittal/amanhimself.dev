@@ -13,7 +13,7 @@ Recently, I have been working on a React Native application that demands a chang
 
 > This is what we are building. By the end of this article you will have a similar looking React Native project.
 
-<img src='https://cdn-images-1.medium.com/max/800/1*NK6OqE6SWsT3ibxXDhkx6g.gif' />
+<img src='https://cdn-images-1.medium.com/max/800/1*NK6OqE6SWsT3ibxXDhkx6g.gif' alt="Theme app changing the Home screen background color on selection" />
 
 ### Requirements
 
@@ -33,7 +33,7 @@ I will use expo-cli for the demo purposes but you can use CRNA(Create-React-Nati
 
 We need only two screen for the demonstration. I am going to call them `Home.js` and `Theme.js`. Both are right now contain only boilerplate code. It is good for them to be dumb until we connect them using `react-navigation`. Create a new file called `navigation.js` and import both the components.
 
-<img src='https://cdn-images-1.medium.com/max/800/1*hBNBbPck6EmD9Bq9NCAhzA.png' />
+<img src='https://cdn-images-1.medium.com/max/800/1*hBNBbPck6EmD9Bq9NCAhzA.png' alt="navigation.js creating a stack navigator for the Home and Theme screens" />
 
 `createStackNavigator` is the replacement to `StackNavigator` in `react-navigation` version 2+. Notice that, we are not passing a header to the Home Screen.
 
@@ -41,23 +41,23 @@ We need only two screen for the demonstration. I am going to call them `Home.js`
 
 Next step is to build a redux store that will make use of an action, action creator and reducer to change theme in our application. In `actions.js` put the following code.
 
-<img src='https://cdn-images-1.medium.com/max/800/1*T86eAgIOjKi5L0xyuqIxCA.png' />
+<img src='https://cdn-images-1.medium.com/max/800/1*T86eAgIOjKi5L0xyuqIxCA.png' alt="actions.js with the single action that changes the theme color" />
 
 We only have one action and changes the theme color of the app. Now the reducer:
 
-<img src='https://cdn-images-1.medium.com/max/800/1*n6CqWVOCKJw0an8y2UeqkQ.png' />
+<img src='https://cdn-images-1.medium.com/max/800/1*n6CqWVOCKJw0an8y2UeqkQ.png' alt="Reducer setting the primary color hex value in the initial state" />
 
 Notice that we are setting the primary color in the initial state as the hex value. You can also retrieve it from a configuration file or constants file in your application. We are also exporting the `colors.js` file which contains three different hex code values that define different color schemes.
 
-<img src='https://cdn-images-1.medium.com/max/800/1*bKG_BG6i7e7IvwT9p9zm5g.png' />
+<img src='https://cdn-images-1.medium.com/max/800/1*bKG_BG6i7e7IvwT9p9zm5g.png' alt="colors.js exporting three hex values for the color schemes" />
 
 Lastly, create the store and it to `App.js` for the application components to use it.
 
-<img src='https://cdn-images-1.medium.com/max/800/1*EBI1jplYD7TB4oxkZMlp_A.png' />
+<img src='https://cdn-images-1.medium.com/max/800/1*EBI1jplYD7TB4oxkZMlp_A.png' alt="Code creating the Redux store for the application components" />
 
 Inside `App.js` file we connect our Redux store to manage the state as well as navigation.
 
-<img src='https://cdn-images-1.medium.com/max/800/1*4xA_ue2jr9WWItYKLQzCFA.png' />
+<img src='https://cdn-images-1.medium.com/max/800/1*4xA_ue2jr9WWItYKLQzCFA.png' alt="App.js connecting the Redux store with the navigation" />
 
 You might be wondering why the heck use a Redux Store for such a small application. Well, all I am trying to demonstrate is a pragmatic approach to build a them-able application using React Native and Redux. It is your choice to manage the state.
 
@@ -65,7 +65,7 @@ You might be wondering why the heck use a Redux Store for such a small applicati
 
 The last components of our React Native application from where the action happens are `Home.js` and `Theme.js`.
 
-<img src='https://cdn-images-1.medium.com/max/800/1*P08ni2pglIDyhL0h8SIgbg.png' />
+<img src='https://cdn-images-1.medium.com/max/800/1*P08ni2pglIDyhL0h8SIgbg.png' alt="Home.js with the settings icon that navigates to the Theme screen" />
 
 By pressing the settings icon, we can navigate to the Themes screen to change background color of the Home screen. We are also passing the title of the Theme Screen here.
 
@@ -77,10 +77,10 @@ The magic of changing the color is happening in `Home.js` at this line:
 
 We are receiving the `primaryColor` from the props. The `Theme.js` file will be changing the value of this prop on selecting a viable option. Take a look below.
 
-<img src='https://cdn-images-1.medium.com/max/800/1*pqMt7rWFEqGI8H-Ml70rnQ.png' />
+<img src='https://cdn-images-1.medium.com/max/800/1*pqMt7rWFEqGI8H-Ml70rnQ.png' alt="Theme.js where handleThemeChange dispatches the theme action" />
 
 In above, `handleThemeChange` handles the dispatching of the only action we defined in `actions.js`. At last, we have our app working.
 
-<img src='https://cdn-images-1.medium.com/max/800/1*NK6OqE6SWsT3ibxXDhkx6g.gif' />
+<img src='https://cdn-images-1.medium.com/max/800/1*NK6OqE6SWsT3ibxXDhkx6g.gif' alt="Finished app switching themes from the Theme screen" />
 
 [Originally published at Hackernoon.com](https://medium.com/hackernoon/simple-recipe-to-build-a-theme-app-in-react-native-8e2456f81bc5)

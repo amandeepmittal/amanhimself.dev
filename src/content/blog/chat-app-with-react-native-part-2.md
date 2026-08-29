@@ -9,7 +9,7 @@ tags:
 description: ''
 ---
 
-![cover](https://i.imgur.com/ROYjoYo.jpg)
+![](https://i.imgur.com/ROYjoYo.jpg)
 
 In [the first part of this tutorial series](https://amanhimself.dev/blog/chat-app-with-react-native-part-1) to build a chat-based app in React Native, we learned how to create reusable form elements using the react-native-paper UI library. Along with that, we learned how to install the navigation library react-navigation and configure a basic authentication stack navigator using two routes.
 
@@ -21,21 +21,21 @@ To access the Firebase credentials for each mobile OS platform and configure the
 
 Create a new project as shown below.
 
-<img src='https://miro.medium.com/max/1400/1*wYi5SITEofv4nuIAPnQglg.png' />
+<img src='https://miro.medium.com/max/1400/1*wYi5SITEofv4nuIAPnQglg.png' alt="Creating a new project from the Firebase console" />
 
 Complete the details of your Firebase project:
 
-<img src='https://miro.medium.com/max/1090/1*UDDFg0ZBF7w1jwRRIqxcwA.png' />
+<img src='https://miro.medium.com/max/1090/1*UDDFg0ZBF7w1jwRRIqxcwA.png' alt="Firebase project details form with the Create project button" />
 
 Click the button **Create project** and you are going to be redirected to the dashboard screen. That's it. You have successfully created a new Firebase project.
 
 Now make sure that the **Email** **Sign-in method** is enabled. From the Firebase console and navigate to **Authentication** section from the side menu.
 
-<img src='https://miro.medium.com/max/257/1*mGwJz9i3SAzboUgZhs21Ng.png' />
+<img src='https://miro.medium.com/max/257/1*mGwJz9i3SAzboUgZhs21Ng.png' alt="Authentication entry in the Firebase console side menu" />
 
 Go to the second tab **Sign-in method** and make sure to enable the **Email** sign-in provider.
 
-<img src='https://miro.medium.com/max/1400/1*lYvrmJXPQBRrs8Xpvqn05w.png' />
+<img src='https://miro.medium.com/max/1400/1*lYvrmJXPQBRrs8Xpvqn05w.png' alt="Sign-in method tab with the Email provider enabled" />
 
 ## Add Firebase SDK to React Native app
 
@@ -55,23 +55,23 @@ Firebase provides a file called `GoogleService-Info.plist` that contains all the
 
 To get these credentials, go to back to the [Firebase console](http://console.firebase.google.com/) in a browser window. From the dashboard screen of your Firebase project, open **Project settings** from the side menu.
 
-<img src='https://miro.medium.com/max/241/1*Vh9zbrjZEGjKJl0XDCfFQQ.png' />
+<img src='https://miro.medium.com/max/241/1*Vh9zbrjZEGjKJl0XDCfFQQ.png' alt="Project settings option in the Firebase console side menu" />
 
 Go to **Your apps** section and click on the icon iOS to select the platform.
 
-<img src='https://miro.medium.com/max/1396/1*nYRgVjO8DFSOdOJhPU-1DA.png' />
+<img src='https://miro.medium.com/max/1396/1*nYRgVjO8DFSOdOJhPU-1DA.png' alt="Your apps section of project settings with the iOS platform icon" />
 
 Enter the application details and click on **Register app**.
 
-<img src='https://miro.medium.com/max/1270/1*Z1v4E3vhPGXmwfwrFtaxsA.png' />
+<img src='https://miro.medium.com/max/1270/1*Z1v4E3vhPGXmwfwrFtaxsA.png' alt="iOS app details form with the Register app button" />
 
 Then download the `GoogleService-Info.plist` file as shown below.
 
-<img src='https://miro.medium.com/max/1400/1*mKKqIHaDcv2UQsG-3idn7Q.png' />
+<img src='https://miro.medium.com/max/1400/1*mKKqIHaDcv2UQsG-3idn7Q.png' alt="Firebase step to download the GoogleService-Info.plist file" />
 
 Open Xcode, then open the file `/ios/ChatApp.xcodeproj` file. Right-click on the project name and **Add Files** option, then select the file to add to this project.
 
-<img src='https://miro.medium.com/max/273/1*800RInfgPmKJXt_k58xQ4w.png' />
+<img src='https://miro.medium.com/max/273/1*800RInfgPmKJXt_k58xQ4w.png' alt="Xcode project menu with the Add Files option highlighted" />
 
 Then open `ios/ChatApp/AppDelegate.m` and add the following header.
 
@@ -413,11 +413,11 @@ const styles = StyleSheet.create({
 
 Go to the simulator, and you are going to get similar results as shown below. Perform these steps. Try creating a new user from the sign-up screen, and you are going to get their `uid` on the home screen.
 
-<img src='https://miro.medium.com/max/684/1*2HWlA1jyqJzAIhxgHDB0sg.gif' />
+<img src='https://miro.medium.com/max/684/1*2HWlA1jyqJzAIhxgHDB0sg.gif' alt="Signing up a new user and landing on the home screen with their uid" />
 
 You can verify the `uid` of the current user by going to the dashboard screen from Firebase console.
 
-<img src='https://miro.medium.com/max/1400/1*NVUhPQOP2YjgYF_qmCdXBQ.png' />
+<img src='https://miro.medium.com/max/1400/1*NVUhPQOP2YjgYF_qmCdXBQ.png' alt="Firebase console dashboard listing the new user and their uid" />
 
 ## Conclusion
 

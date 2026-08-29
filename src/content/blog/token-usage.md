@@ -33,13 +33,13 @@ Recently, I found about [`tokscale`, which is created by `junhoyeo`](https://git
 
 The default `bunx tokscale` opens an interactive TUI where you can navigate between Tokens per day/hour view, Models, Stats, and per agent.
 
-<img src="/images/token-01.png" width="800" />
+<img src="/images/token-01.png" alt="tokscale TUI showing total tokens and cost per model" width="800" />
 
 The above is my favorite screen from the TUI because it clearly allows me to see the total tokens and cost estimation summaries for each model I have used on my machine since December 2025.
 
 `tokscale` also comes with a `--light` version, which allows viewing the above information quickly.
 
-<img src="/images/token-02.png" width="800" />
+<img src="/images/token-02.png" alt="tokscale light output with the same token and cost summary" width="800" />
 
 Since those two posts back in February, checking this has quietly become a habit. `ccusage` is still my quick check when I just want a number in the terminal, and `tokscale` is the one I open when I want to look around, mostly for that model summary screen and the heatmap.
 

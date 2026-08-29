@@ -9,7 +9,7 @@ tags:
 description: ''
 ---
 
-![cover](https://i.imgur.com/Qg4x9He.jpg)
+![](https://i.imgur.com/Qg4x9He.jpg)
 
 Forms are an essential part of a mobile app — specifically, to handle user interactions that are available behind an authorization.
 

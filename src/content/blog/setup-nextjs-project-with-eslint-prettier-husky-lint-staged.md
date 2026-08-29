@@ -192,7 +192,7 @@ yarn lint-staged
 
 To test it, I have modified the `/pages/_app.tsx` file and removed the reference of `AppProps`. This will return a type error when committing this file:
 
-![ss1](https://i.imgur.com/ubLHL12.png)
+![Pre-commit hook failing with a type error from the modified _app.tsx file](https://i.imgur.com/ubLHL12.png)
 
 ## Conclusion
 

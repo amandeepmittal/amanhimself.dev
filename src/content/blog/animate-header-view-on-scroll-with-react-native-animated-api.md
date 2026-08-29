@@ -9,7 +9,7 @@ tags:
 description: ''
 ---
 
-![cover_image](https://i.imgur.com/qDKlX8L.jpg)
+![](https://i.imgur.com/qDKlX8L.jpg)
 
 The [Animated](https://reactnative.dev/docs/animated.html) library from React Native provides a great way to add animations and give app users a smooth and friendlier experience.
 
@@ -83,15 +83,15 @@ export default function App() {
 
 Here is what happens on an Android device when `forceInset` is not used on `SafeAreaView`:
 
-![ss1](https://i.imgur.com/uBdAKZ4.jpg)
+![Android screen without the forceInset prop on SafeAreaView](https://i.imgur.com/uBdAKZ4.jpg)
 
 And with the `forceInset` prop applied:
 
-![ss2](https://i.imgur.com/xNZx2rq.jpg)
+![Android screen with the forceInset prop applied to SafeAreaView](https://i.imgur.com/xNZx2rq.jpg)
 
 On iOS, the behavior is as expected:
 
-![ss3](https://i.imgur.com/HXHJRv9.png)
+![iOS screen where SafeAreaView behaves as expected](https://i.imgur.com/HXHJRv9.png)
 
 The last step in this section is to create a new component file called `AnimatedHeader.js` inside the `components/` directory. For now, it is going to return nothing.
 
@@ -226,7 +226,7 @@ const AnimatedHeader = ({ animatedValue }) => {
 
 This section ends with the following output:
 
-![ss4](https://i.imgur.com/kOdpwwL.png)
+![Lightblue AnimatedHeader view rendered at the top of the screen](https://i.imgur.com/kOdpwwL.png)
 
 ## Manipulating the ScrollView
 
@@ -359,11 +359,11 @@ export default function App() {
 
 Here is the output after this step on an iOS device:
 
-![ss5](https://i.imgur.com/QFWrJCN.gif)
+![Header animating as the book list scrolls on iOS](https://i.imgur.com/QFWrJCN.gif)
 
 On Android:
 
-![ss6](https://i.imgur.com/4HlPFNQ.gif)
+![Header animating as the book list scrolls on Android](https://i.imgur.com/4HlPFNQ.gif)
 
 ## Conclusion
 

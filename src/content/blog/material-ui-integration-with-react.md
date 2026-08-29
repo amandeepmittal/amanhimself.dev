@@ -11,11 +11,11 @@ description: ''
 
 Material design was introduced by Google around 2014 as a design language and it still shares some popularity among web and mobile applications. One of the common ways to integrate and use this design system in React apps is through [MaterialUI](https://material-ui.com/getting-started/installation/) library.
 
-![ss1](https://i.imgur.com/l4PZ8tB.png)
+![](https://i.imgur.com/l4PZ8tB.png)
 
 In this post, let us take a look at how to integrate a material library that is available as an npm module and consists of built React components that you can use to build apps. You are going to learn from scratch on how to install and configure this library as well as build a small demo app.
 
-![ss8](https://i.imgur.com/QxtWlBz.png)
+![Finished demo app with user avatars and names in Material UI paper cards](https://i.imgur.com/QxtWlBz.png)
 
 ## Prerequisites
 
@@ -42,11 +42,11 @@ When the new project is done scaffolding with the default dependencies such as R
 
 Change in the new directory and you are going to be welcomed by the following structure of files and folders.
 
-![ss2](https://i.imgur.com/W9D0ToF.png)
+![File and folder structure of the new create-react-app project](https://i.imgur.com/W9D0ToF.png)
 
 To verify that the React app is working, (_you can totally skip the step at this time_), run `yarn start` from the terminal window and open the default React app running at `http://localhost:3000` in a browser window.
 
-![ss3](https://i.imgur.com/OkkceuE.png)
+![Default React app running in a browser at localhost:3000](https://i.imgur.com/OkkceuE.png)
 
 ## Install Material UI library
 
@@ -117,7 +117,7 @@ export default App;
 
 You are going to get the following result after this step.
 
-![ss4](https://i.imgur.com/HhDhiP3.png)
+![AppBar rendered as a React and Material-UI App navigation bar](https://i.imgur.com/HhDhiP3.png)
 
 ## Implementing a Paper component
 
@@ -125,7 +125,7 @@ Two components that are going to be used in this section in order to layout a vi
 
 Material Design’s responsive UI is based on a 12-column grid layout. The `Grid` component helps you implement this layout system and then provide the values or the number of grids you want to display. A basic grid might look like below:
 
-![ss5](https://i.imgur.com/UqiYt1i.png)
+![Material Design 12-column responsive grid layout example](https://i.imgur.com/UqiYt1i.png)
 
 Material UI uses CSS's Flexbox to manage layout alignments and sizing of the grid columns.
 
@@ -191,7 +191,7 @@ function App() {
 
 Here is the result you are going to get after this step.
 
-![ss6](https://i.imgur.com/8PL5Xrs.png)
+![Empty grey Paper component centered in a Grid below the navigation bar](https://i.imgur.com/8PL5Xrs.png)
 
 ## Fetching random user data
 
@@ -253,7 +253,7 @@ if (isLoading) {
 
 Now, when you refresh the React app, you are going to see the JSX being rendered that is related to the loading state of the app, for split seconds.
 
-![ss7](https://i.imgur.com/hBWfaYc.gif)
+![React app rendering the Loading text before the user data arrives](https://i.imgur.com/hBWfaYc.gif)
 
 ## Display a list of users
 
@@ -307,7 +307,7 @@ The above code snippet uses few more core components from Material UI (such as `
 
 Here is the final result you are going to get when you back to the browser screen.
 
-![ss8](https://i.imgur.com/QxtWlBz.png)
+![List of random users with avatars and names rendered in Paper cards](https://i.imgur.com/QxtWlBz.png)
 
 ## Conclusion
 

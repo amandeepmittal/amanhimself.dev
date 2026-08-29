@@ -145,7 +145,7 @@ export default function App() {
 
 Go back to the terminal window, execute `expo start` and open up an Expo client inside a simulator or a real device. You are going to get the following result.
 
-<img src='https://miro.medium.com/max/369/1*_noQNKBA1wUf8EkgNyCsQA.gif' />
+<img src='https://miro.medium.com/max/369/1*_noQNKBA1wUf8EkgNyCsQA.gif' alt="Expo app switching between the Home and Profile tabs" />
 
 ## Adding icon and changing active tint color
 
@@ -167,7 +167,7 @@ Add the following:
 
 Go to the simulator device, you are going to notice that the active tab bar label has a color of black from the previous blue.
 
-<img src='https://miro.medium.com/max/350/1*y3hy861GwUm_mj1HCvr3Ew.png' />
+<img src='https://miro.medium.com/max/350/1*y3hy861GwUm_mj1HCvr3Ew.png' alt="Tab bar with the active label in black instead of blue" />
 
 Let us add some icons to the tab bar. Start by importing the `Ionicons` from `@expo/vector-icons`.
 
@@ -206,7 +206,7 @@ Then, in each `Tab.Screen`, add an options prop that is going to have a property
 
 Here is the output:
 
-<img src='https://miro.medium.com/max/350/1*3G4fINzTR9vNIGQzujkegQ.png' />
+<img src='https://miro.medium.com/max/350/1*3G4fINzTR9vNIGQzujkegQ.png' alt="Tab bar with Ionicons home and person icons above the labels" />
 
 You can even change the background of the tab bar by adding a `style` property to `tabBarOptions`.
 
@@ -225,7 +225,7 @@ You can even change the background of the tab bar by adding a `style` property t
 
 Here is the output for the above snippet:
 
-<img src='https://miro.medium.com/max/350/1*Gxk9p_0XQ2z-y-sYHH7Epw.png' />
+<img src='https://miro.medium.com/max/350/1*Gxk9p_0XQ2z-y-sYHH7Epw.png' alt="Tab bar with a gold background set through tabBarOptions style" />
 
 ## Passing screenOptions in a Tab Navigator
 
@@ -262,7 +262,7 @@ function MainTabNavigator() {
 
 There is no change in the functioning of the tab navigator from the previous section, as you can notice below:
 
-<img src='https://miro.medium.com/max/369/1*X06mUqbYfHKYEDdPAVBJjA.gif' />
+<img src='https://miro.medium.com/max/369/1*X06mUqbYfHKYEDdPAVBJjA.gif' alt="Tab navigator behaving the same after moving icons into screenOptions" />
 
 ## Updating the header title for the nested child navigator
 
@@ -305,7 +305,7 @@ Then, [as per the recommended way](https://reactnavigation.org/docs/en/screen-op
 
 Now, when visiting the `Profile` tab, you are going to get the desired title in the header.
 
-<img src='https://miro.medium.com/max/369/1*gCs24QDMEQ_D6DcDxjiALw.gif' />
+<img src='https://miro.medium.com/max/369/1*gCs24QDMEQ_D6DcDxjiALw.gif' alt="Header title changing to Profile when the Profile tab is active" />
 
 ## Conclusion
 

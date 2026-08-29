@@ -17,21 +17,21 @@ $ ionic start ionic-use-google-fonts blank
 
 `cd` in to the new project created by the above Ionic CLI command and run `ionic serve` to see the blank template with just a homepage available. As of now, the Ionic application looks like this:
 
-<img src='https://cdn-images-1.medium.com/max/800/0*WUHLVkBP7bifnV8E.png' />
+<img src='https://cdn-images-1.medium.com/max/800/0*WUHLVkBP7bifnV8E.png' alt="Blank Ionic starter app served by ionic serve" />
 
 The font here used in the application at global level is default. We will be changing it to [Revalia](https://fonts.google.com/specimen/Revalia). It’s just a random suggestion, you can pick whatever you want but I’d suggest, if you are doing for the first time or new to Ionic development, pick a font in which you can see the changes reflected in the app.
 
-<img src='https://cdn-images-1.medium.com/max/2560/0*NTLwsXqYlk1SPFPD.png' />
+<img src='https://cdn-images-1.medium.com/max/2560/0*NTLwsXqYlk1SPFPD.png' alt="Google Fonts page for Revalia with the link highlighted" />
 
 After selecting the font, open the highlighted link in the screenshot above, in a new tab.
 
-<img src='https://cdn-images-1.medium.com/max/2560/0*Ok2hQifn4QpJFSsM.png' />
+<img src='https://cdn-images-1.medium.com/max/2560/0*Ok2hQifn4QpJFSsM.png' alt="Revalia font file link listed under the latin section" />
 
 Again, open the link provided in the `latin` section, just like in the above image and download or save the file directly in you ionic project.
 
 The location to save the file will be `YOUR-IonicApp > src/assets/fonts`. Create a new directory `fonts` in the `assets` folder if not available. Place the file there, and rename it as per your convenience.
 
-<img src='https://cdn-images-1.medium.com/max/800/0*KIBUq3X7G1JztbmK.png' />
+<img src='https://cdn-images-1.medium.com/max/800/0*KIBUq3X7G1JztbmK.png' alt="Revalia font file saved in the src/assets/fonts directory" />
 
 Now since we want this font to be used at the global level of application, open `app.scss` in `src/app` and first include the local file of the font we want to use and then use that font at global level by using an asterisk `*` as css-selector:
 
@@ -54,7 +54,7 @@ $ ionic serve
 
 Output:
 
-<img src='https://cdn-images-1.medium.com/max/800/0*cAeEa-sD5b1zHVNG.png' />
+<img src='https://cdn-images-1.medium.com/max/800/0*cAeEa-sD5b1zHVNG.png' alt="Ionic app rendering its text in the Revalia font" />
 
 To get the full code, you can visit [**this Github Repository**](https://github.com/amandeepmittal/ionic-use-google-fonts).
 

@@ -9,7 +9,7 @@ tags:
 description: ''
 ---
 
-![cover_image](https://i.imgur.com/SX2uERE.png)
+![](https://i.imgur.com/SX2uERE.png)
 
 Recently I migrated my blog (the one you reading right now) from [Gatsby](https://www.gatsbyjs.com/) to [Next.js](https://nextjs.org/) for some specific reasons. The first reason, me being curious about how Next.js works and how is the developer experience. The second one, I want to have minimal effort and spend less time in managing a blog's UI and spend more time on writing posts. Lately, the vice versa has been the reality.
 
@@ -29,7 +29,7 @@ The issue occurs when the deployment build runs out of memory. Node.js does not 
 
 Regardless of what stack or framework you use to deploy your site, if the deployment instance is using a node server, one day you might run into an issue as shown below.
 
-![ss1](https://i.imgur.com/heymZ2D.png)
+![Build log ending with a JavaScript heap out of memory error](https://i.imgur.com/heymZ2D.png)
 
 ## The good "Old space" problem in V8
 
@@ -43,11 +43,11 @@ According to Chris McCraw's answer [here](https://community.netlify.com/t/fatal-
 
 If you face this problem using the same approach with Netlify as I did, or for some other reason you want to use environment variables, here is how to get started. Step one is to go to your deployment on Netlify and click the option **Deploy Settings**.
 
-![ss2](https://i.imgur.com/qjEP2pR.png)
+![Netlify deployment page with the Deploy Settings option highlighted](https://i.imgur.com/qjEP2pR.png)
 
 This is where all the deployment-related settings are stored. On the next screen, observe a sidebar and under the tab **Build & deploy** there is a sub-tab called **Environment**. Click on that and then click on the button **Edit variables**. Now, you can add the key and value for each environment variable as shown below.
 
-![ss3](https://i.imgur.com/5NKWri1.png)
+![Netlify Environment tab with key and value fields for a variable](https://i.imgur.com/5NKWri1.png)
 
 ## Further reading
 

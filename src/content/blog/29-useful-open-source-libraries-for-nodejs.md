@@ -9,7 +9,7 @@ tags:
 description: ''
 ---
 
-![cover_image](https://i.imgur.com/Yv3yfrm.png)
+![](https://i.imgur.com/Yv3yfrm.png)
 
 > [Originally published at Crowdbotics](https://medium.com/crowdbotics/29-useful-open-source-libraries-for-nodejs-4cefe08f7205)
 

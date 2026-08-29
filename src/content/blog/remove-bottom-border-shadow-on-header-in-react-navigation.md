@@ -19,11 +19,11 @@ Both libraries share `screenOptions` since Expo Router is built on top of React 
 
 The header has a default bottom border or shadow. Here is an example of a border on the header on iOS:
 
-![ss1](https://i.imgur.com/PnxIHxT.png)
+![Orange arrows highlighting the default header border on iOS](https://i.imgur.com/PnxIHxT.png)
 
 The orange arrows are used to highlight the shadow. Similarly, on Android, the width is thin and hard to notice.
 
-![ss2](https://i.imgur.com/MoP6J0t.png)
+![Thin default header border on Android, hard to notice](https://i.imgur.com/MoP6J0t.png)
 
 To make it more visible, you can populate the `screenOptions` of the navigator as shown below:
 
@@ -37,7 +37,7 @@ screenOptions={{
 
 Increasing the value of the property `borderBottomWidth` will make the border thicker.
 
-![ss3](https://i.imgur.com/I7l8INR.png)
+![Thicker header border after setting borderBottomWidth to four](https://i.imgur.com/I7l8INR.png)
 
 ## Disable the shadow
 
@@ -51,9 +51,9 @@ screenOptions={{
 
 You will get the desired output both on iOS and Android:
 
-![ss4](https://i.imgur.com/bBQuIJJ.png)
+![iOS header with no border after headerShadowVisible is false](https://i.imgur.com/bBQuIJJ.png)
 
-![ss5](https://i.imgur.com/NId2zbQ.png)
+![Android header with no shadow after headerShadowVisible is false](https://i.imgur.com/NId2zbQ.png)
 
 ## Conclusion
 

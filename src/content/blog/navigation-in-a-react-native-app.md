@@ -17,7 +17,7 @@ Before building a mobile application it is recommended that one spends an amount
 
 Next, we will navigate into the new project directory and will run the project to see if everything is working fine by running the following command.
 
-<img src='https://cdn-images-1.medium.com/max/800/1*NlX0zu7oVyFJv_CKdLXMMg.png' />
+<img src='https://cdn-images-1.medium.com/max/800/1*NlX0zu7oVyFJv_CKdLXMMg.png' alt="New React Native project running with the default welcome screen" />
 
 After that, we will install the dependency we need to implement navigation in our application.
 
@@ -221,15 +221,15 @@ export default App;
 
 We are importing `StackNavigator` from `react-navigation` and all other screens we created inside the source directory.
 
-<img src='https://cdn-images-1.medium.com/max/800/1*7ucBAxqZoAqvDGEbHfSniQ.png' />
+<img src='https://cdn-images-1.medium.com/max/800/1*7ucBAxqZoAqvDGEbHfSniQ.png' alt="Screen One with a Welcome header and a Screen One button" />
 
 _Screen One_
 
-<img src='https://cdn-images-1.medium.com/max/800/1*mwaLBOP-jYybqXn4dN10Sg.png' />
+<img src='https://cdn-images-1.medium.com/max/800/1*mwaLBOP-jYybqXn4dN10Sg.png' alt="Screen Two with Go Back and Next buttons below the title" />
 
 _Screen Two_
 
-<img src='https://cdn-images-1.medium.com/max/800/1*1i4GrVvkqB1qHoF5GjY5mQ.png' />
+<img src='https://cdn-images-1.medium.com/max/800/1*1i4GrVvkqB1qHoF5GjY5mQ.png' alt="Screen Three with a red Go Back button" />
 
 _Screen Three_
 
@@ -269,7 +269,7 @@ export default createBottomTabNavigator({
 });
 ```
 
-<img src='https://cdn-images-1.medium.com/max/800/1*f8_SrGnqj7wR7m31-9bnVg.png' />
+<img src='https://cdn-images-1.medium.com/max/800/1*f8_SrGnqj7wR7m31-9bnVg.png' alt="Bottom tab navigator with Home and Settings tabs" />
 
 Of course, you can modularize it a bit by separating Home and Setting screen in different components of their own. For our demo application, the above example serves the purpose. You can add `tabBarOptions` to modify its look and feel.
 
@@ -288,7 +288,7 @@ export default createBottomTabNavigator(
 );
 ```
 
-<img src='https://cdn-images-1.medium.com/max/800/1*tATWRPRM39a6UkruTayrTw.png' />
+<img src='https://cdn-images-1.medium.com/max/800/1*tATWRPRM39a6UkruTayrTw.png' alt="Bottom tabs using a red active tint and black inactive tint" />
 
 ### Conclusion
 

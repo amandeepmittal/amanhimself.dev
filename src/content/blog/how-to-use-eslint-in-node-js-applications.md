@@ -69,7 +69,7 @@ Other case, if you have installed it locally to a project, you will need to type
 
 In both cases, you will be prompted with set of basic questions to generate `.eslintrc` file.
 
-<img src='https://cdn-images-1.medium.com/max/800/0*RMPR1vjmB6jsHtHw.png' />
+<img src='https://cdn-images-1.medium.com/max/800/0*RMPR1vjmB6jsHtHw.png' alt="Terminal prompts from eslint init for generating the .eslintrc file" />
 
 An example of file generated after above prompt:
 

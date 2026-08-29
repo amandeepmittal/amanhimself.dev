@@ -9,7 +9,7 @@ tags:
 description: ''
 ---
 
-![cover](https://i.imgur.com/YHJ7UNq.png)
+![](https://i.imgur.com/YHJ7UNq.png)
 
 > [Originally published at Crowdbotics](https://medium.com/crowdbotics/building-a-mern-stack-app-with-material-ui-33ff8ca4da01)
 
@@ -58,7 +58,7 @@ create-react-app client
 
 After this step, make sure your root project looks like below with some extra files and folders.
 
-<img src='https://cdn-images-1.medium.com/max/800/1*_JHQWIDI9FjHq-pr0k1x1Q.png' />
+<img src='https://cdn-images-1.medium.com/max/800/1*_JHQWIDI9FjHq-pr0k1x1Q.png' alt="Root project folder structure after running the setup commands" />
 
 We are going to bootstrap the server using Babel. To setup and learn what Babel is, please read [here](https://hackernoon.com/how-to-use-import-statements-in-nodejs-94c85e23aeb7).
 
@@ -475,19 +475,19 @@ app.listen(config.port, () => {
 
 To test these routes, open up a [REST](https://medium.com/crowdbotics/building-a-rest-api-with-koajs-417c276929e2) Client like [Postman](https://www.getpostman.com/) or [Insomnia](https://insomnia.rest/) and the URL `http://localhost:4000/api/users` with required fields in order to create a user.
 
-<img src='https://cdn-images-1.medium.com/max/800/1*xPH-zPCYtLcp18FdUP8iHw.png' />
+<img src='https://cdn-images-1.medium.com/max/800/1*xPH-zPCYtLcp18FdUP8iHw.png' alt="REST client posting new user credentials to the users endpoint" />
 
 If there are no errors, you are going to receive the message `Successfully signed up!`. This means the user has been added to the database. If you try to make a new user with same credentials, it will throw an error this time.
 
-<img src='https://cdn-images-1.medium.com/max/800/1*X3DWS3U5S-iBlOfYfmZ0cw.png' />
+<img src='https://cdn-images-1.medium.com/max/800/1*X3DWS3U5S-iBlOfYfmZ0cw.png' alt="Error response returned when registering the same user twice" />
 
 If you use a MongoDB Client to view the records of your local database like [Mongo Compass](https://www.mongodb.com/products/compass) or [Robomongo](https://robomongo.org/), you can easily see newly created user’s details.
 
-<img src='https://cdn-images-1.medium.com/max/800/1*z2Gd9TSd6sDBaIFWGorcTQ.png' />
+<img src='https://cdn-images-1.medium.com/max/800/1*z2Gd9TSd6sDBaIFWGorcTQ.png' alt="MongoDB client listing the newly created user record" />
 
 Using the same user credentials, we will attempt a sign-in. It should give us a JWT back.
 
-<img src='https://cdn-images-1.medium.com/max/800/1*6U2XmG6nC_9W1-JBRG284w.png' />
+<img src='https://cdn-images-1.medium.com/max/800/1*6U2XmG6nC_9W1-JBRG284w.png' alt="Sign in request returning a JWT and the user object" />
 
 It works!
 
@@ -495,7 +495,7 @@ Except for the sensitive information that we eliminated from the route, we are r
 
 Now let’s find the user profile. Hit the URL `http://localhost:4000/api/users/{USER_ID}` where `USER_ID` is the same created by MongoDB database when adding the user record.
 
-<img src='https://cdn-images-1.medium.com/max/800/1*eDWff4NSiZhwDQmvRSJmSQ.png' />
+<img src='https://cdn-images-1.medium.com/max/800/1*eDWff4NSiZhwDQmvRSJmSQ.png' alt="User profile response for a request carrying the bearer token" />
 
 You have to add the `Bearer` before signed JWT returned from the previous request at the Header `Authorization`. This completes our API testing and now we can focus on building the front-end of our application.
 
@@ -523,7 +523,7 @@ Material-UI uses `Roboto` font and we have to add it through Google Font CDN to 
 
 To see if everything installed correctly and is working, run the client project using command `yarn start`. This will open the default React app that comes with `create-react-app` at URL `http://localhost:3000`. To see our our assets (such as **Roboto** font) being loaded, go to _Developer Tools_ and open _Network_ tab. Refresh the page to reload the assets and you will notice that the font family is being loaded.
 
-<img src='https://cdn-images-1.medium.com/max/800/1*_7ZRhHMJ3-hgT_FbtqrKpw.png' />
+<img src='https://cdn-images-1.medium.com/max/800/1*_7ZRhHMJ3-hgT_FbtqrKpw.png' alt="DevTools network tab showing the Roboto font being loaded" />
 
 ### Defining the Home Page
 
@@ -635,7 +635,7 @@ export default App;
 
 If you render the app by running `yarn start`, you will get the below output.
 
-<img src='https://cdn-images-1.medium.com/max/800/1*ccxb9zV_vqwALeW0ijWLyw.png' />
+<img src='https://cdn-images-1.medium.com/max/800/1*ccxb9zV_vqwALeW0ijWLyw.png' alt="Home component rendered as a Material UI card on a dark theme" />
 
 ### Adding React Router
 
@@ -1482,15 +1482,15 @@ export default Routes;
 
 After completing this test, let’s test our application. Make sure you are running the backend server using `nr dev` command in one tab in your terminal. Using another tab or window, traverse to `client` directory and run the command `yarn start`. Once the application starts, you will be welcomed by the Homepage, as below.
 
-<img src='https://cdn-images-1.medium.com/max/800/1*sl6_pEHr8QLBK3hi3V6tTg.png' />
+<img src='https://cdn-images-1.medium.com/max/800/1*sl6_pEHr8QLBK3hi3V6tTg.png' alt="Home page with the navigation bar and the home icon highlighted" />
 
 Notice in the navbar above there are three buttons. The home icon is for Home page highlighted `red` in color. If you move on to the sign in page, you will see the sign in button highlighted. We already have one user registered to our application (_when we were building the API_). Please enter the credentials (_email:_ [_jane@doe.com_](mailto:jane@doe.com) and _password: pass1234 or the credentials you entered_) as shown below and submit the form.
 
-<img src='https://cdn-images-1.medium.com/max/800/1*N8oztui9YOVgyHAP1jUW0w.png' />
+<img src='https://cdn-images-1.medium.com/max/800/1*N8oztui9YOVgyHAP1jUW0w.png' alt="Sign in form filled with the registered email and password" />
 
 On submitting the form you will be redirected to the home page as per the component logic. The changes can be noticed at the navigation menu. Instead of sign-up and sign-in, you will see My Profile and Sign Out button. Click My Profile and you can see the current user’s details.
 
-<img src='https://cdn-images-1.medium.com/max/800/1*-xTVUQbUhb6yJnZIIk6eHw.png' />
+<img src='https://cdn-images-1.medium.com/max/800/1*-xTVUQbUhb6yJnZIIk6eHw.png' alt="My Profile page showing the signed in user details and delete icon" />
 
 On clicking the `delete` icon it will delete the user. You can also try signing out of the application by clicking on the sign out button from navigation and then you will be redirected to the home page.
 

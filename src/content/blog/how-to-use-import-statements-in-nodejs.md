@@ -56,7 +56,7 @@ Next, create a new file with the following command from your terminal:
 touch index.js
 ```
 
-<img src='https://cdn-images-1.medium.com/max/800/1*cToGazhSQLTx3oIwsJULPQ.png' />
+<img src='https://cdn-images-1.medium.com/max/800/1*cToGazhSQLTx3oIwsJULPQ.png' alt="Terminal creating index.js in the node-babel-setup project directory" />
 
 That’s all we need to set up a bare minimum project directory. In the next section, we take a look at what dependencies we have to install and why we need those dependencies.
 
@@ -95,7 +95,7 @@ import express from 'express';
 
 Run the same command `node index.js` and stay at the terminal window. This time the server does not start as there is an error in the process. It’s the same error I told you about at the start of this article. Nodejs cannot execute `import` statements by default.
 
-<img src='https://cdn-images-1.medium.com/max/800/1*itCGCm0lnbBG94KS6D0bOg.png' />
+<img src='https://cdn-images-1.medium.com/max/800/1*itCGCm0lnbBG94KS6D0bOg.png' alt="Unexpected identifier error in the terminal after running node index.js" />
 
 ### Using Babel
 
@@ -146,7 +146,7 @@ app.listen(PORT, () => {
 
 From terminal write `nr dev`. If there are no errors, you’ll get the following:
 
-<img src='https://cdn-images-1.medium.com/max/800/1*Rz9TPPfk6B4p4NPTntXKvg.png' />
+<img src='https://cdn-images-1.medium.com/max/800/1*Rz9TPPfk6B4p4NPTntXKvg.png' alt="Terminal running nr dev with babel-watch starting the Node server" />
 
 Where `nr` is shorthand for `npm run`. You can also visit `http://localhost3000/` in your browser to verify the result and see if the server is working or not.
 
