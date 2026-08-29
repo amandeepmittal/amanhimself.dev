@@ -17,9 +17,10 @@ export interface Props {
 }
 
 const { currentPage, totalPages, paginatedPosts, tag, tagName } = Astro.props;
+const pageSuffix = currentPage > 1 ? `, page ${currentPage}` : '';
 ---
 
-<Layout title={`Tag: ${tagName} | ${SITE.title}`}>
+<Layout title={`Tag: ${tagName}${pageSuffix} | ${SITE.title}`}>
   <Header />
   <Main
     pageTitle={[`Tag:`, `${tagName}`]}
