@@ -21,34 +21,37 @@ const extractDescription = (body?: string) => {
     .trim();
 };
 
+const FEED_ITEMS = 30;
+
 const absoluteUrls = (html: string) =>
   html.replace(/(href|src)="\/(?!\/)/g, `$1="${SITE.website}`);
 
 export async function GET() {
   const posts = await getCollection('blog');
-  const sortedPosts = getSortedPosts(posts);
-  const items = sortedPosts.map(post => {
-    const { data, id } = post;
-    const updated =
-      data.modDatetime && data.modDatetime !== data.pubDatetime
-        ? new Date(data.modDatetime)
-        : null;
+  const items = getSortedPosts(posts)
+    .slice(0, FEED_ITEMS)
+    .map(post => {
+      const { data, id } = post;
+      const updated =
+        data.modDatetime && data.modDatetime !== data.pubDatetime
+          ? new Date(data.modDatetime)
+          : null;
 
-    const description =
-      data.description || extractDescription(post.body) || SITE.desc;
+      const description =
+        data.description || extractDescription(post.body) || SITE.desc;
 
-    return {
-      link: `blog/${id}/`,
-      title: data.title,
-      description,
-      pubDate: new Date(data.pubDatetime),
-      categories: data.tags ?? [],
-      content: absoluteUrls(post.rendered?.html ?? ''),
-      customData: updated
-        ? `<atom:updated>${updated.toISOString()}</atom:updated>`
-        : undefined
-    };
-  });
+      return {
+        link: `blog/${id}/`,
+        title: data.title,
+        description,
+        pubDate: new Date(data.pubDatetime),
+        categories: data.tags ?? [],
+        content: absoluteUrls(post.rendered?.html ?? ''),
+        customData: updated
+          ? `<atom:updated>${updated.toISOString()}</atom:updated>`
+          : undefined
+      };
+    });
 
   return rss({
     title: SITE.title,
