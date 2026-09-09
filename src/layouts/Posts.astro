@@ -1,5 +1,5 @@
 ---
-import type { CollectionEntry } from 'astro:content';
+import type { PostListItem } from '../types';
 import Layout from '@layouts/Layout.astro';
 import Main from '@layouts/Main.astro';
 import Header from '@components/Header.astro';
@@ -17,7 +17,7 @@ import blogStats from '@data/blogStats.json';
 export interface Props {
   currentPage: number;
   totalPages: number;
-  paginatedPosts: CollectionEntry<'blog'>[];
+  paginatedPosts: PostListItem[];
 }
 
 const { currentPage, totalPages, paginatedPosts } = Astro.props;

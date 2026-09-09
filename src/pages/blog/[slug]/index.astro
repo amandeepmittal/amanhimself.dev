@@ -3,6 +3,7 @@ import { type CollectionEntry, getCollection } from 'astro:content';
 import Posts from '@layouts/Posts.astro';
 import PostDetails from '@layouts/PostDetails.astro';
 import getSortedPosts from '@utils/getSortedPosts';
+import getBlogListPosts from '@utils/getBlogListPosts';
 import getPageNumbers from '@utils/getPageNumbers';
 import getPagination from '@utils/getPagination';
 import getPostsWithRT from '@utils/getPostsWithRT';
@@ -23,7 +24,7 @@ export async function getStaticPaths() {
     props: { post }
   }));
 
-  const pagePaths = getPageNumbers(filteredPosts.length)
+  const pagePaths = getPageNumbers(getBlogListPosts(posts).length)
     .filter(pageNum => pageNum > 1)
     .map(pageNum => ({
       params: { slug: String(pageNum) }
@@ -39,8 +40,8 @@ const posts = await getCollection('blog');
 
 const sortedPosts = await getSortedPosts(posts);
 
-const pagination = await getPagination({
-  posts: sortedPosts,
+const pagination = getPagination({
+  posts: getBlogListPosts(posts),
   page: slug
 });
 ---

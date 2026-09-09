@@ -1,18 +1,14 @@
 import type { CollectionEntry } from 'astro:content';
+import type { PostListItem } from '../types';
 import postFilter from './postFilter';
 
-const getSortedPosts = (posts: CollectionEntry<'blog'>[]) => {
-  return posts
-    .filter(postFilter)
-    .sort(
-      (a, b) =>
-        Math.floor(
-          new Date(b.data.modDatetime ?? b.data.pubDatetime).getTime() / 1000
-        ) -
-        Math.floor(
-          new Date(a.data.modDatetime ?? a.data.pubDatetime).getTime() / 1000
-        )
-    );
-};
+const recency = ({ data }: PostListItem) =>
+  new Date(data.modDatetime ?? data.pubDatetime).getTime();
+
+export const sortByRecency = <T extends PostListItem>(items: T[]) =>
+  [...items].sort((a, b) => recency(b) - recency(a));
+
+const getSortedPosts = (posts: CollectionEntry<'blog'>[]) =>
+  sortByRecency(posts.filter(postFilter));
 
 export default getSortedPosts;

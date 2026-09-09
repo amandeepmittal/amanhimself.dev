@@ -1,3 +1,4 @@
+import type { CollectionEntry } from 'astro:content';
 import type socialIcons from '@assets/socialIcons';
 
 export type Site = {
@@ -17,3 +18,13 @@ export type SocialObjects = {
   active: boolean;
   linkTitle: string;
 }[];
+
+export type PostFrontmatter = CollectionEntry<'blog'>['data'] & {
+  externalUrl?: string;
+  externalSource?: string;
+};
+
+export type PostListItem = {
+  id: string;
+  data: PostFrontmatter;
+};

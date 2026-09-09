@@ -1,10 +1,10 @@
 import { slugifyStr } from '@utils/slugify';
 import { LOCALE } from '@config';
-import type { CollectionEntry } from 'astro:content';
+import type { PostFrontmatter } from '../types';
 
 export interface Props {
   href?: string;
-  frontmatter: CollectionEntry<'blog'>['data'];
+  frontmatter: PostFrontmatter;
   secHeading?: boolean;
 }
 
@@ -29,7 +29,8 @@ export default function Card({ href, frontmatter, secHeading = true }: Props) {
     return null;
   }
 
-  const { title, pubDatetime, modDatetime } = frontmatter;
+  const { title, pubDatetime, modDatetime, externalUrl, externalSource } =
+    frontmatter;
   const showDraftBadge = import.meta.env.DEV && Boolean(frontmatter.draft);
   const formattedDate = formatListDate(pubDatetime, modDatetime);
   const isoDate = new Date(pubDatetime).toISOString();
@@ -43,7 +44,9 @@ export default function Card({ href, frontmatter, secHeading = true }: Props) {
   return (
     <li className="border-b border-dashed border-skin-line">
       <a
-        href={href}
+        href={externalUrl ?? href}
+        target={externalUrl ? '_blank' : undefined}
+        rel={externalUrl ? 'noopener noreferrer' : undefined}
         className="group grid grid-cols-[5.5rem_1fr] items-baseline gap-4 py-3 sm:grid-cols-[7rem_1fr] sm:gap-6"
       >
         <time
@@ -57,6 +60,12 @@ export default function Card({ href, frontmatter, secHeading = true }: Props) {
             <h2 {...headerProps}>{title}</h2>
           ) : (
             <h3 {...headerProps}>{title}</h3>
+          )}
+          {externalUrl && (
+            <span className="whitespace-nowrap rounded bg-skin-card px-2 py-0.5 font-mono text-[10px] uppercase tracking-wide text-skin-base opacity-60">
+              {externalSource}
+              <span aria-hidden="true"> ↗</span>
+            </span>
           )}
           {showDraftBadge && (
             <span className="rounded bg-skin-accent/15 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-skin-accent">

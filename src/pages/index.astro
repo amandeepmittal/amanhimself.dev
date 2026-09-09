@@ -5,12 +5,12 @@ import Header from '@components/Header.astro';
 import Footer from '@components/Footer.astro';
 import Card from '@components/Card';
 import Socials from '@components/Socials.astro';
-import getSortedPosts from '@utils/getSortedPosts';
+import getBlogListPosts from '@utils/getBlogListPosts';
 import { SOCIALS } from '@config';
 
 const posts = await getCollection('blog');
 
-const recentPosts = await getSortedPosts(posts);
+const recentPosts = getBlogListPosts(posts);
 
 const socialCount = SOCIALS.filter(social => social.active).length;
 ---

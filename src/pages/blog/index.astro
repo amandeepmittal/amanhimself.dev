@@ -1,15 +1,13 @@
 ---
 import { getCollection } from 'astro:content';
 import Posts from '@layouts/Posts.astro';
-import getSortedPosts from '@utils/getSortedPosts';
+import getBlogListPosts from '@utils/getBlogListPosts';
 import getPagination from '@utils/getPagination';
 
 const posts = await getCollection('blog');
 
-const sortedPosts = await getSortedPosts(posts);
-
 const pagination = getPagination({
-  posts: sortedPosts,
+  posts: getBlogListPosts(posts),
   page: 1,
   isIndex: true
 });

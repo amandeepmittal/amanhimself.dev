@@ -1,4 +1,5 @@
 import type { CollectionEntry } from 'astro:content';
+import type { PostListItem } from '../types';
 import { slugifyStr } from './slugify';
 
 const getReadingTime = async () => {
@@ -24,7 +25,7 @@ const getReadingTime = async () => {
   return mapFrontmatter;
 };
 
-const getPostsWithRT = async (posts: CollectionEntry<'blog'>[]) => {
+const getPostsWithRT = async <T extends PostListItem>(posts: T[]) => {
   const mapFrontmatter = await getReadingTime();
   return posts.map(post => {
     const stats = mapFrontmatter.get(slugifyStr(post.data.title));
