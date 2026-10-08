@@ -116,49 +116,36 @@ const socialCount = SOCIALS.filter(social => social.active).length;
       <section id="projects">
         <div class="section-head">
           <h2>Apps</h2>
-          <a href="/projects/" class="section-link">all apps &  projects →</a>
+          <a href="/projects/" class="section-link">all apps & projects →</a>
         </div>
-        <ul class="projects-grid">
-          <li>
-            <a href="/rht" class="project-card">
-              <img
-                src="/rht-icon.png"
-                alt="RHT app icon"
-                class="project-icon"
-              />
-              <div class="project-meta">
-                <span class="project-name">RHT: Reading Habit Tracker</span>
-                <span class="project-kind">Mobile App</span>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="/lasttimei" class="project-card">
-              <img
-                src="/lasttimei-icon.png"
-                alt="Last Time I app icon"
-                class="project-icon"
-              />
-              <div class="project-meta">
-                <span class="project-name">Last Time I</span>
-                <span class="project-kind">Mobile App</span>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="/skillsbar" class="project-card">
-              <img
-                src="/skillsbar-icon.png"
-                alt="SkillsBar app icon"
-                class="project-icon"
-              />
-              <div class="project-meta">
-                <span class="project-name">SkillsBar</span>
-                <span class="project-kind">macOS Menubar</span>
-              </div>
-            </a>
-          </li>
-        </ul>
+        <p class="apps-line">
+          I build small apps on the side: <a href="/rht" class="app-link"
+            ><img
+              src="/rht-icon.png"
+              alt=""
+              class="app-icon"
+              style="--tilt: -8deg"
+            /><span class="dotted-link">RHT</span></a
+          > for building a daily reading habit, <a
+            href="/lasttimei"
+            class="app-link"
+            ><img
+              src="/lasttimei-icon.png"
+              alt=""
+              class="app-icon"
+              style="--tilt: 7deg"
+            /><span class="dotted-link">Last Time I</span></a
+          > for tracking when you last did important tasks, and <a
+            href="/skillsbar"
+            class="app-link"
+            ><img
+              src="/skillsbar-icon.png"
+              alt=""
+              class="app-icon"
+              style="--tilt: -5deg"
+            /><span class="dotted-link">SkillsBar</span></a
+          > for browsing Claude Code and Codex skills from the macOS menu bar.
+        </p>
       </section>
     </section>
 
@@ -251,23 +238,25 @@ const socialCount = SOCIALS.filter(social => social.active).length;
     .section-link {
       @apply text-xs text-skin-base opacity-60 transition-opacity hover:underline hover:opacity-100;
     }
-    .projects-grid {
-      @apply mt-6 grid list-none grid-cols-1 gap-3 p-0 sm:grid-cols-2;
+    #projects .apps-line {
+      @apply mt-6 leading-loose;
     }
-    .project-card {
-      @apply flex h-full items-center gap-3 rounded-lg border border-skin-line bg-skin-card/40 px-4 py-3 no-underline transition-colors hover:border-skin-base/40;
+    .app-link {
+      @apply whitespace-nowrap;
     }
-    .project-icon {
-      @apply h-10 w-10 shrink-0 rounded-[10px];
+    .app-icon {
+      @apply mx-1 inline-block h-6 w-6 rounded-md align-middle;
+      transform: rotate(var(--tilt));
+      transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
     }
-    .project-meta {
-      @apply flex min-w-0 flex-col;
+    .app-link:hover .app-icon,
+    .app-link:focus-visible .app-icon {
+      transform: rotate(0) scale(1.2);
     }
-    .project-name {
-      @apply text-base font-semibold text-skin-base;
-    }
-    .project-kind {
-      @apply font-mono text-[10px] uppercase tracking-widest text-skin-base opacity-50;
+    @media (prefers-reduced-motion: reduce) {
+      .app-icon {
+        transition: none;
+      }
     }
   </style>
 </Layout>
