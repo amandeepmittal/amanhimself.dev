@@ -8,6 +8,9 @@ dist/
 # astro dev server state
 .astro/
 
+# playwright output
+test-results/
+
 # misc
 .DS_Store
 *.pem
