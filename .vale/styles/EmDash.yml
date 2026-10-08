@@ -4,9 +4,9 @@ link: 'https://developers.google.com/style/dashes'
 nonword: true
 level: warning
 action:
-  name: edit
+  name: replace
   params:
-    - replace
+    - ' &mdash; '
 tokens:
   - ' - '
   - ' -- '
